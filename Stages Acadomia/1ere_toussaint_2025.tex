@@ -1,0 +1,468 @@
+\documentclass[oneside,12pt]{article}
+
+
+\input{../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../Latex/inputs/mymacros.tex}                 % Macros classiques
+\input{../../Latex/inputs/macro_paging.tex}				% Mise en page
+
+\fancyhead[R]{Stage d'Octobre}           				% En-tête droit
+\fancyhead[C]{1\up{ère} spé. Maths}                     % En-tête central
+
+\setstretch{0.9}                          				% Interligne
+
+\titlespacing{\section}{0pt}{20pt}{0pt}
+\titleformat{\section}[frame]							% Style des section			
+    {\normalfont}
+    {\filright
+        \hspace{3mm} \bfseries Thème \no  \thesection\hspace{3mm}}
+        {-2pt}
+    {\huge\bfseries\filcenter}
+    {\vspace{-10pt}}
+    
+\titleformat*{\subsection}{\Large\bfseries}
+\titlespacing{\subsection}{0pt}{10pt}{5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Calcul numérique}
+
+\subsection{Fractions}
+
+\theoreme{Propriété des fractions}{
+Soient $a$ , $b$ , $c$ et $d$ quatre nombres réels non nuls. \\
+
+$\bullet\, \dfrac{a}{d} + \dfrac{b}{d}=\dfrac{a+b}{d}$ \qquad $\bullet\, \dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad+bc}{bd}$ \qquad $\bullet\, \dfrac{a}{b}\times\dfrac{b}{d}=\dfrac{ab}{cd}$ \qquad $\bullet\, \dfrac{\,\frac{a}{b}\,}{\frac{b}{d}} = \dfrac{ad}{bc}$
+}
+
+\methode{Calcul de fractions}{
+Pour additionner ou soustraire deux fractions de dénominateur différent il faut les transformer en fractions équivalentes de dénominateur commun
+}
+
+\exemple{Calculs de fractions}{
+$\bullet\, \frac{8}{7}+\frac{3}{7}=\frac{8+3}{7}=\frac{11}{7}$ \qquad\qquad $\bullet\, \frac{2}{3}\times\frac{12}{5}=\frac{2\times12}{3\times5}=\frac{24}{15}=\frac{3\times8}{3\times5}=\frac{8}{5}$ \\[5pt]
+
+$\bullet\, \frac{7}{12}-\frac{1}{3}=\frac{7}{12}-\frac{1\times4}{3\times4}=\frac{7}{12}-\frac{4}{12}=\frac{7-4}{12}=\frac{3}{12}=\frac{3\times1}{3\times4}=\frac{1}{4}$
+}
+
+\exercice{Grosses fractions}{%
+Écrire les nombres suivants sous forme de fraction irréductible :
+
+\renewcommand{\arraystretch}{3.1}
+\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    A = $\dfrac{\frac{1}{2}-\frac{3}{10}}{\frac{4}{3}-1}\times\dfrac{1-\frac{4}{5}}{\frac{1}{2}-\frac{1}{5}}$ & B = $\dfrac{\frac{8}{3}-2+\frac{1}{2}}{-4+\frac{3}{4}+\frac{5}{2}}-\dfrac{\frac{1}{2}-\frac{2}{3}+1}{\frac{1}{2}-\frac{3}{4}-1}$ \\
+    C = $\dfrac{\frac{1}{3}+\frac{1}{6}}{\frac{2}{3}+\frac{2}{5}-\frac{1}{15}}+2\times\dfrac{1-\frac{1}{4}}{1+\frac{5}{4}}-\dfrac{\frac{1}{2}+\frac{1}{3}}{\frac{11}{3}+\frac{3}{4}+\frac{7}{12}}$ &  D = $\left(\dfrac{\frac{3}{5}+\frac{1}{3}}{\frac{3}{5}-\frac{2}{3}}\times\dfrac{\frac{4}{5}-\frac{3}{4}}{\frac{4}{5}+\frac{3}{4}}\right)\div\left(\dfrac{2+\frac{4}{3}}{2-\frac{1}{3}}\right)$
+\end{tabular}
+}
+
+
+
+\subsection{Puissances}
+
+\theoreme{Propriété des puissances}{
+Soient $x$ un nombre réel et $n$ un nombre entier. \\[5pt]
+$\bullet\, x^0=1$ \qquad $\bullet\, x^{-n}=\dfrac{1}{x^n}$ \qquad $\bullet\, x^n=\begin{cases}\abs{x}^n \text{ si } n \text{ est pair}\\ -\abs{x}^n \text{ si } n \text{ est impair} \end{cases}$
+}
+
+
+
+\theoreme{Propriété de calcul}{
+Soient $x$ et $y$ deux nombres réels. Soient $a$ et $b$ deux nombres entiers. \\[5pt]
+$\bullet\, x^a\times x^b=x^{a+b}$ \qquad $\bullet\, \dfrac{x^a}{x^b}=x^{a-b}$ \qquad $\bullet\, \left(x^a\right)^b=x^{ab}$ \qquad $\bullet\, x^a\times y^a=(xy)^a$ \qquad $\bullet\, \dfrac{x^a}{y^a}=\left(\dfrac{x}{y}\right)^a$
+}
+
+
+
+\exercice{Simplification}{
+Simplifier au maximum puis calculer chacun des nombres suivants :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A=\dfrac{4^5}{(4^2)^2}$ & $B=7^3\times\left(\frac{7^6}{7^7}\right)^2$ & $C=2^6\times4^6\times8^{-5}$ \\
+    $D=2^{-3}\times3^3\times2^5\times3^{-2}$ & $E=\dfrac{\left(5^{-2}\times5^4\right)^2}{5\times25}$ & $F=\dfrac{10^7\times2^5}{4^5\times5^5}$
+\end{tabular}
+}
+
+
+\exercice{Puissances de 2}{
+Écrire chacun des nombres suivants sous la forme $2^p$ avec $p$ un nombre entier :
+
+\renewcommand{\arraystretch}{2.1}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A=2^{-3}\times4^2$ & $B= \dfrac{8^4}{2^3\times4^2}$ & $C=\left(2^{-1}\times4^3\right)^{-3}\times8^3$ \\
+    $D=\dfrac{(-4)^2\times8}{\left(-2^{-1}\times4^3\right)^2}$ & $E=\dfrac{16^5\times32^6}{\left(2^2\times4^3\times8^4\right)^2}$ & $F=\left(\dfrac{\left((-2)^3\times4^2\right)^{-2}}{4^{-3}\times8^{-5}}\right)^{-3}$
+\end{tabular}
+}
+
+
+
+\subsection{Racines carrées}
+
+On rappelle les propriétés élémentaires de calcul avec des racines carrées :
+
+\begin{minipage}{0.5\linewidth}
+\theoreme{Propriétés}{
+Soient $a$ et $b$ deux nombres réels. On a alors :\\[5pt]
+$\bullet$ $\sqrt{a\times b}=\sqrt{a}\times\sqrt{b}$\\[5pt]
+$\bullet$ $\sqrt{\frac{a}{b}}=\frac{\sqrt{a}}{\sqrt{b}}$
+}    
+\end{minipage}
+\begin{minipage}{0.5\linewidth}\restoreskip
+    \exemple{Quelques simplifications}{
+    $\sqrt{288}=\sqrt{2}\times\sqrt{9}\times\sqrt{16}=\sqrt{2}\times3\times4=12\sqrt{2}$\\[10pt]
+    $\sqrt{\frac{27}{16}}=\frac{\sqrt{3}\times\sqrt{9}}{\sqrt{16}}=\frac{3\sqrt{3}}{4}$\\[10pt]
+    $\sqrt{6}\times\sqrt{3}\times\sqrt{2}=\sqrt{6\times3\times2}=\sqrt{36}=6$
+    }
+\end{minipage}
+
+
+
+\exercice{Simplification}{
+Écrire chacun des nombres suivants sous la forme $a\sqrt{b}$ avec $a$ et $b$ deux nombres entiers et $b$ le plus petit possible :
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A=\sqrt{27}$ & $B=\sqrt{72}$ & $C=\sqrt{192}$ \\
+    $D=\sqrt{288}$ & $E=\sqrt{15}\times\sqrt{10}$ & $F=\sqrt{8}\times\sqrt{48}$ \\
+    $G=\sqrt{6}\times\sqrt{15}\times\sqrt{8}$ & $ H=\sqrt{\frac{2}{7}}\times\sqrt{\frac{9}{4}}\times\sqrt{28}$ & $I=\sqrt{\frac{5}{4}}\times\sqrt{\frac{21}{2}}\times\sqrt{\frac{40}{7}}$
+\end{tabular}
+}
+
+
+
+\exercice{Poupées russes}{
+Écrire chacun des nombres suivants sous la forme d'un nombre entier :
+
+\renewcommand{\arraystretch}{3}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+    $A=\sqrt{21+\sqrt{13+\sqrt{7+\sqrt{3+\sqrt{1}}}}}$ & $B=\sqrt{1+2\sqrt{\frac{7}{2}+\sqrt{\frac{1}{4}}}}$ \\
+    $C=\sqrt{\frac{1}{2}+\frac{1}{2}\sqrt{3+3\sqrt{3,2+\sqrt{\frac{16}{25}}}}}$ & $D=\sqrt{1+\frac{8}{3}\sqrt{\frac{1}{4}+5\sqrt{\frac{49}{16}}}}$
+\end{tabular}
+}
+
+
+
+\section{Calcul littéral}
+
+\subsection{Distributivité}
+
+\exemple{Développement}{\\
+$\bullet\, \tikzmarknode{A}{2}x(\tikzmarknode{B}{3}+\tikzmarknode{C}{4x})=\textcolor{blue}{2x\times3}+\textcolor{red}{2x\times4x}=6x+12x^2$
+
+\begin{tikzpicture}[remember picture,overlay]
+	\draw[-Stealth,blue,line width=1pt] (A)+(0,0.2) to[out=45,in=145]  ($(B)!6pt!(B)$); 
+	\draw[-Stealth,red,line width=1pt] (A)+(0,0.2) to[out=50,in=135]  ($(C)!6pt!(C)$);
+\end{tikzpicture}
+
+\vspace{5pt}
+
+$\bullet\, (\tikzmarknode{A}{3x}-\tikzmarknode{B}{2})(\tikzmarknode{C}{2x}+\tikzmarknode{D}{1})=
+\textcolor{blue}{3x\times2x}+\textcolor{blue}{3x\times1}-\textcolor{red}{2\times2x}-\textcolor{red}{2\times1}=
+6x^2+3x-4x-2 = 6x^2-x-2$
+\begin{tikzpicture}[remember picture, overlay]
+	\draw[-Stealth,blue,line width=1pt] (A)+(0,0.2) to[out=55,in=140, looseness = 0.75] ($(C)!6pt!(C)$) ;
+    \draw[-Stealth,blue,line width=1pt]  (A)+(0,0.2) to[out=60,in=130, looseness = 0.75] ($(D)!6pt!(D)$) ;
+        
+    \draw[-Stealth,red,line width=1pt] (B)+(0,-0.25) to[out=-50,in=-135] ($(C)!-6pt!(C)$) ;
+    \draw[-Stealth,red,line width=1pt]  (B)+(0,-0.25 ) to[out=-60,in=-140] ($(D)!-6pt!(D)$) ;
+\end{tikzpicture}
+\vspace{5pt}
+}
+
+
+
+\exercice{Développement}{
+Développer et réduire chacune des expressions suivantes à l'aide de la distributivité :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=2x\left(\frac{1}{2}+\frac{1}{x}+1\right)$ & $B=(x+1)(x^2+x+1)$ &  $C=(2-x+3x^2)(3+2x-x^2)$ \\
+	$D=\left(\frac{1}{x}-2x\right)(x^2-3x-2)$ & $E=\left(2+\frac{1}{3x}-x\right)(3x-x^2)$ & $F=\left(\frac{2}{3x}-\frac{3}{2}\right)(2x^2+3x+1)$
+\end{tabular}
+}
+
+
+
+\exemple{Factorisation}{\restoreskip
+Pour factoriser une expression, il faut repérer un facteur commun puis l'extraire de l'expression en le mettant devant une paire de paranthèses comme suit : 
+
+$15x+35=\textcolor{blue}{5}\times3x+\textcolor{blue}{5}\times7=\textcolor{blue}{5}(3x+7)$
+
+Il est possible de repérer plusieurs facteurs communs :
+
+$4x^2-14x=\textcolor{blue}{2}\times\textcolor{blue}{x}\times2x-\textcolor{blue}{2}\times\textcolor{blue}{x}\times7=\textcolor{blue}{2x}(2x-7)$
+}
+
+
+
+\exercice{Factorisation à plusieurs variables}{
+Factoriser au maximum chacune des expressions suivantes en repérant des facteurs communs :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=x^2y+xy^2$ & $B=2x^3y^5-4x^4y^2$ & $C=xy^2z^3+x^3yz^2$ \\
+	$D=6x^7y^8-15y^5x^{10}+9x^{11}y^6$ & $E=8x^7y^6z^5-6x^5y^6z^7$ & $F=12x^4y^2z^7-30x^6y^5z^3$
+\end{tabular}
+}
+
+
+\exercice{Factorisations complexes}{
+Factoriser au maximum chacune des expressions suivantes en repérant des facteurs communs :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+	$A=(7-2x)(x+4)+(8+2x)(1-x)$ & $B=(x^2-3x)(7+2x)+(2-4x)(x-3)$ \\
+	$C=(2x-6)(x+1)-(x^2-3x)(4-2x)$ & $D=(4x-3x^2)(2x-6)+(6x+8)(2x-6)$
+\end{tabular}
+}
+
+
+
+\subsection{Identités remarquables}
+
+\theoreme{Identités remarquables}{
+Les trois identités remarquables ci-contre sont à apprendre et à savoir utiliser dans les deux sens !
+\[(a+b)^2=a^2+2ab+2b^2\]
+\[(a-b)^2=a^2-2ab+b^2\]
+\[(a+b)(a-b)=a^2-b^2\]
+}
+
+
+
+\exercice{Degré supérieur}{
+Développer et réduire chacune des expressions suivantes à l'aide d'une identité remarquable et de la distributivité :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=(x+1)^3$ & $B=(2x-1)^3$ & $C=\left(x+\frac{1}{x}\right)^3$ \\
+	$D={(3-x^2)}^3$ & $E=\left(\frac{x}{3}+2\right)^3$ & $F=\left(\frac{3}{x}-\frac{x}{3}\right)^3$
+\end{tabular}
+}
+
+
+
+\exercice{Factorisation affine}{
+Factoriser chacune des expressions suivantes à l'aide d'une identité remarquable :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth} }
+	$A=(3x+2)^2-(x+1)^2$ & $B=(x+2)^2+2(x+2)(x-1)+(x-1)^2$ \\
+	$C=(x+5)^5-(2-3x)^2$ & $D=(x^2+4)^2-(3+5x)^2$ \\
+	$E=(2x-3)^2-6(2x-3)+9$ & $F={(7-2x^2)}^2-(3x^2+5)^2$
+\end{tabular}
+}
+
+
+
+\exercice{Factorisations complexes}{
+Factoriser chacune des expressions suivantes à l'aide de plusieurs identités remarquables :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth} }
+	$A=(2x^2+3)^2-(x^2+12)^2$ & $B=14x^4-81$ \\
+	$C=(x^2+3)^2-(4x+1)^2$ & $D=(2x+3)^2-(2-x^2)^2$
+\end{tabular}
+}
+
+
+
+\exercice{Application aux racines carrées}{
+Développer puis simplifier au maximum chacune des expressions suivantes :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.33\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=(\sqrt{2}+\sqrt{3})^2$ & $B=(1+\sqrt{2})(2\sqrt2-1)$ & $C=(\sqrt6-2)(1+\sqrt6)$ \\
+	$D=(2\sqrt5-\sqrt{10})(\sqrt{10}+\sqrt5)$ & $E=(11+2\sqrt2)^2$ & $F=(\sqrt5-\sqrt3)^2$ \\
+	$G=(1+\sqrt6)(\sqrt2+\sqrt3)$ & $H=(\sqrt{15}-2)(2\sqrt5+\sqrt3)$ & $I=(\sqrt{12}+1)(\sqrt3-\sqrt2)$ 
+\end{tabular}
+}
+
+
+
+\section{Polynômes du second degré}
+
+
+\begin{minipage}{0.55\linewidth}
+\definition{Différentes formes}{
+On considère un polynôme du second degré $P$\\[5pt]
+La forme développée de $P$ est $P(x)=ax^2+bx+x$\\[5pt]
+La forme canonique de $P$ est $P(x)=a(x-\alpha)^2+\beta$\\[5pt]
+La forme factorisé de $P$ est $P(x)=a(x-x_1)(x-x_2)$
+}
+\end{minipage}\hfill
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[xmin=-2,xmax=6,ymin=-4,ymax=4,axis lines=middle,ytick distance=1,xtick distance=1,
+        grid=major, ticklabel style = {opacity=0}, enlargelimits = { abs = 0.2 }]
+            \addplot[color=red,line width=1.5pt,samples=100,domain=-5:7] {0.5*(x+1)*(x-4)};
+            \draw[color=blue] (-1.5,1/3) node {$\mathbf{x_1}$};
+            \draw[color=blue] (4.5,1/3) node {$\mathbf{x_2}$};
+            \draw[color=red] (3.5,-2.5) node {$\mathbf{\Ccal}$};
+            \draw[color=blue,dashed,thick] (3/2,0) node[above] {$\alpha$} -- (3/2,-25/8) -- (0,-25/8) node[left] {$\beta$};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+\definition{Parabole}{
+La courbe représentative du polynôme $P$ est toujours une parabole
+\begin{enumerate}
+\item[$\bullet$] L'orientation de la parabole dépend du signe de $a$
+\item[$\bullet$] La parabole du polynôme $P$ a pour sommet le point $S(\alpha,\beta)$
+\item[$\bullet$] $\alpha=\frac{-b}{2a}$ et $\beta=f(\alpha)$
+\item[$\bullet$]  Les points d'intersection entre l'axe des abscisse et $\Ccal$ correspondent aux racines de $P$
+
+\end{enumerate}
+}
+
+\theoreme{Discriminant}{
+Au polynôme $P$ on associe le nombre $\Delta=b^2-4ac$ appelé discriminant.
+
+\begin{enumerate}
+    \item[$\bullet$] Si $\Delta<0$ alors $P$ n'admet aucune racine.
+    \item[$\bullet$] Si $\Delta=0$ alors $P$ admet une unique racine $x_0=\frac{-b}{2a}$
+    \item[$\bullet$] Si $\Delta>0$ alors $P$ admet deux racines : $x_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}$
+    \end{enumerate}
+}
+
+
+\exercice{Résolution d'(in)équations}{
+Résoudre dans $\RR$ les (in)équations suivantes :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.35\textwidth} p{0.35\textwidth} p{0.35\textwidth} }
+    a) $x^{2} + 2x + 3 = 0$ &  b) $5x^{2} + 4x - 1 = 0$ & c) $2x^{2} - 3x -2 = 0$ \\ 
+    g) $3x^{2} + 4x - 4 > 0$ &  h) $x^{2} - x -6 \geq 0$ & i) $x^{2} + \sqrt{2}\,x - \frac{3}{2} > 0$ \\   
+\end{tabular}
+}
+
+
+
+\exercice{Un tout petit effort}{
+Résoudre dans $\RR$ les équations suivantes en vous ramenant à une équation du second degré :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+a) $6x -\frac{1}{x} + 1 = 0 $ & b) $\frac{1}{x^{2}}+\frac{2}{x}+\frac{1}{3}=0$ & c) $\frac{2x+1}{4x+5}=x$ \\
+d) $\frac{x+3}{2x-3}=\frac{x+2}{3x}$ & e) $\frac{1}{2x+3}+\frac{1}{3x+2} = 5$ & f) $\frac{x^2(x+2)}{x-1}=x^2-4$
+\end{tabular}
+}
+
+
+
+\methode{Racines évidentes}{
+Avant de calculer le discriminant d'une équation polynômiale du second degré, on peut tester certaines racines dites \og évidentes \fg, notamment $1$, $-1$, $2$ et $-2$\\
+Pour trouver la seconde racine on utilise la relation $x_1\times x_2=\frac{c}{a}$
+}
+
+\exercice{Racines évidentes}{
+Résoudre les (in)équations suivantes en repérant une \og racine évidente \fg : \\[5pt]
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	a) $5x^2-4x-1=0$ & b) $x^2+6x+5<0$ & c) $4x^2-2x-6=0$\\
+	d) $3x^2+2x-5\geq0$ & e) $3x^2-5x-2=0$ & f) $5x^2+4x-12$
+\end{tabular}
+}
+
+
+
+\exercice{Jeu, set et match}{\restoreskip \vspace{1mm}
+Dans un match officiel de tennis, le court mesure 23,77m de long et le filet est situé à 91,4cm de hauteur.
+
+Un joueur se trouvant à 2m du fond du court frappe une balle qui décrit une parabole dont l'équation est : $y=-0,01x^2+0,18x+0,4$, \\
+\qquad où $y$ est la hauteur en mètres de la balle exprimée en fonction de $x$ la distance en mètre au joueur de la balle.
+\begin{enumerate}
+	\item Quelle est la hauteur maximale atteinte par la balle ?
+	\item La balle passera-t-elle au-dessus du filet ?
+	\item La balle touchera-t-elle le sol avant d'être sortie du terrain ?
+	\item Durant combien de mètres la balle a-t-elle une hauteur supérieure ou égale à 1,2m ?
+\end{enumerate}
+}
+
+
+
+\exercice{Polynôme à paramètre}{ \restoreskip \vspace{1mm}
+Pour $k\in\RR$, on définit le polynôme $P$ par $P(x)=x^2+(k-1)x+1-k$
+\begin{enumerate}
+	\item Démontrer que $k$ ne peut jamais être une racine du polynôme $P$
+	\item \begin{enumerate}
+		\item Démontrer que le discriminant du polynôme $P$ vaut $k^2+2k-3$
+		\item Pour quelle(s) valeur(s) de $k$ le polynôme $P$ admet-il deux racines distinctes ?
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Justifier que $P$ atteint son minimum en $\alpha=\frac{1-k}{2}$
+		\item Montrer que $P(\alpha)=\frac{1}{4}(-k^2-2k+3)$
+		\item Quelle est la valeur maximale que peut prendre le minimum du polynôme $P$ ?
+	\end{enumerate}
+\end{enumerate}
+}
+
+
+
+\section{Problèmes à prise d'initiatives}
+
+\exercice{Le faucon pèlerin}{
+
+Le train $A$ et le train $B$ sont éloignés de 400km et partent en même temps. Le train $A$ roule à une vitesse constante de 250km/h contre 200km/h pour le train $B$.
+
+Au même moment, un faucon pélerin situé à mi-chemin entre les deux trains s'envole en direction du train $A$ à une vitesse de chasse de 300km/h. Une fois qu'il a atteint le train $A$, il fait demi-tour et fond sur le train $B$ à la même vitesse. Quand il atteint le train $B$, il se retourne à nouveau et fonce vers le train $A$, et ainsi de suite.\\
+
+Quand les deux trains se rencontreront, quelle distance le faucon pélerin aura-t-il parcouru ?
+}
+
+
+
+\exercice{Somme de carrés}{
+Peut-on trouver cinq nombres entier consécutifs dont la somme des carrés vaut 2010 ?
+}
+
+
+\exercice{Différence de cubes}{
+Peut-on trouver deux nombres entiers consécutifs dont la différence des cubes vaut 1951 ?
+}
+
+
+
+\exercice{Le puits de Fibonacci}{
+Deux tours, hautes de 30 m et de 40 m, sont distantes l'une de l'autre de 50 m. Un puits est situé quelque part entre les deux tours.
+
+Deux oiseaux, volant à la même vitesse, s'envolent en même temps, chacun du sommet de chaque tour, pour se poser au même moment sur le puits.
+
+Quelle-est la position du puits par rapport au deux tours ?
+}
+
+
+\exercice{Jugement a priori}{
+
+On arrive devant une porte et une perche. La perche rentre parfaitement dans la diagonale de la porte, mais elle dépasse de 20cm dans la hauteur et de 40cm dans la largeur.\\[5pt]
+Que peut-on conclure quant à la personne vivant derrière cette porte ?
+}
+
+
+\exercice{Le paysagiste}{
+
+\begin{minipage}{0.6\linewidth} \restoreskip
+	Un paysagiste s'occupe d'un jardin de 45m par 24m possédant une partie végétalisée et des allées pavées.
+
+	Le paysagiste souhaite que les allées fassent le tour de la partie végétalisée comme représenté ci-	contre. Quelle largeur donner aux allées afin qu'elles occupent la même aire que la partie végétalisée ?
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.4\linewidth} 
+    \begin{tikzpicture}[scale=0.15]
+        \draw[color = Coral2 , line width=2pt , pattern=bricks , pattern color = Coral2] (0,0)--(40,0)--(40,25)--(0,25)--(0,0);
+        \fill[color=PaleGreen2] (5,5)--(35,5)--(35,20)--(5,20)--(5,5);
+        \draw[line width = 2pt, color=Coral2] (5,5)--(35,5)--(35,20)--(5,20)--(5,5);
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+
+
+}
+
+
+\end{document}
+

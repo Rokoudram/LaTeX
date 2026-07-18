@@ -1,0 +1,246 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Raisonnement par récurrence}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Étude de suites}
+
+
+\subsection{Racine carrée}
+On définit la suite $\Un$ par $\defsuite{u_0=0}{\sqrt{1+u_n^2}}$ 
+\begin{enumerate}
+    \item Calculer $u_1$, $u_2$, $u_3$ et $u_4$
+    \item Conjecturer l'expression de $u_n$ en fonction de $n$
+    \item Démontrer cette conjecture par récurrence
+\end{enumerate}
+
+
+
+\subsection{Des carrés maintenant ?}
+
+On considère la suite $(v_n)_{\nN}$ définie par $\accolsized{v_0=0\\v_{n+1}=v_n+2n+1}{0.8}$
+\begin{enumerate}
+    \item Calculer $v_1$, $v_2$, $v_3$ et $v_4$
+    \item Conjecturer l'expression de $v_n$ en fonction de $n$
+    \item Démontrer cette conjecture par récurrence
+\end{enumerate}
+
+
+
+\subsection{Conjecture en autonomie}
+Soit $(w_n)_{\nN}$ une suite définie par $\accolsized{w_0=\frac{1}{2}\\w_{n+1}=\frac{w_n}{2-w_n}}{0.8}$
+
+Conjecturer puis démontrer l'expression de $w_n$ en fonction de $n$
+
+
+
+\subsection{Suite arithmético-géométrique}
+On considère la suite $\Un$ définie par $\defsuite{u_0=1}{2u_n-3}$
+\begin{enumerate}
+    \item Montrer par récurrence que $u_{n+1}\leq u_n$ pour tout $\nN$
+    \item Montrer par récurrence que $u_n\leq0$ pour tout $\nN^*$
+    \item Montrer que $u_n=3-2^{n+1}$ pour tout $\nN$
+\end{enumerate}
+
+
+
+\subsection{Majoration linéaire}
+On définit la suite $\Un$ par $\defsuite{u_0=1}{\frac{1}{3}(u_n+4n+6)}$
+\begin{enumerate}
+    \item Montrer par récurrence que $u_n>2n$ pour tout $\nN$
+    \item Montrer par récurrence que la suite $\Un$ est croissante.
+    \item Montrer par récurrence que $u_n=2n+\frac{1}{3^n}$ pour tout $\nN$
+\end{enumerate}
+
+
+
+\subsection{Encore un coup}
+On définit la suite $\Un$ par $\defsuite{u_0=\frac{1}{2}}{1+\frac{3n+u_n}{4}}$
+\begin{enumerate}
+    \item Montrer par récurrence que $u_n\geq n$ pour tout $\nN$
+    \item Montrer par récurrence que la suite $\Un$ est croissante.
+    \item Montrer par récurrence que $u_n=n+\frac{1}{2\times4^n}$ pour tout $\nN$
+\end{enumerate}
+
+
+
+\subsection{Suite à paramètre}
+Soit $k>0$. On définit la suite $(u_n)_{n\geq1}$ par $\defsuite{u_1=k}{k(u_n+\frac{u_n}{n})}$
+    \begin{enumerate}
+        \item Montrer que $u_n\geq k^n$ pour tout $n\geq1$
+        \item Montrer que $u_n=n\times k^n$ pour tout $n\geq1$
+    \end{enumerate}
+
+
+
+\subsection{Une suite pertinente}
+On définit la suite $\Un$ par $\defsuite{u_0=1}{3u_n-n^2}$
+\begin{enumerate}
+	\item Montrer par récurrence que $u_n\geq n^2+1$ pour tout $\nN$
+	\item Montrer que $u_n=\frac{1}{2}(1+n+n^2+3^n)$ pour tout $\nN$
+\end{enumerate}
+    
+    
+
+\section{Sommes et produits}
+
+
+\subsection{Retour sur des formules connues}
+\begin{enumerate}
+    \item Montrer par récurrence que $1+2+3+\ldots+n=\frac{n(n+1)}{2}$
+    \item Pour $q\neq1$, montrer que $1+q+q^2+\ldots+q^n=\frac{1-q^{n+1}}{1-q}$
+\end{enumerate}
+
+
+
+\subsection{Sommes de puissances}
+\begin{enumerate}
+
+    \item Montrer par récurrence que $1^2+2^2+3^2+...+n^2=\frac{n(n+1)(2n+1)}{6}$
+    \item Montrer par récurrence que $1^3+2^3+3^3+\ldots+n^3=\frac{n^2(n+1)^2}{4}$
+\end{enumerate}
+
+
+
+\subsection{Autres}
+\begin{enumerate}
+    \item Montrer par récurrence que $1+3+5+\ldots+(2n+1)=(n+1)^2$
+    \item Montrer par récurrence que $\frac{1}{1\times2}+\frac{1}{2\times3}+\frac{1}{3\times4}+\ldots+\frac{1}{n(n+1)}=\frac{n}{n+1}$
+\end{enumerate}
+
+
+\subsection{Produits}
+
+Montrer par récurrence que :
+\begin{enumerate}
+    \item $(1-\frac{1}{2})\times(1-\frac{1}{3})\times(1-\frac{1}{4})\times\ldots\times(1-\frac{1}{n})=\frac{1}{n}$
+    \item $(1-\frac{1}{2^2})\times(1-\frac{1}{3^2})\times(1-\frac{1}{4^2})\times\ldots\times(1-\frac{1}{n^2})=\frac{n+1}{2n}$
+\end{enumerate}
+
+
+
+\subsection{Produits et sommes}
+\begin{enumerate}
+    \item Montrer par récurrence que $1\times2~+~2\times3~+~3\times4~+~\ldots~+~n(n+1)=\frac{n(n+1)(n+2)}{3}$
+    \item Montrer par récurrence que $1\times2\times3~+~2\times3\times4~+~\ldots~+~n(n+1)(n+2)=\frac{n(n+1)(n+2)(n+3)}{4}$
+\end{enumerate}
+
+
+
+\section{Applications aux fonctions}
+
+\subsection{Dérivations successives}
+On pose $f(x)=xe^x$ et on note $f^{(n)}$ la dérivée $n$-ième de la fonction $f$.
+\begin{enumerate}
+	\item Calculer $f'(x)$ et $f''(x)$
+	\item Conjecturer l'expression de $f^{(n)}(x)$ en fonction de $x$ et de $n$
+	\item Démontrer cette conjecture par récurrence sur $n$
+\end{enumerate}
+
+
+
+\subsection{Compositions successives}
+On pose $g(x)=2x+1$ définie sur $\RR$ et on note $g^n$ la fonction $g$ composée $n$ fois avec elle-même.
+\begin{enumerate}
+	\item Calculer $g^2(x)$ et $g^3(x)$
+	\item Conjecturer l'expression de $g^n(x)$ en fonction de $x$
+	\item Prouver cette conjecture par récurrence.
+\end{enumerate}
+
+
+
+\subsection{Une autre}
+On pose $h(x)=\frac{x}{1-x}$ définie sur $\RR\setminus\{-1\}$ et on note $h^n$ la fonction $h$ composée $n$ fois avec elle-même.
+\begin{enumerate}
+	\item Calculer $h^2(x)$ et $h^3(x)$ et déterminer leur domaine de définition.
+	\item \begin{enumerate}
+		\item Conjecturer l'expression de $h^n(x)$ en fonction de $x$
+		\item Prouver cette conjecture par récurrence.
+	\end{enumerate}	 
+	\item Déterminer le domaine de définition de $h^n$
+\end{enumerate}
+
+
+
+\subsection{Composer et décomposer}
+On considère la fonction $f:x\mapsto \ln(2+e^x)$ définie sur $\RR$
+
+Démontrer que $f^n(x)=\ln(2+2n+e^x) \quad \forall\xR$
+
+
+
+\subsection{Composition paire}
+On définit sur $\RR$ la fonction $\psi$ par $\psi(x)=x^2-1$
+\begin{enumerate}
+	\item Démontrer que $\psi^{2n}\left(\sqrt{2}\right)=0 \quad \forall\nN^*$
+\end{enumerate}
+
+
+\subsection{Zéros symétriques}
+Soit $f:x\mapsto x^2e^{-x}$
+\begin{enumerate}
+	\item Démontrer que $f^{(n)}(x)=(-1)^n(x^2+2nx+n-n^2)e^{-x}$
+	\item Montrer $f^{(n)}$ s'annule en $n\pm\sqrt{n}$
+\end{enumerate}
+
+
+
+\section{Exercices supplémentaires}
+
+\subsection{Inégalité de Bernoulli}
+Démontrer l'inégalité de Bernouilli : $\forall\nN, \forall a\geq0,\quad (1+a)^n\geq1+an$
+
+
+
+\subsection{Une suite en puissance}
+
+On considère la suite $\Un$ définie comme suit $\accolsized{u_0=1~~;~~u_1=2\\u_{n+2}=u_{n+1}+2u_n}{1}$\\[5pt]
+Démontrer à l'aide d'un raisonnement par récurrence double que $u_n=2^n$ pour tout $\nN$
+
+
+\subsection{Plus simple qu'il n'y parait}
+
+On considère la suite $(v_n)_{\nN}$ définie par $\accolsized{v_0=1~~;~~v_1=3\\v_{n+2}=2v_{n+1}-v_n}{1}$\\[5pt]
+Démontrer à l'aide d'un raisonnement par récurrence double que $v_n=2n+1$ pour tout $\nN$
+
+
+
+\subsection{Factorielles}
+\begin{enumerate}
+    \item Montrer que $\forall n\geq4$, on a $n!\geq2^n$
+    \item Montrer que $\forall n\geq7$, on a $n!\geq3^n$
+    \item Montrer que $1\times1!~+~2\times2!~+~3\times3!~+~\ldots~+~n\times n!=(n+1)!-1$
+    \item Montrer que $1\times3\times5\times7\ldots\times(2n+1)=\frac{(2n)!}{2^n\times n!}$
+\end{enumerate}
+
+
+
+\subsection{Somme cachée}
+On définit sur $\RR$ la fonction $g:x\mapsto x^2e^x$
+
+Exprimer $g^{(n)}(x)$ en fonction de $x$ et de $n$
+
+
+
+\subsection{Minoration de Bernoulli}
+Montrer que pour $m$ et $n$ deux entiers tels que $1\leq m\leq n$ on a : $\left(1+\frac{1}{n}\right)^m<1+\frac{m}{n}+\left(\frac{m}{n}\right)^2$
+
+
+
+
+\end{document}

@@ -1,0 +1,167 @@
+\documentclass[oneside,12pt]{article}
+
+
+\input{../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../Latex/inputs/mymacros.tex}                 % Macros classiques
+\input{../../Latex/inputs/macro_paging.tex}				% Mise en page
+
+\fancyhead[C]{Raisonnement et vocabulaire ensembliste}                     % En-tête central
+\fancyhead[L]{}
+\fancyhead[R]{}
+\fancyhf[CF]{\footnotesize Exercices de révision pour le C.A.P.E.S. de mathématiques session 2026}		% Pied de page
+
+\setstretch{0.9}                          				% Interligne
+
+\titlespacing{\section}{0pt}{20pt}{0pt}
+\titleformat{\section}[frame]							% Style des section			
+    {\normalfont}
+    {\filright
+        \hspace{3mm} \bfseries \thesection\hspace{3mm}}
+        {-2pt}
+    {\Large\bfseries\filcenter}
+    {\vspace{-10pt}}
+    
+%\titleformat{\subsection}{\bfseries}
+\titleformat{\subsection}							% Style des subsection			
+    {\normalfont}
+    {\bfseries Exercice \thesubsection}
+        {-2pt}
+    {\bfseries}
+    {\vspace{-10pt}}
+    
+\titlespacing{\subsection}{0pt}{10pt}{5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Modes de raisonnement}
+
+\subsection{}
+Pour $\xR$ démontrer l'équivalence suivante : $\left( \forall \epsilon>0 , \abs{x}\leq3\epsilon \right) \Longleftrightarrow x=0$
+
+\subsection{}
+Soient $A$ et $B$ deux assertions logiques.\\
+Montrer que $\neg A \Rightarrow ( A \Rightarrow B)$
+
+\subsection{}
+Démontrer que le nombre $\frac{\ln(2)}{\ln(3)}$ est irrationnel
+
+\subsection{}
+Déterminer toutes les fonctions $f:\RR\mapsto\RR$ telles que $\forall x,y\in\RR$ , $f(x)f(y)=f(xy)+x+y$
+
+\subsection{}
+Démontrer que parmi 20 entiers naturels distincts compris dans l'intervalle $[\![0;100]\!]$ il est toujours possible d'en choisir deux, notés $x$ et $y$, pour lesquels $x^2+y^2\leq25+2xy$
+
+\subsection{}
+On définit la suite ${(u_n)}_{n\geq1}$ par $u_1=\frac{1}{2}$ et $u_{n+1}=\frac{1}{n} \sommek{1}{n}{u_k}^2$ \\
+Démontrer que $\frac{1}{2n} \geq u_n \geq \frac{1}{2^n} \quad\forall n\geq1$
+
+
+
+\section{Théorie des ensembles et applications}
+
+\subsection{}
+Déterminer en extension l'ensemble $\Pcal(\Pcal(\Pcal(\emptyset)))$
+
+\subsection{}
+Pour $A$ et $B$ deux ensembles, démontrer l'équivalence suivante : $A\cup B = A \cap C \Longleftrightarrow B \subset A \subset C$
+
+\subsection{}
+Pour $A$ et $B$ deux ensembles, démontrer l'équivalence suivante : $\Pcal(A) \subset \Pcal(B) \Longleftrightarrow A \subset B $
+
+\subsection{}
+Soient $A$ et $B$ deux parties d'un ensemble $E$. On définit la fonction $f:\begin{cases} \Pcal(E) \to \Pcal(A) \times \Pcal(B) \\ X \mapsto \left( X \cap A , X \cap B \right) \end{cases}$
+\begin{enumerate}
+	\item Déterminer une condition nécessaire et suffisante sur $A$ et $B$ pour que $f$ soit injective.
+	\item Déterminer une condition nécessaire et suffisante sur $A$ et $B$ pour que $f$ soit surjective.
+\end{enumerate}
+
+\subsection{}
+On définit la loi $\Delta:\begin{cases} \Pcal(E)\times\Pcal(E))\to\Pcal(E) \\ (A,B) \mapsto (A \cap \barre{B}) \cup (\barre{A} \cap B) \end{cases}$
+
+\begin{enumerate}
+	\item Démontrer les lois de Morgan : $\barre{A \cup B}=\barre{A}\cap\barre{B}$ \quad et \quad $\barre{A \cap B}=\barre{A}\cup\barre{B}$
+	\item Montrer que $A\Delta B = (A \cup B) \cap (\barre{A\cap B})$
+	\item Expliciter $A \Delta A$ , $A\Delta\emptyset$ et $\barre{A}\Delta\barre{B}$
+	\item Montrer que la loi $\Delta$ est associative
+	\item Soit $A\in\Pcal(E)$. \quad On définit l'application $\Phi_A : \begin{cases} \Pcal(E)\to\Pcal(E) \\ B \mapsto A \Delta B \end{cases}$ \\
+	Démontrer que $\Phi_A$ est bijective.
+\end{enumerate}
+
+
+\section{Relations d'ordre et d'équivalence}
+
+\subsection{}
+Soit $\mathcal{R}$ la relation définie sur $\RR$ par $x\mathcal{R}y \Leftrightarrow x^2-y^2=x-y$
+\begin{enumerate}
+	\item Montrer que $\mathcal{R}$ est une relation d'équivalence
+	\item Déterminer la classe d'équivalence de $x$ pour $x$ un réel quelconque
+	\item Décrire l'ensemble quotient $\RR / \mathcal{R}$
+\end{enumerate}
+
+\subsection{}
+Soit $\mathcal{R}$ une relation symétrique et transitive. $\mathcal{R}$ est-elle réflexive ?
+
+\subsection{}
+Soit un ensemble $E$.\\
+On définit sur $\Pcal(E)$ la relation $\mathcal{R}$ par : $A \mathcal{R} B \Leftrightarrow A \Delta B$ est un ensemble de cardinal fini et pair.
+\begin{enumerate}
+	\item Démontrer que $\mathcal{R}$ est une relation d'équivalence.
+	\item Ce résultat est-il encore vrai pour un cardinal impair ?
+\end{enumerate}
+
+\subsection{}
+Pour un ensemble $X$ on note $E=\Fcal(E,\RR)$\\
+On définit la relation $\geq$ sur $E$ par $f\geq g \Longleftrightarrow \forall x \in E , f(x)\geq g(x)$
+\begin{enumerate}
+	\item Vérifier que $\geq$ est une relation d'ordre sur $E$. Est-ce un ordre total ?
+	\item Les énoncés \og $f$ est majorée \fg{} et \og $\{f\}$ est majoré \fg{} sont-ils équivalents ?
+	\item Soit ${(f_i)}_{i\in I}$ une famille de fonctions de $E$ majorée. Montrer qu'elle admet une borne supérieure.
+\end{enumerate}
+
+
+\subsection{}
+On considère $E$ l'ensemble des sous-parties de $\NN$ de cardinal fini. \\
+On définit sur $E$ la relation $\sim$ par : $A \sim B \Leftrightarrow \somme{a\in A}{}a=\somme{b\in B}{}b$
+
+Démontrer que $\sim$ définit bien une relation d'équivalence, puis que les classes d'équivalence par $\sim$ sont toutes de cardinal fini.
+
+\subsection{}
+On définit sur $\RR^2$ la relation $\ll$ par $(x,y)\ll(x',y') \Longleftrightarrow \abs{x'-x} \leq y'-y$
+\begin{enumerate}
+	\item Démontrer qu'il s'agit d'une relation d'ordre. S'agit-il d'une relation d'ordre totale ?
+	\item Représenter graphiquement l'ensemble des minorants et des majorants d'un couple $(a,b)$
+	\item Soit $A=\{(x,y)\in\RR^2 | x^2+y^2\leq1\}$ la sphère unité de $\RR^2$ \\
+	Déterminer $\sup(A)$
+\end{enumerate}
+
+
+\subsection{}
+\begin{enumerate}
+	\item Soit $f:[0,1]\to[0,1]$ une fonction croissante. \\
+	On considère $A=\{x\in[0,1] ~|~ f(x)\geq x\}$ et on note $a=\sup(A)$
+	\begin{enumerate}
+		\item Montrer que $f(x)\geq a$
+		\item Montrer que $f(a)\in A$
+		\item En déduire que la fonction $f$ admet un point fixe.
+	\end{enumerate}
+	\item Soit un ensemble $E$
+	\begin{enumerate}
+		\item Montrer que l'inclusion définit une relation d'ordre partiel sur $\Pcal(E)$
+		\item Montrer que toute partie $\mathcal{A}$ de $\Pcal(E)$ admet une borne supérieure et une borne inférieure pour l'inclusion.
+		\item Soit $\varphi : \Pcal(E) \to \Pcal(E)$ une application croissante pour l'inclusion. \\
+		Montrer que $\varphi$ admet un point fixe.
+	\end{enumerate}
+	\item Soient $E$ et $F$ deux ensembles tels qu'il existe $u:E\to F$ et $v:F \to E$ deux injections. \\
+	On pose $\varphi:\begin{cases}\Pcal(E)\to\Pcal(E) \\ X \mapsto \barre{v\left(\barre{u(X)}\right)} \end{cases}$ 
+	\begin{enumerate}
+		\item Justifier que $\varphi$ admet un point fixe.
+		\item En déduire que $E$ et $F$ sont en bijection.
+	\end{enumerate}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,571 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 % Macros classiques
+
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Vecteurs du plan}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Représentation graphique}
+
+\subsection{Translation}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}
+		\draw[step=1cm,color=gray] (-0.5,-0.5) grid (8.5,6.5);
+		\draw[color=black , line width=1.5pt , fill=yellow!80!black, fill opacity=0.5 , text opacity=1] (1,3) node[below] {$A$} -- (2,2) node[below] {$B$} -- (5,4) node[right] {$C$} -- (3,5) node[above] {$D$} -- cycle;
+		\draw[color=blue , line width = 1.5pt , -Stealth] (1,4) -- node[above] {$\vv{u}$} (4,5) ;
+		\draw[color=red , line width = 1.5pt , -Stealth] (6,5) -- node[right] {$\vv{v}$} (7,3) ;
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,6.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (8.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,6.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,6.5) rectangle (8.5,6);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{enumerate}
+		\item Représenter en bleu l'image du quadrilatère $ABCD$ par la translation de vecteur $\vv{u}$
+		\item Représenter en rouge l'image du quadrilatère $ABCD$ par la translation de vecteur $\vv{v}$
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Points et vecteurs} 
+\begin{minipage}{0.5\linewidth} 
+	\begin{enumerate}
+		\item Placer le point $E$ image du point $D$ par la translation de vecteur $\vv{AB}$
+		\item Placer le point $F$ image du point $C$ par la translation de vecteur $\vv{DB}$
+		\item Placer le point $G$ le translaté du point $C$ par le vecteur $\vv{AF}$
+		\item Les vecteurs $\vv{EG}$ et $\vv{CF}$ sont-ils égaux ?
+		\item Les vecteurs $\vv{AF}$ et $\vv{CG}$ sont-ils égaux ?
+	\end{enumerate}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth} \vspace{-33mm}
+	\begin{tikzpicture} 
+		\draw[step=1cm,color=gray] (-0.5,-0.5) grid (7.5,5.5);
+		\draw (1,4) node {x} node[above left] {$A$};
+		\draw (3,3) node {x} node[above left] {$B$};
+		\draw (3,2) node {x} node[above left] {$C$};
+		\draw (2,1) node {x} node[above left] {$D$};
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (7.5,-0.5) rectangle (7,7.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (7.5,5);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Vecteurs égaux}
+\begin{minipage}{0.5\linewidth} \vspace{-2mm}
+	\begin{tikzpicture}
+		\draw[step=1cm,color=gray] (-0.5,-0.5) grid (8.5,6.5);
+		\draw (3,2) node {x} node[above left] {$A$};
+		\draw (6,3) node {x} node[above left] {$B$};
+		\draw (4,5) node {x} node[above left] {$C$};
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,6.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (8.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,6.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,6.5) rectangle (8.5,6);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{enumerate}
+		\item Placer le point $D$ tel que $\vv{AD}=\vv{BC}$
+		\item Placer le point $E$ tel que $\vv{BE}=\vv{AC}$
+		\item Placer le point $F$ tel que $\vv{FA}=\vv{BD}$
+		\item Placer le point $G$ tel que $\vv{GB}=\vv{AC}$
+		\item Les vecteurs $\vv{CD}$ et $\vv{CE}$ sont-ils égaux ?
+		\item Le point $B$ est-il le milieu du segment $[BC]$ ?
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Points et vecteurs} 
+\begin{minipage}{0.45\linewidth} \restoreskip
+	\begin{enumerate}
+		\item Placer le point $D$ image du point $A$ par l'enchaînement des translations de vecteurs $\vv{AB}$ et $\vv{AC}$
+		\item Placer le point $E$ image du point $C$ par l'enchaînement des translations de vecteurs $\vv{BC}$ et $\vv{BD}$
+		\item Placer le point $F$ image du point $E$ par l'enchaînement des translations de vecteurs $\vv{CD}$ et $\vv{CA}$
+		\item Le quadrilatère $BFEC$ est-il un parallélogramme ?
+		\item Quelle est la nature du quadrilatère $AFDB$ ?
+	\end{enumerate}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.55\linewidth} 
+	\begin{tikzpicture} 
+		\draw[step=1cm,color=gray] (-0.5,-0.5) grid (9.5,7.5);
+		\draw (1,2) node {x} node[above left] {$A$};
+		\draw (3,5) node {x} node[above left] {$B$};
+		\draw (4,3) node {x} node[above left] {$C$};
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,7.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (9.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (9.5,-0.5) rectangle (9,7.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,7.5) rectangle (9.5,7);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\section{Égalité de vecteurs}
+
+\subsection{Égalités}
+\begin{minipage}{0.55\linewidth} \restoreskip
+On considère $ABCDEF$ un hexagone régulier et on note $O$ son centre.
+	\begin{enumerate}
+		\item Compléter les pointillés par un vecteur égal sur la figure ci-contre :
+		
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+			$\vv{BC}=\ldots$ & $\vv{CO}=\ldots$ & $\vv{FE}=\ldots$ \\
+			$\vv{OD}=\ldots$ & $\vv{BF}=\ldots$ & $\vv{AC}=\ldots$ 
+		\end{tabular}
+		
+		\item Déterminer si les égalités suivantes sont correctes ou incorrectes :
+		
+		\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+			$\vv{AB}=\vv{DE}$ & $\vv{OF}=\vv{CO}$ & $\vv{BD}=\vv{AE}$ \\
+			$\vv{BE}=\vv{CD}$ & $\vv{BO}=\vv{AF}$ & $\vv{FB}=\vv{CE}$
+		\end{tabular}
+	\end{enumerate}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.45\linewidth} 
+	\begin{tikzpicture}[scale=1.5]
+		\draw (0,0) coordinate (A) node[below] {$A$} -- (2,0) coordinate (B) node[below] {$B$} -- (3,1.73) coordinate (C) node[right] {$C$} -- (2,3.46) coordinate (D) node[above] {$D$} -- (0,3.46) coordinate (E) node[above] {$E$} -- (-1,1.73) coordinate (F) node[left] {$F$} -- cycle ; 
+		\draw (A) -- (D) ;
+		\draw (B) -- (E) ;
+		\draw (C) -- (F) ;
+		\draw (1,1.63) node[below] {$O$} ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+
+\subsection{Milieu}
+\begin{enumerate}
+	\item Construire un triangle $ABC$ quelconque.
+	\item Placer le point $D$ tel que $\vv{CD}=\vv{AB}$
+	\item Placer le point $E$ tel que $\vv{EC}=\vv{AB}$
+	\item Que peut-on dire du point $C$ par rapport au segment $[DE]$ ? Justifier.
+\end{enumerate}
+
+
+
+\subsection{Parallélogramme}
+\begin{enumerate}
+	\item Construire un triangle $ABC$ quelconque.
+	\item Placer le point $D$ de sorte que $ABCD$ soit un parallélogramme.
+	\item Placer le point $E$ de sorte que $AEBC$ soit un parallélogramme.
+	\item Que peut on dire du point $A$ par rapport au segment $[ED]$ ? Justifier.
+	\item Quelle est la nature du quadrilatère $EBCD$ ?
+\end{enumerate}
+
+
+
+\subsection{Extension d'un triangle}
+On considère un triangle $ABC$. On note $I$ le milieu du segment $[BC]$ \\
+On considère le point $M$ vérifiant $\vv{AI}=\vv{IM}$. 
+
+Quelle est la nature du quadrilatère $ABMC$ ?
+
+
+\subsection{Dédoublement}
+On considère un parallélogramme $ABCD$. \\
+On note $I$ et $J$ les milieux respectifs des segments $[AD]$ et $[BC]$
+\begin{enumerate}
+	\item Donner tous les vecteurs égaux à $\vv{IA}$
+	\item Quelle est la nature du quadrilatère $AIJB$ ? Et de $IDCJ$ ?
+	\item \begin{enumerate}
+		\item Quelle est la nature du quadrilatère $IBJD$ ?
+		\item En déduire que $\vv{BI}=\vv{JD}$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Quelle est la nature du quadrilatère $ICJA$ ?
+		\item En déduire que $\vv{IC}=\vv{AJ}$
+	\end{enumerate}
+	\item On note $M$ le point d'intersection entre les droites $(IC)$ et $(JD)$ \\
+	On note $P$ le point d'intersection entre les droites $(IB)$ et $(JA)$
+	\begin{enumerate}
+		\item Justifier que $P$ et $M$ sont les milieux respectifs des segments $[IB]$ et $[DJ]$
+		\item En déduire alors que $\vv{IP}=\vv{MJ}$
+		\item Que peut-on conclure quant au quadrilatère $IPJM$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Opérations sur les vecteurs}
+
+\subsection{Produit par un réel}
+On considère les points ci-contre alignés régulièrement :
+
+\begin{center}
+	\begin{tikzpicture}
+		\draw[line width = 1.5pt , -Stealth] (-0.5,0) -- (15.5,0) ;
+		\foreach \i/\j in {0/A, 1/B, 2/C, 3/D, 4/E, 5/F, 6/G, 7/H, 8/I, 9/J, 10/K, 11/L, 12/M, 13/N, 14/O, 15/P}
+			\draw (\i,0) node {\tiny\textbf{|}} node[above] {$\j$} ;
+	\end{tikzpicture}
+\end{center}
+
+Compléter les pointillés par un nombre réel afin que les égalités soient vérifiées :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{P{0.45\linewidth} P{0.45\linewidth}}
+	$\vv{AB} = \ldots \vv{AD}$ \quad donc \quad $\vv{AD} = \ldots \vv{AB}$ & 
+	$\vv{CE} = \ldots \vv{FJ}$ \quad donc \quad $\vv{FJ} = \ldots \vv{CE}$ \\
+	$\vv{EH} = \ldots \vv{MD}$ \quad donc \quad $\vv{MD} = \ldots \vv{EH}$ &
+	$\vv{LN} = \ldots \vv{GC}$ \quad donc \quad $\vv{GC} = \ldots \vv{LN}$ \\
+	$\vv{KP} = \ldots \vv{KA}$ \quad donc \quad $\vv{KA} = \ldots \vv{KP}$ &
+	$\vv{EI} = \ldots \vv{LJ}$ \quad donc \quad $\vv{LJ} = \ldots \vv{EI}$ \\
+	$\vv{CF} = \ldots \vv{NP}$ \quad donc \quad $\vv{NP} = \ldots \vv{CF}$ &
+	$\vv{JP} = \ldots \vv{KG}$ \quad donc \quad $\vv{KG} = \ldots \vv{JP}$ \\
+\end{tabular}
+
+
+
+\subsection{Représentation graphique}
+\begin{minipage}{0.45\linewidth} \restoreskip
+	En faisant apparaître les traits de construction pour les deux premiers points, placer :
+	
+		$E$ tel que $\vv{DE}=\vv{CB}+\vv{DA}$  
+		
+		$F$ tel que $\vv{AF}=\vv{BD}-\vv{BC}$ 
+		
+		$G$ tel que $\vv{CG}=\vv{DE}+\vv{BF}$  
+		
+		$H$ tel que $\vv{HF}=\vv{BA}-\vv{ED}$ 
+		
+		$I$ tel que $\vv{ID}=\vv{AC}+\vv{AE}$  
+		
+		$J$ tel que $\vv{BJ}=\vv{GI}+\vv{HD}+\vv{AI}$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.55\linewidth} 
+	\begin{tikzpicture} 
+		\draw[step=1cm,color=gray] (-0.5,-1.5) grid (8.5,5.5);
+		\draw (2,1) node {x} node[above left] {$A$};
+		\draw (3,2) node {x} node[above left] {$B$};
+		\draw (1,3) node {x} node[above left] {$C$};
+		\draw (5,3) node {x} node[above left] {$D$};
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-1.5) rectangle (0,5.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-1.5) rectangle (8.5,-1);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-1.5) rectangle (8,5.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Vecteurs composés}
+\begin{minipage}{0.5\linewidth} \vspace{-2mm}
+	\begin{tikzpicture}
+		\draw[step=1cm,color=gray] (-0.5,-0.5) grid (8.5,5.5); 
+		\draw[line width = 1.5pt , -Stealth] (1,3) -- node[above] {$\vv{u}$} (5,5) ;
+		\draw[line width = 1.5pt , -Stealth] (4,0) -- node[right] {$\vv{v}$} (3,3) ;
+		\draw[line width = 1.5pt , -Stealth] (7,4) -- node[above] {$\vv{w}$} (5,2) ;
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (8.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth} \restoreskip
+	On a représenté dans le graphique ci-contre trois vecteurs $\vv{u}$ , $\vv{v}$ et $\vv{w}$.
+	
+	En faisant apparaître les traits de construction, représenter sur une feuille à carreau chacun des vecteurs suivants :
+	
+	$\vv{x}=\frac{1}{2}\vv{u}+2\vv{w}$ \qquad $\vv{y}=\vv{v}-\vv{u}-2\vv{w}$
+	
+	\qquad \qquad $\vv{z}=2\vv{v}+3\vv{w}-\vv{u}$
+\end{minipage}
+
+
+
+\subsection{Relations dans une figure}
+\begin{minipage}{0.6\linewidth} \restoreskip
+	Compléter les pointillés par $\vv{u}$ , $-\vv{u}$ , $\vv{v}$ , $-\vv{v}$ , $\vv{w}$ ou $-\vv{w}$ afin que les égalités soient vérifiées :
+	
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{P{0.45\linewidth} P{0.45\linewidth} }
+		$\vv{AC}+\vv{GK}=\ldots$ & $\vv{BK}+2\vv{JF}=\ldots$ \\
+		$\vv{IJ}+\vv{KE}=\ldots$ & $\vv{AJ}+\vv{KH}-\vv{DF}=\ldots$ \\
+		$\vv{BK}-\vv{EC}+\vv{LG}=\ldots$ & $\vv{FL}+\vv{HB}-\vv{CD}=\ldots$ \\
+		$\frac{1}{2}\vv{CE}+2\vv{IL}=\ldots$ & $3\vv{JK}+\vv{GC}+\frac{1}{2}\vv{DJ}=\ldots$ \\
+		$\frac{1}{3}\vv{IF}-\frac{1}{2}\vv{KE}=\ldots$ & $\frac{1}{2}\vv{HJ}+\frac{3}{2}\vv{EI}=\ldots$ \\
+		 $\frac{1}{2}\vv{FJ}+\vv{CD}+\frac{1}{4}\vv{BI}=\ldots$ & $\frac{2}{3}\vv{LA}-\frac{1}{2}\vv{KI}+\frac{1}{2}\vv{BE}=\ldots$ 
+	\end{tabular}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth} 
+	\begin{tikzpicture}
+		\draw (0,0) node[left] {$A$} -- (60:4) node[above] {$F$} -- ++(2,0) node[above] {$J$} -- ++(-60:4) node[right] {$L$} -- ++(-120:2) node[below] {$I$} -- ++(-4,0) node[below] {$B$} -- cycle;
+		\draw (0,0) -- ++(6,0) ;
+		\draw (60:2) node[left] {$C$} -- ++(4,0) node[right] {$K$} ;
+		\draw (-60:2) -- ++(60:6) ;
+		\draw (-60:2)++(2,0) -- ++(60:4) ;
+		\draw (60:2) -- ++(-60:4) node[below] {$E$} ;
+		\draw (60:4) -- ++(-60:6) ;
+		\draw (2,0.2) node[above] {$D$} ;
+		\draw (4,0.2) node[above] {$H$} ;
+		\draw (3,1.9) node[above] {$G$} ;
+		\draw[line width = 1.5pt , -Stealth, color=blue] (0,0) -- node[above] {$\vv{u}$} (3,-1.73);
+		\draw[line width = 1.5pt , -Stealth, color=blue] (60:2) -- node[above] {$\vv{v}$} (4,3.46);
+		\draw[line width = 1.5pt , -Stealth, color=blue] (5,-1.73) -- node[below right] {$\vv{w}$} (5,1.73);
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Autour d'un parallélogramme}
+Construire un parallélogramme $ABCD$, puis placer les points $I$, $J$ et $K$ vérifiant les égalités suivantes :
+
+$\vv{CI}=\vv{DB}+\frac{1}{2}\vv{AD}$ \qquad $\vv{BJ}=2\vv{CD}-\frac{1}{2}\vv{CB}$ \qquad $\vv{DK}=\vv{AC}+2\vv{BA}+\frac{1}{2}\vv{DA}$
+
+
+
+\section{Relation de Chasles et décomposition}
+
+\subsection{Égalités de sommes}
+Compléter les pointillés afin que les égalités suivantes soient vérifiées :
+
+\renewcommand{\arraystretch}{1.75}
+\begin{tabular}{P{0.3\linewidth} P{0.3\linewidth} P{0.3\linewidth}}
+	a) $\vv{AB}+\vv{AB}=\vv{\ldots \ldots}$ & b) $\vv{DA}+\vv{BD}=\vv{\ldots\ldots}$ & c) $\vv{\ldots A}+\vv{A \ldots}=\vv{BC}$ \\
+	d) $\vv{A\ldots}+\vv{B\ldots}=\vv{AC}$ & e) $\vv{C\ldots}+\vv{D \ldots}=\vv{\ldots B}$ & f) $\vv{AB}+\vv{CA}+\vv{BD}=\vv{\ldots\ldots}$ \\
+	g) $\vv{AD}+\vv{\ldots\ldots}+\vv{DC}=\vv{BC}$ & h) $\vv{\ldots B}+\vv{\ldots C}+\vv{\ldots D}=\vv{AC}$ & i) $\vv{B\ldots}+\vv{A\ldots}+\vv{B\ldots}=\vv{BD}$
+\end{tabular}
+
+
+
+\subsection{Dans un parallélogramme}
+On considère un parallélogramme $MNPQ$. Simplifier au maximum les vecteurs suivants :
+
+\begin{center}
+$\vv{u}=\vv{NP}+\vv{NM}$ \qquad $\vv{v}=\vv{PM}+\vv{QP}+\vv{NQ}$ \qquad $\vv{w}=2\vv{QM}-\vv{QN}+\vv{MN}$ \qquad $\vv{w}=\vv{PM}+\vv{NQ}$
+\end{center}
+
+
+
+\subsection{À partir d'un segment}
+\begin{enumerate}
+    \item Tracer un segment $[AB]$, placer $I$ son milieu, puis un point $M$ n'appartenant pas au segment $[AB]$.
+    \item Placer les points $C$ et $D$ tels que $\vv{IC}=\vv{IA}+\vv{IM}$ et $\vv{ID}=\vv{IB}+\vv{IM}$.
+    \item Montrer que $M$ est le milieu du segment $[CD]$
+    \item Soit $E$ le symétrique de $I$ par rapport à M. \\Montrer que $\vv{IC}+\vv{ID}=\vv{IE}$.
+\end{enumerate}
+
+
+
+\subsection{Simplification}
+On considère quatre points du plan $A$, $B$, $C$ et $D$.\\
+Simplifier au maximum chacun des vecteurs suivants :
+
+$\vv{u}=\vv{AD}+\vv{CB}+\vv{AC}+\vv{DC}+\vv{BA}$
+
+$\vv{v}=\vv{DA}+2\vv{BD}+\vv{CB}-\vv{CA}$
+
+$\vv{w}=2\vv{BC}-\vv{AD}-2\vv{BA}+\vv{CD}$
+
+$\vv{x}=\vv{BC}-\vv{AB}+\vv{CA}+3\vv{AB}-\vv{AC}-2\vv{CB}$
+
+$\vv{y}=2\vv{AC}+3\vv{DA}-2\vv{BA}+\vv{CB}+3\vv{BD}-\vv{AC}$
+
+
+
+\subsection{Milieu d'un segment}
+\begin{enumerate}
+	\item On considère un segment $[AB]$ de milieu $I$, ainsi qu'un point $M$ quelconque. \\
+	Démontrer que $\vv{MA}+\vv{MB}=2\vv{MI}$
+	\item On considère un parallélogramme $CDEF$ ainsi qu'un point $M$ quelconque. \\
+	En appliquant le résultat de la question 1. démontrer que $\vv{MC}+\vv{ME}=\vv{MD}+\vv{MF}$
+	\item On considère un triangle $GHK$\\
+	On note $G'$ le milieu de $[HK]$, $H'$ le milieu de $[GK]$ et $K'$ le milieu de $[GH]$ \\
+	En appliquant le résultat de la question 1. démontrer que $\vv{GG'}+\vv{HH'}+\vv{KK'}=\vv{0}$
+\end{enumerate}
+
+
+
+\subsection{Décomposition}
+On considère quatre points du plan $A$, $B$, $C$ et $D$. On pose également $\vv{u}=3\vv{AB}+2\vv{CD}+4\vv{CB}$
+\begin{enumerate}
+	\item Montrer que $\vv{u}=2\vv{AD}+6\vv{CB}+\vv{AB}$
+	\item Montrer que $\vv{u}=6\vv{CD}+7\vv{DB}+3\vv{AD}$
+	\item Montrer que $\vv{u}=\vv{AB}+2\vv{AD}$
+\end{enumerate}
+
+
+
+\subsection{Dans un rectangle}
+On considère un rectangle $ABCD$, ainsi que les points $I$ et $J$ milieux respectifs des segments $[AB]$ et $[BC]$
+\begin{enumerate}
+	\item Montrer que $\vv{IB}+\vv{IJ}+\frac{1}{2}\vv{AD}=\vv{AC}$
+	\item Montrer que $\vv{AC}+3\vv{JB}+\vv{BD}=\vv{JC}$
+	\item Montrer que $2\vv{IJ}-\vv{AB}+\vv{DI}=\vv{IB}$
+\end{enumerate}
+
+
+\subsection{Découpage du triangle}
+On considère un triangle $ABC$. \\
+On note $I$ le milieu de $[AC]$, $J$ le milieu de $[BC]$ et $K$ le milieu de $[AB]$ 
+\begin{enumerate}
+	\item Montrer que $\vv{IC}+\vv{JB}+\vv{KA}=\vv{0}$
+	\item \begin{enumerate}
+		\item Montrer que $\vv{IK}=\frac{1}{2}\vv{CA}+\frac{1}{2}\vv{AB}$
+		\item En déduire que $\vv{IK}=\vv{JB}$
+		\item Quelle est la nature du quadrilatère $IKBJ$ ?
+	\end{enumerate}
+	\item On note $M$ le milieu du segment $[IJ]$
+	\begin{enumerate}
+		\item Montrer que $\vv{IM}=\frac{1}{4}\vv{AB}$
+		\item En déduire que $\vv{CM}=\frac{1}{2}\vv{AC}+\frac{1}{4}\vv{AB}$
+		\item Démontrer alors que $\vv{MK}=\vv{CM}$
+		\item Que peut on en déduire concernant la nature du quadrilatère $CIKJ$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Extension d'un triangle}
+On considère un triangle $ABC$ et on définit les points $M$, $N$ et $P$ vérifiant les relations :\\
+$\vv{BM}=2\vv{AB}+\vv{CB}$ \quad ,\quad $\vv{CN}=2\vv{AB}+2\vv{AC}$ \quad et \quad $\vv{CP}=3\vv{AB}$
+\begin{enumerate}
+	\item Démontrer que $\vv{NP}=\vv{AB}-2\vv{AC}$
+	\item \begin{enumerate}
+		\item Montrer que $\vv{MP}=\vv{AB}+2\vv{BC}$
+		\item En déduire que $\vv{MP}=2\vv{AC}-\vv{AB}$
+	\end{enumerate}
+	\item Que peut-on dire du point $P$ par rapport au segment $[MN]$
+\end{enumerate}
+
+
+
+\section{Colinéarité et alignement}
+
+\subsection{Relation de colinéarité}
+On considère quatre points distincts $A$, $B$, $C$ et $D$.\\
+Dans chacune des situations suivantes, montrer que les vecteurs $\vv{u}$ et $\vv{v}$ sont colinéaires :
+
+a) $\vv{u}=2\vv{AB}-\vv{AC}$ \qquad et \qquad $\vv{v}=6\vv{AB}-3\vv{AC}$
+
+b) $\vv{u}=3\vv{BC}+\vv{AD}$ \qquad et \qquad $\vv{v}=6\vv{BC}-2\vv{DA}$
+
+c) $\vv{u}=4\vv{AB}-2\vv{BD}$ \qquad et \qquad $\vv{v}=3\vv{BD}+6\vv{BA}$
+
+d) $\vv{u}=2\vv{AB}+\vv{BC}$ \qquad et \qquad $\vv{v}=2\vv{AB}+2\vv{AC}$
+
+e) $\vv{u}=4\vv{AC}+2\vv{AD}$ \qquad et \qquad $\vv{v}=3\vv{AC}+3\vv{CD}$
+
+f) $\vv{u}=3\vv{BD}+2\vv{DC}$ \qquad et \qquad $\vv{v}=9\vv{BC}-3\vv{DC}$ 
+
+
+
+\subsection{Alignement}
+On considère un parallélogramme $EFGH$ et on définit les points $I$ et $J$ par  $\vv{EI}=2\vv{EH}$ et $\vv{FJ}=2\vv{EF}-\vv{EH}$
+\begin{enumerate}
+	\item Montrer que $\vv{GI}=\vv{FH}$
+	\item Montrer que $\vv{GJ}=2\vv{HF}$
+	\item que peut-on en conclure concernant les points $G$, $I$ et $J$ ?
+\end{enumerate}
+
+
+
+\subsection{Prolongement triangulaire}
+On considère un triangle $ABC$, ainsi que les points $K$ et $L$ vérifiant $\vv{CK}=\vv{AB}+\vv{AC}$ et $\vv{AL}=\vv{CB}$
+
+Montrer que les points $K$, $B$ et $L$ sont alignés.
+
+
+
+\subsection{Brochette}
+On considère triangle $ABC$ et on définit les points $I$, $J$, $K$ et $L$ par :
+
+$\vv{AJ}=\vv{CB}$ \quad , \quad $\vv{BI}=\vv{AC}$ \quad , \quad $\vv{BK}=\vv{CB}$ \quad et \quad $\vv{CL}=\vv{AI}$
+\begin{enumerate}
+	\item Justifier que les points $C$, $B$ et $K$ sont alignés.
+	\item \begin{enumerate}
+		\item Montrer que $\vv{CI}=\vv{AB}$ et $\vv{JK}=\vv{AB}$
+		\item Quelle est la nature du quadrilatère $CIKJ$ ?
+	\end{enumerate}
+	\item Démontrer que les points $I$ , $J$, $B$ et $L$ sont alignés.
+\end{enumerate}
+
+
+
+\subsection{Parallélisme}
+On considère un triangle $IJK$ ainsi que les points $M$ et $N$ tels que $\vv{IM}=\vv{KI}$ et $\vv{KN}=\vv{JK}+2\vv{JI}$
+
+Démontrer que les droites $(NM)$ et $JK$ sont parallèles.
+
+
+
+\subsection{Base triangulaire}
+On considère triangle $ABC$ et on définit les points $M$, $N$, et $P$ par $\vv{AM}=3\vv{BC}$, $\vv{CN}=\vv{BC}$ et $\vv{BP}=2\vv{AB}$
+\begin{enumerate}
+	\item Montrer que $\vv{MP}=3\vv{CB}+3\vv{AB}$
+	\item \begin{enumerate}
+		\item Montrer que $\vv{MN}=2\vv{CB}+3\vv{AC}$
+		\item En déduire que $\vv{MN}=\vv{AB}+\vv{CB}$
+	\end{enumerate}
+	\item Que dire des points $M$, $N$ et $P$ ?
+\end{enumerate}
+ 
+
+\end{document}

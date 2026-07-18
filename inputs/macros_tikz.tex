@@ -1,0 +1,192 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Nouvelle commande \domino[Sup][Inf](Coord sw) %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{color_domino}{HTML}{FFE9C0}
+\newcommand\domino{}
+\def\domino[#1][#2](#3){
+	
+	%%% Aspect du domino %%%
+
+	\draw[rounded corners , line width = 1pt , fill = color_domino] ($(#3)+(0,0)$) rectangle ($(#3)+(2,3)$) ;
+	\draw[fill , line width = 1pt , color = black!70!white] ($(#3)+(0.25,1.5)$) -- ($(#3)+(1,1.5)$) circle[radius=0.075] -- ($(#3)+(1.75,1.5)$) ;
+	
+	%%% Compteur de points partie supérieure %%%
+	
+	\ifnum #1 = 1
+		\draw[fill] ($(#3)+(1,2.25)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #1 = 2
+		\draw[fill] ($(#3)+(0.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.875)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #1 = 3
+		\draw[fill] ($(#3)+(0.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.875)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1,2.25)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #1 = 4
+		\draw[fill] ($(#3)+(0.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.875)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,1.875)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #1 = 5
+		\draw[fill] ($(#3)+(0.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.875)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,1.875)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1,2.25)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #1 = 6
+		\draw[fill] ($(#3)+(0.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.875)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,2.625)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,1.875)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,2.25)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,2.25)$) circle[radius=0.125] ;
+	\fi
+	
+	
+	%%% Compteur de points partie inférieure %%%
+	
+	\ifnum #2 = 1
+		\draw[fill] ($(#3)+(1,0.75)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #2 = 2
+		\draw[fill] ($(#3)+(0.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,0.375)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #2 = 3
+		\draw[fill] ($(#3)+(0.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,0.375)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1,0.75)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #2 = 4
+		\draw[fill] ($(#3)+(0.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,0.375)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,0.375)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #2 = 5
+		\draw[fill] ($(#3)+(0.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,0.375)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,0.375)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1,0.75)$) circle[radius=0.125] ;
+	\fi
+	
+	\ifnum #2 = 6
+		\draw[fill] ($(#3)+(0.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,0.375)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,1.125)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,0.375)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(1.5,0.75)$) circle[radius=0.125] ;
+		\draw[fill] ($(#3)+(0.5,0.75)$) circle[radius=0.125] ;
+	\fi
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Macros pour les diagrammes de Venn %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Rectangle de bordure
+\def\Rect[#1]{
+	\ifnum #1 = 2
+		(0,0) rectangle (6,4)
+	\fi
+	\ifnum #1 = 3
+		(0,0) rectangle (6,5.732)
+	\fi	
+}
+
+
+%%% Pour un diagramme de Venn à deux cercles %%%
+
+% Cercle de A
+\def\A{(2,2)  circle (1.4142)}
+
+% Cercle de B
+\def\B{(4,2) circle[radius=1.4142]}
+
+% A union B
+\def\AouB{(3,1) arc(-135:135:1.4142) arc (45:315:1.4142)}
+
+% A inter B
+\def\AetB{(3,1) arc(-45:45:1.4142) arc (135:225:1.4142)}
+
+% A privé de B
+\def\AmB{(3,1) arc(315:45:1.4142) arc (135:225:1.4142)}
+
+% B privé de A
+\def\BmA{(3,1) arc(-135:135:1.4142) arc (45:-45:1.4142)}
+
+
+%%% Pour un diagramme de Venn à trois cercles %%%
+
+% Cercle de C
+\def\C{(3,3.732) circle[radius=1.4142]}
+
+% A union B union C
+\def\AouBouC{(3,1) arc(-135:75:1.4142) arc (-15:195:1.4142) arc (105:315:1.4142)}
+
+% A inter B inter C
+\def\AetBetC{(3,3) arc(135:165:1.4142) arc (255:285:1.4142) arc (15:45:1.4142)}
+
+% A union C
+\def\AouC{(2,2)+(15:1.4142) arc(-75:195:1.4142) arc (105:375:1.4142)}
+
+% A inter C
+\def\AetC{(2,2)+(15:1.4142) arc(-75:-165:1.4142) arc (105:15:1.4142)}
+
+% A privé de C
+\def\AmC{(2,2)+(15:1.4142) arc(-75:-165:1.4142) arc (105:375:1.4142)}
+
+% C privé de A
+\def\CmA{(2,2)+(15:1.4142) arc(-75:195:1.4142) arc (105:15:1.4142)}
+
+% B union C
+\def\BouC{(4,2)+(165:1.4142) arc(-195:75:1.4142) arc (-15:255:1.4142)}
+
+% B inter C
+\def\BetC{(4,2)+(165:1.4142) arc(165:75:1.4142) arc (-15:-105:1.4142)}
+
+% B privé de C
+\def\BmC{(4,2)+(165:1.4142) arc(-195:75:1.4142) arc (-15:-105:1.4142)}
+
+% C privé de B
+\def\CmB{(4,2)+(165:1.4142) arc(165:75:1.4142) arc (-15:255:1.4142)}
+
+% A seul
+\def\Aseul{(3,1) arc(-45:-255:1.4142) arc (-165:-105:1.4142) arc (165:225:1.4142)}
+
+% B seul
+\def\Bseul{(3,1) arc(-135:75:1.4142) arc (-15:-75:1.4142) arc (15:-45:1.4142)}
+
+% C seul
+\def\Cseul{(4,2)+(75:1.4142) arc(-15:195:1.4142) arc (105:45:1.4142) arc (135:75:1.4142)}
+
+% A inter B moins C
+\def\AetBmC{(3,1) arc(-45:15:1.4142) arc (-75:-105:1.4142) arc (165:225:1.4142)}
+
+% A inter C moins B
+\def\AetCmB{(3,3) arc(45:105:1.4142) arc (-165:-105:1.4142) arc (165:135:1.4142)}
+
+% B inter C moins A
+\def\BetCmA{(3,3) arc(135:75:1.4142) arc (-15:-75:1.4142) arc (15:45:1.4142)}
+
+
+
+

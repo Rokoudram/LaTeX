@@ -1,0 +1,499 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Suites numériques}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+
+\section{Généralités sur les suites}
+
+\subsection{Extrapolation}
+Donner une formule de récurrence ou une expression explicite pour les suites suivantes :
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{0.18\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth}}
+    a) $u_{0} = 2$ & $u_{1} = 4$ & $u_{2} = 6$ & $u_{3} = 8$ & $u_{4}=10$ \\
+    b) $u_{0}=2 $ & $ u_{1} = 4$ & $u_{2} = 8$ & $u_{3}=16$ & $u_{4}=32$ \\
+    c) $u_{1}=1$&$u_{2}=2$&$u_{3}=4$&$u_{4}=7$&$u_{5}=11$ \\
+    d) $u_{1}=0$&$u_{2}=\frac{1}{2}$&$u_{3}=\frac{2}{3}$&$u_{4}=\frac{3}{4}$&$u_{5}=\frac{4}{5}$\\
+    e) $u_{1}= 1$&$u_{2}=2$&$u_{3}=6$&$u_{4}=24$&$u_{5}=120$ \\
+    f) $u_1=\frac{1}{2}$&$u_2=\frac{4}{3}$&$u_3=\frac{9}{4}$&$u_4=\frac{16}{5}$&$u_5=\frac{25}{6}$
+\end{tabular}
+
+
+
+\subsection{Modélisation}
+ Pour chacune des situations suivantes, proposer une suite qui permet de la modéliser :
+\begin{enumerate}
+    \item Dans une tube a essai on place 5 bactéries. Le nombre de bactéries double à chaque heure.
+    \item Un gisement de pétrole a produit 60000 barils en l'an 2000 et sa production augmente de 1500 barils chaque année.
+    \item Pour la naissance de leur fille, M et Mme Rakotobe placent 1000\euro\, sur un compte bancaire à taux d'intérêts annuels de $5\%$
+    \item Dans un jeu vidéo une guilde se forme avec 25 membres. Chaque mois la guilde parvient à recruter 10 nouveaux membres, mais 20\% des joueurs arrêtent de jouer car ils préfèrent utiliser leur temps libre pour résoudre des problèmes de mathématiques.
+    \item Une reine fourmi pond un œuf. Chaque jour ses forces s'accroissent et elle peut pondre un œuf de plus que la veille. On s'intéresse au nombre total de fourmis au sein de la fourmilière.
+\end{enumerate}
+
+
+
+\subsection{Calcul de premiers termes}
+Donner les 5 premiers termes des suites suivantes :\\
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+
+    a) $\defsuite{u_{0} = 2}{\frac{4+u_{n}}{2}} $
+    &
+    b) $\defsuite{u_{1} = 1}{u_n+\frac{1}{n}} $
+    &
+    c) $\defsuite{u_{0} = 1}{n\times u_n} $ \\
+
+    d) $\defsuite{u_{0} = \frac{1}{4}}{-2u_n} $
+    &
+    e) $\defsuite{u_{0} = -1}{\frac{\sqrt{2+u_n}}{u_n}} $
+    &
+    f) $\defsuite{u_{1}=1}{\frac{1+u_{n}}{u_{n}}}$ 
+\end{tabular}
+
+
+
+\subsection{Indices et puissances}
+On définit la suite $\Un$ par $u_n=3^{2n-1}$
+\begin{enumerate}
+	\item Que vaut $\frac{u_{2n}}{(u_n)^2}$ ?
+	\item Montrer que $\frac{u_{n+1}+u_{n+2}}{u_n}=90$
+	\item Montrer que $\frac{\sqrt{u_n\times u_{2n}}}{u_n}=3^n$
+\end{enumerate}
+
+
+\subsection{Réexpression}
+\begin{enumerate}
+    \item Soit une suite $(u_n)$ vérifiant la relation de récurrence $u_{n+1} = 2u_n + 1$\\
+    Exprimer $u_{n+2}$ en fonction de $u_n$
+    \item Soit une suite $(u_n)$ vérifiant la relation de récurrence  $u_{n+1} = u_n + n$    \\
+    Exprimer $u_{n+3}$ en fonction de $u_{n+1}$
+    \item Soit une suite $(u_n)$ vérifiant la relation de récurrence  $u_{n+1} = 3u_n - n$    \\
+    Exprimer $u_{n+2}$ en fonction de $u_n$
+    \item Soit une suite $(u_n)$ vérifiant la relation de récurrence  $u_{n+1} = \frac{1}{1-u_n}$\\
+    Vérifier que $u_{n+3}=u_n$
+    \item Soit une suite $(u_n)$ vérifiant la relation de récurrence $u_{n+1}=\frac{u_n}{1+u_n}$\\
+    Exprimer $u_{n+3}$ en fonction de $u_n$
+\end{enumerate}
+
+
+
+\subsection{Via un polynôme}
+On considère la suite $\Un$ définie explicitement par $u_n=n^3-3n^2-5n$
+\begin{enumerate}
+	\item Calculer les 5 premiers termes de la suite $(u_n)$. Semble-t-elle croissante ? Décroissante ?
+	\item Démontrer que $u_{n+1}=n^3-8n-7$
+	\item Résoudre dans $\RR$ l'inéquation $3x^2-3x-7\geq0$
+	\item Déterminer alors les variations de la suite $(u_n)$
+\end{enumerate}
+
+
+
+\subsection{Variations}
+Déterminer le sens de variation des suites ci-dessous :\\
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $u_n=n^{2}+n$ & b) $u_n=n-n^2$ & c) $u_n=\frac{n}{n+1}$ \\
+    d) $u_n=n-\frac{100}{n}$ & e) $u_n=\frac{n+1}{5^{n}}$ & f) $u_n=\frac{3^{2n}}{2^{3n}}$ \\
+    g) $u_n=n^2-15n-3$ & h) $u_n=n^3-26n^2$ & i) $u_n=n+\frac{30}{n}$ \\
+    j) $\defsuite{u_{0}=1}{u_n^{2}-2u_n+3} $ & k) $\defsuite{u_{0}=2}{\frac{1+u_n^{3}}{u_n^{2}}}$ & l) $\defsuite{u_{1}=5}{10-u_n} $
+\end{tabular}
+
+
+
+\subsection{Conjecture de limites}
+Conjecturer à l'aide de la calculatrice la limite de $u_n$ ci-après :\\
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+a) $u_n = n^2 - 10 n$ & b) $u_n = \frac{1}{n} + \frac{1}{n+1}$ & c) $u_n = \frac{2^n}{n}$ \\
+
+d) $\defsuite{u_0=1}{2u_n+1}$ & e) $\begin{cases} u_0 = 1000 \\ u_{n+1} = \frac{u_n + 100}{2} \end{cases}$ & f) $\begin{cases} u_0 = 23 \\ u_{n+1} = 1 - \frac{u_n}{2} \end{cases}$
+\end{tabular}
+
+
+
+\subsection{Deux suites ?}
+On considère les suites $(u_n):\begin{cases}u_0=1\\u_{n+1}=\frac{u_n}{1+u_n}\end{cases}$ et $v_n=\frac{1}{n+1}$
+
+\begin{enumerate}
+	\item Calculer les 5 premiers termes de la suite $(v_n)$
+	\item Calculer les 5 premiers termes de la suite $(u_n)$
+	\item Démontrer que $v_{n+1}(1+v_n)=v_n$
+	\item En déduire que les suites $(u_n)$ et $(v_n)$ sont égales.
+	\item Conjecturer leur limite.
+\end{enumerate}
+
+
+\subsection{Études graphique}
+Représenter graphiquement chacune des suites ci-après et conjecturer leur limite lorsque $n$ tend vers $+\infty$ à l'aide des repères ci-dessous :
+
+$\begin{cases}u_0=-1\\u_{n+1}=f(u_n)\end{cases}$ \qquad
+$\begin{cases}v_0=\frac{1}{2}\\v_{n+1}=g(v_n)\end{cases}$ \qquad
+$\begin{cases}w_0=0\\w_{n+1}=h(w_n)\end{cases}$ \qquad
+$\begin{cases}x_0=3\\x_{n+1}=k(x_n)\end{cases}$
+
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.1]
+	\begin{axis}[xmin=-2,xmax=8,ymin=-1,ymax=8, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.1 }]
+		\addplot[samples=100,domain=-3:9,color=red,line width = 1.5pt] {sqrt(5*x+14)};
+		\addplot[samples=100,domain=-3:9,color=black] {x};
+		\draw[color=red] (4,6.5) node {\small $\Ccal_f$};
+		\draw[color=black] (3.2,2.1) node {\small $y=x$};
+	\end{axis}
+	\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.1]
+	\begin{axis}[xmin=0.1,xmax=7,ymin=0,ymax=7, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.1 }]
+		\addplot[samples=100,domain=-3:9,color=red,line width = 1.5pt] {(2+x)/x};
+		\addplot[samples=100,domain=-3:9,color=black] {x};
+		\draw[color=red] (0.8,6.1) node {\small $\Ccal_g$};
+		\draw[color=black] (5.3,4.5) node {\small $y=x$};
+	\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.1]
+	\begin{axis}[xmin=0,xmax=2,ymin=0,ymax=2, xtick distance = 0.5, ytick distance = 0.5,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.1 }]
+		\addplot[samples=100,domain=-3:9,color=red,line width = 1.5pt] {1+(x*x)/4};
+		\addplot[samples=100,domain=-3:9,color=black] {x};
+		\draw[color=red] (0.2,1.2) node {\small $\Ccal_h$};
+		\draw[color=black] (0.8,0.4) node {\small $y=x$};
+	\end{axis}
+	\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.1]
+	\begin{axis}[xmin=0,xmax=9,ymin=0,ymax=8, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.1 }]
+		\addplot[samples=100,domain=-3:9,color=red,line width = 1.5pt] {1+(x*x)/4};
+		\addplot[samples=100,domain=-3:9,color=black] {x};
+		\draw[color=red] (4,6.9) node {\small $\Ccal_k$};
+		\draw[color=black] (3.2,2.1) node {\small $y=x$};
+	\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+
+\section{Suites arithmétiques}
+
+\subsection{Caractérisation des suites arithmétiques}
+Déterminer si les suites ci-dessous sont arithmétiques. Si oui, donner leur raison et leur premier terme.
+    
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $u_n=\frac{7}{2}n-3$ & b) $u_n=n^{2}-3n$ & c) $u_n=-1$ \\
+    d) $ \defsuite{u_{1}=3}{-u_n+2}$ & e) $\defsuite{u_{0}=-1}{u_n-5}$ & f) $\defsuite{u_{0}=2}{\frac{3u_n-2}{u_n}}$ 
+\end{tabular}
+
+
+
+\subsection{À partir de termes}
+\begin{enumerate}
+    \item Soit $\Un$ une suite arithmétique de raison 4 et telle que $u_{13}=63$. Combien vaut $u_{5}$ ? 
+    \item $\Un$ est une suite arithmétique telle que $u_{7}=20$ et $u_{11}=14$. Donner la raison et le premier terme de $(u_n)$
+	\item Soit $\Un$ une suite arithmétique pour laquelle $u_3=10u_0$. Montrer alors que $u_5=4u_1$
+\end{enumerate}
+
+
+
+\subsection{Là ça bloque}
+\begin{enumerate}
+	\item Soit $(u_n)$ une suite arithmétique de raison 2 et de premier terme 3.\\
+	Montrer que $u_{u_n}=4n+9$
+	\item Soit $(u_n)$ une suite arithmétique telle que $u_5\times u_7=(u_6)^2$\\
+	Montrer que la suite $(u_n)$ est constante.
+	\item Soit $(u_n)$ une suite arithmétique telle que $u_2+u_4+u_8=33$ et $u_{33}=96$\\
+	Combien vaut $u_{24833}$ ?
+	\item Soit $(u_n)$ une suite arithmétique vérifiant $u_n+u_{n+1}=u_{n+2}$ \quad $\forall\nN$\\
+	Que peut-on conclure quant à la suite $(u_n)$ ?
+\end{enumerate}
+
+
+
+\subsection{Suite auxiliaire}
+On considère la suite $(u_n)$ définie par $\defsuite{u_{0}=1}{\frac{2u_n}{2+3u_n}}$
+
+\begin{enumerate}
+    \item Calculer les 4 premiers termes de $(u_n)$
+    \item La suite $(u_n)$ est-elle arithmétique ?
+    \item On admettra que $u_n\neq 0$ pour tout $\nN$. On pose alors $v_{n}=\frac{1}{u_n}$ pour tout $\nN$
+    Montrer que $(v_{n})$ est une suite arithmétique, puis donner sa raison et son premier terme.
+    \item Déterminer l'expression de $v_{n}$ en fonction de $n$ puis celle de $u_n$
+    \item Montrer que $(u_n)$ est décroissante.
+    \item Montrer que $0\leq u_n\leq 1$ pour tout $\nN$
+\end{enumerate}
+
+
+
+\subsection{Une formule simple}
+On définit la suite $\Un$ par $\defsuite{u_0=0}{\frac{3-2u_n}{4-3u_n}}$
+\begin{enumerate}
+	\item Calculer les 4 premiers termes de la suite $(u_n)$
+	\item On admet que la suite $(u_n)$ est positive.
+	\begin{enumerate}
+		\item Justifier que $u_{n+1}\geq u_n$ si et seulement si $3u_n\,^2-6u_n+3\geq0$
+		\item En déduire que la suite $(u_n)$ est croissante.
+	\end{enumerate}
+	\item Pour tout $\nN$, on pose $v_n=\frac{u_n}{1-u_n}$
+	\begin{enumerate}
+		\item Montrer que $v_{n+1}=v_n+3$
+		\item Donner l'expression de $v_n$ en fonction de $n$.
+	\end{enumerate}
+	\item Exprimer $u_n$ en fonction de $n$.
+	\item Démontrer que $u_n\leq1$ pour tout $\nN$
+\end{enumerate}
+
+
+
+\section{Suites géométriques}
+
+\subsection{Caractérisation des suites géométriques}
+Déterminer si les suites ci-dessous sont géométriques. Si oui, donner leur raison et leur premier terme.\\
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $u_n=\frac{2}{3^{n}}$ & b) $u_n=1+2^{n}$ & c) $u_n=6\times\frac{3^{n+1}}{2^{n+2}}$ \\
+	d) $ \defsuite{u_{1}=2}{n\times u_n}$ & e) $\defsuite{u_{0}=10}{\frac{u_n}{5}}$ & f) $u_n=3n^{2}$
+\end{tabular}
+
+
+
+\subsection{À partir de termes}
+
+\begin{enumerate}
+    \item Déterminer la valeur de $a\in\RR_{+}$ telle que $4~;~a~;~9$ soient les termes consécutifs d'une suite géométrique
+    \item  $(u_n)$ est une suite géométrique de raison positive telle que $u_{3}=4$ et $u_{5}=12$. Donner la raison et le premier terme de $(u_n)$
+\end{enumerate}
+
+
+
+\subsection{Léger décalage}
+
+On considère une suite géométrique $\Un$ pour laquelle l'égalité $u_{n+2}=\frac{5u_{n+1}+3u_n}{2}$ est toujours vérifiée.
+
+Que peut-on conclure quant à la raison de la suite $(u_n)$ ?
+
+
+\subsection{Boing boing}
+On lâche une balle rebondissante à 150cm de hauteur. On suppose que la balle rebondit toujours à 80$\%$ de la hauteur du rebond précédent. \\
+On note $h_{n}$ la hauteur atteinte par la balle lors du n-ième rebond.
+
+\begin{enumerate}
+    \item Quelle est la hauteur atteinte par la balle lors du 3e rebond ?
+    \item Exprimer $h_{n+1}$ en fonction de $h_{n}$ pour tout $\nN$
+    \item Donner l'expression de $h_{n}$ en fonction de $n$.
+    \item[\faCalculator] Au bout de combien de rebonds la balle ne dépassera pas 1cm de hauteur ?
+\end{enumerate}
+
+
+
+\subsection{Y a-t-il un pilote dans l'avion ?}
+On entraîne un modèle d'intelligence artificielle (I.A.) sur un simulateur de vol.
+
+Lors de sa première tentative, l'expérience n'est pas concluante et l'I.A. fait exploser le moteur 0.5s après le démarrage.
+
+Cependant l'I.A. apprend de ses erreurs et parvient, après chaque simulation, à augmenter son temps de vol sans accident de 2\%
+
+On note $t_n$ le temps de vol sans accident de l'I.A. lors de sa $n$-ième tentative.
+
+\begin{enumerate}
+    \item Justifier que $(t_n)$ est une suite géométrique.
+    \item Exprimer $t_n$ en fonction de $n$
+    \item Après 500 tentatives, l'I.A. sera-t-elle suffisamment entraînée pour relier Montpellier à Marrakech (2h55min de vol) sans risques d'accident ?
+    \item[\faCalculator] Combien de simulations faudra-t-il à l'I.A. afin d'effectuer sans encombre un vol de 10h ? 
+\end{enumerate}
+
+
+
+\subsection{Une suite arithmético-géométrique}
+On définit la suite $(u_n)$ par $\defsuite{u_{0}=2}{3u_n+4}$
+\begin{enumerate}
+    \item Calculer les 4 premiers termes de $(u_n)$
+    \item Montrer que $(u_n)$ n'est ni arithmétique ni géométrique.
+    \item On pose $v_{n}=u_n+2$ pour tout $\nN$ \\
+    Montrer que $(v_{n})$ est une suite géométrique dont on précisera la raison et le premier terme.
+    \item Donner l'expression de $v_{n}$ en fonction de $n$ puis en déduire l'expression de $u_n$ en fonction de $n$.
+\end{enumerate}
+
+
+
+\subsection{Ça devient compliqué}
+On définit la suite $(u_n)$ par $\defsuite{u_0=0}{2u_n+n}$
+
+\begin{enumerate}
+    \item Montrer que la suite $(u_n)$ n'est ni arithmétique ni géométrique.
+    \item Pour tout $\nN$ on pose $v_n=u_n+n+1$
+    \begin{enumerate}
+        \item Exprimer $v_{n+1}$ en fonction de $n$ et de $u_n$
+        \item Montrer que la suite $(v_n)$ est géométrique.
+        \item Donner l'expression de $v_n$ en fonction de $n$, puis en déduire l'expression de $u_n$ en fonction de $n$
+    \end{enumerate}
+    \item Montrer que la suite $(u_n)$ est croissante.
+\end{enumerate}
+
+
+
+\subsection{Raisonnement à l'envers}
+On considère une suite $(u_n)$ vérifiant la relation de récurrence : $u_{n+1}=4+\frac{u_n}{2}$
+\begin{enumerate}
+    \item Quelle valeur de $u_{0}$ choisir afin d'avoir $u_{3}=1$ ?
+    \item On pose $v_n=u_n-8$ pour tout $\nN$ \\
+    Montrer que $(v_n)$ est une suite géométrique, puis donner l'expression de $v_{n}$ en fonction de $n$ et de son premier terme $v_{0}$ 
+    \item En déduire l'expression de $u_n$ en fonction de $n$ et de son premier terme $u_{0}$
+    \item Vérifier alors la réponse donnée à la question 1.
+\end{enumerate}
+
+
+
+\subsection{Annexion géométrique}
+On considère la suite $\Un:\defsuite{u_0=2}{4-\frac{3}{u_n}}$
+\begin{enumerate}
+	\item Calculer les 4 premiers termes de la suite $(u_n)$
+	\item On admet que $0\leq u_n\leq3$ pour tout $\nN$
+	\begin{enumerate}
+		\item Montrer que $\frac{u_{n+1}}{u_n}=\frac{4u_n-3}{u_n\,^2}$
+		\item En déduire que la suite $(u_n)$ est croissante.
+	\end{enumerate}
+	\item Pour tout $\nN$ on pose $v_n=\frac{u_n-1}{3-u_n}$
+	\begin{enumerate}
+		\item Démontrer que $v_{n+1}=3v_n$
+		\item En déduire l'expression de $v_n$ en fonction de $n$
+		\item Montrer que $u_n=\frac{3v_n-1}{v_n+1}$
+	\end{enumerate}
+	\item Démontrer que $u_n=3-\frac{2}{3^n+1}$ pour tout $\nN$
+\end{enumerate}
+
+
+
+
+\section{Sommes numériques}
+
+\subsection{Manipulation du symbole}
+Écrire les sommes suivantes à l'aide du symbole $\Sigma$ : \\
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+
+    $A = 2+4+6+\ldots+1464$ & $B = 3^5+3^6+\ldots+3^{21}$ & $C = \frac{11}{16}+\frac{12}{17}+\ldots+\frac{35}{37}$\\
+    $D = \frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\ldots+\frac{9}{512}$ & $E = 9+16+25+\ldots+289$ & $F = 3-6+9-12+\ldots+123$    
+\end{tabular}
+
+
+
+\subsection{Premiers calculs}
+Calculer sans utiliser de formules du cours les sommes suivantes :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.33\textwidth}}
+     $A=\sommek{0}{20}(-1)^k$ & $B=\sommek{0}{20}\left(3+(-1)^k\right)$ & $C=\sommek{0}{20}\left(3+2\times(-1)^k\right)$
+\end{tabular}
+
+
+\subsection{Sommes arithmétiques}
+Calculer chacune des sommes suivantes :
+ 
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.33\textwidth}}
+     $A=\sommek{0}{17}~(\frac{k}{2}-1)$ & $B=\sommek{0}{22}~(3+2k)$ & $C=\sommek{0}{31}~(8-k)$ \\
+     $D=\sommek{3}{20}~k$ & $E=\sommek{5}{15}~(1+3k)$ & $F=\sommek{10}{20}~(\frac{2k+3}{5})$ \\
+     $G=2+4+6+8+\ldots+32$ & $H=1+3+5+7+\ldots+29$ & $I=143+137+131+\ldots+47$ \\
+\end{tabular}
+
+
+
+\subsection{Sommes géométriques}
+Calculer chacune des sommes suivantes :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.33\textwidth}}
+    $A=\sommek{0}{11}~\frac{3}{2^{k}}$ & $B=\sommek{0}{9}~(1-(\frac{7}{10})^{k}) $ & $C=\sommek{0}{15}~(-\frac{3}{2})^{k} $ \\
+    $D=\sommek{3}{17}~\frac{1}{2^{k}} $ & $E=\sommek{4}{15}~(\sqrt{3^{k}}-2) $ & $F=\sommek{7}{16} ~\frac{3^{k-1}}{2^{k+2}}$ \\
+     $G=1+3+9+27+\ldots+6561$ & $H=1-2+4-8+\ldots-4096$ & $I=\frac{1}{4}+\frac{1}{16}+\frac{1}{64}+\ldots+\frac{1}{65536}$    
+\end{tabular}
+
+
+
+\subsection{Une somme découpée}
+Soit $(u_n)$ une suite arithmétique de premmier terme $u_0=-7$ et de raison $r=2$
+\begin{enumerate}
+    \item Calculer $S_1=\sommek{0}{20}u_k$
+    \item Calculer $S_2=\sommek{11}{42}u_k$
+    \item Déterminer un entier naturel $n\geq7$ tel que $\sommek{7}{n}u_k=55$
+    \item Combien existe-t-ill d'entiers naturels $p\leq23$ tels que $\sommek{p}{23}u_k=402$
+\end{enumerate}
+
+
+
+\subsection{Somme d'après termes}
+\begin{enumerate}
+	\item Soit $(u_n)$ une suite arithmétique telle que $u_6=17$ et $u_{11}=32$\\
+	Calculer $\sommek{3}{13}u_k$
+	\item Soit $(u_n)$ une suite arithmétique de raison 3 telle que $u_5=-8$ et $u_p=121$ \\
+	Calculer $\sommek{5}{p}u_k$
+	\item Soit $(u_n)$ une suite géométrique telle que $u_5=32$ et $u_9=8$ \\
+	Calculer $\sommek{0}{11}u_k$
+	\item Soit $(u_n)$ une suite géométrique telle que $u_3=18$ et $u_6=-\frac{2}{3}$ \\
+	Calculer $\sommek{3}{10}u_k$
+\end{enumerate}
+
+
+
+\subsection{Avant la retraite}
+Bernard postule à un nouveau travail et prétend à un salaire annuel de 24000 euros. Après l'avoir embauché, son employeur lui donne le choix entre deux évolutions de salaire : Soit une augmentation de 1000 euros annuels tous les ans, soit une augmentation de 4$\%$ de son salaire annuel chaque année. \\
+Sachant que Bernard partira à la retraite dans 10 ans et qu'il ne souhaite pas changer d'emploi d'ici là, quelle-est l'offre qu'il devrait choisir ?
+
+
+
+\subsection{Château de cartes}
+Combien faut-il de paquets de cartes classiques afin de construire un château de cartes comportant 100 étages ?
+
+
+
+\subsection{Poste de frontière}
+Au poste de frontière, les douaniers comptent le nombre de voitures passant de la France à l'Espagne chaque jour.
+\begin{enumerate}
+	\item La première voiture de la journée passe à 5h00 et les douaniers affirment qu'à chaque heure ils ont compté 150 voitures de plus que lors de l'heure précédente, et ce jusqu'à minuit.\\
+	Combien de voitures sont passées dans la journée ?
+	\item Le lendemain les douaniers comptent 200 voitures entre 5h00 et 6h00, et ils affirment cette fois que le nombre de voiture était à chaque heure de la journée supérieur de 10\% au nombre de voiture de l'heure précédente.\\
+	Combien de voitures ont-il compté ?
+	\item Le surlendemain les douaniers ont compté 300 voitures entre 5h00 et 6h00, et ils affirment en avoir compté 100 supplémentaires à chaque heure jusqu'à 18h, après quoi le nombre de voitures comptées a commencé à diminuer de 15\% à chaque heure jusqu'à minuit.\\
+	Combien de voitures ont passé la frontière dans la journée ?
+\end{enumerate}
+
+
+
+\subsection{Un beau mélange}
+On considère la suite $(u_n)$ définie par $\begin{cases}u_0=1\\u_{n+1}=3u_n+n\end{cases}$
+\begin{enumerate}
+	\item Montrer que $(u_n)$ n'est ni arithmétique ni géométrique.
+	\item On pose $v_n=4u_n+2n+1$ \quad $\forall\nN$
+	\begin{enumerate}
+		\item Montrer que $(v_n)$ est une suite géométrique.
+		\item Exprimer $v_n$ en fonction de $n$ puis en déduire l'expression de $u_n$ en fonction de $n$
+	\end{enumerate}
+	\item Calculer $\sommek{5}{11}u_k$
+\end{enumerate}
+
+
+
+\end{document}

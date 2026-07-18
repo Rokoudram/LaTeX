@@ -1,0 +1,383 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
+\fancyhead[C]{Matrices}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Calculs et généralités}
+
+\subsection{Premiers calculs}
+On pose $A=\matrice{1&2\\3&4}$ et $B=\matrice{2&-1\\0&3}$
+
+Calculer $A+B$ , $A-2B$ , $\frac{1}{2}A-\frac{3}{4}B$ , $AB$ et $A^2-B^2$
+
+
+
+\subsection{Produits et dimensions}
+Parmi les produits suivants, dire lesquels ont du sens et les effectuer : \\
+
+\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    a) $\matrice{1&1\\2&3\\2&1}\times\matrice{2&5\\4&6} $ &
+    b) $\matrice{2&5\\4&6}\times\matrice{1&1\\2&3\\2&1} $ \\
+    c) $\matrice{-2&4&1}\times\matrice{1&2&3\\-3&-2&-1\\0&1&4} $ &
+    d) $\matrice{1&2&-3&0}\times\matrice{1\\-3\\5\\-7} $ \\
+    e) $\matrice{1&0&3\\2&-1&4\\3&5&2}\times\matrice{2&-3&1\\0&4&-2\\6&-1&0} $ &
+    f) $\matrice{2&-2&2\\1&2&-3}\times\matrice{1&1&1\\4&5&6} $
+\end{tabular}
+
+
+
+\subsection{Avec une inconnue}
+Soit $A=\matrice{1&x\\-2&3} $ pour $\xR$
+\begin{enumerate}
+    \item Déterminer la valeur de $x$ pour laquelle $A^2=\matrice{5&-8\\-8&13}$
+    \item Peut-on trouver une valeur de $x$ pour laquelle $A^2=4A$ ?
+    \item On pose $x=-4$, montrer alors que $A\times\matrice{1\\-1}-5A\times\matrice{2\\1}=\matrice{15\\0}  $
+\end{enumerate}
+
+
+
+\subsection{Ensemble commutatif}
+On pose $A=\matrice{1&-1\\2&0}$ et $B=\matrice{1&0\\3&4}$
+\begin{enumerate}
+    \item Déterminer $Com(A)$ l'ensemble des matrices qui commutent avec $A$
+    \item Déterminer $Com(B)$ l'ensemble des matrices qui commutent avec $B$
+    \item En déduire l'ensemble des matrices commutant à la fois avec $A$ et $B$
+\end{enumerate}
+
+
+
+\section{Inversibilité}
+
+\subsection{Inversible ?}
+Déterminer quelles matrices sont inversibles parmi les suivantes, puis donner leur inverse :
+
+\renewcommand{\arraystretch}{1.6}
+    \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+        $A=\matrice{1&0\\0&1}$ & $B=\matrice{0&1\\1&0}$ & $C=\matrice{1&2\\3&4} $  \\
+        $D=\matrice{2&-4\\-3&6}$ & $E=\matrice{1&1\\1&1}$ & $F=\matrice{0&1\\2&1}$ \\
+        $G=\matrice{2&5\\8&3} $ & $H=\matrice{2&1\\0&2} $ & $K=\matrice{3&5\\-1&2} $ \\
+    \end{tabular}
+
+
+
+\subsection{Déterminant inverse}
+Soit $A\in\mathcal{M}_2(\RR)$ inversible. Démontrer que $\det(A^{-1})=\frac{1}{\det(A)}$
+
+
+
+\subsection{Inverse d'après calcul}
+\begin{enumerate}
+    \item On pose $A=\matrice{2&1\\7&4}$, montrer que la matrice $B=\matrice{4&-1\\-7&2}$ est l'inverse de $A$
+
+    \item On considère la matrice $M=\matrice{3&1\\-2&-1}$
+        \begin{enumerate}
+            \item Calculer $M^2-2M$
+            \item En déduire que $M$ est inversible et calculer son inverse
+        \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Inverse avec paramètre}
+Pour tout $\xR$ on pose $M_x=\matrice{x+1&x-1\\1-x&-1-x}$
+    \begin{enumerate}
+        \item Pour quelles valeurs de $x$ la matrice $M_x$ est-elle inversible ?
+        \item Calculer $M_x\,^2$
+        \item En déduire l'inverse de $M_x$ lorsque celle-ci existe.
+    \end{enumerate}
+
+
+
+\subsection{Inverse d'après une relation}
+On considère la matrice $B=\matrice{-1&-6&-2\\2&6&1\\2&3&4} $
+    \begin{enumerate}
+        \item Calculer $B^2$
+        \item Montrer qu'il existe deux réels $\alpha$ et $\beta$ tels que $B^2=\alpha B+\beta I_3$
+        \item En déduire que $B$ est inversible et déterminer son inverse.
+    \end{enumerate}
+
+
+
+\subsection{Inversion dans $\mathcal{M}_3(\RR)$}
+Pour $a\in\RR^*$ on pose $M_a=\matrice{0&1&a\\1&0&0\\0&1&0}$
+\begin{enumerate}
+	\item Calculer $M_a\,^3-M_a$. 
+	\item En déduire que la matrice $M_a$ est inversible et déterminer son inverse.
+\end{enumerate}
+
+
+
+\subsection{Relation compliquée}
+Soit la matrice $\Phi=\matrice{1&0&3\\2&1&0\\0&-1&1} $
+    \begin{enumerate}
+        \item Calculer $\Phi'=\Phi^3-3\Phi^2$
+        \item Montrer qu'il existe deux réels $\alpha$ et $\beta$ tels que $\Phi'=\alpha\Phi+\beta I_3$
+        \item En déduire que $\Phi$ est inversible et déterminer son inverse.
+    \end{enumerate}
+
+
+
+\subsection{Système simple}
+On considère le système $(S):\accol{7x-4y=2\\9x-5y=-1} $ et on note $A$ la matrice associée à $(S)$
+    \begin{enumerate}
+        \item Calculer $2A-A^2$
+        \item En déduire l'inverse de $A$
+        \item Résoudre le système $(S)$
+    \end{enumerate}
+    
+
+
+\subsection{Avec trois inconnues}
+On considère le système $(S):\accol{-2x+y+z=1\\x-y=2\\x+y-z=3}$
+    \begin{enumerate}
+        \item Écrire ce système sous forme matricielle $AX=B$ avec $A$ une matrice 3x3, et $B$ et $X$ deux vecteurs colonne
+        \item Montrer que l'inverse de $A$ est la matrice $M=\matrice{1&2&1\\1&1&1\\2&3&1}$
+        \item En déduire la solution du système $(S)$
+    \end{enumerate}
+
+
+\subsection{Application concrète}
+On souhaite déterminer l'équation de la parabole $\mathscr{P}:y=ax^2+bx+c$ passant par les points $A(-2;3)$ , $B(1;1)$ et $C(4;5)$
+    \begin{enumerate}
+        \item Montrer que déterminer l'équation de $\mathscr{P}$ revient à résoudre le système : $\accol{4a-2b+c=3\\a+b+c=1\\16a+4b+c=5}$
+        \item Écrire ce système sous forme matricielle $MX=P$ avec $M$ une matrice 3x3, et $P$ et $X$ deux vecteurs colonne
+        \item Montrer que $M^{-1}=\frac{1}{18}\matrice{1&-2&1\\-5&4&1\\4&16&-2} $
+        \item Déterminer l'équation de la parabole $\mathscr{P}$
+    \end{enumerate}
+
+
+
+
+\section{Puissances de matrices}
+
+\subsection{Morpion}
+On pose $A=\matrice{1&0&1\\0&1&0\\1&0&1} $
+    \begin{enumerate}
+        \item Calculer $A^2$ et $A^3$
+        \item Quelle conjecture peut-on émettre quant à $A^n$ ?
+        \item Démontrer cette conjecture.
+    \end{enumerate}
+
+
+
+\subsection{Tic-tac-toe}
+On pose $B=\matrice{0&1&0\\1&0&1\\0&1&0} $
+    \begin{enumerate}
+        \item Calculer $B^2$
+        \item Montrer que $B^{2n+1}=2^nB$ pour tout $\nN$
+        \item Exprimer alors $B^{2n+2}$ en fonction de $n$ pour tout $\nN$
+    \end{enumerate}
+
+
+
+\subsection{Demi échiquier}
+
+On pose $C=\matrice{1&0&1&0\\0&1&0&1\\1&0&1&0\\0&1&0&1} $ , conjecturer puis démontrer l'expression de $C^n$ en fonction de $n$
+
+
+
+\subsection{Périodicité}
+\begin{enumerate}
+    \item On considère la matrice $A=\matrice{3&4&2\\-2&-3&-1\\-1&-2&0} $ \\
+    Déterminer la valeur de $A^{2025}$
+    \item On considère la matrice $B=\matrice{1&5&-7\\3&-7&11\\2&-4&6}$ 
+    \begin{enumerate}
+    	\item Calculer $B^2$ puis $B^4$
+    	\item En déduire la valeur de $B^{2025}$
+    \end{enumerate}
+    
+\end{enumerate}
+
+
+
+\subsection{Nilpotence 2x2}
+On pose $M=\matrice{2&3\\0&2} $
+    \begin{enumerate}
+        \item Montrer que $M=2I_2+N$ avec $N$ une matrice nilpotente d'indice de nilpotence 2
+        \item En déduire la valeur de $M^3$
+        \item Montrer que $M^n=2^nI_2+n2^{n-1}N$ pour tout $\nN$
+    \end{enumerate}
+    
+
+    
+\subsection{Nilpotence 3x3}
+On pose $Q=\matrice{7&-9&3\\8&-11&4\\12&-18&7} $ 
+    \begin{enumerate}
+        \item Montrer que $Q=N+I_3$ avec $N$ une matrice nilpotente d'indice de nilpotence 2
+        \item En déduire la valeur de $Q^6$
+    \end{enumerate}
+
+
+
+\subsection{Nilpotence d'indice 3}
+On considère la matrice $A=\matrice{4&5&-8\\3&6&-6\\2&2&-1}$
+\begin{enumerate}
+    \item Démontrer que $A=3I_3+N$ avec $N$ une matrice nilpotente d'indice 3
+    \item En déduire que $A^n=3^nI_3+n3^{n-1}N+n(n-1)\frac{3^{n-2}}{2}N$
+    \item Montrer alors que $A^n=3^{n-2}\matrice{3(n+3) & n(2n+13) & -3n(n+7)\\9n & 3(2n^2+n+3) & -9n(n+1) \\ 6n & 2n(2n+1) & -3(2n^2+2n-3)}$
+\end{enumerate}
+
+
+
+\subsection{Diagonalisation 2x2}
+On pose $P=\matrice{1&0\\2&3} $ et $S=\matrice{-1&0\\1&1} $
+\begin{enumerate}
+    \item Calculer $S^2$ et en déduire $S^{-1}$
+    \item Montrer que $P=S\times\matrice{1&0\\0&3}\times S^{-1}$
+    \item Montrer que $P^n=S\times\matrice{1&0\\0&3}^n\times S^{-1}$ et en déduire l'expression de $P^n$ en fonction de $n$
+\end{enumerate}
+
+
+
+\subsection{Diagonalisation 3x3}
+On considère les matrices $M=\matrice{-10&31&11\\-4&12&4\\-2&7&3} $ , $D=\matrice{1&0&0\\0&0&0\\0&0&4} $ et $P=\matrice{1&-2&3\\0&-1&1\\1&1&1} $
+\begin{enumerate}
+    \item Vérifier que l'inverse de $P$ est $P^{-1}=\matrice{2&-5&-1\\-1&2&-1\\-1&3&1} $
+    \item Calculer $PDP^{-1}$
+    \item Démontrer que $M^n=PD^nP^{-1}$
+    \item En déduire que $M^n=\matrice{2-3\times4^n&9\times4^n-5&3\times4^n-1\\-4^n&3\times4^n&4^n\\2-4^n&  3\times4^n-5&4^n-1} $
+\end{enumerate}
+
+
+
+\subsection{Valeurs propres}
+On pose $A=\matrice{-7&9\\-6&8}$
+\begin{enumerate}
+    \item Montrer que $\det(A-xI_2)$ est un polynôme du second degré.\\
+    On note $\lambda$ et $\mu$ ses racines.
+    \item Déterminer un vecteur $X$ tel que $Ax=\lambda X$
+    \item Déterminer un vectuer $Y$ tel que $Ax = \mu Y$
+    \item On pose $D=\matrice{\lambda&0\\0&\mu}$ et $P=(X\,|\,Y)$\\
+    Vérifier que $A=PDP^{-1}$
+    \item Démontrer que $A^n=PD^nP^{-1}$
+    \item Expliciter alors la valeur de $A^n$
+\end{enumerate}
+
+
+
+\subsection{Puissances d'ordre 3}
+On considère la matrice $J=\matrice{1&1&1\\1&1&1\\1&1&1}$
+\begin{enumerate}
+    \item Justifier que $J^n=3^{n-1}J$ \quad $\forall \nN^*$
+    \item Soient $a$ et $b$ deux réels.\\
+    Démontrer de deux manière différentes que $(aI_3+bJ)^n=a^n(I_3-\frac{1}{3}J)+\frac{1}{3}(a+3b)^nJ$ \quad $\forall \nN^*$
+    \item En déduire la valeur de $\matrice{2&-1&-1\\-1&2&-1\\-1&-1&2}^n$ pour $\nN^*$
+\end{enumerate}
+
+
+
+\section{Suites de matrices}
+
+\subsection{Récurrence double}
+On considère la suite $(u_n):\accolsized{u_0=2~~;~~u_1=1\\u_{n+2}=3u{n+1}-2u_n}{0.7}$ et on pose alors $X_n=\matrice{u_{n+1}\\u_n}$
+
+\begin{enumerate}
+ 	\item Déterminer une matrice $A\in\mathcal{M}_2(\RR)$ telle que $X_{n+1}=AX_n$ pour tout $\nN$
+ 	\item On pose $J=\matrice{1&0\\0&2}$ et $S=\matrice{1&2\\1&1}$
+ 	\begin{enumerate}
+ 		\item Montrer que $S$ est inversible et donner $S^{-1}$
+ 		\item Montrer que $A=SJS^{-1}$
+ 	\end{enumerate}
+ 	\item Démontrer que $A^n=SJ^nS^{-1}$ pour tout $\nN$
+ 	\item Démontrer que $X_n=A^nX_0$ pour tout $\nN$
+ 	\item En déduire alors l'expression de $u_n$ en fonction de $n$.
+\end{enumerate}
+
+
+
+\subsection{Deux suites}
+On définit les suites $(a_n)$ et $(b_n)$ comme suit : $\accol{a_0=1 ~~ ; ~~ b_0=1\\a_{n+1}=3a_n+4b_n-2\\b_{n+1}=a_n+6b_n+2}$ et on note $U_n=\matrice{a_n\\b_n}$
+
+\begin{enumerate}
+	\item Déterminer $M\in\mathcal{M}_2(\RR)$ et $K$ une matrice de dimension 1$\times$2 telles que $U_{n+1}=MU_n+K$ pour tout $\nN$
+	\item Déterminer l'unique matrice colonne 1$\times$2 $C$ vérifiant $C=MC+K$
+	\item On pose $V_n=U_n-C$ pour tout $\nN$\\
+	Démontrer que $V_{n+1}=MV_n$ puis que $V_n=M^nV_0$ pour tout $\nN$
+	\item On pose $S=\matrice{-4&1\\1&1}$ et $J=\matrice{2&0\\0&7}$
+	\begin{enumerate}
+		\item Justifier que $S$ est inversible et donner $S^{-1}$
+		\item Vérifier que $M=SJS^{-1}$
+	\end{enumerate}
+	\item Démontrer que $M^n=SJ^nS^{-1}$ pour tout $\nN$
+	\item Donner l'expression de $V_n$ en fonction de $n$.
+	\item En déduire l'expression de $a_n$ et de $b_n$ en fonction de $n$.
+\end{enumerate}
+
+
+
+\subsection{Suite de matrices 2x2}
+On définit la suite $(M_n)_\nN$ par $M_0=\matrice{1&1\\1&1}$ et $M_{n+1}=\matrice{1&1\\1&1}\times M_n +I_2$
+
+\begin{enumerate}
+	\item Démontrer qu'il existe une suite arithmético-géométrique $(a_n)_\nN$ dont on précisera la relation de récurrence et pour laquelle $M_n=a_nM_0+I_2$ pour tout $\nN^*$
+	\item On admettra que $a_1=2$ et que $a_{n+1}=2a_n+1$ pour tout $\nN^*$
+	\begin{enumerate}
+		\item En posant $b_n=a_n+1$, montrer que la suite $(b_n)$ est géométrique.
+		\item Donner l'expression de $b_n$ puis de $a_n$ en fonction de $n$.
+	\end{enumerate}
+	\item En déduire alors l'expression de $M_n$ en fonction de $n$.
+\end{enumerate}
+
+
+
+\section{Exercices supplémentaires}
+
+\subsection{Commutativité d'inverse}
+Soient $A,B\in\mathcal{M}_n(\RR)$ avec $A$ inversible.\\
+Montrer que si $A$ et $B$ commutent, alors $A^{-1}$ et $B$ commutent également.
+
+
+
+\subsection{Commutativité et produit}
+\begin{enumerate}
+    \item Soient $A,B\in\mathcal{M}_n(\RR)$ telles que $AB=A-2B$\\ 
+    Montrer que $A$ et $B$ commutent, c'est à dire $AB=BA$.
+    \item Soient $A,B\in\mathcal{M}_n(\RR)$ telles que $AB=A^2+A+I_n$ \\
+	Montrer que $A$ et $B$ commutent.
+    \item Même question avec cette fois $AB=\alpha A + \beta B$ où $\alpha$ et $\beta$ sont deux réels.
+\end{enumerate}
+
+
+
+\subsection{Inversibilité}
+Soit $M\in\mathcal{M}_n(\RR)$ une matrice inversible telle que $M^3=2M^2-M$.
+
+La matrice $M-I_n$ peut-elle être inversible ?
+
+
+
+\subsection{Polynôme de matrices}
+On pose $J=\matrice{1&1\\1&1}$ \\
+L'objectif de l'exercice est de déterminer toutes les matrices $A\in\mathcal{M}_2(\RR)$ vérifiant l'équation matricielle $(E) : A^2+A=J$ \\
+On note alors $A=\matrice{a&b\\c&d}$
+\begin{enumerate}
+    \item Démontrer que l'équation $(E)$ admet deux solutions de la forme $kJ$ avec $k\in\RR$
+    \item Montrer que $A^2-(a+d)A+\det(A)I_2=0_2$
+    \item Dans cette question on supposera que $A$ est solution de $(E)$
+    \begin{enumerate}
+        \item Montrer que $(a+d+1)A=J+\det(A)I_1$
+        \item Justifier que $a+d+1\neq0$
+        \item En déduire que $A$ est une combinaison linéaire de $I_2$ et de $J$
+    \end{enumerate}
+    \item On suppose désormais que $A=\lambda I_2+\mu J$ \quad avec $\lambda,\mu\in\RR$\\[5pt]
+    Montrer que $A^2+A=\lambda(1+\lambda)I_2+\mu(2\mu+2\lambda+1)J$
+    \item En déduire l'ensemble des matrices $A$ solutions de $(E)$
+\end{enumerate}
+
+
+\end{document}

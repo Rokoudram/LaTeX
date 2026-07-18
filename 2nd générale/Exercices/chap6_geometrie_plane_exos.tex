@@ -1,0 +1,382 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 % Macros classiques
+
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Géométrie plane}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Géométrie dans les triangles}
+
+\subsection{Avec un parallélogramme}
+On considère un parallélogramme $ABCD$. On nomme $E$ le symétrique de $A$ par rapport au point $B$. On note $F$ le point d'intersection entre les droites $(ED)$ et $(BC)$
+\begin{enumerate}
+	\item Construire une figure afin de représenter la situation.
+	\item Démontrer que le point $F$ est le milieu du segment $[BC]$
+\end{enumerate}
+
+
+
+\subsection{Encore et encore et encore}
+
+\begin{minipage}{0.6\linewidth} \restoreskip
+Dans le triangle $ABC$ on note $H$ le milieu du segment $[AB]$. 
+
+On considère $D$ le point d'intersection entre $(CB)$ et la médiatrice du segment $[AB]$. 
+
+On donne $AC=24$cm et $CD=7$cm
+	\begin{enumerate}
+		\item Montrer que $AD=25$cm
+		\item Démontrer que le triangle $ABD$ est isocèle.
+		\item Montrer que $AB=40$cm
+		\item Déterminer la longueur $DH$
+	\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=0.19]
+		\draw (0,0) node[below] {$A$} -- node[pos=0.25] {//} node[pos=0.75] {//} (40,0) node[below] {$B$} -- (14.4,19.2) node[above] {$C$} -- cycle;
+		\draw (20,0) node[below] {$H$} -- (20,15) node[above right] {$D$} ;
+		\draw (13.61,18.15) -- (14.67,17.35) -- (15.46,18.4);     % ----- Angle droit
+		\draw (20,1.2) -- (21.2,1.2) -- (21.2,0);     % ----- Angle droit
+		\draw (18.5,18) node {$\rotatebox{-35}{7cm}$};
+		\draw (5,10) node {$\rotatebox{55}{24cm}$};
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Trapèze droit}
+On considère un trapèze $ABCD$ tel que $\widehat{BAD}=\widehat{ADC}=90^\circ$ 
+On sait que les diagonales de ce trapèze sont perpendiculaires en un point $E$. 
+On sait de plus que $EC=1$ , $DC=2$ et $AE=3$
+\begin{enumerate}
+	\item Faire un schéma permettant de représenter la situation.
+	\item Calculer la longueur $AB$
+	\item \begin{enumerate}
+		\item Calculer la longueur $EB$
+		\item En déduire la longueur $ED$
+	\end{enumerate}
+	\item Déterminer toutes les longueurs manquantes.
+	\item Calculer l'aire du triangle $ABC$
+\end{enumerate}
+
+
+
+\subsection{En deux coups de sextant}
+On considère un triangle $ABC$ rectangle en $B$ tel que $\widehat{ACB}=15^\circ$ 
+
+On place un point $D$  sur le segment $[AC]$ tel que $DC=10$ et $\widehat{ADB}=30^\circ$
+
+\begin{minipage}{0.25\linewidth}
+	\begin{tikzpicture}[scale=0.5]
+		\draw (0,0) node [below] {$A$} -- (0,5) node[above] {$B$} -- (10,0) node[below] {$C$} -- node[pos=0.25 , below] {$10$} cycle ;
+		\draw (0,5) -- (6,0) node[below] {$D$} ;
+		\draw (10,0)++(153:1.5) arc (153:180:1.5) node[above left] {$15^\circ$} ;
+		\draw (6,0)++(140:1) arc (140:180:1) node[above left] {$30^\circ$} ;
+		\draw (0,0.5) -- (0.5,0.5) -- (0.5,0) ;
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.70\linewidth}
+	\begin{enumerate}
+		\item Exprimer la longueur $AB$ de deux manière différentes à l'aide des informations données par l'énoncé.
+		\item En déduire que $CD\times\tan\left(15^\circ\right)+AD\times\tan\left(15^\circ\right)=AD\times\tan\left(30^\circ\right) $
+		\item Montrer que $AD=\dfrac{10\tan\left(15^\circ\right)}{\tan\left(30^\circ\right)-\tan\left(15^\circ\right)}$ puis vérifier à l'aide de la calculatrice que $AD=5\sqrt{3}$
+		\item Déterminer alors la longueur $AB$
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Découpage du carré}
+\hspace{5mm}
+\begin{minipage}{0.35\linewidth}
+	\begin{tikzpicture}[scale=2]
+		\draw (0,2) node[above] {$A$} -- (2,2) node[above] {$B$}  -- node[pos=0.25] {//} node[pos=0.75] {//} (2,0) node[below] {$C$}  -- (0,0) node[below] {$D$}  -- cycle ;
+		\draw (0,0) -- (2,1) node[right] {$I$} ;
+		\draw (0,2) -- (0.8,0.4) node[below] {$M$} ;
+		\draw ($(0.8,0.4)!4pt!(0,2)$) -- ($($(0.8,0.4)!4pt!(0,2)$)!4pt!-90:(0,2)$) -- ($(0.8,0.4)!4pt!(2,1)$) ;
+		\draw ($(2,2)!4pt!(0,2)$) -- ($($(2,2)!4pt!(0,2)$)!4pt!90:(0,2)$) -- ($(2,2)!4pt!(2,1)$) ;
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.6\linewidth} \restoreskip
+On considère $ABCD$ un carré de côté 2. On note $I$ le milieu du segment $[CD]$ 
+
+On appelle $H$ le pied de la hauteur issue du sommet $A$ dans le triangle $ADI$
+	\begin{enumerate}
+		\item Calculer la longueur $BI$
+		\item À l'aide du théorème de Pythagore, exprimer $AM^2$ de deux manières différentes.
+		\item Démontrer que $IM^2=5-2\sqrt{5}BM+BM^2$ 
+		\item En déduire la valeur exacte de la longueur $BM$
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Diamétralement opposés}
+
+\begin{minipage}{0.63\linewidth}\restoreskip
+	On considère deux cercles $\Ccal_1$ et $\Ccal_2$ de centres respectifs $O_1$ et $O_2$ 
+	
+	On note $A$ et $B$ leurs deux points d'intersection. 
+
+	On place le point $M$ tel que $[AM]$ soit un diamètre de $\Ccal_1$ 
+	
+	On place le point $N$ tel que $[AN]$ soit un diamètre de $\Ccal_2$
+	\begin{enumerate}
+		\item Démontrer que les droites $(O_1O_2)$ et $(MN)$ sont parallèles.
+		\item On note $I$ le milieu du segment $[AB]$
+		\begin{enumerate}
+			\item Justifier que la hauteur du triangle $ABO_1$ issue du sommet $O_1$ passe par le point $I$
+			\item Justifier que la hauteur du triangle $ABO_2$ issue du sommet $O_2$ passe par le point $I$
+		\end{enumerate}
+		\item Démontrer que les droites $(O_1O_2)$ et $(BM)$ sont parallèles.
+		\item En déduire que les points $B$ , $M$ et $N$ sont alignés.
+	\end{enumerate}
+\end{minipage} 
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}[scale=0.4]
+		\draw (0,0) node {\small x} circle[radius=5] ;
+		\draw (-8,-1) node {\small x} circle[radius=4] ;
+		\draw (-11.2,-3.4) node[left] {\small $N$} -- (-4.8,1.4) -- (4.8,-1.4) node[right] {\small $M$} ;
+		\draw (-5,2.4) node {\small $A$} ;
+		\draw (-4.3,-3.5) node {\small $B$} ;
+		\draw (0.7,0.7) node {\small $O_1$} ;
+		\draw (-9,-0.5) node {\small $O_2$} ;
+		\draw (-9,4) node {$\Ccal_2$} ;
+		\draw (3,5.5) node {$\Ccal_1$} ;
+\end{tikzpicture}
+\end{minipage}
+
+
+
+
+\section{Géométrie dans les cercles}
+
+\subsection{Cercle circonscrit}
+\begin{minipage}{0.3\linewidth}
+	\begin{tikzpicture}[scale=0.8]
+		\draw (0,0) circle[radius=3] ;
+		\draw (1,2.83) node[above] {$C$} -- (-2.83,-0.98) node[left] {$A$} -- node[pos=0.75 , below] {$2$} (2.83,0.98) node[right] {$B$} -- (1,2.83) -- (0,0) node[below] {$O$} ;
+		\draw (-1,1.3) node {\rotatebox{45}{\small $1+\sqrt{5}$}} ;
+\end{tikzpicture}
+\end{minipage} 
+\begin{minipage}{0.7\linewidth}\restoreskip
+	On considère un cercle $\Ccal$ de rayon 2 et de centre $O$.
+	
+	Soit $[AB]$ un diamètre du cercle $\Ccal$
+	
+	On place un point $C$ sur le cercle $\Ccal$ de sorte que $AC=1+\sqrt{5}$
+	\begin{enumerate}
+	 \item Quelle est la nature du triangle $ABC$ ?
+	 \item Déterminer la mesure de l'angle $\widehat{BAC}$
+	 \item En remarquant que le triangle $OCB$ est isocèle, déterminer la mesure de l'angle $\widehat{BOC}$
+	 \item Ce résultat aurait-il pu être retrouvé à l'aide d'une autre propriété ?
+	\end{enumerate}
+\end{minipage} 
+
+
+
+\subsection{Cercles tangents}
+
+\begin{minipage}{0.55\linewidth} \restoreskip
+	$\Ccal$ est un demi-cercle de diamètre $[AC]$.
+	
+	On note $O$ le milieu de $[AC]$ 
+	
+	On place un point $B$ sur le segment $[AO]$ et on considère $\Ccal'$ le demi-cercle de diamètre $[BC]$ 
+	
+	On note $E$ le point d'intersection entre $\Ccal'$ et la médiatrice du segment $[AC]$ 
+	
+	On considère de plus les longueurs données sur le schéma.
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.35\linewidth}
+	\begin{tikzpicture}[scale=0.4]
+		\draw[thick] (9,0) node[below] {$C$} arc (0:180:9) node[below] {$A$};
+		\draw[thick] (9,0) arc (0:180:6.5) node[below] {$B$};
+		\draw[thick] (-9,0)--(9,0);
+		\draw (0,0) node[below] {$O$}--(0,9);
+		\draw (0,0.5)--(0.5,0.5)--(0.5,0);
+		\draw (0.5,5.5) node {$E$} ;
+		\draw[color=black] (4.5,-0.5) node {$9$};
+		\draw[color=black] (-1,7.5) node {$3$};
+	\end{tikzpicture}
+\end{minipage}
+
+\begin{enumerate}
+	\item Déterminer la longueur $EC$
+	\item \begin{enumerate}
+		\item Donner une relation liant les longueurs $BE$, $BC$ et $EC$
+		\item En déduire que $BE^2=OB^2-18OB-36$
+	\end{enumerate}
+	\item Justifier que $BE^2=36+OB^2$
+	\item En déduire la valeur de la longueur $OB$
+\end{enumerate}
+
+
+
+\subsection{Découpage du cercle}
+\begin{minipage}{0.35\linewidth}
+	\begin{tikzpicture}[scale=0.8]
+		\draw (0,0) circle[radius=4] ;
+		\draw (3.55,1.84) node[right] {$D$} -- (-3.53,-1.84) node[left] {$A$} -- node[pos=0.4,below] {$5$} (3.7,-1.53) node[right] {$C$} ;
+		\draw (-1.85,3.55) node[above] {$E$} -- node[pos=0.25,right] {$4$} node[pos=0.72, above right] {$M$} (1.85,-3.55) node[below] {$B$} ;
+		\draw (-3.55,-1.84)++(27:1) arc (27:2:1) node[above right] {$\alpha$} ;
+		\draw ($(0,0)!7pt!(-1.85,3.55)$) -- ($($(0,0)!7pt!(-1.85,3.55)$)!7pt!90:(-1.85,3.55)$) -- ($(0,0)!7pt!(-3.55,-1.84)$) ;
+		\draw (0.2,0.5) node {$O$} ;
+	\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.62\linewidth} \restoreskip
+On considère un cercle $\Ccal$ de rayon $4$ et de centre $O$. 
+
+Soient $[AD]$ et $[BE]$ deux diamètres perpendiculaires du cercle $\Ccal$ 
+
+On place un point $C$ sur le cercle et on note $M$ le point d'intersection entre $(AC)$ et $(EB)$. On sait que $AM=5$ 
+
+Dans la suite on notera $\alpha=\widehat{DAC}$
+	\begin{enumerate}
+		\item Déterminer les longueurs $OM$ puis $MB$
+		\item En exprimant $\sin(\alpha)$ de deux manières différentes, déterminer la longueur $CD$
+		\item En exprimant $\cos(\alpha)$ de deux manières différentes, déterminer la longueur $AC$ et en déduire la longueur $MC$
+		\item Déterminer l'aire du quadrilatère $OMCD$
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Extension triangulaire}
+On considère un triangle $ABC$ de rayon $1$. 
+
+On note $M$ le milieu du segment $[AC]$ et $N$ le symétrique de $B$ par rapport au point $C$ 
+
+On place les points $P$ et $Q$ sur le segment $[AB]$ de sorte que $AP=PQ=QB$
+\begin{enumerate}
+	\item Faire une figure représentant la situation.
+	\item \begin{enumerate}
+		\item Justifier que $\frac{AP}{AQ}=\frac{AM}{AC}=\frac{1}{2}$
+		\item Que peut-on en déduire concernant les droites $(PM)$ et $(QC)$ ?
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Justifier que $\frac{BC}{BN}=\frac{BQ}{BP}=\frac{1}{2}$
+		\item Que peut-on en déduire concernant les droites $(PN)$ et $(QC)$ ?
+	\end{enumerate}
+	\item Montrer que les points $M$, $N$ et $P$ sont alignés.
+	\item \begin{enumerate}
+		\item Quels points appartiennent au cercle $\Ccal$ de centre $C$ et de rayon $1$ ?
+		\item En déduire la nature du triangle $ABN$
+		\item Calculer la longueur $AN$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+\section{Projection orthogonale}
+
+\subsection{Construction} 
+\begin{minipage}{0.55\linewidth} \restoreskip
+	\begin{enumerate} \setlength{\itemsep}{1mm}
+		\item Placer $A_1$ et $A_2$ les projetés orthogonaux du point $A$ sur les droites $\Dcal_1$ et $\Dcal_2$
+		\item Placer $B_1$ et $B_2$ les projetés orthogonaux du point $B$ sur les droites $\Dcal_1$ et $\Dcal_2$
+		\item Placer $C_1$ et $C_2$ les projetés orthogonaux du point $C$ sur les droites $\Dcal_1$ et $\Dcal_2$
+		\item Placer $C'$ le projeté orthogonal du point $C$ sur la droite $(AB)$
+	\end{enumerate}
+\end{minipage} \hspace{5mm} 
+\begin{minipage}{0.35\linewidth} \vspace{-15mm}
+	\begin{tikzpicture}
+		\draw (-2,-1) -- (6,3) node[above] {$\Dcal_1$} ;
+		\draw (-2,1) -- (6,-2) node[below] {$\Dcal_2$} ;
+		\draw (0,3) node {x} node[above] {$A$} ;
+		\draw (4.5,1) node {x} node[above] {$B$} ;
+		\draw (1,-2) node {x} node[above] {$C$} ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Projection dans un triangle}
+\begin{enumerate}
+	\item Tracer un triangle $ABC$ quelconque.
+	\item Placer $M$ le milieu du segment $[AB]$
+	\item Tracer $N$ et $P$ les projetés orthogonaux respectifs des points $M$ et $B$ sur la droite $(AC)$
+	\item Démontrer que le point $N$  est le milieu du segment $[AP]$
+\end{enumerate}
+
+
+
+\subsection{Parallélogrammes}
+\begin{minipage}{0.35\linewidth}
+	\begin{tikzpicture}[scale=0.9]
+		\draw (0,0) -- node[pos=0.27 , above] {$B$}  node[pos=0.67 , above] {$C$} (8,1) ;
+		\draw (0,2) -- node[pos=0.27 , above] {$A$}  node[pos=0.67 , above] {$D$} (8,3) ;
+		\draw (1,-2) -- (3,4) ;
+		\draw (4,-2)-- (6,4) ;
+	\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.62\linewidth} \restoreskip
+$ABCD$ est un parallélogramme
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Placer $A'$ le projeté orthogonal de $A$ sur la droite $(CD)$
+		\item Placer $B'$ le projeté orthogonal de $B$ sur la droite $(AD)$
+		\item Placer $C'$ le projeté orthogonal de $C$ sur la droite $(AB)$
+		\item Placer $D'$ le projeté orthogonal de $D$ sur la droite $(BC)$
+	\end{enumerate}
+	\item On note $O$ le centre du parallélogramme $ABCD$
+	\begin{enumerate}
+		\item Justifier que les droites $(AC)$ et $(A'C')$ sont sécantes en $O$
+		\item Justifier que les droites $(BD)$ et $(B'D')$ sont sécantes en $O$ 
+	\end{enumerate}
+	\item Quelle est la nature du quadrilatère $A'B'C'D'$ ?
+\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Projection dans un cercle}
+\begin{minipage}{0.55\linewidth} \restoreskip
+	On considère un triangle $ABC$ tel que $\widehat{ACB}=45^\circ$. 
+	
+	On note $D$ le projeté orthogonal de $C$ sur $(AB)$. On a alors $AD=2$ et $BD=3$ 
+	
+	On considère $\Ccal$ le cercle circonscrit au triangle $ABC$ et on note $O$ son centre.
+	\begin{enumerate}
+		\item \begin{enumerate}
+			\item Justifier que le triangle $AOC$ est isocèle rectangle.
+			\item En déduire que $OA=\frac{5\sqrt{2}}{2}$
+		\end{enumerate}
+		\item On considère $I$ le projeté orthogonal de $O$ sur $(AB)$ \\
+		Déterminer la longueur $OI$
+		\item On considère $J$ le projeté orthogonal de $O$ sur $(CD)$
+		\begin{enumerate}
+			\item Déterminer la longueur $JO$
+			\item En déduire la longueur $CJ$
+		\end{enumerate}
+		\item Calculer l'aire du triangle $ABC$				
+	\end{enumerate}
+\end{minipage} \hspace{5mm} 
+\begin{minipage}{0.35\linewidth} \vspace{-15mm}
+	\begin{tikzpicture}
+		\draw (-2,0) node[below] {$A$} -- node[pos=0.2 , below] {$2$} node[pos=0.7 , below] {$3$} (3,0) node[below] {$B$} -- (0,6) node[above] {$C$} -- cycle ;
+		\draw (0.5,2.5) node {\small x} node[right] {$O$} circle[radius=3.54] ;
+		\draw[dashed] (0,6) -- (0,0) node[below] {$D$} ;
+		\draw (0,0.3) -- (0.3,0.3) -- (0.3,0) ;
+		\draw (0,6)++(-63:1) arc (-63:-108:1) ;
+		\draw (0.4,4.4) node {$45^\circ$} ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+
+
+\end{document}

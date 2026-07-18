@@ -1,0 +1,293 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Fonction exponentielle}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Découverte de la fonction exponentielle}
+
+\begin{minipage}[b]{0.8\linewidth}
+\subsection{Dérivation}
+Dériver les fonctions suivantes :\\[5pt]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} }
+    $f_{1}(x)=\exp(x)+x^{2}$ & $f_{2}(x)=3\exp(x)+4x+5$ \\ $f_{3}(x)=x\exp(x)$ &
+    $f_{4}(x)=x^{2}\exp(x)-x$ \\ $f_{5}(x)=\frac{x+\exp(x)}{\exp(x)}$ & $f_6(x)=\frac{x\exp(x)}{x-\exp(x)}$
+\end{tabular}
+\\[25pt]
+
+
+\subsection{Graphiquement}
+
+
+Associer chacune des fonctions suivantes à sa \\courbe représentative dans le repère ci-contre :\\[5pt]
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth}}
+     $f(x)=2\exp(x) $ & $g(x) = \exp(-x) $ \\
+     $h(x) = \exp(-\frac{1}{2}x) $ & $\delta(x)=\exp(2x)$ \\
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}\vspace{-4cm}\hspace{-4cm}
+\begin{tikzpicture}[scale=1]
+\begin{axis}[ % ----- Paramètre du repère
+        xmin = -3, xmax = 3, % ----- Bornes abscisses
+        ymin = 0, ymax = 5, % ----- Bornes ordonnées
+        xtick distance=1, % ----- Pas abscisses
+        ytick distance=1, % ----- Pas ordonnées
+        grid = both,
+        minor grid style = {line width = 0.1pt , draw = gray!20}, % ----- Style petit quadrillage
+        major grid style = {line width = 0.2pt , draw = gray}, % ----- Style quadrillage principal
+        axis lines = middle, % ----- Centre les axes
+        minor tick num = 1, % ----- Pas petit quadrillage
+        enlargelimits = { abs = 0.2 }, % ----- Élargir légèrement le repère
+        ticklabel style = {font = \tiny } % ----- Style numérotation des axes
+        ]
+
+\addplot [domain=-3:3, samples=100, color=red,line width=1.5pt]
+{e^(-x)};
+
+\addplot[domain = -3:3,color=blue,samples=100,line width=1.5pt]
+{e^(2*x)};
+
+\addplot[domain = -3:3,color=green,samples=100,line width=1.5pt]
+{2*e^x};
+
+\addplot[domain = -3:3,color=magenta,samples=100,line width=1.5pt]
+{e^(-0.5*x)};
+
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Première fonction}
+
+On pose $f(x)=(x^2+1)e^x$
+
+\begin{enumerate}
+    \item Quel est le signe de la fonction $f$ ?
+    \item Montrer que $f'(x)=(x+1)^2e^x$
+    \item Quel est le sens de variation de la fonction $f$ ?
+    \item Déterminer l'équation réduite de $\mathscr{T}$ la tangente à $\Ccal_f$ au point d'abscisse 0
+\end{enumerate}
+
+
+
+\section{Calcul}
+
+
+\subsection{Calcul numérique}
+Donner une expression simplifiée des nombres suivants :
+
+\renewcommand{\arraystretch}{2.4}
+\begin{tabular}{p{0.33\linewidth}p{0.33\linewidth}p{0.33\linewidth}}
+    $A = \dfrac{e^5}{e^8}$ & $B = \dfrac{e^4\times e^{-2}}{e^3}$ & $C = \left(\dfrac{e^6}{e^2\times e^7}\right)^3$\\
+    $D = \dfrac{9}{e^{-4}}\times\left(\dfrac{e^2\times e^{-6}}{3e^3}\right)$ & $E = \left(e^e\right)^2\times\dfrac{e^{3e}\times\frac{1}{e^2}}{e^{e-3}}$ & $F = \left(e^{-\sqrt{3}}\right)^{\sqrt{3}}\times\dfrac{1}{e^{-2}}$\\
+    $G = \sqrt{\dfrac{e^5\times e^{-12}}{4e^{-7}}}$ & $H = \dfrac{\frac{e^{-3}\times e^8}{2e^6\times e^{-1}}}{\left(\frac{3e^2\times e^4}{e^{-3}\times e^5}\right)^2}$ & $I = \dfrac{e^{18}-e^{8}}{e^4+e^9}\times \left(e^{-2}\right)^2$
+\end{tabular}
+
+
+
+\subsection{Calcul littéral}
+Simplifier au maximum les expressions suivantes :
+
+\renewcommand{\arraystretch}{2.4}
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}\large
+
+    $A=\dfrac{e^{1+x}}{e^{x-1}}$ & $B=\dfrac{(e^{1+x})^{x}}{(e^{x})^{1+x}}$ & $C=\dfrac{(e^{\frac{3}{2}}e^{-x})^{2}}{e^{2-2x}}$ \\
+    $D=\dfrac{(e^{-2})^{4x}e^{5x}}{2e^{3x}} $ & $E=\dfrac{e^{x}+\frac{1}{e^{x}}}{e^{x}} $ & $F=e^{x}\dfrac{(e^{1+x})^{x-1}}{(e^{x-1})^{x+2}} $ \\
+    $G=\dfrac{\left(e^{\frac{1}{x}}\right)^{x^{2}}\times e^{-3x}}{(e^{-x})^{2}e^{1-2x}}$ & $H=\dfrac{e^{1+(e^{1+x})^{2}}\times e^{x}}{e^{3x+1}\times e^{e^{2x}\times\frac{1}{e^{-2}}}}$ & $I=\dfrac{e^{3x}-e^{x}}{e^{2x}+e^{x}} $
+\end{tabular}
+
+
+
+\subsection{Distributivité et identités remarquables}
+Réduire au maximum les expressions suivantes :
+
+\renewcommand{\arraystretch}{2.3}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+    $A = \left(e^x-2\right)\left(3+e^x\right)$ & $B = \left(e^x+e^{-x}\right)^2-\left(e^x-e^{-x}\right)^2$\\
+    $C = \dfrac{\left(e^{-x}+2e^x\right)^2-e^{-2x}}{4}$\ & $D = \left(3e^x-2e^{-x}\right)^2-\left(2e^x-3e^{-x}\right)^2$\\
+    $E = \dfrac{\left(e^{2x}-1\right)\left(e^x+1\right)}{\left(e^x-1\right)\left(e^{2x}+2e^x+1\right)}$ & $F = \left(e^{2x}-e^x\right)\left(2-e^x\right)+e^{-x}\left(3e^x-e^{2x}\right)^2$
+\end{tabular}
+
+
+
+\subsection{Application aux suites}
+Pour $\nN$ on pose $u_n=\frac{e^{2n-3}}{2e^n}$
+\begin{enumerate}
+    \item Calculer $\frac{u_{n+1}}{u_n}$
+    \item En déduire que la suite $(u_n)$ est géométrique et préciser sa raison et son premier terme.
+    \item Donner la valeur de $S=\somme{k=4}{12}u_k$
+\end{enumerate}
+
+
+
+\subsection{Égalités}
+Montrer que les égalités suivantes sont vraies pour tout $\xR$ :
+
+\renewcommand{\arraystretch}{2.4}
+\begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}\large
+    a) $\dfrac{e^{x+1}}{e+e^{x+1}}=\dfrac{e^x}{e^x+1}$ &
+    b) $e^x-\dfrac{e^x}{1-e^{-x}}=\dfrac{e^x}{1-e^x}$ \\
+    c) $\dfrac{e^x-e^{-x}}{1+e^{-x}}=e^x-1$ &
+    d) $\dfrac{(e^{x}+1)(e^{2x}-e^x)}{e^{3x}}=1-e^{-2x} $\\
+    e) $\dfrac{(e^{x}+e^{-x})(e^{2x}+1)}{e^{x}}=e^{2x}+2+\dfrac{1}{e^{2x}}$ &
+    f) $\dfrac{1+e^{x}+e^{2x}}{1+e^{x}}=\dfrac{1-e^{3x}}{1-e^{2x}}$
+\end{tabular}
+
+
+
+\section{Équations}
+
+\subsection{Équations d'application}
+Résoudre dans $\RR$ les (in)équations suivantes :
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+    a) $e^{1+3x} = e^{4-2x}$ & b) $e^{\frac{5}{2}x} - e^{x^2} = 0$ & c) $e^x + 5 = 0$ \\
+    d) $e^{3x+4} > e^{13}$ & f) $e^{5-2x} \geq 0$ & g) $e^{7+x} = 1$ \\
+    h) $e^{x^2-1} \leq e^8$ & i) $e^{2x-1} - 1 \geq 0$ & j) $e^{x^2 - 2x} \leq 1$
+\end{tabular}
+
+
+
+\subsection{Équations composées}
+Résoudre dans $\RR$ les (in)équations suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+    a) $\frac{e^{x+1}}{e^{x^2}} = 0$ & b) $e^x-\frac{1}{e^x} > 0$ & c) $2e^{-x}=\frac{4}{1 + e^x}$\\
+    d) $\frac{e^{2x} + e^x}{1 + e^3} = e^x$ & e) $\frac{e^{2x+3} - e^{2x}}{1 + e^x} \leq 1 - e^x$ & f) $\frac{e^x + e^{-x}}{e^x} = 1 - e^x$ \\
+\end{tabular}
+
+
+
+\subsection{Équations à la Lambert}
+Résoudre dans $\RR$ les (in)équations suivantes :
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+    a) $x e^x = x$ & b)  $x e^x = e^x$ & c)  $x e^{x+1} + e^{x-1} = 0$\\
+    d) $e^{2x-1} + x e^{2x+3} \leq 0$ & e) $\frac{e^{2x+3}}{x e^{2x-3}} \geq 2$ & f) $x^2 e^{x+2} + x e^{x+1} - 2e^x = 0$\\
+\end{tabular}
+
+
+
+\subsection{Retour aux trinômes}
+Résoudre dans $\RR$ les (in)équations suivantes en posant $X=e^{x}$ :
+
+\begin{tabular}{p{0.4\linewidth}p{0.4\linewidth}}
+    a) $e^{2x}+e^{x}-2 = 0$ & b) $e^{2x}+2e^{x}\ge3$ \\
+    c) $e^{2x}-e^{x}-e^{x+1}+e=0$ & d) $e^{2x+1}-4=2e^{x+1}$
+\end{tabular}
+
+
+
+\section{Étude de fonctions}
+
+\subsection{Signe}
+Déterminer le signe des expressions suivantes en fonction des valeurs de $x$ :
+
+\renewcommand{\arraystretch}{2.4}
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+     $A=\dfrac{1+e^{x}}{x^{2}}$ & $B=\dfrac{e^{2x}}{e^{x}+e^{-x}}$ & $C=\dfrac{e^{x}-1}{2e^{x}}$ \\
+     $D=\dfrac{e^{x^{2}-2x-3}}{e^{x^{2}}+e^{-2x}+e^{-3}}$ & $E=\dfrac{3+e^{2-3x}}{1-e^{3x}}$ & $F=
+     \dfrac{e^{\frac{1}{1+x^{2}}}}{x}$\\
+     $G = \left(e^{2x}-1\right)(2x+3)$ & $H = e^{6x}-e^{2x}$ & $I = x^2e^x-5xe^{x+1}-4e^{x+2}$
+\end{tabular}
+
+
+
+\subsection{Variations}
+Dresser le tableau de variation des fonctions suivantes :
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    $f(x)=e^{x}-e^{-x}$ & $g(x)=e^{x+3}-e^{x}$ & $h(x)=(3x+2)e^{3-x}$ \\
+    $k(x)=(x-x^{2})e^{x}$ & $m(x)=x^{2}e^{-x}$ & $\delta(x)=\frac{e^{x}+x}{x-e^{x}}$ \\
+    $\varphi(x)=(1-x^2)e^{x^2-1}$ & $\psi(x)=\sqrt{x}e^{4-\sqrt{x}}$ \\
+\end{tabular}
+
+
+
+\subsection{Culture sur pétri}
+Lors d'une culture sur pétri, le nombre de bactéries (en milliers) en fonction du temps est donné par la fonction $f:t\mapsto(t+1)e^{1-0,5t}$ où $t$ est exprimé en jours.
+\begin{enumerate}
+    \item Combien il y a-t-il de bactéries au début de la culture ?
+    \item Comment évolue le nombre de bactéries au cours du temps ?
+    \item Les bactéries peuvent-elles disparaître de la culture ?
+\end{enumerate}
+
+
+
+\subsection{Sinus et cosinus hyperboliques}
+On définit les fonctions sinus et cosinus hyperboliques sur $\RR$ par :
+\[\cosh(x)=\frac{e^x+e^{-x}}{2} \text{  et  } \sinh(x)=\frac{e^x-e^{-x}}{2}\]
+\begin{enumerate}
+    \item Étudier la parité des fonctions $\cosh$ et $\sinh$
+    \item Dresser le tableau de signes des fonctions $\cosh$ et $\sinh$
+    \item Calculer $\cosh'(x)$ et $\sinh'(x)$
+    \item En déduire les tableaux de variations des fonctions $\cosh$ et $\sinh$
+    \item Déterminer la valeur de $\cosh^2(x)-\sinh^2(x)$ pour $\xR$
+\end{enumerate}
+
+
+
+\subsection{Deux fonctions}
+On définit les fonctions $f$ et $g$ par $f(x)=e^x$ et $g(x)=e^{-x}$ pour tout $\xR$\\
+On appelle $T_a$ la tangente à $\Ccal_f$ au point d'abscisse $a$, et $R_a$ la tangente à $\Ccal_g$ au point d'abscisse $a$.
+\begin{enumerate}
+    \item Déterminer les équations réduites de $T_0$ et $R_0$
+    \item Déterminer les équations réduites de $T_a$ et $R_a$ en fonction de $a$
+    \item Montrer que pour tout $a\in\RR$, $T_a$ et $R_a$ sont perpendiculaires.
+    \item On note respectivement $t_a$ et $r_a$ les abscisses des points d'intersection entre $T_a$ et $R_a$ avec l'axe des abscisses.\\
+    Montrer que $t_a-r_a=2$
+\end{enumerate}
+
+
+
+\subsection{Exponentielles le long d'une droite}
+Pour $\nN^*$ et $\xR$, on pose $f_n(x)=1-xe^{\left. 1-\frac{x}{n}\right.} $
+\begin{enumerate}
+    \item Montrer que $f_n'(x)=\left(\frac{x}{n}-1\right)e^{1-\frac{x}{n}}$
+    \item Dresser le tableau de variations de $f_n$
+    \item Montrer que le minimum de $f_n$ vaut $1-n$ pour tout $\nN^*$
+    \item Justifier que les points extremums des courbes $\Ccal_{f_n}$ appartiennent tous à une même droite dont on précisera l'équation réduite.
+\end{enumerate}
+
+
+
+\subsection{Cas de parité}
+\begin{enumerate}
+    \item On pose $f(x)=x^2e^{-x^2}$
+    \begin{enumerate}
+        \item Déterminer l'expression de $f'(x)$
+        \item Dresser le tableau de variations de $f$ et en déduire son maximum.
+    \end{enumerate}
+    \item On pose pour $\nN, f_n(x)=x^ne^{-x^2}$
+    \begin{enumerate}
+        \item Montrer que $f_n'(x)=x^{n-1}\left(n-2x^2\right)e^{-x^2}$
+        \item Dresser le tableau de variations de $f_n$ lorsque $n$ est pair.
+        \item Dresser le tableau de variations de $f_n$ lorsque $n$ est impair.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\end{document}

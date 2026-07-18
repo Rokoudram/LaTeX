@@ -1,0 +1,459 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Dérivation}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Taux d'accroissement et nombre dérivé}
+
+\subsection{Accroissement du carré}
+On pose $f: x \mapsto x^2$\\
+Soient $a$ et $b$ deux réels quelconques
+\begin{enumerate}
+    \item Calculer $T_{2,3}(f)$
+    \item Calculer $T_{a,2a}(f)$
+    \item Calculer $T_{-b,3b}(f)$
+    \item Exprimer $T_{a,b}(f)$ de manière simple.
+\end{enumerate}
+
+
+\subsection{Variation constante}
+Soit $g$ une fonction affine.
+
+Montrer que la valeur de $T_{a,b}(g)$ ne dépend pas des nombres $a$ et $b$
+
+
+\subsection{Accroissement inverse}
+Soit $h$ la fonction inverse et soit $a$ et $b$ deux réels non nuls distincts.
+\begin{enumerate}
+    \item Calculer $T_{1,4}(h)$
+    \item Calculer $T_{2,a}(h)$
+    \item Pour $b \neq \pm 1$, calculer $T_{\frac{1}{b},b}(h)$
+    \item Montrer que $T_{a,b}(h) = -\frac{1}{ab}$
+    \item Si $a$ et $b$ sont de signes opposés, que peut-on affirmer de $T_{a,b}(h)$?
+\end{enumerate}
+
+\subsection{Nombres dérivés}
+Dans chacun des cas suivants, déterminer la valeur de $f'(a)$ en utilisant le taux d'accroissement :
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.25\linewidth}p{0.15\linewidth}|p{25pt}p{0.25\linewidth}p{0.2\linewidth}}
+	a) $f(x)=x^2+x$ &  $a=2$ & & b) $f(x)=\frac{1}{x}$ & $a=\frac{1}{2}$\\
+	c) $f(x)=x^3$ & $a=-2$ & & d) $f(x)=\sqrt{x}$ & $a=4$\\
+	e) $f(x)=x-\frac{1}{x}$ & $a=1$ & & f) $f(x)=\sqrt{1+x}$ & $a=8$
+\end{tabular}
+
+
+
+\subsection{Dérivée générale}
+Pour chacune des fonctions suivantes, déterminer la valeur  de $f'(x)$ pour $\xR$ arbitraire en utilisant le taux d'accroissement :
+
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	a) $f(x)=4x+3$ & b) $f(x)=x^2$ & c) $f(x)=x^2+x+1$\\
+	d) $f(x)=\frac{3}{x}$ & e) $f(x)=\sqrt{x}$ & f) $f(x)=\frac{1}{x^2}$
+\end{tabular}
+
+
+
+\subsection{Étude graphique}
+\begin{minipage}{0.5\linewidth}
+On définit la fonction $f$ sur $[-6;6]$ et on considère $\Ccal$ sa courbe représentative dans le repère ci-contre. On trace également $T$ et $\Delta$ deux tangentes à $\Ccal$.
+\begin{enumerate}
+	\item Combien de réels $a$ vérifient $f'(a)=0$ ?
+	\item Quelle est la valeur de $f'(-3)$ ?
+	\item Déterminer l'équation réduite de $T$
+	\item Combien vaut $f'(0)$ ?
+	\item Déterminer par le calcul les coordonnées du point d'intersection entre $T$ et $\Delta$
+	\item Peut-on affirmer que $f(1)\geq f'(1)$ ?
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}[scale=1.3]
+	\begin{axis}[xmin=-6,xmax=6,ymin=-2,ymax=7, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.2 }]
+	\addplot[domain=-6:6,line width=1.5pt,samples=100] {(37/504)*x^3-(2/9)*x^2-(93/72)*x+167/42};
+	\addplot[domain=-6:6,line width=1pt,color=red,samples=100] {4-4*x/3};
+	\addplot[domain=-6:6,line width=1pt,color=red,samples=100] {2*x+10};
+	\draw[color=red] (-3,4) node {\small$\bullet$};
+	\draw[color=red] (4.5,-1) node {\small$\Delta$};
+	\draw[color=red] (0,4) node {\small$\bullet$};
+	\draw[color=red] (-5,1) node {\small $T$};
+	\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\section{Fonctions dérivées}
+
+\subsection{Passage obligatoire (si, si, j'insiste !)}
+Dériver puis simplifier au maximum chacune des fonctions suivantes :
+
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+
+% Puissances de x 
+    $f_{1}(x)=x-5$ &
+    $f_{2}(x)=-4x+6 $ &
+    $f_{3}(x)=4x(x-5) $ \\
+    $f_{4}(x)=2x^{2}+3x$  &
+    $f_{5}(x)=3x^{5}-7x^{2} $  &
+    $f_{6}(x)=(2+6x)^{2} $ \\ 
+    $f_{7}(x)=2x^{2}\left(x-\frac{1}{x}\right) $ &
+    $f_{8}(x)=(x^{3}-2)(x^2+1) $ &
+    $f_{9}(x)=x^{3}-\sqrt{2}x^{2}+x $\\
+    $f_{10}(x)=\left(x^2+3\right)^2$ & 
+
+% Racine carrée et fonction inverse
+    $f_{11}(x)=\frac{3}{x} + \frac{x}{3}$ &
+    $f_{12}(x)= 1+x+\frac{1}{x} $ \\ 
+    $f_{13}(x)=4x-2\sqrt{x} $ &    
+    $f_{14}(x)=x\sqrt{x} $ &
+    $f_{15}(x)=\frac{x}{2}-\frac{3}{x}+4\sqrt{x}$ \\
+
+% Inverses composées
+    $f_{16}(x)=\frac{1}{x-3} $ &
+    $f_{17}(x)=\frac{1}{1+2x^{2}} $ &
+    $f_{18}(x)=\frac{3}{5x+x^{3}} $ \\
+
+% Quotients
+    $f_{19}(x)=\frac{x+2}{1+x} $ &
+    $f_{20}(x)=\frac{x}{1+x^{2}} $ &
+    $f_{21}(x)=\frac{2x^{2}+5x-1}{2+x} $ \\
+    $f_{22}(x)=\frac{x^2-x^3}{1+x}$ &
+    $f_{23}(x)=x^2+1+\frac{1}{x^2}$ &
+    $f_{24}(x)=\frac{-7x}{(x+1)^2}$ \\
+	$f_{25}(x)=\frac{x}{\sqrt{x}} $ &
+    $f_{26}(x)=\frac{\sqrt{x}}{x} $ &
+    $f_{27}(x)=\frac{1+x^2}{2\sqrt{x}}$ \\
+
+% Produits
+    $f_{28}(x)=x^{3}(x-\sqrt{x}) $ &
+    $f_{29}(x)=\frac{x}{3}\left(\sqrt{x}+\frac{1}{x}\right)$ &
+    $f_{30}(x)=x^3\left(1-\frac{1}{\sqrt{x}}\right)$ \\
+
+% Puissances
+    $f_{31}(x)=(2x-5)^4$ &
+    $f_{32}(x)=\left(2x^3-3\right)^3$ &
+    $f_{33}(x)=\left(x+\frac{1}{x}\right)^3$ \\
+
+% Difficiles
+    $f_{34}(x)=\frac{3}{2x}(1+\sqrt{x}) $ &
+    $f_{35}(x)=\frac{x+\frac{1}{2}}{3\sqrt{x}+1} $ &
+    $f_{36}(x)=\frac{x+\frac{1}{x}}{x\sqrt{x}}$
+\end{tabular}
+
+
+
+\subsection{Dérivation à paramètres}
+Pour $\alpha$ et $\beta$ deux nombres réels, on pose $f(x)=(x-\alpha)(x-\beta)$
+\begin{enumerate}
+    \item À quelle(s) condition(s) sur $\alpha$ et $\beta$ a-t-on $f(1)=f'(1)$ ?
+    \item Peut-on avoir $f(0)=f'(0)$ ?
+\end{enumerate}
+
+
+
+\section{Étude de tangentes}
+
+\subsection{Équations de tangentes}
+ Déterminer l'équation réduite des tangentes au point d'abscisse $a$ des courbes suivantes : 
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{0.3\textwidth} p{0.5\textwidth}}
+
+    $\mathscr{C}_1:y=x^{2}-2x+2$ & $a=-2$ \\
+    $\mathscr{C}_2:y=\frac{2x+1}{x-2}$ & $a=3$ \\
+    $\mathscr{C}_3:y=\frac{\sqrt{x}}{x}$ & $a=9$
+\end{tabular}
+
+
+
+\subsection{Tangente commune}
+ Soient les fonctions $f$, $g$, et $h$ telles que $f(x)=2x^{2}+3x+4$ ,~ $g(x)= x^{2}-x$ et $h(x)= ax^{2}+bx+1$ avec $a,b\in\RR$
+
+\begin{enumerate}
+    \item Montrer que $\mathscr{C}_{f}$ et $\mathscr{C}_{g}$ admettent la même tangente au point d'abscisse $-2$
+    \item Déterminer les valeurs de $a$ et $b$ pour lesquelles $\mathscr{C}_{h}$ admet également la même tangente au point d'abscisse $-2$
+\end{enumerate}
+
+
+
+\subsection{Positions relatives}
+ On considère la fonction $g:x\mapsto x^{3}-2x$
+
+\begin{enumerate}
+    \item Déterminer une équation de $\tau$ la tangente à $\mathscr{C}_{g}$ au point d'abscisse 1
+    \item Déterminer $a,b,c\in\RR$ tels que pour tout $\xR$ on ait l'égalité :\\ $x^{3}-3x+2 = (x-1)(ax^{2}+bx+c) $
+    \item Étudier les positions relatives de $\mathscr{C}_{g}$ et $\tau$
+\end{enumerate}
+
+
+
+\subsection{Tangente peu commune}
+
+On considère les fonctions $f:x\mapsto x^2+x+1$ et $g:x\mapsto-x (x + 1) - 4$
+
+\begin{enumerate}
+    \item Montrer que $\Ccal_f$ et $\Ccal_g$ n'ont aucun point d'intersection.
+    \item On considère $(\Delta)$ la droite d'équation $y=3x$\\
+		Déterminer les points d'intersection de $\Ccal_f$ et de $\Ccal_g$ avec $(\Delta)$  
+	\item Vérifier que $(\Delta$) est une tangente à $\Ccal_f$ et à $\Ccal_g$
+\end{enumerate}
+
+
+
+\subsection{À partir d'une tangente}
+\begin{enumerate}
+    \item On pose $f(x)=2x^{2}+ax+b$ avec $a,b\in\RR$ \\
+    Déterminer les valeurs des $a$ et $b$ telles que $\mathscr{C}_{f}$ admette au point $A(2;2)$ une tangente dont le coefficient directeur vaut $3$
+    \item On pose $g(x)=\frac{ax+1}{bx-2}$, avec $a,b\in\RR$ \\
+    Déterminer les valeurs de $a$ et $b$ pour lesquelles $\mathscr{C}_{g}$ admet au point $B(1;-1)$ une tangente de coefficient directeur $-1$
+    \item On pose $h(x)=ax^2+bx+c$ avec $a,b,c\in\RR$\\
+    Déterminer les valeurs de $a$, $b$ et $c$ pour lesquelles $\Ccal_f$ passe par l'origine du repère et admet la droite $(d):y=2x-1$ pour tangente au point $C$ d'abscisse 2
+\end{enumerate}
+
+
+
+\subsection{Recherche de tangente}
+On considère la fonction $f:x\mapsto1+x+x^2$ définie sur $\RR$ et on note $\Ccal_f$ sa courbe représentative dans un repère orthonormé.\\
+La courbe $\Ccal_f$ admet-elle une ou plusieurs tangentes passant par l'origine du repère ? Si  oui, donner son équation et son point de tangence.
+
+
+\subsection{Familles de fractions}
+On considère les fonctions $f_r$ définies par $f_r(x)=\frac{x+r}{x^2+1}$ pour $r\in\RR$
+    \begin{enumerate}
+        \item Déterminer l'expression de $f_r'(x)$
+        \item Montrer que les tangentes à $\Ccal_{f_r}$ au point d'abscisse 0 sont toutes parallèles.
+        \item Montrer que la tangente à $\Ccal_{f_r}$ au point d'abscisse 1 à pour équation $y=-\frac{r}{2}x+r+\frac{1}{2}$
+        \item Montrer que les tangentes à $\Ccal_{f_r}$ au point d'abscisse 1 sont toutes concourantes en un point $A$ dont on précisera les coordonnées.
+    \end{enumerate}
+
+
+
+\subsection{Famille de racines}
+On considère les fonctions $g_k$ définies sur $\RR_+^*$ par $g_k(x)=x+\frac{k}{\sqrt{x}}$ pour $k\in\RR$
+    \begin{enumerate}
+        \item Déterminer l'expression de $g_k'(x)$
+        \item Montrer que la tangente à $\Ccal_{g_k}$ au point d'abscisse 1 à pour équation $y=(1-\frac{k}{2})x+\frac{3k}{2}$
+        \item Montrer que les tangentes à $\Ccal_{g_k}$ au point d'abscisse 1 sont toutes concourantes en un point $B$ dont on précisera les coordonnées.
+    \end{enumerate}
+
+
+
+
+\section{Variations de fonctions}
+
+\subsection{Étude d'un polynôme}
+On considère la fonction $f$ définie sur $\RR$ par $f(x)=2-15 x + \frac{x^2}{2} + \frac{2 x^3}{3}$
+\begin{enumerate}
+    \item Déterminer l'expression de $f'(x)$
+    \item Dresser le tableau de variations de $f$
+    \item Déterminer les points de la courbe $\Ccal_f$ pour lesquels le coefficient directeur de la tangente vaut -5
+\end{enumerate}
+
+
+
+\subsection{Tableaux de variations}
+ Dresser le tableau de variation des fonctions suivantes en prêtant une attention particulière à leurs domaines de définition : \\
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+    $f_1(x)=x^3+x^2-x-1$ & $f_2(x)=x^4-2x^3-2x^2$ & $f_3(x)=\frac{\sqrt{x}}{1+x}$ \\
+    $f_4(x)=\frac{x^2-2x+1}{x}$ & $f_5(x)=\frac{2x-1}{x^2+2}$ & $f_6(x)=x(3-\sqrt{x})$ \\
+    $f_7(x)=\frac{x^2-x}{2x-4}$ & $f_8(x)=\frac{x^3}{x^2-3}$ & $f_9(x)=\frac{1+x}{1+\sqrt{x}}$
+\end{tabular}
+
+
+
+\subsection{Étude d'un quotient}
+Soit $g:x\mapsto\frac{x^2+3x+11}{x+1}$
+\begin{enumerate}
+    \item Préciser $\Dcal_g$ le domaine de définition de la fonction $g$
+    \item Dresser le tableau de variations de la fonction $g$
+    \item Déterminer $a$ et $b$ réels tels que $g'(x)=a+\frac{b}{(x+1)^2}$
+    \item Déterminer les points de $\Ccal_g$ pour lesquels:
+    \begin{enumerate}
+        \item La tangente est horizontale
+        \item Le coefficient directeur de la tangente vaut $\frac{1}{2}$
+    \end{enumerate}
+    \item Déterminer les points d'intersection entre $\Ccal_g$ et l'axe des ordonnées.
+    \item Déterminer les points d'intersection entre $\Ccal_g$ et l'axe des abscisses.
+\end{enumerate}
+
+
+
+\subsection{Représentation graphique}
+Pour tout $\xR$ on pose $f(x)=\frac{x^2-6x+5}{x^2+2}$
+\begin{enumerate}
+	\item Étudier le signe de la fonction $f$
+	\item Montrer que $f'(x)=\frac{6(x^2-x-2)}{(x^2+2)^2}$
+	\item Dresser le tableau de variations de la fonction $f$
+	\item Donner l'équation réduite de $T_{-3}$ la tangente à $\Ccal_f$ au point d'abscisse -4
+	\item Donner l'équation réduite de $T_1$ la tangente à $\Ccal_f$ au point d'abscisse 1
+	\item Dans un repère orthonormé, tracer une courbe s'approchant de $\Ccal_f$. On fera apparaître chaque étape de construction.
+\end{enumerate}
+
+
+
+\subsection{Vrai ou Faux ?}
+\begin{enumerate}
+	\item La somme d'une fonction croissante et d'une fonction décroissante est une fonction constante.
+	\item La somme de deux fonctions croissantes est une fonction croissante.
+	\item La somme de deux fonctions monotones est une fonction monotone.
+	\item Le produit de deux fonctions décroissantes est une fonction décroissante.
+	\item Toute fonction qui n'est pas strictement croissante admet un maximum.
+\end{enumerate}
+
+
+
+\subsection{Inégalités}
+À l'aide de tableaux de variations, montrer les inégalités suivantes :
+
+\begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}
+    a) $\frac{x}{2}+\frac{2}{x^2}\geq1$ \quad pour tout $x>0$ &
+    
+    b) $\sqrt{x} \geq 2 -\frac{1}{\sqrt{x}}$ \quad pour tout $x>0$ \\
+    
+    c) $\frac{x}{1+x^2}\leq\frac{1}{2}$ \quad pour tout $\xR$ &
+    
+    d) $\frac{64\sqrt{x}}{48+x^2}\leq 2$ \quad pour tout $x\geq0$ \\
+\end{tabular}
+
+
+
+\subsection{Polynômes à paramètre}
+\begin{enumerate}
+	\item Soit $a\in\RR$. On définit $f:x\mapsto ax^3+x^2+x+1$ sur $\RR$ \\
+	Pour quelles valeurs de $a$ la fonction $f$ est-elle strictement croissante ?
+	
+	\item Soit $k\in\RR$. On définit $g:x\mapsto x^3-kx^2+3x-1$ sur $\RR$ \\
+	Pour quelles valeurs de $k$ la fonction $g$ est-elle strictement croissante ?
+\end{enumerate}
+
+
+
+\subsection{Paramètre rationnel}
+
+Soir $m\in\RR$. On définit sur $\RR\backslash\{m\}$ la fonction $f_m:x\mapsto\frac{mx-1}{x-m}$ et on note $\Ccal_m$ sa courbe représentative.
+
+\begin{enumerate}
+	\item Montrer que pour $m\in\{-1;1\}$ la fonction $f_m$ est constante.
+	
+	Dans la suite de l'exercice on considère que $m$ est différent de -1 et 1.
+	\item Montrer que $\Ccal_m$ passe par $A(-1;1)$ et $B(1;-1)$ pour toute valeur de $m$
+	\item Montrer que $f_m'(x)=\frac{1-m^2}{(x-m)^2}$
+	\item Déterminer l'équation réduite des tangentes à $\Ccal_m$ aux points $A$ et $B$
+	\item Discuter selon les valeurs de $m$ le tableau de variations de la fonction $f_m$
+\end{enumerate}
+
+
+
+\section{Résolution de problèmes}
+
+\begin{minipage}{0.5\linewidth}
+\subsection{Encore vous ?}
+	Un maître nageur souhaite délimiter une zone de baignade rectangulaire à l'aide d'une corde flottante comme représenté sur le schéma ci-contre.\\
+	
+	S'il souhaite que l'aire de la zone de baignade soit de 100m², de quelle longueur de corde aura-t-il besoin au minimum ?
+\end{minipage}\hfill
+\begin{minipage}{0.45\linewidth}
+	\begin{tikzpicture}
+		\begin{axis}[xmin = 0 , xmax = 30 , ymin = 3 , ymax = 17 ,axis lines = middle, grid = none,
+		axis line style={draw=none}, tick style={draw=none}, ticklabel style={opacity=0},height=6cm,width=9cm]
+			\fill[pattern=hatch, pattern color=yellow!60!orange, hatch line width=2pt] (0,0)--(0,5)--(30,5)--(30,0)--(0,0);
+			\draw[line width = .5pt] (5,5)--(5,15)--(25,15)--(25,5);
+			\foreach \i in {0,...,4}{
+			\addplot[color=blue,domain=0:4.5, samples=100] {0.25*sin(deg(x))+6+2*\i};
+			\addplot[color=blue,domain=5.5:24.5, samples=100] {0.25*sin(deg(x))+6+2*\i};
+			\addplot[color=blue,domain=25.5:30, samples=100] {0.25*sin(deg(x))+6+2*\i};}
+			\addplot[color=blue,domain=0:30, samples=100] {0.25*sin(deg(x))+16};
+			\draw (5,5) node foreach \i in {0,...,4} at (5,6+2*\i) {\color{orange}\faLifeRing};
+			\draw (25,5) node foreach \i in {0,...,4} at (25,6+2*\i) {\color{orange}\faLifeRing};
+			\draw (5,15) node foreach \i in {1,...,5} at (4.5+3.5*\i,15) {\color{orange}\faLifeRing};
+		\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Rectangle sous courbe}
+
+\begin{minipage}{0.5\linewidth}
+On considère la courbe représentative de la fonction $f:x\mapsto\frac{1}{4}(x-4)^2$ définie sur l'intervalle $[0;4]$.\\
+
+Sur cette courbe on place un point $M$ et on définit un rectangle dont les coins opposés sont $M$ et l'origine du repère et dont les côtés sont parallèles aux axes du repère comme représenté ci-contre.\\
+
+Quelle est l'aire maximale que peut avoir ce rectangle, et pour quelle position du point $M$ est-elle atteinte ?
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}[scale=1.2]
+	\begin{axis}[xmin=-0,xmax=4,ymin=-0,ymax=4, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.2 }]
+		\addplot[samples=100,domain=-3:9,color=red,line width = 1.5pt] {0.25*(x-4)^2};
+		\draw[color=red] (3.5,0.4) node {\small $\Ccal_f$};
+		\draw[thick,dashed,fill=gray,opacity=0.5] (3/2,0)--(3/2,25/16)--(0,25/16)--(0,0);
+		\draw[right,above] node at (3/2,25/16) {$M$}; 
+	\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Produits laitiers}
+Une entreprise vend des briques de lait à base carrée de contenance 1L. Quelles doivent être les dimensions de leurs briques afin d'utiliser le moins de carton possible ?
+
+
+
+\subsection{La casserole}
+On dispose de 1m² de cuivre avec lequel on souhaite confectionner le foyer d'une casserole.
+
+On admettra que le foyer de cette casserole peut être modélisé par un cylindre circulaire droit adjoint d'un disque comme base.
+
+Quel peut être le volume maximal d'une telle casserole ?
+
+
+
+\subsection{Le tipi}
+ 
+
+\begin{minipage}{0.7\linewidth}
+On cherche à construire un tipi dont le volume interne est de 5m\up{3}.\\
+Quelles dimensions donner au tipi afin d'utiliser le moins de toile possible ?\\
+
+On rappelle les formules suivantes :\\
+
+$\mathcal{A}_{cone}=\pi\times r \times c$ ~~~ et ~~~ $\Vcal_{cone} = \frac{\pi\times r^2 \times h}{3}$
+\end{minipage}\hfill
+\begin{minipage}{0.25\linewidth}
+\begin{tikzpicture}
+	\fill[top color=gray!50, bottom color=gray!10, opacity=0.25] 
+  	(0,0) circle (2cm and 0.5cm);
+	\fill[left color=gray!50!black, right color=gray!50!black, middle color=gray!50, opacity=0.25] 
+  	(2,0) -- (0,4) -- (-2,0) arc (180:360:2cm and 0.5cm);
+	\draw (-2,0) arc (180:360:2cm and 0.5cm) -- (0,4) -- cycle;	
+	\draw[dashed] (-2,0) arc (180:0:2cm and 0.5cm);
+	\draw[dashed] (2,0) -- node[below] {$r$} (0,0) -- node[left] {$h$} (0,4) ;
+	\draw (0,8pt) -- ++(8pt,0) -- (8pt,0);
+	\draw (1.4,2) node {$c$};
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\end{document}

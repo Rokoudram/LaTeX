@@ -1,0 +1,268 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Équations différentielles}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+ 
+\section{Premières équation différentielles}
+
+
+\subsection{Solutions d'équations différentielles}
+Montrer que les fonctions $f_n$ sont solutions des équations différentielles $(E_n)$ ci-dessous :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.4\linewidth}p{0.3\linewidth}}
+    $(E_1):(x+1)y'-2y=2$ & $f_1(x)=x^2+2x$\\
+    $(E_2):y'+y=1$ & $f_2(x)=\frac{1+e^x}{e^x}$ \\
+    $(E_3):y''-y'-2y=0$ & $f_3(x)=2e^{2x}-e^{-x}$\\
+    $(E_4):x^2(3y'+2y)=2x-3$ & $f_4(x)=\frac{1}{x}$ \\
+    $(E_5):\cos(x)y'+\sin(x)y=1$ & $f_5(x)=\cos(x)+\sin(x)$ \\
+    $(E_6):(1+e^x)y'-y=0$ & $f_6(x)=\frac{e^x}{1+e^x}$
+\end{tabular}
+
+
+
+\subsection{Identification}
+Déterminer les valeurs de $a$, $b$, $c$ pour lesquelles $f_k$ est solution de $(E_k)$ 
+
+\begin{tabular}{ll}
+$(E_1) : y' - 3y = \cos(x)$ & $f_1(x) = a \cos(x) + b \sin(x)$ \\
+$(E_2) : 2y' + y = x^2$ & $f_2(x) = a x^2 + b x + c$ \\
+$(E_3) : xy'+y=x+x^2$ & $f_3(x) = a x^2 + b x + c$ \\
+$(E_4) : y''+y'+y=x^4$ & $f_6(x) = ax^4+bx^3+c(x-1)$\\
+$(E_5) : xy'-y=x-x^2$ & $f_4(x) = x (ax + b \ln(x))$ \\
+$(E_6) : \cos(x)y'+\sin(x)y=\sin^3(x)$ & $f_5(x) = a \cos^2(x) + b \sin^2(x)$ \\
+\end{tabular}
+
+
+
+\subsection{Équations homogènes}
+  Déterminer l'unique fonction $f$ solution des équations différentielles suivantes et vérifiant $f(x_0)=y_0$ :
+
+\begin{tabular}{p{0.19\textwidth} p{0.22\textwidth} | p{0.17\textwidth} p{0.19\textwidth}}
+    $(E_1):y'-y=0$ & $x_0=2 ~,~ y_0=3$ & $(E_2):2y'+y=0$ & $x_0=-1 ~,~ y_0=1$ \\
+    $(E_3):5y'+17y=0$ & $x_0=\frac{5}{3} ~,~ y_0=8$ & $(E_4):3y'=7y$ & $x_0=\pi ~,~ y_0=5$ \\
+    $(E_5):2\sqrt{2}y'=-8y$ & $x_0=\sqrt{2} ~,~ y_0=-3\sqrt{2}$ & $(E_6):-y'=y$ & $x_0=5 ~,~ y_0=0$ \\
+\end{tabular}
+
+
+
+\subsection{Équations linéaires}
+  Même question que l'exercice précédent :
+
+\begin{tabular}{p{0.22\textwidth} p{0.17\textwidth} | p{0.2\textwidth} p{0.19\textwidth}}
+    $(E_1):y'+2y+3=0$ & $x_0=1 ~,~ y_0=4$ & $(E_2):y=y'+1$ & $x_0=-3 ~,~ y_0=5$ \\
+    $(E_3):\sqrt{2}y'+\sqrt{3}y=6$ & $x_0=1 ~,~ y_0=1$ & $(E_4):3y=2(y'+1)$ & $x_0=10 ~,~ y_0=-10$ \\
+\end{tabular}
+
+
+
+\subsection{Des petits pains}
+On sort un pain du four pour le laisser reposer dans une pièce à température ambiante.\\
+On admettra que $f(t)$ la température du pain exprimée en dégrés Celsius en fonction du temps $t$ exprimé en minutes depuis sa sortie du four vérifie l'équation différentielle $(E):15y'+y=25$
+
+\begin{enumerate}
+    \item Donner toutes les solutions de l'équation différentielle $(E)$
+    \item Sachant qu'après 45min de repos la température du pain est de 35°C, quelle était sa température en sortant du four ? On arrondira le résultat au dixième de degré.
+    \item Au bout de combien de temps à la minute près la température du pain descendra-t-elle en dessous de 26°C ?
+    \item Conjecturer la température de la pièce.
+\end{enumerate}
+
+
+
+\subsection{Loi de Newton}
+La loi de Newton énonce que la vitesse de refroidissement d'un objet est proportionelle à la différence entre sa propre température et la température ambiante.
+
+On place un objet d'une température $T$ dans un environnement d'une température $T_a$
+
+\begin{enumerate}
+    \item Justifier que la loi de Newton se traduit par l'équation $T'=\alpha(T-T_a)$ où $\alpha$ est un réel appelé constante de proportionnalité
+    \item On place un objet dans un environnement à 30°C et on note $T(t)$ sa température en fonction du temps $t$ exprimé en secondes
+    \begin{enumerate}
+        
+    \item Écrire l'équation différentielle $(E)$ correspondant à cette situation
+    \item Vérifier que la fonction constante égale à 30 est solution de $(E)$
+    \item Donner les solutions $T$ de l'équation différentielle $(E)$
+    \end{enumerate}
+    \item On suppose désormais que la température initiale de l'objet est de 90°C
+    \begin{enumerate}
+        \item Donner l'expression de $T(t)$ en fonction de $t$ et de $\alpha$
+        \item Au bout de 10min, la température de l'objet a chuté de 40°\\
+        Déterminer la valeur de $\alpha$ puis donner l'expression de $T(t)$ en fonction de $t$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\section{Second membre non constant}
+
+\subsection{Second membre exponentiel}
+  On considère l'équation différentielle $(E):2y'-y=e^{2x}$ et on note $(E_0):2y'-y=0$
+
+\begin{enumerate}
+    \item Déterminer $a$ et $b$ deux réels tels que la fonction $f:x\mapsto ae^{bx}$ soit une solution particulière de $(E)$
+    \item Montrer que $y$ est solution de $(E)$ si et seulement si $y-f$ est solution de $(E_0)$
+    \item Résoudre l'équation $(E_0)$
+    \item En déduire les solutions de l'équation $(E)$
+    \item Déterminer l'unique solution de $(E)$ vérifiant $y(0)=1$
+\end{enumerate}
+
+
+
+\subsection{Second membre polynomial}
+  On considère l'équation différentielle $(E):y'-2y-x^2=0$ et on note $(E_0):y'-2y=0$
+
+\begin{enumerate}
+    \item Déterminer $P$ un polynôme du second degré qui soit solution de $(E)$
+    \item Montrer que $y$ est solution de $(E_0)$ si et seulement si $y+P$ est solution de $(E)$
+    \item Résoudre l'équation $(E_0)$
+    \item En déduire les solutions de l'équation $(E)$
+    \item Déterminer l'unique solution de $(E)$ vérifiant $y(1)=0$
+\end{enumerate}
+
+
+
+\subsection{Second membre trigonométrique}
+On considère les équations différentielles $(E):3y'-y=9\cos(x)+3\sin(x)-10x\sin(x)$ et\\
+$(E_0):3y'-y=0$
+\begin{enumerate}
+    \item On pose $f(x)=ax\cos(x)+bx\sin(x)$ \quad avec $a,b\in\RR$
+    \begin{enumerate}
+        \item Montrer que $f'(x)=(bx+a)\cos(x)+(b-ax)\sin(x)$
+        \item Montrer que $f$ est solution de $(E)$ si et seulement si $a=3$ et $b=1$
+    \end{enumerate}
+    \item Résoudre l'équation différentielle $(E_0)$
+    \item En déduire l'ensemble des solutions de $(E)$
+    \item Déterminer l'unique solution de $(E)$ vérifiant $y(\pi)=-2\pi$
+\end{enumerate}
+
+
+
+\subsection{Second membre logarithmique}
+On considère l'équation différentielle $(E):y'+y=(2x+3)\ln(x)+\frac{2x+1}{x}$ \quad où $y$ désigne une fonction définie sur $\RR_+*$
+
+\begin{enumerate}
+    \item Déterminer $u$ une solution particulière de $(E)$ de la forme $u:x\mapsto(ax+b)\ln(x)$
+    \item Résoudre l'équation différentielles $(E_0):y'+y=0$
+    \item Donner l'ensemble des solutions de $(E)$
+    \item Déterminer $f$ l'unique solution de $(E)$ vérifiant $f(1)=e$
+\end{enumerate}
+
+
+
+\subsection{Famille d'équations différentielles}
+Pour $a\in\RR$ on considère l'équation différentielle $(E_a):y'+ay=f(x)e^{-ax}$\quad où $f$ est une fonction définie sur $\RR$
+\begin{enumerate}
+	\item Soit $F$ une primitive de $f$\\
+	Montrer que la fonction $x\mapsto F(x)e^{-ax}$ est une solution particulière de $(E_a)$
+	\item En déduire que les solutions de $(E_a)$ sont de la forme $y=G(x)e^{-ax}$ où $G$ est une primitive quelconque de $f$
+	\item Déterminer l'unique fonction $g$ vérifiant $\begin{cases}g'(x)+4g(x)=\dfrac{e^{-3x}}{1+e^x}\\g(0)=\ln(4)\end{cases}$
+\end{enumerate}
+
+
+
+
+\section{Changement de fonction inconnue}
+
+\subsection{Ordre supérieur}
+Donner les solutions des équations différentielles suivantes :
+
+\begin{tabular}{p{0.27\textwidth} p{0.27\textwidth} p{0.27\textwidth}}
+    $(E_1):y''=y'-y''$ & $(E_2):2y''-4y'+8=0$ & $(E_3):y'''+y''=2$ \\
+\end{tabular}
+
+
+
+\subsection{Changement inverse}
+On cherche à déterminer l'ensemble des fonctions ne s'annulant pas et vérifiant l'équation différentielle
+$(E):3y'=y(2-5y)$  \\
+On pose alors $z=\frac{1}{y}$
+\begin{enumerate}
+	\item Montrer que $y$ est solution de $(E)$ si et seulement si $3z'+2z=5$
+	\item Justifier que $z:t\mapsto Ce^{-\frac{2}{3}t}+\frac{5}{2}$ , avec $C\in\RR$
+	\item Montrer que $y:t\mapsto\frac{2}{5+ke^{-\frac{2}{3}t}}$ , avec $k\in\RR$
+	\item Déterminer l'unique fonction solution de $(E)$ vérifiant $y(0)=\frac{1}{3}$
+\end{enumerate}
+
+
+\subsection{Changement simple}
+On considère l'équation différentielle $(E):y'+y=\frac{1}{y}$
+Pour toute fonction $y$ on pose $z=y^2$
+\begin{enumerate}
+    \item Démontrer que $y$ est solution de $(E)$ si et seulement si $z$ est solution de l'équation différentielle $(E'):z'+2z=2$
+    \item Résoudre l'équation différentielle $(E')$
+    \item En déduire les solutions de $(E)$
+    \item Déterminer l'unique solution de $(E)$ vérifiant $y(0)=2$
+\end{enumerate}
+
+
+
+\subsection{Changement délicat, mais équation simple}
+On cherche à résoudre l'équation différentielle $(H):yy'+2=3y'$ et on note $z=(y-3)^2$
+\begin{enumerate}
+    \item Justifier que les solutions de $(H)$ ne peuvent jamais valoir 3.
+    \item Montrer que $y$ est solution de $(H)$ si et seulement si $4z+zz'=0$
+    \item En déduire alors qu'il existe $k\in\RR$ tel que $z(t)=k-4t$
+    \item Déterminer les solutions de $(H)$, puis l'unique fonction $y$ solution de $(H)$ et vérifiant $y(2)=-3$
+\end{enumerate}
+
+
+
+\subsection{Un degré de trop}
+On cherche à déterminer les fonctions définie sur $\RR_+^*$ vérifiant l'équation $(E):y'+\frac{x+1}{x}y=\frac{1}{x}$\\
+On pose alors $z=xy$
+\begin{enumerate}
+	\item Montrer que $y$ est solution de $(E)$ si et seulement si $z$ est solution de $(E'):z'+z-1=0$
+	\item Déterminer les solutions de $(E')$
+	\item En déduire les fonctions solutions du problème.
+	\item Déterminer l'unique fonction $f$ solution du problème et vérifiant $f(1)=1$
+\end{enumerate}
+
+
+
+\subsection{Équation d'ordre 2}
+On considère les équations $(E_1):y''-3y'+2y-1=0$ et $(E_2):y'=2y-1$
+\begin{enumerate}
+	\item Montrer que $y$ est solution de $(E_1)$ si et seulement si $(y-y')$ est solution de $(E_2)$
+	\item Résoudre l'équation $(E_2)$
+	\item En déduire que $y$ est solution de $(E_1)$ si et seulement si $y$ vérifie $(E_3):y-y'=Ce^{2x}+\frac{1}{2}$ \\avec $C\in\RR$
+	\item Montrer que la fonction $u:x\mapsto Ce^{2x}+\frac{1}{2}$ est une solution particulière de $(E_3)$
+	\item Donner alors toutes les solutions de $(E_3)$
+	\item Montrer que les solution de $(E_1)$ sont de la forme $y=Ke^x+Ce^{2x}+\frac{1}{2}$ \quad avec $C,K\in\RR$
+\end{enumerate}
+
+
+
+
+\subsection{Cylindrospoquoi ?}
+Le verger de Mme Langlois est contaminé à 95\% par la cylindrosporiose. Elle décide d'acheter un antifongique et le vendeur lui affirme qu'une semaine après application, la tendance sera inversée et que 95\% des arbes seront sains.\\[5pt]
+On note $p(t)$ la proportion d'arbres sains dans le verger de Mme Langlois $t$ jours après l'application de l'antifongique.\\[5pt]
+On admet que $p$ est une fonction dérivable et vérifie la relation $4p'=1-p^2$.\\[5pt]
+On considère la fonction $q:t\mapsto \frac{1-p(t)}{1+p(t)}$
+
+\begin{enumerate}
+    \item Démontrer que $p=\frac{1-q}{1+q}$ puis que $p'=\frac{-2q'}{(1+q)^2}$
+    \item En déduire que $q'=-\frac{1}{2}q$
+    \item Déterminer une expression de $q(t)$ en fonction de $t$
+    \item En déduire que $p(t)=\dfrac{e^{\frac{1}{2}t}-\frac{19}{21}}{e^{\frac{1}{2}t}+\frac{19}{21}}$
+    \item Que peut-on conclure quant à l'affirmation du vendeur ?
+\end{enumerate}
+
+
+
+
+\end{document}

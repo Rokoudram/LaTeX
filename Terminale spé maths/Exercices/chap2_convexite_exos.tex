@@ -1,0 +1,389 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Compléments de dérivation}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Composition de fonctions}
+
+\subsection{Premières compositions}
+On définit les fonctions $f$, $g$ et $h$ par $f(x)=2x^2+3$ , $g(x)=\sqrt{\frac{x-2}{2}}$ et $h(x)=\frac{1}{x-1}$
+\begin{enumerate}
+	\item Déterminer le domaine de définition des fonctions $f$, $g$ et $h$
+	\item Déterminer le domaine de définition des fonctions $f\circ f$ et $h\circ h$ puis exprimer le plus simplement possible $f\circ f(x)$ et $h\circ h(x)$
+	\item Donner l'expression de $h\circ f(x)$ , $f\circ g(x)$ et $f \circ h(x)$ lorsque cela a du sens.
+	\item Déterminer le domaine de définition de $h\circ g$ puis montrer que $h \circ g (x) = \frac{2+\sqrt{2x-4}}{x-4}$ 
+	\item Déterminer le domaine de définition de $f\circ g \circ h$ puis donner l'expression de $f \circ g \circ h (x)$
+\end{enumerate}
+
+
+
+\subsection{Drôle de définition}
+On pose $g(x)=\sqrt{\ln(x-x^2)}$.
+
+Déterminer $\Dcal_g$ le domaine de définition de la fonction $g$.
+
+
+
+\subsection{Dérivation}
+Déterminer la dérivée de chacune des fonctions suivantes sans tenir compte de leur domaine de définition ni de leur domaine de dérivabilité :
+
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	$f_1:x\mapsto\sqrt{1+x^2+x^3}$ & $f_{2}:x\mapsto (x^3-e^x)^7$ & $f_3:x\mapsto e^{x+\frac{1}{x}}$ \\
+	
+	$f_4:x\mapsto \ln\left(x^2-3\sqrt{x}\right)$ & $f_5:x\mapsto\left(6-\ln(x)\right)^4$ & $f_6:x\mapsto xe^{x^2}$\\
+	
+	$f_{7}:x\mapsto  \left(\dfrac{x^2}{1+x} \right)^3$  & $f_{8}(x)= \left(1+e^{x^2+1}\right)^{4}$ & $f_9:x\mapsto(2x+3)\sqrt{1+x^2}$  \\
+
+	$f_{10}:x\mapsto (x^2-1)e^{3+x^2}$ & $f_{11} :x\mapsto \dfrac{(1+2x)^5}{2+5x}$ &  $f_{12}:x\mapsto (x^2+x)^3\sqrt{x}$  \\
+
+	$f_{13}:x\mapsto e^{x\ln(x)}-7x$ &	$f_{14}:x\mapsto(x^3-1)^4\sqrt{2x^2+1}$ & $f_{15}:x\mapsto e^{\sqrt{1+\ln(x)}}$  \\
+
+	$f_{16}:x\mapsto \dfrac{x\sqrt{2x+x^2}}{1+x}$  & $f_{17}:x\mapsto \dfrac{7+x^2}	{\sqrt{1+x}}$ & $f_{18}:x\mapsto \dfrac{x^2-x-1}{\sqrt{5x+2}}$ \\
+
+	$f_{19}:x\mapsto\dfrac{xe^x}{\sqrt{3+2x}}$ & $f_{20}:x\mapsto \sqrt{\ln(x-x^2)}$ & $f_{21}:x\mapsto \ln\left(1+\sqrt{1+e^{1+x^2}}\right)$
+\end{tabular}
+
+
+
+
+\subsection{Dérivée seconde}
+Dériver deux fois les fonctions suivantes en précisant leur domaine de définition et de dérivabilité :  
+
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{p{0.25\linewidth}p{0.2\linewidth}p{0.2\linewidth}p{0.25\linewidth}}
+$f_1(x)=x^5-2x^4+x^2-1$ & $f_2(x)=x^2e^x$ & $f_3(x)=\frac{x^2+1}{x}$ & $f_4(x)=(x+1)\sqrt{x}$\\
+$f_5(x)=xe^{x^2}$ & $f_6(x)=\sqrt{1-x^2}$ & $f_7(x)=e^{\sqrt{x}}$ & $f_8(x)=\frac{4x\sqrt{x}}{e^x}$
+\end{tabular}
+
+
+
+\subsection{Variations}
+
+Répondre aux questions suivantes pour chacune des fonctions $f_k$ dans la tableau ci-après :
+\begin{center}
+\renewcommand{\arraystretch}{3.3}
+\begin{tabular}{| P{0.4\linewidth} | P{0.4\linewidth} |} \hline
+	$f_1(x)=\sqrt{x}e^{1-x^2}$ & $f_1'(x)=\dfrac{e^{1-x^2}(1-4x^2)}{2\sqrt{x}}$ \\ \hline
+	$f_2(x)=\dfrac{\sqrt{1+x^2}}{1+x}$ & $f_2'(x)=\dfrac{x-1}{(1+x)^2\sqrt{1+x^2}}$ \\ \hline
+	$f_3(x)=\ln(x + x^2) + \dfrac{x + 7}{x + 1}$ & $f_4'(x)=\dfrac{2x^2-3x+1}{x(1+x)^2}$ \\ \hline
+	$f_4(x)=\dfrac{\ln\left(1+x^2\right)}{1+x^2}$ & $f_3'(x)=\dfrac{2x\left(1-\ln(1+x^2)\right)}{{(1+x^2)}^2}$ \\ \hline
+	$f_5(x)=x\left(7-4\sqrt{x}\right)^5$ & $f_5'(x)=(7-14\sqrt{x})\left(7-4\sqrt{x}\right)^4$ \\ \hline
+	$f_6(x)=x\sqrt{x^3-4x}$ & $f_6'(x)=\dfrac{x(5x^2-12)}{2\sqrt{x^3-4x}}$ \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Déterminer $\Dcal_k$ le domaine de définition de $f_k$
+	\item Retrouver l'expression de $f_k'(x)$ pour $x\in\Dcal_k$
+	\item Dresser le tableau de variations de la fonction $f_k$
+\end{enumerate}
+
+
+
+\subsection{Composition d'après tableau}
+On considère une fonction $f$ définie et dérivable sur $\RR$ et dont on donne le tableau de variations ci-contre :
+
+\begin{tikzpicture}
+	\tkzTabInit[espcl=4]{$x$ / 1 , $f'(x)$ / 1, $f(x)$ / 2}
+	{$-\infty$, $-3$ , $0$ , $4$ , $+\infty$}%
+	\tkzTabLine{,-,z,+,z,-,z,+,}%
+	\tkzTabVar{+/$10$ / , -/$-4$/ , +/$1$/ , -/$-9$/ , +/$-1$/}%
+	\tkzTabVal{1}{2}{0.5}{$-5$}{$0$}%
+	\tkzTabVal{2}{3}{0.5}{$-1$}{$0$}%
+	\tkzTabVal{3}{4}{0.5}{$2$}{$0$}%
+\end{tikzpicture}
+
+On définit les fonctions suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$g_1(x)=e^{f(x)}$ & $g_2(x)=\sqrt{f(x)}$ & $g_3(x)=f(x)^2$ \\
+	$g_4(x)=f\left(x^2\right)$ & $g_5(x)=f\left(\sqrt{x}\right)$ & $g_6(x)=f\left(\ln(x)\right)$ 
+\end{tabular}
+
+Répondre aux questions ci-après pour chacune des fonctions $g_i$ définies précédemment :
+\begin{enumerate}
+	\item Déterminer le domaine de définition et de dérivabilité de $g_i$
+	\item Exprimer $g_i'(x)$ à l'aide de la fonction $f$ et de sa dérivée
+	\item Dresser le tableau de variations de $g_i$
+\end{enumerate}
+
+
+
+\subsection{On élève le degré}
+On définit la fonction $h$ sur $[-1;+\infty[$ par $h(x)=x-\ln\left(2+x^3\right)$
+\begin{enumerate}
+	\item Déterminer l'expression de $h'(x)$ en fonction de $x$
+	\item Déterminer un polynôme du second degré $P$ pour lequel $h'(x)=\frac{(x-1)P(x)}{2+x^3}$
+	\item Dresser le tableau de variations de $h$ \\
+	\textit{(On pourra donner des valeurs approchées de ses extremums)}
+\end{enumerate}
+
+
+
+
+\section{Convexité et concavité}
+
+\subsection{Analyse graphique}
+
+\begin{minipage}{0.4\linewidth}
+	On a représenté dans le repère ci-contre les courbes représentatives d'une fonction $f$ et de ses dérivées successives $f'$ et $f''$
+	\begin{enumerate}
+	\item Quelle semble être le signe de la fonction $f$ sur $[-2;8]$ ?
+	\item Quelles semblent être les variations de la fonction $f$ sur $[-2;8]$ ?
+	\item Quelle semble être la convexité de la fonction $f$ sur $[-2;8]$ ?
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[width=12.5cm , height=8cm ,
+        xmin=-2,xmax=8,ymin=-2.5,ymax=3, ytick distance=1,xtick distance=1,
+        axis lines=middle, axis line style = thick, grid=major, ticklabel style = {font=\small} ,
+        enlargelimits = { abs = 0.2 }
+        ]
+            \addplot[color=red,line width=2pt,domain=-2:8,samples=100]
+            {(2*x^2-4)*e^(-0.5*x-0.5)+0.5};
+            \addplot[line width = 2pt , domain=-2:8, samples=100, color=blue]
+            {(-x^2+4*x+2)*e^(-0.5*x-0.5)};
+            \addplot[line width = 2pt , domain=-2:8, samples=100, color=green!90!black]
+            {(6-8*x+x^2)*e^(-0.5*x-0.5)};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Changement de rôle}
+On considère une fonction dont la courbe représentative est donnée dans le graphique ci-contre :
+
+\begin{minipage}{0.55\linewidth}
+\begin{tikzpicture}
+	\begin{axis}[width=12cm , height=8cm ,
+        xmin=-6,xmax=6,ymin=-4,ymax=3, ytick distance=1,xtick distance=1,
+        axis lines=middle, axis line style = thick, grid=major, ticklabel style = {font=\small} ,
+        enlargelimits = { abs = 0.2 }
+        ]
+        \addplot[color=red,line width=2pt,domain=-6.5:6.5,samples=100]
+        {0.1*x*(x+3)*(x-2)*(x-5)*ln(0.42+e^(0.1*x))};
+	\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+	\begin{enumerate}
+		\item Si cette courbe représente la fonction $f$ quelle semble être la convexité de $f$ ?
+		\item Si cette courbe représente la fonction $f'$ quelle semble être la convexité de $f$ ?
+		\item Si cette courbe représente la fonction $f''$ quelle semble être la convexité de $f$ ?
+	\end{enumerate}
+\end{minipage}
+
+
+
+
+\subsection{Composition exponentielle}
+On considère $f$ la fonction exponentielle et $g$ une fonction affine toutes deux définies sur $\RR$
+\begin{enumerate}
+	\item Démontrer que $f \circ g$ est convexe sur $\RR$
+	\item À quelles conditions la fonction $g \circ f$ est-elle convexe sur $\RR$ ?
+\end{enumerate}
+
+
+
+\subsection{Convexité}
+Étudier la convexité de chacune des fonctions suivantes sur leur domaine de définition :
+
+\begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+	$f_1:x\mapsto x^4+2x^3-12x^2+6x$ & $f_2:x\mapsto \sqrt{x} + \frac{1}{\sqrt{x}}$ & $f_3:x\mapsto e^{2x+1}-e^{3x}$ \\
+	$f_4:x\mapsto xe^{-x^2}$ & $f_5:x\mapsto \ln(x)^2$ & $f_6:x\mapsto x^2\ln(x)$
+\end{tabular}
+
+
+
+\subsection{Exponentielles}
+On considère la fonction $:f:x\mapsto 18x^2-18e^x-18e^{2x}+2e^{3x}$ définie sur $\RR$
+\begin{enumerate}
+	\item Montrer que $f(\ln(2))=18\ln(2)^2-56$
+	\item Montrer que $f''(x)=18(2-e^x)(1-e^{2x})$
+	\item Étudier la convexité de $f$ sur $\RR$ et donner les points d'inflexions à $\Ccal_f$
+\end{enumerate}
+
+
+
+\subsection{Convexité à paramètre}
+On considère un réel $a$ non nul
+\begin{enumerate}
+	\item Étudier selon les valeurs de $a$ la convexité de la fonction $f_a:x\mapsto\ln(x^2+a^2)$
+	\item Étudier selon les valeurs de $a$ la convexité de la fonction $g_a:x\mapsto x^2e^{ax}$
+\end{enumerate}
+
+
+
+\subsection{Vrai / Faux}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{4mm}|p{0.55\textwidth}|p{0.1\textwidth}|p{0.1\textwidth}|} \hline
+    \no & \centering Proposition & Vrai & Faux \\ \hline
+    1. & La somme de deux fonctions concaves est concave & & \\ \hline
+    2. & Si $u$ est une fonction convexe, alors $e^u$ est également convexe & & \\ \hline
+    3. & Si $u$ est une fonction positive et convexe, alors $\sqrt{u}$ est également convexe & & \\ \hline
+    4. & Si $u$ est une fonction concave, alors $u^2$ est convexe & & \\ \hline
+    5. & Si $u$ est une fonction négative et concave, alors $u^2$ est convexe & & \\ \hline
+    6. & Le produit de deux fonctions convexes est convexe & & \\ \hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Courbe inflexible}
+Pour $m$ réel on définit sur $\RR$ la fonction $f:x\mapsto(mx^2+2)e^{-x}$
+
+Pour quelle(s) valeur(s) de $m$ la courbe représentative de la fonction $f$ n'admet-elle aucun point d'inflexion ?
+
+
+
+\subsection{Bicarré}
+Soit $ f : x \mapsto (x^2-2) e^{x^2} $
+\begin{enumerate}
+    \item Montrer que $ f''(x) = 2e^{x^2} (2x^4 + x^2 - 1) $
+    \item Étudier la convexité de $f$ et préciser les points d'inflexion à $\Ccal_f$
+\end{enumerate}
+
+
+
+\section{Application aux inégalités}
+
+\subsection{Sur la fonction racine carrée}
+Soit $f(x)=\sqrt{x}$ pour tout $\xR_+$
+
+\begin{enumerate}
+	\item Déterminer l'équation de la tangente à $\Ccal_f$ au point d'abscisse 1
+	\item Justifier que $f$ est concave sur $\RR_+$
+	\item Montrer que $x\geq2\sqrt{x}-1$ pour tout $x$ positif
+\end{enumerate}
+
+
+
+\subsection{Somme d'exponentielles}
+On considère la fonction $f:x\mapsto e^x+e^{-2x}$
+\begin{enumerate}
+    \item Étudier la convexité de la fonction $f$
+    \item Déterminer l'équation de la tangente à $\Ccal_f$ au point d'abscisse 0
+    \item En déduire que $e^x\geq2-x-e^{-2x}$ , $\forall \xR$
+\end{enumerate}
+
+
+
+\subsection{Moyenne et convexité}
+On considère la fonction $f:x\mapsto x^2$ définie sur $\RR$ ainsi que deux nombres réels quelconques $a$ et $b$. \\
+On note $A$, $B$ et $J$ les points de $\Ccal_f$ d'abscisses respectives $a$, $b$ et $\frac{a+b}{2}$\\
+On admettra que la fonction $f$ est convexe sur $\RR$
+\begin{enumerate}
+    \item Représenter la situation sur un graphique
+    \item Calculer l'ordonnée des points $A$, $B$ et $J$
+    \item On note $K$ le milieu du segment $[AB]$\\
+    Calculer les coordonnées du point $K$
+    \item Que peut-on dire concernant les points $J$ et $K$ ?
+    \item En déduire que $(a+b)^2\leq2(a^2+b^2)$ puis que $a^2+b^2\geq2ab$
+\end{enumerate}
+
+
+
+\subsection{Sur la fonction exponentielle}
+Soit $g(x)=e^x$ pour tout $\xR$\\
+On considère $A$ et $B$ les points de $\Ccal_g$ d'abscisses respectives 0 et 1
+\begin{enumerate}
+	\item Justifier que $g$ est convexe sur $\RR$
+    \item Étudier la position relative de $\Ccal_g$ et de $(AB)$
+    \item Déterminer l'équation réduite de la droite $(AB)$
+    \item Pour quelles valeurs de $x$ peut-on affirmer que $e^x+x\geq1+ex$ ?
+\end{enumerate}
+
+
+
+\subsection{Différence d'exponentielles}
+Soit $g:x\mapsto e^x-e^{-x}$ définie pour tout $x$ réel
+\begin{enumerate}
+    \item Montrer que la fonction $g$ est strictement croissante sur $\RR$
+    \item Étudier la convexité de la fonction $g$
+    \item Donner l'équation de $(\Delta)$ la tangente à $\Ccal_g$ au point d'abscisse 0 puis étudier la position relative de $\Ccal_g$ et $(\Delta)$
+    \item Résoudre dans $\RR$ l'équation $e^x\leq2x+e^{-x}$
+\end{enumerate}
+
+
+
+\subsection{Dérivation délicate}
+On pose $f(x)=\frac{e^{-x}}{1+2x}$ pour tout $x\neq-\frac{1}{2}$
+\begin{enumerate}
+    \item Déterminer $a$ et $b$ réels tels que $f'(x)=e^{-x}\frac{ax+b}{(1+2x)^2}$
+    \item Montrer que $f''(x)=\frac{4x^2+12x+13}{(1+2x)^3}e^{-x}$
+    \item Étudier la convexité de la fonction $f$ sur $\RR_+$ et préciser les points d'inflexion à $\Ccal_f$
+    \item Déterminer l'équation de la tangente à $\Ccal_f$ au point d'abscisse 0
+    \item En déduire que pour tout $x$ positif on a : $1-e^{-x}\leq x+6x^2$
+\end{enumerate}
+
+
+
+\subsection{On étend l'intervalle}
+On définit sur $\RR$ la fonction $\varphi:x\mapsto(2x-x^2)e^{-x}$
+\begin{enumerate}
+	\item Dresser le tableau de variations de $\varphi$
+	\item Étudier la convexité de $\varphi$ et donner les points d'inflexion à $\Ccal_\varphi$
+	\item Déterminer l'équation réduite de $\mathcal{T}_0$ la tangente à $\Ccal_\varphi$ au point d'abscisse 0
+	\item En déduire un intevalle sur lequel on peut affirmer que $2x(e^{-x}-1)\leq x^2e^{-x}$
+	\item Justifier que $\varphi(x)\leq2x$ pour tout $x\geq1$
+	\item Sur quel intervalle peut-on alors affirmer que $2x(e^{-x}-1)\leq x^2e^{-x}$ ?
+\end{enumerate}
+
+
+
+\subsection{Logarithme népérien}
+On pose $k(x)=\ln(1+x^2)$ pour tout $x$ réel
+\begin{enumerate}
+    \item Justifier que $k$ est bien définie et deux fois dérivable sur $\RR$
+    \item Dresser le tableau de variations de $k$
+    \item Montrer que $k''(x)=\frac{2-2x^2}{(1+x^2)^2}$
+    \item Donner les points d'inflexion à $\Ccal_k$
+    \item Déterminer l'équation de la tangente à $\Ccal_k$ au point d'abscisse 1
+    \item En déduire les solutions de l'inéquation $\ln\left(\frac{1+x^2}{2}\right)\geq x-1$
+\end{enumerate}
+
+
+
+\subsection{Encore du logarithme}
+On considère la fonction $g$ définie sur $\RR_+^*$ par $g(x)=x\ln(x)^2$
+\begin{enumerate}
+    \item Dresser le tableau de variations de $g$
+    \item Montrer que $g''(x)=\frac{2(\ln(x)+1)}{x}$
+    \item Montrer que $M\left(\frac{1}{e};\frac{1}{e}\right)$ est un point d'inflexion de $\Ccal_g$
+    \item Donner l'équation de $T_e$ l'équation de la tangente à $\Ccal_g$ au point d'abscisse e
+    \item En déduire que $\ln(x)^2\geq3-\frac{2e}{x}$ pour tout $x>0$
+\end{enumerate}
+
+
+
+\subsection{Affreuse inégalité}
+On définit sur $\mathbb{R}^*_+$ la fonction $h$ par $h(x) = \frac{\ln(x)}{x}$
+\begin{enumerate}
+    \item Montrer que $h'(x) = \frac{1 - \ln(x)}{x^2}$
+    \item Dresser le tableau de variations de $h$
+    \item Montrer que $h''(x) = \frac{2 \ln(x) - 3}{x^3}$
+    \item Étudier la convexité de $h$
+    \item Déterminer l'équation réduite de la tangente à $C_h$ au point d'abscisse $2$
+    \item En déduire que $\frac{4 \ln(x) + x^2 (\ln(2) - 1)}{x} \leq 4\ln(2)-2 \quad \forall x \in \mathbb{R}^*_+$
+\end{enumerate}
+
+
+\end{document}

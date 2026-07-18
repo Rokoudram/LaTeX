@@ -1,0 +1,364 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Continuité et T.V.I.}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Continuité en un point}
+
+
+\subsection{Continue ou pas ?}
+Les fonctions suivantes sont-elles continues sur $\RR$?
+
+\begin{tabular}{p{0.27\textwidth} p{0.27\textwidth} p{0.27\textwidth}}
+    $f(x)=\begin{cases}
+    		x^2-1 & \text{si } x<0 \\
+    		x-1 & \text{si } x\geq0
+    		\end{cases}$
+    &
+     $g(x)=\begin{cases}
+     			x^2+1 & \text{si } x<1 \\
+     			\hfil \frac{2}{x} & \text{si } x\geq1
+     		\end{cases}$
+    &
+    $h(x)=\begin{cases}
+    		e^{\frac{1}{x}}+1 & \text{si } x\geq1\\
+    		e^x-x & \text{si } x<1
+    		\end{cases}$
+\end{tabular}
+
+
+
+\subsection{Continuité paramétrée}
+Démontrer que la fonction $m:x\mapsto\begin{cases}ax^2+x+b & \text{si } x\geq1\\x^2+bx+a & \text{si } x<1\end{cases}$ est continue sur $\RR$ pour tous $a,b\in\RR$
+
+
+
+\subsection{Prolongement continu}
+Quelle valeur de $k$ choisir pour que les fonctions suivantes soient continues ?
+
+\begin{tabular}{p{0.27\textwidth} p{0.29\textwidth} p{0.29\textwidth}}
+    $f(x)=\begin{cases}
+    		\frac{x^2-1}{x+1} & \text{si } x\neq-1 \\ 
+    		\hfil k & \text{si } x=-1
+    		\end{cases}$
+    &
+    $g(x)=\begin{cases}
+    		\frac{2x^2+7x-4}{2x-1} & \text{si } x<\frac{1}{2} \\
+    		\hfil k & \text{si } x\geq\frac{1}{2}
+    		\end{cases}$
+    &
+    $h(x)=\begin{cases}
+    		x\sqrt{1+\frac{1}{x^2}} & \text{si }x\neq0 \\
+    		\hfil k & \text{si } x=0
+    		\end{cases}$
+\end{tabular}
+
+
+
+\subsection{Élargissement du logarithme}
+Étudier sur $\RR$ la continuité de la fonction $f:x\mapsto\begin{cases}\frac{1}{\ln(\abs{x})}&  \text{si } \xR\setminus\{-1;0;1\} \\ \hfil 0  &\text{sinon}\end{cases}$
+
+
+
+\subsection{Raccordement continu}
+Déterminer la ou les valeurs de $k\in\RR$ pour lesquelles les fonctions suivantes sont continues sur $\RR$\\
+
+\begin{tabular}{p{0.3\linewidth}p{0.27\linewidth}p{0.27\linewidth}}
+	$f:x\mapsto \begin{cases}
+					x^2-x-1 & \text{si } x\geq k \\
+					\hfil x+7 & \text{si } x<k
+					\end{cases}$
+	&
+	$g:x\mapsto \begin{cases}
+					3x-2k & \text{si } x\geq 2 \\
+					\hfil kx+1 & \text{si } x<2
+					\end{cases}$
+	&
+	$f:x\mapsto \begin{cases}
+					x+k & \text{si } x\leq k \\
+					\hfil kx+1 & \text{si } x>k
+					\end{cases}$
+\end{tabular}
+
+
+
+\subsection{Valeur absolue}
+Étudier la continuité des fonctions suivantes :
+
+\begin{tabular}{p{0.27\textwidth} p{0.27\textwidth} p{0.27\textwidth}}
+    $f:x\mapsto\abs{x^2-8}-x^2+8$ & 
+    $g:x\mapsto \accolsized{\frac{x^2-x-6}{\abs{x-3}} \text{ si } x\neq3\\~~~~5 \text{ ~~~~~si }x =3}{1.3}$ &
+    $h:x\mapsto\accolsized{\frac{x-1}{\abs{1-x^2}} \text{ si } \abs{x}\neq1\\~~~~ 0 \text{~~~~si } \abs{x}=1}{1.3}$
+\end{tabular}
+
+
+
+\subsection{Partie entière}
+Montrer que les trois fonctions suivantes sont continues sur $\RR$ :\\
+\begin{tabular}{p{0.27\textwidth} p{0.27\textwidth} p{0.27\textwidth}}
+    $f:x\mapsto\floor{x}+\left(x-\floor{x}\right)^2$ & $g:x\mapsto\sqrt{x-\floor{x}}+\floor{x}$ & $h:x\mapsto(1-e)\floor{x}-e^{x-\floor{x}}$
+\end{tabular}
+
+
+
+\subsection{Prolongement d'un logarithme}
+Déterminer la valeur de $k$ pour laquelle la fonction $f:x\mapsto\begin{cases}\frac{\ln\left(\frac{1+x^2}{2}\right)}{x-1} & \text{si } x\neq1 \\ \hfil k & \text{si } x=1 \end{cases}$ \quad est continue.
+
+
+
+\subsection{Raccordement de paramètres}
+Déterminer $a$ et $b$ tels que la fonction $g:x\mapsto\accolsized{\frac{ax^2+bx+2}{ax-1} \text{ si } x\neq\frac{1}{a} \\ 1 \text{ sinon}}{1.3}$ soit continue sur $\RR$
+
+
+
+\subsection{Prolongement incertain}
+Déterminer la ou les valeur(s) de $a$ pour lesquelles la fonction $h:x\mapsto\frac{e^{x^2}-e}{x-a}$ peut être prolongée par continuité en $a$
+
+
+
+
+\section{T.V.I. et applications}
+
+\subsection{Racine carrée}
+On pose $g(x)=x\sqrt{x+3}$
+\begin{enumerate}
+    \item Déterminer $\Dcal_g$ le domaine de définition de la fonction $g$ et calculer $g'(x)$
+    \item Dresser le tableau de variations de $g$
+    \item Combien il y a-t-il de solutions à l'équation $g(x)=2$ ?
+    \item Combien il y a-t-il de solutions à l'équation $g(x)=-\frac{1}{\pi}$ ?
+\end{enumerate}
+
+
+
+\subsection{Sacré degré !}
+On considère la fonction $f$ définie sur $\RR$ par $f(x)=x^5-5x+3$
+\begin{enumerate}
+    \item Justifier que l'équation $f(x)=0$ admet au moins une solution dans l'intervalle $[-2;2]$
+    \item Déterminer les limites de $f$ aux bornes de son domaine de définition.
+    \item Montrer que $f'(x)=5(x+1)(x-1)(x^2+1)$ puis dresser le tableau de variations de $f$
+    \item En déduire le nombre exact de solutions à l'équation $f(x)=0$ sur $\RR$
+    \item Combien de ces solutions sont positives ?
+\end{enumerate}
+
+
+
+\subsection{Le cycliste}
+Un cycliste a parcouru un total de 30km en une heure. On note $d(t)$ la distance parcourue par le cycliste lors de sa course après une durée $t$ exprimée en minutes.\\
+L'objectif de l'exercice est de démontrer qu'il existe nécessairement une tranche d'une demi-heure lors de laquelle le cycliste a parcouru 15km exactement.
+\begin{enumerate}
+	\item Justifier que l'on cherche à montrer qu'il existe $t\in[0;30]$ vérifiant $d(t+30)-d(t)=15$
+	\item On pose $f(t)=d(t+30)-d(t)$
+	\begin{enumerate}
+		\item On suppose que $f(0)>15$. Montrer alors que $f(30)<15$
+		\item On suppose que $f(0)<15$. Montrer alors que $f(30)>15$
+	\end{enumerate}
+	\item Conclure.
+\end{enumerate}
+
+
+
+\subsection{Point fixe}
+Soit $f$ une fonction continue définie sur $[0;1]$ et à valeurs dans $[0;1]$\\
+Démontrer que l'équation $f(x)=x$ admet au moins une solution sur $[0;1]$
+
+
+
+\subsection{Racine cubique}
+On pose $h(x)=\sqrt{\frac{x^3-1}{x}}$
+\begin{enumerate}
+    \item Déterminer $\Dcal_h$ le domaine de définition de la fonction $h$
+    \item Montrer que $h'(x)=\frac{2x^3-1}{2x^2\sqrt{\frac{x^3+1}{x}}}$
+    \item Dresser le tableau de variations de la fonction $h$\\
+    \textit{On notera $\sqrt[3]{a}$ la solution de l'équation $x^3=a$ et on admettra que $h\left(\sqrt[3]{0.5}\right)\approx1,37$}
+    \item Combien de solutions positives admet l'équation $h(x)=2$ ?
+    \item Combien de solutions réelles admet l'équation $h(x)=h\left(\frac{5\pi}{3}\right)$ ?
+\end{enumerate}
+
+
+
+\subsection{Sans indications}
+Déterminer le nombre de solutions aux équations suivantes dans les ensembles $E$ donnés :
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.2\textwidth} p{0.15\textwidth} | p{0.25\textwidth} p{0.16\textwidth}}
+    a) $x^2(x^3+20)=50$ & $E=\RR$ & b) $x^4-4x^3+4x^2-1=0$ & $E=[-1;12[$ \\
+    c) $x=e^x-2$ & $E=\left]-\infty;0\right]$ & d) $e^{1+\ln(x)}=\ln(1+e^x)$ & $E=\RR_+^*$ \\
+    e) $\ln(1+x)=x^2-1$ & $E=\left]-1;1\right]$ & f) $\ln(x^2)=\frac{x}{2}$ & $E=\RR^*$
+\end{tabular}
+
+
+
+\subsection{Polynôme de degré 3}
+Pour $a \in \mathbb{R}$, on pose $h(x) = x^3 + 3x^2 - 9x + a$\\
+Pour quelle(s) valeur(s) de $a$ le polynôme $h$ admet-il trois racines distinctes ?
+
+
+
+\subsection{Équation lambertienne}
+\begin{enumerate}
+    \item Discuter selon la valeur de $\nN$ le nombre de solutions à l'équation $xe^{nx}=-0.01$
+    \item Même question pour l'équation $xe^{nx}=0.01$
+\end{enumerate}
+
+
+
+\section{Études complètes}
+
+\subsection{Quotient exponentiel}
+On considère la fonction $\varphi : x \mapsto \frac{1 + e^x}{1 + x}$ définie sur $\mathbb{R} \backslash \{-1\}$
+\begin{enumerate}
+    \item Calculer les limites de $\varphi$ aux bornes de son domaine de définition.
+    \item On pose $f(x) = x e^x$
+    \begin{enumerate}
+        \item Dresser le tableau de variations complet de $f$
+        \item Justifier que l'équation $f(x) = 1$ admet une unique solution réelle notée $\alpha$.
+    \end{enumerate}
+    \item Montrer que $\varphi(\alpha) = \frac{1}{\alpha}$
+    \item Montrer que $\varphi'(x) = \frac{f(x) - 1}{(1 + x)^2}$
+    \item Dresser le tableau de variations de $\varphi$
+\end{enumerate}
+
+
+
+\subsection{Quotient logarithmique}
+On considère la fonction $f$ définie sur $\RR_+^*$ par $f(x)=\frac{1+\ln(x)}{1+x}$
+\begin{enumerate}
+    \item Calculer les limites de $f$ aux bornes de son domaine de définition
+    \item Montrer que $f'(x)=\frac{1-x\ln(x)}{x(x+1)^2}$
+    \item On pose $g(x)=x\ln(x)$
+    \begin{enumerate}
+        \item Dresser le tableau de variations complet de la fonction $g$
+        \item Justifier que l'équation $g(x)=1$ admet une unique solution sur $\RR^*_+$ que l'on notera $\alpha$
+    \end{enumerate}
+    \item Dresser le tableau de variations complet de la fonction $f$
+    \item Montrer que $f(\alpha)=\frac{1}{\alpha}$
+    \item Rédiger un algorithme permettant d'encadrer la valeur de $\alpha$ à $10^{-2}$ près
+\end{enumerate}
+
+
+
+\subsection{Distance à une courbe}
+\textbf{Partie A : Étude d'une fonction}\\
+On définit sur $\RR$ la fonction $g:x\mapsto x^2+1+2e^x+e^{2x}$
+\begin{enumerate}
+    \item Montrer que $g$ est convexe sur $\RR$
+    \item Calculer les limites de $g$ aux bornes de son domaine de définition
+    \item Calculer les limites de $g'$ aux bornes de son domaine de définition
+    \item Justifier que $g'$ s'annule une unique fois sur $\RR$ en un réel noté $\gamma$
+    \item Dresser le tableau de variations de $g$
+\end{enumerate}
+
+\textbf{Partie B : Distance à une courbe}\\
+On rapporte le plan au repère orthonormé $\Oij$\\
+On note $\Gamma$ la courbe représentative de $x\mapsto1+e^x$\\
+Soit $M$ un point de $\Gamma$ d'abscisse $x$
+\begin{enumerate}
+    \item Montrer que $OM=\sqrt{g(x)}$
+    \item On pose $f(x)=\sqrt{g(x)}$
+    \begin{enumerate}
+        \item Montrer que $f$ et $g$ ont les mêmes variations sur $\RR$
+        \item Justifier qu'il existe un point $P$ de $\Gamma$ minimisant la distance entre $O$ et la courbe $\Gamma$
+        \item  Montrer que $\gamma=-(e^\gamma+e^{2\gamma})$ et en déduire que $OP=(1+e^\gamma)\sqrt{1+e^{2\gamma}}$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Logarithme séquentiel}
+Pour $x\in\RR^*_+$ on pose $g(x)=x+\ln(x)$
+\begin{enumerate}
+	\item Déterminer les limite de $g$ aux bornes de son domaine de définition.
+	\item Démontrer que la fonction $g$ est strictement croissante sur $\RR^*_+$
+	\item Étudier la convexité de $g$
+	\item Montrer que pour tout $\nN$, l'équation $g(x)=n$ admet une unique solution notée $\alpha_n$
+	\item Démontrer que la suite $(\alpha_n)$ est croissante.
+	\item Donner l'équation de $\Delta$ la tangente à $\Ccal_g$ au point d'abscisse 1.
+	\item En déduire que $\alpha_n\geq\frac{n+1}{2}$
+	\item Déterminer $\limn\alpha_n$
+\end{enumerate}
+
+
+
+\subsection{Un degré de plus}
+On considère la fonction $c$ définie sur $\RR$ par $c(x)=\accolsized{\frac{1+x}{1+x^3} \text{ si } x\neq-1 \\~~ \frac{1}{3} \text{~~ si } x=-1}{1.3}$
+\begin{enumerate}
+	\item Montrer que $c$ est continue sur $\RR$
+    \item Déterminer les limites de $c$ en $+\infty$ et en $-\infty$
+    \item Montrer que $c'(x)=\frac{(1-2x)(1+2x+x^2)}{(1+x^3)^2}$ pour tout $x\neq-1$
+    \item Dresser le tableau de variations de $c$
+    \item Combien de fois $c$ s'annule-t-elle ?
+    \item Combien il y a-t-il de solutions à l'équation $c(x)=\frac{1}{2}$ ?
+\end{enumerate}
+
+
+
+\subsection{Fini de rire}
+On définit $g : x \mapsto 2x + e^x(1+2x-x^2)$
+\begin{enumerate}
+    \item Calculer $g''(x)$ et étudier la convexité de $g$
+    \item Calculer les limites de $g'$ aux bornes de son domaine de définition.
+    \item Montrer que l'équation $g'(x)=0$ admet une unique solution réelle notée $\alpha$
+    \item Justifier que $e^\alpha=\frac{2}{\alpha^2-3}$ puis montrer que $g(\alpha)=\frac{2(\alpha+1)(\alpha-1)^2}{\alpha^2-3}$
+    \item Montrer que $\alpha>\sqrt{3}$ et en déduire le signe de $g(\alpha)$
+    \item Calculer les limites de $g$ aux bornes de son domaine de définition.
+    \item Démontrer qu'il existe deux uniques solutions réelles $\lambda<\mu$ vérifiant l'équation $g(x)=0$
+    \item Montrer que $\lambda\in]-1;0[$ et que $\mu\in]2;3[$
+\end{enumerate}
+
+
+
+\section{Exercices supplémentaires}
+
+\subsection{Sommet variable}
+Pour $\nN^*$ on définit sur $\RR_+$ la fonction $f_n:x\mapsto x^ne^{-x}$
+\begin{enumerate}
+	\item Déterminer la limite de $f_n$ en $+\infty$
+	\item Soit $\xR_+$. Que vaut $\limn f_n(x)$ ?
+	\item Dresser le tableau de variations de $f_n$
+	\item Justifier que si $n\geq4$ alors $\frac{n^2}{e}\geq n+1$
+	\item Montrer par récurrence que $\frac{n^n}{e^n}\geq n$ pour tout $n\geq4$
+	\item Combien il y a-t-il de solutions à l'équation $f_n(x)=n$ ?
+\end{enumerate}
+
+
+
+\subsection{Étude d'une suite implicite}
+Pour $n\geq2$ et $x\in\left[0;+\infty\right[$ on pose $f_n(x)=\frac{1+x}{1+x^n}$
+\begin{enumerate}
+    \item Calculer $\limx f_n(x)$
+    \item Montrer que si $x\leq1$ alors $f_n(x)\geq1$
+    \item Montrer que $f_n'(x)=\frac{1-(n-1)x^n-nx^{n-1}}{\left(1+x^n\right)^2}$
+    \item Justifier que $f_n$ est décroissante sur $\left[1;+\infty\right[$ pour tout $n\geq2$
+    \item En déduire qu'il existe une unique solution à l'équation $f_n(x)=\frac{1}{2}$\\
+    On note $a_n$ cette solution
+    \item Montrer que pour tout $x\geq1 , f_n(x)\geq f_{n+1}(x)$
+    \item En déduire que la suite $(a_n)_{n\geq2}$ est décroissante, puis qu'elle converge.
+    \item Démontrer que $\ln(a_n)=\frac{\ln(2a_n-1)}{n}$
+    \item En déduire que $\limn a_n=1$
+\end{enumerate}
+
+
+
+\subsection{Température antipodale}
+On admet que la température varie continument sur la surface du globe terrestre à un instant $t$ fixé.\\
+Démontrer  qu'à tout instant il existe deux point antipodaux auxquels la température est identique.
+
+
+
+
+\end{document}

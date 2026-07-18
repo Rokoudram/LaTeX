@@ -1,0 +1,382 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Logarithme népérien}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Calculs et équations}
+
+\subsection{Calcul numérique} 
+
+\begin{enumerate}
+	\item Exprimer chacun des nombres suivants en fonction de $\ln(2)$ :\\
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
+		$A=\ln(2)+\ln(4)+\ln(8)+\ln(16)$ & $B=\ln(48)-\ln(15)+\ln(20)$\\
+		$C=\ln(1000)-\ln(400)-\ln(40)$ & $D=\ln(18)+\ln(28)-\ln(42)-\ln(24)$	\\
+	\end{tabular}	
+	
+	\item Simplifier au maximum chacun des nombres suivants :\\
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
+		$A=\ln\left(\frac{1}{3}\right)-\ln\left(\frac{7}{5}\right)+\ln\left(\frac{3}{5}\right)+\ln\left(\frac{7}{9}\right)$ &
+		$B=\ln\left((3+\sqrt{8})^{2024}\right)+\ln\left((3-\sqrt{8})^{2024}\right)$ \\
+		$C=2\ln\left(1+\sqrt{2}\right)-\ln\left(3+2\sqrt{2}\right)$
+		& $D=\ln(3\sqrt{8})-\ln(8\sqrt{3})+\ln(2\sqrt{6})$
+	\end{tabular}
+
+	\item Simplifier au maximum chacun des nombres suivants :\\
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{p{0.55\linewidth}p{0.45\linewidth}}
+		$A=2\ln\left(3e^2\right)+\ln\left(4e^3\right)-\ln(9e)$ &
+		$B=\ln\left(e^{2\ln(3)}-e^{3\ln(2)}\right)$ \\
+		$C=\ln\left(2e^{3\ln(3)}\right)-\ln\left(3e^{2\ln(2)}\right)+\ln\left(2\ln\left(\sqrt{e^8}\right)\right)$ &
+		$D=\dfrac{\ln\left(2e^3\right)^2-9}{\ln(4)}$
+	\end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Calcul littéral}
+Simplifier au maximum chacune des expressions suivantes sans prendre en compte leur domaine de validité :
+
+\begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
+	$A=\ln(x)-\ln(1+x)+\ln(1+\frac{1}{x})$ & $B=\ln\left(\frac{x+1}{x-1}\right)-\ln\left(1+\frac{1}{x}\right)+\ln\left(\frac{x-1}{x}\right)$ \\
+	$C=3\ln(x+1)-\ln\left(x^2+2x+1\right)$ & $D=\ln(x-1)+2\ln(x+1)-\ln(x^2-1)$
+\end{tabular}
+
+\,\,$E=\ln(x^2-1)-\ln(1+x^2)-\ln\left(1-\frac{1}{x^2}\right)+\ln\left(1+\frac{1}{x^2}\right)$
+
+\,\,$F=\ln\left(\frac{1}{2}\right)+\ln\left(\frac{2}{3} \right)+\ln\left(\frac{3}{4}\right)+\ldots+\ln\left( \frac{n-1}{n}\right)$
+
+
+
+\subsection{Application à l'exponentielle}
+Résoudre dans $\RR$ les équations suivantes :
+
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+a) $e^{2x-1} = 3$ & b) $2e^x + 2 = 4e^x-7$ & c) $e^{x^2} > 2$ \\
+d) $3e^x - 2e^{3x} \leq 0$ & e) $e^{2x} + e^{2x+3} = 10$ & f) $2e^{2x-1} + e^{2x+1} = e^7$ \\
+\end{tabular}
+
+
+
+\subsection{Équations}
+Résoudre dans $\RR$ les équations suivantes :
+
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{p{0.35\linewidth} p{0.33\linewidth} p{0.32\linewidth}}
+a) $\ln\left(2x+3\right) - \ln\left(5x\right) = 0$ & b) $\ln\left(x^2-4\right) - \ln\left(2-x\right) = 0$ & c) $\ln\left(x-\frac{1}{x}\right) + \ln\left(x\right) = 0$ \\
+d) $2\ln\left(x+1\right) = -\ln(9)$ & e) $\ln\left(x\right) + \ln\left(x+1\right) = \ln\left(2x+2\right)$ &
+f) $\ln\left(x^2 + 8x\right) - \ln\left(2x-9\right) = 0$ \\
+g) $\ln\left(2x\right) - \ln\left(1-x^2\right) = \ln\left(3x-7\right)$ & h) $\ln\left(\frac{x}{2}\right) = \ln\left(4x\right) - \ln\left(1+e^x\right)$ & i) $\ln\left(2-e^x\right) = x$ \\
+\end{tabular}
+
+
+
+
+\subsection{Inéquations}
+Résoudre dans $\RR$ les inéquations suivantes :
+
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{p{0.34\linewidth} p{0.3\linewidth} p{0.33\linewidth}}
+a) $\ln\left(x-1\right) - \ln\left(x\right) \leq 0$ & b) $\ln\left(e^{x}-1\right) > e$ & c) $e^{\ln\left(x\right)} \leq 2x-1$ \\
+d) $\ln(x+2) - \ln(x+1) \geq \ln(x-1)$ & e) $\ln\left(x+e\right) - 2 > \ln\left(2x\right)$ & f) $\ln\left(x-1\right) + 1 < e$ \\
+\end{tabular}
+
+
+
+\subsection{Systèmes}
+Résoudre les systèmes suivants :
+
+\renewcommand{\arraystretch}{3}
+\begin{tabular}{p{0.29\textwidth} p{0.29\textwidth} p{0.35\textwidth}}
+    $(S_1):\accol{e^xe^y=10\\e^{x-y}=\frac{2}{5}}$ & $(S_2):\accol{x-y=2\\\ln(x)+\ln(y)=3}$ & $(S_3):\accol{\ln(xy)=5+\ln(6)\\\ln(x+y)=2+\ln(3+2e)}$ \\
+    $(S_4):\accol{\ln(x)+\ln(y)=5\\3\ln(x)+\ln(y)=3}$ & $(S_5):\accol{\ln(x)-\ln(y)=2\\\ln(x)=\ln\left(\frac{1}{y}\right)}$
+\end{tabular}
+
+
+
+\subsection{Équations logarithmiques}
+Résoudre dans $\RR$ les (in)équations suivantes en précisant leur domaine de validité :
+
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+    a) $\ln(x)^2+\ln(x^2)=0$ & b) $\ln(x)^2+\ln(x)<2$ \\
+    c) $\sqrt{\ln(x)}>\ln(x)$ & d) $\dfrac{\ln(x^3)}{\ln(x)^2}\geq-6$ \\
+    e) $\ln(x)\ln(\frac{x}{e})\leq12$ & f) $\ln(x)^2+\ln(x^{1+e})+e=0$
+\end{tabular}
+
+
+
+\subsection{Puissantes racines}
+Résoudre dans $\RR_+$ l'équation $x^{\sqrt{x}}=(\sqrt{x})^x$
+
+
+
+\section{Application aux suites numériques}
+
+\subsection{Inéquations géométriques}
+Résoudre chacune des inéquations suivantes dans $\ZZ$ :\\
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+a) $1, 23^n \geq 123$ & b) $3 \times 2^n \geq 10^{21}$ & c) $\dfrac{1}{2 + 0,95^n} \geq 0,4999$ \\ 
+d) $\dfrac{3 + \left(\frac{7}{9}\right)^{2n-1}}{5} \geq \dfrac{6 + 10^{-10}}{10}$ & e) $3^{n+17} \geq 2^{2n-1}$ & f) $0,7^{n-3} \geq 15 \times 0,8^n$ \\
+\end{tabular}
+
+
+
+\subsection{Suites géométriques}
+\begin{enumerate}
+    \item Soit $(u_n)$ géométrique de premier terme $u_0 = 4$ et de raison $q = \frac{5}{6}$
+
+    À partir de quel rang $n$ a-t-on $u_n < \frac{1}{1000}$ ?
+
+    \item Soit $(u_n)$ géométrique de premier terme $u_0 = \frac{1}{3}$ et de raison $q = \frac{24}{23}$
+
+    À partir de quel rang $(u_n)$ dépasse-t-elle $123$ ?
+
+    \item Soit $(u_n):\defsuite{u_0=-2}{\frac{3u_n}{2}}$. On pose $v_n = \frac{8}{1 - u_n}$
+
+    À partir de quel rang a-t-on $v_n < \frac{3}{10}$ ?
+
+    \item Soit $(u_n)$ géométrique de premier terme $u_0 = 5$ et de raison $q = 2$
+
+    À partir de quel rang peut-on affirmer que $\frac{u_n}{12 + u_n} > \frac{100}{101}$ ?
+\end{enumerate}
+
+
+
+\subsection{Écrasement rapide}
+On définit la suite $\Un$ par $\begin{cases}u_0=2 \\ u_{n+1}=\frac{{u_n}^2}{3}\end{cases}$ \\
+Pour tout $\nN$ on pose $v_n=\ln(u_n)-\ln(3)$
+\begin{enumerate}
+	\item Montrer que la suite $(v_n)$ est géométrique de raison 2.
+	\item En déduire l'expression de $u_n$ en fonction de $n$.
+\end{enumerate}
+
+
+
+\subsection{Suite très exponentielle}
+On définit la suite $\Un$ par $\defsuite{u_0=-1}{2u_n-3u_n\,^2}$ et on admet que la suite $\Un$ est négative. \\
+Pour tout $\nN$ on pose $v_n=\ln(1-3u_n)$
+\begin{enumerate}
+	\item Montrer que la suite $(v_n)$ est géométrique de raison 2.
+	\item En déduire l'expression de $u_n$ en fonction de $n$.
+\end{enumerate}
+
+
+
+\subsection{Seuil et somme}
+Soit $(u_n)$ une suite géométrique telle que $u_5=\frac{1}{9}$ et $u_7=4$\\
+À partir de quel rang pourra-t-on affirmer que $\sommek{0}{n}u_k \geq 1000$ ?
+
+
+
+\section{Étude de fonctions}
+
+\subsection{Tableaux de variations}
+Répondre aux questions suivantes pour chacune des fonctions $f_k$ ci-après :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f_1:x\mapsto \frac{x}{1+\ln(x)}$ & $f_2:x\mapsto x^2\ln(x) $ & $f_3:x\mapsto x\ln(x)^2$ \\
+	$f_4:x\mapsto x\ln(x)-\ln(x)^2-x$ & $f_5:x\mapsto \frac{1+\ln(x)^2}{\ln(x)}$ & $f_6:x\mapsto x^2\left(\ln(x)^2-2\right) $
+\end{tabular}
+\begin{enumerate}
+	\item Déterminer $\Dcal_k$ le domaine de définition de $f_k$
+	\item Déterminer l'expression de ${f_k}'(x)$ en fonction de $x$
+	\item Dresser le tableau de variations de la fonction $f_k$
+\end{enumerate}
+
+
+
+\subsection{Échange d'exposant}
+On cherche à déterminer les entiers naturels $n$ tels que $n^3\geq3^n$
+\begin{enumerate}
+    \item Montrer que résoudre le problème revient à résoudre l'inéquation $3\ln(n)-n\ln(3)\geq0$
+    \item On définit sur $\RR_+^*$ la fonction $f$ par $f(x)=3\ln(x)-x\ln(3)$
+    \begin{enumerate}
+        \item Dresser le tableau de variations de la fonction $f$
+        \item En déduire que $f$ est négative sur $[3;+\infty[$
+    \end{enumerate}
+    \item Calculer $n^3$ et $3^n$ pour $n\in\{0;1;2\}$
+    \item En déduire alors que $n=3$ est l'unique solution au problème
+    \item [($\star$)] Comparer les nombres $e^{\pi}$ et $\pi^e$
+\end{enumerate}
+
+
+
+\subsection{Variations annexes}
+Pour $x$ strictement positif, on pose $f(x) = x - \frac{\ln(x)}{x}$ et $g(x)=x^2+\ln(x)-1$
+\begin{enumerate}
+    \item Dresser le tableau de variations de $g$ en faisant figurer la valeur de $g(1)$
+    \item Exprimer $f'(x)$ en fonction de $g(x)$
+    \item Dresser le tableau de variations de $f$
+    \item Déterminer l'équation réduite de $T$, la tangente à $C_f$ au point d'abscisse $e$
+\end{enumerate}
+
+
+
+\subsection{On recommence}
+\begin{enumerate}
+	\item On considère la fonction $f:x\mapsto1+x\ln(x)$ définie sur $\RR^*_+$
+	\begin{enumerate}
+		\item Montrer que $f'(x)=1+\ln(x)$
+		\item Dresser le tableau de variations de $f$ et en déduire son signe sur $\RR_+^*$
+	\end{enumerate}
+	\item On définit la fonction $g$ par $g(x)=\frac{x+\ln(x)}{1+\ln(x)}$
+	\begin{enumerate}
+		\item Déterminer $\Dcal_g$ le domaine de définition de la fonction $f$
+		\item Montrer que $g'(x)=\frac{f(x)}{x{f'(x)}^2}$
+		\item Dresser le tableau de variations de la fonction $g$
+	\end{enumerate}
+	\item Montrer que $\Ccal_f$ et $\Ccal_g$ admettent la même tangente au point d'abscisse $1$
+\end{enumerate}
+
+
+
+\subsection{Encadrement}
+\begin{enumerate}
+    \item \begin{enumerate}
+    	\item Dresser le tableau de variations de $f:x\mapsto \ln(x)-x$ sur $\RR_+^*$
+    	\item En déduire que $\ln(1+x)\leq x$ pour tout $x>0$
+	\end{enumerate}
+    \item \begin{enumerate}
+    	\item Dresser le tableau de variations de $f:x\mapsto \ln(x)+\frac{x^2+3}{2}-2x$ sur $\RR_+^*$
+    	\item En déduire que $x-1-\frac{(x-1)^2}{2}\leq \ln(x)$ pour tout $x\geq1$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Étude graphique}
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}[scale=1]
+        \begin{axis}[xmin=0 , xmax=6 , ymin=-3 , ymax=2, 
+		axis lines = middle,  enlargelimits = { abs = 0.2 },
+		grid=major , 
+        xtick distance = 1, ytick distance = 1,
+    	major grid style = {line width = 0.2pt ,draw = gray},
+        ticklabel style = {font = \scriptsize }
+        ]
+        	
+        	\addplot[domain = 0:6 , line width = 2pt , color = blue!80!black , samples = 100]
+			{(4-\x)*ln(\x)};
+			\addplot[domain = 0:6 , line width = 2pt , color = red , samples = 100]
+			{-3+3*\x};
+			\draw[color=red] (1,0) node {$\bullet$} ;
+			\draw[color=red] (1.25,1.5) node {$T$} ;
+			\draw[color = blue!80!black] (4.5,-1.5) node {$\Ccal_f$} ;
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.6\linewidth} \restoreskip
+	Soit $f:x\mapsto(ax+b)\ln(x)$ avec $a,b\in\RR$ 
+	
+	On a représenté dans le repère ci-contre $\Ccal_f$ ainsi que $T$ sa tangente au point d'abscisse $1$
+	\begin{enumerate}
+		\item Exprimer $f'(x)$ en fonction de $x$, $a$ et $b$
+		\item \begin{enumerate}
+			\item Justifier que $a$ et $b$ vérifient le système $\begin{cases}4a+b=0\\a+b=3\end{cases}$
+			\item Déterminer l'expression de $f(x)$ puis de $f'(x)$ en fonction de $x$
+		\end{enumerate}
+	\end{enumerate}
+\end{minipage}
+
+
+
+
+\subsection{Produit de référence}
+Étudier les variations de $f:x\mapsto\ln(x)e^x$ sur son domaine de définition
+
+
+
+\subsection{Aire d'un rectangle}
+On définit sur $\RR_+^*$ les fonctions $f$ et $g$ par : $f(x)=\frac{\ln(x)}{x}+\frac{2}{x^2}-\frac{1}{x}$ et $g(x)=x\ln(x)+2-x$.\\
+On note $\Ccal_f$ la courbe représentative de la fonction $f$ dans un repère orthonormé $\Oij$.
+
+\begin{minipage}{0.52\linewidth}
+\begin{enumerate}
+	\item Dresser le tableau de variations de la fonction $g$
+	\item En déduire que $f$ est positive sur $\RR_+^*$
+	\item On considère $M$ un point de $\Ccal_f$ d'abscisse $a$, ainsi que $P$ et $Q$ ses projetés orthogonaux sur les axes du repère comme représenté ci-contre :
+	\begin{enumerate}
+		\item Exprimer l'aire du rectangle $MPOQ$ en fonction de $a$.
+		\item Déterminer l'aire minimale que peut avoir le rectangle $MPOQ$, et préciser alors la position du point $M$.
+	\end{enumerate}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.45\linewidth}
+	\begin{tikzpicture} % ----- Début de la figure
+    \begin{axis}[xmin = 0, xmax = 3.2, ymin = 0, ymax = 3.2, xtick distance=1, ytick distance=1, grid = major,
+        major grid style = {line width = 0.2pt , draw = gray},
+        axis lines = middle, minor tick num = 5, 
+        ticklabel style = {font = \small } ,
+        clip = false
+        ]
+
+    \addplot[line width = 2pt , domain=0.6:3, samples=100, color=red]   
+    {ln(x)/x+2/(x^2)-1/x};
+    
+	\draw[line width = 1.5pt , color = blue , fill = blue , fill opacity = 0.25] (0,0) rectangle (0.8,1.6) ;
+	\draw[color = blue] (0.8,1.6) node[above right] {$M$};
+	\draw[color = blue] (0,1.6) node[left] {$P$};
+	\draw[color = blue] (0.8,0) node[below] {$Q$};
+	\draw (0,0) node[below left] {$O$};
+	
+    \node[color=red] at (2.2,0.5) {$\Ccal_f$};
+    \end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Tangentes}
+\begin{enumerate}
+    \item Existe-t-il un point de la courbe représentative de la fonction logarithme pour lequel la tangente à cette courbe passe par le point de coordonnées $(0;1)$ ?
+    \item Soit $f:x\mapsto\frac{\ln(x)}{x}$\\
+    Existe-t-il un point de $\Ccal_f$ auquel la tangente à $\Ccal_f$ passe par l'origine du repère ?
+\end{enumerate}
+
+
+
+\subsection{Étude d'une fonction}
+On considère la fonction $f$ définie sur $\RR_+^*\setminus\{1\}$ par $f(x)=\frac{x}{\ln(x)}$
+\begin{enumerate}
+    \item Montrer que $f'(x)=\frac{1}{\ln(x)}-\frac{1}{\ln(x)^2}$
+    \item Dresser le tableau de variations de $f$
+    \item Montrer qu'aucune tangente à $\Ccal_f$ ne peut avoir un coefficient directeur égal à 2.
+    \item Déterminer les tangentes à $\Ccal_f$ ayant un coefficient directeur égal à -2.
+\end{enumerate}
+
+
+
+\subsection{Logarithme et somme}
+\begin{enumerate}
+	\item Dresser le tableau de variations de la fonction $f:x\mapsto \ln(x)-x+1$ définie sur $\RR_+^*$
+	\item Dresser le tableau de variations de la fonction $g:x\mapsto \frac{x-1}{x}-\ln(x)$ définie sur $\RR_+^*$
+    \item Montrer que $\frac{x-1}{x}\leq\ln(x)\leq x-1$ pour tout $x\in\RR^*_+$ 
+    \item À l'aide d'un changement de variable, en déduire que pour $x\in\RR^*_+$ on a $\frac{1}{x+1}\leq\ln\left(\frac{1+x}{x}\right)\leq\frac{1}{x}$
+    \item Montrer que $\sommek{1}{n}\ln\left(\frac{n+1}{n}\right)=\ln(n+1)$ pour tout $\nN^*$
+    \item En déduire que $\sommek{1}{n} \frac{1}{k+1} \leq \ln(n+1) \leq \sommek{1}{n} \frac{1}{k}$
+\end{enumerate}
+
+
+
+\end{document}

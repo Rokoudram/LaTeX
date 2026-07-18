@@ -1,0 +1,617 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Suites et limites}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Notion de limites}
+
+\subsection{Convergence et divergence}
+1. En revenant à la définition de la convergence d'une suite, démontrer la valeur de chacune des limites suivantes :
+
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	a) $\limn\frac{5}{2n+3}=0$ & b) $\limn e^{1-3n}=0$ & c) $\limn \frac{7}{1-2\sqrt{n}}$
+\end{tabular}
+
+2. En revenant à la définition de la divergence d'une suite vers $\pm \infty$, démontrer la valeur de chacune des limites suivantes :
+
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	a) $\limn n^2-2n=+\infty$ & b) $\limn 5-\sqrt{n+2}=-\infty$ & c) $\limn \sqrt{n^2-10}=+\infty$
+\end{tabular}
+
+
+
+\subsection{Premières limites}
+Calculer les limites suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $\limn n^2+3n-1$ & b) $\limn \frac{1}{n}-n$ & c) $\limn \sqrt{n}+3n^5$\\
+    d) $\limn \frac{n}{3}+\frac{3}{n}+3$ & e) $\limn \frac{3n-\frac{2}{n^2}}{4+\frac{1}{2\sqrt{n}}}$ & f) $\limn \frac{n^{-3}-3}{2-n^{-2}}$
+\end{tabular}
+
+
+
+\subsection{Formes indéterminées}
+Calculer les limites suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $\limn n^3-3n^2+2$ & b) $\limn \sqrt{n}-n$ & c) $\limn \frac{7n^2-5}{4+n}$\\
+    d) $\limn \frac{3n^2-2n^3}{3n^3-2n^2}$ & e) $\limn \frac{2n^3+1}{(2n+1)^3}$ & f) $\limn \frac{n+n\sqrt{n}}{n^2+1}$
+\end{tabular}
+
+
+
+\subsection{Limites géométriques}
+Calculer les limites suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limn\frac{17}{3^n}$ & b) $\limn \frac{2 - 0,8^n}{3^n - 5}$ & c) $\limn \frac{2^n + 1}{3^n}$\\
+	d) $\limn \frac{3^{4n}}{4^{3n}}$ & e) $\limn \frac{3^n + 5^n}{8^n + 1}$ & f) $\limn \frac{2^{2n + 1}}{2^n + 2^{2n}}$
+\end{tabular}
+
+
+
+\subsection{Racines carrées}
+Calculer les limites suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $\limn \frac{n+2}{\sqrt{2n+3}}$ & b) $\limn \frac{2+3\sqrt{n}}{\sqrt{4n-1}}$ & c) $\limn n-\sqrt{n^2+1}$\\
+    d) $\limn \sqrt{2n+1}-\sqrt{n-1}$ & e) $\limn \sqrt{1+\sqrt{n}}-\sqrt{\frac{n-1}{\sqrt{n}}}$ & f) $\limn \sqrt{n-\sqrt{n}}-\sqrt{n+\sqrt{n}}$
+\end{tabular}
+
+
+
+\subsection{Théorèmes de comparaison}
+Calculer les limites suivantes à l'aide des théorèmes de comparaison :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $\limn 2n^3+n\sin(n)$ & b) $\limn \frac{n-\cos(n)}{2n^2}$ & c) $\limn \sqrt{n}-e^{(-1)^n}$\\
+    d) $\limn \frac{n^2-\sin\left(n^2-n\right)}{1+3n}$ & e) $\limn \frac{3+\cos(n)}{(-1)^n+n}$ & f) $\limn \frac{3\sin(2n)-n^3}{4n^3+n^2\cos(n)}$
+\end{tabular}
+
+
+\begin{spacing}{0.9}
+\subsection{Vrai / Faux}
+
+Déterminer si les affirmations sont vraies ou fausses. Chaque réponse doit être rigoureusement justifiée.
+\begin{enumerate}
+	\item Toute suite croissante et minorée converge.
+    \item Toute suite croissante est minorée.
+    \item Toute suite majorée et minorée converge.
+    \item Toute suite non minorée diverge vers $-\infty$.
+    \item Toute suite décroissante et non minorée diverge vers $-\infty$.
+    \item Toute suite minorée est croissante.
+    \item Toute suite divergente vers $+\infty$ est croissante.
+    \item Il n'existe pas de suite divergente et minorée.
+    \item Il n'existe pas de suite divergeant vers $-\infty$ et majorée.
+    \item Toute suite croissante non minorée converge.
+	\item Toute suite non minorée diverge.
+    \item Toute suite convergente est majorée.
+\end{enumerate}
+
+
+
+\section{Études directes}
+
+\subsection{Première suite}
+On définit la suite $\Un$ par $\defsuite{u_0=1}{\frac{u_n}{1+u_n}}$
+\begin{enumerate}
+    \item Démontrer par récurrence que $1\geq u_n>0$
+    \item Déterminer le sens de variation de $\Un$
+    \item En déduire que la suite $\Un$ converge
+    \item Montrer par récurrence que $u_n=\frac{1}{n+1}$  et déterminer la valeur de $\limn u_n$
+\end{enumerate}
+
+
+
+\subsection{Suite arithmético-géométrique}
+
+On définit la suite $\Un$ par $\defsuite{u_0=1}{\frac{1}{2}u_n-3}$
+\begin{enumerate}
+    \item Montrer par récurrence que $-6 \leq u_{n+1} \leq u_{n} \leq 1 \quad \forall n \in \mathbb{N}$
+    \item Justifier que $(u_n)$ converge vers $\ell \in \mathbb{R}$
+    \item Démontrer que $\ell = -6$
+    \item Montrer que $u_n = \frac{7}{2^n} - 6 \quad \forall n \in \mathbb{N}$.
+    \item On pose $S_n=\sommek{0}{n}u_k $ \begin{enumerate}
+    	\item Démontrer que $S_n = 8-6n-\frac{7}{2^n}$
+    	\item Déterminer $\limn S_n$
+    \end{enumerate}
+\end{enumerate}
+
+\end{spacing}
+
+
+\subsection{Homographie simple}
+On considère une suite $\Un$ telle que $\defsuite{u_0=\frac{1}{2}}{\frac{2}{3-u_n}}$
+
+\begin{enumerate}
+    \item Montrer que $u_n\in[0;1]$ pour tout $\nN$
+    \item Démontrer que la suite $\Un$ est croissante.
+    \item En déduire que la suite converge, puis déterminer sa limite.
+    \item Montrer que $u_n=1-\frac{1}{3\times2^n-1}$ pour tout $\nN$
+    \item À partir de quel rang a-t-on $u_n\geq 0,99999$ ?
+\end{enumerate}
+
+
+
+\subsection{Mauvais encadrement}
+On considère une suite $\Un$ définie par $\defsuite{u_0=1}{\frac{1}{2}u_n+3n+1}$
+\begin{enumerate}
+    \item Montrer que $6n-10\leq u_n\leq6n$ pour tout $\nN^*$
+    \item Déterminer $\limn u_n$
+    \item Démontrer que la suite $\Un$ est croissante.
+    \item Démontrer que $u_n=6n-10+\frac{11}{2^n}$
+    \item On pose $S_n=\sommek{0}{n}u_k$
+    \begin{enumerate}
+    	\item Montrer que $S_n=3n^2-7n+12-\frac{11}{2^n}$
+    	\item Déterminer $\limn S_n$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Plus de racines}
+On définit la suite $(u_n)_{n\geq1}$ par $\defsuite{u_1=\sqrt{2}}{\sqrt{\frac{n+2}{n}}\times u_n}$
+\begin{enumerate}
+    \item Conjecturer l'expression de $u_n$ en fonction de $n$
+    \item Démontrer cette conjecture.
+    \item Déterminer $\limn u_n -n$
+\end{enumerate}
+
+
+
+\subsection{Divergence}
+On définit $(u_n)$ par $\begin{cases}u_0=0\\u_{n+1}=1+\frac{u_n\,^2}{2}\end{cases}$
+\begin{enumerate}
+	\item Démontrer que la suite $(u_n)$ diverge.
+	\item Montrer que $(u_n)$ est croissante.
+	\item En déduire $\limn u_n$
+\end{enumerate}
+
+
+
+\subsection{Limite d'un rapport}
+Soit $(u_n)$ une suite vérifiant $\limn\frac{u_{n+1}}{u_n}=2$
+\begin{enumerate}
+	\item Démontrer que $(u_n)$ diverge.
+	\item Peut-on affirmer que $\limn u_n=+\infty$ ?
+\end{enumerate}
+
+
+
+\section{Études par suite auxiliaire}
+
+\subsection{Retour sur classique}
+On considère la suite $\Un$ définie par $\defsuite{u_0=2}{3u_n-5}$
+\begin{enumerate}
+    \item Calculer les 5 premiers termes de $\Un$
+    \item Montrer que $\Un$ n'est ni arithmétique ni géométrique
+    \item On pose $v_n=u_n-\frac{5}{2}$ pour tout $\nN$
+    \begin{enumerate}
+        \item Montrer que $(v_n)_{\nN}$ est une suite géométrique
+        \item Donner sa raison et son premier terme
+        \item Déterminer l'expression de $v_n$ en fonction de $n$, puis celle de $u_n$
+    \end{enumerate}
+    \item Déterminer $\limn u_n$
+    \item On pose $S_n=\sommek{0}{n}u_k$\\
+		Montrer que $S_n=\frac{5n}{2}+\frac{11-3^{n+1}}{4}$
+
+\end{enumerate}
+
+
+
+\subsection{Tentative de désintoxication}
+Julie fume tous les jours, mais elle décide de réduire sa consommation.
+
+À partir d'aujourd'hui, si elle ne fume pas un jour donné, la probabilité qu'elle ne fume pas le lendemain est de 0,9. En revanche si elle fume un jour donné, la probabilité qu'elle recommence le lendemain est de 0,7.
+
+On suppose que Julie ne fume pas le jour de sa décision, et on note $F_n$ l'évènement \og Julie fume le n-ième jour après sa décision \fg ~et $u_n$ la probabilité que Julie ne fume pas le n-ième jour après sa décision.
+
+
+\begin{minipage}{0.6\textwidth}
+\begin{enumerate}
+    \item Calculer $P(F_1)$, $P_{F_1}(F_2)$, $P_{\barre{F_1}}(F_2)$ et $P(F_2)$
+    \item Recopier et compléter l'arbre de probabilités ci-contre
+    \item Justifier que $u_{n+1}=0,6u_n+0,3$ pour tout $\nN$
+    \item On pose $v_n=u_n-\frac{3}{4}$ pour tout $\nN$
+    \begin{enumerate}
+        \item Montrer que $(v_n)_{\nN})$ est une suite géométrique
+        \item Exprimer $v_n$ en fonction de $n$, puis faire de même pour $u_n$
+    \end{enumerate}
+    \item Calculer $\limn u_n$ \\
+    Sur le long terme, quel aura été l'effet de la décision de Julie sur sa consommation de tabac ?
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.39\textwidth}
+\begin{tikzpicture}[grow=right, level distance=3cm]
+  \node {$\bullet$} [sibling distance=3cm]
+  
+    child {node {$\barre{F_n}$} [sibling distance=2cm] 
+      child {node {$\barre{F_{n+1}}$} edge from parent node[below] {$\cdots$} }
+      child {node {$F_{n+1}$} edge from parent node[above] {$\cdots$} }
+      edge from parent node[below] {$u_n$}
+    }
+    child {node {$F_n$} [sibling distance=2cm] 
+      child {node {$\barre{F_{n+1}}$} edge from parent node[below] {$\cdots$} }
+      child {node {$F_{n+1}$} edge from parent node[above] {$\cdots$} }
+      edge from parent node[above] {$\cdots$}
+    };
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Deux suites}
+On définit deux suite $\Un$ et $(v_n)_{\nN}$ par $\defsuite{u_0=2}{\frac{2u_n+3v_n}{5}}$ et $\accol{v_0=3\\v_{n+1}=\frac{3u_n+2v_n}{5}}$\\
+On pose par la suite $S_n=u_n+v_n$ et $D_n=u_n-v_n$
+\begin{enumerate}
+    \item Montrer que $(S_n)$ est une suite constante dont on précisera la valeur
+    \item Montrer que $(D_n)$ est une suite géométrique dont on donnera la raison et le premier terme
+    \item Déterminer $\limn D_n$
+    \item En déduire $\limn u_n$ et $\limn v_n$
+\end{enumerate}
+
+
+
+\subsection{Croissance rapide}
+On définit la suite $(u_n)_{n \in \mathbb{N}}$ par : $\defsuite{u_0=1}{2\left(u_n+{u_n}^2\right)}$
+\begin{enumerate}
+    \item Démontrer que $u_n \geq 2^n \quad \forall n \in \mathbb{N}$
+    \item En déduire que la suite $(u_n)$ est croissante.
+    \item On pose $v_n = \ln(2u_n + 1) \quad \forall n \in \mathbb{N}$
+    \begin{enumerate}
+        \item Démontrer que $(v_n)$ est géométrique.
+        \item Donner l'expression de $v_n$ en fonction de $n$ puis montrer que $u_n=\frac{3^{2^n}-1}{2}$
+    \end{enumerate}
+    \item Déterminer $\limn u_n$
+    \item À partir de quel rang la suite $(u_n)$ dépasse-t-elle $10^{100}$ ?
+\end{enumerate}
+
+
+
+\subsection{Suites co-dépendantes}
+On définit deux suites $\Un$ et $(v_n)_{\nN}$ par : $\accolsized{u_0=2\\u_{n+1}=\frac{u_n+v_n}{2}}{1} $ et $\accolsized{v_0=1\\v_{n+1}=\frac{u_n-v_n}{2}}{1} $
+\begin{enumerate}
+    \item Montrer que pour tout $\nN,\quad u_{n+2}=\frac{u_n}{2}$ et $v_{n+2}=\frac{v_n}{2}$
+    \item Montrer par récurrence que $u_n\geq v_n\geq0$
+    \item Montrer que $\Un$ est décroissante et en déduire que $\Un$ converge vers une limite notée $\ell$
+    \item Déterminer la valeur de $\ell$ et en déduire $\limn v_n$
+\end{enumerate}
+
+
+
+\subsection{Majoration floue}
+On considère une suite $(u_n)$ à termes strictement positifs vérifiant $\frac{u_{n+1}}{u_n}<\frac{5}{6}$ \quad $\forall\nN$
+\begin{enumerate}
+	\item Justifier que $(u_n)$ est décroissante.
+	\item En déduire que $(u_n)$ converge.
+	\item On considère $(v_n)$ la suite géométrique de premier terme $u_0$ et de raison $\frac{5}{6}$\\
+	Montrer que $(v_n)$ majore $(u_n)$ et en déduire $\limn u_n$
+\end{enumerate}
+
+
+
+\section{Études par fonction auxiliaire}
+
+\subsection{Récurrence par une fonction}
+On considère la fonction $f$ définie sur $\RR$ par $f(x)=\frac{1}{2}x(4-x)$ \\
+On définit la suite $\Un$ par $\defsuite{u_0=\frac{1}{2}}{f(u_n)}$
+\begin{enumerate}
+    \item Calculer les 5 premiers termes de la suite $\Un$.\\
+    Que peut-on conjecturer quant à la convergence de la suite ?
+    \item Dresser le tableau de variations de la fonction $f$
+    \item Montrer par récurrence que $0< u_n< 2$
+    \item Étudier les variations de la suite $\Un$
+    \item Montrer que $\Un$ converge.
+    \item Montrer la conjecture émise à la question 1
+\end{enumerate}
+
+
+
+\subsection{Récurrence exponentielle}
+On définit sur $\mathbb{R}$ la fonction $g : x \mapsto 2xe^{-x}$
+\begin{enumerate}
+    \item Dresser le tableau de variations de $g$
+    \item On considère la suite $(u_n) : \defsuite{u_0=\frac{1}{5}}{g(u_n)}$
+    \begin{enumerate}
+        \item Démontrer que $0 \leq u_n \leq u_{n+1} \leq 1 \quad \forall n \in \mathbb{N}$.
+        \item Justifier que $(u_n)$ converge.
+    \end{enumerate}
+    \item Démontrer que $\limn u_n = \ln(2)$
+\end{enumerate}
+
+
+
+\subsection{Une suite vraiment homographique}
+On considère la suite $\Un$ définie par $\defsuite{u_0=2}{\frac{1+2u_n}{2+u_n}}$ 
+\begin{enumerate}
+    \item Montrer par récurrence que $1<u_n\leq2$ à l'aide d'une fonction correctement choisie.
+    \item Déterminer le sens de variation de $\Un$, et en déduire que la suite converge.
+    \item On pose $v_n=\frac{u_n+1}{u_n-1}$ pour tout $\nN$
+    \begin{enumerate}
+        \item Montrer que $(v_n)_{\nN}$ est une suite géométrique
+        \item Déterminer l'expression de $v_n$ en fonction de $n$, puis celle de $u_n$ en fonction de $n$
+    \end{enumerate}
+    \item Déterminer $\limn u_n$
+\end{enumerate}
+
+
+
+\subsection{Récurrence sous racine}
+On considère la suite $(w_n)_{n \in \mathbb{N}}$ définie par : $\begin{cases}w_0 = 1\\w_{n+1}=\sqrt{6 w_n - \frac{w_n^2}{2}}\end{cases}$\\
+On pose $\phi(x) = \sqrt{6x - \frac{x^2}{2}}$
+\begin{enumerate}
+    \item Déterminer $\Dcal$ le domaine de définition de $\phi$
+    \item Dresser le tableau de variations de $\phi$
+    \item Démontrer que $0 \leq u_n \leq w_{n+1} \leq 4$
+    \item Justifier que $(w_n)$ converge
+    \item Déterminer $\limite{n \to +\infty} w_n$
+\end{enumerate}
+
+
+
+\subsection{Récurrence par logarithme}
+On considère $f : x \mapsto x - \ln(1 + x)$ définie sur $]-1; +\infty[$.
+\begin{enumerate}
+    \item Dresser le tableau de variations de $f$
+    \item En déduire que $x \geq \ln(1 + x) \quad \forall x > -1$
+    \item On définit la suite $(u_n)_{n \in \mathbb{N}}$ par $\defsuite{u_0=1}{\ln(1+u_n)}$
+    \begin{enumerate}
+        \item Montrer par récurrence que $0 \leq u_n \leq 1$
+        \item Justifier que $(u_n)$ est décroissante.
+        \item En déduire que $(u_n)$ converge vers $\ell \in \mathbb{R}$.
+    \end{enumerate}
+    \item Déterminer $\limn u_n$
+\end{enumerate}
+
+
+
+\section{Exercices supplémentaires}
+
+\subsection{Suites périodique}
+\textit{On dit qu'une suite $\Un$ est périodique de période $p$ si pour tout $\nN$ on a : $u_{n+p}=u_n$ \\
+L'exemple le plus connu de suite périodique est $u_n=(-1)^n$ dont la période est 2}
+\begin{enumerate}
+    \item Soit $\Un$ définie par $\defsuite{u_0=a\in\RR}{5-u_n}$\\
+    Montrer que $(u_n)$ est périodique.
+    \item On considère la suite $(v_n)_{\nN}$ définie par $\accol{v_0=2\\v_{n+1}=\frac{v_n-2}{2v_n-1}}$\\
+    Montrer que $(v_n)$ est périodique.
+    \item On définit la suite $(w_n)$ par $\begin{cases}w_0=2\\w_{n+1}=\frac{1}{1-w_n}\end{cases}$\\
+    Montrer que $(w_n)$ est périodique.
+\end{enumerate}
+
+
+
+\subsection{Flocon de Koch}
+
+Le flocon de Koch est une figure géométrique dite "fractale" qui s'obtient en construisant un triangle équilatéral de côté 1 puis en répétant une infinité de fois les étapes ci-après :
+
+
+\begin{enumerate}
+    \item On divise chaque côté du de la figure en trois segments de longueurs égales.
+    \item On construit trois triangles équilatéraux ayant pour base les segments médians de la première étape.
+    \item On supprime les segments médians de la deuxième étape.
+\end{enumerate}
+
+Pour plus de clarté voici une illustration des premières itérations de construction :
+\begin{center}
+
+\tcbox[colframe=black,colback=white]{
+\begin{tikzpicture}[scale=0.7]
+
+    %%%%%%%%%%%%%%%%%%
+    %%%%% Step 1 %%%%%
+    %%%%%%%%%%%%%%%%%%
+    \draw node at (1.5,-1.5) {Itération 0};
+    
+    \coordinate (A') at (0,0);
+    \coordinate (B') at (3,0);
+    \coordinate (C') at (1.5,2.598);
+    \draw (A')--(B')--(C') -- cycle;
+
+    %%%%%%%%%%%%%%%%%%
+    %%%%% Step 2 %%%%%
+    %%%%%%%%%%%%%%%%%%
+    
+    % Move to the right
+    \coordinate (A) at (4,0);
+    \coordinate (B) at (7,0);
+    \coordinate (C) at (5.5,2.598);
+
+    % Split each side into three parts
+    \coordinate (A1) at ($(A)!1/3!(B)$);
+    \coordinate (A2) at ($(A)!2/3!(B)$);
+    \coordinate (B1) at ($(B)!1/3!(C)$);
+    \coordinate (B2) at ($(B)!2/3!(C)$);
+    \coordinate (C1) at ($(C)!1/3!(A)$);
+    \coordinate (C2) at ($(C)!2/3!(A)$);
+
+    % Draw the remaining parts as solid lines
+    \draw (A) -- (A1);
+    \draw (A2) -- (B);
+    \draw (B) -- (B1);
+    \draw (B2) -- (C);
+    \draw (C) -- (C1);
+    \draw (C2) -- (A);
+    
+    % Draw the central parts as dashed lines
+    \draw[dashed] (A1) -- (A2);
+    \draw[dashed] (B1) -- (B2);
+    \draw[dashed] (C1) -- (C2);
+
+    %%%%%%%%%%%%%%%%%%
+    %%%%% Step 3 %%%%%
+    %%%%%%%%%%%%%%%%%%
+    
+    % Move to the right
+    \coordinate (D) at (8,0);
+    \coordinate (E) at (11,0);
+    \coordinate (F) at (9.5,2.598);
+
+    % Split each side into three parts
+    \coordinate (D1) at ($(D)!1/3!(E)$);
+    \coordinate (D2) at ($(D)!2/3!(E)$);
+    \coordinate (E1) at ($(E)!1/3!(F)$);
+    \coordinate (E2) at ($(E)!2/3!(F)$);
+    \coordinate (F1) at ($(F)!1/3!(D)$);
+    \coordinate (F2) at ($(F)!2/3!(D)$);
+
+    % Calculate the peaks of the new equilateral triangles
+    \coordinate (P1) at (8,1.732);
+    \coordinate (P2) at (11,1.732);
+    \coordinate (P3) at (9.5,-0.866);
+
+    % Draw the remaining parts as solid lines
+    \draw (D) -- (D1);
+    \draw (D2) -- (E);
+    \draw (E) -- (E1);
+    \draw (E2) -- (F);
+    \draw (F) -- (F1);
+    \draw (F2) -- (D);
+    
+    % Draw the central parts as dashed lines
+    \draw[dashed] (D1) -- (D2);
+    \draw[dashed] (E1) -- (E2);
+    \draw[dashed] (F1) -- (F2);
+
+    % Draw the new equilateral triangles
+    \draw (D1) -- (P3) -- (D2);
+    \draw (E1) -- (P2) -- (E2);
+    \draw (F1) -- (P1) -- (F2);
+    
+    %%%%%%%%%%%%%%%%%%
+    %%%%% Step 4 %%%%%
+    %%%%%%%%%%%%%%%%%%
+
+    \draw node at (13.5,-1.5) {Itération 1};
+    
+    % Move to the right
+    \coordinate (D') at (12,0);
+    \coordinate (E') at (15,0);
+    \coordinate (F') at (13.5,2.598);
+
+    % Split each side into three parts
+    \coordinate (D1') at ($(D')!1/3!(E')$);
+    \coordinate (D2') at ($(D')!2/3!(E')$);
+    \coordinate (E1') at ($(E')!1/3!(F')$);
+    \coordinate (E2') at ($(E')!2/3!(F')$);
+    \coordinate (F1') at ($(F')!1/3!(D')$);
+    \coordinate (F2') at ($(F')!2/3!(D')$);
+
+    % Calculate the peaks of the new equilateral triangles
+    \coordinate (P1') at (12,1.732);
+    \coordinate (P2') at (15,1.732);
+    \coordinate (P3') at (13.5,-0.866);
+
+    % Draw the remaining parts as solid lines
+    \draw (D') -- (D1');
+    \draw (D2') -- (E');
+    \draw (E') -- (E1');
+    \draw (E2') -- (F');
+    \draw (F') -- (F1');
+    \draw (F2') -- (D');
+
+    % Draw the new equilateral triangles
+    \draw (D1') -- (P3') -- (D2');
+    \draw (E1') -- (P2') -- (E2');
+    \draw (F1') -- (P1') -- (F2');
+
+\draw[->, dashed] (2.7,-1.5)--(12.3,-1.5);
+    
+\end{tikzpicture}
+}
+
+\tcbox[colframe=black,colback=white]{
+\begin{tikzpicture}[decoration=Koch snowflake, scale=0.45]
+    \draw (0,0) -- ++(60:5) -- ++(-60:5) -- cycle ;
+    \draw decorate{ (6,0) -- ++(60:5) -- ++(-60:5) -- cycle };
+    \draw decorate{ decorate{ (12,0) -- ++(60:5) -- ++(-60:5) -- cycle }};
+    \draw decorate { decorate{ decorate{ (18,0) -- ++(60:5) -- ++(-60:5) -- cycle }}};
+    \draw decorate { decorate { decorate{ decorate{ (24,0) -- ++(60:5) -- ++(-60:5) -- cycle }}}};
+    \foreach \i in {0,1,2,3,4}
+        \draw node at (6*\i+2.5,-2) {Itération \i};
+\end{tikzpicture}
+}
+\end{center}
+
+\begin{enumerate}
+    \item On note $P_n$ le périmètre de la figure obtenue lors de la $n$-ième itération.
+    \begin{enumerate}
+        \item Justifier que $(P_n)$ est une suite géométrique dont on précisera la raison et le premier terme.
+        \item Déterminer $\limn P_n$
+    \end{enumerate}
+    \item On note $S_n$ la surface de la figure obtenue lors de la $n$-ième itération.\\
+            On note $C_n$ le nombre de côtés de la figure obtenue lors de la $n$-ième itération.
+    \begin{enumerate}
+        \item Calculer $S_0$ et $S_1$
+        \item Justifier que $C_n=3\times4^n$
+        \item Justifier que $S_{n+1}=S_n+C_n\times S_0\times\left(\frac{1}{9}\right)^{n-1}$ pour tout $\nN$
+        \item Montrer alors par récurrence que $S_n=S_0+\frac{S_0}{3}\times\somme{k=0}{n-1}\left(\frac{4}{9}\right)^k$
+        \item En déduire que $S_n=\frac{\sqrt{3}}{4}\left(1+\frac{3}{5}\left(1-\left(\frac{4}{9}\right)^n\right)\right)$
+        \item Déterminer $\limn S_n$
+    \end{enumerate}
+    \item Que peut-on conclure de l'étude du Flocon de Koch ?
+\end{enumerate}
+
+
+
+\subsection{Étude d'une ruche}
+Les abeilles ont un système de ponte particulier : chaque jour toutes les femelles pondent un oeuf. S'il a été fécondé par un mâle il donnera naissance à une femelle, sinon un mâle éclora.\\[5pt]
+On place une femelle dans une ruche, et on note $F_n$ et $M_n$ le nombre de fourmi respectivement femelles et mâles après $n$ jours d'observation. On a donc $F_0=1$ et $M_0=0$\\[5pt]
+On admettra que tous les mâles fécondent une femelle chaque jour s'ils le peuvent.\\
+On admettra également que les abeilles vivent assez longtemps pour ne pas considérer leurs morts dans notre modèle.
+
+\begin{enumerate}
+    \item Compléter le tableau suivant :
+    \begin{center}
+        \renewcommand{\arraystretch}{1.5}
+        \setlength{\tabcolsep}{25pt}
+        \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+            $n$ & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+            $F_n$ & & & & & & \\ \hline
+            $M_n$ & & & & & & \\ \hline
+        \end{tabular}
+    \end{center}
+
+    \item Démontrer par récurrence que $F_n\geq M_n$ pour tout $\nN$
+    \item En déduire que $F_{n+2}=F_{n+1}+F_n$ pour tout $\nN$
+    \item Montrer que le nombre total d'abeilles au sein de la ruche au $n$-ième jour d'observation est $F_{n+1}$
+    \item Pour $\nN$ on pose $Q_n=\frac{F_{n+1}}{F_n}$
+    \begin{enumerate}
+        \item Montrer que la suite $(Q_n)_{\nN}$ vérifie la relation de récurrence $Q_{n+1}=1+\frac{1}{Q_n}$
+        \item Démontrer par récurrence que $1\leq Q_n\leq2$ pour tout $\nN$
+        \item On admet que la suite $(Q_n)_{\nN}$ converge.\\Déterminer sa limite et l'interpréter dans le contexte de l'exercice.
+    \end{enumerate}
+    \item On pose $\varphi = 1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\ldots}}}}$\\[5pt]
+    Montrer que $\varphi=\limn Q_n$
+    \item Démontrer à l'aide d'un raisonnement par récurrence double que $F_n\times F_{n+2}-\left(F_{n+1}\right)^2=(-1)^n$
+\end{enumerate}
+
+
+
+\subsection{Suite géom... arithmétique ?}
+Soit $\Un$ une suite géométrique pour laquelle $u_0$, $u_1$ et $u_3$ sont trois termes consécutifs d'une suite arithmétique.\\
+Déterminer $\limn \sommek{0}{n}u_k$
+
+
+
+
+\end{document}

@@ -1,0 +1,512 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 % Macros classiques
+\input{../../../Latex/inputs/macro_paging.tex}             % Mise en page
+
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Fonctions affines et applications}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Caractérisation des fonctions affines}
+
+\subsection{À partir des droites}
+\begin{minipage}{0.5\linewidth} \restoreskip
+	On a tracé les courbes représentatives des fonctions affines $f$, $g$, $h$ et $p$ dans le repère ci-après.
+	
+	Pour chacune de ces quatre fonctions, déterminer son ordonnée à l'origine et son coefficient directeur puis donner son expression algébrique.
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        	height = 7cm , width = 10cm ,
+        	xmin = -5 , xmax = 5 , ymin = -5 , ymax = 5 , xtick distance = 1 , ytick distance = 1 ,
+            grid = major, major grid style = {line width = 0.2pt , draw = gray},
+            axis lines = middle, enlargelimits = { abs = 0.2 },
+            ticklabel style = {font = \tiny}
+            ]
+
+		\addplot[color = newblue , line width = 2pt , domain = -5:5]
+		{0.5*x+3};
+		\draw[color = newblue] (1.5,4.5) node {$\Ccal_f$};
+		
+		\addplot[color = newred , line width = 2pt , domain = -5:5]
+		{2*x-4};
+		\draw[color = newred] (4.5,3.5) node {$\Ccal_g$};
+		
+		\addplot[color = newgreen , line width = 2pt , domain = -5:5]
+		{-0.25*x+1};
+		\draw[color = newgreen] (-3.5,2.5) node {$\Ccal_h$};
+		
+		\addplot[color = neworange , line width = 2pt , domain = -5:5]
+		{-3*x/5-2};
+		\draw[color = neworange] (-2.5,-1.5) node {$\Ccal_p$};
+        
+        \end{axis}
+    \end{tikzpicture}  
+\end{minipage}
+
+
+
+\subsection{Par expression algébrique}
+Justifier que chacune des fonctions suivantes sont des fonctions affines et précisant leur coefficient directeur et leur ordonnée à l'origine :
+
+\renewcommand{\arraystretch}{2.25}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f(x)=7x-8$ & $g(x)=5+3x$ & $h(x)=\dfrac{x-4}{2}$ \\
+	$\varphi(x)=3-\dfrac{2x+1}{2}$ & $\gamma(x)=(x+2)^2-x^2$ & $\epsilon(x)=\dfrac{3x+1}{2}-\dfrac{6x-1}{4}$
+\end{tabular}
+
+
+
+\subsection{Pas des fonctions affines}
+Démontrer que les fonctions suivantes ne sont pas affines en utilisant le taux d'accroissement :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f:x\mapsto x^2+x$ & $g:x\mapsto\dfrac{1}{1+x^2}$ & $h:x\mapsto 1+x^3$
+\end{tabular}
+
+
+
+\subsection{Intersections}
+On considère les trois fonctions affines $f$, $g$ et $h$ définies sur $\RR$ par $f(x)=2x+1$ , $g(x)=4-x$ et $h(x)=\frac{1}{2}x-5$
+
+On note $\Ccal_f$, $\Ccal_g$ et $\Ccal_h$ leurs courbes représentatives respectives dans un repère orthonormé.
+\begin{enumerate}
+	\item Déterminer les coordonnées du point d'intersection entre $\Ccal_f$ et $\Ccal_g$
+	\item Déterminer les coordonnées du point d'intersection entre $\Ccal_f$ et $\Ccal_h$
+	\item Déterminer les coordonnées du point d'intersection entre $\Ccal_g$ et $\Ccal_h$
+\end{enumerate}
+
+
+
+\subsection{Tracer des courbes}
+Dans un repère orthonormé, tracer les courbes représentatives des fonctions suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f:x\mapsto \frac{4}{5}x-2$ & $g:x\mapsto1-\frac{4}{3}x$ & $h:x\mapsto \frac{7}{2}x+5$
+\end{tabular}
+
+
+
+\subsection{Stabilité de la somme}
+Soient $f$ et $g$ deux fonctions affines. On définit la fonction $h$ par $h(x)=f(x)+g(x)$ pour tout $x$ réel.
+
+Démontrer que $h$ est une fonction affine.
+
+
+
+\subsection{Différents repères}
+On a tracé dans les repère ci-après les courbes représentatives de trois fonctions affines $f$, $g$ et $h$ :
+
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        x={(1cm,0cm)} , y={(0cm,0.33cm)} ,
+        xmin=-3 , xmax=3 , ymin=-3 , ymax=9 ,
+        xtick distance = 1, ytick distance = 3,
+        xticklabels = {, , , , , , 2 , , , ,},
+        yticklabels = {  , , , 3 , , , , ,},
+        xlabel = {$x$} ,
+        ylabel = {$y$} ,
+        axis lines = middle,
+    	grid=none ,
+        ticklabel style = {font = \scriptsize }
+        ]
+
+		\addplot[color = newred , line width = 2pt , domain = -3:3]
+		{6-6*x};
+		\draw[color=newred] (1,3) node {$\Ccal_f$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        x={(0.33cm,0cm)} , y={(0cm,0.5cm)} ,
+        xmin=-9 , xmax=9 , ymin=-2 , ymax=6 ,
+        xtick distance = 3, ytick distance = 2,
+        xticklabels = {, , , -3 , , , , , , ,},
+        yticklabels = {  , , , 2 , , , , ,},
+        xlabel = {$x$} ,
+        ylabel = {$y$} ,
+        axis lines = middle,
+    	grid=none , 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        \addplot[color = newred , line width = 2pt , domain = -9:9]
+		{4-4*x/3};
+		\draw[color=newred] (3,2) node {$\Ccal_g$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        clip = true ,
+        x={(0.8cm,0cm)} , y={(0.25cm,1cm)} ,
+        xmin=-3 , xmax=3 , ymin=-1 , ymax=3 ,
+        xtick distance = 0.9375 , ytick distance = 1 ,
+        xticklabels = {, , , , , 1 , , , , ,},
+        yticklabels = {  , , , 2 , , , , ,},
+        xlabel = {$x$} ,
+        ylabel = {$y$} ,
+        axis lines = middle ,
+    	grid=none ,
+        ticklabel style = {font = \scriptsize }
+        ]
+		
+		\addplot[color = newred , line width = 2pt , domain = -3:3]
+		{2-16*x/15};
+		\draw[color=newred] (1.5,1) node {$\Ccal_h$};
+		
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+Déterminer l'expression de $f(x)$, $g(x)$ et $h(x)$ en fonction de $x$
+
+
+
+\subsection{Tchou tchou}
+Deux gares, A et B, sont éloignées de 600km
+
+Un train \no 1 part de la gare A en direction de la gare B à une vitesse constante de 300km/h
+
+Au même moment, un train \no 2 part de la gare B en direction de la gare A à une vitesse constante de 200km/h
+
+On note $f(t)$ et $g(t)$ la distance des trains \no 1 et \no 2 respectivement à la gare A en fonction du temps $t$ écoulé en heures depuis leur départ.
+\begin{enumerate}
+	\item Préciser $f(0)$ et $g(0)$
+	\item Justifier que $f$ est une fonction linéaire et que $g$ et une fonction affine en exprimant $f(t)$ et $g(t)$ en fonction de $t$
+	\item Résoudre l'équation $f(t)=g(t)$ et en déduire quand les trains \no 1 et \no 2 se croiseront. Préciser alors leur position sur le trajet.
+\end{enumerate}
+
+
+
+\subsection{D'après deux points}
+On considère $f$ une fonction affine. Déterminer l'expression de $f(x)$ en fonction de $x$ lorsque :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $f(0)=1$ ~et~ $f(1)=2$ & b) $f(3)=-4$ ~et~ $f(0)=2$ & c) $f(1)=1$ ~et~ $f(2)=3$ \\
+	d) $f(-1)=2$ ~et~ $f(2)=-1$ & e) $f(5)=3$ ~et~ $f(7)=6$ & f) $f(-3)=4$ ~et~ $f(1)=5$
+\end{tabular}
+
+
+
+\subsection{Il fait un peu froid non ?}
+Dans certains pays anglophones, et notamment aux États-Unis, l'échelle de température utilisée n'est pas la même qu'en France. Les températures sont alors exprimées en degrés Fahrenheit (°F)
+
+En notant $x$ la température en °F, on peut exprimer la température en degrés Celsius (°C) à l'aide de la fonction $f:x\mapsto\dfrac{5x-160}{9}$
+\begin{enumerate}
+	\item En se réveillant ce matin, John avait une température de 100°F. Faut-il qu'il s'inquiète pour sa santé ?
+	\item Montrer que l'eau gèle à 32°F
+	\item Résoudre l'équation $f(x)=x$ puis interpréter ce résultat.
+	\item Démontrer que la fonction $g:x\mapsto\frac{9}{5}x+32$ permet d'exprimer la température en °F en fonction de la température en °C
+\end{enumerate}
+
+
+
+\subsection{Relations floues}
+\begin{enumerate}
+	\item Soit $f$ une fonction affine vérifiant $f(1)=2f(3)$. ~~ Montrer que $f(5)=0$
+	\item Soit $g$ une fonction affine telle que $g(4)=2g(2)$. ~~ Montrer que $g$ est linéaire.
+	\item Soit $h$ une fonction affine telle que $h(2)=3h(1)$. ~~ Montrer que $h\left(\frac{1}{2}\right)=0$
+\end{enumerate}
+
+
+
+\subsection{Autour du point fixe}
+On appelle point fixe d'une fonction $f$ tout nombre réel $a$ vérifiant $f(a)=a$
+\begin{enumerate}
+	\item On considère la fonction $\varphi:x\mapsto x^2-3x+3$\\
+	Montrer que $1$ et $3$ sont des points fixes de la fonction $\varphi$
+	\item On considère la fonction $g:x\mapsto 3x+4$\\
+	Déterminer la valeur de l'unique point fixe de la fonction $g$
+	\item Déterminer une fonction affine n'admettant pas de point fixe.
+	\item On considère $f:x\mapsto mx+p$ une fonction affine avec $m\neq1$\\
+	Montrer que $f$ admet un unique point fixe $x=\dfrac{p}{1-m}$
+\end{enumerate}
+
+
+
+\subsection{Sur la parité}
+\begin{enumerate}
+	\item Soit $f$ une fonction affine paire. Montrer que $f$ est constante.
+	\item Soit $g$ une fonction affine impaire. Montrer que $g$ est linéaire.
+\end{enumerate}
+
+
+
+\subsection{Découpage de la valeur absolue}
+On considère la fonction $f$ définie sur $\RR$ par $f(x)=\abs{2x+4}-\abs{x}$
+\begin{enumerate}
+	\item Résoudre dans $\RR$ l'inéquation $2x+4\geq0$
+	\item Compléter le tableau suivant permettant d'exprimer $f(x)$ sans valeurs absolues :
+	
+		\tikzset{t style/.style = {}}
+		\begin{tikzpicture}
+			\tkzTabInit[espcl=4.75 , color , colorL=gray!25 , colorV=gray!25]{$x$ /1 , $\abs{2x+4}$ /1 , $\abs{x}$ /1 , $f(x)$ /1}%
+			{$-\infty$ , $-2$ , $0$ , $+\infty$}%
+			\tkzTabLine{ , -2x-4 ~~~~~~ , t , ,t , ,}
+			\tkzTabLine{ , , t , ,t , ,}
+			\tkzTabLine{ , , t , ,t , ,}
+		\end{tikzpicture}
+	\item À l'aide du tableau ci-dessus, tracer la courbe représentative de la fonction $f$ dans un repère orthonormé sur l'intervalle $[-6~;~4]$
+\end{enumerate}
+
+
+
+
+\subsection{Rebelote}
+On considère la fonction $g$ définie sur $\RR$ par $g(x)=\abs{x-5}+\abs{2x+2}-\abs{x-1}$
+\begin{enumerate}
+	\item Résoudre dans $\RR$ les inéquations : \\
+		$\bullet$ $x-5 \geq 0$ \\
+		$\bullet$ $2x+2 \geq 0$ \\
+		$\bullet$ $x-1 \geq 0$
+	\item Compléter le tableau suivant permettant d'exprimer $g(x)$ sans valeurs absolues :
+	
+		\tikzset{t style/.style = {}}
+		\begin{tikzpicture}
+			\tkzTabInit[espcl=3.5 , color , colorL=gray!25 , colorV=gray!25]{$x$ /1 , $\abs{x-5}$ /1 , $\abs{2x+2}$ /1 , $\abs{x-1}$ /1 , $g(x)$ /1}%
+			{$-\infty$ , $-1$ , $1$ , $5$,  $+\infty$}%
+			\tkzTabLine{ , -x+5 ~~~~~~ , t , ,t , , t , ,}
+			\tkzTabLine{ , , t , ,t , , t , ~~~~~~ 2x+2 , }
+			\tkzTabLine{ , , t , ,t , , t , ,}
+			\tkzTabLine{ , , t , ,t , , t , ,}
+		\end{tikzpicture}
+	\item À l'aide du tableau ci-dessus, tracer la courbe représentative de la fonction $g$ dans un repère orthonormé sur l'intervalle $[-6~;~4]$
+\end{enumerate}
+
+
+
+\section{Étude des fonctions affines}
+
+\subsection{Premiers tableaux}
+Soit $f$ la fonction affine définie sur $\RR$ par $f(x)=3x-9$
+\begin{enumerate}
+	\item Dresser le tableau de variations de la fonction $f$
+	\item Résoudre l'équation $f(x)=0$
+	\item Dresser le tableau de signes de la fonction $f$
+	\item En déduire les solutions de l'équation $3x-9\leq0$
+\end{enumerate}
+
+
+
+\subsection{Et deux autres}
+Soit $g$ la fonction affine définie sur $\RR$ par $f(x)=-4x+20$
+\begin{enumerate}
+	\item Dresser le tableau de variations de la fonction $f$
+	\item Résoudre l'équation $f(x)=0$
+	\item Dresser le tableau de signes de la fonction $f$
+	\item En déduire les solutions de l'équation $-4x+20\geq0$
+\end{enumerate}
+
+
+
+\subsection{Encore plus}
+Dresser les tableaux de signes et de variations des fonctions affines définies ci-après :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f:x\mapsto\frac{1}{2}x+3$ & $g:x\mapsto\frac{2}{5}-3x$ & $h:x\mapsto-4x-7$
+\end{tabular}
+
+
+
+\subsection{Comparaison à zéro}
+Résoudre dans $\RR$ chacune des inéquations suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $6x+5\leq0$ & b) $4-3x>0$ & c) $-2x-7\geq0$ \\
+	d) $20+15x<0$ & e) $\frac{1}{2}x-1\leq 0$ & f) $3-\frac{2}{5}x>0$
+\end{tabular}
+
+
+
+\subsection{Inéquations}
+Résoudre dans $\RR$ chacune des inéquations suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $2x-1>5x+8$ & b) $4x+3\leq2x-7$ & d) $5-2x<6-7x$ \\
+	d) $\frac{3}{2}x+2\geq2x+4$ & e) $\frac{x}{3}-7>\frac{8}{3}x+2$ & $\frac{1}{2}x+1<\frac{2}{3}x-1$
+\end{tabular}
+
+
+
+\subsection{À partir d'un tableau}
+On considère la fonction affine $f:x\mapsto mx+p$ dont le tableau de variations a été dressé ci-après :
+
+\begin{center}
+	\begin{tikzpicture}
+		\tkzTabInit[espcl=3.5 , color , colorL=gray!25 , colorV=gray!25]{$x$ /1 , $f(x)$ /1}%
+		{$-\infty$ , $2$ ,  $+\infty$}%
+		\tkzTabLine{ , - , z , +}
+	\end{tikzpicture}
+\end{center}
+\begin{enumerate}
+	\item Déterminer le signe du nombre $m$ 
+	\item En déduire le signe du nombre $p$
+	\item Dresser le tableau de variations de la fonction $f$
+	\item Si $m$ est compris entre $2$ et $4$, déterminer le plus petit encadrement possible du nombre $p$
+\end{enumerate}
+
+
+
+\subsection{Positions relatives}
+On définit sur $\RR$ les fonctions affines $f$, $g$ et $h$ par $f(x)=3x+2$ , $g(x)=\frac{1}{2}x+1$ et $h(x)=x-4$
+
+On note $\Ccal_f$, $\Ccal_g$ et $\Ccal_h$ leurs courbes représentatives respectives dans un repère orthonormé.
+
+Étudier les positions relatives des courbes $\Ccal_f$, $\Ccal_g$ et $\Ccal_h$
+
+
+
+\subsection{Encadrements}
+\begin{enumerate}
+	\item On considère la fonction $f$ définie sur $\RR$ par $f(x)=3x-2$ \\	
+	Déterminer le plus petit intervalle contenant $f(x)$ en sachant que : \\
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		a) $-1 \leq x \leq2$ & b) $-2\leq x \leq4$ & c) $x\in\,]1~;~5]$
+	\end{tabular}
+	\item On considère la fonction $g$ définie sur $\RR$ par $g(x)=3-2x$ \\	
+	Déterminer le plus petit intervalle contenant $g(x)$ en sachant que : \\
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		a) $-5 \leq x \leq-2$ & b) $x\in\,]-1~;~4]$ & c) $x\in\left]7~;~\frac{21}{2}\right[$
+	\end{tabular}
+	\item On considère la fonction $f$ définie sur $\RR$ par $h(x)=-5x+7$ \\	
+	Déterminer le plus petit intervalle contenant $h(x)$ en sachant que : \\
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		a) $x\in[8~;~+\infty[$ & b) $x<4$ & c) $x>-1$
+	\end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Dans l'autre sens}
+\begin{enumerate}
+	\item On considère la fonction $f$ définie sur $\RR$ par $f(x)=5-2x$\\
+	Déterminer le plus petit intervalle contenant $x$ en sachant que : \\
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		a) $-2 \leq f(x) \leq 1$ & b) $2 \leq f(x) \leq 5$ & c) $f(x) \in \, ]1~;~7]$
+	\end{tabular}
+	\item On considère la fonction $g$ définie sur $\RR$ par $f(x)=2x-1$\\
+	Déterminer le plus petit intervalle contenant $x$ en sachant que : \\
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		a) $g(x) \leq -1$ & b) $g(x) \in\, ]-\infty~;~3]$ & c) $g(x) \in\, ]1~;~+\infty[$
+	\end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Sur la monotonie}
+Soient $f$ et $g$ deux fonctions affines. On définit la fonction $h$ par $h(x)=f(x)+g(x)$ pour tout $x$ réel.
+\begin{enumerate}
+	\item Si $f$ et $g$ sont croissantes, montrer que $h$ est croissante.
+	\item Si $f$ et $g$ sont décroissantes, montrer que $h$ est décroissante.
+\end{enumerate}
+
+
+
+\section{Applications}
+
+\subsection{Produit direct}
+Dresser le tableau de signes des fonctions suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+$f:x\mapsto (3x-6)(2+x)$ & $g:x\mapsto (4-2x)(x+3)$ & $h:x\mapsto (2+2x)(3-x)$
+\end{tabular}
+
+
+
+\subsection{Quotient direct}
+Dresser le tableau de signes des fonctions suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+$f:x\mapsto \dfrac{x+2}{5-x}$ & $g:x\mapsto \dfrac{10-5x}{4+2x}$ & $h:x\mapsto \dfrac{2x+8}{2x+5}$
+\end{tabular}
+
+
+
+\subsection{Association}
+Associer chacune des fonctions suivantes à son tableau de signes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+$f_1:x\mapsto (x-3)(x-2)$ & $f_2:x\mapsto (x+3)(2-x)$ & $f_3:x\mapsto (3-x)(2+x)$ \\
+$f_4:x\mapsto (3+x)(2+x)$ & $f_5:x\mapsto (x+3)(x-2)$ & $f_6:x\mapsto (3-x)(x-2)$
+\end{tabular}
+
+
+\begin{tikzpicture}
+	\tkzTabInit[espcl=2 , lgt = 1 , color , colorL=gray!25 , colorV=gray!25]{$x$ /0.75 ,  /1}%
+	{$-\infty$ , $2$ , $3$ , $+\infty$}%
+	\tkzTabLine{ , - , z , + , z , -}
+\end{tikzpicture} \hspace{1cm}
+\begin{tikzpicture}
+	\tkzTabInit[espcl=2 , lgt = 1 , color , colorL=gray!25 , colorV=gray!25]{$x$ /0.75 ,  /1}%
+	{$-\infty$ , $2$ , $3$ , $+\infty$}%
+	\tkzTabLine{ , - , z , + , z , -}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\tkzTabInit[espcl=2 , lgt = 1 , color , colorL=gray!25 , colorV=gray!25]{$x$ /0.75 ,  /1}%
+	{$-\infty$ , $2$ , $3$ , $+\infty$}%
+	\tkzTabLine{ , - , z , + , z , -}
+\end{tikzpicture} \hspace{1cm}
+\begin{tikzpicture}
+	\tkzTabInit[espcl=2 , lgt = 1 , color , colorL=gray!25 , colorV=gray!25]{$x$ /0.75 ,  /1}%
+	{$-\infty$ , $2$ , $3$ , $+\infty$}%
+	\tkzTabLine{ , - , z , + , z , -}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\tkzTabInit[espcl=2 , lgt = 1 , color , colorL=gray!25 , colorV=gray!25]{$x$ /0.75 ,  /1}%
+	{$-\infty$ , $2$ , $3$ , $+\infty$}%
+	\tkzTabLine{ , - , z , + , z , -}
+\end{tikzpicture} \hspace{1cm}
+\begin{tikzpicture}
+	\tkzTabInit[espcl=2 , lgt = 1 , color , colorL=gray!25 , colorV=gray!25]{$x$ /0.75 ,  /1}%
+	{$-\infty$ , $2$ , $3$ , $+\infty$}%
+	\tkzTabLine{ , - , z , + , z , -}
+\end{tikzpicture}
+
+
+
+
+\subsection{On rajoute des lignes ?}
+Dresser le tableau de signes des fonctions suivantes :
+
+\begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.3\linewidth}}
+$f:x\mapsto (x-1)(3+9x)(6-2x)$ & $g:x\mapsto \dfrac{(6+x)(3x-15)}{7+3x}$ & $h:x\mapsto \dfrac{(7x+14)(x-1)}{(x-5)(3x+18)}$
+\end{tabular}
+
+
+
+\subsection{Résolution d'inéquation}
+Résoudre dans $\RR$ chacune des inéquations suivantes en vous aidant d'un tableau de signes :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+ 	a) $(5x+15)(4-x)>0$ & b) $x(2+x)\leq0$ & c) $(2-4x)(3x-8)\geq0$ \\
+    d) $\dfrac{2x-3}{7-x} \geq 0$ & e) $\dfrac{3-x}{(x-7)(2x+1)}<0$ & f) $\dfrac{5x-7}{(x+3)(3x-8)}\geq0$
+\end{tabular}
+
+
+
+
+\end{document}

@@ -1,0 +1,540 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
+\fancyhead[C]{Théorie des graphes}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Graphes}
+
+\subsection{Propriétés des graphes}
+
+Pour chacun des graphes ci-dessous, donner son ordre et préciser s'il est connexe, s'il est complet ou s'il s'agit d'un arbre :
+
+
+\begin{figure}[h] 
+  \centering
+  \begin{minipage}[b]{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node[circle,draw,minimum size=25pt] (A) at (0,0) {};
+      \node[circle,draw,minimum size=25pt] (B) at (0,-2){};
+      \node[circle,draw,minimum size=25pt] (C) at (2,0){}; 
+      \node[circle,draw,minimum size=25pt] (D) at (4,-1){};
+      \node[circle,draw,minimum size=25pt] (E) at (1,-3){};
+      \node[circle,draw,minimum size=25pt] (F) at (3,-2){};
+    
+      \draw (A) -- (B);
+      \draw (B) -- (C);
+      \draw (C) -- (D);
+      \draw (C) -- (E);
+      \draw (E) -- (F);
+    \end{tikzpicture}
+  \end{minipage} % ----- Graphe 1
+  \hfill
+  \begin{minipage}[b]{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node[circle,draw,minimum size=25pt] (A) at (0,0) {};
+      \node[circle,draw,minimum size=25pt] (B) at (2,0) {};
+      \node[circle,draw,minimum size=25pt] (C) at (2,2) {};
+      \node[circle,draw,minimum size=25pt] (D) at (0,2) {};
+      \node[circle,draw,minimum size=25pt] (E) at (1,1) {};
+    
+      \draw (A) -- (B);
+      \draw (A) -- (D);
+      \draw (A) -- (E);
+      \draw (B) -- (C);
+      \draw (B) -- (E);
+      \draw (C) -- (D);
+      \draw (C) -- (E);
+      \draw (D) -- (E);
+    \end{tikzpicture} % ----- Graphe 2
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node[circle,draw,minimum size=25pt] (A) at (0,0) {};
+      \node[circle,draw,minimum size=25pt] (B) at (2,0) {};
+      \node[circle,draw,minimum size=25pt] (C) at (3,1.5) {};
+      \node[circle,draw,minimum size=25pt] (D) at (2,3) {};
+      \node[circle,draw,minimum size=25pt] (E) at (0,3) {};
+    
+      \draw (A) -- (B);
+      \draw (A) -- (E);
+      \draw (A) -- (D);
+      \draw (B) -- (C);
+      \draw (C) -- (D);
+      \draw (D) -- (E);
+    \end{tikzpicture} % ----- Graphe 3
+  \end{minipage}
+  
+  \vspace{1em}
+  
+  \begin{minipage}[b]{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node[circle,draw,minimum size=25pt] (A) at (0,0) {};
+      \node[circle,draw,minimum size=25pt] (B) at (2,-1) {};
+      \node[circle,draw,minimum size=25pt] (C) at (4,0) {};
+      \node[circle,draw,minimum size=25pt] (D) at (0,2) {};
+      \node[circle,draw,minimum size=25pt] (E) at (2,3) {};
+      \node[circle,draw,minimum size=25pt] (F) at (4,2) {};
+    
+      \draw (A) -- (C);
+      \draw (C) -- (E);
+      \draw (E) -- (A);
+      \draw (B) -- (D);
+      \draw (D) -- (F);
+      \draw (F) -- (B);
+    \end{tikzpicture} % ----- Graphe 4
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}
+      \node[circle,draw,minimum size=25pt] (A) at (0,0) {};
+      \node[circle,draw,minimum size=25pt] (B) at (2,0) {};
+      \node[circle,draw,minimum size=25pt] (C) at (2,2) {};
+      \node[circle,draw,minimum size=25pt] (D) at (0,2) {};
+    
+      \draw (A) -- (B);
+      \draw (A) -- (C);
+      \draw (A) -- (D);
+      \draw (B) -- (C);
+      \draw (B) -- (D);
+      \draw (C) -- (D);
+    \end{tikzpicture} % ----- Graphe 5
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}
+        \node[circle,draw,minimum size=25pt] (A) at (90:2) {};
+        \node[circle,draw,minimum size=25pt] (B) at (162:2) {};
+        \node[circle,draw,minimum size=25pt] (C) at (234:2) {};
+        \node[circle,draw,minimum size=25pt] (D) at (306:2) {};
+        \node[circle,draw,minimum size=25pt] (E) at (18:2) {};
+
+        \draw (A) -- (D) -- (B) -- (E) -- (C) -- (A);
+    \end{tikzpicture} % ----- Graphe 6
+  \end{minipage} 
+\end{figure} % ----- Figure
+
+
+
+
+\subsection{Matrices d'adjacence}
+
+\textit{Dans cet exercice, on considère les sommets des graphes dans l'ordre alphabétique}
+
+\begin{enumerate}
+    \item Donner la matrice d'adjacence de chacun des graphes suivants :
+    
+    \begin{figure}[h]
+        \begin{minipage}[b]{0.3\linewidth}
+            \begin{tikzpicture}
+              % Define vertices
+              \node[circle, draw] (A) at (0,2) {A};
+              \node[circle, draw] (B) at (1.902,0.618) {B};
+              \node[circle, draw] (C) at (1.176,-1.618) {C};
+              \node[circle, draw] (D) at (-1.176,-1.618) {D};
+              \node[circle, draw] (E) at (-1.902,0.618) {E};
+              \node[circle, draw] (F) at (0,0) {F};
+            
+              % Draw edges
+              \draw (A) -- (B);
+              \draw (A) -- (F);
+              \draw (B) -- (E);
+              \draw (B) -- (C);
+              \draw (F) -- (C);
+              \draw (F) -- (D);
+              \draw (E) -- (D);
+              \draw (C) -- (D);
+            \end{tikzpicture} % ----- Graphe 1
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\linewidth}
+            \begin{tikzpicture}[->,main node/.style={circle,draw},>=stealth',node distance=1.5cm]
+            
+              % Define vertices by coordinates
+              \node[main node] (A) at (0,-1) {A};
+              \node[main node] (B) at (3,0) {B};
+              \node[main node] (C) at (5,-2) {C};
+              \node[main node] (D) at (4,-4) {D};
+              \node[main node] (E) at (2,-5) {E};
+              \node[main node] (F) at (0,-4) {F};
+              \node[main node] (G) at (2,-2.5) {G};
+            
+              % Draw arrows with more visible tips
+              \path
+                (A) edge[->, shorten >=1pt] node {} (B)
+                (A) edge[->, shorten >=1pt] node {} (G)
+                (A) edge[->, shorten >=1pt] node {} (E)
+                (A) edge[<->, shorten <= 2pt, shorten >=1pt] node {} (F)
+                (B) edge[->, shorten >=1pt] node {} (C)
+                (B) edge[->, shorten >=1pt] node {} (G)
+                (C) edge[->, shorten >=1pt] node {} (D)
+                (D) edge[->, shorten >=1pt] node {} (E)
+                (D) edge[->, shorten >=1pt] node {} (B)
+                (E) edge[->, shorten >=1pt] node {} (G)
+                (F) edge[->, shorten >=1pt] node {} (D)
+                (G) edge[->, shorten >=1pt] node {} (C);
+            \end{tikzpicture} % ----- Graphe 2
+        \end{minipage}
+        \hfill
+        \begin{minipage}[b]{0.3\linewidth}
+            \begin{tikzpicture}[->,main node/.style={circle,draw},>=stealth',node distance=1.5cm]
+    
+              % Define vertices by coordinates
+              \node[main node] (A) at (0,0) {A};
+              \node[main node] (B) at (2,0) {B};
+              \node[main node] (C) at (3,-2) {C};
+              \node[main node] (D) at (2.5,-4) {D};
+              \node[main node] (E) at (-1,-4) {E};
+              \node[main node] (F) at (-2,-2) {F};
+              \node[main node] (G) at (0.5,-2) {G};
+            
+              % Draw straight arrows
+              \path
+                (A) edge[->, shorten >=1pt] node {} (D)
+                (A) edge[->, shorten >=1pt] node {} (E)
+                (B) edge[->, shorten >=1pt] node {} (A)
+                (B) edge[<->, shorten <= 2pt,  shorten >=1pt] node {} (C)
+                (D) edge[->, shorten >=1pt] node {} (B)
+                (D) edge[->, shorten >=1pt] node {} (E)
+                (D) edge[->, shorten >=1pt] node {} (F)
+                (D) edge[<->, shorten <= 2pt,  shorten >=1pt] node {} (G)
+                (F) edge[->, shorten >=1pt] node {} (E)
+                (F) edge[->, shorten >=1pt] node {} (A)
+                (F) edge[->, shorten >=1pt] node {} (G);
+            \end{tikzpicture} % ----- Graphe 3
+        \end{minipage}\\
+    \end{figure} % ----- Graphes 
+
+\newpage
+
+    \item Pour chacune des matrices suivantes, tracer le graphe associé : \\[10pt]
+    \begin{tabular}{p{0.28\textwidth} p{0.28\textwidth} p{0.28\textwidth}}
+        $A=\matrice{0&1&1&0&1\\1&0&0&1&0\\0&0&0&0&1\\1&0&0&1&1\\1&1&1&0&0} $ &
+        $B=\matrice{0&1&1&0&0&1\\1&0&0&1&0&1\\1&0&0&1&1&0\\0&1&1&0&0&1\\0&0&1&0&0&0\\1&1&0&1&0&0} $ &
+        $C=\matrice{0&1&0&1&1&0\\1&0&1&0&0&1\\0&1&0&1&0&0\\1&0&0&0&1&1\\0&0&0&1&0&1\\1&0&0&0&0&0} $
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Promenade en ville}
+Un guide touristique décide de créer un itinéraire dans la ville de Montpellier et note des points de repère. On représente son plan par le graphe ci-dessous, dans lequel les arêtes correspondent aux  rues principales : \\[5pt]
+
+\hspace{3cm}
+\begin{minipage}[c]{0.3\linewidth}
+$A$ : Arbre Blanc \\
+$B$ : Tour de la Babote \\
+$C$ : Corum \\
+$D$ : Diagonal Cinéma \\
+$E$ : Église Sainte-Anne \\
+$F$ : Faculté de droit
+\end{minipage}
+\begin{minipage}[c]{0.3\linewidth}
+   \begin{tikzpicture}
+        
+        % Define vertices by coordinates
+        \node[circle,draw] (A) at (5,-2) {A};
+        \node[circle,draw] (B) at (1,-2) {B};
+        \node[circle,draw] (C) at (4,1) {C};
+        \node[circle,draw] (D) at (2.5,-1) {D};
+        \node[circle,draw] (E) at (0,0) {E};
+        \node[circle,draw] (F) at (1.5,1.5) {F};
+        
+        % Draw edges
+        \draw (A) -- (B);
+        \draw (A) -- (C);
+        \draw (A) -- (D);
+        \draw (A) -- (F);
+        \draw (B) -- (E);
+        \draw (B) -- (D);
+        \draw (C) -- (E);
+        \draw (D) -- (E);
+        \draw (D) -- (F);
+        \draw (E) -- (F);
+
+\end{tikzpicture} % ----- "Plan" de la ville  
+\end{minipage}\\[10pt]
+
+\begin{enumerate}
+    \item Le graphe ci-dessus est-il complet ? Connexe ?
+    \item Dresser le tableau des degrés de chaque sommet du graphe
+    \item Donner un itinéraire cyclique partant de l'Arbre Blanc et passant exactement une fois par chaque point de repère
+    \item Existe-t-il un itinéraire allant de la tour de la Babote à la Faculté de droit en passant une et une seule fois par chacune des rues principales ?
+    \item Quelle arête faudrait-il rajouter à ce graphe pour qu'il comporte un cycle eulérien ?
+    \item Donner la matrice d'adjacence de ce graphe
+    \item Combien existe-t-il de cycles passant par 5 des rues principales et partant du Corum ?
+\end{enumerate}
+
+
+\subsection{Dominos}
+Un jeu de domino classique comprend 28 tuiles, sur lesquelles figurent toutes les paires de nombres possibles avec les nombres de 0 à 6.\\
+Est-il possible, en suivant les règles du jeu de Domino, d'aligner toutes les tuiles ?\\
+Et si l'on utilisait les nombres de 0 à 7 ?
+
+
+
+\subsection{Chemins dans un graphe orienté}
+On considère la graphe orienté $(G)$ représenté ci-contre : \\
+
+\begin{minipage}{0.6\linewidth}
+    \begin{enumerate}
+        \item Donner la matrice d'adjacence du graphe $(G)$
+        \item Combien il y a-t-il de chemins de longueur 6 reliant le point $D$ au point $C$ ? Les donner
+        \item Démontrer qu'il existe un unique circuit de longueur 5 passant par le point $C$
+        \item Peut-on dire en dire de même pour le point $A$ ? Justifier
+    \end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+   \begin{tikzpicture}[>=stealth']
+  % Define the vertices
+  \node[draw, circle] (A) at (0, 0) {A};
+  \node[draw, circle] (B) at (4, 0) {B};
+  \node[draw, circle] (C) at (4, -4) {C};
+  \node[draw, circle] (D) at (0, -4) {D};
+  \node[draw, circle] (E) at (2, -2) {E}; % Centered
+
+  % Draw the directed arcs
+  \draw[->, shorten >=1pt] (A) to  (D);
+  \draw[->, shorten >=1pt] (A) to  (E);
+  \draw[->, shorten >=1pt] (B) to  (A);
+  \draw[->, shorten >=1pt] (C) to  (B);
+  \draw[<->, shorten >=1pt,  shorten <=1pt] (C) to  (D);
+  \draw[<->, shorten >=1pt,  shorten <=1pt] (D) to  (E);
+  \draw[->, shorten >=1pt] (E) to  (B);
+\end{tikzpicture} % ----- Graphe 
+\end{minipage}
+
+
+
+\subsection{Histoire de circuits}
+\begin{minipage}{0.68\linewidth}
+On considère $\mathcal{G}$ le graphe orienté ci-contre.
+\begin{enumerate}
+    \item Déterminer $M$ la matrice d'adjacence de $\mathcal{G}$.
+    \item  \begin{enumerate}
+        \item Peut-on relier chaque sommet de $\mathcal{G}$ à n'importe quel autre sommet à l'aide d'une chaîne de longueur exactement 5 ?
+        \item Déduire de la question précédente deux sommets impossibles à relier à l'aide d'une chaîne de longueur 4.
+    \end{enumerate}
+    \item Peut-on relier chaque sommet de $\mathcal{G}$ à n'importe quel autre sommet à l'aide d'une chaîne de longueur inférieure ou égale à 4 ?
+    \item \begin{enumerate}
+        \item Montrer qu'il n'existe pas de circuit de longueur 5 passant par $A$  mais pas par $F$.
+        \item Est-ce tojours le cas pour les circuits de longueur 6 ?
+    \end{enumerate}
+    \item Combien existe-t-il de circuits de longueur 6 passant par les sommets $B$ et $C$ ?
+\end{enumerate}
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.35\linewidth}
+\begin{tikzpicture}[>=stealth',scale=1.2]
+% Define the vertices
+\node[draw, circle] (A) at (0, 0) {A};
+\node[draw, circle] (B) at (2,0) {B};
+\node[draw, circle] (C) at (4,0) {C};
+\node[draw, circle] (D) at (2, 3) {D};
+\node[draw, circle] (E) at (1,-3) {E};
+\node[draw, circle] (F) at (3,-3) {E};
+
+% Draw the directed arcs
+\draw[->, shorten >=1pt] (A) to  (F);
+\draw[->, shorten >=1pt] (B) to  (C);
+\draw[->, shorten >=1pt] (C) to  (F);
+\draw[->, shorten >=1pt] (D) to  (B);
+\draw[->, shorten >=1pt] (D) to  (C);
+\draw[->, shorten >=1pt] (E) to  (A);
+\draw[->, shorten >=1pt] (F) to  (E);
+\draw[->, shorten >=1pt] (A) to  (F);
+
+\draw[<->, shorten >=1pt,  shorten <=1pt] (A) to  (D);
+\draw[<->, shorten >=1pt,  shorten <=1pt] (B) to  (F);
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Hamilton}
+On dit qu'un chemin (ou cycle) d'un graphe est \textit{Hamiltonien} s'il passe une et une seule fois par chacun des sommets du graphe. On dit alors d'un graphe qu'il est Hamiltonien s'il admet un cycle Hamiltonien.
+\begin{enumerate}
+    \item Tracer un graphe Hamiltonien d'ordre 6
+    \item Tracer un graphe connexe non Hamiltonien
+    \item Tracer un graphe connexe qui n'admet pas de chemin Hamiltonien
+    \item Tracer un graphe non Hamiltonien qui admet un chemin Hamiltonien
+\end{enumerate}
+
+
+
+\subsection{Planning}
+Lors d'un évènement sportif, 7 disciplines sont mises à l'honneur : l'aviron, le badminton, le cyclisme, la danse, l'escrime, le football et la gymnastique. Chaque participant est inscrit dans l'un des 4 modules suivants : \\[10pt]
+\begin{tabular}{p{0.05\textwidth}p{0.4\textwidth} p{0.4\textwidth}}
+     & $\circled{1}$ Aviron / Cyclisme / Escrime & $\circled{2}$ Aviron / Football / Gymnastique \\[3pt]
+     & $\circled{3}$ Danse / Escrime / Gymnastique & $\circled{4}$ Badminton / Cyclisme / Football
+\end{tabular} \\[5pt]
+
+Il a été convenu qu'aucun participant ne prendrait part à plus d'une épreuve par jour.
+\begin{enumerate}
+    \item Combien d'épreuves au maximum peuvent-être organisées dans la même journée ?
+    \item En combien de jour au minimum l'évènement peut-il être organisé ?
+\end{enumerate}
+
+
+
+
+\section{Chaînes de Markov}
+
+\subsection{La fourmi gourmande}
+
+\begin{minipage}{0.6\linewidth}
+    Une fourmi gourmande se promène sur le bord d'une part de pizza. On a nommé A, B et C les sommets de la part de pizza comme représenté ci-contre.\\[5pt]
+    Si la fourmi se trouve sur le sommet A, elle se déplacera sur le sommet B avec une probabilité de $\frac{1}{2}$ ou sur le sommet C avec une probabilité de $\frac{1}{2}$.
+    
+    Si elle se situe sur le sommet B, elle choisit sa prochaine étape équiprobablement parmi les 3 sommets.
+    
+    Si elle se trouve sur le sommet C, la fourmi se rend toujours au sommet A.\\[5pt]
+    La fourmi débute sa promenade de gourmet au sommet A.
+
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}[scale=0.7,rotate=-40]
+
+    \fill[color = Goldenrod1] (3.5,0) -- ++(70.71 : 10.59)arc(70.71 : 109.29 : 10.59)--cycle ; % ----- Croûte
+
+    \foreach \x/\y in {1/9.5 , 3/9.5 , 5/9.5} % ----- Sauce tomate
+        \draw[color=red , fill=red] (3.5,0) -- (\x,\y) arc(116.565 : 63.435 : 1.1) -- (3.5,0) ;
+    \foreach \x/\y in {2/9.5 , 4/9.5}
+        \draw[color=red , fill=red] (3.5,0) -- (\x,\y) arc(-116.565 : -63.435 : 1.1) -- (3.5,0) ;
+    \foreach \x/\y in {0.19/9.525 , 5.915/9.525}
+        \draw[color=red , fill=red] (3.5,0) -- (\x,\y) arc(-116.565 : -63.435 : 1) -- (3.5,0) ;
+
+    \foreach \x/\y in {3.7/3 , 2/8.5 , 5/7.5 , 3/5.5}{% ----- Chorizo
+        \draw[color=Coral2 , fill=Coral2] (\x,\y) circle (0.75);
+        \draw[color=Coral3 , fill=Coral3] (\x,\y) ++(0.3,0.2) circle (0.15);
+        \draw[color=Coral3 , fill=Coral3] (\x,\y) ++(-0.5,0.1) circle (0.15);
+        \draw[color=Coral3 , fill=Coral3] (\x,\y) ++(0.1,-0.5) circle (0.15);
+    }
+
+    \foreach \x/\y in {1.5/9 , 4.8/4 , 3.2/3.2 , 4/5.5,  6/8 , 4.5/7 , 2.4/6.2 , 4.3/8.8}{% ----- Olives
+        \fill[outer color=OliveDrab4,inner color=PaleGreen4!90] (\x,\y) arc [start angle=0 , end angle=360 , x radius=0.4 , y radius=0.3];
+    }
+
+    \fill[color=black] (3,10.5) arc [start angle=0 , end angle=360 , x radius=0.4 , y radius=0.25];
+    \fill[color=black] (3.5,10.5) arc [start angle=0 , end angle=360 , x radius=0.35 , y radius=0.2];
+    \fill[color=black] (3.7,10.5) circle (0.23) ;
+    \draw[line width=1.5pt] (3.2,10.5)--(3.2,11.1);
+    \draw[line width=1.5pt] (3.3,10.5)--(3.6,11.1);
+    \draw[line width=1.5pt] (3,10.5)--(2.8,11.1);
+    \draw[line width=1.5pt] (3.2,10.5)--(3.2,9.9);
+    \draw[line width=1.5pt] (3.3,10.5)--(3.6,9.9);
+    \draw[line width=1.5pt] (3,10.5)--(2.8,9.9);
+
+
+    \draw[below] node at (3.5,0) {\large\textbf{A}};
+    \draw[left] node at (0,10) {\large\textbf{B}};
+    \draw[right] node at (7,10) {\large\textbf{C}};
+\end{tikzpicture}
+
+\end{minipage}
+
+\begin{enumerate}
+    \item Justifier que la suite des positions de la fourmi forme une chaîne de Markov homogène.
+    \item Représenter $\Gamma$ le graphe de cette chaîne de Markov.
+    \item Donner $M$ la matrice de transition de cette chaîne de Markov.
+    \item Après 4 étapes, quelle est la probabilité de la fourmi se situe sur le sommet A ?
+    \item On note $(\Pi_n)_{\nN}$ la suite des distributions des états de la chaîne de Markov.
+
+    Donner $\Pi_0$ puis montrer que $\Pi_n=\Pi_0\times M^n$
+    \item Déterminer $\Pi$ la distribution invariante par $M$
+    \item Semble-t-il que la fourmi préfère la croûte ou bien la garniture de la pizza ?
+\end{enumerate}
+
+
+
+\subsection{Monter la garde}
+Un soldat monte la garde en haut d'un fort carré. Lorsqu'il arrive dans un coin du fort, il a une probabilité $q$ de rester sur place pour se reposer et une probabilité $p$ de poursuivre sa ronde dans le sens horaire. Sinon il avancera dans le sens trigonométrique.
+
+Montrer que l'état stable du soldat ne dépend pas des valeurs de $p$ et $q$.
+
+
+
+\subsection{Vidéoprojecteurs}
+
+\subsubsection*{Partie A : Un fonctionnement classique ?}
+
+Dans une salle de cinéma on installe un vidéoprojecteur. Ce vidéoprojecteur fonctionnant une grande partie de la journée, il a chaque jour une probabilité de 0,1 de tomber en panne.\\[5pt]
+Lorsque le vidéoprojecteur tombe en panne, le cinéma fait appel à un technicien qui, au cours d'une journée de travail, a une probabilité de 0,5 de réparer la panne.\\[5pt]
+On note $A_n$ : "Le vidéoprojecteur fonctionne le $n$-ième jour après son installation."
+
+ainsi que  $B_n$ : "Le vidéoprojecteur est en panne le $n$-ième jour après son installation."
+
+\begin{enumerate}
+    \item Justifier que la suite des états de fonctionnement du vidéoprojecteur forme une chaîne de Markov homogène.
+    \item Représenter $\Gamma$ le graphe de cette chaîne de Markov.
+    \item Donner $M$ la matrice de transition de cette chaîne de Markov.
+    \item Déterminer $\Pi$ la distribution invariante par $M$.
+    \item En moyenne, combien de jours le vidéoprojecteur sera-t-il fonctionnel au cours d'une semaine ?
+\end{enumerate}
+
+\subsubsection*{Partie B : Réduction des risques}
+
+On installe désormais deux vidéoprojecteurs dans la salle. Les deux vidéoprojecteurs fonctionnent indépendamment, et ont la même probabilité de tomber en panne.\\[5pt]
+Le technicien ne peut travailler à la réparation que d'un seul appareil à la fois.\\[5pt]
+On note ~$Z_n$ : "Aucun appareil ne fonctionne le $n$-ième jour après leur installation."
+
+ainsi que  $U_n$ : "Un seul vidéoprojecteur fonctionne le $n$-ième jour après leur installation."
+
+~~~~~~~~~~ et $D_n$ : "Les deux vidéoprojecteurs fonctionnent le $n$-ième jour après leur installation."\\[5pt]
+On admettra que la suite du nombre de vidéoprojecteurs en état de marche forme une chaîne de Markov homogène.
+
+\begin{enumerate}
+    \item Calculer les probabilités $P_{D_n}(D_{n+1})$ et $P_{D_n}(Z_{n+1})$
+    \item Justifier que $P_{U_n}(D_{n+1})=\frac{9}{20}$ et que $P_{U_n}(Z_{n+1})=\frac{1}{20}$
+    \item Justifier que $P_{Z_n}(Z_{n+1})=P_{Z_n}(U_{n+1})$
+    \item Compléter le graphe de la chaîne de Markov représenté ci-dessous :
+    \item Donner la matrice de transition $P$ associée à cette chaîne de Markov.
+    \item Déterminer $\tau$ la distribution invariante par $P$
+    \item Quantifier l'impact de l'installation d'un second vidéoprojecteur.
+\end{enumerate}
+
+
+\begin{center}
+\begin{tikzpicture}[
+>=stealth, shorten >=1pt, auto, thick, main node/.style={circle, draw,font=\sffamily\Large\bfseries}
+	]
+	% Nodes
+	\node[main node] (U) at (0,0) {U};
+	\node[main node] (Z) at (-3,-3) {Z};
+	\node[main node] (D) at (3,-3) {D};
+	% Edges
+	\path[every node/.style={font=\sffamily\small}]
+	(U) edge[->,bend right=20] node[above right] {} (Z)
+	(U) edge[<-,bend left=20] node[above left] {} (Z)
+	(U) edge[->,bend right=20] node[above right] {} (D)
+	(U) edge[<-,bend left=20] node[above left] {} (D)
+	(D) edge[->,bend left=20] node[below] {} (Z)
+	(U) edge[loop above] node {} (U)
+	(Z) edge[loop left] node {} (Z)
+	(D) edge[loop below] node {} (D);
+\end{tikzpicture}
+\end{center}
+
+
+\end{document}

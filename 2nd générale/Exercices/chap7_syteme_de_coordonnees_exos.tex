@@ -1,0 +1,336 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 % Macros classiques
+
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Géométrie plane}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Milieu d'un segment}
+
+\subsection{Coordonnées du milieu}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+Dans chacun des cas suivants, calculer les coordonnées du point $M$ le milieu du segment $[AB]$
+
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+$A=(4~;~7)$ \quad et \quad $B=(-2~;~1)$ &  $A=(-5~;~5)$ \quad et \quad $B=(15~;~2)$  \\
+$A=\left(\frac{1}{2}~;~3\right)$ \quad et \quad $B=\left(-4~;~\frac{7}{2}\right)$ &   $A=\left(\frac{-2}{3}~;~ \frac{3}{2}\right)$ \quad et \quad $B=\left(\frac{3}{2}~;~\frac{2}{3}\right)$
+\end{tabular}
+
+
+
+\subsection{Quadrilatère particulier}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(1;3)$ , $B=(3;6)$ , $C=(2;1)$ et $D=(4;4)$
+\begin{enumerate}
+	\item Déterminer les coordonnées de $M$ le milieu du segment $[AC]$
+	\item Déterminer les coordonnées de $N$ le milieu du segment $[BD]$
+	\item Quelle est la nature du quadrilatère $ABCD$ ?
+\end{enumerate}
+
+
+
+\subsection{Rajouter un point}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(3;4)$ , $B=(-1;1)$ et $C=(7;-3)$
+\begin{enumerate}
+	\item Déterminer les coordonnées de $I$ le milieu du segment $[AC]$
+	\item On considère le point $M=(x;y)$
+	\begin{enumerate}
+		\item Exprimer en fonction de $x$ et de $y$ les coordonnées de $J$ le milieu du segment $[BM]$
+		\item En déduire les coordonnées de $M$ pour lesquelles le quadrilatère $ABCM$ est un parallélogramme.
+	\end{enumerate}
+	\item En appliquant une méthode similaire, déterminer les coordonnées du point $N$ de sorte que le quadrilatère $ANBC$ soit un parallélogramme.
+\end{enumerate}
+
+
+
+\subsection{Dans un carré}
+On considère un carré $ABCD$ et on rapporte le plan au repère $(A,B,D)$
+\begin{enumerate}
+	\item Le repère choisi est-il orthonormé ?
+	\item Donner les coordonnées des points $A$, $B$, $C$ et $D$
+	\item Placer dans ce repère le point $I$ milieu du segment $[BC]$, le point $M$ symétrique de $D$ par rapporte à $I$ et le point $N$ symétrique de $D$ par rapport à $B$
+	\item Déterminer par le calcul les coordonnées des points $I$, $M$ et $N$
+	\item Quelle est la nature du quadrilatère $DCMA$ ? Justifier
+	\item Montrer que le quadrilatère $CBNM$ est un parallélogramme.
+\end{enumerate}
+
+
+
+\subsection{Parallèles}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(-1;3)$, $B=(3;5)$ et $C=(-4;-2)$
+\begin{enumerate}
+	\item Déterminer les coordonnées du point $M$ le symétrique de $A$ par rapport au point $C$
+	\item Déterminer les coordonnées du point $N$ tel que $B$ soit le milieu du segment $[MN]$
+	\item Déterminer les coordonnées du point $P$ le symétrique de $N$ par rapport au point $A$
+	\item Montrer, sans utiliser les coordonnées, que les droites $(AB)$ et $(MP)$ sont parallèles.
+\end{enumerate}
+
+
+
+\subsection{Parallélogramme inscrit}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(x_A;y_A)$, $B=(x_B;y_B)$, $C=(x_C;y_C)$ et $D=(x_D;y_D)$ tels que $ABCD$ soit un parallélogramme.
+\begin{enumerate}
+	\item On note $H$ le centre du parallélogramme $ABCD$\\
+	Montrer que $H=\left(\frac{x_A+x_B+x_C+x_D}{4}~;~\frac{y_A+y_B+y_C+y_D}{4}\right)$
+	\item On considère les points $M$, $N$, $P$ et $Q$ les milieux respectifs des segments $[AB]$, $[BC]$, $[CD]$ et $[DA]$
+	\begin{enumerate}
+		\item Déterminer les coordonnées de $I$ le milieu de $[MP]$
+		\item Déterminer les coordonnées de $J$ le milieu de $[NQ]$
+		\item Que peut-on en conclure concernant la nature du quadrilatère $MNPQ$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Parallélogramme variable}
+On rapporte le plan au repère orthonormé $(O,I,J)$
+\begin{enumerate}\setlength{\itemsep}{1pt}
+	\item Pour $\alpha\in\RR$, on considère les points $A=(-5;1)$ , $B=(4;4)$, $C=(\alpha;\alpha+1)$ et $D=(\alpha;\alpha+5)$\\
+Pour quelle(s) valeur(s) de $\alpha$ le quadrilatère $ABCD$ est-il un parallélogramme ?
+	\item Pour $\beta\in\RR$, on considère les points $E=(1;1)$ , $F=(\beta;\beta-2)$, $G=(\beta-1;\beta)$ et $H=(\beta+2;\beta+1)$ \\
+Pour quelle(s) valeur(s) de $\beta$ le quadrilatère $EFGH$ est-il un parallélogramme ?
+\end{enumerate}
+
+
+
+
+
+
+\section{Distance dans le plan}
+
+\subsection{Pythagore}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(-1;3)$, $B=(3;6)$ et $C=(9;-2)$
+\begin{enumerate}
+	\item Calculer les longueurs $AB$, $AC$ et $BC$
+	\item Le triangle $ABC$ est-il rectangle ?
+\end{enumerate}
+
+
+
+\subsection{Étude d'un triangle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(-4;-1)$, $B=(1;8)$ et $C=(5;-6)$
+
+Déterminer la nature du triangle $ABC$
+
+
+
+\subsection{Inégalité triangulaire}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(-5;7)$, $B=(-1;4)$ et $C=(7;-2)$
+\begin{enumerate}
+	\item Calculer les longueurs $AB$, $AC$ et $BC$
+	\item Que peut-on en conclure concernant les points $A$, $B$ et $C$ ?
+\end{enumerate}
+
+
+
+\subsection{Sur un cercle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(2;7)$ et $B=(-6;1)$ \\
+On note $\Ccal$ le cercle de centre $A$ passant par le point $B$
+\begin{enumerate}
+	\item Déterminer le rayon du cercle $\Ccal$
+	\item Le point $M=(11;11)$ appartient-il au cercle $\Ccal$ ?
+	\item Et le point $N=(8;-1)$ ?
+\end{enumerate}
+
+
+
+\subsection{Cercle et disque}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(1;3)$ et $B=(5;6)$ \\
+On note $\Ccal$ le cercle de centre $A$ passant par le point $B$, et on appelle $\Dcal$ le disque de bord le cercle $\Ccal$
+
+Déterminer si chacun des points suivants appartient à $\Ccal$, à $\Dcal$ ou aucun des deux :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$C=(-2;4)$ & $D=(-2;7)$ & $E=(6;1)$ \\
+	$F=(-1;-3)$ & $G=(4;-1)$ & $H=(2;0)$
+\end{tabular}
+
+
+
+\subsection{Cercle inatteignable}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(4;3)$ et $B=(7;1)$ \\
+On note $\Ccal$ le cercle de centre $A$ passant par le point $B$
+\begin{enumerate}
+	\item Déterminer le rayon du cercle $\Ccal$
+	\item Justifier qu'aucun point d'abscisse négative ne peut appartenir au cercle $\Ccal$
+\end{enumerate}
+
+
+
+\subsection{Intersection de cercle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(2;1)$ et $B=(3;3)$ \\
+On note $\Ccal$ le cercle de centre $A$ passant par le point $B$
+\begin{enumerate}
+	\item Montrer que le rayon du cercle $\Ccal$ est $\sqrt{5}$
+	\item On considère un point $M=(x;0)$
+	\begin{enumerate}
+		\item Montrer que $AM=\sqrt{x^2-4x+5}$
+		\item En déduire que $M\in\Ccal \Leftrightarrow x^2-4x=0$
+		\item Donner alors les valeurs de $x$ pour lesquelles le point $M$ appartient au cercle $\Ccal$
+	\end{enumerate}
+	\item On considère un point $N=(0;y)$ \\
+	En appliquant une méthode similaire à celle de la question précédente, déterminer pour quelles valeurs de $y$ le point $N$ appartient au cercle $\Ccal$
+\end{enumerate}
+
+
+
+\subsection{Triangle rectangle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+Pour $\alpha\in\RR$, on considère les points $A=(4;-1)$, $B=(\alpha+1;4)$ et $C=(2;1-2\alpha)$
+\begin{enumerate}
+	\item Montrer que $AB^2=\alpha^2-6\alpha+34$
+	\item Montrer que $AC^2=4\alpha^2-8\alpha+8$
+	\item Montrer que $AB^2=5\alpha^2+10\alpha+10$
+	\item Déterminer pour quelle(s) valeur(s) de $\alpha$ le triangle $ABC$ est rectangle en $A$
+\end{enumerate}
+
+
+
+\subsection{Triangle isocèle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+Pour $\beta\in\RR$, on considère les points $A=(\beta;1)$, $B=(-3;\beta)$ et $C=(1+\beta;3+\beta)$
+
+\begin{enumerate}
+	\item Montrer que $AB^2=2\beta^2+4\beta+10$
+	\item Montrer que $AC^2=\beta^2+4\beta+5$
+	\item Montrer que $BC^2=\beta^2+8\beta+25$
+	\item Justifier que le triangle $ABC$ ne peut jamais être isocèle en $A$
+	\item Démontrer que le triangle $ABC$ est isocèle en $C$ si et seulement si il est aplati
+\end{enumerate}
+
+
+
+
+\section{Problèmes}
+
+\subsection{Rectangle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(-1;2)$, $B=(2;3)$, $C=(4;-3)$ et $D=(1;-4)$
+\begin{enumerate}
+	\item Démontrer que le quadrilatère $ABCD$ est un parallélogramme.
+	\item Montrer que le triangle $ABC$ est rectangle en $A$
+	\item En déduire que le quadrilatère $ABCD$ est un rectangle. S'agit-il d'un carré ?
+\end{enumerate}
+
+
+
+\subsection{Losange}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(6;9)$, $B=(5;1)$, $C=(-1;5)$ et $D=(-2;-3)$
+\begin{enumerate}
+	\item Démontrer que le quadrilatère $ABCD$ est un parallélogramme.
+	\item Montrer que le triangle $ABC$ est isocèle.
+	\item En déduire que le quadrilatère $ABCD$ est un losange. S'agit-il d'un carré ?
+\end{enumerate}
+
+
+
+\subsection{Points cocycliques}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(31;-1)$, $B=(-8;-14)$, $C=(27;21)$ et $D=(-17;13)$
+\begin{enumerate}
+	\item Montrer que le triangle $ABD$ est rectangle.
+	\item Montrer que le triangle $BCD$ est rectangle.
+	\item Justifier que les points $A$, $B$, $C$ et $D$ appartiennent tous à un même point donc on donnera le centre et un rayon.
+\end{enumerate}
+
+
+
+\subsection{Inscrit dans un cercle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(-2;-1)$, $B=(4;7)$ et $C=(5;0)$\\
+On note $\Ccal$ le cercle de diamètre $[AB]$
+\begin{enumerate}
+	\item Déterminer les coordonnées de $I$ le centre du cercle $\Ccal$
+	\item Montrer que le point $C$ appartient au cercle $\Ccal$
+	\item Montrer que le triangle $ABC$ est isocèle.
+	\item À quoi correspond la droite $(IC)$ pour le segment $[AB]$
+	\item En déduire la nature du triangle $ACI$
+\end{enumerate}
+
+
+
+\subsection{Enfin un carré ?}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(-2;1)$, $B=(2;2)$ et $C=(5;7)$
+\begin{enumerate}
+	\item Déterminer les coordonnées de $M$ le symétrique de $A$ par rapport au point $B$
+	\item Déterminer les coordonnées de $N$ le milieu du segment $[AC]$
+	\item Déterminer les coordonnées du point $P$  tel que $N$ soit le milieu du segment $[BP]$
+	\item Montrer que le triangle $PCM$ est isocèle rectangle.
+	\item Justifier que les droites $(BN)$ et $(CM)$ sont parallèles.
+	\item En déduire la nature du quadrilatère $BMCP$
+\end{enumerate}
+
+
+
+\subsection{Aires dans un cercle}
+On rapporte le plan au repère orthonormé $(O,I,J)$\\
+On considère les points $A=(3;0)$, $B=(2;-3)$, $C=(2;3)$ et $D=(0;1)$ \\
+On note $\Ccal$ le cercle de centre $A$ et passant par le point $D$
+\begin{enumerate}
+	\item Faire une figure dans un repère orthonormé. Elle sera complétée au fil de l'exercice.
+	\item \begin{enumerate}
+		\item Déterminer le rayon du cercle $\Ccal$
+		\item Montrer par le calcul que les points $B$ et $C$ appartiennent au cercle $\Ccal$
+	\end{enumerate}
+	\item On considère le point $E=(2;1)$
+	\begin{enumerate}
+		\item Justifier que $E$ est le projeté orthogonal du point $D$ sur la droite $(BC)$
+		\item En déduire l'aire du triangle $BCD$
+	\end{enumerate}
+	\item On considère $F$ le symétrique de $D$ par rapport au point $A$
+	\begin{enumerate}
+		\item Déterminer par le calcul les coordonnées du point $F$
+		\item Justifier que le triangle $DFB$ est rectangle. Est-il isocèle ?
+		\item Calculer la longueur $DF$ et en déduire l'aire du triangle $DFB$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Tout se déplace}
+On rapporte le plan au repère orthonormé $(O,I,J)$ \\
+Pour $k\in\RR$ on considère les points $A=(2;3)$ , $B=(5;4-2k)$ et $C=(3+k;6)$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Montrer que $AB=\sqrt{4k^2-4k+10}$
+		\item Montrer que $AC=\sqrt{k^2+2k+10}$
+		\item Montrer que $BC=\sqrt{5k^2-10k+8}$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Déterminer la valeur de $k$ pour laquelle le triangle $ABC$ est rectangle en $A$
+		\item Le triangle $ABC$ est-il alors isocèle ?
+	\end{enumerate}
+	\item Déterminer toutes les valeurs de $k$ pour lesquelles le triangle $ABC$ est isocèle en $A$
+	\item \begin{enumerate}
+		\item Exprimer en fonction de $k$ les coordonnées de $I$ le milieu du segment $[AB]$
+		\item Déterminer en fonction de $k$ les coordonnées du point $M$ de sorte que le quadrilatère $AMBC$ soit un parallélogramme.
+		\item Si le point $M$ se situe sur l'axe des abscisses, quelle est la nature du parallélogramme $AMBC$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\end{document}

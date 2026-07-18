@@ -1,0 +1,1223 @@
+\documentclass[oneside,12pt]{article}
+
+
+\input{../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../Latex/inputs/mymacros.tex}                 % Macros classiques
+\input{../../Latex/inputs/macro_paging.tex}				% Mise en page
+
+\fancyhead[R]{Stage d'avril}           				% En-tête droit
+\fancyhead[C]{2\up{nd} générale}                     % En-tête central
+
+\setstretch{0.9}                          				% Interligne
+
+\titleformat{\section}[frame]							% Style des section			
+    {\normalfont}
+    {\filright
+        \hspace{3mm} \bfseries Thème \no  \thesection\hspace{3mm}}
+        {-2pt}
+    {\huge\bfseries\filcenter}
+    {\vspace{-10pt}}
+\let\stdsection\section
+\renewcommand{\section}{\newpage\stdsection}
+    
+\titleformat*{\subsection}{\Large\bfseries}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Du calcul}
+
+\subsection{Fractions}
+
+\theoreme{Propriété des fractions}{
+Soient $a$ , $b$ , $c$ et $d$ quatre nombres réels non nuls. \\
+
+$\bullet\, \dfrac{a}{d} + \dfrac{b}{d}=\dfrac{a+b}{d}$ \qquad $\bullet\, \dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad+bc}{bd}$ \qquad $\bullet\, \dfrac{a}{b}\times\dfrac{b}{d}=\dfrac{ab}{cd}$ \qquad $\bullet\, \dfrac{\,\frac{a}{b}\,}{\frac{b}{d}} = \dfrac{ad}{bc}$
+}
+
+\methode{Calcul de fractions}{
+Pour additionner ou soustraire deux fractions de dénominateur différent il faut les transformer en fractions équivalentes de dénominateur commun
+}
+
+\exemple{Calculs de fractions}{
+$\bullet\, \frac{8}{7}+\frac{3}{7}=\frac{8+3}{7}=\frac{11}{7}$ \qquad\qquad $\bullet\, \frac{2}{3}\times\frac{12}{5}=\frac{2\times12}{3\times5}=\frac{24}{15}=\frac{3\times8}{3\times5}=\frac{8}{5}$ \\[5pt]
+
+$\bullet\, \frac{7}{12}-\frac{1}{3}=\frac{7}{12}-\frac{1\times4}{3\times4}=\frac{7}{12}-\frac{4}{12}=\frac{7-4}{12}=\frac{3}{12}=\frac{3\times1}{3\times4}=\frac{1}{4}$
+}
+
+
+
+\exercice{Simplification de fractions}{\restoreskip
+Simplifier au maximum chacune des expressions suivantes :
+
+    $A=\frac{5}{6}+\frac{3}{4}$ \hspace{1cm}
+    $B=\frac{1}{3}-\frac{1}{5}$ \hspace{1cm}
+    $C=\dfrac{\frac{3}{2}}{\frac{11}{4}}$ \hspace{1cm}
+    $D=\dfrac{\frac{7}{9}\times\frac{12}{15}}{\frac{4}{3}}$ \hspace{1cm}
+    $E=\dfrac{\frac{4}{5}\times\frac{15}{24}}{\frac{3}{7}\times\frac{21}{16}}$ \hspace{1cm}
+    $F=\dfrac{\frac{22}{7}-\frac{4}{3}}{\frac{1}{3}+\frac{4}{7}}$
+}
+
+
+
+\exercice{Grosses fractions}{%
+Écrire les nombres suivants sous forme de fraction irréductible :
+
+\renewcommand{\arraystretch}{3.1}
+\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    A = $\dfrac{\frac{1}{2}-\frac{3}{10}}{\frac{4}{3}-1}\times\dfrac{1-\frac{4}{5}}{\frac{1}{2}-\frac{1}{5}}$ & B = $\dfrac{\frac{8}{3}-2+\frac{1}{2}}{-4+\frac{3}{4}+\frac{5}{2}}-\dfrac{\frac{1}{2}-\frac{2}{3}+1}{\frac{1}{2}-\frac{3}{4}-1}$ 
+\end{tabular}
+}
+
+
+
+\subsection{Puissances}
+
+\theoreme{Propriété de calcul}{
+Soient $x$ et $y$ deux nombres réels. Soient $a$ et $b$ deux nombres entiers. \\[5pt]
+$\bullet\, x^a\times x^b=x^{a+b}$ \qquad $\bullet\, \dfrac{x^a}{x^b}=x^{a-b}$ \qquad $\bullet\, \left(x^a\right)^b=x^{ab}$ \qquad $\bullet\, x^a\times y^a=(xy)^a$ \qquad $\bullet\, \dfrac{x^a}{y^a}=\left(\dfrac{x}{y}\right)^a$
+}
+
+
+\exemple{Simplification de puissances}{
+ $\dfrac{3^8\times9^3}{3^5\times27^2}=\dfrac{3^8\times{(3^2)}^3}{3^5\times{(3^3)}^2}=\dfrac{3^8\times3^{2\times3}}{3^5\times3^{3\times2}} = \dfrac{3^8\times3^6}{3^5\times3^6}=\dfrac{3^{8+6}}{3^{5+6}}=\dfrac{3^{14}}{3^{11}}=3^{14-11}=3^3=27$
+}
+
+
+
+\exercice{Simplification}{
+Simplifier au maximum puis calculer si possible chacun des nombres suivants :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A=\dfrac{4^5}{(4^2)^2}$ & $B=7^3\times\left(\frac{7^6}{7^7}\right)^2$ & $C=2^6\times4^6\times8^{-5}$ \\
+    $D=2^{-3}\times3^3\times2^5\times3^{-2}$ & $E=\dfrac{\left(5^{-2}\times5^4\right)^2}{5\times25}$ & $F=\dfrac{\left(5^4\times7^6\right)^3}{\left(5^3\times7^5\right)^4}$ \\
+    $G=\dfrac{10^7\times2^5}{4^5\times5^5}$ & $H=\dfrac{2^7\times4^3}{8^5}$ & $I=\dfrac{3^9\times9^3}{81\times27^2}$ \\
+    $J = \dfrac{6^4\times2^7}{4^2\times3^6}$ & $K=\dfrac{12^5\times15^4}{3^{10}\times10^6}$ & $L=\dfrac{20^{21}\times21^{20}}{14^{15}\times15^{14}}$
+\end{tabular}
+}
+
+
+
+\subsection{Racines carrées}
+
+On rappelle les propriétés élémentaires de calcul avec des racines carrées :
+
+\begin{minipage}{0.5\linewidth}
+\theoreme{Propriétés}{
+Soient $a$ et $b$ deux nombres réels. On a alors :\\[5pt]
+$\bullet$ $\sqrt{a\times b}=\sqrt{a}\times\sqrt{b}$\\[5pt]
+$\bullet$ $\sqrt{\frac{a}{b}}=\frac{\sqrt{a}}{\sqrt{b}}$
+}    
+\end{minipage}
+\begin{minipage}{0.5\linewidth}\restoreskip
+    \exemple{Quelques simplifications}{
+    $\sqrt{288}=\sqrt{2}\times\sqrt{9}\times\sqrt{16}=\sqrt{2}\times3\times4=12\sqrt{2}$\\[10pt]
+    $\sqrt{\frac{27}{16}}=\frac{\sqrt{3}\times\sqrt{9}}{\sqrt{16}}=\frac{3\sqrt{3}}{4}$\\[10pt]
+    $\sqrt{6}\times\sqrt{3}\times\sqrt{2}=\sqrt{6\times3\times2}=\sqrt{36}=6$
+    }
+\end{minipage}
+
+
+
+\exercice{Simplification}{\vspace{-6pt}
+Écrire chacun des nombres suivants sous la forme $a\sqrt{b}$ avec $a$ et $b$ deux nombres entiers et $b$ le plus petit possible :
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A=\sqrt{27}$ & $B=\sqrt{72}$ & $C=\sqrt{192}$ \\
+    $D=\sqrt{288}$ & $E=\sqrt{15}\times\sqrt{10}$ & $F=\sqrt{8}\times\sqrt{48}$ \\
+    $G=\sqrt{6}\times\sqrt{15}\times\sqrt{8}$ & $ H=\sqrt{\frac{2}{7}}\times\sqrt{\frac{9}{4}}\times\sqrt{28}$ & $I=\sqrt{\frac{5}{4}}\times\sqrt{\frac{21}{2}}\times\sqrt{\frac{40}{7}}$
+\end{tabular}
+}
+
+
+
+\exercice{Poupées russes}{\vspace{-6pt}
+Écrire chacun des nombres suivants sous la forme d'un nombre entier :
+
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+    $A=\sqrt{21+\sqrt{11+\sqrt{22+\sqrt{7+\sqrt{4}}}}}$ & $B=\sqrt{1+\sqrt{5+\sqrt{12+\sqrt{\frac{13}{3}+7\sqrt{\frac{25}{9}}}}}}$
+\end{tabular}
+}
+
+
+
+\subsection{Distributivité}
+
+\exemple{Développement}{\\
+$\bullet\, \tikzmarknode{A}{2}x(\tikzmarknode{B}{3}+\tikzmarknode{C}{4x})=\textcolor{newblue}{2x\times3}+\textcolor{newred}{2x\times4x}=6x+12x^2$
+
+\begin{tikzpicture}[remember picture,overlay]
+	\draw[-Stealth,newblue,line width=1pt] (A)+(0,0.2) to[out=45,in=145]  ($(B)!6pt!(B)$); 
+	\draw[-Stealth,newred,line width=1pt] (A)+(0,0.2) to[out=50,in=135]  ($(C)!6pt!(C)$);
+\end{tikzpicture}
+
+\vspace{5pt}
+
+$\bullet\, (\tikzmarknode{A}{3x}-\tikzmarknode{B}{2})(\tikzmarknode{C}{2x}+\tikzmarknode{D}{1})=
+\textcolor{newblue}{3x\times2x}+\textcolor{newblue}{3x\times1}-\textcolor{newred}{2\times2x}-\textcolor{newred}{2\times1}=
+6x^2+3x-4x-2 = 6x^2-x-2$
+\begin{tikzpicture}[remember picture, overlay]
+	\draw[-Stealth,newblue,line width=1pt] (A)+(0,0.2) to[out=55,in=140, looseness = 0.75] ($(C)!6pt!(C)$) ;
+    \draw[-Stealth,newblue,line width=1pt]  (A)+(0,0.2) to[out=60,in=130, looseness = 0.75] ($(D)!6pt!(D)$) ;
+        
+    \draw[-Stealth,newred,line width=1pt] (B)+(0,-0.25) to[out=-50,in=-135] ($(C)!-6pt!(C)$) ;
+    \draw[-Stealth,newred,line width=1pt]  (B)+(0,-0.25 ) to[out=-60,in=-140] ($(D)!-6pt!(D)$) ;
+\end{tikzpicture}
+\vspace{5pt}
+}
+
+
+
+\exercice{Développement}{
+Développer et réduire chacune des expressions suivantes à l'aide de la distributivité :
+
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A = 3x(2x-1)$ & $B = 4x^2\left(\frac{1}{x}-\frac{1}{2}\right)$ & $C = (3x+2)(1-x)$ \\
+    $D = \left(\frac{2x}{3}+1\right)\left(\frac{3}{4}-\frac{x}{2}\right)$ & $E =\left(\frac{2}{x}-3\right)(4+3x)$ & $F = \left(2x-\frac{3}{2x}\right)\left(\frac{1}{x}+x\right)$
+\end{tabular}
+}
+
+
+
+\exemple{Factorisation}{\restoreskip
+Pour factoriser une expression, il faut repérer un facteur commun puis l'extraire de l'expression en le mettant devant une paire de parenthèses comme suit : 
+
+$15x+35=\textcolor{newblue}{5}\times3x+\textcolor{newblue}{5}\times7=\textcolor{newblue}{5}(3x+7)$
+
+Il est possible de repérer plusieurs facteurs communs :
+
+$4x^2-14x=\textcolor{newblue}{2}\times\textcolor{newblue}{x}\times2x-\textcolor{newblue}{2}\times\textcolor{newblue}{x}\times7=\textcolor{newblue}{2x}(2x-7)$
+}
+
+
+
+\exercice{Factorisations simples}{
+Factoriser au maximum chacune des expressions suivantes en repérant des facteurs communs :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=12+9$ & $B=6x^2+7x$ & $C=15x-6x^2$ \\
+	$D=21x^3+9x+15x^2$ & $E=7x^9+9x^7$ & $F=22x^5+121x^3$
+\end{tabular}
+}
+
+
+\exercice{Factorisations affines}{
+Factoriser au maximum chacune des expressions suivantes en repérant des facteurs communs :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+	$A=3x(2x-7)+8(2x-7)$ & $B=(x+3)(2x-1)+(x-3)(3+x)$ \\
+	$C=(4x+11)(3x-5)-(3x-5)(2x-5)$ & $D=(2x+3)^2-(7x-8)(3+2x)$ \\
+	$E=(3x+2)(6x+3)-6x-3$ & $F=(4-5x)^2+5x-4$
+\end{tabular}
+}
+
+
+
+\subsection{Identités remarquables}
+
+\theoreme{Identités remarquables}{
+Les trois identités remarquables ci-contre sont à apprendre et à savoir utiliser dans les deux sens !
+\[(a+b)^2=a^2+2ab+2b^2\]
+\[(a-b)^2=a^2-2ab+b^2\]
+\[(a+b)(a-b)=a^2-b^2\]
+}
+
+
+\exercice{Factorisation}{
+Factoriser chacune des expression suivantes à l'aide d'une identité remarquable :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=x^2+6x+9$ & $B=x^2-2x+1$ & $C=x^2-16$ \\
+	$D=4x^2-12x+9$ & $E=25x^2-49$ & $F=9x^2+30x+25$ \\
+	$G=121x^2-64$ & $H=4x^2-26x+169$ & $H=144x^2+144x+36$
+\end{tabular}
+}
+
+
+
+\exercice{Factorisation affine}{
+Factoriser chacune des expressions suivantes à l'aide d'une identité remarquable :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth} }
+	$A=(3x+2)^2-(x+1)^2$ & $B=(x+2)^2+2(x+2)(x-1)+(x-1)^2$ \\
+	$C=(x+5)^2-(2-3x)^2$ & $D=(x^2+4)^2-(3+5x)^2$ \\
+	$E=(2x-3)^2-6(2x-3)+9$ & $F={(7-2x^2)}^2-(3x^2+5)^2$
+\end{tabular}
+}
+
+
+
+\subsection{Manipulations algébriques}
+
+\exercice{Factorisation affine}{
+On considère $x$ un nombre réel non nul. Simplifier au maximum les fractions suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=\dfrac{1}{2}+\dfrac{x+1}{x}-\dfrac{2+x}{2x}$ & $B=\dfrac{1}{3}-\dfrac{x-1}{x}+\dfrac{2x^2-x}{x^2}$ & $C=\dfrac{1+\frac{1}{x}}{1-\frac{x-1}{x}}$
+\end{tabular}
+}
+
+
+
+
+\section{Vecteurs}
+
+\subsection{Sur les vecteurs}
+
+\definition{Vecteur}{
+\begin{minipage}{0.6\linewidth}
+    Un \textbf{vecteur} est un objet mathématique permettant de décrire un mouvement de \textbf{translation} que l'on représente par une flèche. \\[5pt]    
+    Il est caractérisé par 3 paramètres : \\[5pt]    
+    $\bullet$ Sa \textbf{direction} $\rightarrow$ la droite sur laquelle il s'aligne \\
+    $\bullet$ Son \textbf{sens} $\rightarrow$ le côté choisi dans sa direction \\
+    $\bullet$ Sa \textbf{norme} $\rightarrow$ la longueur du déplacement \\[5pt]
+    On note les vecteurs avec des flèches au-dessus de leur nom.
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[line width=2pt,-Stealth] (-1,-2) node {\Large$\bullet$} -- node[below right] {$\mathbold{\vv{u}}$} (3,1);
+        \draw[dashed] (5,2.5)--(-2,-2.75);
+        \draw [thick,-Stealth,color=blue] (3.5,-0.5)  node[right] {Sens} to [out=180,in=-90] (2.8,0.5);
+        \draw [thick,-Stealth,color=blue] (2.5,2.5)  node[left] {Direction} to [out=15,in=120] (4,2);
+        \draw [thick,color=blue, Stealth-Stealth] (-1.25,-1.7)-- node[above,rotate=37] {Norme} (2.7,1.25) ;
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+\definition{Entre deux points}{
+Soient $A$ et $B$ deux points distincts du plan.\\
+Pour décrire la translation permettant de relier le point $A$ au point $B$ on parlera du vecteur $\mathbold{\vv{AB}}$
+}
+
+
+\theoreme{Caractéristiques du vecteur $\vv{AB}$}{ \vspace{3pt}
+\begin{enumerate}
+    \item La direction du vecteur $\vv{AB}$ est la même que celle de la droite $(AB)$
+    \item Le sens de $\vv{AB}$ est \og de $A$ vers $B$ \fg
+    \item La norme de $\vv{AB}$ est la longueur $AB$
+\end{enumerate}
+}
+
+
+
+\definition{Vecteur nul}{
+Pour décrire l'absence de déplacement, on utilise le \textbf{vecteur nul} noté $\vv{0}$
+}
+
+
+\theoreme{Milieu d'un segment}{
+\begin{minipage}{0.4\linewidth}
+	Le point $M$ est le \textbf{milieu} du segment $[AB]$ si et seulement si $\vv{AM}=\vv{MB}$
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=0.6]
+    	\draw[-Stealth , line width = 1pt] (0,0) node{x} node[below] {$A$} -- (5.825,0.975)  ;
+    	\draw[-Stealth , line width = 1pt] (6,1) node{x} node[below] {$M$} -- (11.825,1.975) ;
+    	\draw (12,2) node{x} node[below] {$B$} ;
+	\end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\exercice{Milieu}{\vspace{5pt}
+\begin{enumerate}
+	\item Construire un triangle $ABC$ quelconque.
+	\item Placer le point $D$ tel que $\vv{CD}=\vv{AB}$
+	\item Placer le point $E$ tel que $\vv{EC}=\vv{AB}$
+	\item Que peut-on dire du point $C$ par rapport au segment $[DE]$ ? Justifier.
+\end{enumerate}
+}
+
+
+
+\theoreme{Parallélogramme}{
+$ABCD$ est un \textbf{parallélogramme} si et seulement si $\vv{AB}=\vv{DC}$
+}
+
+
+
+\exercice{Extension d'un triangle}{
+On considère un triangle $ABC$. On note $I$ le milieu du segment $[BC]$ \\
+On considère le point $M$ vérifiant $\vv{AI}=\vv{IM}$. 
+
+Quelle est la nature du quadrilatère $ABMC$ ?
+}
+
+
+
+\definition{Somme de vecteurs}{\restoreskip
+\begin{minipage}{0.6\linewidth}
+    Soient deux vecteurs $\vv{u}$ et $\vv{v}$.
+    
+    Si l'on enchaîne successivement les deux translations décrites par les vecteurs $\vv{u}$ et $\vv{v}$ alors on dira que l'on a effectué une translation de vecteur $\vv{u}+\vv{v}$
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw[-Stealth , line width = 1pt] (0,0) -- node[above] {$\vv{u}$} (3,2) ;
+        \draw[-Stealth , line width = 1pt] (5,2.5) -- node[above] {$\vv{v}$} (7,1.5) ;
+        \draw[dashed,-Stealth , line width = 1pt] (3,2) -- node[above] {$\vv{v}$} (4.825,1.05) ;
+        \draw[color=blue,-Stealth , line width = 1pt] (0,0) -- node[below] {$\vv{u}+\vv{v}$}  (5,1) ;
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\remarque{
+On voit sur la figure ci-dessus qu'il est essentiel d'effectuer la translation de vecteur $\vv{v}$ en partant du point d'arrivée de première translation.
+}
+
+
+
+
+\begin{minipage}{0.55\linewidth}
+    \definition{Vecteurs opposés}{\restoreskip \vspace{5pt}
+    On dit que deux vecteurs $\vv{u}$ et $\vv{v}$ sont \textbf{opposés} si \vspace{-10pt} $$\vv{u}+\vv{v}=\vv{0}$$\\[-20pt]
+    On note alors $\vv{v}=-\vv{u}$
+    }
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \theoreme{Vecteurs opposés}{
+    Pour tous points $A$ et $B$, $\vv{AB}+\vv{BA}=\vv{0}$
+    }
+\end{minipage}
+
+
+
+\definition{Produit par un nombre positif}{
+\begin{minipage}{0.475\linewidth} \restoreskip
+    Multiplier un vecteur $\vv{u}$ par un nombre positif $k$ revient à \textbf{multiplier sa norme} par $k$.
+    
+    Ses autres caractéristiques demeurent inchangées.
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}[scale=0.75]
+         \draw[-Stealth , line width = 1pt] (0,0) -- node[above] {$\vv{u}$} (4,2) ;
+         \draw[-Stealth , line width = 1pt] (0,-2) -- node[pos=1,right] {$2\times\vv{u}$} (8,2) ;
+         \draw[-Stealth , line width = 1pt] (5,-1) -- node[pos= 1 ,right] {$\frac{1}{2}\times\vv{u}$} (7,0) ;
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\exercice{Construction sur parallélogramme}{
+Construire un parallélogramme $ABCD$, puis placer les points $I$, $J$ et $K$ vérifiant les égalités suivantes :
+
+$\vv{CI}=\vv{DB}+\frac{1}{2}\vv{AD}$ \qquad $\vv{BJ}=2\vv{CD}-\frac{1}{2}\vv{CB}$ \qquad $\vv{DK}=\vv{AC}+2\vv{BA}+\frac{1}{2}\vv{DA}$
+}
+
+
+
+\theoreme{Relation de Chasles}{
+Soient $A$, $B$ et $C$ trois points du plan. Alors $\vv{AB}+\vv{BC}=\vv{AC}$
+}
+
+
+
+\exercice{Dans un rectangle}{
+On considère un rectangle $ABCD$, ainsi que les points $I$ et $J$ milieux respectifs des segments $[AB]$ et $[BC]$
+\begin{enumerate} \setlength{\itemsep}{1pt}
+	\item Montrer que $\vv{IB}+\vv{IJ}+\frac{1}{2}\vv{AD}=\vv{AC}$
+	\item Montrer que $\vv{AC}+3\vv{JB}+\vv{BD}=\vv{JC}$
+	\item Montrer que $2\vv{IJ}-\vv{AB}+\vv{DI}=\vv{IB}$
+\end{enumerate}
+}
+
+
+
+\definition{Colinéarité}{
+On dit de deux vecteurs $\vv{u}$ et $\vv{v}$ qu'ils sont colinéaires s'ils ont la même direction.
+}
+
+
+\theoreme{Colinéarité}{
+Deux vecteurs $\vv{u}$ et $\vv{v}$ sont colinéaires si et seulement si il existe $k\in\RR$ tel que $\vv{u}=k\times\vv{v}$
+}
+
+\remarque{Cette propriété vient du fait que lorsque l'on multiplie un vecteur par un nombre, sa norme peut être multipliée, son sens peut changer, mais sa direction est toujours identique.}
+
+
+\exercice{Relation de colinéarité}{\restoreskip
+On considère quatre points distincts $A$, $B$, $C$ et $D$.\\
+Dans chacune des situations suivantes, montrer que les vecteurs $\vv{u}$ et $\vv{v}$ sont colinéaires :
+
+a) $\vv{u}=2\vv{AB}-\vv{AC}$ \qquad et \qquad $\vv{v}=6\vv{AB}-3\vv{AC}$
+
+b) $\vv{u}=3\vv{BC}+\vv{AD}$ \qquad et \qquad $\vv{v}=6\vv{BC}-2\vv{DA}$
+
+c) $\vv{u}=4\vv{AB}-2\vv{BD}$ \qquad et \qquad $\vv{v}=3\vv{BD}+6\vv{BA}$
+
+d) $\vv{u}=2\vv{AB}+\vv{BC}$ \qquad et \qquad $\vv{v}=2\vv{AB}+2\vv{AC}$
+}
+
+
+
+\begin{minipage}{0.48\linewidth}
+    \theoreme{Alignement}{
+    Trois points du plan $A$, $B$ et $C$ sont alignés si et seulement si $\vv{AB}$ et $\vv{AC}$ sont colinéaires.
+    }
+\end{minipage}\hfill
+\begin{minipage}{0.48\linewidth}
+    \remarque{
+    On aurait pu choisir les vecteurs $\vv{BC}$ et $\vv{BA}$, ou bien les vecteurs $\vv{CA}$ et $\vv{CB}$
+    }
+\end{minipage}
+
+
+
+\exercice{Alignement}{\vspace{-5pt}
+On considère un parallélogramme $EFGH$ et on définit les points $I$ et $J$ par  $\vv{EI}=2\vv{EH}$ \\et $\vv{FJ}=2\vv{EF}-\vv{EH}$
+\begin{enumerate} \setlength{\itemsep}{2pt}
+	\item Montrer que $\vv{GI}=\vv{FH}$
+	\item Montrer que $\vv{GJ}=2\vv{HF}$
+	\item que peut-on en conclure concernant les points $G$, $I$ et $J$ ?
+\end{enumerate}
+}
+
+
+\subsection{Systèmes de coordonnées}
+
+Dans cette section le plan sera rapporté au repère orthonormé $(O~;~I;~;J)$
+
+\theoreme{Milieu}{
+On considère les points $A\smeq(x_A~;~y_A)$ et $B\smeq(x_B~;~y_B)$ et on note $\mathbold M$ le \textbf{milieu du segment} $[AB]$\\
+Les coordonnées du point $M$ sont alors $\left(\frac{x_A+x_B}{2}~;~\frac{y_A+y_B}{2}\right)$
+}
+
+
+\theoreme{Distance}{
+Soient les points $A\smeq(x_A~;~x_B)$ et $B\smeq(x_B~;~y_B)$
+
+La \textbf{distance} entre les points $A$ et $B$ vaut alors $AB=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$
+}
+
+
+
+\exercice{Sur un cercle}{
+On considère les points $A\smeq(2~;~7)$ et $B\smeq(-6~;~1)$ \\
+On note $\Ccal$ le cercle de centre $A$ passant par le point $B$
+\begin{enumerate}\setlength{\itemsep}{3pt}
+	\item Déterminer le rayon du cercle $\Ccal$
+	\item Le point $M\smeq(11~;~11)$ appartient-il au cercle $\Ccal$ ?
+	\item Et le point $N\smeq(8~;~-1)$ ?
+\end{enumerate}
+}
+
+
+\exercice{Un rectangle}{
+On considère les points $A\smeq(-1~;~2)$ , $B\smeq(2~;~3)$ , $C\smeq(4~;~-3)$ et $D\smeq(1~;~-4)$
+\begin{enumerate}\setlength{\itemsep}{3pt}
+	\item Démontrer que le quadrilatère $ABCD$ est un parallélogramme.
+	\item Montrer que le triangle $ABC$ est rectangle en $A$
+	\item En déduire que le quadrilatère $ABCD$ est un rectangle. S'agit-il d'un carré ?
+\end{enumerate}
+}
+
+
+
+\subsection{Vecteurs et coordonnées}
+
+
+\definition{Coordonnées d'un vecteur}{
+\begin{minipage}{0.65\linewidth}
+    On rapporte le plan au repère orthonormé $\Oij$.\\
+    On peut alors décomposer le déplacement du vecteur $\vv{u}$ en deux déplacement : un dans la direction des abscisses et l'autre dans la direction des ordonnées.\\
+    On note les coordonnées du vecteur $\vv{u}$ en colonne
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[scale=0.65]
+        \begin{axis}[xmin=-2,xmax=3,ymin=-2,ymax=2,axis lines=middle,ytick distance=1,xtick distance=1,
+        grid=major, ticklabel style = {opacity=0}, enlargelimits = { abs = 0.2 }]
+            \draw[line width=2pt,-Stealth] (-1,-2) node {\Large$\bullet$} -- node[below right] {\Large $\vcoord{u}{4\\3}$} (3,1);
+            \draw[color=newblue,thick,dashed,-Stealth] (-1,-2)-- node[left] {+3} (-1,0.8);
+            \draw[color=newblue,thick,dashed,-Stealth] (-1,1)-- node[above] {+4} (2.7,1);
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\theoreme{Calcul vectoriel}{
+Lorsque l'on somme ou que l'on multiplie des vecteurs par des réels, il suffit d'effectuer les \textbf{opérations} sur chacune de leurs \textbf{coordonnées}.
+}
+
+\exemple{Somme et produit de vecteurs}{
+Soient $\vcoord{u}{-1\\3}$ et $\vcoord{v}{2\\2}$. On pose $\vv{w}=2\vv{v}-3\vv{u}$\\
+On a alors $\vv{w}=2\times\matrice{2\\2}-3\times\matrice{-1\\3}=\matrice{4\\4}+\matrice{3\\-9}=\matrice{7\\-5}$
+}
+
+
+
+\theoreme{Avec des points}{
+On considère deux points du plan $A\smeq(x_A~;~y_A)$ et $B\smeq(x_B~;~y_B)$\\
+Alors le vecteur $\vv{AB}$ a pour coordonnées $\vcoord{AB}{x_B-x_A\\y_B-y_A}$
+}
+
+
+
+\exercice{Par le calcul}{
+On munit le plan du repère $\Oij$ et on considère les points $M\smeq(4~;~-1)$ , $N\smeq(7~;~3)$ et $P\smeq(-2~;~-5)$
+
+Déterminer par le calcul les coordonnées des vecteurs $\vv{NM}$ , $\vv{MP}$ et $\vv{PN}$
+}
+
+
+\exercice{Relations vectorielles}{
+On munit le plan du repère $\Oij$ et on considère les points $A\smeq(2~;~1)$ et $B\smeq(-3~;~3)$
+\begin{enumerate}
+	\item Déterminer les coordonnées du vecteur $\vv{AB}$
+	\item Déterminer par le calcul les coordonnées du point $M$ vérifiant l'égalité $\vv{AM}=\vv{BA}$
+	\item Déterminer par le calcul les coordonnées du point $N$ vérifiant l'égalité $\vv{BN}=2\vv{BA}$
+	\item Vérifier que $\vv{AM}+\vv{BN}=\vv{AB}$
+\end{enumerate}
+}
+
+
+
+\definition{Déterminant}{
+Soient deux vecteurs $\vcoord{u}{x\\y}$ et $\vcoord{v}{x'\\y'}$. On définit le \textbf{déterminant} des vecteurs $\vv{u}$ et $\vv{v}$ par \vspace{-8pt}
+\[\det(\vv{u};\vv{v})=xy'-x'y\]
+}
+
+
+
+\theoreme{Colinéarité}{
+Deux vecteurs $\vv{u}$ et $\vv{v}$ sont \textbf{colinéaires} si et seulement si leur \textbf{déterminant est nul}.
+}
+
+
+\exercice{Colinéarité}{
+On munit le plan du repère $\Oij$ \\
+Déterminer dans chacune des situations suivantes si les vecteurs $\vv{u}$ et $\vv{v}$ sont colinéaires.
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+	a) $\vcoord{u}{3\\5}$ et $\vcoord{v}{-2\\6}$ & b) $\vcoord{u}{4\\6}$ et $\vcoord{v}{3\\9}$ \\
+	c) $\vcoord{u}{12\\-6}$ et $\vcoord{v}{-4\\8}$ & d) $\vcoord{u}{-36\\24}$ et $\vcoord{v}{4\\-3}$ \\
+\end{tabular}
+}
+
+
+\section{Fonctions numériques}
+
+\subsection{Généralités}
+
+\definition{Domaine de définition}{
+On appelle \textbf{domaine de définition} d'une fonction $f$ l'ensemble des nombres réels $x$ admettant une image par la fonction $f$.
+}
+
+\exemple{Déterminer un domaine de définition}{
+On considère la fonction $f:x\mapsto\dfrac{x+4}{x-1}$
+
+Le nombre $f(x)$ existe dès lors que l'on n'essaie pas d'effectuer une division par zéro. Il faut donc s'assurer que $x-1\neq0$ c'est à dire $x\neq1$
+
+Ainsi $\Dcal_f=]-\infty~;~1[\cup]1~;~+\infty[ = \RR\setminus\{1\}$
+}
+
+
+\exercice{Domaines de définition}{
+Déterminer le domaine de définition de chacune des fonctions suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f_1:x\mapsto 3x^2-x$ & $f_2:x\mapsto \dfrac{3x+1}{2x+4}$ & $f_3:x\mapsto \dfrac{x^3-9}{5x+1}$ \\
+	$f_4:x\mapsto \sqrt{x-3}$ & $f_5:x\mapsto x-\sqrt{2x+10}$ & $f_6:x\mapsto 5x^2+\sqrt{5+x^2}$ 
+\end{tabular}
+}
+
+
+
+\definition{Courbe représentative}{
+\begin{minipage}{0.6\linewidth}
+	On appelle la \textbf{courbe représentative} d'une fonction $f$ l'ensemble des points du plan de coordonnées $\left(x~;~f(x)\right)$ avec $x$ un réel quelconque appartenant à l'ensemble de définition de la fonction $f$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}
+        \begin{axis}[
+        height = 5cm , width = 8cm ,
+        xmin = -2 , xmax = 2 , ymin = -1 , ymax = 3 ,
+        axis lines = middle , ytick distance = 1 , xtick distance = 1,
+        grid=major,
+        ticklabel style = {opacity=0},
+        enlargelimits = { abs = 0.2 }
+        ]
+
+		\addplot[samples = 100 , color = newred , line width = 2pt , domain = -3:3]
+		{0.5*(x^3+2*x^2-3*x)};
+		
+		\draw[color=newred] (1.5,0.5) node {$\Ccal_f$} ;
+		\draw[color=newred , dashed , line width = 1pt] (-1,0) node[below] {$x$} -- (-1,2) -- (0,2) node[right] {$f(x)$} ;
+		
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\exercice{Zig et zag}{
+On considère la fonction $g$ définie par $g(x)=\dfrac{(2-x)(x+1)(x+4)}{4}$  \\
+On note $\Ccal_g$ sa courbe représentative dans un repère orthonormé.
+\begin{enumerate}
+	\item Compléter le tableau de valeurs ci-après : \\[1pt]
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|} \hline
+			$x$ & $-5$ & $-4$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ \\ \hline
+			$g(x)$ & & & & & & & & & \\ \hline
+		\end{tabular}\\
+	\item Dans un repère orthonormé, représenter l'allure de $\Ccal_g$ sur l'intervalle $[-5;3]$
+\end{enumerate}
+}
+
+
+
+\exercice{Étude graphique}{
+On a représenté dans le repère ci-dessous la courbe $\Ccal_f$ représentative de la fonction $f$.
+
+\begin{minipage}{0.35\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        	height = 7.5cm , width = 8.5cm ,
+        	xmin = -3, xmax = 3, ymin = -1, ymax = 4, xtick distance=1, ytick distance=1,
+            grid = major, major grid style = {line width = 0.2pt , draw = gray},
+            axis lines = middle, enlargelimits = { abs = 0.2 },
+            ticklabel style = {font = \small }
+            ]
+  
+        \addplot[line width = 2pt , domain=-3:-1, samples=100, color=newblue]   
+        {0.5*x^3+3*x^2+4.5*x+1}; 
+        \addplot[line width = 2pt , domain=-1:1, samples=100, color=newblue]  
+        {-1.25*x^3+3.75*x+1.5};
+        \addplot[line width = 2pt , domain=1:3, samples=100, color=newblue]  
+        {0.75*x^3-4.5*x^2+6.75*x+1};
+        
+        \draw[color=blue!80!black] (2.5,2.5) node {$\Ccal_f$};
+        
+        \end{axis}
+    \end{tikzpicture}                                               
+\end{minipage} \hspace{1cm}
+\begin{minipage}{0.65\linewidth}
+Vous serez aussi précis$\cdot$es que le permet le graphique.\\
+    \begin{enumerate} \setlength{\itemsep}{1mm}
+		\item Déterminer l'image de $1$ et $-1$ par la fonction $f$
+		\item Déterminer $f(2,5)$ et $f(0)$
+		\item Déterminer le(s) antécédent(s) de $4$ par la fonction $f$
+		\item Combien $1$ admet-il d'antécédents par la fonction $f$ ?
+		\item Peut-on affirmer que $f(3)=f(-3)$ ?
+		\item Déterminer les antécédents de $0$ par la fonction $f$
+		\item Déterminer un nombre $x$ tel que $f(x)=x$
+		\item Déterminer un nombre $x$ vérifiant $f(-x)>f(x)$
+    \end{enumerate}
+\end{minipage} 
+}
+
+
+
+\exercice{Vroum vroum}{
+\begin{minipage}{0.5\linewidth} \restoreskip
+	Wayan effectue un trajet en voiture. La courbe ci-après décrit la distance parcourue par Wayan en fonction du temps écoulé depuis son départ.
+	
+	Toutes les vitesses seront données en km/h.
+	\begin{enumerate}
+		\item Quelle a été la vitesse moyenne de Wayan lors de son trajet ?
+		\item Quelle distance a-t-il parcouru lors des quarante premières minutes de route ?
+		\item Il y avait des embouteillages lors des dix derniers kilomètres du trajet. Combien de temps Wayan a-t-il passé dans ces embouteillages ?
+		\item Entre la 40-ième et la 60-ième minute de son trajet, Wayan circulait sur une voie limitée à 80km/h. Semble-t-il qu'il ait respecté cette limitation de vitesse ?
+	\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.1]
+        \begin{axis}[xmin=0 , xmax=120 , ymin=0 , ymax=100, 
+		axis lines = middle, 
+		x label style={at = {(axis description cs:1,-0.125)} , anchor=east},
+        xlabel = \small{Temps (min)},
+        y label style={rotate=90 , at = {(axis description cs:-0.125,1)} , anchor=east},
+        ylabel = \small{Distance (km)},
+		grid=both , 
+        xtick distance = 10, ytick distance = 10,
+    	major grid style = {line width = 0.2pt ,draw = gray},
+    	minor tick num=1 ,
+    	minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+			
+			\addplot[domain = 0:120 , line width = 2pt , color = newred , samples = 100]
+			{53.65*tanh(\x/35-1.5)+48.57};	
+			
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\subsection{Variations et extremums}
+
+\definition{Notion de croissance}{
+On considère un intervalle $I$
+
+$\bullet$ On dit qu'une fonction $f$ est \textbf{croissante} sur $I$ si pour tous réels $a,b\in I$ , $a\leq b \Longleftrightarrow f(a)\leq f(b)$
+
+\hspace{1cm} Intuitivement on dira que $f$ conserve les inégalités.
+
+$\bullet$ On dit qu'une fonction $f$ est \textbf{décroissante} sur $I$ si pour tous réels $a,b\in I$ , $a\leq b \Longleftrightarrow f(a)\geq f(b)$
+
+\hspace{1cm} Intuitivement on dira que $f$ inverse les inégalités.
+}
+
+
+
+\exercice{Monotonie parabolique}{
+On considère la fonction $g$ définie sur $\RR$ par $g(x)=x^2-2x$
+
+Soient $a$ et $b$ deux réels quelconques.
+\begin{enumerate}
+	\item Montrer que $f(b)-f(a)=(b-a)(a+b-2)$
+	\item On suppose que $1<a<b$
+	
+	\begin{enumerate}
+		\item Montrer que $f(b)-f(a)>0$
+		\item En déduire que la fonction $f$ est croissante sur l'intervalle $[1;+\infty[$
+	\end{enumerate}
+\end{enumerate}
+}
+
+
+
+\begin{minipage}{0.6\linewidth}
+\definition{Extremums}{
+On considère un intervalle $I$
+
+$\bullet$ On dit que $M$ est le \textbf{maximum} de la fonction $f$ sur $I$ si :
+
+\hspace{1cm} $i)$ Pour tout $x\in I$ , $f(x) \leq M$ \\[1pt]
+\phantom{} \hspace{8.5mm} $ii)$ Il existe un certain $x_0\in I$ tel que $f(x_0)=M$
+
+On dira alors que la fonction $f$ atteint son maximum en $x_0$
+
+$\bullet$ On dit que $m$ est le \textbf{minimum} de la fonction $f$ sur $I$ si :
+
+\hspace{1cm} $i)$ Pour tout $x\in I$ , $f(x) \geq m$ \\[1pt]
+\phantom{} \hspace{8.5mm} $ii)$ Il existe un certain $x_0\in I$ tel que $f(x_0)=m$
+
+On dira alors que la fonction $f$ atteint son minimum en $x_0$
+}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+	\definition{Monotonie}{
+	On dit qu'un fonction $f$ est \textbf{monotone} sur un intervalle $I$ si elle y est toujours croissante, ou toujours décroissante.
+	}
+\end{minipage}
+
+
+\exercice{Déterminer un extremum}{
+On considère la fonction $f$ définie sur $\RR$ par $f(x)=x^2-8x+23$
+\begin{enumerate}
+	\item Démontrer que $f(x)=(x-4)^2+5$
+	\item En déduire que $f(x)\geq5$
+	\item Calculer $g(4)$ et en déduire le minimum de la fonction $f$ sur $\RR$
+\end{enumerate}
+}
+
+
+
+\theoreme{Tableau de variations}{
+Pour représenter de manière concise les variations d'une fonction $f$, on utilise un tableau de variation dans lequel on représente la monotonie de la fonction $f$ sur différents intervalles ainsi que ses extremums locaux.
+}
+
+\exemple{Un tableau de variations}{
+\begin{minipage}{0.4\linewidth}
+\begin{tikzpicture}
+	\tkzTabInit[color , colorV=gray!25 , colorL=gray!25 , espcl=1.6]
+		{$x$ / 1 , $f(x)$ / 2} {$-5$ , $1$ , $4$ , $11$}
+	\tkzTabVar{-/ $-1$ , +/ $3$ , -/ $0$ , +/ $7$}
+\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.58\linewidth} \restoreskip
+	D'après le tableau de variations ci-contre, on peut affirmer que : 
+	
+	$\bullet$ La fonction $f$ est définie sur $[-5~;~11]$
+	
+	$\bullet$ La fonction $f$ est croissante sur $[-5~;~1]$ et sur $[4~;~11]$
+	
+	$\bullet$ La fonction $f$ est décroissante sur $[1~;~4]$
+\end{minipage}
+}
+
+
+
+
+\exercice{D'après les courbes}{ \restoreskip
+On a tracé ci-après les courbes représentatives des fonctions $f$, $g$ et $h$ :
+
+\hspace{-3mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[scale=0.875]
+        \begin{axis}[xmin=-5 , xmax=4 , ymin=-2 , ymax=5,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        \addplot[color=red!80!black , samples = 100 , domain = -5:-2 , line width = 2pt]
+        {0.2956*x^3+3.11*x^2+8.915*x+6.7};
+        \addplot[color=red!80!black , samples = 100 , domain = -2:1 , line width = 2pt]
+        {-0.44*x^3-0.67*x^2+2.67*x+3.44};
+        \addplot[color=red!80!black , samples = 100 , domain = 1:4 , line width = 2pt]
+        {0.52*x^3-3.89*x^2+6.22*x+2.15};
+        
+        \draw[color=red!80!black] (2.5,3.5) node {$\Ccal_f$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[scale=0.875]
+        \begin{axis}[xmin=-4 , xmax=4 , ymin=-3 , ymax=4,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        \addplot[color=blue!80!black , samples = 100 , domain = -4:-2 , line width = 2pt]
+        {-1.25*x^3-11.25*x^2-30*x-21};
+        \addplot[color=blue!80!black , samples = 100 , domain = -2:-1 , line width = 2pt]
+        {12*x^3+54*x^2+72*x+28};
+        \addplot[color=blue!80!black , samples = 100 , domain = -1:1 , line width = 2pt]
+        {-0.75*x^3+2.25*x-0.5};
+        \addplot[color=blue!80!black , samples = 100 , domain = 1:4 , line width = 2pt]
+        {0.3*x^3-2.235*x^2+3.56*x-0.63};
+        
+        \draw[color=blue!80!black] (2.5,0.5) node {$\Ccal_g$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[scale=0.875]
+        \begin{axis}[xmin=-4 , xmax=4 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        \addplot[color=green!70!black , samples = 100 , domain = -4:-3 , line width = 2pt]
+        {-4*x^3-42*x^2-144*x-161};
+        \addplot[color=green!70!black , samples = 100 , domain = -3:-1 , line width = 2pt]
+        {x^3+6*x^2+9*x+1};
+        \addplot[color=green!70!black , samples = 100 , domain = -1:1 , line width = 2pt]
+        {-1.5*x^3+4.5*x};
+        \addplot[color=green!70!black , samples = 100 , domain = 1:3 , line width = 2pt]
+        {x^3-6*x^2+9*x-1};
+        \addplot[color=green!70!black , samples = 100 , domain = 3:4 , line width = 2pt]
+        {-4*x^3+42*x^2-144*x+161};
+        
+        \draw[color=green!70!black] (2.5,-1.5) node {$\Ccal_h$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+Compléter les tableaux de variations suivants :
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{red!80!black}
+	\tikzset{node style/.style = {
+		inner sep = \tkzTabDefaultSep,
+		outer sep = \tkzTabDefaultSep
+		}
+	}
+	\tkzTabInit[color , colorV=red!80!black!15 , colorL=red!80!black!15 , colorC=black!10 , colorT=black!10 , espcl = 5]
+		{ $x$ /0.75 , $f(x)$ /1.7}{$-5$ , {\dots} ,  {\dots} , $4$}
+	\tkzTabVar
+		{+/ \vphantom{I}\dots , -/ \dots , +/ \vphantom{I}\dots , -/ {\dots}}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{blue!80!black}
+	\tkzTabInit[color , colorV=blue!80!black!15 , colorL=blue!80!black!15 , colorC=black!10 , colorT=black!10 , espcl = 15/4]
+		{ $x$ /0.75 , $g(x)$ /1.7}{$-4$ ,  {\dots} , {\dots} , {\dots} ,$4$}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{green!70!black}
+	\tkzTabInit[color , colorV=green!70!black!15 , colorL=green!80!black!15 , colorC=black!10 , colorT=black!10 , espcl = 3]
+		{ $x$ /0.75 , $h(x)$ /1.7}{$-4$ , {\dots} , {\dots} , {\dots} , {\dots} , $4$}
+\end{tikzpicture}
+}
+
+
+
+
+\exercice{Comparaison}{\restoreskip \vspace{5pt}
+On a dressé ci-après le tableau de variations d'une fonction $f$ :
+
+\begin{tikzpicture}
+	\tkzTabInit[color , colorV=black!25 , colorL=black!25 , colorC=black!10 , colorT=black!10 , espcl=3.75]
+			{$x$ / 1 , $f(x)$ / 1.5} {$-7$ , {$2,1$} , $3$ , $10$ , $13$}
+	\tkzTabVar{-/ $1$ , +/ {$4,9$} , -/ $-3$ , +/ $0$ , -/ $-1$}
+\end{tikzpicture}
+
+Déterminer s'il est possible de comparer les nombres suivants et, le cas échéant, les comparer :
+
+	\renewcommand{\arraystretch}{1.5} \phantom{}\hspace{-10mm}
+	\begin{tabular}{P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth}}
+		$f(-5)$ et $f(5)$ & $f(-1)$ et $f(1)$ & $f(9)$ et $f(10)$ & $f(8)$ et $f(11)$ \\
+		$f(-2)$ et $f(2)$ & $f(3)$ et $f(12,3)$ & $f(-4)$ et $f(0)$ & $f(-6)$ et $f(12)$
+	\end{tabular}
+}
+
+
+
+\section{Pourcentages et évolutions}
+
+\exercice{Mise en jambe}{
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{9cm} p{9cm}}
+    1. Combien font 16$\%$ de 25$\%$ ? & 
+    2. Combien font 90$\%$ de 110$\%$ ? \\
+    3. Combien font 55$\%$ de 20$\%$ ? & 
+    4. Combien font 15$\%$ de 120$\%$ ? \\
+    5. Quelle proportion de 80 donne 65 ? &
+    6. Quelle proportion de 130 donne 39 ? \\
+    7. Quelle proportion de 75 donne 12 ? &
+    8. Quelle proportion de 36 donne 63 ? \\
+\end{tabular}
+}
+
+
+
+\definition{Variation absolue}{
+Si une quantité ayant une valeur initiale $V_I$ évolue et atteint une valeur finale $V_F$, on dira que sa \textbf{variation absolue} est la quantité $\Delta V=V_F-V_I$
+}
+
+\definition{Taux d'évolution}{\restoreskip
+Le \textbf{taux d'évolution} est un nombre positif permettant de décrire la \textbf{variation relative }d'une quantité.
+
+Si une quantité ayant une valeur initiale $V_I$ évolue et atteint une valeur finale $V_F$, on dira que sa \textbf{variation relative} est la quantité $t=\dfrac{V_F-V_I}{V_I}$
+
+Une hausse de $x\%$ correspond à un taux d'évolution $t=\frac{x}{100}$\\
+Une diminution de $x\%$ correspond à un taux d'évolution $t=\frac{-x}{100}$
+}
+
+
+
+\exercice{Variations}{
+Dans chacune des situations suivantes, déterminer la variations absolue et la variation relative :
+\begin{enumerate}
+    \item Une veste coûtant 250\euro\, est soldée à 175\euro
+    \item La commande d'Ava coûtait 50\euro, mais en incluant les frais de port et les taxes elle devra finalement payer 65\euro
+    \item Raj a préparé 6L de soupe. Après avoir servi tout le monde, il n'en reste plus qu'un quart.
+    \item Dans la ferme de Maeva il y avait 40 vaches, et la moitié d'entre elles ont mis bas pendant l'année. Malheureusement 5 d'entre elles ont dû être abattues à cause d'une maladie infectieuse.
+\end{enumerate}
+}
+
+
+
+\exercice{Le prix d'un toit}{
+Le loyer de Jimmy est de 800\euro\, par mois, ce qui correspond à 40$\%$ de son salaire.
+\begin{enumerate}
+    \item Quel est le salaire de Jimmy ?
+    \item Jimmy reçoit un promotion de 5$\%$, quel est son nouveau salaire ?
+    \item Son propriétaire conduit des travaux dans l'appartement et augmente alors le loyer de 10$\%$. \\
+    Quelle proportion de son salaire Jimmy doit-il maintenant verser chaque mois ?
+\end{enumerate}
+}
+
+
+\exemple{Déterminer une valeur initiale}{\restoreskip
+Un article dans un magasin est soldé à -40\% et coûte actuellement 72\euro. Quel était son prix de vente initial?
+
+Une diminution du prix de 40\% correspond à un taux d'évolution $t=-0,4$\\
+De plus la valeur finale de l'article est $V_F=72$\\
+En reprenant la formule ci-dessus, on obtient alors :
+
+$-0,4=\dfrac{72-V_I}{V_I} \Leftrightarrow -0,4\times V_I=72-V_I \Leftrightarrow V_I-0,4V_I=72 \Leftrightarrow 0,6V_I=72 \Leftrightarrow V_I=\dfrac{72}{0,6}=120$
+}
+
+
+
+\exercice{Valeurs initiale et finale}{
+Recopier et compléter le tableau suivant :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|} \hline
+    Valeur initiale & ~120~ & ~330~ & & ~480~ & & 220 & & ~15~& ~90~ \\ \hline
+    Valeur finale & ~140~ & & ~27~ & ~360~ & ~150~ & & 105 & ~90~ & ~15~ \\ \hline
+    Évolution & & $\nearrow 30\%$ & $\nearrow 50\%$ & & $\searrow20\%$ & $\searrow90\% $ & $\nearrow110\% $& & \\ \hline
+\end{tabular}
+}
+
+
+\definition{Coefficient multiplicateur}{
+Si une quantité ayant une valeur initiale $V_I$ évolue et atteint une valeur finale $V_F$, on dira que le \textbf{coefficient multiplicateur} associé à cette évolution est $CM=\dfrac{V_F}{V_I}$
+}
+
+
+\theoreme{$CM$ et taux}{
+Le coefficient multiplicateur et le taux d'évolution sont liés par une formule simple :
+$CM=1+t$
+} 
+
+
+\exercice{Coefficient multiplicateur}{
+Recopier et compléter le tableau suivant :\\[5pt]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|} \hline
+    Évolution & $\nearrow 40\%$ & & & $\searrow 31\%$ & & & & $\nearrow 123\%$ \\ \hline
+    Taux d'évolution & & ~0.77~ & & & & ~-0.17~ & & \\ \hline
+    Coefficient multiplicateur & & & ~1.15~ & & ~0.8~ & & ~2.34~ & \\ \hline
+\end{tabular}
+}
+
+
+
+
+\theoreme{Évolutions successives}{
+Si une quantité subit des évolutions successives de coefficients multiplicateurs respectifs $CM_1$, $CM_2$, \ldots et $CM_n$, alors elle subit une évolution globale dont le coefficient multiplicateur est :
+\[CM_G=CM_1\times CM_2\times\ldots CM_n\]
+}
+
+\exercice{Allers et retours}{
+Une quantité augmente de 10\%, puis diminue de 10\%. Plus tard elle diminue de 20\% puis augmente de 20\%. Encore plus tard, elle augmente de 30\% et diminue de 30\%.
+
+Quelle évolution globale a-t-elle subie ?
+}
+
+
+
+\section{Résolution d'équations}
+
+\exemple{Équation du premier degré}{
+    $\begin{WithArrows}[format = cc]
+    & 3x-2=8-7x   \Arrow{On ajoute 2 de chaque côté} \\
+    \Leftrightarrow  & 3x=10-7x \Arrow{On ajoute $7x$ de chaque côté} \\
+    \Leftrightarrow  & 10x=10\Arrow{On divise par 10 de chaque côté} \\
+    \Leftrightarrow  & x=1 
+    \end{WithArrows}$
+}
+
+
+
+\exercice{Mise en jambe}{
+Résoudre dans $\RR$ les équations suivantes :
+
+\renewcommand{\arraystretch}{1.9}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    a) $3x+2=1$ & b) $2x-7=5x+2$ & c) $\dfrac{3x}{2}-5=\dfrac{2x+3}{5}$\\
+    d) $\dfrac{2x}{5}-\dfrac{2}{3}=\dfrac{1}{2}+x$ & e) $\dfrac{x+1}{2}=\dfrac{3x+3}{4}$ & f) $\dfrac{x}{2}-\dfrac{x}{3}=\dfrac{x}{6}$
+\end{tabular}
+}
+
+
+
+\exercice{C'est toujours du premier degré !}{
+Résoudre dans $\RR$ les équations suivantes :\\[5pt]
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.33\linewidth}}
+    a) $x(x+3)=(x+2)^2$ & b) $x^2+3x-1=(x-3)^2$ & c) $(2x+1)^2=(2x+2)(2x+3)$
+\end{tabular}
+}
+
+
+
+\exemple{Équation produit nul}{
+    $\begin{WithArrows}[format = lccc]
+    & & (3x-2)(8-7x)=0 & \Arrow{On sépare les facteurs} \\
+    \Leftrightarrow\; & 3x-2=0 & \text{ou} & 8-7x=0 \Arrow[jump=2]{On résout séparément} \\
+    \Leftrightarrow & 3x=2 & \text{ou} & 7x=8 \\
+    \Leftrightarrow & x=\frac{2}{3} & \text{ou} & x=\frac{8}{7}
+    \end{WithArrows}$ \\[5pt]
+    On obtient alors $S=\left\{\dfrac{2}{3}~~;~~\dfrac{8}{7}\right\}$
+}
+
+
+
+\exercice{3 : Équations produit nul}{
+Factoriser si possible puis résoudre chacune des équations suivantes dans $\RR$ :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth}p{0.33\linewidth}p{0.3\linewidth}}
+    a) $(5x-3)(7-14x)=0$ & b) $(2x+6)(4x-32)(x-2)=0$ & c) $x(x+1)(x+2)=0$ \\
+    d) $3x^2+15x=0$  & e) $4x^2-9=0$ & f) $2x(3-9x)-8(3x-9)=0$
+\end{tabular}
+}
+
+
+\methode{Mise en équation}{
+Pour résoudre un problème à l'aide d'une équation on peut distinguer quelques étapes essentielles :
+\begin{enumerate}
+    \item Repérer les valeurs qui nous sont inconnues
+    \item En choisir une qui sera notre inconnue principale : $x$
+    \item Utiliser l'énoncé pour exprimer les autres valeurs à l'aide de $x$
+    \item Repérer des relations entre ces valeurs pour écrire une équation
+    \item Résoudre l'équation
+\end{enumerate}
+}
+
+
+
+\exercice{10 de plus ou de moins}{
+Sabri dit : « il y a 10 ans, j’avais la moitié de l’âge que j’aurai dans 10 ans.
+
+Quel est l’âge de Sabri ?
+}
+
+\exercice{Pour quelques billes}{    
+J'ai trois fois plus de billes que Timothée et Lucile en a cinq fois plus. Si j'en avais 10 de plus et Lucile 8 de moins, nous en aurions tous les deux autant. 
+
+Combien chacun de nous trois a-t-il de billes ?
+}
+
+
+\exercice{Ça fait un peu jeune non ?}{    
+La somme des âges de Lin, de son père et de sa grand-mère est 90 ans. La grand-mère a le double de l’âge du père et l’âge de Lin est le tiers de celui de son père. 
+    
+Quel est l’âge de chacun ?
+}
+
+    
+	
+\exercice{La grande bouffe}{
+Il était prévu de demander 40 € à chacun des convives d'un banquet. Mais au dernier moment, il a été décidé d'offrir leur repas à 3 d'entre elles. Pour cette raison, la somme finalement demandée à chacun des convives payant se monte à 47,50 €.
+
+Combien il y aura-t-il de personnes présentes à ce banquet ?
+}
+
+
+	
+\exercice{Multiples}{
+La somme de quatre multiples de 7 consécutifs est égale à 238.
+
+Déterminer  ces quatre nombres.
+}
+
+
+	
+\exercice{Bon ça suffit}{
+Une mère a 30 ans de plus que sa fille. Dans 7 ans elle sera 4 fois plus âgée que sa fille. 
+
+Quel est l'âge de la fille ?
+}
+
+
+\end{document}

@@ -1,0 +1,227 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 % Macros classiques
+
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Nombres et ensembles}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Ensembles usuels}
+
+\subsection{Manipulation des symboles}
+On considère les ensembles suivants :
+
+$A=\{1~;~2~;~4~;~8\}$ \qquad $B=\left\{1~;~11~;~-3~;~2~;~4~;~0~;~\pi~;~8~;~-21~;~\frac{1}{3}\right\}$ \qquad $C=\left\{-3~;~\pi~;~0~;~-\frac{1}{3}\right\}$
+
+Compléter les pointillés par le symbole adapté parmi : $\in$ , $\notin$ , $\subset$ et $\not\subset$
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth}}
+    $A\ldots B$ & $B\ldots A$ & $A\ldots C$ & $C \ldots A$ \\
+    $B \ldots C$ & $C \ldots B$ & $4 \ldots A$ & $\{4\} \ldots A$ \\
+    $\{\pi~;~1\} \ldots B$ & $\{\pi~;~1\} \ldots C$ & $\emptyset \ldots A$ & $0 \ldots C$ \\
+    $\{0~;~1~;~2\} \ldots A$ & $\{0~;~1~;~2\} \ldots B$ & $\{0~;~1~;~2\} \ldots C$ & $B \ldots B$
+\end{tabular}
+
+
+
+\subsection{Ensembles usuels}
+Compléter les pointillés par le symbole adapté parmi : $\in$ , $\notin$ , $\subset$ et $\not\subset$
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth}}
+    $23 \ldots \NN$ & $\frac{-123}{3} \ldots \ZZ$ & $\NN \ldots \RR$ & $\frac{87}{8} \ldots \QQ$ \\
+    $\QQ \ldots \DD$ & $\left\{\frac{1}{2}~;~\frac{1}{5}\right\} \ldots \DD$ & $\left\{3~;~\frac{1}{3}\right\} \ldots \QQ$ & $\emptyset \ldots \RR$ \\
+    $\left\{\frac{2}{3}~;~\frac{3}{2}\right\} \ldots \DD$ & $-1,234 \ldots \QQ$ & $\frac{0,1}{0,02} \ldots \NN$ & $\left\{\frac{7}{40} ~;~\frac{49}{40}\right\} \ldots \DD$
+\end{tabular}
+
+
+
+\subsection{Détour décimal}
+Justifier que chacun des nombres suivants sont des nombres décimaux en les écrivant sous la forme $\frac{a}{10^n}$ avec $a\in\ZZ$ et $\nN$ :
+
+\begin{tabular}{p{0.23\linewidth} p{0.23\linewidth} p{0.23\linewidth} p{0.23\linewidth}}
+	$A=-3,46$ & $B=\frac{6}{5}$ & $C=\frac{17}{4}$ & $D=\frac{-9}{25}$ \\
+	$E=\frac{1,1}{50}$ & $F=\frac{-77}{5^4}$ & $G=\frac{1}{2^3\times5^5}$ & $H=\frac{144}{5\times20^6}$
+\end{tabular}
+
+
+
+\subsection{Appartenance}
+Remplir chacune des cases du tableau suivant avec le symbole $\in$ ou $\notin$
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{| P{3cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+	$x$ & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
+	$\frac{1,3}{2}$ & & & & & \\ \hline
+	$\sqrt{2}$ & & & & & \\ \hline
+	$-\frac{4}{3}$ & & & & & \\ \hline
+	$(-3)^5$ & & & & & \\ \hline
+	$0,00196\times10^5$ & & & & & \\ \hline
+	$\frac{432}{12}$ & & & & & \\ \hline
+\end{tabular}
+\end{center}
+
+
+
+\section{Intervalles et opérations sur les ensembles}
+
+\subsection{Définition}
+Pour chaque encadrement ou inégalité ci-après, écrire dans quel intervalle se situe le nombre $x$ :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $-2\leq x <5$ & b) $x\geq-7$ & c) $8<x\leq108$ \\
+	d) $x>9$ & e) $-7<x\leq-3$ & f) $x\leq36$ \\
+	g) $0<x<11$ & h) $x<1$ & i) $-22<x<22$
+\end{tabular}
+
+
+
+\subsection{Décalage}
+Pour chaque encadrement ou inégalité ci-après, écrire dans quel intervalle se situe le nombre $x$ :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $-6<x+5<6$ & b) $4\leq2x<12$ & c) $-2\leq\frac{x}{3}\leq1$ \\
+	d) $-18<x-7\leq-3$ & e) $\frac{2}{3}<x+\frac{1}{2}<\frac{4}{5}$ & f) $\frac{1}{2}<\frac{4}{5}x\leq\frac{3}{4}$
+\end{tabular}
+
+
+
+\subsection{Inéquations}
+Résoudre chacune des inéquations suivantes en donnant l'ensemble de solutions sous la forme d'un intervalle :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $3x-1\geq0$ & b) $4x+8<17$ & c) $\frac{x}{2}-5>4$ \\
+	d) $\frac{2x}{3}+1\leq 2$ & e) $\frac{5x-11}{4}\geq-3$ & f) $\frac{3}{7}x-\frac{2}{3}<\frac{5}{2}$
+\end{tabular}
+
+
+
+\subsection{Encadrements linéaires}
+Pour chacun des encadrements suivants, déterminer l'intervalle dans lequel se situe le nombre $x$ :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $5\leq2x+1\leq10$ & b) $-2\leq3x-2<4$ & c) $-17\leq5x+3\leq23$ \\
+	d) $14\leq\frac{x}{3}+10<20$ & e) $1<\frac{x}{7}-2<4$ & f) $-3<\frac{x+4}{5}\leq2$
+\end{tabular}
+
+
+
+\subsection{Union et intersection}
+Décrire chacun des ensembles suivants à l'aide d'un unique intervalle :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=[1;5]\cap[3;10]$ & $B=]-2;3[\cap[0;8]$ & $C=[-9;9[\cap[6;103[$ \\
+	$D=]-7;22]\cap[-4;19[$ & $E=[4;21]\cup[11;34[$ & $F=]-5;3[\cup]1;16]$ \\
+	$G=]-100;200]\cup]0;100]$  & $H=]12;51[\cap]-2;12]$ & $I=[-\pi;12[\cup[-3;4\pi[$
+\end{tabular}
+
+
+
+\subsection{Opérations non bornées}
+Décrire chacun des ensembles suivants à l'aide d'un unique intervalle :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=[2;+\infty[\cap]-6;10]$& $BB=]-\infty;7]\cup[1;13]$ & $C=[10;+\infty]\cap]-\infty;21[$ \\
+	$D=[10;+\infty]\cup]-\infty;21[$ & $E=]-\infty;-8[\cap[8;+\infty[$ & $F=]-1;+\infty[\cup]-\infty;1]$
+\end{tabular}
+
+
+
+
+
+
+\section{Valeur absolue}
+
+\subsection{Calcul}
+Calculer chacune des expression suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=\abs{3}$ & $B=\abs{-5}$ & $C=\abs{(-2)^3}$ \\
+	$D=\abs{-2}^3$ & $E=-\abs{-11}$ & $F=\abs{2+\abs{-2}}$ \\
+	$G=4-\abs{4-\abs{4}}$ & $H=\abs{1+\frac{\abs{-1}}{-1-\abs{-1}}}$ & $I=\abs{\frac{6+\abs{-7}}{6-\abs{-7}}}$
+\end{tabular}
+
+
+
+\subsection{Premières équations}
+Résoudre dans $\RR$ chacune des équations suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $\abs{x}=3$ & b) $\abs{2x}=14$ & c) $\abs{x-2}=6$ \\
+	d) $\abs{3x}=-1$ & e) $\abs{x-6}=4$ & f) $\abs{x+4}=1$
+\end{tabular}
+
+
+
+\subsection{Équations affines}
+Résoudre dans $\RR$ chacune des équations suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $\abs{2x-3}=5$ & b) $\abs{3x-2}=7$ & c) $\abs{\frac{x}{2}-1}=11$ \\
+	d) $2\abs{x-6}=9$ & e) $\abs{5x+10}=15$ & f) $\abs{4x+\frac{5}{3}}=\frac{1}{3}$
+\end{tabular}
+
+
+
+\subsection{Égalité sous condition}
+Écrire chacune des expressions suivantes sans valeur absolue en utilisant la condition donnée sur le nombre $x$ :
+
+\begin{tabular}{P{0.25\linewidth} p{0.2\linewidth} | P{0.25\linewidth} p{0.2\linewidth}}
+	$A = \abs{x-1}$ & avec $x\geq3$ & $B = \abs{x-1}$ & avec $x\in[-7;2[$ \\
+	$C = \abs{3x+2}$ & avec $x<-1$ & $D = \abs{3x+2}$ & avec $x\in[1;+\infty[$ \\
+	$E = \abs{x+\abs{-x}}$ & avec $x\in[0;+\infty[$ & $F = \abs{x+\abs{-x}}$ & avec $x<0$ \\
+	$G = \abs{-3-\abs{x+2}}$ & avec $x\in[2;5[$ & $H = 3+\abs{\abs{x}-5}$ & avec $x\in[1;4]$ \\
+	$I = \abs{2+\abs{x-1}}$ & avec $x\leq0$ & $J = \abs{1+\abs{1+2x}}$ & avec $x\leq-1$ \\
+	$K = \abs{\abs{x-2}-\abs{2x-1}}$ & avec $x\in\left[0;\frac{1}{4}\right]$ & $L = \abs{1-\abs{2-\abs{x}}}$ & 		avec $x>3$
+\end{tabular}
+
+
+
+\subsection{Inéquations simples}
+Résoudre dans $\RR$ chacune des inéquations suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $\abs{x}\leq3$ & b) $\abs{x}<2$ & c) $\abs{3x}\leq4$ \\
+	d) $\abs{x}>5$ & e) $\abs{2x}\geq7$ & f) $\abs{5x}>1$
+\end{tabular}
+
+
+
+\subsection{Inéquations translatées}
+Résoudre dans $\RR$ chacune des inéquations suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $\abs{x-6}\leq4$ & b) $\abs{x+3}\leq9$ & c) $\abs{x-11}<14$ \\
+	d) $\abs{x-10}\geq2$ & e) $\abs{x-40}>17$ & f) $\abs{x+19}\geq21$
+\end{tabular}
+
+
+
+\subsection{Recentrer les intervalles}
+Écrire chacun des intervalles suivants sous la forme $[a+d;a-d]$ avec $a$ un nombre réel et $d$ un nombre strictement positif, puis les décrire à l'aide d'une valeur absolue :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$A=[-5;7]$ & $B=[11;28]$ & $C[-28;9]$ \\
+	$D=\left[\frac{1}{2};10\right]$ & $E=\left[\frac{5}{3};\frac{7}{2}\right]$ & $F=\left[\frac{-11}{3};\frac{11}{5}\right]$
+\end{tabular}
+
+
+
+
+
+\end{document}
+

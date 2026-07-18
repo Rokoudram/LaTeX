@@ -1,0 +1,487 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
+\fancyhead[C]{Nombres complexes}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Calcul et forme algébrique}
+
+\subsection{Puissances de $i$}
+\begin{enumerate}
+    \item Déterminer la valeur de $\frac{1}{i}$
+    \item Calculer $i^2, i^3, i^4$ et $i^5$
+    \item En déduire la valeur de $i^{2023}$ et celle de $i^{123456}$
+\end{enumerate}
+
+
+
+\subsection{Forme algébrique de sommes et produits}
+Donner la forme algébrique chacun des nombres suivants, en précisant la partie réelle et la partie imaginaire :\\
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+    $z_1=(2i-5)-(i+4)$ & $z_2=(1-i)(3+2i)$ & $z_3=i(2-i)-4(i^2+3i)$ \\
+    $z_4=i(2-2i)^2$ & $z_5=(7i+2)(i-3)^2$ & $z_6=(1-i)^3$ \\
+    $z_7=(i+\sqrt{3})^3$ & $z_8=(1+i)^4$ & $z_9=(\sqrt{2}+i\sqrt{6})^5$
+\end{tabular}
+
+
+
+\subsection{Forme algébrique de quotients}
+Donner la forme algébrique de chacun des quotients suivants :\\
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+    $z_1=\frac{1}{1+i}$ & $z_2=\frac{-2}{i+\sqrt{2}}$ & $z_3=\frac{3+i}{1-2i}$ \\
+    $z_4=\frac{(2i-3)^2}{i+4})$ & $z_5=\left(\frac{3+i}{1+2i}\right)^2$ & $z_6=\frac{\sqrt{2}+i\sqrt{6}}{(\sqrt{6}+\sqrt{2})+i(\sqrt{6}-\sqrt{2})}$ \\
+\end{tabular}
+
+
+
+\subsection{Équations dans $\CC$}
+Résoudre dans $\CC$ les équations suivantes :\\
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $z+2i=iz-1$ & b) $(3i+2)(z-i)=i$ & c) $(3-i)z+2=(2-1)z+i$\\
+    d) $(4-2i)z=(i+5)z^2$ & e) $(z+i)^2=2iz$ & f) $\frac{1}{z}=-5+3i$ \\
+    g) $\frac{z}{z-2i}=3+i$ & h) $\frac{iz}{i-z}=\frac{1}{1-i}$ & k) $\frac{z+2i}{2z+1}=1+i$
+\end{tabular}
+
+
+\subsection{Équations avec conjugué}
+Résoudre dans $\CC$ les équations suivantes : \\
+\begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+    a) $ 2z+i=\barre{z}$ & b) $2\barre{z}-z=3i+2$ \\
+    c) $\barre{z}-2z=3i+2$ & d) $(z-1)(\barre{z}-i)=1+i$ 
+\end{tabular}
+
+
+
+\subsection{Changement de variable}
+Pour $z\in\CC\backslash\{-1\}$ on pose $Z=\frac{z}{1+z}$
+\begin{enumerate}
+	\item Montrer que $Z$ est réel si et seulement si $z$ est réel.
+	\item Montrer que si $z$ a une partie réelle strictement positive, alors $Z$ n'est pas un imaginaire pur.
+\end{enumerate}
+
+
+
+\subsection{Transformation plus compliquée}
+Pour $z\in\CC$ non nul on note $z'=z-\frac{1}{z}$
+
+Montrer que $z'$ est réel si et seulement si $z$ est réel.
+
+
+
+\subsection{Vrai / Faux}
+Déterminer si les affirmations suivantes sont vraies ou fausses :
+\begin{enumerate}\setlength{\itemsep}{0.5mm}
+	\item $\Reel(z+\barre{z})=\Imag(z-\barre{z})$
+    \item $\left(\Reel(1+i)\right)^2=\Reel\left((1+i)^2\right)$
+    \item $\Reel(z^2)=\Reel(z)^2 \Leftrightarrow z=\barre{z}$
+    \item $\Imag\left(\frac{1}{z}\right)=\dfrac{\Imag(z)}{z\barre{z}}$
+    \item $\Imag(z)+i\Reel(z)=i\barre{z}$
+    \item $\Imag(\Reel(z))=\Reel(\Imag(z)) \Leftrightarrow z\in\RR$
+\end{enumerate}
+
+
+
+\section{Polynômes dans $\CC$}
+
+\subsection{Sur l'intérêt des nombres complexes}
+\begin{enumerate}
+    \item  Résoudre dans $\CC$ les équations suivantes :
+    
+    \begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+        a) $z^2-2z+2=0$ & b) $z^2+6z+13=0$ & c) $2z^2-3z+4=0$
+    \end{tabular}
+
+    \item Résoudre dans $\CC$ les systèmes d'équations suivants :
+
+    \renewcommand{\arraystretch}{1}
+    \begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+        $\accol{z+w=2\\z\times w=3}$ & $\accol{z(w+1)=3\\w(z+1)=2}$ & $\accol{z^2+2w\,^2=1\\2z+w=3}$ 
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Polynôme de dergé 3}
+On considère le polynôme $R:z\mapsto z^3+z-10$
+\begin{enumerate}
+	\item Déterminer $x_0$ une racine réelle évidente de $R$
+	\item Déterminer un polynôme $P$ de degré 2 tel que $R(z)=(z-x_0)P(z)$
+	\item Déterminer l'ensemble des racines de $R$
+\end{enumerate}
+
+
+\subsection{Coefficients complexes, racines réelles ?}
+Pour tout $z\in\CC$  on pose $\mu(z)=2z^3+(3+6i)z^2+(1+9i)z+3i$
+\begin{enumerate}
+	\item Montrer que le polynôme $\mu$ admet une racine imaginaire pure notée $z_0$
+	\item Factoriser $\mu(z)$ par $(z-z_0)$
+	\item Résoudre alors l'équation $\mu(z)=0$
+\end{enumerate}
+
+
+
+\subsection{Degré 3 à coefficients complexes}
+On considère le polynôme $P$ défini par $P(z)=z^3-(6+2i)z^2+(10+12i)z-20i$
+\begin{enumerate}
+    \item Montrer que le polynôme $P$ admet une racine $z_1$ qui est un imaginaire pur.
+    \item Déterminer un polynôme $Q$ tel que $P(z)=(z-z_1)Q(z)$
+    \item Résoudre $P(z)=0$
+\end{enumerate}
+
+
+
+\subsection{Polynôme de degré 4}
+On considère le polynôme $P$ défini par $P(z)=z^4-iz^3+8z-8i$
+\begin{enumerate}
+	\item Montrer que $P$ admet une racine réelle $z_1$
+	\item Montrer que $P$ admet une racine imaginaire pure $z_2$
+	\item En déduire que $P(z)=\left[z^2+(2-i)z-2i\right]Q(z)$ avec $Q$ un polynôme de degré 2.
+	\item Donner toutes les racines de $P$ sous forme exponentielle. 
+\end{enumerate}
+
+
+
+\subsection{Racines de $i$}
+\begin{enumerate}
+    \item Déterminer les \og racines carrées \fg du nombre $i$, c'est à dire les nombre $\zC$ tels que $z^2=i$
+    \item Déterminer les \og racines cubiques \fg du nombre $i$, c'est à dire les nombres $w\in\CC$ tels que $w^3=i$
+\end{enumerate}
+
+
+
+\subsection{Racines carrées complexes}
+Déterminer les racines carrées complexes des nombres suivants :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}p{0.3\textwidth}}
+    $z_1=2-2i$ & $z_2=3+4i$ & $z_3 = 5i-8$\\
+    $z_4=\frac{1+i}{i-2}$ & $z_5=(3-2i)^5$ & $z_6=\frac{i\sqrt{2}+1}{\sqrt{3}-i}$
+\end{tabular}
+
+
+
+\subsection{Trinôme à coefficients complexes}
+L'objectif de cet exercice est de résoudre l'équation $(E):z^2+(1-3i)z-4-3i=0$ en applicant la méthode du discriminant complexe.
+\begin{enumerate}
+    \item En posant $a,b$ et $c$ les coefficients des degrés 2, 1 et 0 de $z$ dans $(E)$, calculer $\Delta_E=b^2-4ac$
+    \item Déterminer $\delta_1$ et $\delta_2$ les deux racines carrées complexes de $\Delta_E$
+    \item Calculer $z_1=\frac{-b+\delta_1}{2a}$ et $z_2=\frac{-b+\delta_2}{2a}$
+    \item Vérifier que $z_1$ et $z_2$ sont solutions de $(E)$
+\end{enumerate}
+
+
+
+\subsection{On recommence}
+En utilisant la même méthode que dans l'exercice précédent, résoudre dans $\CC$ l'équation \[2iz^2-(5+i)z+5-5i=0\]
+
+
+
+\section{Formes trigonométriques et exponentielles}
+
+\subsection{Calcul de modules}
+Calculer le module des nombres suivants :\\
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+	$z_1=i+2$ & $z_2=i\sqrt{3}-1$ & $z_3=\frac{4}{i}$ \\
+    $z_4=(5+2i)(\sqrt{3}-i\sqrt{6})$ & $z_5=\left(\frac{\sqrt{6}-i\sqrt{2}}{2}\right)^2$ & $z_6=\frac{(2-i)^5}{(1+2i)^4}$
+\end{tabular}
+
+
+
+\subsection{Peu de calcul}
+On pose $z=2i-1$ et $w=\sqrt{3}+i$
+\begin{enumerate}
+	\item Déterminer le module de $z$ et de $w$
+	\item Calculer les modules des nombres suivants en utilisant les résultats de la question précédente :\\[5pt]
+$3+i\sqrt{3}$ \quad\quad ; \quad $\frac{i+\sqrt{3}}{1-2i}$ \quad\quad ; \quad $\frac{i}{2}-\frac{1}{4}$ \quad\quad ; \quad $(\sqrt{3}-i)^5$ 
+\end{enumerate}
+
+
+
+\subsection{Encore celui-là ?}
+Pour $z\in\CC$ non nul on note $z'=z-\frac{1}{z}$
+
+À quelle condition sur $z$ le nombre $z'$ est-il imaginaire pur ?
+
+
+
+\subsection{Module imaginaire}
+Soit $z\in\CC\setminus\{1\}$\\
+Montrer que $\frac{1+z}{1-z}$ est un imaginaire pur si et seulement si $\abs{z}=1$
+
+
+
+\subsection{Forme trigonométrique}
+Donner la forme trigonométrique, puis la forme exponentielle de chacun des nombres suivants :\\
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    $z_1=1+i\sqrt{3}$ & $z_2=1-i$ & $z_3= 9i-3\sqrt{3}$ \\
+    $z_4=i$ & $z_5=-5$ & $z_6=\sqrt{2}(i-1)$ \\
+    $z_7=\frac{-i\sqrt{2}}{1+i}$ & $z_8=\sin(\theta)+i\cos(\theta)$ 
+\end{tabular}
+
+
+
+\subsection{Forme exponentielle}
+Déterminer la forme exponentielle de chacun des nombres complexes suivants : \\
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.2\textwidth}}
+    $z_1=(1+i\sqrt{3})(2-2i)$ & $z_2=(1+i)^5$ & $z_3=\frac{3-i\sqrt{3}}{4+4i}$ \\
+    $z_4=\frac{(i-\sqrt{3})^5}{(i-1)^4}$ & $z_5=\frac{1+i\sqrt{3}}{\sqrt{2}+\sqrt{6}+i(\sqrt{6}-\sqrt{2})}$ & $z_6=\frac{i-1-\sqrt{3}(1+i)}{2+2i}$
+\end{tabular}
+
+
+
+
+\subsection{Écriture piégeuse}
+On pose $z_1=2e^{i\frac{\pi}{3}}, \quad z_2=ie^{i\frac{\pi}{4}}$ \, et \, $z_3=-3e^{i\frac{\pi}{6}}$
+\begin{enumerate}
+	\item Donner la forme exponentielle de $z_2$ et $z_3$
+	\item Calculer sous forme exponentielles les nombres suivants : \\
+        $z_1z_2$ ~~~~;~~~~ $z_1z_3$~~~~;~~~~$\frac{z_2z_3}{z_1}$~~~~;~~~~$\frac{z_3\,^3}{z_2\,^2}$
+\end{enumerate}
+
+
+
+\subsection{Retour à la forme algébrique}
+Donner la forme algébrique des nombres complexes suivants :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    $z_1=2e^{i\frac{\pi}{3}}$ & $z_2=e^{i\frac{\pi}{4}}\times (e^{i\frac{2\pi}{6}})$ & $z_3=\frac{3e^{2i\frac{\pi}{3}}}{5e^{-i\frac{\pi}{6}}}$ \\
+    $z_4=\frac{e^{i\frac{\pi}{3}}}{2e^{i\frac{7\pi}{12}}}$ & $z_5=\left(e^{i\frac{\pi}{4}}\right)^{2023}$ & $z_6 = (2-2i)^5$ \\
+    $z_7=\frac{(1+i)^{2000}}{(i-\sqrt{3})^{1000}}$
+\end{tabular}
+
+
+
+\subsection{Une nouvelle valeur trigonométrique}
+On pose $z_1=1+i\sqrt{3}$ et $z_2=1+i$
+\begin{enumerate}
+    \item Donner la forme algébrique de $\frac{z_1}{z_2}$
+    \item Donner la forme exponentielle de $\frac{z_1}{z_2}$
+    \item En déduire la valeur de $\cos(\frac{\pi}{12})$ et de $\sin(\frac{\pi}{12})$, puis de $\cos(\frac{5\pi}{12})$ et de $\sin(\frac{5\pi}{12})$
+\end{enumerate}
+
+
+
+\subsection{Puissances de nombres complexes}
+\begin{enumerate}
+    \item Déterminer les entiers $n\in\ZZ$ tels que $(2i+2)^n$ soit un imaginaire pur.
+	\item Déterminer les entiers $n\in\ZZ$ tels que $(3-i\sqrt{3})^n$ soit un nombre réel.
+\end{enumerate}
+
+
+
+\subsection{Linéarisation}
+\begin{enumerate}
+	\item Linéariser $\sin^3(x)$
+	\item Linéariser $\cos^4(x)$
+	\item Linéariser $\sin^2(x)\cos^3(x)$
+\end{enumerate}
+
+
+
+\subsection{Puissances conjuguées}
+\begin{enumerate}
+    \item Montrer que $(1+i)^n+(1-i)^n=2\sqrt{2^n}\cos\left(\frac{\pi n}{4}\right)$
+    \item Généraliser en montrant que $z^n+\barre{z}^n=2\abs{z}^n\cos(n\arg(z))$
+\end{enumerate}
+
+
+
+\section{Application à la géométrie}
+
+\subsection{Étude d'un triangle}
+
+On munit le plan complexe du repère orthonormé $\Ouv$ et on considère les points A, B et C d'affixes respectives $z_A=-3+4i$, $z_B=2+3i$ et $z_C=-4-i$ \\
+Déterminer la nature du triangle $ABC$.
+
+
+
+\subsection{Alignement}
+Soient $A(z_A)$, $B(z_B)$ et $C(z_C)$ trois points distincs du plan complexe.
+
+Montrer que $A$, $B$ et $C$ sont aligné si et seulement si $\arg\left(\frac{z_A-z_B}{z_A-z_C}\right)=0 \left[\pi\right]$
+
+
+
+\subsection{Alignement}
+On munit le plan complexe du repère orthonormé $\Ouv$. Pour tout complexe $z$ non nul on considère le point $M$ d'affixe $z$ et le point $M'$ d'affixe $-\frac{1}{\barre{z}}$ \\
+Montrer que $M$, $O$ et $M'$ sont alignés.
+
+
+
+
+\subsection{Racines rectangles}
+Soit le polynôme $P:z\mapsto z^3-3z^2+9z+13$
+
+Démontrer que les points dont les affixes sont les racines de $P$ forment un triangle isocèle rectangle dans le plan complexe.
+
+
+\subsection{Une suite de points}
+
+On considère la suite $(z_n)_{\nN}$ définie par $z_n=(\sqrt{3}-i)^n$. \\
+On munit le plan complexe du repère orthonormé $\Ouv$ et on note $M_n$ le point d'affixe $z_n$
+\begin{enumerate}
+    \item Montrer que $M_n$, $O$ et $M_{n+6}$ sont alignés pour tout $n$ naturel.
+    \item Montrer que le triangle $M_nOM_{n+3}$ est rectangle pour tout $n$ naturel.
+\end{enumerate}
+
+
+
+\subsection{Inscrits dans un cercle}
+On munit le plan complexe du repère orthonormé $\Ouv$ et on considère les points A, B, C et D d'affixes respectives $z_A=-1+3i$, $z_B=2+4i$, $z_C=1-3i$ et $z_D=4+3i$
+
+\begin{enumerate}
+    \item Déterminer la nature du triangle $BCD$
+    \item Montrer que les points $A$, $B$, $C$ et $D$ appartiennent tous à un même cercle $\mathscr{C}$ dont on donnera le centre $P$, le rayon $r$ et une équation.
+    \item Déterminer l'affixe $z_E$ du point $E\in\mathscr{C}$ tel que $APE$ soit un triangle rectangle et $\Reel{z_E}>0$ 
+\end{enumerate}
+
+
+
+\subsection{Transformation du plan}
+On munit le plan complexe du repère orthonormé $\Ouv$ et à tout point $M(z)$ avec $z\neq3-i$ on associe le point $M'(z')$ tel que $z'=\frac{z-2i}{z-3+i}$\\
+On dira que $M'$ est l'image du point $M$.
+\begin{enumerate}
+	\item Déterminer sous forme algébrique l'affixe de l'image du point $M(i)$
+	\item Peut-on trouver un point $M$ dont l'image a une affixe égale à $1+i$ ?
+	\item Déterminer et représenter l'ensemble des points $M$ pour lesquels $z'$ est un nombre réel.
+	\item Déterminer et représenter l'ensemble des points $M$ pour lesquels $\abs{z'}=1$
+	\item Déterminer et représenter l'ensemble des points $M$ pour lesquels $z'$ est un imaginaire pur.
+\end{enumerate}
+
+
+
+\subsection{Fonction complexe}
+On définit la fonction $f:z\mapsto\frac{z-1+2i}{2z-3i}$
+\begin{enumerate}
+	\item Le nombre $i$ admet-il un antécédent par la fonction $f$ ?
+	\item Déterminer l'ensemble des $\zC$ tels que $f(z)\in\RR$ puis représenter cet ensemble sur le plan complexe.
+	\item Déterminer l'ensemble des $\zC$ tels que $f(z)\in i\RR$ puis représenter cet ensemble sur le plan complexe. 
+	\item Déterminer l'ensemble des $\zC$ tels que $\abs{f(z)}=1$ puis représenter cet ensemble sur le plan complexe. 
+\end{enumerate}
+
+
+
+
+\subsection{Ensembles de points}
+Déterminer et représenter l'ensemble des points $M$ du plan complexe dont l'affixe $z$ vérifie les équations suivantes :
+
+\begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+    a) $\abs{z-3i} = \abs{z+i-2} $ & b) $\abs{z+2+1}=\abs{2i+1} $ \\
+    c) $\abs{\barre{z}+i}=\abs{z+1} $ & d) $\abs{\frac{z-3i}{iz+2+i}} = 1$ \\
+    e) $\arg(z)=\frac{\pi}{3} \quad\pi]$ & f) $\arg(z)=\arg(-\barre{z}) \quad[2\pi]$ \\
+    g) $\arg(z-2+3i)=\frac{\pi}{4} \quad[2\pi]$ & h) $\arg(z+4i)=\arg(z-2-i) \quad[\pi]$ \\
+    i) $\arg(z+4i)=\arg(z-2-i)\quad [2\pi]$ & j) $\abs{1+z}=2\abs{z}$ \\     
+\end{tabular}
+
+
+
+\section{Sur les racines n-ièmes}
+
+\subsection{Équations simples}
+Résoudre dans $\CC$ les équations suivantes :
+
+\begin{tabular}{p{0.28\textwidth} p{0.28\textwidth} p{0.28\textwidth}}
+    a) $z^5=i$ & b) $z^4=2\sqrt{2}(1+i)$ & c)  $z^6=-8i$ \\
+    d) $z^6=\frac{4}{1-1\sqrt{3}}$ & e) $z^4=\frac{16\sqrt{2}}{1+i}$ & f) $z^4=\frac{(3+i\sqrt{3})^3}{(1-i)^2}$
+\end{tabular}
+
+
+\subsection{Ça y ressemble}
+Résoudre dans $\CC$ les équations suivantes :
+
+\begin{tabular}{p{0.28\textwidth} p{0.28\textwidth} p{0.28\textwidth}}
+    a)$\left(\frac{z+3i}{z-2}\right)^4=1$ & b) $\left(\frac{z-1}{z-i}\right)^3=-8$  & c) $27(z-1)^6+(z+1)^6=0$
+\end{tabular}
+
+
+\subsection{Périmètres}
+\begin{enumerate}
+    \item Calculer le périmètre d'un hexagone régulier inscrit dans un cercle de rayon 1.
+    \item Calculer le périmètre d'un dodécagone régulier inscrit dans un cercle de rayon 2.
+\end{enumerate}
+
+
+
+\subsection{Somme et produit}
+\begin{enumerate}
+	\item Que vaut la somme de toutes les racines $n$-ièmes de l'unité ?
+	\item Que vaut le produit de toutes les racines $n$-ièmes de l'unité ?
+\end{enumerate}
+
+
+
+\subsection{Sommes non complètes}
+On considère $w=e^{i\frac{2\pi}{5}}$ puis on pose $A=w+w^4$ et $B=w^2+w^3$
+\begin{enumerate}
+	\item Montrer que $A+B=-1$
+	\item Montrer que $AB=-1$
+	\item En déduire que $A^2+A-1=0$
+	\item En déduire la valeur de $A$, puis celle de $B$
+	\item Déterminer alors $\cos\left(\frac{2\pi}{5}\right)$ et $\sin\left(\frac{2\pi}{5}\right)$
+	\item En déduire les valeurs de $\cos\left(\frac{\pi}{5}\right)$ et $\sin\left(\frac{\pi}{5}\right)$
+\end{enumerate}
+
+
+
+\subsection{Somme de modules}
+On note $\mathbb{U}_n$ l'ensemble des racines $n$-ièmes de l'unité.\\
+L'objectif de l'exercice est de calculer $S_n=\somme{z\in\mathbb{U}_n}{}\abs{1-z}$
+\begin{enumerate}
+	\item Justifier que $S_n=\sommek{0}{n-1}\abs{1-e^{i\frac{2k\pi}{n}}}$
+	\item \begin{enumerate}
+		\item Montrer que $\abs{1-e^{2ix}}^2=2\left(1-\cos(2x)\right)$ \quad $\forall\xR$
+		\item En déduire que $\abs{1-e^{i\frac{2k\pi}{n}}}=2\sin\left(\frac{k\pi}{n}\right)$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Montrer que $S_n=-i\sommek{0}{n-1}\left(e^{i\frac{k\pi}{n}}-e^{-i\frac{k\pi}{n}}\right)$
+		\item En déduire que $S_n=2i\left(\frac{1}{1-e^{-i\frac{\pi}{n}}}-\frac{1}{1-e^{i\frac{\pi}{n}}}\right)$
+	\end{enumerate}
+	\item Montrer que $S_n=\frac{2\sin\left(\frac{\pi}{n}\right)}{1-\cos\left(\frac{\pi}{n}\right)}$
+	\item Montrer alors que $S_n=\frac{2}{\tan\left(\frac{\pi}{2n}\right)}$
+	\item Déterminer $\limn S_n$\\
+	Aurait-on pu prédire ce résultat géométriquement ?
+\end{enumerate}
+
+
+
+
+\section{Exercices supplémentaires}
+
+\subsection{Module et argument de somme et différence}
+
+On considère $z=re^{i\theta}$ et $w=r'e^{i\theta'}$ deux nombres complexes non nuls. \\
+Montrer que $\abs{z+w}=\abs{z-w}\Longleftrightarrow \theta=\theta'+\frac{\pi}{2} [\pi]$
+
+
+
+\subsection{Étude d'une suite}
+
+On définit la suite $(z_n)_{\nN}$ par $\defsuitez{z_0=i}{(1-i)z_n+2}$
+\begin{enumerate}
+    \item On pose $w_n=z_n+2i$ pour tout $\nN$ \\
+    Montrer que $w_{n+1}=(1-i)w_n$ pour tout $\nN$
+    \item Montrer par récurrence que $w_n=3i(1-i)^n$
+    \item En déduire l'expression de $z_n$ en fonction de $n$
+    \item Montrer que $z_n\neq0$ pour tout $\nN$
+    \item Montrer que $z_n$ n'est jamais un nombre réel.
+    \item Déterminer pour quels $\nN$ le nombre $z_n$ est un imaginaire pur.
+\end{enumerate}
+
+
+\end{document}

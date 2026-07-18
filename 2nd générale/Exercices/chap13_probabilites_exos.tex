@@ -1,0 +1,553 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/macro_paging.tex}				% Mise en page
+\input{../../../Latex/inputs/macros_tikz.tex}				% Macro TikZ
+
+
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Probabilités}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Univers et loi de probabilité}
+
+\subsection{Quelques univers}
+Dans chacune des situations suivantes, décrire explicitement l'univers associé à l'expérience aléatoire décrite, donner le nombre d'issues possibles et préciser s'il s'agit d'une situation d'équiprobabilité.
+\begin{enumerate}
+	\item On tire au hasard une carte dans un jeu classique de 52 cartes et on s'intéresse au symbole sur la carte.
+	\item On choisit au hasard un nombre premier inférieur à 40.
+	\item On lance deux dés cubiques parfaitement équilibrés et on s'intéresse à la somme des deux résultats.
+	\item On lance 6 fois une pièce parfaitement équilibrée et on s'intéresse au nombres de "Face" obtenus.
+\end{enumerate}
+
+
+
+\subsection{Dans une urne}
+Une urne contient 10 boules numérotées de 1 à 12. Certaines boules sont vertes, certaines sont roses et les autres sont blanches.
+
+Décrire explicitement l'univers associé à chacune des expériences aléatoires suivantes :
+\begin{enumerate}
+	\item On tire une boule et s'intéresse à sa couleur.
+	\item On tire une boule et s'intéresse au numéro qu'elle porte.
+	\item On tire simultanément deux boules et on s'intéresse à la différence entre leur deux numéros.
+	\item On tire successivement et avec remise deux boules et on s'intéresse à la différence entre leur deux numéros.
+	\item On tire simultanément deux boules et on s'intéresse à la (ou les) couleur(s) obtenue(s).
+\end{enumerate}
+
+
+
+\subsection{Sur les lois de probabilité}
+Les tableaux suivants permettent-ils de définir une loi de probabilité ? Justifier.
+
+\begin{minipage}{0.5\linewidth}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
+		\cellcolor{gray!25} \textbf{Probabilité} & $0,15$ & $0,2$ & $0,1$ & $0,35$ \\ \hline
+	\end{tabular}\\[3pt]
+	\phantom{}\hspace{3cm} {\small Tableau \no1}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
+		\cellcolor{gray!25} \textbf{Probabilité} & $0,2$ & $0,45$ & $0,1$ & $0,25$ \\ \hline
+	\end{tabular}\\[3pt]
+	\phantom{}\hspace{3cm} {\small Tableau \no2}
+\end{minipage}
+
+
+
+\subsection{Un exercice pour Dechavanne}
+\begin{minipage}{0.25\linewidth}
+	\begin{tikzpicture}
+		\foreach \couleur/\i in {newblue/0 , newred/1 , newgreen/2 , newblue/3 , newgreen/4 , neworange/5 , newblue/6 , newgreen/7 , newred/8 , newgreen/9 , neworange/10 , newred/11}
+			\draw[line width = 0.5pt , fill = \couleur] (30*\i:2) arc (30*\i:30*\i+30:2) -- (0,0) -- (30*\i:2) -- cycle ;
+			
+			\draw[line width = 1.5pt] (0,0) circle[radius=2] ;
+			\draw[fill = black] (1.2,-1.6) arc (-53.13:-126.87:2) -- (-1.2,-2.2) -- (1.2,-2.2) -- cycle ;
+			\draw[line width = 1.5pt ,fill = red!80!white] (0,2.2) -- (-0.2,2.1) -- (0,1.5) -- (0.2,2.1) -- cycle ;
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.75\linewidth}
+	Lors d'un jeu on fait tourner la roue ci-contre, dont on admettra que tous les secteurs angulaires sont de même mesure.
+	\begin{enumerate}
+		\item S'agit-il d'une situation d'équiprobabilité ?
+		\item Compléter le tableau ci-dessous modélisant la loi de probabilité associée à l'expérience aléatoire :
+		
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+			\cellcolor{gray!25} \textbf{Couleur} & Bleu & Rouge & Vert & Jaune \\ \hline
+			\cellcolor{gray!25} \textbf{Probabilité} & & & & \\ \hline
+		\end{tabular} 
+		
+		\phantom{}\hspace{3cm}\textit{\small On arrondira les résultats au millième}
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Chacun fait sa loi}
+Dans chacun des cas suivants, déterminer la valeur de $x$ pour laquelle les tableaux ci-dessous définissent une loi de probabilité :
+
+\begin{minipage}{0.5\linewidth}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
+		\cellcolor{gray!25} \textbf{Probabilité} & $0,25$ & $0,3$ & $x$ & $0,2$ \\ \hline
+	\end{tabular}\\[3pt]
+	\phantom{}\hspace{3cm} {\small Tableau \no1}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
+		\cellcolor{gray!25} \textbf{Probabilité} & $x$ & $0,2$ & $3x$ & $0,4$ \\ \hline
+	\end{tabular}\\[3pt]
+	\phantom{}\hspace{3cm} {\small Tableau \no2}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
+		\cellcolor{gray!25} \textbf{Probabilité} & $\frac{1}{3}$ & $x$ & $\frac{1}{6}$ & $\frac{1}{12}$ \\ \hline
+	\end{tabular}\\[3pt]
+	\phantom{}\hspace{3cm} {\small Tableau \no3}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
+		\cellcolor{gray!25} \textbf{Probabilité} & $x$ & $2x$ & $3x$ & $4x$ \\ \hline
+	\end{tabular}\\[3pt]
+	\phantom{}\hspace{3cm} {\small Tableau \no4}
+\end{minipage}
+
+
+
+\subsection{Maths et Scrabble}
+On place dans un sac opaque 9 tuiles comportant les lettres qui forment le mot \og EVENEMENT \fg \, sans considérer les accents éventuels sur les \og E \fg
+\begin{enumerate}
+	\item On tire une tuile au hasard dans ce sac et on note la lettre obtenue.
+	\begin{enumerate}
+		\item S'agit-il d'une situation d'équiprobabilité ?
+		\item Déterminer la loi de probabilité associée à cette expérience.
+	\end{enumerate}
+	\item On tire désormais successivement et sans remise deux tuiles dans ce sac et on s'intéresse au mot de deux lettres obtenu.\\
+	Par exemple si l'on tire la tuile \og T \fg \, puis une tuile \og E \fg \, on notera l'issue TE.
+	\begin{enumerate}
+		\item Décrire explicitement l'univers associé à cette expérience aléatoire.
+		\item Combien d'issues réalisent l'évènement \og Tirer deux lettres identiques \fg \, ?
+		\item Combien d'issues réalisent l'évènement \og Le mot formé existe dans la langue française \fg \, ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Jeu de domino}
+\begin{minipage}{0.5\linewidth} \restoreskip
+	Un jeu de domino classique comprend 28 tuiles, sur lesquelles figurent toutes les paires de nombres possibles avec les nombres de 0 à 6. On a représenté ci-après un jeu de domino complet.
+	
+	On choisit au hasard une tuile du jeu.
+	\begin{enumerate}
+		\item \begin{enumerate}
+		 \item Proposer une loi de probabilité modélisant cette situation si l'on s'intéresse à la somme des points sur la tuile.
+		 \item Déterminer alors la probabilité que la somme des points de la tuile soit supérieure ou égale à 7.
+	\end{enumerate}
+		\item Proposer une loi de probabilité modélisant cette situation si l'on s'intéresse au maximum de points entre la partie supérieure et la partie inférieure de la tuile.
+	\end{enumerate}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=0.5]
+		\foreach \i in {0,...,6}
+			\foreach \j in {\i,...,6}
+				\domino[\i][\j]({2.5*Mod(6*\i+\j-0.5*(\i*\i-\i),7)} , {-3.5/7*(6*\i+\j-0.5*(\i*\i-\i) - Mod(6*\i+\j-0.5*(\i*\i-\i),7) )});
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\section{Calcul de probabilités}
+
+\subsection{Groupe sanguin}
+La répartition des différents groupes sanguins dans le monde a été donnée dans le tableau ci-après :
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+	\cellcolor{gray!25} \diagbox[width=3.4cm,height=2.25\line]{\textbf{Rhésus}}{\textbf{Groupe}} & A & B & AB & O \\ \hline
+	Rhésus + & $35\%$ & $9,5\%$ & $3,5\%$ & $36\%$ \\ \hline
+	Rhésus - & $7\%$ & $1,5\%$ & $0,5\%$ & $7\%$ \\ \hline
+	\end{tabular}
+\end{center}
+
+Si l'on choisit au hasard une personne dans la population mondiale, déterminer la probabilité :
+\begin{enumerate}
+	\item Qu'elle soit receveuse universelle (C'est à dire du groupe AB+)
+	\item Qu'elle soit du groupe sanguin O.
+	\item Qu'elle soit du rhésus négatif.
+\end{enumerate}
+
+
+
+\subsection{Encore une urne}
+Une urne contient 20 boules numérotées de 1 à 20. Les boules portant comme numéro un multiple de 3 sont vertes, les autres boules sont rouges.
+
+On tire une boule au hasard dans cette urne.
+
+Décrire explicitement les évènements suivants sous la forme d'un ensemble puis déterminer leur probabilité :
+\begin{itemize}[label=$\bullet$]
+	\item A : \og La boule tirée est verte \fg
+	\item B : \og La boule tirée porte un numéro pair \fg
+	\item C : \og La boule tirée est rouge et porte un numéro pair \fg
+	\item D : \og La boule tirée porte un numéro qui est un multiple de 4 ou un multiple de 5 \fg
+	\item E : \og La boule tirée est rouge et ne porte pas un numéro qui est un multiple de 4 \fg
+	\item F : \og La boule tirée porte un numéro qui est un nombre premier \fg
+\end{itemize}
+
+
+
+\subsection{La partie de l'opéra}
+\begin{minipage}{0.6\linewidth}
+	Lors d'une très célèbre partie d'échec jouée en 1858 par Paul Morphy contre le duc de Brunswick et le comte Isouard de Vauvenargues, voici la position que l'on pouvait retrouver sur l'échiquier après les quelques premiers coups :
+	
+	\begin{enumerate}
+		\item Si l'on choisit une pièce au hasard sur l'échiquier, quelle est la probabilité qu'il s'agisse d'un pion ?
+		\item Si l'on choisit une pièce au hasard parmi les pièces blanches, quelle est la probabilité qu'il s'agisse d'une pièce \og lourde \fg \, (Une tour ou une dame)
+		\item Si l'on choisit une pièce au hasard sur l'échiquier, quelle est la probabilité qu'elle se trouve sur une case sombre ?
+		\item Si l'on choisit au hasard une pièce sur une case claire, quelle est la probabilité qu'il s'agisse d'une pièce noire ?
+		\item Si l'on choisit un pion au hasard sur l'échiquier, quelle est la probabilité qu'il soit sur une case claire ?
+		\item Si l'on choisit une pièce au hasard, quelle est la probabilité qu'elle ne puisse pas se déplacer au prochain coup ?
+	\end{enumerate}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.4\linewidth}
+	\includegraphics[scale=0.3]{../../inputs/position_echiquier.png}
+\end{minipage}
+
+
+
+\subsection{Des cubes de couleur}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[scale=1]
+    
+    % Définir les sommets
+    \coordinate (A) at (0,0,0);
+    \coordinate (B) at (4,0,0);
+    \coordinate (C) at (4,4,0);
+    \coordinate (D) at (0,4,0);
+    \coordinate (E) at (0,0,4);
+    \coordinate (F) at (4,0,4);
+    \coordinate (G) at (4,4,4);
+    \coordinate (H) at (0,4,4);
+    
+    % Peindre en bleu
+    \draw[line width = 1pt , fill = newblue!25!white] (E) -- (H) -- (D) -- (C) -- (B) -- (F) -- cycle;
+
+	% Couper en 4
+	\foreach \i in {0,1,2,3,4}{
+		\draw[dashed] (\i,0,4) --++ (0,4,0) --++ (0,0,-4) ;
+		\draw[dashed] (0,4,\i) --++ (4,0,0) --++ (0,-4,0) ;
+		\draw[dashed] (0,\i,4) --++ (4,0,0) --++ (0,0,-4) ;
+		}
+	
+	% Arrêtes principales
+	\draw[line width = 1pt] (F) -- (G) -- (C) ;
+	\draw[line width = 1pt] (G) -- (H) ; 
+	
+	% Sortir le petit cube
+	\draw[line width = 1pt , fill = color_domino] (G)++(-1,0,0) --++ (0,0,-1) --++ (1,0,0) --++ (0,-1,0) --++ (0,0,1) --++ (-1,0,0) --++ (0,1,0) -- cycle ; 
+	\draw[dashed] (3,3,3) --++ (1,0,0) ;
+	\draw[dashed] (3,3,3) --++ (0,1,0) ;
+	\draw[dashed] (3,3,3) --++ (0,0,1) ;
+	
+	\draw[line width = 1pt , fill = newblue!25!white] (G)++(-0.2,0.4,0.5) --++ (0,0,-1) --++ (1,0,0) --++ (0,-1,0) --++ (0,0,1) --++ (-1,0,0) --++ (0,1,0) -- cycle ;
+	\draw[line width = 1pt] (G)++(0.8,0.4,0.5) --++ (-1,0,0) ;
+	\draw[line width = 1pt] (G)++(0.8,0.4,0.5) --++ (0,-1,0) ;
+	\draw[line width = 1pt] (G)++(0.8,0.4,0.5) --++ (0,0,-1) ;
+
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.6\linewidth}\restoreskip
+On peint entièrement un cube en bleu puis on le découpe en plus petits cubes identiques comme représenté ci-contre. On dispose tous les petits cubes dans un sac opaque puis on en tire un au hasard.
+
+\begin{enumerate}
+	\item Combien de petits cubes ont été découpés ?
+	\item Quelle est la probabilité que le cube tiré n'ait aucune face peinte ?
+	\item Quelle est la probabilité que le cube tiré ait exactement une face peinte ?
+	\item Quelle est la probabilité que le cube tiré ait exactement deux faces peintes ?
+\end{enumerate}
+\end{minipage}
+
+
+\subsection{Une partie de carte ?}
+Dans le célèbre jeu UNO, voici la répartition des cartes :
+\begin{itemize}[label=$\bullet$] 
+	\item 20 cartes bleues, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 20 cartes rouges, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 20 cartes jaunes, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 20 cartes vertes, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 8 cartes \og +2 \fg \, (2 de chaque couleur)
+	\item 8 cartes \og INVERSION \fg \, (2 de chaque couleur)
+	\item 8 cartes \og PASSER UN TOUR \fg \, (2 de chaque couleur)
+	\item 4 cartes \og JOKER \fg
+	\item 4 cartes \og +4 \fg
+\end{itemize}
+
+D'après les règles du jeu, la dernière carte de la défausse doit être recouverte par une carte ayant le même numéro ou la même couleur. 
+
+Par exemple, si la pile de défausse contient une carte rouge qui est un 3, le joueur peut placer soit une carte rouge, soit une carte avec un 3 de n'importe quelle couleur.
+
+Les seules cartes pouvant être posées à tout moment sont les cartes \og JOKER \fg \, et \og +4 \fg
+
+On tire au hasard une carte dans un jeu complet de UNO.
+\begin{enumerate}
+	\item Combien de cartes un jeu complet de UNO comporte-t-il ?
+	\item Quelle est la probabilité que la carte tirée soit une carte spéciale ?
+	\item Quelle est la probabilité que la carte tirée soit de couleur verte ?
+	\item Quelle est la probabilité que la carte tirée porte un numéro ?
+	\item Quelle est la probabilité que la carte tirée puisse être jouée par-dessus un 7 de couleur jaune ?
+\end{enumerate}
+
+
+
+\subsection{En chien de faïence}
+Un carrelage de faïence comporte des carreaux disposés comme sur la figure ci-contre :
+
+\begin{minipage}{0.3\linewidth}
+	\begin{tikzpicture}[scale=0.6]
+		\fill[color=newgreen] (0,0) rectangle (9,9) ;
+		\fill[color=newred] (2,2) rectangle (7,7) ;
+		\fill[color=neworange] (0,0) rectangle (2,2) ;
+		\fill[color=neworange] (0,9) rectangle (2,7) ;
+		\fill[color=neworange] (9,0) rectangle (7,2) ;
+		\fill[color=neworange] (9,9) rectangle (7,7) ;
+		\draw[step=1] (0,0) grid (9,9) ; 
+		\draw[fill=white] (3,3) rectangle (6,6) ;
+	\end{tikzpicture}
+\end{minipage} 
+\begin{minipage}{0.7\linewidth}
+	Curtis lance une pièce au sol et regarde sur quel carreau la pièce atterrit.
+	\begin{enumerate}
+		\item Déterminer la probabilité que la pièce tombe sur un carreau de couleur rouge.
+		\item Si la pièce atterrit sur le bord extérieur du carrelage, quelle est la probabilité qu'elle tombe sur un carreau vert ?
+		\item Curtis a posé 9 nouveaux carreaux de sorte à remplir le motif du carrelage. Dans cette nouvelle disposition, la probabilité que la pièce tombe sur un carreau vert est égale à la probabilité que la pièce tombe sur un carreau de couleur rouge ou orange.\\
+		Expliquer pourquoi Curtis a forcément utilisé un carreau d'une autre couleur que celles déjà présentes.
+	\end{enumerate}
+\end{minipage} 
+
+
+
+\section{Union, intersection et évènement contraire}
+
+\subsection{Sur la formule du crible}
+On considère $A$ et $B$ deux évènements d'un univers $\Omega$
+\begin{enumerate} \setlength{\itemsep}{1mm}
+	\item Si $\PP(A)=\frac{1}{3}$ , $\PP(B)=\frac{1}{2}$ et $\PP(A \cap B)=\frac{1}{6}$ , quelle est la valeur de $\PP(A \cup B)$ ?
+	\item Si $\PP(A)=\frac{2}{5}$ , $\PP(B)=\frac{1}{15}$ et $\PP(A \cup B)=\frac{2}{3}$ , quelle est la valeur de $\PP(A \cap B)$ ?
+	\item Si $\PP(A)=\frac{1}{2}$ , $\PP(A \cup B)=\frac{3}{4}$ et $\PP(A \cap B)=\frac{1}{8}$ , quelle est la valeur de $\PP(B)$ ?
+\end{enumerate}
+
+
+
+\subsection{Coup de poker}
+On tire une carte au hasard dans un paquet de 32 cartes.
+
+On considère les évènements suivants :
+\begin{itemize}[label=$\bullet$]
+    \item P : \og La carte tirée porte un symbole $\spadesuit$ \fg
+    \item C : \og La carte tirée porte un symbole \textcolor{newred}{\large $\varheartsuit$} \fg
+    \item T : \og La carte tirée porte un symbole $\clubsuit$ \fg
+    \item R : \og La carte tirée est un roi \fg
+    \item D : \og La carte tirée est une dame \fg
+    \item N : \og La carte tirée porte un numéro \fg
+\end{itemize} \vspace{-2mm}
+\begin{enumerate}
+    \item Écrire à l'aide des évènements $P$, $C$, $T$, $R$, $D$, et $N$ les évènements décrits ci-dessous :
+    \begin{enumerate}
+        \item \og La carte tirée ne porte pas le symbole $\spadesuit$ \fg
+        \item \og La carte tirée est noire \fg
+        \item \og La carte tirée est un roi ou une dame \fg
+        \item \og La carte tirée porte un numéro et ne porte pas le symbole $\clubsuit$ \fg
+        \item \og La carte tirée est rouge \fg
+        \item \og La carte tirée est la dame de cœur \fg
+    \end{enumerate}
+\item Décrire les évènements suivants à l'aide d'une phrase : \\
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{p{0.35\textwidth} p{0.35\textwidth} p{0.35\textwidth}}
+         a) $N\cap C$ & b) $\barre{T}$ & c) $C\cup R $ \\
+         d) $\barre{P\cap D}$ & e) $T\cap\barre{N}$ & f) $\barre{R\cup D}$ \\
+         g) $\barre{D}\cap\barre{N}$ & h) $N \cap (P \cup T)$ & i) $\barre{P\cup C\cup T}$ 
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Identification sur diagrammes}
+Exprimer à l'aide d'opérations sur les évènements (Intersection, union, contraire) et en fonction des évènements A et B les zones qui ont été coloriées sur les figures ci-contre :
+
+\hspace{1cm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newred , opacity = 0.25] \AouB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no1} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newgreen , opacity = 0.25] \AetB;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no2} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newblue , opacity = 0.25 , even odd rule] \Rect[2] \B ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no3} ;
+\end{tikzpicture}
+
+\hspace{1cm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newblue , opacity = 0.25] \AmB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no4} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newred , opacity = 0.25 , even odd rule] \Rect[2] \AouB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no5} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newgreen , opacity = 0.25 , even odd rule] \A \B;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no6} ;
+\end{tikzpicture}
+
+
+
+\subsection{Un cas surprenant}
+Camélia joue à un jeu vidéo dans lequel elle peut acquérir des artefacts de manière aléatoire lors d'évènements spéciaux. D'après ses observations et ses calculs, elle affirme la chose suivante :\\
+\og La probabilité d'obtenir un artefact commun est de $0,86$ , celle d'obtenir un artefact enchanté est de $0,28$ et la probabilité d'obtenir un artefact commun enchanté est de $0,12$ \fg
+
+Qu'en pensez-vous ?
+
+
+
+\subsection{Représentation}
+\begin{minipage}{0.6\linewidth} \restoreskip
+	Pour chaque évènement ci-après, reproduire la figure ci-contre et colorier les zones permettant de représenter cet évènement.
+	
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{p{0.3\linewidth} p{0.28\linewidth} p{0.33\linewidth}}
+		a) $A \cup \barre{B}$ & b) $\barre{A \cap B}$ & c) $\barre{A} \cap \barre{B}$ \\
+		d) $\barre{A \cup B} \, \cup \, A$ & e) $\barre{\barre{A} \cap B}$ & f) $\left(\barre{A} \cup B\right) \cup \left(A \cap \barre{B}\right)$
+	\end{tabular}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+	\begin{tikzpicture}[scale=0.85]
+		\draw[line width = 1.5pt] \Rect[2] \A \B ;
+		\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+		\draw[line width = 1.5pt] (6,1) -- (7,2) node[above] {\large $\Omega$} ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Spécialités}
+Un lycée compte 400 élèves de terminale. Parmi eux, 150 ont choisi la spécialité mathématiques, 100 la spécialité SES, et 50 cumulent ces deux spécialités. 
+
+On choisit un élève au hasard et on considère les évènements :
+\begin{itemize}[label=$\bullet$]
+    \item $M$ : \og L'élève a choisi la spécialité mathématiques \fg
+    \item $S$ : \og L'élève a choisi la spécialité SES \fg
+\end{itemize}
+\begin{enumerate}
+    \item Représenter la situation à l'aide d'un diagramme de Venn.
+    \item Décrire à l'aide de phrases les évènements $M\cup S$, $M\cap S$ et $\barre{M} \cap S$.
+    \item Quelle est la probabilité que l'élève n'ait choisi ni la spécialité mathématiques ni la spécialité SES ?
+    \item En vous aident du diagramme, déterminer la probabilité que l'élève choisi au hasard ait choisi la spécialité mathématiques mais pas la spécialité SES.
+\end{enumerate}
+
+
+
+\subsection{Avec trois évènements}
+Exprimer à l'aide d'opérations sur les évènements (Intersection, union, contraire) et en fonction des évènements A, B et C les zones qui ont été coloriées sur les figures ci-contre :
+
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newred , opacity = 0.25] \AouC ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no1} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newblue , opacity = 0.25] \AetCmB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no2} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newgreen , opacity = 0.25] \Cseul ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no3} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newred , opacity = 0.25] \Rect[3] \AouBouC \BetC;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no4} ;
+\end{tikzpicture} 
+
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newblue , opacity = 0.25 , even odd rule] \AetB \BetC;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no5} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newgreen , opacity = 0.25 , even odd rule] \Rect[3] \C \AetB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no6} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newred , opacity = 0.25 ] \A \BetC;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no7} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.7]
+	\draw[line width = 1.5pt] \Rect[3] \A\B\C ;
+	\fill[color = newblue , opacity = 0.25 , even odd rule] \Bseul \Cseul;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} (3,3.732) node{\large $C$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no8} ;
+\end{tikzpicture} 
+
+
+
+\section{Expériences aléatoires successives}
+
+
+\section{Simulation d'évènements aléatoires}
+
+
+
+
+
+\end{document}

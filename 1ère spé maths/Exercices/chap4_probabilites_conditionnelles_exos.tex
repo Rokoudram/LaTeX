@@ -1,0 +1,296 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Probabilités conditionnelles}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Probabilités conditionnelles}
+
+
+\subsection{Concerts}
+
+Un festival de musique est organisé, se basant sur trois scènes : Rock, Rap et Raggae.\\
+1200 places ont été vendues lors de ce festival, dont 720 à plein tarif.\\
+La moitié des places vendues à tarif réduit étaient pour la scène Raggae, et autant ont été vendues à plein tarif pour la scène Rock.\\
+Pour la scène Rap, il y a eu 200 places de plus vendues à plein tarif qu'à tarif réduit.\\
+130 places on été vendues à tarif réduit pour la scène Rock.\\[5pt]
+On choisit au hasard un billet parmi tous ceux vendus.
+
+\begin{enumerate}
+    \item Recopier et compléter le tableau suivant :
+    \renewcommand{\arraystretch}{1.5}
+        \begin{center}
+        	\setlength{\tabcolsep}{16pt}
+            \begin{tabular}{|c|c|c|c|c|}\hline
+                & Rock & Rap & Raggae & Total\\ \hline
+                Plein tarif & & & & \\ \hline
+                Tarif réduit & & & & \\ \hline
+                Total & & & & 1200 \\ \hline
+            \end{tabular}    
+        \end{center}    
+    \item Quelle est la probabilité que le billet vendu soit à tarif réduit ?
+    \item Quelle est la probabilité que le billet vendu soit pour la scène Rap ?
+    \item Quelle est la probabilité que le billet soit à tarif plein pour la scène Raggae ?
+    \item Le billet est à plein tarif. Quelle est la probabilité qu'il soit pour la scène Rock ?
+    \item Sachant que le billet ne concerne pas la scène Rap, quelle est la probabilité qu'il soit à plein tarif ?
+\end{enumerate}
+
+
+
+\subsection{Application des formules}
+\begin{enumerate}
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{2},P(B)=\frac{1}{4}$ et $P(A\cap B)=\frac{1}{10}$ \\
+    Calculer $P_{A}(B)$ et $P_{B}(A)$.
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{2},P(B)=\frac{1}{3}$ et $P(A\cup B)=\frac{2}{3}$ \\
+    Calculer $P(A\cap B),P_{A}(B)$ et $P_{B}(A)$.
+
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{4},P(A\cup B)=\frac{2}{3}$ et $P(A\cap B)=\frac{1}{6}$ \\
+    Calculer $P_{A}(B),P(B)$ et $P_{B}(A)$.
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{4},P(A\cup B)=\frac{2}{5}$ et $P_{A}(B)=\frac{1}{3}$ \\
+    Calculer $P(A\cap B), P(B) $ et $P_{B}(A)$.
+\end{enumerate}
+
+
+\subsection{D'or et d'argent}
+ Un coffre $C_{1}$ contient 7 pièces d'or et 5 pièces d'argent, tandis qu'un autre coffre $C_{2}$ contient 8 pièces d'argent et 4 pièces d'or. \\
+On choisit un coffre au hasard, et on tire au hasard une pièce de ce coffre. 
+\begin{enumerate}
+    \item Quelle est la probabilité de tirer une pièce d'or ?
+    \item On tire une pièce en argent. Quelle est la probabilité qu'elle provienne du coffre $C_{1}$ ?
+\end{enumerate}
+
+
+
+\subsection{Littérature}
+
+La bibliothèque d’un lycée comporte 150 romans policiers et 50 romans de science-fiction.
+On sait que 40$\%$ des romans policiers sont français et que 70$\%$ des romans de science-fiction sont français. \\
+Ismaël choisit au hasard un ouvrage parmi les livres de la bibliothèque.
+\begin{enumerate}
+    \item Quelle est la probabilité qu'il choisisse un roman policier ?
+    \item Quelle est la probabilité qu'il choisisse un roman de science-fiction français ?
+    \item Quelle est la probabilité qu'il choisisse un livre d'un auteur français ?
+    \item Sachant qu'Ismaël a choisi un livre d'un auteur qui n'est pas français, quelle est la probabilité que ce soit un roman policier ?
+\end{enumerate}
+
+
+
+\subsection{État grippal}
+ Lors d'une épidémie de grippe, on vaccine un tiers de la population. On constate qu'un malade sur dix est vacciné et que la grippe touche un quart de la population. \\
+Quelle est la probabilité qu'un individu vacciné soit malgré tout malade ?
+
+
+
+\subsection{Archéologie préventive}
+Avant d'engager des travaux, tout site doit être minutieusement inspecté par une équipe d'archéologie préventive.\\
+Sur le site de construction d'une nouvelle bibliothèque, une inspection est engagée. Chaque jour, l'équipe d'archéologie étudie une zone, et on note $V_n$ : \og La fouille du $n$-ième jour a détecté des vestiges\fg\\
+On note alors $u_n$ la probabilité de l'évènement $V_n$
+
+D'expérience, l'équipe sait que si une zone ne présente pas de trace de vestige, il  y a 95\% de chances pour que la fouille suivante s'avère également infructueuse. En revanche, si une fouille a révélé la présence de vestige, il y a une probabilité de 0,55 d'en trouver également le lendemain.
+
+Le premier jour, la fouille ne détecte aucun vestige, autrement dit $u_1=0$
+
+\begin{minipage}{0.6\linewidth}
+\begin{enumerate}
+	\item Quelle est la probabilité que les 2\up{ème} et 3\up{ème} fouilles ne détectent aucun vestige ?
+	\item Quelle est la probabilité que les 2\up{ème} et 3\up{ème} fouilles détectent la présence de vestiges ?
+	\item Calculer la valeur de $u_3$
+	\item Recopier et compléter l'arbre pondéré de probabilités représenté ci-contre.
+	\item Montrer que $u_{n+1}=0,5u_n+0,05$
+	\item On définit la suite $(v_n)$ par $v_n=u_n-\frac{1}{10}$
+	\begin{enumerate}
+		\item Montrer que $v_{n+1}=0.5u_n-\frac{1}{20}$
+		\item En déduire que la suite $(v_n)$ est géométrique, préciser sa raison et son premier terme.
+		\item Donner l'expression de $u_n$ en fonction de $v_n$
+	\end{enumerate}
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.39\textwidth}
+\begin{tikzpicture}[grow=right, level distance=3cm]
+  \node {$\bullet$} [sibling distance=3cm]
+  
+    child {node {$\barre{V_n}$} [sibling distance=2cm] 
+      child {node {$\barre{V_{n+1}}$} edge from parent node[below] {$\cdots$} }
+      child {node {$V_{n+1}$} edge from parent node[above] {$\cdots$} }
+      edge from parent node[below] {$\cdots$}
+    }
+    child {node {$V_n$} [sibling distance=2cm] 
+      child {node {$\barre{V_{n+1}}$} edge from parent node[below] {$\cdots$} }
+      child {node {$V_{n+1}$} edge from parent node[above] {$\cdots$} }
+      edge from parent node[above] {$\cdots$}
+    };
+\end{tikzpicture}
+\end{minipage}
+\begin{enumerate}
+	\item[\faCalculator] À partir de combien de temps peut-on affirmer que la probabilité que les fouilles soient fructueuses sera inférieure à 0,11 ?
+\end{enumerate}
+
+
+\section{Bayes et inversion de condition}
+
+
+\subsection{Encore des formules}
+\begin{enumerate}
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{3},P_{A}(B)=\frac{3}{4}$ et $P_{\barre{A}}(B)=\frac{1}{5}$ \\
+    Calculer $P(B)$.
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{4},P(A\cup B)=\frac{2}{5}$ et $P_{A}(B)=\frac{1}{3}$ \\
+    Calculer $P_{B}(A)$.
+    \item $A$ et $B$ sont tels que : $P_B(A)=\frac{3}{4},P_A(B)=\frac{2}{3}$ et $P(A\cap B)=\frac{1}{2}$ \\
+    Calculer $P(A\cup B)$
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{2}{5},P(B)=\frac{2}{3}$ et $P(A\cap B)=\frac{1}{4}$\\				Calculer $P(\barre{A}\cap\barre{B})$
+    \item $A$ et $B$ sont tels que : $P_A(B)=\frac{1}{2} , P_B(A)=\frac{1}{3}$ et $P(A\cup B)=\frac{4}{5}$\\
+    Calculer $P(A)$
+\end{enumerate}
+
+
+
+\subsection{À vue de nez}
+ Dans ma classe, il y a 60$\%$ de filles; une fille sur trois porte des lunettes, ainsi qu'un garçon sur deux. Si je tire au hasard un élève de ma classe parmi les porteurs de lunettes, quelle est la probabilité qu'il s'agisse d'une fille ?
+
+
+
+\subsection{Des dés}
+ Un lot de cent dés contient vingt dés truqués, pour lesquels la probabilité de tomber sur un 6 est de 0,5 \\
+On lance un dé du lot et on obtient 6. Quelle est la probabilité que ce dé soit truqué ?
+
+
+
+\subsection{Des vertes et des pas mûres}
+ Un maraîcher propose trois sortes de pommes à la vente : des rouges, des vertes et des jaunes. Les pommes rouges représentent 60$\%$ de son stock, les vertes 15$\%$ et le reste est constitué de pommes jaunes. \\
+2$\%$ des pommes rouges ne sont pas encore mûres, ainsi que 5$\%$ des pommes vertes et 1$\%$ des pommes jaunes. \\
+On choisit au hasard une pomme dans le stock.\\
+Les résultats seront arrondis au millième.
+\begin{enumerate}
+    \item La pomme tirée n'est pas verte. Quelle est la probabilité qu'elle soit mûre ?
+    \item Quelle est la probabilité que la pomme tirée au hasard ne soit pas mûre ?
+    \item La pomme choisie n'est pas mûre. Quelle est la probabilité qu'elle soit jaune ?
+\end{enumerate}
+
+
+
+\subsection{Course sous pétales noirs}
+Dans une forêt composée de 30$\%$ d'aulnes, de 50$\%$ de bouleaux et de 20$\%$ de chênes, un incendie se déclare, réduisant en cendres 60$\%$ des chênes, 70$\%$ des bouleaux et 80$\%$ des aulnes.
+
+Le lendemain de l'incendie, Aïko fait son footing habituel dans cette forêt et s'accroche à la branche d'un arbre. Quelle est la probabilité qu'il s'agisse d'un bouleau ?
+
+
+\subsection{Dépistages}
+ Une maladie touche 1$\%$ de la population. Les tests de dépistage pour cette maladie sont fiables à 95$\%$ pour détecter les individus infectés, et à 90$\%$ pour détecter les individus sains. \\
+On effectue un test de dépistage sur une personne au hasard dans la population.
+\begin{enumerate}
+    \item Quelle est la probabilité que son test soit positif ?
+    \item Quelle est la probabilité d'un faux positif ? (L'individu est sain alors que son test est positif)
+    \item Quelle est la probabilité que l'individu soit infecté alors que le test a donné un résultat négatif ?
+\end{enumerate}
+
+
+
+\subsection{Une version plus précise}
+ Une madadie sévit dans la population. Les tests de dépistage pour cette maladie sont fiables à 95$\%$ pour détecter les individus infectés, et à 97$\%$ pour détecter les individus sains. D'après les test effectués, 10$\%$ de la population seraient infectés. \\
+On effectue un test de dépistage sur une personne au hasard dans la population.
+\begin{enumerate}
+    \item Expliquer en quoi cette situation est différente de celle de l'exercice précédent (À part les nombres !)
+    \item Quelle est la probabilité que l'individu soit infecté et que son test soit positif ?
+    \item Quelle est la probabilité d'un faux positif ? (L'individu est sain alors que son test est positif)
+    \item Quelle est la probabilité que l'individu soit infecté ?
+    \item Quelle est la probabilité que l'individu soit infecté alors que le test a donné un résultat négatif ?
+\end{enumerate}
+
+
+
+\subsection{Le paradoxe de Monty Hall}
+Un jeu télévisé se déroule comme décrit ci-après :\\
+Devant vous se trouvent trois boîtes fermées identiques. Deux sont vides, et l'une contient une surprise.\\
+Vous choisissez au hasard une des boîtes. Avant de révéler son contenu, le présentateur ouvre une autre boîte qui s'avère être vide. Il laisse alors la possibilité de modifier votre choix.
+
+Que devriez-vous faire ?
+
+
+
+\section{Indépendance}
+
+\subsection{Ordinateurs et voitures}
+ Une étude réalisée sur les étudiants d’une université a permis d’établir que 70 $\%$ des étudiants possèdent un ordinateur et que, parmi ceux-ci, 40 $\%$ possèdent une automobile. On sait aussi que 55 $\%$ des étudiants de l’université ne possèdent pas d’automobile. \\
+On choisit au hasard un étudiant de cette université et on note O l’événement « l’étudiant possède un ordinateur » et A l’événement « l’étudiant possède une automobile ». \\
+Les événements O et A sont ils indépendants ?
+
+
+
+\subsection{Boules et indépendance}
+ Une urne contient 12 boules numérotées de 1 à 12. On en tire une au hasard et on considère les évènements suivants : \\
+A : « Le numéro marqué sur la boule est pair »\\
+B : « Le numéro marqué sur la boule est un multiple de 3 »
+\begin{enumerate}
+    \item Les évènements A et B sont-ils indépendants ?
+    \item Même question avec une urne contenant cette fois 13 boules.
+\end{enumerate}
+
+
+
+\subsection{Dans un paquet de cartes}
+ On tire au hasard une carte dans un paquet classique de 52 cartes et on considère les évènements suivants : \\
+A : « La carte porte le symbole $\clubsuit$ »~~~~~~~~~ B : « La carte porte un symbole rouge » \\
+C : « La carte porte un numéro pair » ~~~~~~D : « La carte est plus forte qu'un 7 » \\ \\
+Parmi ces évènements, lesquels sont indépendant ? Lesquels ne le sont pas ?
+
+
+
+\subsection{Séance photo}
+Dans une classe de 30 élèves, 10 font partie du club photo, 6 sont dans le club théâtre et 2 sont membres des deux clubs.
+
+Lors d'une séance du club photo, un élève tiré au sort doit photographier  un autre élève, tiré au hasard également.
+\begin{enumerate}
+	\item Montrer que les évènements "Faire partie du club théâtre" et "Faire partie du club photo" sont indépendants.
+	\item Quelle est la probabilité que l'élève photographié fasse partie du club théâtre ?
+	\item L'élève photographié ne fait pas partie du club théâtre. Quelle est la probabilité que le photographe n'en fasse pas non plus partie ?
+\end{enumerate}
+
+
+
+\subsection{Feux tricolores}
+ Sur la route de son travail, Pierrick rencontre deux feux tricolores. Il a déterminé que la probabilité de devoir d'arrêter au premier feu est de $\frac{1}{3}$ et que celle de devoir s'arrêter au second est de $\frac{2}{5}$. \\
+Sachant qu'il y a une probabilité de $\frac{1}{2}$ de devoir s'arrêter à au moins un des deux feux tricolores, peut-on affirmer qu'ils fonctionnent indépendamment l'un de l'autre ?
+
+
+
+\subsection{Élections truquées}
+Lors du dépouillement dans un bureau de vote, on décompte 80 votes à destinations de femmes politique se revendiquant de gauche, 40 pour des femmes de droite, 200 pour des hommes politiques se revendiquant de droite et 140 pour des hommes de gauche.\\[5pt]
+On ouvre le bulletin d'un électeur au hasard.
+
+\begin{enumerate}
+	\item Les évènements \og L'électeur a voté à gauche \fg\, et \og L'électeur a voté pour une femme \fg\, sont-ils indépendants ?
+	\item Combien de bulletins en faveur d'hommes politiques orientés à droites faudrait-il retirer de l'urne pour que cela soit le cas ?
+\end{enumerate}
+
+
+\subsection{Des formes et des couleurs}
+On considère $x$ un nombre réel de l'intervalle $[0;80]$ \\
+Une urne contient 100 cubes en bois dont 60 sont bleus et les autres sont rouges. \\
+Parmi les cubes bleus, 40$\%$ ont leurs faces marquées d'un cercle, 20$\%$ ont leur faces marquées d'un losange, et les autres sont marqués d'une étoile. \\
+Parmi les cubes rouges, 20$\%$ ont leurs faces marquées d'un cercle, $x\%$ ont leur faces marquées d'un losange, et les autres sont marqués d'une étoile.\\
+On tire au hasard un cube dans l'urne
+\begin{enumerate}
+    \item Montrer que la probabilité de tirer un cube marqué d'un losange est de $0,12 + 0,004x$
+    \item Déterminer une valeur de $x$ pour laquelle la probabilité de tirer un cube marqué d'un losange est égale à celle de tirer un cube marqué d'une étoile.
+    \item Déterminer une valeur de $x$ pour laquelle les évènements \og Tirer un cube bleu \fg ~et \og Tirer un cube marqué d'un losange\fg sont indépendants.
+    \item On suppose dans cette question que $x=50$ \\
+    Le cube tiré est marqué d'un losange, quelle est la probabilité qu'il soit bleu ?
+\end{enumerate}
+
+
+
+\end{document}

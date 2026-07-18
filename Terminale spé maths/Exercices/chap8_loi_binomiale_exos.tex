@@ -1,0 +1,249 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Loi binomiale}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Sur la loi binomiale}
+
+\subsection{Loi de probabilité}
+Soit $X$ une variable aléatoire suivant une loi binomiale de paramètres $n=8$ et $p=\frac{2}{3}$
+
+\begin{enumerate}
+    \item Remplir le tableau ci-dessous :
+    \begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \hspace{-1cm}
+    \begin{tabular}{|P{2cm}|P{12mm}|P{12mm}|P{12mm}|P{12mm}|P{12mm}|P{12mm}|P{12mm}|P{12mm}|P{12mm}|} \hline
+    $k$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+    $P(X=k)$ & & & & & & & & & \\ \hline 
+    \end{tabular}
+    \end{center}
+    \item À l'aide du tableau ci-dessus, déterminer $P(X<5)$ , $P(X\geq4)$ et $P(3<X<7)$
+    \item Quelle est l'espérance de $X$ ?
+\end{enumerate}
+
+
+
+\subsection{À l'aide de la calculatrice}
+\begin{enumerate}
+    \item Soit $X$ suivant une loi binomiale de paramètres $n=15$ et $p=0,3$. Calculer :\\
+    \begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+        a) $P(X=5)$ & b) $P(X<7)$ & c) $P(X\geq4)$ & d) $P(X>11)$ 
+    \end{tabular}
+    \item Soit $X$ suivant une loi binomiale de paramètres $n=20$ et $p=0,45$. Calculer :\\    
+    \begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+        a) $P(X=10)$ & b) $P(X\geq15)$ & c) $P(4<X<11)$ & d) $P(13\geq X>7)$ 
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Schéma de Bernoulli}
+Parmi les situations suivantes, lesquelles peuvent être assimilées à un schéma de Bernoulli ? Justifier soigneusement :
+\begin{enumerate}
+	\item On tire avec remise dans une urne contenant des boules jaunes et vertes. On compte le nombre de boules vertes obtenues.
+	\item On tire sans remise dans une urne contenant des boules jaunes et vertes. On compte le nombre de boules jaunes obtenues.
+	\item On tire avec remise dans une urne contenant des boules jaunes et vertes. On compte le nombre de tirages avant d'obtenir la première boule jaune.
+	\item On tire au hasard des élèves au sein de la classe. On compte le nombre d'élèves bruns.
+	\item On cueille des fleurs dans un immense champ. On compte le nombre de fleurs blanches.
+	\item On cueille des fleurs dans un immense champ. On compte le nombre moyen de pétales.
+	\item On lance plusieurs fois un dé. On compte le nombre de numéros pairs obtenus.
+\end{enumerate}
+
+
+
+\subsection{Toujours faire un dessin}
+\begin{enumerate}
+    \item Soit $X$ suivant une loi binomiale de paramètres $n=25$ et $p=0,4$. Calculer :\\
+    \begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+        a) $P\left(\abs{X-5}<3\right)$ & b) $P\left(\abs{X-10}\leq1\right)$ & c) $P\left(\abs{X-12}\geq5\right)$ & d) $P\left(\abs{X-5}\geq12\right)$ 
+    \end{tabular}
+    \item Soit $X$ suivant une loi binomiale de paramètres $n=18$ et $p=\frac{2}{3}$. Calculer :\\    
+    \begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+        a) $P_{\{X\geq10\}}(X=12)$ & b) $P_{\{X<15\}}(X\geq10)$ & c) $P_{\{8\leq X<14\}}(X>11)$ & d) $P_{\{x\geq11\}}(X\leq11)$ 
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{À partir des moments}
+On considère $X$ une variable aléatoire suivant une loi binomiale de paramètres $n$ et $p$. \\
+On note $\EE(X)$ son espérance et $\VV(X)$ sa variance.
+\begin{enumerate}
+	\item Sachant que $n=24$ et $p=\frac{3}{4}$, déterminer $\EE(X)$ et $\VV(X)$
+	\item Sachant que $n=50$ et $\EE(X)=15$, déterminer $p$ et $\VV(X)$
+	\item Sachant que $p=\frac{1}{3}$ et $\VV(X)=4$, déterminer $n$ et $\EE(X)$
+	\item Sachant que $\EE(X)=9$ et $\VV(X)=6$, déterminer $n$ et $p$
+\end{enumerate}
+
+
+
+\subsection{Relations sur les moments}
+On considère $X$ une variable aléatoire suivant une loi binomiale de paramètres $n$ et $p$. \\
+On note $\EE(X)$ son espérance et $\VV(X)$ sa variance.
+\begin{enumerate}
+	\item Sachant que $n=20$ et $\EE(X)=3\VV(X)$, déterminer $p$, $\EE(X)$ et $\VV(x)$
+	\item Sachant que $\EE(X)=4\VV(X)$ et $n\EE(X)=100\VV(X)$, déterminer $n$, $p$, $\EE(X)$ et $\VV(X)$
+	\item Sachant que $\VV(X)=3p\EE(X)$ et $\frac{n^2}{\EE(X)}=64$, déterminer $n$, $p$, $\EE(x)$ et $\VV(X)$
+\end{enumerate}
+
+
+
+\subsection{Probabilité déséquilibrée}
+On considère une variable aléatoire $x$ suivant une loi binomiale de paramètres $n=50$ et $p$, et telle que sa variance vaut $\VV(X)=12$
+\begin{enumerate}
+	\item Montrer que $p=\frac{2}{5}$ ou $p=\frac{3}{5}$
+	\item Sachant de plus que $P(X=20)>P(X=30)$, déterminer la valeur de $p$
+\end{enumerate}
+
+
+
+\subsection{Optimisation d'un paramètre}
+On considère $X$ une variable aléatoire suivant une loi binomiale de paramètres $n$ et $p=\frac{1}{6}$. 
+\begin{enumerate}
+	\item Déterminer par le calcul le plus petit entier $n$ pour lequel $\PP(X\geq1)\geq0,9$
+	\item Déterminer par le calcul le plus petit entier $n$ pour lequel $\PP(X<n)\leq\frac{1}{16}$
+	\item[\faCalculator] Déterminer par le calcul le plus petit entier $n$ pour lequel $\PP(X\geq3)\geq0,95$
+\end{enumerate}
+
+
+
+\subsection{Encadrement de la contrainte}
+On considère $X$ une variable aléatoire suivant une loi binomiale de paramètres $n=50$ et $p=\frac{3}{7}$. \\
+Déterminer toutes les valeurs de $k\in [\![0;50]\!]$ pour lesquelles :
+
+a) $\PP(X>k)<\frac{1}{2}$ \qquad b)$\PP(X\leq k) \leq \frac{1}{2}$ \qquad c) $\PP(k-2\leq X \leq k+2)\geq\frac{2}{5}$ \qquad d) $\PP\left(\abs{X-k}>10\right)\geq\frac{1}{2}$
+
+
+
+
+\section{Applications pratiques}
+
+
+
+\subsection{Chaîne de production}
+Dans une usine de microprocesseurs produisant 100\,000 unités à la journée, chaque élément a une probabilité de $\frac{3}{100}$  d'être défectueux. 
+
+On prélève au hasard 80 microprocesseurs parmi ceux produits dans la journée, et on assimile ce choix à un tirage avec remise.
+
+On note $X$ la variable aléatoire égale au nombre de microprocesseurs défectueux parmi ceux prélevés.
+\begin{enumerate}
+	\item Justifier que $X$ suit une loi binomiale et en préciser les paramètres.
+    \item Quelle est la probabilité que 2 microprocesseurs exactement soient défectueux ?
+    \item Quelle est la probabilité d'avoir au maximum 1 microprocesseurs défectueux ?
+    \item Quelle est la probabilités qu'au moins 4 microprocesseurs soient défectueux ?
+\end{enumerate}
+
+
+
+\subsection{Urne et tirages}
+Une urne contient 3 boules rouges et 9 boules vertes. On effectue successivement 16 tirages avec remise dans cette urne et on note $X$ la variable aléatoire qui compte le nombre de boules vertes tirées.
+\begin{enumerate}
+    \item Justifier que $X$ suit une loi binomiale et en préciser les paramètres
+    \item Quelle est la probabilité de tirer exactement 5 boules rouges ?
+    \item Quelle est la probabilité de tirer au moins 2 boules vertes ?
+    \item Quelle est la probabilité de tirer entre 2 et 9 boules rouges ?
+    \item Combien de boules vertes seront tirées en moyenne ?
+\end{enumerate}
+
+
+
+\subsection{Groupe sanguin}
+En France, 40\% de la population est du groupe sanguin A, et 15\% des personnes du groupe A sont de rhésus négatif.
+\begin{enumerate}
+    \item On choisit aléatoirement une personne française. Quelle est la probabilité que cette personne soit du groupe sanguin A+ ?
+    \item On effectue des tests sanguins sur 100 personnes française choisies au hasard. On assimile ce choix à  un tirage avec remise.
+    \begin{enumerate}
+        \item Quelle est la probabilité qu'aucune des ces personnes ne soit de groupe sanguin A+ ?
+        \item Quelle est la probabilité qu'au moins la moitié de ces personnes soient de groupe A+ ?
+        \item Quelle est la probabilité que moins de 40 de ces personnes soient de groupe A ?
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Matchs et publicités}
+Une chaîne de télévision diffuse successivement 3 matchs sportifs de 90min chacun. Entre chaque match et à chaque mi-temps, la chaîne diffuse une page de publicités. Chacune des pages de publicités a une probabilité de $\frac{1}{3}$ de durer 5min, sinon elle dure 15min.
+
+On note $X$ le nombre de pages de publicités d'une durée de 5min, et $T$ la durée totale en minutes de la diffusion des 3 matchs sportifs.
+\begin{enumerate}
+    \item Déterminer la loi de probabilité de la variable aléatoire $X$
+    \item Justifier que $T=345-10X$
+    \item Quelle est la probabilité que la diffusion des 3 matchs dure exactement 5h05min ?
+    \item Si la diffusion du premier match commence à 18h30, quelle est la probabilité que la diffusion du dernier match se termine avant minuit ?
+\end{enumerate}
+
+
+
+
+\subsection{Lancers de dé}
+Combien de fois faut-il lancer un dé équilibré pour avoir une probabilité au moins égale à 0,95 de tomber au moins une fois sur un 6 ?
+
+
+
+\subsection{Un dé truqué}
+Un dé truqué suit la loi suivante :
+
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{15pt}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
+Numéro & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+Probabilité & 0,05 & 0,3 & 0,1 & 0,1 & 0,15 & 0,3\\ \hline 
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item Quelle est la probabilité de tomber sur un numéro impair ?
+    \item Pour $n\geq1$ on lance $n$ fois le dé, on note $X_n$ le nombre de numéros impairs sur lesquels le dé est tombé, et on note $p_n$ la probabilité de tomber au moins une fois sur un numéro impair.
+    \begin{enumerate}
+        \item Quelle loi suit la variable aléatoire $X_n$ ?
+        \item Exprimer $p_n$ en fonction de $n$
+        \item Déterminer la plus petite valeur de $n$ pour laquelle $p_n\geq0,95$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{L'hôtel de M. Treblih}
+L'hôtel de M. Treblih comporte 150 chambres qu'il essaie de toutes louer. Au cours des dernières années il s'est rendu compte que 25\% de ses clients réservent par téléphone et les autres par internet. Il s'avère également que 6\% des clients ayant réservé par téléphone ne se présentent pas à l'hôtel, contre 8\% pour ceux ayant réservé par internet.
+\begin{enumerate}
+    \item Quelle est la probabilité qu'un client ayant réservé une chambre se présente à l'hôtel ?
+    \item M. Treblih a malencontreusement validé 161 réservations pour le même soir ! Quelle est la probabilité qu'il ne puisse pas accueillir tous les clients se présentant à son hôtel ?
+    \item[\faCalculator] Combien de réservations au maximum peut-il valider pour un même soir en étant sûr à 98\% de pouvoir accueillir tous les clients qui se présenteront ?
+\end{enumerate}
+
+
+
+\subsection{QCM}
+Un élève répond au hasard à un QCM de 20 questions. Pour chaque question, 4 réponses différentes sont proposées et une seule réponse est correcte.\\
+On note $X$ le nombre de bonnes réponses.
+\begin{enumerate}
+    \item Préciser la loi de probabilité suivie par $X$
+    \item Calculer $E(X)$ et interpréter le résultat
+    \item On considère maintenant que chaque bonne réponse rapporte 1 point, et toute mauvaise réponse retire $p$ points, avec $0\leq p\leq1)$\\
+    On note $Y$ le score obtenu par l'élève
+    \begin{enumerate}
+        \item Exprimer $Y$ en fonction de $X$
+        \item Montrer que $E(Y)=5-15p$
+        \item Quelle valeur pour $p$ l'enseignant doit-il choisir s'il souhaite qu'un élève répondant au hasard obtienne en moyenne un score de 0 ?
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\end{document}

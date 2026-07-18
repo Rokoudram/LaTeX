@@ -1,0 +1,664 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+\input{../../../Latex/inputs/macro_paging.tex} 		   		% Mise en page cours
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Intégration de la variable réelle}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Notion d'intégrale}
+
+\subsection{Première approche graphique}
+\begin{minipage}[t]{0.3\textwidth}
+	\begin{tikzpicture}
+    	\begin{axis}[
+    		height = 7.5cm , width = 7.5cm ,
+      		xmin = -6, xmax = 6, ymin = -2, ymax = 8, xtick distance=2, ytick distance=2, grid = both,
+        	minor grid style = {line width = 0.1pt , draw = gray!20},
+        	major grid style = {line width = 0.2pt , draw = gray}, 
+        	axis lines = middle, minor tick num = 1, enlargelimits = { abs = 0.2 },
+        	ticklabel style = {font = \tiny }
+        	]
+    
+    	\draw[line width = 2pt , color = newred] (-6,2) -- (-2,2) --(0,0) -- (2,4) -- (6,2) ;
+
+    	\draw[color=newred] (4,4) node {\large\textbf{$\Ccal_f$}}; % ----- Ajouter texte
+
+    	\end{axis}
+	\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}[t]{0.3\textwidth}
+	\begin{tikzpicture}
+    	\begin{axis}[
+    		height = 7.5cm , width = 7.5cm ,
+        	xmin = -6, xmax = 6, ymin = -6, ymax = 4, xtick distance=2, ytick distance=2, grid = both,
+        	minor grid style = {line width = 0.1pt , draw = gray!20},
+        	major grid style = {line width = 0.2pt , draw = gray}, 
+        	axis lines = middle, minor tick num = 1, enlargelimits = { abs = 0.2 },
+        	ticklabel style = {font = \tiny }
+        	]
+
+		\draw[line width = 2pt , color=newred] (-6,-5) -- (-3,1) arc (180:90:2) -- (2,-3) -- (6,-1) ;
+
+    	\draw[color=newred] (4,2) node {\large\textbf{$\Ccal_g$}}; % ----- Ajouter texte
+
+    	\end{axis}
+	\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}[t]{0.3\textwidth}  
+	\begin{tikzpicture}
+    	\begin{axis}[
+    		height = 7.5cm , width = 7.5cm ,
+        	xmin = -6, xmax = 6, ymin = -4, ymax = 6, xtick distance=2, ytick distance=2, grid = both,
+        	minor grid style = {line width = 0.1pt , draw = gray!20},
+        	major grid style = {line width = 0.2pt , draw = gray}, 
+        	axis lines = middle, minor tick num = 1, enlargelimits = { abs = 0.2 },
+        	ticklabel style = {font = \tiny }
+        	]
+    
+    	\draw[line width = 2pt , color = newred] (-6,-2) arc (180:90:4) arc (-90:0:3) -- (6,-4);
+
+    	\draw[color=newred] (4,2) node {\large\textbf{$\Ccal_h$}}; % ----- Ajouter texte
+
+    	\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+
+À l'aide des graphiques ci-dessus et en expliquant votre démarche, déterminer la valeur des intégrales suivantes :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+    a) $\inte{0}{2}f(x)\dd x$ & b) $\inte{-3}{1}f(x)\dd x$ & c) $\inte{4}{-4}f(x)\dd x$ & d) $\inte{-6}{-1}g(x)\dd x$ \\
+    e) $\inte{0}{4}g(x)\dd x$ & f) $\inte{-6}{6}g(x)\dd x$ & g) $\inte{-2}{6}h(x)\dd x$ & i) $\inte{-6}{6}h(x)\dd x$
+\end{tabular}
+
+
+
+\subsection{Quelques disques}
+On rappelle que l'équation cartésienne du cercle de centre $(x_0;y_0)$ et de rayon $r$ est : \[(x-x_0)^2+(y-y_0)^2=r^2\]
+
+\begin{enumerate}
+	\item Justifier que $\inte{-1}{1}\sqrt{1-x^2}\dd x=\frac{\pi}{2}$
+	\item \begin{enumerate}
+		\item Déterminer la valeur de $\inte{-2}{2}\sqrt{4-x^2}\dd x$
+		\item Justifier que $\inte{1}{2}\sqrt{4-x^2}\dd x=\frac{2\pi}{3}-\frac{\sqrt{3}}{2}$
+		\item En déduire que $\inte{-1}{1}\sqrt{4-x^2}\dd x=\frac{2\pi}{3}+\sqrt{3}$
+	\end{enumerate}
+	\item\begin{enumerate}
+		\item Justifier que $y^2-4x+x^2=0$ est l'équation du cercle de rayon 2 centré en $(2;0)$
+		\item En déduire la valeur de $I=\inte{0}{4}\sqrt{4x-x^2}\dd x$
+	\end{enumerate}
+	\item\begin{enumerate}
+		\item Représenter la courbe d'équation $(x+1)^2+y^2=9$
+		\item En déduire la valeur de $J=\inte{-1}{2}\sqrt{8-2x-x^2}\dd x$
+	\end{enumerate}
+	\item Montrer que $\inte{-1}{2\sqrt{2}-1}\sqrt{15-2x-x^2}\dd x=4+2\pi$
+\end{enumerate}
+
+
+
+\subsection{Rectangle et somme géométrique}
+Dans cet exercice on cherche à calculer $I=\inte{0}{1}e^x\dd x$
+\begin{enumerate}
+	\item Justifier que $I=\limn S_n$ avec $S_n=\frac{1}{n}\sommek{0}{n-1}e^{\frac{k}{n}}$
+	\item Montrer que $S_n=\frac{1}{n}\times\dfrac{1-e}{1-e^{\frac{1}{n}}}$
+	\item En posant $X=\frac{1}{n}$, justifier que $\limn\frac{\frac{1}{n}}{1-e^{\frac{1}{n}}}=-1$
+	\item En déduire la valeur de $I$
+\end{enumerate}
+
+
+
+\subsection{Découpage de la parabole}
+L'objectif de cet exercice est de calculer $I=\inte{0}{2}x^2 \dd x$
+\begin{enumerate}
+	\item Démontrer par récurrence que $\sommek{0}{n-1}k^2 = \dfrac{n(n-1)(2n-1)}{6}$ pour tout entier $n$ strictement positif.
+	\item Justifier que $I=\limn S_n$ avec $S_n=\frac{2}{n}\sommek{0}{n-1}\left(\dfrac{2k}{n}\right)^2$
+	\item Montrer que $S_n=\dfrac{4n(n-1)(2n-1)}{3n^3}$
+	\item En déduire que $I=\frac{4}{3}$
+\end{enumerate}
+
+
+
+\subsection{Encadrement}
+Démontrer les encadrements suivants sans calculer les intégrales ci-dessous :\\
+\begin{tabular}{p{0.44\textwidth} p{0.44\textwidth}}
+        a) $\frac{2}{9}\leq\inte{0}{2}\frac{1}{1+x^3}\dd x\leq2$ & b) $0\leq\inte{0}{\pi}\sin(x)\sqrt{x}\dd x\leq8$ \\
+        c) $0\leq\inte{1}{\ln(3)}\frac{e^x}{1+e^{-x}}\dd x\leq\frac{9}{40}$ & d) $6\ln(2)\leq\inte{-1}{2}\ln(4+x^2)\dd x\leq9\ln(2)$ \\
+        e) $\frac{3}{2}\leq\inte{-1}{1}\sqrt{1+x+x^2}\dd x\leq4$ & f) $0\leq\inte{1}{3}\frac{\ln(x)}{x^2}\dd x\leq\frac{1}{e}$
+\end{tabular}
+
+
+
+\section{Calcul intégral}
+
+\subsection{Premières intégrales}
+Calculer les intégrales suivantes à l'aide d'une primitive :
+
+\begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+    A = $\inte{-2}{4}\frac{5}{8}x+1\dd x$ & B = $\inte{1}{\frac{1}{4}}\frac{1}{x^2}-x \dd x$ & C = $\inte{1}{2}\frac{t}{2}+\frac{2}{t}\dd t$ & D = $\inte{-1}{2}\frac{5t}{3+t^2}\dd t$ \\
+    E = $\inte{0}{\ln(3)}e^x+e^{-x}\dd x$ & F = $\inte{\frac{\pi}{3}}{\frac{\pi}{2}}\frac{\sin(x)}{1+\cos(x)}\dd x$ & G = $\inte{1}{e}\frac{\ln(x)}{x}\dd x$ & H = $\inte{0}{\sqrt{\frac{\pi}{2}}}t\sin(t^2)\dd t$
+\end{tabular}
+
+
+
+\subsection{Calcul d'aire}
+Calculer la valeur des aires délimitées en rouge ci-dessous :
+
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}
+    \begin{axis}[
+    	height = 7cm , width = 7.5cm ,
+    	xmin = 0, xmax = 1, ymin = 0, ymax = 1, xtick distance=0.25, ytick distance=0.25,
+    	grid = both,
+        minor grid style = {line width = 0.1pt , draw = gray!20},
+        major grid style = {line width = 0.2pt , draw = gray!50},
+        axis lines = middle, minor tick num = 0, enlargelimits = { abs = 0.1 }, 
+        ticklabel style = {font = \tiny }
+        ]
+    
+    % Courbes
+    \addplot[line width =1.5pt, domain=-0.5:1.5, samples=100, color=black]
+    {1/(1+x)};
+    \addplot[line width =1.5pt, domain=-0.5:1.5, samples=100, color=black]
+    {x/(1+x^2)};
+
+    \draw[color=black] (0.5,0.9) node {$y=\dfrac{1}{1+x}$}; % ----- Ajouter texte
+
+    \draw[color=black] (0.65,0.3) node {$y=\dfrac{x}{1+x^2}$}; % ----- Ajouter texte
+
+    \path[fill = newred , fill opacity = 0.25]
+        (0,0) -- (0,1) -- plot[domain=0:1](\x,{1/(1+\x)}) -- (1,0.5) -- plot[domain=1:0](\x,{\x/(1+\x^2}) ;
+    
+    \end{axis}
+\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}
+    \begin{axis}[
+    	height = 7cm , width = 7.5cm ,
+    	xmin = 0, xmax = 1, ymin = 0, ymax = 1, xtick distance=0.25, ytick distance=0.25,
+    	grid = both,
+        minor grid style = {line width = 0.1pt , draw = gray!20},
+        major grid style = {line width = 0.2pt , draw = gray!50},
+        axis lines = middle, minor tick num = 0, enlargelimits = { abs = 0.1 }, 
+        ticklabel style = {font = \tiny }
+        ]
+    
+    % Courbes
+    \addplot[line width =1.5pt, domain=0:1.5, samples=150, color=black]
+    	{sqrt(x)};
+    \addplot[line width =1.5pt, domain=-0.5:1.5, samples=100, color=black]
+    	{x^2}; 
+
+    \draw[color=black] (0.2,0.65) node {$y=\sqrt{x}$}; % ----- Ajouter texte
+
+    \draw[color=black] (0.65,0.2) node {$y=x^2$}; % ----- Ajouter texte
+
+    \path[fill = newred , fill opacity = 0.25]
+        (0,0) -- plot[domain=0:1](\x,{sqrt(\x)}) -- plot[domain=1:0](\x,\x*\x) (0,0) ;
+    
+    \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}
+    \begin{axis}[
+    	height = 7cm , width = 7.5cm ,
+    	xmin = 0, xmax = 1, ymin = 0, ymax = 1, xtick distance=0.25, ytick distance=0.25,
+    	grid = both,
+        minor grid style = {line width = 0.1pt , draw = gray!20},
+        major grid style = {line width = 0.2pt , draw = gray!50},
+        axis lines = middle, minor tick num = 0, enlargelimits = { abs = 0.1 }, 
+        ticklabel style = {font = \tiny }
+        ]
+    
+    % Courbes
+    \addplot[line width =1.5pt, domain=-0.5:1.5, samples=100, color=black]
+    {(x+e^x)/(2*(e^x-x)};
+    \addplot[line width =1.5pt, domain=-0.5:1.5, samples=100, color=black]
+    {1/(e^x-x)-0.5}; 
+
+    \draw[color=black] (0.65,0.8) node {$y=\dfrac{x+e^x}{2(e^x-x)}$}; % ----- Ajouter texte
+
+    \draw[color=black] (0.4,0.15) node {$y=\dfrac{1}{e^x-x}-\dfrac{1}{2}$}; % ----- Ajouter texte
+
+    \path[fill = newred , fill opacity = 0.25]
+        (0,0.5) -- plot[domain=0:1](\x, {(\x+e^\x)/(2*(e^\x-\x))} ) -- (1,1.082) -- plot[domain=1:0](\x, {1/(e^\x-\x)-0.5}) (0,0) ;
+    
+    \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Aire sous tangente}
+Soit la fonction $f$ définie sur $\RR$ par $f:x\mapsto (x+2)e^{-2x}$
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Déterminer l'équation réduite de $T$ la tangente à $\Ccal_f$ au point d'abscisse 0
+        \item Déterminer les coordonnées de $A$ le point d'intersection entre $T$ et l'axe des abscisses.
+    \end{enumerate}
+    \item Déterminer $a$ et $b$ réels tels que $F:x\mapsto(ax+b)e^{-2x}$ soit une primitive de $f$
+    \item Calculer l'aire du domaine délimité par $\Ccal_f$, $T$, l'axe des ordonnées et la droite verticale passant par le point $A$.
+\end{enumerate}
+
+
+
+\subsection{Niveau supérieur}
+Calculer les intégrales suivantes à l'aide d'une primitive :\\
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.27\textwidth} p{0.27\textwidth} p{0.27\textwidth}}
+    A = $\inte{1}{4}\frac{2x}{x+1}\dd x$ & B =  $\inte{1}{\ln(5)}xe^{1-x^2}\dd x$  & C = $\inte{0}{\frac{2\pi}{3}}\sin(x)\cos(x)^2\dd x$ \\
+    D = $\inte{\frac{1}{\pi}}{\frac{4}{\pi}}\frac{\cos\left(\frac{1}{x}\right)}{x^2}\dd x$ & E = $\inte{0}{\frac{\pi}{3}}\tan(x)\dd x$ & F =$\inte{0}{2}\frac{x^2}{3x+1}\dd x$\\
+    G = $\inte{2}{3}\frac{\sqrt{\ln(x)}}{x}\dd x$ & H = $\inte{1}{e}\frac{\ln^2(x^2)}{x}\dd x$ & I = $\inte{0}{2}\frac{e^{2x}}{\left(1+\left(e^x\right)^2\right)^3}\dd x$
+\end{tabular}
+
+
+
+\subsection{Intégration par parties : Niveau 1}
+Calculer chacune des intégrales suivantes en utilisant une intégration par parties :
+
+\begin{tabular}{p{0.27\textwidth} p{0.27\textwidth} p{0.27\textwidth}}
+	$A=\inte{0}{\frac{\pi}{2}}(x+2)\cos(x)\dd x$ & $B=\inte{1}{e}t^2\ln(t)\dd t$ & $C=\inte{0}{1}xe^x\dd x$ \\[5pt]
+	$D=\inte{0}{\frac{\pi}{3}}3\theta\cos(2\theta)\dd \theta$ & $E=\inte{0}{1}(3x-2)e^{4x}\dd x$ & $F=\inte{0}{\frac{3}{2}}\frac{x}{\sqrt{1+2x}}\dd x$
+\end{tabular}
+
+
+
+\subsection{Intégration par parties : Niveau 2}
+Calculer chacune des intégrales suivantes en utilisant une ou plusieurs intégrations par parties :
+
+\begin{tabular}{p{0.31\textwidth} p{0.28\textwidth} p{0.28\textwidth}}
+	$A=\inte{1}{2}(t+t^2)e^t\dd t$ & $B=\inte{1}{e}x\ln(x)^2\dd x$ & $C=\inte{\frac{\pi}{2}}{\pi}(1-t^2)\cos(2t)\dd t$ \\[5pt]
+	$D=\inte{0}{\pi}(\pi t-t^2)\sin\left(t+\frac{\pi}{3}\right)\dd t$ & $E=\inte{0}{1}(1+2t+3t^2)e^{4t}\dd t$ & $F=\inte{0}{1}\alpha^3e^\alpha\dd \alpha$
+\end{tabular}
+
+
+
+\subsection{Intégration par parties : Niveau 3}
+Calculer chacune des intégrales suivantes en utilisant une ou plusieurs intégrations par parties :
+
+\begin{tabular}{p{0.31\textwidth} p{0.28\textwidth} p{0.28\textwidth}}
+	$A=\inte{1}{e}\ln(x)\dd x$ & $B=\inte{1}{e}\ln(x)^2\dd x$ & $C=\inte{0}{\pi}\sin^2(x)\dd x$ \\[5pt]
+	$D=\inte{0}{\frac{\pi}{3}}e^x\cos(x)\dd x$ & $E=\inte{\frac{\pi}{3}}{\pi}x\sin(x)\cos(x)\dd x$ & $F=\inte{0}{\pi}\cos^3(t)\dd t$
+\end{tabular}
+
+
+
+\subsection{Un calcul de surface}
+\begin{minipage}{0.49\textwidth}
+On modélise un bonnet à l'aide de $\Ccal_f$ la courbe représentative de la fonction $f:x\mapsto\sqrt{1+x}$ que l'on fait tourner à 360° autour de l'axe des abscisses.
+
+On s'intéresse à la quantité de tissu nécessaire à la confection du bonnet.
+
+On considère qu'une unité de longueur sur le repère correspond à 5cm et que la surface du bonnet est donnée par la formule\\[5pt]
+$\Scal=\inte{-1}{2}f(x)\sqrt{1+f'(x)^2}\dd x$
+
+\begin{enumerate}
+    \item Montrer que $f(x)\sqrt{1+f'(x)^2} = \frac{1}{2}\sqrt{4x+5}$
+    \item On pose $g(x)=\frac{2}{3}x\sqrt{4x+5}+\frac{5}{6}\sqrt{4x+5}$
+    
+    Montrer que $g'(x)=\sqrt{4x+5}$
+    \item En déduire la quantité de tissu nécessaire à confection du bonnet.
+\end{enumerate}
+
+
+\end{minipage}
+\hspace{30pt}
+\begin{minipage}{0.44\textwidth}
+    \begin{tikzpicture}[scale=1.2] % ----- Début de la figure
+        \begin{axis}[
+            xmin = -2, xmax = 3, ymin = -2.5, ymax = 2.5,
+            xtick distance=1, ytick distance=1, grid = both,
+            minor grid style = {line width = 0.1pt , draw = gray!20}, 
+            major grid style = {line width = 0.2pt , draw = gray}, 
+            axis lines = middle, minor tick num = 1, enlargelimits = { abs = 0.2 },
+            ticklabel style = {font = \tiny }
+            ]
+
+        \fill[smooth,
+            variable=\x,
+            shading = axis,rectangle,
+            left color=Goldenrod2!80,
+            right color=Goldenrod1!60,
+            shading angle=135,
+            anchor=north]
+            (2,-sqrt(3) -- plot[domain=2:-1](\x,{ -sqrt(1+\x)} ) -- (-2,0) -- plot[domain=-1:2](\x,{ sqrt(1+\x)} ) ;
+
+        \addplot[line width = 1.5pt , domain=-1:2, samples=200, color=black]   
+        {sqrt(1+x)}; % ----- Expression de f(x)
+
+        \draw[color=black] (2.1,1.9) node {$\Ccal_f$}; % ----- Ajouter texte
+        
+        \addplot[line width = 0.3pt , domain=-1:2, samples=100, color=black, dashed]   
+        {-sqrt(1+x)}; % ----- Expression de f(x)        
+        \addplot[line width = 0.3pt , domain=-1:2, samples=100, color=black, dashed]   
+        {0.75*sqrt(1+x)}; % ----- Expression de f(x)        
+        \addplot[line width = 0.3pt , domain=-1:2, samples=100, color=black, dashed]   
+        {0.25*sqrt(1+x)}; % ----- Expression de f(x)
+        \addplot[line width = 0.3pt , domain=-1:2, samples=100, color=black, dashed]   
+        {-0.25*sqrt(1+x)}; % ----- Expression de f(x)    
+        \addplot[line width = 0.3pt , domain=-1:2, samples=100, color=black, dashed]   
+        {-0.75*sqrt(1+x)}; % ----- Expression de f(x)
+
+        \draw [color=black , fill,
+            shading = axis,rectangle,
+            left color=Goldenrod3,
+            right color=Goldenrod3!70,
+            shading angle=90,
+            line width = 1pt ,
+            dashed] 
+            (2.2,0) arc [start angle=0 , end angle=360 , x radius=0.2 , y radius=sqrt(3)];
+
+        \draw(1.8,0)--(2.2,0);
+            
+        \draw [-> , color=black , line width = 1.5pt , dashed] 
+            (-0.8,0.7) arc [start angle=45 , end angle=320 , x radius=0.2 , y radius=1];
+        \end{axis}
+    \end{tikzpicture} 
+\end{minipage}
+
+
+
+\subsection{Étude d'un tunnel}
+\begin{minipage}{0.44\textwidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        width = 10cm , height = 8cm ,
+            xmin = -3, xmax = 3, ymin = 0, ymax = 4,
+            xtick distance=1, ytick distance=1, grid = both,
+            minor grid style = {line width = 0.1pt , draw = gray!20}, 
+            major grid style = {line width = 0.2pt , draw = gray}, 
+            axis lines = middle, minor tick num = 1, enlargelimits = { abs = 0.2 },
+            ticklabel style = {font = \tiny }
+            ]
+    
+        \draw[fill , pattern=bricks] (-3,0)--(-3,0) -- plot[domain=-3:3](\x,{4.01-(e^\x+e^(-\x))/5}) -- (3,0) -- (3,0) -- plot[domain=3:-3](\x,{4.2-(e^\x+e^(-\x))/6}) -- (-3,0);
+    
+        \fill[outer color=black!50,inner color=black!20]
+            (-2.478,0) -- plot[domain=-3:3](\x,{4.01-(e^\x+e^(-\x))/5}) -- (3,0) ;
+    
+        %\draw[dashed, line width = 5pt , color = yellow!90!red!60, opacity=0.5] (0,3.5)--(0,1.75);
+    
+        \draw (0.75,1)[color=white,fill] arc (0:180:0.75) ;
+    
+        \draw[color = black!80 , fill, opacity=0.6] (-3,0)--(-0.75,1)--(0.75,1)--(3,0);
+        \draw[color = white , fill = white] (-0.15,0)--(-0.05,1)--(0.05,1)--(0.15,0);
+    
+        \addplot[line width = 2pt, domain=-3.3:3.3, samples=100, color=newred]   
+        {4.01-(e^x+e^(-x))/5};
+
+        \draw[color=newred] (-1.5,2.25) node {$\Ccal_f$}; % ----- Ajouter texte
+    
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.49\textwidth} \restoreskip
+    Dans cet exercice on s'intéresse à un tunnel, modélisé dans le schéma ci-contre à l'aide de $\Ccal_f$ la courbe représentative de la fonction $f$ définie par $f(x)=4,01-\dfrac{e^x+e^{-x}}{5}$.
+    
+    On admettra qu'une unité de longueur du repère représente 1m.
+\end{minipage}
+
+
+\begin{enumerate}
+	\item On cherche à déterminer la largeur de la route passant sous le tunnel.
+	\begin{enumerate}
+		\item Justifier que $f(x)=0\Longleftrightarrow 20e^{2x}-401e^x+20=0$
+		\item Montrer que les solutions de l'équation $f(x)=0$ sont exactement $x_1=\ln(20)$ et $x_2=-\ln(20)$
+		\item En déduire que la largeur de la route est $L=\ln(400)$ puis en donner une valeur approchée au centimètre près.
+	\end{enumerate}
+	\item Un camion d'une largeur de 2m arrive face au tunnel.\\    
+           Quelle hauteur le camion ne doit-il pas dépasser afin de pouvoir s'engager dans le tunnel ?
+	\item Dans cette question uniquement, on considère que $L=6$m
+	
+	La zone dans laquelle le tunnel a été creusé est particulièrement sujette aux inondations. Pour ne pas 			que le tunnel soit immergé lors d'épisodes de grande pluie, la municipalité décide de faire fabriquer 			une porte à deux battants afin de fermer hermétiquement le tunnel.
+	Quelle doit être la surface d'un des battants de cette porte ?
+\end{enumerate}
+
+
+
+\subsection{Détour par logarithme}
+Soit $f:x\mapsto\frac{x^3}{1+x^3}$ définie sur $\RR_+$
+\begin{enumerate}
+    \item Montrer que $f'(x)=\frac{3x^2}{(1+x^3)^2}$
+    \item En déduire la valeur de $I=\inte{1}{e}\frac{3x^2\ln(x)}{1+2x^3+x^6}\dd x$
+\end{enumerate}
+
+
+
+\section{Suites d'intégrales}
+
+\subsection{Première suite}
+On pose $f:x\mapsto x(1-x)$ définie sur $\RR$ et $I_n=\inte{0}{1}x^n(1-x)^n\dd x$ pour tout $\nN$
+\begin{enumerate}
+    \item Calculer $I_0$ et $I_1$
+    \item Montrer que $f$ est majorée par $\frac{1}{4}$ sur $\RR$
+    \item Montrer que $0\leq I_n\leq\frac{1}{4^n}$ pour tout $\nN$
+    \item En déduire que $(I_n)$ converge et donner la valeur de $l=\limn I_n$
+\end{enumerate}
+
+
+
+\subsection{Plus simple qu'il n'y parait}
+Déterminer $\limn \inte{0}{n}\left(\frac{n-x}{n}\right)^n\dd x$
+
+
+
+\subsection{Une aire à l'infini}
+Pour tout $\xR$, on pose $f(x)=\frac{x-1}{e^x-x}$ et $g(x)=e^x-x$
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Dresser le tableau de variations de la fonction $g$
+        \item En déduire le tableau de signes de $f$
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que $f(x)=\frac{e^x-1}{e^x-x}-1$ pour tout $\xR$
+        \item En déduire la primitive de $f$ s'annulant  en 0
+    \end{enumerate}
+    \item On pose $I_n=\inte{0}{n}\frac{x-1}{e^x-x}\dd x$
+    \begin{enumerate}
+        \item Exprimer $I_n$ en fonction de $n$
+        \item Déterminer $\limn I_n$
+        \item Donner une interprétation graphique de ce dernier résultat
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Un cas d'école}
+Pour $\nN$ on définit la suite $(u_n)$ par $u_n=\inte{1}{e}x\ln(x)^n\dd x$
+\begin{enumerate}
+    \item Justifier que la suite $(u_n)$ est positive.
+    \item Justifier que la suite $(u_n)$ est décroissante et en déduire qu'elle converge.
+    \item À l'aide d'une intégration par parties, montrer que $u_{n+1}=\frac{e^2}{2}-\frac{n+1}{2}u_n\quad\forall\nN$
+    \item En déduire que $u_n\leq\frac{e^2}{n+1}\quad\forall\nN$
+    \item Déterminer $\limn u_n$
+\end{enumerate}
+
+
+
+\subsection{Variation sur classique}
+Pour tout $\nN$ on pose $I_n=\inte{0}{1}x^ne^x\dd x$
+\begin{enumerate}
+    \item Calculer $I_0$ et $I_1$
+    \item Montrer que la suite $(I_n)$ est décroissante.
+    \item Démontrer que $I_n \leq \frac{e}{n+1}$ \quad pour tout $\nN$
+    \item \begin{enumerate}
+    	\item Démontrer que $I_{n+1}=e-(n+1)I_n$ \quad pour tout $\nN$
+    	\item En déduire alors que $I_n\geq \frac{e}{n+2}$ \quad pour tout $\nN$
+	\end{enumerate}
+    \item Déterminer $\limn I_n$
+\end{enumerate}
+
+
+
+\subsection{Délicate I.P.P.}
+On définit la suite $(u_n)_{n\geq2}$ par $u_n=\inte{1}{2}\frac{1}{x^n}e^{\frac{1}{x}}\dd x$
+\begin{enumerate}
+	\item Montrer que $0\leq u_n \leq \frac{e}{n-1}-\frac{e}{(n-1)2^{n-1}}$ \quad $\forall n\geq2$
+	\item En déduire $\limn u_n$
+	\item Calculer la valeur de $u_2$
+	\item \begin{enumerate}
+		\item À l'aide d'une intégration par parties, démontrer que $u_{n+1}=e-\frac{\sqrt{e}}{2^{n-1}}+(1-n)u_n$
+		\item Calculer la valeur de $u_3$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Suites conjointes}
+On définit les suites $(u_n)$ et $(v_n)$ par $u_n=\inte{0}{\frac{\pi}{2}}e^{-nx}\cos(x)\dd x$ et $v_n=\inte{0}{\frac{\pi}{2}}e^{-nx}\sin(x)\dd x$
+\begin{enumerate}
+    \item Calculer $u_0$ et $v_0$
+    \item Montrer que $u_n=e^{-\frac{n\pi}{2}}+nv_n \quad \forall\nN$
+    \item Montrer que $v_n=1-nu_n \quad \forall\nN$
+    \item Montrer que $u_n=\dfrac{n+e^{-\frac{n\pi}{2}}}{1+n^2}$ et $v_n=\dfrac{1-ne^{-\frac{n\pi}{2}}}{1+n^2}$
+    \item Déterminer $\limn u_n$ et $\limn v_n$
+\end{enumerate}
+
+
+
+\subsection{Inattendu logarithme}
+Pour $\nN$ on pose $I_n=\inte{0}{1}\frac{1}{1+t^n}$
+\begin{enumerate}
+	\item Démontrer que $0\leq I_n\leq1$ pour tout $\nN$
+	\item Montrer que la suite $(I_n)$ est croissante.
+	\item \begin{enumerate}
+		\item Montrer que $I_n=1-\inte{0}{1}\frac{t^n}{1+t^n}\dd t$
+		\item Justifier alors que $I_n\geq1-\frac{1}{n+1}$
+	\end{enumerate}	 
+	\item Donner la limite de la suite $(I_n)$
+	\item À l'aide d'une intégration par parties, démontrer que $\inte{0}{1}\frac{t^n}{1+t^n}\dd t = \frac{\ln(2)}{n}-\frac{1}{n}\inte{0}{1}\ln\left(1+t^n\right)\dd t$
+	\item On pose $g:x\mapsto\ln(1+x)-x$ pour tout $\xR_+$
+	\begin{enumerate}
+		\item Dresser le tableau de variations de $g$.
+		\item Justifier que la fonction $g$ est négative sur $\RR_+$
+		\item En déduire que $0\leq\ln\left(1+t^n\right)\leq t^n$ sur $[0;1]$
+	\end{enumerate}
+	\item Démontrer que $\limn n(1-I_n)=\ln(2)$
+\end{enumerate}
+
+
+
+\subsection{Ça converge, mais ...}
+Pour $\nN$ on pose $I_n=\inte{0}{1}\frac{\ln(1+x)}{1+x^n}\dd x$
+\begin{enumerate}
+    \item Montrer que $0\leq I_n \leq \ln(2)\quad\forall\nN$
+    \item Montrer que la suite $(I_n)$ est croissante et en déduire qu'elle converge.
+    \item Démontrer que $I_n=\inte{0}{1}\ln(1+x)\dd x - \inte{0}{1}\frac{x^n}{1+x^n}\ln(1+x)\dd x$
+    \item \begin{enumerate}
+        \item Montrer que $0\leq \inte{0}{1}\frac{x^n}{1+x^n}\ln(1+x)\dd x \leq \ln(2)\times\inte{0}{1}x^n\dd x \quad \forall\nN$
+        \item En déduire que $\limn \inte{0}{1}\frac{x^n}{1+x^n}\ln(1+x)\dd x=0$
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que $F:x\mapsto (x+1)\ln(1+x)-x$ est une primitive de $f:x\mapsto\ln(1+x)$
+        \item Déterminer $\limn I_n$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Histoire d'encadrement}
+Pour $\nN$, on pose $x_n=\inte{0}{1}\frac{t^n}{\sqrt{1+t}}\dd t$
+\begin{enumerate}
+    \item Démontrer que $x_0=2(\sqrt{2}-1)$
+    \item Justifier que la suite $(x_n)$ est positive.
+    \item Montrer que la suite $(x_n)$ est décroissante.
+    \item \begin{enumerate}
+        \item Montrer que $x_n+x_{n+1}=\inte{0}{1}t^n\sqrt{1+t}\dd t$
+        \item À l'aide d'une intégration par parties, montrer que $\inte{0}{1}t^n\sqrt{1+t}\dd t=\frac{\sqrt{2}}{n+1}-\frac{x_{n+1}}{2(n+1)}$
+        \item En déduire que $(2n+3)x_{n+1}+(2n+2)x_n\leq 2\sqrt{2}\quad\forall\nN$
+    \end{enumerate}
+    \item Démontrer que $(4n+5)x_{n+1}\leq2\sqrt{2}\leq(4n+5)x_n\quad\forall\nN$
+    \item En déduire $\limn x_n$
+\end{enumerate}
+
+
+
+
+\section{Exercices supplémentaires}
+
+\subsection{Détour trigonométrique}
+On considère l'intégrale $I=\inte{0}{\frac{\pi}{4}}\tan(x)+\frac{x}{\cos^2(x)}\dd x$
+\begin{enumerate} \setlength{\itemsep}{0pt}
+    \item Montrer que $\tan(x)+\frac{x}{\cos^2(x)}-x = \frac{\sin(x)\cos(x)+x\sin^2(x)}{\cos^2(x)}$ \quad $\forall x\in\left[0~;\frac{\pi}{4}\right]$
+    \item On définit sur $\left[0~;\frac{\pi}{4}\right]$ la fonction $g:x\mapsto\frac{x}{\cos(x)}$\\
+    Montrer que $g'(x)=\frac{\cos(x)+x\sin(x)}{\cos^2(x)}$
+    \item En déduire la valeur de $J=\inte{0}{\frac{\pi}{4}}\tan(x)+\frac{x}{\cos^2(x)}-x\dd x$
+    \item Démontrer que $I=\frac{\pi}{4}$
+\end{enumerate}
+
+
+
+\subsection{Intégrales trigonométriques}
+On définit les suites $(A_n)$ et $(B_n)$ par $A_n=\inte{0}{\pi}e^t\cos\left(\frac{t}{n}\right)\dd t$ et $A_n=\inte{0}{\pi}e^t\sin\left(\frac{t}{n}\right)\dd t$ \quad pour $\nN^*$
+\begin{enumerate}\setlength{\itemsep}{0pt}
+    \item Montrer que $0\leq A_n\leq e^\pi-1$ \quad et \quad $0\leq B_n\leq e^\pi-1$ \quad $\forall\nN^*$
+    \item \begin{enumerate}
+        \item Démontrer que $\cos\left(\frac{t}{n+1}\right)\geq\cos\left(\frac{t}{n}\right)$ \quad $\forall t\in[0;\pi]$ , \quad $\forall\nN^*$
+        \item En déduire que $(A_n)$ est croissante et converge vers $a\in\RR$
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Démontrer que $\sin\left(\frac{t}{n+1}\right)\leq\sin\left(\frac{t}{n}\right)$ \quad $\forall t\in[0;\pi]$ , \quad $\forall n\geq3$
+        \item En déduire que $(A_n)$ est décroissante à partir du rang $n=3$ et qu'elle converge vers $b\in\RR$
+    \end{enumerate}
+    \item Démontrer que $A_n\geq B_n$ \quad $\forall n\geq 4$
+    \item \begin{enumerate}
+        \item Démontrer que $B_n\leq e^\pi\left(1-\cos\left(\frac{\pi}{n}\right)\right)$ \quad $\forall\nN^*$
+        \item En déduire la valeur de $b$
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que $A_n=e^\pi-1+\frac{B_n}{n}$ \quad $\forall\nN^*$
+        \item En déduire la valeur de $a$
+    \end{enumerate}
+    \item Déterminer $\limn n\times B_n$ 
+\end{enumerate}
+
+
+
+\subsection{Point fixe}
+On considère $f$ une fonction dérivable sur $\RR$ telle que $f'(x)>2$ \quad$\forall\xR$\\
+On note $a=f(0)$
+\begin{enumerate}
+	\item On suppose que $a>0$
+	\begin{enumerate}
+		\item En intégrant $f'$ sur $[0;x]$, montrer que $f(x)>2x+a$ \quad$\forall\xR_+^*$
+		\item En intégrant $f'$ sur $[x;0]$, montrer que $f(x)<2x+a$ \quad$\forall\xR_-^*$
+		\item Déterminer le signe de $f(-a)$
+		\item Montrer que $f$ s'annule une unique fois sur $\RR$
+	\end{enumerate}
+	\item On suppose désormais que $a<0$\\
+	Démontrer à l'aide d'un raisonnement analogue que $f$ s'annule une unique fois sur $\RR$
+	\item Soit $g$ une fonction dérivable sur $\RR$ telle que $g'(x)>3$ \quad$\forall\xR$\\
+	Démontrer que l'équation $g(x)=x$ admet une unique solution sur $\RR$
+\end{enumerate}
+
+
+
+\subsection{Un bon bilan}
+Soit $f$ une fonction dérivable sur $\RR$ telle que $f'(x)>3$ \quad$\forall\xR$
+\begin{enumerate}
+	\item Démontrer que $f(x)>1+3x$ \quad$\forall\xR_+^*$
+	\item On définit la suite $(u_n)$ de premier terme positif par la relation de récurrence $u_{n+1}=f(u_n)$
+	\begin{enumerate}
+		\item Montrer que $u_n>3^n\times\frac{2u_0+1}{2}-\frac{1}{2}$ \quad$\forall\nN^*$
+		\item Peut-on conclure quant à la limite de la suite $(u_n)$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\end{document}

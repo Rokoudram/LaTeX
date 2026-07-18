@@ -1,0 +1,521 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+\input{../../../Latex/inputs/macro_paging.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Polynômes du second degré}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Forme canonique et variations}
+
+\subsection{Canonisation}
+Déterminer la forme canonique de chacun des polynômes suivants dont on donne la forme développée :
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$P_1:x\mapsto x^2+2x+3$ & $P_2:x\mapsto x^2-3x-6$ & $P_3:x\mapsto -x^2-6x+9$ \\
+ $P_4:x\mapsto 2x^2+x+1$ & $P_5:x\mapsto -3x^2+2x-5$ & $P_6:x\mapsto 4x^2+5x+1$
+\end{tabular}
+
+
+
+\subsection{Variations}
+Dresser le tableau de variations de chacun des polynômes suivants donnés sous forme développée :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$P_1:x\mapsto 4x^2+12x+11$ & $P_2:x\mapsto -x^2+5x-2$ & $P_3:x\mapsto 3x^2+4x-5$
+\end{tabular}
+
+
+
+\subsection{Graphiquement}
+\begin{minipage}{0.4\linewidth} \restoreskip
+	1. Associer chacune des paraboles représentées dans le repère ci-contre à l'expression du polynôme qui lui correspond parmi les suivants :
+	
+	$f_1:x\mapsto \frac{1}{4}(x-2)^2-1$
+	
+	$f_2:x\mapsto -\frac{5}{2}(x+1)^2+3$
+	
+	$f_3:x\mapsto (x-1)^2+2$
+	
+	$f_4:x\mapsto -\frac{1}{2}(x-1)^2+2$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.6\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+			height = 8cm , width = 12cm ,        	
+        	xmin = -2 , xmax = 3 , ymin = -2 , ymax = 4,  xtick distance=1 , ytick distance=1 ,
+            grid = major , major grid style = {line width = 0.2pt , draw = gray} ,
+            axis lines = middle , enlargelimits = { abs = 0.2 } ,
+            ticklabel style = {font = \small }
+            ]
+  
+        \addplot[line width = 2.5pt , domain=-4:4, samples=100, color=newblue] 
+        {0.25*(x-2)^2-1};
+        \addplot[line width = 2.5pt , domain=-4:4, samples=100, color=newred]   
+        {-2.5*(x+1)^2+3};
+		\addplot[line width = 2.5pt , domain=-4:4, samples=100, color=newgreen]   
+        {(x-1)^2+2};
+        \addplot[line width = 2.5pt , domain=-4:4, samples=100, color=neworange]   
+        {-0.5*(x-1)^2+2};        
+        
+        \end{axis}
+    \end{tikzpicture}                                               
+\end{minipage}
+2. Donner la forme développée de chacun des polynômes ci-dessus.
+
+
+\subsection{Dans l'autre sens}
+\begin{minipage}{0.35\linewidth} 
+    \begin{tikzpicture}
+        \begin{axis}[
+			height = 6cm , width = 8cm ,        	
+        	xmin = -1 , xmax = 2 , ymin = 0 , ymax =5,  xtick distance=1 , ytick distance=1 ,
+            grid = major , major grid style = {line width = 0.2pt , draw = gray} ,
+            axis lines = middle , enlargelimits = { abs = 0.2 } ,
+            ticklabel style = {font = \small }
+            ]
+  
+        \addplot[line width = 2.5pt , domain=-4:4, samples=100, color=newred] 
+        {2*x^2-4*x+3};       
+        
+        \end{axis}
+    \end{tikzpicture}  
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.6\linewidth}
+	On a tracé dans le repère ci-contre la courbe représentative du polynôme $P:x\mapsto ax^2+bx+c$ 
+	
+	L'objectif est de déterminer la forme développée de $P(x)$
+	\begin{enumerate}
+		\item \begin{enumerate}
+			\item Justifier que la forme canonique du polynôme $P$ est $P(x)=a(x-1)^2+1$
+			\item En déduire que $b=-2a$ et $c=a+1$
+		\end{enumerate}
+		\item Justifier que $c=3$
+		\item En déduire la forme développée de $P(x)$
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Deux inconnues}
+On considère deux nombres réels $x$ et $y$ tels que $2x=y+3$
+
+Peut-on affirmer que $2x^2+y^2 \geq 3$ ?
+
+
+
+\subsection{Découpage régulier}
+\begin{minipage}{0.45\linewidth} \hspace{5mm}
+	\begin{tikzpicture}[scale=0.75]
+	
+		\draw[line width = 2pt]
+		(0,0) node[below left]{$A$} -- node[below,color=red!80!black] {$x$} (1.5,0) node[below] {$E$} -- (8,0) node[below right] {$B$} -- node[right,color=red!80!black] {$x$} (8,1.5) node[right] {$F$} -- (8,4) node[above right] {$C$} -- node[above,color=red!80!black] {$x$} (6.5,4) node[above] {$G$} -- (0,4) node[above left] {$D$} -- node[left,color=red!80!black] {$x$} (0,2.5) node[left] {$H$} -- (0,0);
+		
+		\draw[line width = 2pt , color = newred] (-0.047,0) -- (1.5,0) ;
+		\draw[line width = 2pt , color = newred] (8,-0.047) -- (8,1.5) ;
+		\draw[line width = 2pt , color = newred] (8.047,4) -- (6.5,4) ;
+		\draw[line width = 2pt , color = newred] (0,4.047) -- (0,2.5) ;
+		
+		\draw[color = blue!80!black , line width = 1.5pt , fill = newblue , fill opacity=0.25]
+		(1.5,0) -- (8,1.5) -- (6.5,4) -- (0,2.5) -- cycle ;		
+
+	\end{tikzpicture}
+\end{minipage} \hspace{-5mm}
+\begin{minipage}{0.58\linewidth} \restoreskip
+	On considère un rectangle $ABCD$ tel que $AB=8$ et $BC=4$.
+
+	On place les points sur $E$, $F$, $G$ et $H$ respectivement sur les segments $[AB]$, $[BC]$, $[CD]$ et $[DA]	$ de sorte que :  \\
+	$AE=BF=CG=DH$
+
+	On note alors $x=AE$
+	
+	La figure ci-contre représente la situation :
+\end{minipage}
+
+\begin{enumerate}
+	\item Montrer que les aires des triangles $AHE$ et $ABF$ valent $\Acal_{AHE}=\dfrac{x(4-x)}{2}$ \quad et \quad $\Acal_{EBF}=\dfrac{x(8-x)}{2}$
+	\item On note $\Acal(x)$ l'aire du parallélogramme $EFGH$ en fonction de la valeur de $x$\\
+	Montrer que $\Acal(x)=2x^2-12x+32$
+	\item En déduire l'aire minimale que peut avoir le parallélogramme $EFGH$
+\end{enumerate}
+
+
+
+\subsection{Aire}
+\begin{minipage}{0.6\linewidth} \restoreskip
+On considère un triangle $ABC$ rectangle en $A$ tel que $AB=6$ et $AC=4$. On place un point M sur le segment $[BC]$
+ 
+On inscrit alors dans le triangle $ABC$ le rectangle $ANMP$ avec $N$ sur le segment $[AB]$
+
+Enfin on trace un triangle rectangle $BIJ$ où $I$ est le milieu de $[BM]$ et $J\in[AB]$
+
+On note $x$ la distance $BJ$
+
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}
+		\draw[line width = 1.5pt] (0,0) node[below] {$A$} -- node[pos=1/4,below] {$N$} node[pos=5/8,below] {$J$} (6,0) node[right] {$B$} -- node[pos=3/16] {/} node[pos=3/8,above] {$I$} node[pos=9/16] {/} node[pos=3/4, above right] {$M$} (0,4) node[above] {$C$} --node[pos=1/4,left] {$P$} cycle ;
+		
+		\draw (0.3,0) -- (0.3,0.3) -- (0,0.3);
+		\draw (4.05,0) -- (4.05,0.3) -- (3.75,0.3);
+		
+		\draw[line width = 1.5pt , color=newblue , fill , fill opacity = 0.25] (0,0) -- (3/2,0) -- (3/2,3) -- (0,3) -- (0,0) ;
+		
+		
+		\draw[line width = 1.5pt , color=newblue , fill , fill opacity = 0.25] (6,0) -- (15/4,0) -- (15/4,3/2) -- cycle  ;
+		
+		\draw[line width = 1.5pt , color = newred] (3.775,0) -- node[below] {$x$} (6,0) ;
+		
+		\draw[line width = 1.5pt , color=newblue] (5.98,0) -- (6,0) -- (15/4,3/2) ;
+		
+	\end{tikzpicture}
+\end{minipage}
+
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Justifier que $IJ=\frac{2}{3}x$
+		\item En déduire que l'aire du triangle $BIJ$ vaut $\Acal_{BIJ}=\frac{x^2}{3}$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Justifier que $NP=2IJ$
+		\item Démontrer que $AN=6-2x$
+		\item En déduire que l'aire du rectangle $ANMP$ vaut $\Acal_{ANMP}=8x-\frac{8}{3}x^2$
+	\end{enumerate}
+	\item Montrer que la zone bleue a une aire maximale lorsque $x=\frac{12}{7}$ et que cette aire vaut $\frac{48}{7}$
+\end{enumerate}
+
+
+
+\subsection{Minimum paramétré}
+Soit $k$ un nombre réel quelconque. 
+
+On considère le polynôme $P:x\mapsto x^2-kx+k-2$
+\begin{enumerate}
+	\item Justifier que $P$ atteint son minimum en $\alpha=-\frac{k}{2}$
+	\item Montrer que ce minimum vaut $-\frac{1}{4}k^2+k-2$
+	\item Justifier que le polynôme $P$ ne peut pas admettre un minimum supérieur à $14$
+\end{enumerate}
+
+
+
+\section{Autour des racines}
+
+\subsection{Forme canonique et racines}
+Déterminer le nombre de racine des trinômes suivants :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}
+    a) $P_1:x\mapsto \frac{5}{2}(x+2)^{2} +2 $ &
+    b) $P_2:x\mapsto -(x-3)^{2} +5 $ \\
+    c) $P_3:x\mapsto \frac{1}{3}(1+x)^{2} -4 $ &
+    d) $P_4:x\mapsto 2(x+1,5)^{2} $ \\
+    e) $P_5:x\mapsto -3(x-\frac{2}{7})^{2} -1 $ &
+    f) $P_6:x\mapsto \pi - \sqrt{5}x^2$
+\end{tabular}
+
+
+
+\subsection{Depuis la forme canonique}
+On donne la forme canonique de plusieurs polynômes ci-après. Déterminer leur forme factorisée puis donner leurs racines :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+    $P_1(x) = (x-2)^2-1$ & $P_2(x) = -(x+3)^2+4$ & $P_3(x)=2(x-\frac{1}{2})^2-\frac{9}{2}$
+\end{tabular}
+
+
+
+\subsection{Petit à petit}
+Répondre aux questions suivantes pour chacun des polynômes donnés ci-contre :
+\begin{enumerate}
+	\item Déterminer la forme canonique de $P(x)$
+	\item Déterminer le nombre de racines du polynôme $P$
+	\item Si elle existe, donner la forme factorisée de $P(x)$ puis en déduire les racines de $P$
+\end{enumerate}
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+    $P_1(x)= x^2+2x-3$ & $P_2(x)=x^2-4x+5$ & $P_3(x)=-x^2+6x-5$ \\
+    $P_4(x)= 2x^2+12x+20$ & $P_5(x)= -3x^2+8x-6$ & $P_6(x)= 3x^2+5x-2$
+\end{tabular}
+
+
+
+\subsection{Discriminant}
+Résoudre dans $\RR$ les équations suivantes :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+    a) $x^2-2x+3=0$ & b) $2x^2+3x-5=0$ & c) $3x^2+12x+12=0$ \\
+    d) $4x^2+3x-2=0$ & e) $4x^2-3x-3=x^2+2x+1$ & f) $4x^2-3x-3=(x-1)^2$
+\end{tabular}
+
+
+
+\subsection{Équations se ramenant à du second degré}
+Résoudre dans $\RR$ les équations suivantes :
+
+\renewcommand{\arraystretch}{2.4}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+    a) $6x -\dfrac{1}{x} + 1 = 0 $ & b) $2x+3=\dfrac{12x}{x+1}$ & c) $\dfrac{2x+1}{4x+5}= x$ \\
+    d) $\dfrac{x^{2}(x+1)}{x-1}= x^{2}-1$ & e) $3+\dfrac{4x}{1-x}=x$ & f) $\dfrac{1}{2x+3}+ \dfrac{1}{3x+2}=5$ 
+\end{tabular}
+
+
+
+\subsection{Quelques problèmes}
+\begin{enumerate}
+    \item Un agriculteur dispose d'un terrain rectangulaire de 8 hectares dont le périmètre vaut 1800m. Quelles-sont les dimensions de son terrain ?
+    \item Trouver trois entiers consécutifs dont la somme des carrés vaut 2030
+    \item Déterminer deux nombres positifs dont le produit vaut 100 et la différence vaut 10
+\end{enumerate}
+
+
+
+\subsection{Tableaux de signes}
+Dresser le tableau de signes de chacun des polynômes du second degré suivants :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+    $P_1:x\mapsto 3x^2+x-10$ & $P_2:x\mapsto -9x^2-9x+18$ & $P_3:x\mapsto 5-3x^2+\frac{11}{2}x$ \\
+    $P_4:x\mapsto -\frac{3}{2}x^2+8x+4$ & $P_5:x\mapsto 1+x-30x^2$ & $P_6:x\mapsto \frac{1}{15}x^2-\frac{1}{6}x +\frac{1}{10}$
+\end{tabular}
+
+
+
+\subsection{Tableaux composés}
+Dresser le tableau de signes de chacune des fonctions définies ci-après :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+    $f_1:x\mapsto (x+2)(2x^2-5x-3)$ & $f_2:x\mapsto \dfrac{3x+4}{x^2-x-2}$ & $f_3:x\mapsto \dfrac{x^2-2x-3}{6x^2-x-2}$
+\end{tabular}
+
+
+
+\subsection{Inéquations}
+Résoudre dans $\RR$ chacune des inéquations suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+	a) $3x^2+5x \geq 2$ & b) $2x-1-\dfrac{3}{x}<0$ & c) $x+\dfrac{4x+2}{x-1} >0$ \\
+	d) $2x-9\leq \dfrac{3x-21}{2x+1}$ & e) $\dfrac{3x-7}{x^2-x-2}>2$ & f) $\dfrac{x}{x+2}+\dfrac{x}{2x+1}+\dfrac{5}{6}>0$
+\end{tabular}
+
+
+
+\subsection{Jugement a priori}
+Devant une porte se trouve une perche.
+
+En manipulant la perche, on se rend compte qu'elle rentre parfaitement dans la diagonale de la porte, mais elle dépasse de 20cm dans la hauteur et de 40cm dans la largeur.
+
+Que peut-on conclure quant à la personne vivant derrière cette porte ?
+
+
+
+\subsection{Racines à paramètre}
+On considère le polynôme $P:x\mapsto x^{2} + (2m-5)x +m^{2}$ défini sur $\RR$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Pour quelle(s) valeur(s) de $m$ le trinôme $P$ admet-il une unique racine ?
+    	\item Montrer alors que cette racine est $m$
+		\end{enumerate}
+	\item Existe-t-il d'autres valeurs de $m$ pour lesquelles $m$ est une racine du polynôme $P$ ?    
+\end{enumerate}
+
+
+
+\subsection{Plusieurs racines}
+On pose $Q(x)=x^2+rx+r+3$ pour tout $\xR$, avec $r\in\RR$
+\begin{enumerate}
+    \item $Q$ peut-il admettre $r$ comme racine? Si oui, préciser pour quelle(s) valeur(s) de $r$
+    \item Pour quelles valeurs de $r$ le polynôme $Q$ admet-il au moins une racine ?
+\end{enumerate}
+
+
+
+\subsection{Polynôme symétrique}
+Soit $m$ un nombre réel quelconque.
+
+On considère $f$ le polynôme définie sur $\RR$ par $f(x)=(x+1)^2+(x+1)(m+1)+(m+1)^2$
+
+Démontrer que le polynôme $f$ ne peut admettre que $-1$ comme racine.
+
+
+
+\subsection{Évident vous dites ?}
+Résoudre les (in)équations suivantes en repérant une \og racine évidente \fg.
+
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	a) $5x^2-4x-1=0$ & b) $x^2+6x+5<0$ & c) $4x^2-2x-6=0$\\
+	d) $3x^2+2x-5\geq0$ & e) $3x^2-5x-2=0$ & f) $5x^2+4x-12$
+\end{tabular}
+
+
+
+\subsection{Le paysagiste}
+Un paysagiste s'occupe d'un jardin de 40m par 30m possédant une partie végétalisée et des allées pavées.
+
+\begin{minipage}{0.6\linewidth} \restoreskip
+	1. Le paysagiste souhaite que les allées fassent le tour de la partie végétalisée comme représenté ci-contre.
+	
+	Quelle largeur donner aux allées afin qu'elles occupent la même aire que la partie végétalisée ?
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}[scale=0.15]
+        \draw[color = red!60!orange , line width=2pt , pattern=bricks , pattern color = red!60!orange] (0,0)--(40,0)--(40,25)--(0,25)--(0,0);
+        \fill[color=PaleGreen2] (5,5)--(35,5)--(35,20)--(5,20)--(5,5);
+        \draw[line width = 2pt, red!60!orange] (5,5)--(35,5)--(35,20)--(5,20)--cycle ;
+    \end{tikzpicture}
+\end{minipage}
+
+
+\begin{minipage}{0.35\linewidth}
+	\begin{tikzpicture}[scale=0.15]
+        \fill[color=PaleGreen2] (0,0)--(17.5,0)--(17.5,10)--(0,10)--(0,0);
+        \fill[color=PaleGreen2] (0,15)--(17.5,15)--(17.5,25)--(0,25)--(0,0);
+        \fill[color=PaleGreen2] (22.5,0)--(40,0)--(40,10)--(22.5,10)--(22.5,0);
+        \fill[color=PaleGreen2] (22.5,15)--(40,15)--(40,25)--(22.5,25)--(22.5,0);
+        \draw[color = red!60!orange , line width = 2pt ,  pattern=bricks , pattern color = red!60!orange] (0,10)--(17.5,10)--(17.5,0)--(22.5,0)--(22.5,10)--(40,10)--(40,15)--(22.5,15)--(22.5,25)--(17.5,25)--(17.5,15)--(0,15)--(0,10);
+        \draw[color=PaleGreen4, line width = 2pt] (0,0)--(40,0)--(40,25)--(0,25)--(0,0);
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.6\linewidth} \restoreskip
+	2. Le paysagiste souhaite maintenant deux allées centrales de même largeur traversant le jardin comme représenté ci-contre.
+	
+	Quelle largeur donner aux allées afin qu'elles occupent deux fois moins de surface que la partie végétalisée ?
+\end{minipage}
+
+
+
+\section{Applications diverses}
+
+\subsection{Identification}
+Déterminer les valeurs des coefficients $a$, $b$ et/ou $c$ afin que les polynômes $P$ et $R$ soient égaux :
+\begin{enumerate} \setlength{\itemsep}{1pt}
+	\item $P(x)=(ax-1)(x+b)$ \quad et \quad $R(x)=2x^2+x-1$
+	\item $P(x)=(ax+b)(2x-b)$ \quad et \quad $R(x)=6x^2+2x-4$
+	\item $P(x)=(x+a)(bx+c)$ \quad et \quad $R(x)=3x^2+5x-28$
+\end{enumerate}
+
+
+
+\subsection{Baignade surveillée}
+\vspace{-10mm}
+\begin{minipage}{0.5\linewidth}
+Un maître nageur dispose de 40m de corde flottante	et souhaite délimiter une zone de baignade comme représenté sur le schéma ci-après.
+\begin{enumerate}
+	\item Quelle peut-être l'aire maximale de la zone de baignade ?
+	\item Le maître nageur souhaite que l'aire de la zone de baignade soit de 100m². Quelle peut alors être la longueur maximale de la zone ?
+\end{enumerate}
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.45\linewidth}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xmin = 2 , xmax = 30 , ymin = 0 , ymax = 15 ,
+			axis lines = middle, grid = none,
+			axis line style={draw=none}, tick style={draw=none}, ticklabel style={opacity=0}
+			]
+			
+			\fill[pattern=hatch, pattern color=yellow!70!orange, hatch line width=2pt] (0,2)--(0,5)--(30,5)--(30,2)--(0,2);
+			\draw[line width = .5pt] (5,5)--(5,12)--(25,12)--(25,5);
+			
+			\foreach \i in {0,...,2}{
+			\addplot[color=newblue,domain=0:4.3, samples=100] {0.25*sin(deg(x))+6+2*\i};
+			\addplot[color=newblue,domain=5.5:24.5, samples=100] {0.25*sin(deg(x))+6+2*\i};
+			\addplot[color=newblue,domain=25.5:30, samples=100] {0.25*sin(deg(x))+6+2*\i};
+			}
+			
+			\addplot[color=newblue,domain=0:4.3, samples=100] {0.25*sin(deg(x))+12};
+			\addplot[color=newblue,domain=25.5:30, samples=100] {0.25*sin(deg(x))+12};
+			\addplot[color=newblue,domain=0:30, samples=100] {0.25*sin(deg(x))+14};
+			
+			\draw (5,5) node foreach \i in {0,...,3} at (5,6+2*\i) {\color{orange}\faLifeRing};
+			\draw (25,5) node foreach \i in {0,...,3} at (25,6+2*\i) {\color{orange}\faLifeRing};
+			\draw (5,15) node foreach \i in {1,...,5} at (4.5+3.5*\i,12) {\color{orange}\faLifeRing};
+		\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Racines carrées}
+Résoudre dans $\RR$ les équations suivantes :
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{0.35\textwidth} p{0.35\textwidth} p{0.235\textwidth} }
+    a) $\sqrt{2x-1}=x$ &  b) $x=\sqrt{x+6} $ & c) $2x=\sqrt{3-4x}$ \\
+    d) $1-x=\sqrt{1+x^{2}}$ & e) $\sqrt{2-x}=2+2x$ & f) $1-x=\sqrt{3x-5}$\\
+    g) $4x-17\sqrt{x}+18=0$ & h) $2x-7\sqrt{x}-4=0$ & i) $x-2\sqrt{x}=1$
+\end{tabular}
+
+
+
+\subsection{Équations bicarrées}
+Résoudre dans $\RR$ chacune des équations suivantes à l'aide d'un changement de variable :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} }
+    a) $x^{4}-12x^{2}+27=0$ & b) $x^{4}-3x^{2} = 4 $ & c) $x^{4}-8x^{2}-9=0$
+\end{tabular}
+
+
+
+\subsection{Et des inéquations}
+Dresser le tableau de signes des deux polynômes ci-contre à l'aide de leur forme factorisée :
+
+$P_1:x\mapsto 4x^4-17x+4$ \qquad et \qquad $P_2:x\mapsto 16x^4-25x^2+9$
+
+
+
+\subsection{Identification plus élevée}
+On pose $f(x) = x^3+4x^2+x-6 $
+\begin{enumerate}
+    \item Développer et réduire l'expression $(x+3)(ax^{2}+bx+c) $ 
+    \item Déterminer $a,b,c\in\RR$ tels que $f(x) = (x+3)(ax^{2}+bx+c) $ 
+    \item Résoudre dans $\RR$ l'équation $f(x)=0$ 
+\end{enumerate} 
+
+
+
+\subsection{Encore du troisième degré}
+On pose $g(x) = x^{3}+2x^{2}-5x-6 $
+\begin{enumerate}
+    \item Développer et réduire l'expression $(x+1)(ax^{2}+bx+c) $ 
+    \item Déterminer $a,b,c\in\RR$ tels que $g(x) = (x+1)(ax^{2}+bx+c) $ 
+    \item Dresser le tableau de signes de la fonction $g$
+\end{enumerate}
+
+
+
+\subsection{Jeu, set et match}
+Dans un match officiel de tennis, le court mesure 23,77m de long et le filet est situé à 91,4cm de hauteur.
+
+Une joueuse se trouvant à 2m derrière le fond du court frappe une balle qui décrit une parabole dont l'équation est $y=P(x)$, où $y$ est la hauteur en mètres de la balle exprimée en fonction de $x$ la distance en mètre entre la joueuse et la balle.
+
+On admettra que $P(x)=-0,01x^2+0,18x+0,4$
+\begin{enumerate}
+	\item À quelle hauteur était la balle lorsqu'elle a été frappée par la joueuse ?
+	\item Quelle est la hauteur maximale atteinte par la balle ?
+	\item La balle passera-t-elle au-dessus du filet ?
+	\item La balle touchera-t-elle le sol avant d'être sortie du terrain ?
+	\item Durant combien de mètres la balle a-t-elle une hauteur supérieure ou égale à 1,2m ?
+\end{enumerate}
+
+\textit{Aides de calcul} :
+
+\phantom{} \qquad $P(9)=1,21$ \quad $P(12,885)\approx 1,06$ \quad $18^2=324$ \quad $\sqrt{0,0484}=0,22$
+
+
+
+\end{document}

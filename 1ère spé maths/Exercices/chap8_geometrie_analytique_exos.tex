@@ -1,0 +1,245 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Géométrie analytique}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Repérage dans le plan}
+
+\subsection{Repérage oblique}
+Soit un parallélogramme $ABCD$. On considère les points $E$, $F$ et $G$ tels que $\vvec{CE}=\vvec{BD}$, $\vvec{AF}+\vvec{CD}=\vvec{AC}$ et $3\vvec{BG}=2\vvec{DF}$
+\begin{enumerate}
+    \item Construire les points $A$, $B$, $C$, $D$, $E$, $F$ et $G$
+    \item On se place dans le repère $(A;\vvec{AB};\vvec{AD})$
+    \begin{enumerate}
+        \item Donner les coordonnées des points $A$, $B$, $C$, $D$, $E$, $F$ et $G$
+        \item Montrer que les points $E$, $F$ et $G$ sont alignés.
+    \end{enumerate}
+    \item On se place dans le repère $(F;\vvec{FD};\vvec{FE})$
+    \begin{enumerate}
+        \item Donner les coordonnées des points $A$, $B$, $C$, $D$, $E$, $F$ et $G$
+        \item Donner les coordonnées de $K$ le milieu du segment $[AG]$
+        \item Les points $E$, $C$ et $K$ sont-ils alignés ?
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Parcourir le triangle}
+Soient $A$, $B$ et $C$ trois points du plan non alignés.\\
+On considère les points $M$, $N$ et $P$ tels que $\vvec{AM}+\vvec{BM}=2\vvec{AC}$ , $2\vvec{BN}=\vvec{AC}$ et $\vvec{PN}+\vvec{PM}=\vvec{AB}+\vvec{AC}$
+\begin{enumerate}
+    \item Donner les coordonnées de $M$ et de $N$
+    \item Déterminer les coordonnées du point $P$
+    \item On note $I$ le milieu du segment $[BC]$\\
+    Montrer que $P$ est le milieu du segment $[AI]$
+    \item Les droites $(MN)$ et $(BC)$ sont-elles parallèles ?
+\end{enumerate}
+
+
+
+\subsection{Perdu dans un hexagone}
+On considère un hexagone régulier $ABCDEFGH$
+\begin{enumerate}
+    \item On rapporte le plan au repère $(A;\vvec{AB};\vvec{AE})$
+    \begin{enumerate}
+        \item Donner les coordonnées des points $A$, $B$, $E$ et $D$
+        \item Justifier que $\vvec{AF}=\frac{1}{2}\vvec{AD}+\vvec{BA}$
+        \item En déduire les coordonnées du point $F$ puis celles du point $B$
+    \end{enumerate}
+    \item On rapporte le plan au repère $(C;\vvec{CF};\vvec{AC})$
+    \begin{enumerate}
+        \item Donner les coordonnées des points $C$, $A$, $F$ et $D$
+        \item Justifier que $\vvec{CB}=\frac{1}{2}\vvec{CF}+\vvec{DC}$ et en déduire les coordonnées du point $B$
+        \item Justifier que $\vvec{CE}=\vvec{CB}+2\vvec{AF}$ et en déduire les coordonnées du point $E$
+    \end{enumerate}
+    \item On rapporte le plan au repère $(E;\vvec{CA};\vvec{BD})$
+    \begin{enumerate}
+        \item Donner les coordonnées des points $E$, $A$ et $C$
+        \item Montrer que $\vvec{EA}+\vvec{CA}=3\vvec{EF}$ et en déduire les coordonnées du point $F$
+        \item Donner alors les coordonnées des points $D$ et $B$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Coordonnées difficiles}
+Soient $A$, $B$ et $C$ trois points du plan non alignés.\\
+On considère les points $P$, $Q$ et $R$ tels que $2\vvec{AP}+\vvec{BP}=\vvec{CA}$ , \quad $\vvec{PQ}+3\vvec{QB}=2\vvec{AC}$ et $3\vvec{CR}+\vvec{AQ}=\vvec{AR}$\\
+On se place dans le répère $(A;\vvec{AB};\vvec{AC})$
+\begin{enumerate}
+    \item Donner les coordonnées des points $P$, $Q$ et $R$
+    \item Montrer que les points $C$, $Q$ et $R$ sont alignés.
+    \item Les droites $(AP)$ et $(CB)$ sont-elles parallèles ?
+\end{enumerate}
+
+
+
+\section{Droites du plan}
+
+\subsection{Équations cartésiennes de droites}
+Déterminer une équation cartésienne de chacune des droites suivantes :
+\begin{enumerate}
+    \item $(d)$ de vecteur directeur $\vcoord{u}{-3\\2}$ et passant par le point $A(2;4)$
+    \item $(d')$ de vecteur normal $\vcoord{n}{4\\-7}$ et passant par le point $B(3;3)$
+    \item $(CD)$ avec $C(-2,5)$ et $D(3;-1)$
+    \item $(\Delta)$ perpendiculaire à $(d)$ et passant par le point $E(-2;-6)$
+    \item $(\delta)$ parallèle à $(d')$ et passant par le point $A$
+    \item $(\Gamma)$ la médiatrice du segment $[CD]$
+    \item $(\Phi)$ la hauteur du triangle $ABD$ issue du sommet $D$
+\end{enumerate}
+
+
+
+\subsection{Représentations paramétriques de droites}
+Déterminer une représentation de chacune des droites suivantes :
+\begin{enumerate}
+	\item $(AB)$ avec $A(-8;11)$ et $B(3;4)$
+	\item La droite $(d):y=5x+2$
+	\item La droite $(\Delta):3x+2y-6=0$
+	\item La droite $(\delta)$ perpendiculaire à $(d)$ et passant par le point $C(-1;2)$
+\end{enumerate}
+
+
+\subsection{Intersections}
+On munit le plan du repère orthonormé $\Oij$ et on considère le triangle $ABC$ avec $A(-1;1)$, $B(5;2)$ et $C(3;5)$
+\begin{enumerate}
+    \item Déterminer une équation cartésiennne de $(\Delta)$ la hauteur issue de $C$
+    \item Déterminer une équation cartésiennne de $(\Gamma)$ la médiatrice du segment $[AC]$
+    \item Déterminer les coordonnées de $K$ le point d'intersection entre $(\Delta)$ et $(\Gamma)$
+    \item La droite $(BK)$ est-elle parallèle à la droite $(AC)$ ? Si non, déterminer les coordonnées de leur point d'intersection.
+\end{enumerate}
+
+
+
+\subsection{Calcul d'aire}
+On munit le plan du repère orthonormé $\Oij$ et on considère le triangle $ABC$ avec $A(2;3)$, $B(-3;1)$ et $C(1;-2)$
+\begin{enumerate}
+    \item Donner une équation cartésienne de la hauteur $(h)$ issue du sommet $C$
+    \item Déterminer une représentation paramétrique de la droite $(AB)$
+    \item Déterminer les coordonnées de $K$ le projeté orthogonal de 
+    \item Calculer l'aire du triangle $ABC$
+\end{enumerate}
+
+
+
+\subsection{Élargissement triangulaire}
+On rapporte le plan au repère orthonormé $\Oij$ et on considère les points $A(5;2)$, $B(17;0)$ et $C(6;8)$
+\begin{enumerate}
+    \item Montrer que le triangle $ABC$ est rectangle.
+    \item Donner une équation cartésienne de $\Dcal$ la droite perpendiculaire à $(BC)$ en $B$
+    \item Soit $E$ le symétrique du point $B$ par rapport au point $A$
+    \begin{enumerate}
+        \item Donner les coordonnées de $E$
+        \item Déterminer une représentation paramétrique de la droite $(CE)$
+    \end{enumerate}
+    \item Déterminer les coordonnées de $K$ le point d'intersection entre $\Dcal$ et $(CE)$
+    \item La droite $(AK)$ coupe-t-elle le segment $[BC]$ en son milieu ?
+\end{enumerate}
+
+
+
+\subsection{Une fonction ?}
+ On considère la fonction $f$ définie sur $\RR$ par $f(x)=x^{3}-6x^{2}+10x-6 $ et on note $\mathscr{C}_{f}$ sa courbe représentative dans le repère orthonormé $\Ouv$
+\begin{enumerate}
+    \item Calculer $f'(x)$
+    \item Déterminer l'équation réduite de $T_{A}$ la tangente à $\mathscr{C}_{f}$ au point $A(1;f(1))$
+    \item Montrer que $f(x)-(x-2) = (x-1)(x^{2}-5x+4) $ puis en déduire les coordonnées de $B$ le second point d'intersection entre $T_{A}$ et $\mathscr{C}_{f}$
+    \item Montrer que $BOA$ est un triangle rectangle.
+\end{enumerate}
+
+
+
+\section{Cercles du plan}
+
+\subsection{Équations de cercle}
+Déterminer une équation de chacun des cercles suivants :
+\begin{enumerate}
+    \item $\Ccal_1$ de centre $O(3,-2)$ et de rayon 3
+    \item $\Ccal_2$ de centre $A(4;7)$ et passant par le point $B(5;5)$
+    \item $\Ccal_3$ de diamètre $[CD]$ avec $C(-1;2)$ et $D(3;7)$
+\end{enumerate}
+
+
+
+\subsection{À partir d'une équation}
+Déterminer le centre et le rayon de chacun des cercles décrits par les équations suivantes :
+\begin{enumerate}
+	\item $\Ccal : x^2+y^2=9$
+	\item $\Ccal : x^2+y^2+4y=0$
+	\item $\Ccal : y^2-6y+x^2+2x+9=0$
+	\item $\Ccal : x^2+y^2+5x-3y=\frac{1}{2}$
+	\item $\Ccal : x^2+3x+y^2-7y=10$
+\end{enumerate}
+
+
+
+\subsection{Cercle et tangente}
+On munit le plan du repère orthonormé $\Oij$ et on considère les points $A(-1;1)$ et $B(3;5)$
+\begin{enumerate}
+    \item Déterminer une équation du cercle $\mathscr{C}$ de centre $A$ et passant par le point $B$
+    \item Déterminer une équation de la tangente à $\mathscr{C}$ au point $B$
+\end{enumerate}
+
+
+
+\subsection{Cercle et triangle rectangle}
+On munit le plan du repère orthonormé $\Oij$ et on considère les points $A(-3;1)$, $B(1;3)$ et $C(5;-5)$
+
+\begin{enumerate}
+    \item Montrer que le triangle $ABC$ est un triangle rectangle
+    \item Déterminer l'équation du cercle $\Ccal$ circonscrit au triangle $ABC$
+\end{enumerate}
+
+
+
+\subsection{Cercle circonscrit}
+On munit le plan du repère orthonormé $\Oij$ et on considère le triangle $ABC$ avec $A(8;6)$, $B(-1;3)$ et $C(7;-1)$
+\begin{enumerate}
+	\item Déterminer une équation cartésienne de $\Dcal_1$ la médiatrice du segment $[AC]$
+	\item Déterminer une équation cartésienne de $\Dcal_2$ la médiatrice du segment $[BC]$
+	\item Déterminer les coordonnées de $P$ le point d'intersection entre $\Dcal_1$ et $\Dcal_2$
+	\item Déterminer l'équation de $\Ccal$ le cercle circonscrit au triangle $ABC$
+\end{enumerate}
+
+
+
+\subsection{Tout ça à partir d'un segment}
+On munit le plan du repère orthonormé $\Oij$ et on considère les points $A(3;-1)$ et $B(6;3)$
+\begin{enumerate}
+    \item Déterminer une équation cartésienne de la médiatrice $(\Delta)$ du segment $[AB]$
+    \item Déterminer une équation du cercle $\mathscr{C}$ de centre $A$ et passant par le point $B$
+    \item On cherche à déterminer les coordonnées d'un point $D$ tel que $ABD$ soit un triangle équilatéral.
+    \begin{enumerate}
+    	\item Justifier que $D$ appartient à la droite $(\Delta)$ et au cercle $\Ccal$
+    	\item En déduire les coordonnées possibles pour le point $D$
+    	\item Donner les coordonnées de $D$ afin que le triangle $ABD$ soit un triangle équilatéral direct.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Sans le centre $\dur$}
+
+On considère les points $A(1;2)$ et $B(-2,3)$ \\
+Déterminer une équation cartésienne d'un cercle passant par les points $A$ et $B$ et dont le rayon vaut 5.
+
+
+
+
+
+\end{document}

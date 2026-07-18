@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Lettres double barre %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\CC{%
+        {\mathbb C}} % ----- Ensemble C
+
+\newcommand\RR{%
+        {\mathbb R}} % ----- Ensemble R
+
+\newcommand\QQ{%
+        {\mathbb Q}} % ----- Ensemble Q
+
+\newcommand\ZZ{%
+        {\mathbb Z}} % ----- Ensemble Z
+
+\newcommand\NN{%
+        {\mathbb N}} % ----- Ensemble N
+
+\newcommand\DD{%
+        {\mathbb D}} % ----- Ensemble D
+        
+\newcommand\UU{%
+        {\mathbb U}} % ----- Ensemble U
+
+\newcommand\PP{%
+        {\mathbb P}} % ----- P probabiliste
+
+\newcommand\EE{%
+        {\mathbb E}} % ----- E espérance
+
+\newcommand\VV{%
+        {\mathbb V}} % ----- V variance
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Lettres calligraphiques %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\Ccal{%
+        {\mathscr{C}}} % ----- C calligraphique
+
+\newcommand\Dcal{%
+        {\mathscr{D}}} % ----- D calligraphique
+
+\newcommand\Pcal{%
+        {\mathscr{P}}} % ----- P calligraphique
+
+\newcommand\Rcal{%
+        {\mathscr{R}}} % ----- R calligraphique
+
+\newcommand\Fcal{%
+        {\mathscr{F}}} % ----- F calligraphique
+
+\newcommand\Scal{%
+        {\mathscr{S}}} % ----- S calligraphique
+
+\newcommand\Acal{%
+        {\mathscr{A}}} % ----- A calligraphique
+
+\newcommand\Vcal{%
+        {\mathscr{V}}} % ----- V calligraphique
+        
+\newcommand\Tcal{%
+        {\mathscr{T}}} % ----- V calligraphique
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Symboles et/ou calculs usuels %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Analyse %%%%%
+
+\newcommand\limx{%
+        {\lim\limits_{x\to +\infty}}\,\,} % ----- Limite x en + infini
+
+\newcommand\limn{%
+        {\lim\limits_{n\to +\infty}}\,\,} % ----- Limite n en + infini
+
+\newcommand\limite[1]{%
+        {\lim\limits_{\substack{#1}}}\,\,} % ----- Limite X vers Y
+
+\newcommand\nN{%
+        {n\in\mathbb N}} % ----- n dans N
+
+\newcommand\xR{%
+        {x\in\mathbb R}} % ----- x dans R
+
+\newcommand\zC{%
+        {z\in\mathbb C}} % ----- z dans C
+
+\newcommand\somme[2]{%
+        {\displaystyle\sum_{#1}^{#2}}}    % ----- Somme
+
+\newcommand\sommek[2]{%
+        {\displaystyle\sum_{k=#1}^{#2}}}    % ----- Somme k
+
+\newcommand\inte[2]{%
+        {\displaystyle\int_{#1}^{#2}}}   % ----- Intégrale
+
+\newcommand\dd{%
+        {\,\,\mathrm{d}}}       % ----- d différentiel
+
+\newcommand\floor[1]{%
+        {\lfloor #1 \rfloor}}   % ----- Partie entière inférieure
+
+\newcommand\ceil[1]{%
+        {\lceil #1 \rceil}}     % ----- Partie entière supérieure
+
+\newcommand\abs[1]{%
+        {\left\lvert #1 \right\rvert}}     % ----- Valeur absolue
+
+\newcommand\pgcd{%
+        {\mathrm{pgcd}}}       % ----- pgcd
+
+\newcommand\ppcm{%
+        {\mathrm{ppcm}}}       % ----- ppcm
+
+
+
+%%%%% Probabilités %%%%%
+
+\newcommand\barre[1]{%
+    {\overline{#1}}} % ----- A barre
+
+
+
+%%%%% Géométrie %%%%%
+
+\newcommand\vcoord[2]{			% ----- Coordonnées d'un vecteur (Nom + coord)
+	\renewcommand{\arraystretch}{1.1} \arraycolsep=0.5\arraycolsep
+	\vv{#1}\mathbin{=}\begin{pmatrix}#2\end{pmatrix}
+} 
+
+\newcommand\Oij{\left(O\,;\,\vv{i}\,;\,\vv{j}\right)} % ----- (O;i;j)
+
+\def\Oijk{\left(O\,;\,\Vec{i}\,;\,\Vec{j}\,;\,\Vec{k}\right)} % ---- (O;i;j;k)
+
+\newcommand\norme[1]{%
+        {\left\lVert #1 \right\rVert}}     % ----- Norme
+
+\newcommand\normev[1]{%
+        {\left\lVert \vv{#1} \right\rVert}}     % ----- Norme d'un vecteur
+
+\newcommand\scal[2]{%
+    {\vv{#1}\cdot\vv{#2}}} % ----- Produit scalaire
+    
+\newcommand\smeq{{\,=\,}}	% ----- Symbole '=' avec petit espace
+
+
+
+%%%%% Algèbre %%%%%
+
+\newcommand\Reel{				% ----- Partie réelle
+    {\mathfrak{Re}}} 
+
+\newcommand\Imag{				% ----- Partie imaginaire
+    {\mathfrak{Im}}} 
+
+\newcommand\matrice[1]{{ 				% ----- Matrice
+    \renewcommand{\arraystretch}{0.7}
+    \arraycolsep=0.7\arraycolsep\ensuremath{\begin{pmatrix} #1 \end{pmatrix}}}}
+
+\newcommand\Ouv{(O\,;\,\vv{u}\,;\,\vv{v})} 	% ----- Plan complexe (O;u;v)
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%% Mise en page %%%
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Flèche SSI longueur adaptative %%%%%
+
+\makeatletter
+\newcommand\xLongleftrightarrow[2][]%
+  {\ext@arrow 0099{\Longleftrightarrowfill@}{#1}{#2}}
+\def\Longleftrightarrowfill@
+  {\arrowfill@\Leftarrow\Relbar\Rightarrow}
+\makeatother
+
+
+
+%%%%% Adaptation du stretch des environnements 'cases' %%%%%
+
+\makeatletter
+\renewcommand*\env@cases[1][1.2]{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrace
+  \def\arraystretch{#1}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+
+
+%%%%% Ajustement hauteur de \ldots %%%%%
+\let\oldldots\ldots
+\renewcommand{\ldots}{
+\parbox[b][8pt]{20pt}{\oldldots}
+}

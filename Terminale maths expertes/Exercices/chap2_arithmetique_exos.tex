@@ -1,0 +1,620 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
+\fancyhead[C]{Arithmétique}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Divisibilité dans $\ZZ$}
+
+\subsection{Parité}
+\begin{enumerate}
+    \item Montrer que $n$ et $n^2$ sont toujours de même parité
+    \item Montrer par récurrence sur $k$ que $n$ et $n^k$ sont toujours de même parité
+\end{enumerate}
+
+
+
+\subsection{Divisibilité dans $\NN$}
+Déterminer les entiers naturels $n$ tels que :
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+	a) $n-4\vert 3n-17$ & b) $n-1 \vert n+6$ & c) $n+2 \vert 2n-1$ \\
+	d) $n+1 \vert n^2$ & e) $n+2 \vert 2n^2+3$ & f) $n-3 \vert n^3-3$
+\end{tabular} 
+        
+        
+        
+\subsection{Divisibilité dans $\ZZ$}
+Déterminer les entiers relatifs $n$ tels que :
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+	a) $n \vert n+8$ & b) $n \vert n^2+2n+3$ & c) $n-3 \vert n^2+2n-1$ \\
+	d) $n+3 \vert n^3+3$ & e) $2n+1 \vert 4n^2+4n+3$ & f) $3n-2 \vert 6n^3$
+\end{tabular} 
+
+
+
+\subsection{Des fractions ???}
+\begin{enumerate}
+	\item Déterminer les entiers relatifs $k$ tels que $\frac{12k+7}{3k+1}\in\NN$ 
+	\item Déterminer les entiers naturels $m$ tels que $\frac{5m-1}{2m+3}\in\ZZ$
+\end{enumerate}
+
+
+
+\subsection{Puissances de n}
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que $n^3-n$ est un multiple de 3 pour tout $\nN$
+        \item Montrer que c'est également un multiple de 2
+    \end{enumerate}
+    \item Pour $\nN$, on pose $B_n=n^4-3n^3-n^2+3n+1$
+    \begin{enumerate}
+        \item Montrer que $B_n$ est toujours un nombre impair
+        \item Résoudre alors $n(n+3)\vert B_n$ dans $\NN$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Équations dans $\ZZ$}
+Résoudre dans $\ZZ$ les équations suivantes :
+
+\begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+    a) $x^3+2x+3=0$ & b) $2x^2+xy=35$ & c) $x^2-y^2=17$ \\
+    d) $x^2-y^2=2023$ & e) $x^2=17+4y^2$ & f) $xy = 2x +3y$ \\
+    g) $\frac{1}{x}+\frac{1}{y}=\frac{1}{5}$ & h) $x^2+6x-y^2=0$ & i) $x^2-y^2+4x+4y=0$ \\
+\end{tabular}
+
+
+
+\subsection{n en puissance}
+Démontrer par récurrence et pour tout $\nN$ les affirmations suivantes :
+\begin{enumerate}
+    \item[a)] 3 divise le nombre $2^{n+1}+5^n$
+    \item[b)] $3^{2n}-2^n$ est un multiple de 7
+    \item[c)] 5 divise $2^{2n+1}+3^{2n+1}$
+    \item[d)] $2^{4n}-7^n$ est un multiple de 9
+\end{enumerate}
+
+
+
+\section{Division euclidienne}
+
+\subsection{Rappel}
+\begin{enumerate}
+	\item Déterminer le reste dans la division euclidienne de 1023 par 47.
+	\item Déterminer le reste dans la division euclidienne de 2048 par 81.
+\end{enumerate}
+
+
+
+\subsection{Division par 6}
+Déterminer tous les entiers relatifs ayant un reste et un quotient égal dans la division euclidienne par 6.
+
+
+
+\subsection{Réduction du diviseur}
+Soit $a$ un entier naturel dont le reste dans la division euclidienne par 24 vaut 13.\\
+Quel est le reste dans la division euclidienne de $a$ par 6 ? Et par 8 ?
+
+
+
+\subsection{Puis augmentation}
+On considère $M$ un entier naturel dont le reste dans la division euclidienne par 6 vaut 3.\\
+Quels sont les restes possibles dans la division euclidienne de $M$ par 30 ?
+
+
+
+\subsection{Déterminer le reste}
+\begin{enumerate}
+	\item Déterminer selon la valeur de $\nN$ la reste dans la division euclidienne de $n^2+2n+4$ par $n^2+n$
+	\item Déterminer selon la valeur de $\nN$ la reste dans la division euclidienne de $2n^2+5n-1$ par $n+3$ 
+\end{enumerate}
+
+
+
+\subsection{En connaissant le reste}
+Déterminer tous les entiers naturels $k$ pour lesquels le reste dans la division euclidienne de $(2k+1)^2$ par $k^2+k$ vaut $3k-2$
+
+
+
+\subsection{Divisions impossibles}
+Démontrer qu'il n'existe aucun nombre entier ayant un reste de 5 après division par 6, et un reste de 2 après division par 14.
+
+
+
+\subsection{Le reste reste le même}
+\begin{enumerate}
+	\item Déterminer les entiers naturels $n$ ayant le même reste que $2-n$ dans la division euclidienne par 7.
+	\item Déterminer les entiers naturels $n$ ayant le même reste que leur double dans la division euclidienne par 5.
+\end{enumerate}
+
+
+\section{Congruences dans $\ZZ$}
+
+\subsection{Tableaux de congruences}
+Compléter les tableaux de congruence suivants :
+    
+    \begin{minipage}{0.5\textwidth}
+    \setlength{\tabcolsep}{15pt}
+        \begin{tabular}{|c|c|c|c|c|c|c|} \hline
+        $n$&0&1&2&3&4&5 \\ \hline
+        $2n^2$& & & & & & \\ \hline
+      \end{tabular}
+      
+      \smallskip
+      \centering \small Modulo 6
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+    \setlength{\tabcolsep}{15pt}
+        \begin{tabular}{|c|c|c|c|c|c|} \hline
+        $n$&0&1&2&3&4 \\ \hline
+        $4-n^3$& & & & & \\ \hline
+      \end{tabular}
+      
+      \smallskip
+      \centering \small Modulo 5
+    \end{minipage}\\[15pt]
+
+    \begin{minipage}{\textwidth}
+    \setlength{\tabcolsep}{24pt}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+        $n$&0&1&2&3&4&5&6&7 \\ \hline
+        $3n$& & & & & & & & \\ \hline
+        $n^2$& & & & & & & & \\ \hline
+        $3n+n^2$& & & & & & & & \\ \hline
+      \end{tabular}
+      
+      \smallskip
+      \centering \small Modulo 8
+    \end{minipage}\\[5pt]
+
+
+
+\subsection{Dresser un tableau}
+Dresser le tableau de congruences modulo $a$ des expressions suivantes :
+
+\begin{tabular}{p{0.25\linewidth} p{0.2\linewidth} |p{5mm} p{0.2\linewidth} p{0.1\linewidth}}
+	a) $n^2+n-1$ & $a=4$ && b) $n^3-2n$ & $a=5$ \\
+	c) $n(2n+1)(2n+2)$ & $a=7$ && d) $(n^2-3n)^2$ & $a=6$
+\end{tabular}
+
+
+
+\subsection{Impossibles équations}
+\begin{enumerate}
+    \item En raisonnant modulo 2, montrer que l'équation : $3n^3-2n^2-n=1$ n'a pas de solutions dans $\NN$
+    \item En raisonnant modulo 6, montrer que l'équation : $5n^3-14n=112$ n'a pas de solutions dans $\ZZ$
+    \item En raisonnant modulo 4, montrer que l'équation $5x^2-3y^2=1$ n'a aucune solution dans $\ZZ$
+\end{enumerate}
+
+
+
+\subsection{Retour en arrière}
+Répondre aux questions des exercices 2.1.7, 2.2.7 et 2.2.8 avec la notion de congruence dans $\ZZ$, sans raisonnement par récurrence ni disjonction de cas.
+
+
+
+\subsection{Le chiffre de l'année}
+\begin{enumerate}
+    \item Déterminer le reste de la division euclidienne de 2023 par 7
+    \item Déterminer le reste de la division euclidienne de $7^{2023}$ par 6
+    \item Déterminer le reste de la division euclidienne de $7^{2023}$ par 8
+    \item Déterminer chiffre des unités de $7^{2023}$
+\end{enumerate}
+
+
+
+\subsection{De grands multiples}
+\begin{enumerate}
+    \item Déterminer le reste dans la division euclidienne de 512 par 19
+    \item Déterminer les valeurs possibles pour le reste dans la division euclidienne de $2^{9m}$ par 19
+    \item En déduire alors que $2^{9m}+8^{3m+3}$ est un multiple de 19 pour toute valeur de $m\in\NN$
+\end{enumerate}
+
+
+
+\subsection{Congruences en pagaille}
+\begin{enumerate}
+    \item Montrer que $3^{218}+2\times5^{302}$ est un multiple de 11
+    \item Déterminer le reste dans la division euclidienne de $2023^{2023}$ par 9
+    \item \begin{enumerate}
+        \item Déterminer le reste dans la division euclidienne de $10^n$ par 11 selon les valeurs de $\nN$
+        \item En déduire que $10^n+10^{n+3}$ est un multiple de 11 pour tout $\nN$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{À partir de congruences}
+
+\begin{enumerate}
+    \item Soient $x$ et $y$ entiers tels que $x\equiv2[5]$ et $y\equiv3[5]$
+    \begin{enumerate}
+        \item Montrer que $27y-13x$ est un multiple de 5
+        \item Montrer que c'est également le cas de $x^2-y^2$
+    \end{enumerate}
+    \item Soient $x$ et $y$ tels que $x+y\equiv3[9]$ et $x-y\equiv4[9]$
+    \begin{enumerate}
+        \item Montrer que $x^2-y^2\equiv x+y[9]$
+        \item Montrer que $(x+y)^2$ est un multiple de 9
+        \item En déduire le reste dans la division euclidienne de $4xy$ par 9
+    \end{enumerate}
+    
+    \item Soient $x$ et $y$ tels que $x\equiv3[8]$ et $y\equiv6[8]$
+    \begin{enumerate}
+        \item Montrer que $(x+y)^{17}\equiv x+y [8]$
+        \item Justifier que $19x+26y$ est impair
+        \item Quel est le reste dans la division euclidienne de $(3x+2y)^{22}$ par 8 ?
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Somme $n$-harmonique}
+Soit $n$ un entier naturel quelconque.
+Démontrer que $1^n + 2^n + 3^n + 4^n$ est un multiple de 5 si et seulement si $n$ n'est pas un multiple de 4
+
+
+
+\subsection{Pas de racine carrée}
+Soient $x$ et $y$ deux entiers relatifs tels que $x^2 + y^2 \equiv 0 \ [3]$ \\
+Montrer que $x$ et $y$ sont des multiples de 3
+
+
+
+\subsection{Gros multiple}
+Démontrer que $n^5-n$ est toujours un multiple de 30
+
+
+
+\subsection{Vrai / Faux}
+\begin{center}
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{|p{0.6\textwidth}|p{1.5cm}|p{1.5cm}|} \hline
+    \centering Proposition & VRAI & FAUX \\ \hline
+    \centering Si $2x\equiv4 [8]$ alors $x\equiv2 [8]$ & & \\ \hline
+    \centering Si $2x\equiv4 [8]$ alors $x\equiv2 [4]$ & & \\ \hline
+    \centering Si $3x\equiv0 [6]$ alors $x$ est pair & & \\ \hline
+    \centering Si $x\equiv y+3 [6]$ alors $x^2\equiv y^2+3 [6]$ & & \\ \hline
+    \centering Si $x\equiv y+4 [8]$ alors $x^2\equiv y^2+4 [8]$ & & \\ \hline
+    \centering Si $\accol{x+y\equiv 0 [22] \\ x-y\equiv 0 [22]}$ alors $\accol{x\equiv0[22] \\ y\equiv0 [22]}$ & & \\ \hline
+    \centering Le produit de 3 nombres entiers consécutifs est toujours un multiple de 6 & & \\ \hline
+    \centering La somme de 3 carrés consécutifs n'est jamais un multiple de 6 & & \\ \hline
+    \centering Si $p\equiv q[n]$ alors $2^p\equiv 2^q[n]$ & & \\ \hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Division par 3 et 9}
+Soit $\nN$. On considère l'écriture de $n$ en base 10, notée $n=\overline{a_ka_{k-1}\ldots a_2a_1a_0}$
+\begin{enumerate}
+    \item Déterminer le reste dans la division euclidienne de $10^k$ par 3 pour $k\in\NN$
+    \item En déduire que $n\equiv a_k+a_{k-1}+\ldots+a_2+a_1+a_0 [3]$
+    \item Démontrer le critère de divisibilité par 3 comme appris au collège.
+    \item D'une manière analogue, démontrer le critère de divisibilité par 9 appris au collège.
+\end{enumerate}
+
+
+
+\subsection{Division par 11}
+Soit $\nN$. On considère l'écriture de $n$ en base 10, notée $n=\overline{a_ka_{k-1}\ldots a_2a_1a_0}$
+\begin{enumerate}
+    \item Déterminer le reste dans la division euclidienne de $10^k$ par 11 pour $k\in\NN$
+    \item En déduire que $n\equiv a_0-a_1+a_2-\ldots+(-1)^ka_k [11]$
+    \item Énoncer un critère de divisibilité par 11 basé sur la question précédente.
+    \item \underline{Applications} :
+    \begin{enumerate}
+    	\item Les nombres 30\,028 , 1\,234\,554\,321 et 27\,456\,918\,379 sont-ils divisibles par 11 ?
+    	\item Déterminer un chiffre $a$ tel que le nombre $\overline{a1a2a3a4}$ soit un multiple de 11
+    	\item Peut-on trouver un chiffre $b$ tel que le nombre $\overline{a1a2a3a4a5a6a7a8}$ soit un multiple de 11?
+	\end{enumerate}     
+\end{enumerate}
+
+
+
+\subsection{Division par 7}
+Soit $\nN$. On considère l'écriture de $n$ en base 10, notée $n=\overline{a_ka_{k-1}\ldots a_2a_1a_0}$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Démontrer que $n\equiv 0[7] \Longrightarrow \overline{a_ka_{k-1}\ldots a_2a_1}-2a_0\equiv0[7]$
+		\item A-t-on équivalence?
+\end{enumerate}	 
+	\item Énoncer un critère de divisibilité par 7
+	\item Le nombre 1579649 est-il divisible par 7 ?
+	\item Pour quelle(s) valeur(s) de $a$ le nombre $\overline{1a2a}$ est-il divisible par 7 ?
+\end{enumerate}
+
+
+
+\subsection{Question de base}
+
+Peut-on trouver deux entiers naturels $x$ et $y$ pour lesquels $\barre{104}^x=\barre{401}^y$ ?
+
+
+
+\subsection{Étude d'une suite}
+On définit la suite $\Un$ par $\defsuite{u_0=7}{3u_n-5}$
+\begin{enumerate}
+	\item Démontrer que $u_n\equiv7[9]$
+	\item\begin{enumerate}
+		\item Justifier que $2u_n\equiv14[18]$
+		\item En déduire que $u_{n+1}\equiv9+u_n[18]$
+		\item Déterminer le reste dans la division euclidienne de $u_n$ par 18
+	\end{enumerate}
+	\item Démontrer que $u_n+u_{n+2}$ est toujours un multiple de 10
+	\item Montrer que $u_{n+1}-u_n\equiv3\times(-1)^{n-1}[13]$
+\end{enumerate}
+
+
+
+\section{PGCD, PPCM et nombres premiers}
+
+\subsection{PGCD et PPCM}
+Déterminer le $\pgcd$ et le $\ppcm$ de chacun des couples $(x;y)$ suivants :
+
+\begin{tabular}{p{20mm}p{35mm}|p{15mm}p{30mm}p{30mm}}
+     a) $x=90$ & $y=300$ & & b) $x=24$ & $y=18$ \\
+     c) $x=98$ & $y=135$ & & d) $x=84$ & $y=165$
+\end{tabular}
+
+
+
+\subsection{PGCD sous conditions}
+\begin{enumerate}
+    \item Déterminer l'ensemble des entiers naturels $n$ tels que $\mathrm{PGCD}(252;n)=18$
+    \item Déterminer $\mathrm{PGCD}(7n+6;2n+1)$ selon la valeur de $\nN$
+    \item Montrer que $n^2+3n+1$ et $n+1$ sont premiers entre eux pour tout $\nN$
+\end{enumerate}
+
+
+
+\subsection{Condition sur PPCM}
+Déterminer tous les entiers $n$ vérifiant $\ppcm(2n+3;3n+2)=60$
+
+
+
+\subsection{Systèmes et PGCD}
+Déterminer les couples d'entiers $(x;y)$ vérifiant les systèmes suivants :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    a) $\accol{2x+3y=126\\ \mathrm{PGCD}(x;y)=7}$ & b) $\accol{x^2-xy=288\\ \mathrm{PGCD}(x;y)=12}$ & c) $\accol{4x^2-y^2=972\\\mathrm{PGCD}(x;y)=18}$
+\end{tabular}
+
+
+
+\subsection{Conditions sur PPCM et PGCD}
+Pour $a$ et $b$ deux entiers on note $d=\pgcd(a;b)$ et $m=\ppcm(a;b)$\\
+Déterminer les couples $(a;b)$ d'entiers naturels non nuls vérifiant :
+
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+    a) $\begin{cases}d=12\\m=48\end{cases}$ & b) $\begin{cases}m+d=63\\m-d=45\end{cases}$ & d) $\begin{cases}m=a+b\\d=a-b\end{cases}$
+\end{tabular}
+
+
+
+\subsection{Conditions plus abstraites}
+Pour $a$ et $b$ deux entiers on note $d=\pgcd(a;b)$ et $m=\ppcm(a;b)$
+\begin{enumerate}
+    \item Déterminer les valeurs possibles pour $a$ et $b$ sachant que $\begin{cases}m=d^2\\m+d=462\end{cases}$
+    \item Déterminer tous les couples d'entiers naturels non nuls $(a;b)$ vérifiant $\begin{cases}
+        m=d+a+b \\ m+d=28
+    \end{cases}$
+\end{enumerate}
+
+
+
+\subsection{PGCD premier}
+\begin{enumerate}
+    \item Montrer que le PGCD de $6n+7$ et $2n-2$ ne peut être égal qu'à 1 ou 13
+    \item Montrer que si $n\equiv1[13]$ alors $\mathrm{PGCD}(6n+7;2n-2)=13$
+	\item Montrer la réciproque de la question précédente.
+\end{enumerate}
+
+
+
+\subsection{Diviseurs dans polynôme}
+Peut-on trouver deux entier naturels dont le pgcd et le ppcm soient tous les deux des racines du polynôme $P:x\mapsto x^2-52x+480$ ?
+
+
+
+\subsection{Irrationnel}
+On rappelle qu'un nombre $x$ est rationnel si l'on peut écrire $x=\frac{p}{q}$ avec $p$ et $q$ deux nombres entiers premiers entre eux.\\
+Dans cet exercice on cherche à démontrer que $\sqrt{2}$ est un nombre irrationnel en raisonnant par l'absurde.
+
+\begin{enumerate}
+    \item Soit $\nN$. Montrer que $n$ est pair si et seulement si $n^2$ est pair.
+    \item On suppose que $\sqrt{2}$ est irrationnel
+    \begin{enumerate}
+        \item Montrer alors qu'il existe $p$ et $q$ entiers non nuls premiers entre eux tels que $p^2=2q^2$
+        \item En déduire que $p$ est pair
+        \item En déduire que $q$ est pair
+        \item Conclure
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Division par 24}
+\begin{enumerate}
+    \item Quels sont les restes possibles dans la division par 4 d'un nombre premier $p$ ?
+    \item Quels sont les restes possibles dans la division par 6 d'un nombre premier $p$ ?
+    \item En déduire que $p^2-1$ est divisible par 24 pour tout nombre premier $p$.
+\end{enumerate}
+
+
+
+\subsection{Suite arithmétique impossible}
+\begin{enumerate}
+    \item Montrer que la somme de deux nombres rationnels est un nombre rationnel.
+    \item En déduire que la sommme d'un nombre rationnel et d'un nombre irrationnel est un nombre irrationnel.
+    \item Montrer que le quotient d'un nombre rationnel par un nombre irrationnel est un nombre irrationnel.
+    \item On cherche à montrer qu'une suite arithmétique ne peut contenir les termes $1$, $\sqrt{2}$ et 2.\\
+    On procède par l'absurde en supposant qu'il existe $n$, $m$ et $p$ tels que $u_n=1$, $u_m=\sqrt{2}$ et $u_p=2$ avec $\Un$ une suite arithmétique de raison $r$
+    \begin{enumerate}
+        \item Montrer que $r=\frac{1}{p-n}$
+        \item Montrer que $r=\frac{\sqrt{2}-1}{p-m}$
+        \item Conclure
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\section{Bézout, Gauss, Fermat}
+
+\subsection{Bézout, identique à lui-même}
+Pour chacun des couples $(a;b)$ suivants, calculer $\pgcd(a;b)$ puis déterminer deux entiers relatifs $x$ et $y$ vérifiant $ax+by=\pgcd(a;b)$
+
+\begin{tabular}{p{20mm}p{35mm}|p{15mm}p{30mm}p{30mm}}
+     a) $a=18$ & $b=48$ & & b) $a=53$ & $b=200$ \\
+     c) $a=169$ & $b=405$ & & d) $a=289$ & $b=108$
+\end{tabular}
+
+
+
+\subsection{Lemme d'Euclide}
+Soit $p$ un nombre premier. Soient $a,b\in\ZZ$ tels que $p\vert ab$
+\begin{enumerate}
+	\item On suppose que $p$ ne divise pas $a$
+	\begin{enumerate}
+		\item Montrer qu'il existe deux entiers $x$ et $y$ tels que $b=xbp+yab$
+		\item En déduire que $p$ divise $b$
+	\end{enumerate}
+	\item Montrer que $p$ divise au moins un des deux nombres $a$ et $b$
+\end{enumerate}
+
+
+
+\subsection{Inversion modulaire}
+On dit que $a$ est inversible modulo $m$ s'il existe un entier $b$ tel que $ab\equiv1[m]$
+
+Montrer que $a$ est inversible modulo $m$ si et seulement si $a$ et $m$ sont premiers entre eux.
+
+
+
+\subsection{Relative primalité}
+\begin{enumerate}
+	\item Démontrer que $(au+bv)^2=(a+b)(au^2+bv^2)+ab(2uv-u^2-v^2)$
+	\item En déduire que si deux nombres $a$ et $b$ sont premiers entre eux, alors $ab$ et $a+b$ sont également premiers entre eux.
+	\item Réciproquement, montrer que si $ab$ et $a+b$ sont premiers entre eux alors $a$ et $b$ le sont.
+\end{enumerate}
+
+
+
+\subsection{PGCD de puissances}
+Soient $a$ et $b$ deux entiers premiers entre eux.
+\begin{enumerate}
+	\item \begin{enumerate}
+			\item Montrer qu'il existe deux entiers $u$ et $v$ tels que $a^2u^2+b^2v^2+2abuv=1$
+			\item En déduire que $a$ et $b^2$ sont premiers entre eux.
+			\item En déduire que $a^2$ et $b^2$ sont premiers entre eux.
+		\end{enumerate}
+	\item Montrer par récurrence que $a$ et $b^n$ sont premiers entre eux pour tout $\nN$
+	\item En déduire que $a^n$ et $b^n$ sont premiers entre eux.
+\end{enumerate}
+
+
+
+\subsection{Équations diophantienne}
+Résoudre dans $\ZZ$ les équations suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    a) $9x+12y=14$ & b) $12x-5y=3$ & c) $24x+16y=48$
+\end{tabular}
+
+
+
+\subsection{Exercice basique}
+Soient $x$ et $y$ deux entiers naturels pour lesquels $\overline{55}^x=\overline{42}^y$
+\begin{enumerate}
+	\item Quelles sont les valeurs possibles pour $x$ et $y$ ?
+	\item En sachant de plus de $\overline{224}^x=\overline{121}^y$, déterminer les valeurs de $x$ et de $y$.
+\end{enumerate}
+
+
+
+\subsection{Une belle omelette}
+Jemuel a ramassé tous les oeufs qui étaient dans son poulailler.
+
+Lorsqu'il les range dans des boîtes de 4, il lui en reste exactement 1. En revanche s'il les range dans des boîtes de 10, il lui en reste 7.
+\begin{enumerate}
+    \item Combien au minimum Jemuel a-t-il ramassé d'oeufs ?
+    \item Jemuel décide d'innover et de ranger ses oeufs dans des boîtes carrées de taille $3\times3$\\
+    Sachant qu'il a ainsi réussi à ranger tous ses oeufs en utilisant entre 50 et 60 boîtes, combien avait-il d'oeufs à vendre ?
+\end{enumerate}
+
+
+
+\subsection{Petit théorème de Fermat}
+\begin{enumerate}
+    \item Soient $p$ un nombre premier et $a$ un entier naturel quelconque.\\
+    Montrer par récurrence sur $a$ que $a^p\equiv a[p]$
+    \item Démontrer le petit théorème de Fermat : \\
+    « Si $p$ est un nombre premier et si $a$ est un entier non divisible par $p$, alors $a^{p-1}-1$ est un multiple de $p$ »
+\end{enumerate}
+
+
+
+\subsection{Vous ne remarquez rien ?}
+Soient $m$ et $n$ deux entiers naturels quelconques. \\
+Démontrer que $m^{14} n - m^2 n^{13}$ est un multiple de 14
+
+
+
+\subsection{Diviseurs a priori}
+\begin{enumerate}
+    \item Démontrer que pour tout $\nN$, le nombre $n^{13}-n$ est un multiple de 2, de 3, de 5, de 7 et de 13.
+    \item Démontrer que pour tout $\nN$, le nombre $n^{480}-1$ est un multiple de 3, de 5, de 7 et de 11.
+\end{enumerate}
+
+
+
+\section{Exercices supplémentaires}
+
+\subsection{Génération de nombres premiers}
+
+\begin{enumerate}
+    \item Montrer que si $2^n-1$ est un nombre premier, alors $n$ est également premier
+    \item Montrer que si $\frac{3^n-1}{2}$ est un nombre premier, alors $n$ est également premier
+    \item Montrer que si $\underbrace{111\ldots111}_{n \text{ fois}}$ est un nombre premier, alors $n$ est également premier
+\end{enumerate}
+
+
+
+\subsection{Carré parfait}
+L'objectif de l'exercice est de déterminer toutes les valeurs de $n\in\NN$ pour lesquelles $n2^{n-1}+1$ est un carré parfait.\\
+On suppose alors qu'il existe un entier $k$ pour lequel $n2^{n-1}+1=k^2$
+\begin{enumerate}
+	\item Montrer que $k$ est impair.
+	\item Justifier qu'il existe $m\in\NN$ tel que $n2^{n-3}=m(m+1)$
+	\item Montrer par récurrence que $2^{n-3}\geq n$ pour tout $n\geq6$
+	\item On suppose que $m$ est pair.
+	\begin{enumerate}
+		\item Justifier que $m\vert2^{n-3}$
+		\item En déduire que $n\geq2^{n-3}$
+		\item Conclure.
+	\end{enumerate}
+	\item Conclure dans le cas où $m$ est impair.
+\end{enumerate}
+
+
+
+\end{document}

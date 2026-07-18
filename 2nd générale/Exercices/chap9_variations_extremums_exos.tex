@@ -1,0 +1,498 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 % Macros classiques
+
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Variations et extremums}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Notion de monotonie}
+
+\subsection{Fonctions affines}
+Soient $a<b$ deux réels quelconques.
+\begin{enumerate}
+	\item On considère la fonction $f:x\mapsto 3x-1$ définie sur $\RR$ 
+	\begin{enumerate}
+		\item Montrer que $f(b)-f(a)=3(b-a)$
+		\item Que peut on en déduire concernant la monotonie de la fonction $f$ sur $\RR$ ?
+	\end{enumerate}
+	\item On considère la fonction $g:x\mapsto 7-2x$ définie sur $\RR$ 
+	\begin{enumerate}
+		\item Montrer que $g(b)-g(a)=-2(b-a)$
+		\item Que peut on en déduire concernant la monotonie de la fonction $g$ sur $\RR$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Première parabole}
+On considère la fonction $f$ définie sur $\RR$ par $g(x)=x^2-2x$
+
+Soient $a$ et $b$ deux réels quelconques.
+\begin{enumerate}
+	\item Montrer que $f(b)-f(a)=(b-a)(a+b-2)$
+	\item On suppose que $1<a<b$
+	
+	\begin{enumerate}
+		\item Montrer que $f(b)-f(a)>0$
+		\item En déduire que la fonction $f$ est croissante sur l'intervalle $[1;+\infty[$
+	\end{enumerate}
+	\item On suppose désormais que $a<b<1$
+	\begin{enumerate}
+		\item Montrer que $f(b)-f(a)<0$
+		\item En déduire que la fonction $f$ est décroissante sur l'intervalle $]-\infty;1]$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Une autre ?}
+On considère la fonction $\Phi:x\mapsto 2x^2-12x+1$ définie sur $\RR$
+
+Soient $a$ et $b$ deux réels quelconques.
+\begin{enumerate}
+	\item Montrer que $\Phi(b)-\Phi(a)=2(b-a)(a+b-6)$
+	\item On suppose que $3<a<b$
+	\begin{enumerate}
+		\item Montrer que $\Phi(b)-\Phi(a)>0$
+		\item En déduire que la fonction $\Phi$ est croissante sur l'intervalle $[3;+\infty[$
+	\end{enumerate}
+	\item On suppose désormais que $a<b<3$
+	\begin{enumerate}
+		\item Montrer que $\Phi(b)-\Phi(a)<0$
+		\item En déduire que la fonction $\Phi$ est décroissante sur l'intervalle $]-\infty;3]$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Homographie simple}
+On considère la fonction $h:x\mapsto \dfrac{x+1}{x}$
+\begin{enumerate}
+	\item Déterminer le domaine de définition de la fonction $h$
+	\item Pour $a$ et $b$ deux réels non nul, montrer que $h(b)-h(a)=-\dfrac{b-a}{ab}$
+	\item En supposant $0<a<b$, monter que la fonction $h$ est décroissante sur l'intervalle $]0;+\infty[$
+	\item Quelle est sa monotonie sur l'intervalle $]-\infty;0[$ ?
+\end{enumerate}
+
+
+
+\subsection{Beaucoup de changements}
+On considère la fonction $f:x\mapsto x+\frac{4}{x}$ définie sur $\RR^*$
+
+Soient $a$ et $b$ deux réels non nuls.
+\begin{enumerate}
+	\item Démontrer que $f(b)-f(a)=\dfrac{(b-a)(ab-4)}{ab}$
+	\item Montrer que $f$ est croissante sur l'intervalle $[2;+\infty[$
+	\item Montrer que $f$ est décroissante sur l'intervalle $]0;2]$
+	\item Montrer que $f$ est croissante sur l'intervalle $[-2;0[$
+	\item Montrer que $f$ est décroissante sur l'intervalle $]-\infty;-2[$
+\end{enumerate}
+
+
+
+\subsection{Une question de parité}
+On considère la fonction $\gamma:x\mapsto \dfrac{x^2}{1+x^2}$ définie sur $\RR$
+\begin{enumerate}
+	\item Démontrer que la fonction $\gamma$ est une fonction paire.
+	\item Soient $a$ et $b$ deux réels quelconques.
+	\begin{enumerate}
+		\item Montrer que $\gamma(b)-\gamma(a)=\dfrac{(b-a)(a+b)}{(1+a^2)(1+b^2)}$
+		\item En déduire que la fonction $\gamma$ est croissante sur l'intervalle $[0;+\infty[$
+	\end{enumerate}
+	\item Sans calculs, justifier alors que $\gamma$ est décroissante sur l'intervalle $]-\infty;0]$
+\end{enumerate}
+
+
+
+\subsection{Fraction rationnelle}
+On considère la fonction $f:x\mapsto\dfrac{x^2+3}{x+1}$ définie sur $\RR\setminus{-1}$
+
+Soient $a$ et $b$ deux réels quelconques distincts de $-1$
+\begin{enumerate}
+	\item Démontrer que $f(b)-f(a)=\dfrac{(b-a)(ab+a+b-3)}{(a+1)(b+1)}$
+	\item On suppose que $1<a<b$
+	\begin{enumerate}
+		\item Montrer alors que $f(b)-f(a)>0$
+		\item En déduire que $f$ est croissante sur un intervalle que l'on précisera.
+	\end{enumerate}
+	\item On suppose désormais que $-1<a<b<1$
+	\begin{enumerate}
+		\item Justifier que $f(b)-f(a) >0$
+		\item Que peut-on en conclure quant à la monotonie de $f$ sur l'intervalle $]-1;1[$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+\subsection{Degré élevé}
+On considère la fonction $\varphi:x\mapsto x^3-3x^2$ définie sur $\RR$
+
+Soient $a$ et $b$ deux nombres réels quelconques.
+\begin{enumerate}
+	\item Montrer que $\varphi(b)-\varphi(a)=(b-a)(a^2+b^2+ab-3a-3b)$
+	\item En déduire que la fonction $\varphi$ est croissante sur l'intervalle $]-\infty;0]$
+	\item On suppose que $3<a<b$
+	\begin{enumerate}
+		\item Justifier que $a^2>3a$ et que $b^2>3b$
+		\item En déduire que la fonction $\varphi$ est également croissante sur l'intervalle $[3;+\infty[$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Notion d'extremum}
+
+\subsection{Première parabole}
+On considère la fonction $f:x\mapsto 2x^2-5$ définie sur $\RR$
+\begin{enumerate}
+	\item Justifier que $f(x)\geq-5$ \quad pour tout $x$ réel.
+	\item Peut-on affirmer que $-5$ est le minimum de la fonction $f$ ?
+\end{enumerate}
+
+
+
+\subsection{Une autre orientation}
+On considère la fonction $g:x\mapsto -x^2+4x+1$ définie sur $\RR$
+\begin{enumerate}
+	\item Démontrer que $g(x)=5-(x-2)^2$ \quad pour tout $x$ réel.
+	\item Justifier alors que $g(x)\leq5$ \quad pour tout $x$ réel.
+	\item Peut-on affirmer que $5$ est le maximum de la fonction $g$ ?
+\end{enumerate}
+
+
+
+\subsection{Un bon quotient}
+On définit sur $\RR$ la fonction $\varphi$ par $\varphi(x)=\dfrac{2x^2-1}{x^2+1}$
+\begin{enumerate}
+	 \item \begin{enumerate}
+	 	\item Démontrer que $\varphi(x)+1=\frac{x^2}{x^2+1}$
+	 	\item En déduire que $\varphi(x)\geq-1$ \quad pour tout $x$ réel.
+	 	\item Justifier que $-1$ est en fait le minimum de $\varphi$ sur $\RR$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Démontrer que $\varphi(x)-2=\frac{-3}{x^2+1}$ \quad pour tout $x$ réel.
+		\item En déduire que $\varphi(x)\leq 2$ \quad pour tout $x$ réel.
+		\item Montrer que l'équation $\varphi(x)=2$ n'admet aucune solution réelle.
+		\item Peut-on conclure que $2$ est le maximum de $\varphi$ sur $\RR$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Rien qu'un développement}
+On considère la fonction $f:x\mapsto\dfrac{2x}{1+x^2}$ définie sur $\RR$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item En développant l'expression $(x+1)^2$, justifier que $2x\geq-x^2-1$ \quad pour tout $x$ réel.
+		\item En développant l'expression $(x-1)^2$, justifier que $2x \leq x^2+1$ \quad pour tout $x$ réel.
+	\end{enumerate}
+	\item En déduire que $-1\leq f(x) \leq 1$ \quad pour tout $x$ réel.
+	\item Peut-on affirmer que $1$  et $-1$ sont des extremums de la fonction $f$ ?
+\end{enumerate}
+
+
+
+\section{Étude de variations}
+
+\subsection{Traduction}
+On a dressé ci-après le tableau de variations de la fonction $f$.
+
+\begin{minipage}{0.54\linewidth}
+	\begin{enumerate}
+		\item Quel est le domaine de définition de la fonction $f$ ?
+		\item Quels sont les extremums de la fonction $f$ ?
+		\item Décrire à l'aide de phrases les variations subies par la fonction $f$
+	\end{enumerate}
+\end{minipage} \hspace{1mm}
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}
+		\tkzTabInit[color , colorV=gray!25 , colorL=gray!25 , espcl=2]
+			{$x$ / 1 , $f(x)$ / 2} {$-5$ , $1$ , $4$ , $11$}
+		\tkzTabVar{-/ $-1$ , +/ $3$ , -/ $0$ , +/ $7$}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Incohérences}
+On a dressé ci-après plusieurs tableaux.
+
+Expliquer pourquoi aucun d'entre eux ne peut être un tableau de variations cohérent.
+
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}
+		\tkzTabInit[color , colorL=gray!25 , colorV=gray!25 , espcl=2]
+			{$x$ / 1 , $f(x)$ / 2} {$-7$ , $8$ , $1$ , $15$}
+		\tkzTabVar{-/ $-2$ , +/ ${1,4}$ , -/ $-1$ , +/ $4$}
+	\end{tikzpicture}\vspace{3mm}
+	\begin{tikzpicture}
+		\tkzTabInit[color , colorL=gray!25 , colorV=gray!25 , espcl=3]
+			{$x$ / 1 , $h(x)$ / 2} {$-2$ , $3$ , ${8,1}$ }
+		\tkzTabVar{-/ ${0,16}$ , +/ $4$ , -/ ${5,2}$ }
+	\end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}
+		\tikzset{arrow style/.style = {\tkzTabDefaultWritingColor,Stealth-,> = \tkzTabDefaultArrowStyle,shorten > = \tkzTabDefaultSep,shorten < = \tkzTabDefaultSep}}
+		\tkzTabInit[color , colorL=gray!25 , colorV=gray!25 , espcl=2]
+			{$x$ / 1 , $g(x)$ / 2} {$-5$ , $1$ , $4$ , $11$}
+		\tkzTabVar{+/ $-1$ , -/ $3$ , +/ $0$ , -/ $7$}
+	\end{tikzpicture}\vspace{3mm}
+	\begin{tikzpicture}
+		\tkzTabInit[color , colorL=gray!25 , colorV=gray!25 , espcl=2]
+			{$x$ / 1 , $\phi(x)$ / 2} {{$0,1$} , $1$ , $11$ , $111$}
+		\tkzTabVar{-/ $-2$ , +/ $\pi$ , -/ $\frac{22}{7}$ , +/ $7$}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{D'après le tracé}
+On a tracé ci-après les courbes représentatives des fonctions $f$, $g$ et $h$.
+
+\hspace{-3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.9]
+        \begin{axis}[xmin=-5 , xmax=4 , ymin=-2 , ymax=5,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        \addplot[color=red!80!black , samples = 100 , domain = -5:-2 , line width = 2pt]
+        {0.2956*x^3+3.11*x^2+8.915*x+6.7};
+        \addplot[color=red!80!black , samples = 100 , domain = -2:1 , line width = 2pt]
+        {-0.44*x^3-0.67*x^2+2.67*x+3.44};
+        \addplot[color=red!80!black , samples = 100 , domain = 1:4 , line width = 2pt]
+        {0.52*x^3-3.89*x^2+6.22*x+2.15};
+        
+        \draw[color=red!80!black] (2.5,3.5) node {$\Ccal_f$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{1mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.9]
+        \begin{axis}[xmin=-4 , xmax=4 , ymin=-3 , ymax=4,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        \addplot[color=blue!80!black , samples = 100 , domain = -4:-2 , line width = 2pt]
+        {-1.25*x^3-11.25*x^2-30*x-21};
+        \addplot[color=blue!80!black , samples = 100 , domain = -2:-1 , line width = 2pt]
+        {12*x^3+54*x^2+72*x+28};
+        \addplot[color=blue!80!black , samples = 100 , domain = -1:1 , line width = 2pt]
+        {-0.75*x^3+2.25*x-0.5};
+        \addplot[color=blue!80!black , samples = 100 , domain = 1:4 , line width = 2pt]
+        {0.3*x^3-2.235*x^2+3.56*x-0.63};
+        
+        \draw[color=blue!80!black] (2.5,0.5) node {$\Ccal_g$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{1mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.9]
+        \begin{axis}[xmin=-4 , xmax=4 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        \addplot[color=green!70!black , samples = 100 , domain = -4:-3 , line width = 2pt]
+        {-4*x^3-42*x^2-144*x-161};
+        \addplot[color=green!70!black , samples = 100 , domain = -3:-1 , line width = 2pt]
+        {x^3+6*x^2+9*x+1};
+        \addplot[color=green!70!black , samples = 100 , domain = -1:1 , line width = 2pt]
+        {-1.5*x^3+4.5*x};
+        \addplot[color=green!70!black , samples = 100 , domain = 1:3 , line width = 2pt]
+        {x^3-6*x^2+9*x-1};
+        \addplot[color=green!70!black , samples = 100 , domain = 3:4 , line width = 2pt]
+        {-4*x^3+42*x^2-144*x+161};
+        
+        \draw[color=green!70!black] (2.5,-1.5) node {$\Ccal_h$};
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+Compléter les tableaux de variations suivants :
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{red!80!black}
+	\tkzTabInit[color , colorV=red!80!black!15 , colorL=red!80!black!15 , espcl = 16/3]
+		{ $x$ /0.75 , $f(x)$ /1.7}{$-5$ , {\dots} ,  {\dots} , $4$}
+	\tkzTabVar
+		{+/ \vphantom{I}\dots , -/ \dots , +/ \vphantom{I}\dots , -/ {\dots}}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{blue!80!black}
+	\tkzTabInit[color , colorV=blue!80!black!15 , colorL=blue!80!black!15 , espcl = 4]
+		{ $x$ /0.75 , $g(x)$ /1.7}{$-4$ ,  {\dots} , {\dots} , {\dots} ,$4$}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{green!70!black}
+	\tkzTabInit[color , colorV=green!70!black!15 , colorL=green!80!black!15 , espcl = 16/5]
+		{ $x$ /0.75 , $h(x)$ /1.7}{$-4$ , {\dots} , {\dots} , {\dots} , {\dots} , $4$}
+\end{tikzpicture}
+
+
+
+\subsection{Attention aux impairs}
+On a dressé ci-dessous le tableau de variations d'une fonction $f$ :
+
+\begin{tikzpicture}
+	\tkzTabInit[color , colorV=gray!25 , colorL=gray!25 , espcl=4 , deltacl = 0.75]
+			{$x$ / 1 , $f(x)$ / 2} {$-5$ , $-2$ , $0$ , $2$ , $5$}
+	\tkzTabVar{+/ $f(-5)$ , -/ $-1$ ,  R/ , +/  $f(2)$ , -/ $-4$ }
+	\tkzTabIma{2}{4}{3}{$f(0)$}
+\end{tikzpicture}
+Tracer dans un repère orthonormé une courbe représentative possible de la fonction $f$ de sorte que :
+\begin{enumerate}
+	\item Son maximum soit égal à $3$
+	\item $f$ soit impaire. Préciser les images de $-5$, de $0$ et de $2$.
+	\item $f$ soit négative sur $[-5;0]$ et qu'elle n'atteigne pas son maximum sur $[0;5]$
+\end{enumerate}
+
+
+
+\subsection{D'après le tableau}
+On a dressé ci-après les tableaux de variations des fonctions $f$ et $g$ :
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{red!80!black}
+	\tkzTabInit[color , colorV=red!80!black!15 , colorL=red!80!black!15 , espcl = 2]
+		{$x$ /1 , $f(x)$ /2} {$-5$ , $-1$ , $3$ , $11$}
+	\tkzTabVar
+		{-/ $-5$ , +/ $1$ , -/ $-1$ , +/$6$}
+\end{tikzpicture}  \hspace{5mm}
+\begin{tikzpicture}
+	\pgfsetstrokecolor{blue!80!black}
+	\tkzTabInit[color , colorV=blue!80!black!15 , colorL=blue!80!black!15 , espcl = 1.5]
+		{$x$ /1 , $g(x)$ /2} {$-13$ , $-8$ , $-2$ , $4$ , $6$}
+	\tkzTabVar
+		{+/ $-1$ , -/ $-3$ , +/ $4$ , -/ $0$ , +/ $7$}
+\end{tikzpicture}
+\begin{enumerate}
+	\item Tracer dans un repère orthonormé deux courbes qui pourraient représenter les fonctions $f$ et $g$
+	\item On suppose désormais que $f(-3)>f(3)$ et que $f(10)=0$\\
+	Tracer dans un repère orthonormé une courbe qui pourrait représenter la fonction $f$
+	\item On suppose maintenant que $g(-10)=g(-3)$ et que $g(2)>3$\\
+	Tracer dans un repère orthonormé une courbe qui pourrait représenter la fonction $g$
+\end{enumerate}
+
+
+
+\subsection{Comparaison}
+On a dressé ci-après le tableau de variations d'une fonction $f$
+
+\begin{tikzpicture}
+	\tkzTabInit[color , colorV=gray!25 , colorL=gray!25 , espcl=4]
+			{$x$ / 1 , $f(x)$ / 2} {$-7$ , {$2,1$} , $3$ , $10$ , $13$}
+	\tkzTabVar{-/ $1$ , +/ {$4,9$} , -/ $-3$ , +/ $0$ , -/ $-1$}
+\end{tikzpicture}
+\begin{enumerate}
+	\item Déterminer s'il est possible de comparer les nombres suivants et, le cas échéant, les comparer :
+	
+	\renewcommand{\arraystretch}{1.5}\hspace{-15mm}
+	\begin{tabular}{P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth}}
+		$f(-5)$ et $f(5)$ & $f(-1)$ et $f(1)$ & $f(9)$ et $f(10)$ & $f(8)$ et $f(11)$ \\
+		$f(-2)$ et $f(2)$ & $f(3)$ et $f(12,3)$ & $f(-4)$ et $f(0)$ & $f(-6)$ et $f(12)$
+	\end{tabular}
+	
+	\item Lorsque que cela est possible, déterminer le signe de chacun des nombres suivants :
+	
+	\renewcommand{\arraystretch}{1.5}\hspace{-15mm}
+	\begin{tabular}{P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth}}
+		$f(5)$ & $f(11)$ & $f(-5)$ & $f(5)+f(-5)$ \\
+		$f(4)\times f(-4)$ & $f(12)+f(0)$ & $f(12)\times f(0)$ & $f(10,1)+f(9,9)$ \\
+		$f(-3)-f(3)$ & $f(12,3)\times f(-5,67)$ & $f(12,3)+f(-5,67)$ & $f(2,99)\times f(3,01)$
+	\end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Vrai / Faux}
+On a dressé ci-contre le tableau de variations d'une fonction $g$ :
+
+\begin{tikzpicture}
+	\tkzTabInit[color , colorV=gray!25 , colorL=gray!25 , espcl=4]
+			{$x$ / 1 , $g(x)$ / 2} {$-3$ , $1$ , $6$ , $10$ , $11$}
+	\tkzTabVar{+/ $3$ , -/ $0$ , +/ $5$ , -/ $-2$ , +/ $-1$}
+\end{tikzpicture}
+
+Déterminer si chacune des affirmations suivantes sont vraies ou fausses en justifiant soigneusement :
+
+\renewcommand{\arraystretch}{1.75}
+\begin{tabular}{P{0.3\linewidth} P{0.3\linewidth} P{0.3\linewidth}}
+	\textbf{a)} $g$ est croissante sur l'intervalle $[3;4]$ &
+	\textbf{b)} $g$ est croissante sur l'intervalle $[0;5]$ &
+	\textbf{c)} $g$ est décroissante sur l'intervalle $[-2;-1]$ \\
+	\textbf{d)} $g(1) > g(5)$ &
+	\textbf{e)} $g(-1) > g(-5)$ &
+	\textbf{f)} $g(-1) > g(1)$ \\
+	\textbf{g)} Le maximum de $g$ sur l'intervalle $[-2;2]$ vaut $0$ &
+	\textbf{h)} Le minimum de $g$ sur l'intervalle $[0;12]$ vaut $-2$ & 
+	\textbf{i)} $0$ admet plusieurs antécédents par la fonction $f$ \\
+	\textbf{j)} $5$ admet plusieurs antécédents par la fonction $g$ &
+	\textbf{k)} $f(1,1) \times f(11,1) >0$ &
+	\textbf{l)} $f(0)+f(10) \geq 0$ \\
+	\textbf{m)} Il existe un réel $x$ tel que $f(x)>f(x+2)$ &
+	\textbf{n)} Il existe un réel  $x$ tel que $f(x)>f(-x)$ &
+	\textbf{o)} Il existe un réel  $x$ tel que $f(x)>2x$
+\end{tabular}
+
+
+
+\subsection{Avec deux fonctions}
+On a dressé ci-après les tableaux de variations des fonctions $f$ et $g$ :
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{red!80!black}
+	\tkzTabInit[color , colorV=red!80!black!15 , colorL=red!80!black!15 , espcl = 2]
+		{$x$ /1 , $f(x)$ /2} {$-8$ , $-1$ , $6$ , $11$}
+	\tkzTabVar
+		{-/ $1$ , +/ $3$ , -/ $-1$ , +/$4$}
+\end{tikzpicture}  \hspace{5mm}
+\begin{tikzpicture}
+	\pgfsetstrokecolor{blue!80!black}
+	\tkzTabInit[color , colorV=blue!80!black!15 , colorL=blue!80!black!15 , espcl = 2]
+		{$x$ /1 , $g(x)$ /2} {$-8$ , $-3$ , $7$ , $11$}
+	\tkzTabVar
+		{+/ $1$ , -/ $-6$ , +/ $-1$ , -/ $-3$}
+\end{tikzpicture}
+\begin{enumerate}
+	\item Déterminer le domaine de définition des fonctions $f$ et $g$
+	\item Si $x\in[0;2]$ , donner l'encadrement le plus petit possible de $f(x)$ et de $g(x)$
+	\item \begin{enumerate}
+		\item Si $g(x)\in[0;2]$ , donner l'encadrement le plus petit possible de $x$
+		\item Si $f(x)\in[0;2]$ , donner l'encadrement le plus petit possible de $x$
+	\end{enumerate}
+	\item Comparer lorsque cela est possible chacun des nombres suivants :
+	
+	\renewcommand{\arraystretch}{1.5}\hspace{-15mm}
+	\begin{tabular}{P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth} P{0.25\linewidth}}
+		$f(0)$ et $g(0)$ & $f(8)$ et $g(8)$ & $f(-5)$ et $g(-5)$
+	\end{tabular}
+\end{enumerate}
+
+
+
+\end{document}

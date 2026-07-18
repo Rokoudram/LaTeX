@@ -1,0 +1,622 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Limites de fonctions}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Calcul de limites}
+
+\subsection{Classiques en l'infini}
+Calculer chacune des limites suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to-\infty} x^2-2x$  &
+	b) $\limite{x\to+\infty}\dfrac{2+\frac{1}{x}}{1-\frac{2}{x}}$&
+	c) $\limite{x\to+\infty}\dfrac{x+x^2}{1+x^3}$ \\
+	d) $\limite{x\to-\infty}\dfrac{3+x^3}{2+x^2}$ &
+	e) $\limite{x\to+\infty} x-\sqrt{x}$ &
+	f) $\limite{x\to-\infty}\dfrac{(2x+1)^3}{2x^3+1}$
+\end{tabular}
+
+
+
+\subsection{Zoom sur un point}
+Calculer chacune des limites suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to0\\x>0} \dfrac{x+2}{x}$  &
+	b) $\limite{x\to3\\x<3} \dfrac{x}{x-3}$&
+	c) $\limite{x\to2\\x>2} \dfrac{x-3}{x}$ \\
+	d) $\limite{x\to1\\x<1} \dfrac{x-5}{(x-1)^2}$ &
+	e) $\limite{x\to1\\x>1} \dfrac{x^2+x+1}{x^2+1}$ &
+	f) $\limite{x\to0\\x>0} \dfrac{4}{x+x^2}$ \\
+	g) $\limite{x\to4\\x<4} \dfrac{2+\sqrt{x}}{2-\sqrt{x}}$ &
+	h) $\limite{x\to0\\x<0} \dfrac{1}{x}+\dfrac{1}{x^2}$ &
+	i) $\limite{x\to2\\x>2} \dfrac{x}{x-2}-\dfrac{1}{(x-2)^2}$
+\end{tabular}
+
+
+
+\subsection{Fonctions de référence}
+Calculer chacune des limites suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to+\infty} x+e^x$  &
+	b) $\limite{x\to+\infty} \dfrac{1+e^x}{e^x}$ &
+	c) $\limite{x\to-\infty} \dfrac{e^x+e^{2x}}{x}$ \\
+	d) $\limite{x\to-\infty} \dfrac{1+e^x}{x+e^x}$ &
+	e) $\limite{x\to-\infty} \dfrac{1+e^x}{e^x}$ &
+	f) $\limite{x\to+\infty} e^{2x}-2e^x$ \\
+	g) $\limite{x\to+\infty} x\ln(x)$ &
+	h) $\limite{x\to+\infty} x\ln(x)-x$ &
+	i) $\limite{x\to0\\x>0} \dfrac{1}{x}-\ln(x) $ \\
+	j) $\limite{x\to0\\x>0} \dfrac{x}{\ln(x)}$ &
+	k) $\limite{x\to+\infty} \dfrac{1+\ln(x^2)}{\ln(x)}$ &
+	l) $\limite{x\to0\\x>0} \ln(x)+\ln^2(x)$ \\
+	m) $\limite{x\to0\\x<0} \dfrac{e^x}{e^x-1}$ &
+	n) $\limite{x\to+\infty} \dfrac{1+\ln(\sqrt{x})}{1+\ln(2x)}$ &
+	o) $\limite{x\to0\\x>0} \dfrac{1+\ln(x)}{1-e^x}$
+\end{tabular}
+
+
+
+\subsection{Composition de limites}
+Calculer chacune des limites suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.33\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to+\infty} \ln\left(1+\frac{1}{x}\right)$  &
+	b) $\limite{x\to0} \sqrt{3+e^x}$ &
+	c) $\limite{x\to0} \ln\left(x+e^x\right)$ \\
+	d) $\limite{x\to-\infty} e^{e^{e^{x}}}$ &
+	e) $\limite{x\to-\infty} e^{x-x^2}$ &
+	f) $\limite{x\to-\infty} e^x\sqrt{\dfrac{9x}{1+x}}$ \\
+	g) $\limite{x\to2\\x>2} \ln\left(\dfrac{x}{x-2}\right)$ &
+	h) $\limite{x\to0\\x>0} \ln\left(1+\ln\left(1+\ln\left(1+x\right)\right)\right) $ &
+	i) $\limite{x\to-\infty} \dfrac{1}{e^{x+\frac{1}{x}}}$ \\
+	j) $\limite{x\to+\infty} e^x-e^{\sqrt{x}}$ &
+	k) $\limite{x\to+\infty} \dfrac{\ln(1+x+x^2)}{\ln(1+x)}$ &
+	l) $\limite{x\to+\infty} \dfrac{\ln\left(1+e^{3x}\right)}{1+x}$
+\end{tabular}
+
+
+
+\subsection{Avec étude de signe}
+Calculer chacune des limites suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to0\\x>0} \dfrac{1}{x^2-x}$  &
+	b) $\limite{x\to1\\x>1} \dfrac{1}{x^2-x}$ &
+	c) $\limite{x\to2\\x<2} \dfrac{x}{x^2-5x+6}$ \\
+	d) $\limite{x\to3\\x>3} \dfrac{2-x}{x^2-5x+6}$ &
+	e) $\limite{x\to4\\x<4} \dfrac{x}{2\sqrt{x}-x}$ &
+	f) $\limite{x\to0\\x>0} \dfrac{e^x}{e^{2x}+e^x-2}$ \\
+	g) $\limite{x\to1\\x<1} \dfrac{x}{\ln\left(2x^2-x\right)}$ &
+	h) $\limite{x\to1\\x>1} \dfrac{x+\sqrt{x}}{x-2\sqrt{x}+1}$ &
+	i) $\limite{x\to4\\x<4} \dfrac{4x+\sqrt{x}}{x\sqrt{x}-4x+4\sqrt{x}}$ \\
+\end{tabular}
+
+
+
+\subsection{Enfin du nouveau !}
+Calculer chacune des limites suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to2\\x>2} \dfrac{x^2-4}{2-x}$  &
+	b) $\limite{x\to1\\x<1} \dfrac{x-1}{x-x^2}$ &
+	c) $\limite{x\to4\\x>4} \dfrac{x-4}{\sqrt{x}-2}$ \\
+	d) $\limite{x\to2\\x<2} \dfrac{x-2}{x^2-4x+4}$ &
+	e) $\limite{x\to1\\x<1} \dfrac{x^2-3x+2}{x-1}$ &
+	f) $\limite{x\to0\\x>0} \dfrac{1-e^x}{e^{2x}-1}$ \\
+	g) $\limite{x\to-3\\x<-3} \dfrac{x^2+2x-3}{2x^2+7x+3}$ &
+	h) $\limite{x\to0\\x<0} \dfrac{e^{2x}+e^x-2}{e^{2x}-2e^x+1}$ &
+	i) $\limite{x\to e\\x>e} \dfrac{3+\ln(x)\left(2-\ln(x)\right)}{1-\ln(x)}$ \\
+\end{tabular}
+
+
+
+\subsection{Expression conjuguée}
+Calculer chacune des limites suivantes à l'aide d'une expression conjuguée :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $\limx \sqrt{x+1}-\sqrt{x}$ &
+    b) $\limx \sqrt{x^2-1}-x$ &
+    c) $\limite{x\to0\\x>0} \dfrac{\sqrt{1+x}-1}{x}$ \\
+    d) $\limite{x\to0\\x>0} \dfrac{\sqrt{1+x}-1}{x^2}$& 
+    e) $\limite{x\to2\\x<2} \dfrac{\sqrt{2x^2-7}-\sqrt{x^2-3}}{x^2-4}$ &
+    f) $\limite{x\to1\\x>1} \dfrac{\sqrt{x^3+1}-\sqrt{x^3+x}}{1-x^2}$ \\
+    g) $\limx \sqrt{x+\sqrt{x}}-\sqrt{x}$ &
+    h) $\limx \dfrac{\sqrt{x^2+x}-\sqrt{x}}{x-\sqrt{2x}}$ &
+    i) $\limite{x\to1\\x>1} \dfrac{\sqrt{x^2+x-\sqrt{x}}-\sqrt{x^2-x+\sqrt{x}}}{x-1}$
+\end{tabular}
+
+
+\subsection{Encadrement et comparaison}
+Calculer les limites suivantes à l'aide du théorème de l'encadrement ou du théorème de comparaison asymptotique :
+
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limx\dfrac{x+\cos(2x)}{1+2x}$ & b) $\dfrac{3+2x^2}{10x-\sin(x)}$ & c) $\limx \dfrac{2x^3+x-2\sin(x)}{x^3+5\cos(x)-x^2}$\\
+    d) $\limx \dfrac{e^{\sin(x)}}{x}$ & e) $\limite{x\to0}x\cos\left(\frac{1}{x}\right)$ & f) $\limite{x\to1} \sin(\pi x)\cos\left(\frac{1}{1-x}\right)$\\
+    g) $\limx\sin(x)\ln\left(\cos\left(\frac{2}{x}\right)\right)$ & h) $\limx\ln\left(\dfrac{2+\sin(x)}{\sqrt{x}}\right)$ & i) $\limite{x\to0\\x>0}\sin(x)\cos\left(\ln(x)\right)$
+\end{tabular}
+
+
+
+\subsection{Croissance comparée}
+Calculer chacune des limites suivantes :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to+\infty} \dfrac{1+e^x}{x^2}$  &
+	b) $\limite{x\to+\infty} 2e^x-x^3-x^6$ &
+	c) $\limite{x\to+\infty} x^4e^{1-x}$ \\
+	d) $\limite{x\to-\infty} e^x(2x+x^2)$ &
+	e) $\limite{x\to-\infty} \dfrac{e^{-x}}{x-1}$ &
+	f) $\limite{x\to+\infty} \dfrac{e^x+e^{-x}}{x^2}$ \\
+	g) $\limite{x\to+\infty} \dfrac{x}{1+\ln(x)}$ &
+	h) $\limite{x\to0\\x>0} x^2\ln(x)-x$ &
+	i) $\limite{x\to+\infty} \dfrac{\ln(x)+\ln^2(x)}{x+1}$ \\
+	j) $\limite{x\to+\infty} \dfrac{\ln(x+3)}{x}$ &
+	k) $\limite{x\to+\infty} \dfrac{e^x}{\ln(x)}$ &
+	l) $\limite{x\to0\\x>0} x\ln(x+x^2)$
+\end{tabular}
+
+
+
+\subsection{Changement de variable}
+Calculer chacune des limites suivantes à l'aide d'un changement de variable :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	a) $\limite{x\to+\infty} \dfrac{4x+3}{e^{4x+3}}$  &
+	b) $\limite{x\to+\infty} \dfrac{\ln\left(\frac{1}{x}\right)}{x}$ &
+	c) $\limite{x\to+\infty} \dfrac{1+x}{e^{x^2}}$ \\
+	d) $\limite{x\to1\\x>1} (x^2-1)\ln(x-1)$ &
+	e) $\limite{x\to1\\x>1} (x-1)\ln(x^2-1)$ &
+	f) $\limite{x\to-\infty} x^3e^{x-x^2}$ \\
+	g) $\limite{x\to+\infty} \dfrac{x}{\ln(1+x)+\ln(x)}$ &
+	h) $\limite{x\to+\infty} \ln(x)e^{1-\ln^2(x)}$ &
+	i) $\limite{x\to-\infty} (1+x1+x^2)e^{1+x^3}$ \\
+	j) $\limite{x\to-\infty} e^x\ln(1+x^2)$ &
+	k) $\limite{x\to+\infty} e^{\sqrt{x}}-x\ln(x)$ &
+	l) $\limite{x\to0\\x>0} (x+x^2)\ln\left(1+\frac{1}{x}\right)$
+\end{tabular}
+
+
+
+\section{Asymptotes}
+
+\subsection{Tableaux de variations}
+À l'aide des tableaux de variations suivants, donner les équations des asymptotes aux courbes représentatives des fonctions qui sont décrites en précisant les limites correspondantes :\\
+
+\begin{tikzpicture}
+\tkzTabInit[lgt=1.5]{$x$ /1, $f(x)$ /2}{$-\infty$,$-15$,$-1$,$4$,$1705$,$+\infty$}%
+\tkzTabVar{+/ $1$ / ,-D+/ $-\infty$ / $+\infty$ , -/ $8$ , +D-/$+\infty$/$-\pi^2$ , +/$0$ , -/$-3$}
+\end{tikzpicture}\\
+
+
+\begin{tikzpicture}
+\tkzTabInit[lgt=1.5]{$x$ /1, $g(x)$ /2}{$-10$,$2$,$11$, $e^3$ , $e^\pi$,$+\infty$}%
+\tkzTabVar{D-// $1$ , +/$5$ , -D+/ $-3$/$+\infty$ , -/$-5$ , +D+/$+\infty$/$e^\pi$ , -/ $10$}
+\end{tikzpicture}
+
+
+
+\subsection{Graphiquement}
+
+Pour chacune des courbes suivantes, donner l'équation des asymptotes verticales et horizontales à la courbe, et écrire les limites correspondantes.
+
+\hspace{10mm}
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-8:2.9, samples=100, color=red]
+            {1+((e^(-x-2)+2)/(-x+3))};
+            \addplot [domain=3.1:10, samples=100, color=red]
+            {1+((e^(-x-2)+2)/(-x+3))};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hfill
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-10.5:0, samples=100, color=red]
+            {abs(x^2/((x+3)*(x-4)))};
+            \addplot [domain=0:10.5, samples=100, color=red]
+            {-abs(x^2/((x+5)*(x-4)))};
+        
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} % Graphe 2
+
+\vspace{5mm}
+\hspace{10mm}
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-10.5:-4.000001, samples=100, color=red]
+            {ln(x^2-16)};
+            \addplot [domain=6.000001:10.5, samples=100, color=red]
+            {ln(x^2-36)};
+            \addplot [domain=-4:6, samples=100, color=red]
+            {((1)/(50))*(x-6)*(x-1)*(x+4)*x+5};        
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hfill
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-10.5:-3.01, samples=100, color=red]
+            {3+2*sin(deg(x^2))/(x^2-9};
+            \addplot [domain=3.005:10.5, samples=100, color=red]
+            {-2+2*sin(deg(x^2))/(x^2-9};
+            \addplot [domain=-3:3, samples=100, color=red]
+            {(x^8)/200+1};
+        
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} % Graphe 4
+
+
+
+\subsection{Première fonction}
+On considère la fonction $f:x\mapsto\dfrac{2x^2}{2+x^2}$ définie sur $\RR$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Justifier que $0 \leq f(x) \leq 2 \quad \forall\xR$
+		\item Que peut-on en déduire concernant les éventuelles asymptotes verticales à $\Ccal_f$ ?
+	\end{enumerate}
+	\item Démontrer que $\Ccal_f$ admet une unique asymptote horizontale et en préciser l'équation.
+\end{enumerate}
+
+
+
+\subsection{Étude asymptotique}
+On considère la fonction $g$ définie par $g(x)=\dfrac{x^2+x}{2x-3}$
+\begin{enumerate}
+    \item Déterminer $\Dcal_g$ le domaine de définition de la fonction $g$
+    \item Vérifier par le calcul que $(d):x=\frac{3}{2}$ est bien une asymptote verticale à $\Ccal_g$
+    \item Calculer $\limx g(x)$ et $\limite{x\to-\infty}g(x)$
+    \item Justifier que $\Ccal_g$ n'admet pas d'asymptote horizontale.
+\end{enumerate}
+
+
+
+\subsection{Quotients d'exponentielles}
+\begin{enumerate}
+    \item Pour tout $x$ réel, on pose $f(x)=\frac{2e^x}{1+e^x}$
+    \begin{enumerate}
+    	\item Montrer que $0\leq f(x) \leq 2 \quad \forall\xR$
+    	\item Montrer que $\Ccal_f$ admet exactement deux asymptotes dont on précisera les équations.
+    \end{enumerate}
+    \item La courbe $\Ccal$ d'équation $y=\frac{1+2e^x}{e^{-x}+e^x}$ admet-elle les mêmes asymptotes que $\Ccal_f$ ?
+    \item On pose $g(x)=\frac{1+e^x}{1-e^x}\times f(x)$\\
+    Donner les asymptotes horizontales et verticales à $\Ccal_g$
+\end{enumerate}
+
+
+
+\subsection{Fraction rationnelle}
+On définit la fonction $\varphi$ par $\varphi:x\mapsto\frac{2x^4+4}{x^4+2x^2+3}$
+\begin{enumerate}
+	\item Justifier que $\varphi$ est définie sur $\RR$
+	\item \begin{enumerate}
+		\item Démontrer que $\varphi(x)=1+\frac{(x^2-1)^2}{x^4+2x^2+3}$
+		\item En déduire que $1 \leq \varphi(x) \leq 2 \quad \forall\xR$
+	\end{enumerate}
+	\item Calculer les limites de $\varphi$ aux bornes de son définition.
+	\item En déduire toutes les asymptotes horizontales et verticales de $\Ccal_\varphi$
+\end{enumerate}
+
+
+
+\subsection{Étude aux bornes}
+On considère la fonction $\phi:x\mapsto\frac{x^2-e^{^{\frac{1}{x}}}}{1-x^2}$
+\begin{enumerate}
+    \item Déterminer $\Dcal_\phi$ le domaine de définition de la fonction $\phi$
+    \item Calculer les limites de $\phi$ aux bornes de son domaine de définition.
+    \item Donner les équations des asymptotes à $\Ccal_\phi$ la courbe représentative de la fonction $\phi$
+\end{enumerate}
+
+
+
+\subsection{À grande échelle}
+Répondre aux questions suivantes pour chacune des fonctions $f_k$ définies ci-après :
+\begin{enumerate}
+	\item Déterminer $\Dcal_k$ le domaine de définition de la fonction $f_k$
+	\item Calculer les limites de la fonction $f_k$ aux bornes de son domaine de définition.
+	\item Donner les asymptotes horizontales et verticales à $\Ccal_k$
+\end{enumerate}
+
+\begin{tabular}{p{5mm} p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	& $f_1:x\mapsto \dfrac{3x+1}{x-2}$ &
+	$f_2:x\mapsto x-\ln(1-e^x)$ &
+	$f_3:x\mapsto \dfrac{e^x-e^{-2x}}{x-1}$ \\
+	& $f_4:x\mapsto \dfrac{e^x+e^{-x}}{e^x-e^{-x}}$ &
+	$f_5:x\mapsto \ln\left(1+\frac{1}{x}\right)$ &
+	$f_6:x\mapsto \dfrac{x^2}{x^2-2x-3}$ \\
+	& $f_7:x\mapsto \dfrac{\sqrt{x^2-1}}{x-1}$ &
+	$f_8:x\mapsto (x-2)\ln(4-x^2)$ &
+	$f_9:x\mapsto \dfrac{x}{1+\ln(x^2)}$
+\end{tabular}
+
+
+
+\subsection{Une condition forte}
+Soient $a$, $b$, $c$ et $d$ quatre réels non  nuls.
+
+On pose $f:x\mapsto \frac{ae^x+b}{ce^x+d}$
+
+On suppose que $\Ccal_f$ admet une unique asymptote. Démontrer alors que la fonction $f$ est constante.
+
+
+
+\subsection{Une nouvelle asymptote}
+On considère la fonction $g$ définie par $g(x)=\frac{x^2-x-3}{x+2}$
+\begin{enumerate}
+    \item Déterminer $\Dcal_g$ le domaine de définition de la fonction $g$
+    \item Calculer $\limx g(x)$ et $\limite{x\to-\infty}g(x)$ et en déduire que $\Ccal_g$ n'admet pas d'asymptote horizontale.
+    \item Déterminer les éventuelles asymptotes verticales à $\Ccal_g$
+    \item Calculer $\limite{x\to-2\\x>-2}g(x)$ et $\limite{x\to-2\\x<-2}g(x)$ et en déduire l'équation d'une asymptote à $\Ccal_g$
+    \item Déterminer deux nombres réels $a$ et $b$ tels que $g(x)=ax+b+\frac{3}{x+2}$
+    \item On considère la droite $(\mathcal{D})$ d'équation $y=x-3$
+    \begin{enumerate}
+        \item Étudier la position relative de $\Ccal_g$ et de $(\mathcal{D})$
+        \item Calculer $\limx g(x)-(x-3)$
+        \item Comment cette limite se traduit-elle graphiquement ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Encore elle}
+On considère la fonction $\gamma:x\mapsto\ln\left((e^x-1)^2\right)$ définie sur $\RR^*$ et on note $\Gamma$ sa courbe représentative dans un repère orthonormé.
+\begin{enumerate}
+	\item Expliquer en quoi $\gamma$ est différente de la fonction $x\mapsto2\ln(e^x-1)$
+	\item Démontrer que l'axe des ordonnées est une asymptote à $\Gamma$
+	\item Déterminer $\limite{x\to-\infty} \gamma(x)$ et en déduire une deuxième asymptote à $\Gamma$
+	\item \begin{enumerate}
+		\item Démontrer que $\limx \gamma(x)-2x=0$
+		\item Que dire alors que la droite d'équation $y=2x$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Trois asymptotes}
+On considère la fonction $g:x\mapsto 2x-2\ln\left(\abs{3e^x-1}\right)$ et $\Ccal_g$ sa courbe représentative dans un repère orthonormé.
+\begin{enumerate}
+	\item Déterminer $\Dcal_g$ le domaine de définition de la fonction $g$
+	\item Calculer les limites de $g$ aux bornes de son domaine de définition.
+	\item En déduire que $\Ccal_g$ admet une asymptote verticale $\Delta_1$ et une asymptote horizontale $\Delta_2$ dont on donnera les équations.
+	\item Justifier que la droite $\Delta_3:y=2x$ est une asymptote à $\Ccal_g$
+	\item Montrer que $\Delta_1$, $\Delta_2$ et $\Delta_3$ sont concourantes.
+\end{enumerate}
+
+
+
+\section{Études complètes}
+
+\subsection{Un gros tableau}
+On considère la fonction $f:x\mapsto \frac{e^{2x}}{e^x-2}$
+\begin{enumerate}
+	\item Déterminer $\Dcal$ le domaine de définition de $f$
+	\item Calculer les limites de $f$ aux bornes de son domaine de définition
+	\item Montrer que $f'(x)=\frac{e^{2x}(e^x-4)}{(e^x-2)^2}$
+	\item Dresser le tableau de variations de $f$
+	\item $\Ccal_f$ admet-elle des asymptotes ? Si  oui préciser leurs équations.
+\end{enumerate}
+
+
+
+\subsection{Premier logarithme}
+On pose $f(x) = \frac{1 + \ln(x+3)}{x+3}$
+\begin{enumerate}
+    \item Déterminer $\Dcal_f$ le domaine de définition de $f$
+    \item Calculer les limites de $f$ aux bornes de $\mathcal{D}_f$
+    \item Montrer que $f'(x)=-\frac{\ln(x+3)}{(x+3)^2}$
+    \item Dresser le tableau de variations de $f$
+    \item Donner l'équation des asymptotes à $\mathcal{C}_f$
+\end{enumerate}
+
+
+
+\subsection{Fonction à trous}
+On définit la fonction $\mu : x\mapsto \frac{(x+1)^2}{x^2+4x}$
+\begin{enumerate}
+	\item Déterminer $\Dcal_\mu$ le domaine de définition de la fonction $\mu$
+	\item Calculer les limites de $\mu$ aux bornes de son domaine de définition.
+	\item En déduire que $\Ccal_\mu$ admet exactement 3 asymptotes dont on donnera les équations.
+	\item Montrer que $\mu'(x)=\frac{2(x-2)(x+1)}{(x^2+4x)^2}$
+	\item Dresser le tableau de variations de la fonction $\mu$
+\end{enumerate}
+
+
+
+\subsection{Inverse de racine}
+On considère la fonction $\varphi:x\mapsto \frac{1}{2\sqrt{x}-x}$
+\begin{enumerate}
+	\item Déterminer $\Dcal$ le domaine de définition de $\varphi$
+	\item Démontrer que les axes du repère sont deux asymptotes à $\Ccal$ la courbe représentative de $\varphi$
+	\item Montrer que $\Ccal$ admet une troisième asymptote et en donner une équation.
+	\item Montrer que $\varphi'(x)=\frac{\sqrt{x}-1}{\sqrt{x}(2\sqrt{x}-x)^2}$
+	\item Dresser le tableau de variations de $\varphi$
+\end{enumerate}
+
+
+
+\subsection{Presque un T.V.I.}
+On définit sur $]-2; +\infty[$ les fonctions $f:x\mapsto \frac{3x+3}{x+2}+\ln(x+2)$ et $g : x \mapsto \frac{4 + \ln(x+2)}{x + 5}$
+\begin{enumerate}
+    \item Dresser le tableau de variations de $f$ en faisant figurer ses limites au bornes de son domaine de définition ainsi que la valeur de $f(-1)$ 
+    \item Déterminer les limites de la fonction $g$ aux bornes de son domaine de définition.
+    \item Montrer que $g'(x) = \frac{-f(x)}{(x + 4)^2}$
+    \item Dresser le tableau de variations de $g$
+\end{enumerate}
+
+
+
+\subsection{Une fonction complète}
+On pose $\varphi(x)=\frac{\ln(x^2)-2e^x}{x-e^x}$
+\begin{enumerate}
+    \item On pose $f(x)=x-e^x$ pour tout $\xR$
+    \begin{enumerate}
+        \item Dresser le tableau de variations complet de $f$
+        \item En déduire $\Dcal_{\varphi}$ le domaine de définition de $\varphi$
+    \end{enumerate}
+    \item Calculer les limites de $\varphi$ aux bornes de son domaine de définition
+    \item Déterminer les équations des asymptotes horizontales et verticales de $\Ccal_\varphi$
+\end{enumerate}
+
+
+
+\subsection{Une limite de référence}
+On considère $f$ la fonction exponentielle et on note $\Ccal$ sa courbe représentative dans un repère orthonormé.
+
+On définit sur $\RR$ la fonction $g:x\mapsto e^x(1-x)-1$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Déterminer l'équation réduite de la tangente à $\Ccal$ au point d'abscisse $0$
+		\item En déduire que $e^x\geq x+1 \quad \forall\xR$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Montrer que $g'(x)=-xe^x$ puis dresser le tableau de variations de $g$ en faisant apparaître ses limites aux bornes de son domaine de définition.
+		\item En déduire que $e^x-1\leq xe^x \quad \forall\xR$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Déduire des questions précédentes que $1\leq\frac{e^x-1}{e^x}\leq e^x \quad \forall x>0$
+		\item Déterminer alors $\limite{x\to0\\x>0}\frac{e^x-1}{x}$
+		\item En faire de même pour $\limite{x\to0\\x<0}\frac{e^x-1}{x}$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Avec une application}
+On considère la fonction $f:x\mapsto \ln(1+x)$ définie sur $]-1~;+\infty[$
+
+On définit sur $]-1~;+\infty[$ la fonction $g:x\mapsto \ln(1+x)-\frac{x}{1+x}$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Déterminer l'équation réduite de la tangente à $\Ccal$ au point d'abscisse $0$
+		\item En déduire que $\ln(1+x)\leq x \quad \forall\xR$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Montrer que $g'(x)=\frac{x}{(1+x)^2}$
+		\item Dresser le tableau de variations de la fonction $g$ en faisant apparaître ses limites aux bornes de son domaine de définition.
+		\item En déduire que $\ln(1+x)\geq\frac{x}{1+x} \quad \forall x>-1$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Déduire des questions précédentes que $\frac{1}{1+x} \leq \frac{\ln(1+x)}{x}\leq 1 \quad \forall x>0$
+		\item Déterminer alors $\limite{x\to0\\x>0}\frac{\ln(1+x)}{x}$
+		\item En faire de même pour $\limite{x\to0\\x<0}\frac{\ln(1+x)}{x}$
+	\end{enumerate}
+	\item Soit $\xR_+$\\
+	On définit la suite $(u_n)$ par $u_n=\left(1+\frac{x}{n}\right)^n$ pour tout $\nN^*$ \\
+	On pose également $v_n=\ln(u_n)$
+	\begin{enumerate}
+		\item Justifier que $v_n=x\times\dfrac{\ln\left(1+\frac{x}{n}\right)}{\frac{x}{n}}$
+		\item Démontrer alors que $\limn v_n =x$
+		\item En déduire que $\limn \left(1+\frac{x}{n}\right)^n =e^x$
+		\item[($\star$)] Justifier que ce résultat est encore vrai pour $x<0$
+	\end{enumerate}
+\end{enumerate}
+
+ 
+\section{Taux d'accroissement et limites de référence}
+
+\subsection{Connaître ses classiques}
+Déterminer chacune des limites suivantes :
+
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+    a) $\limite{x\to0} \frac{e^{2x}-1}{x}$ & b) $\limite{x\to1}\frac{\ln(x)}{x-1}$ & c) $\limite{x\to0}\frac{\ln(1+x)}{1-e^x}$ \\
+    d) $\limite{x\to0}\frac{\ln(1+x^3)}{x^2}$ & e) $\limite{x\to0}\frac{e^{x^2}-1}{x}$ & f) $\limite{x\to0}\frac{x^3}{1-2e^x+e^{2x}}$ \\
+    g) $\limite{x\to0}\frac{e^{4x}-1}{\ln(1+6x)}$ & h) $\limite{x\to+\infty}x\ln\left(1+\frac{1}{x}\right)$ & i) $\limite{x\to0}\frac{\ln(x+e^x)}{x}$ \\
+    j) $\limx x\left(e^\frac{2}{x}-1\right)$ & k) $\limite{x\to0\\x>0}\frac{e^{\sqrt{x}}-1}{x+\sqrt{x}}$ & l) $\limite{x\to0\\x>0} \frac{\ln(1+x)}{\sqrt{x}+x^2}$
+\end{tabular}
+
+
+
+\subsection{Application de la dérivation}
+Calculer les limites suivantes :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    a) $\limite{x\to0}\frac{\ln(1+x^2)}{x}$ & b) $\limite{x\to1}\frac{1-x^3}{x-1}$ & c) $\limite{x\to0}\frac{e^{2x}-1}{3x}$ \\ 
+    d) $\limite{x\to8}\frac{\sqrt{x+1}-3}{x-8}$ & e) $\limite{x\to0}\frac{\ln(x+e^x)}{x}$ & f) $\limite{x\to e}\frac{\ln(x)^2-1}{x-e}$ \\
+    g) $\limite{x\to1}\frac{xe^x-e}{x-1}$ & h) $\limite{x\to0}\frac{e^{x^2}-1}{xe^x}$ & i) $\limite{x\to0}\frac{e^x-1}{x-\sqrt{x}}$ \\
+\end{tabular}
+
+
+
+\subsection{Limites progressives}
+Calculer les limites suivantes :
+
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	a) $\limx \ln(x+1)-\ln(x)$ & b) $\limx x\left(\ln(x+1)-\ln(x)\right)$ & c) $\limx x^2\left(\ln(x+1)-\ln(x)\right)$
+\end{tabular}
+
+
+
+\subsection{Nouvelle forme indéterminée}
+Pour $\xR^*$, on pose $f(x)=\left(\frac{4^x+1}{2}\right)^\frac{1}{x}$
+
+On admettra dans cet exercice que la fonction $x\mapsto a^x$ admet pour dérivée $x\mapsto a^x\ln(a)$
+\begin{enumerate}
+    \item Montrer que $\ln(f(x))=\frac{\ln(4^x+1)-\ln(2)}{x}$
+    \item \begin{enumerate}
+        \item Montrer que la dérivée de $g:x\mapsto\ln(4^x+1)$ est $g':x\mapsto\frac{4^x\ln(4)}{4^x+1}$
+        \item Justifier que $\limite{x\to0}\ln(f(x))=g'(0)$
+    \end{enumerate}
+    \item Démontrer alors que $\limite{x\to0}f(x)=2$
+\end{enumerate}
+
+
+
+
+\end{document}

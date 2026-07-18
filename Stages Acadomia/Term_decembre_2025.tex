@@ -1,0 +1,463 @@
+\documentclass[oneside,12pt]{article}
+
+
+\input{../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../Latex/inputs/mymacros.tex}                 % Macros classiques
+\input{../../Latex/inputs/macro_paging.tex}				% Mise en page
+
+\fancyhead[R]{Stage de Décembre}           				% En-tête droit
+\fancyhead[C]{Terminale spé. Maths}                     % En-tête central
+
+\setstretch{0.9}                          				% Interligne
+
+\newcommand{\sectionbreak}{\clearpage}
+\titlespacing{\section}{0pt}{20pt}{0pt}
+\titleformat{\section}[frame]							% Style des section			
+    {\normalfont}
+    {\filright
+        \hspace{3mm} \bfseries Thème \no  \thesection\hspace{3mm}}
+    {-2pt}
+    {\huge\bfseries\filcenter}
+    {\vspace{-10pt}}
+    
+\titleformat*{\subsection}{\Large\bfseries}
+\titlespacing{\subsection}{0pt}{10pt}{5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Suites et récurrence}
+
+\subsection{Principe de récurrence}
+Dans cette section on considèrera $P$ une propriété quelconque dépendant de $n$ un entier naturel.
+
+\definition{Hérédité}{
+On dit que la propriété $P$ est \textbf{héréditaire} si $P(n) \Rightarrow P(n+1)$ pour tout $\nN$
+}
+
+\theoreme{Principe de récurrence}{
+Si une propriété $P$ est vraie au rang $n_0$ et héréditaire, alors elle est vraie pour tout entier $n\geq n_0$
+}
+
+
+\methode{Rédaction d'une récurrence}{\restoreskip \vspace{5pt}
+Un raisonnement par récurrence se rédige toujours en 3 étapes : Initialisation, hérédité et conclusion.
+
+Voici une trame de rédaction afin de démontrer une propriété $P$ :
+
+\textbf{\underline{Initialisation} ($n=0$)} :\\[5pt]
+\hspace*{10mm}
+.................................... donc $P_0$ est vraie
+
+\textbf{\underline{Hérédité}} : \\[5pt]
+\hspace*{10mm} On suppose que $P_n$ est vraie pour un certain $\nN$\\
+\hspace*{10mm} On montre que $P_{n+1}$ est également vraie. \\
+\hspace*{10mm} Par hypothèse de récurrence : .................... \\
+\hspace*{57mm} donc .................... \\[5pt]
+\hspace*{75mm} $\vdots$ \\
+\hspace*{57mm} donc .................... \\
+\hspace*{57mm} donc $P_{n+1}$ est vraie \\
+
+\textbf{\underline{Conclusion}} : \\[5pt]
+\hspace*{10mm} $P_0$ est vraie et $P$ est héréditaire, donc, par principe de récurrence, $P_n$ est vraie pour tout $\nN$
+
+}
+
+
+\astuce{
+$\bullet$ Pour démontrer une inégalité ou un encadrement, il est souvent nécessaire \og d'élargir \fg\, le résultat obtenu à la fin de l'hérédité
+
+$\bullet$ Si l'objet de la récurrence est une suite vérifiant $u_{n+1}=f(u_n)$ il faut souvent étudier les variations de la fonction $f$ dans un premier temps
+}
+
+\exemple{Inégalité de Bernoulli}{\restoreskip \vspace{5pt}
+On cherche à démontrer le résultat suivant : $\forall\nN,\forall a>0, \quad (1+a)^n \geq 1+an$ \\
+On note $P_n$ : \og $(1+a)^n \geq 1+an$ \fg
+
+
+\textbf{\underline{Initialisation} ($n=0$)} :\\[5pt]
+\hspace*{10mm}
+$(1+a)^0=1$ \quad et \quad $1+a\times0=1$ \quad donc $(1+a)^0\geq1+a\times0$ \quad donc $P_0$ est vraie
+
+\textbf{\underline{Hérédité}} : \\[5pt]
+\hspace*{10mm} On suppose que $(1+a)^n \geq 1+an$ pour un certain $\nN$
+
+\hspace*{10mm} On montre que $(1+a)^{n+1} \geq 1+a(n+1)$ 
+
+\hspace*{10mm} Par hypothèse de récurrence :
+
+\hspace*{40mm}
+$\begin{WithArrows}[format = l]
+	\hspace{11.5mm} (1+a)^n \geq 1+an \Arrow{$\times(1+a)$}\\
+	\text{donc~~} (1+a)^n \times (1+a) \geq (1+an)\times(1+a) \Arrow{On développe} \\
+	\text{donc~~} (1+a)^{n+1} \geq 1+a+an+a^2n  \Arrow{On élargit l'inégalité} \\
+	\text{donc~~} (1+a)^{n+1} \geq 1+a(n+1)+a^2n \geq 1+a(n+1) \\
+	\text{donc~~} (1+a)^{n+1} \geq1+a(n+1)
+\end{WithArrows}$
+
+\textbf{\underline{Conclusion}} : \\[5pt]
+\hspace*{10mm} $P_0$ est vraie et $P$ est héréditaire, donc, par principe de récurrence, $P_n$ est vraie pour tout $\nN$
+}
+
+
+\exercice{Première égalité}{\restoreskip
+On considère la suite $(u_n)$ définie par $\begin{cases}u_0=0\\u_{n+1}=\sqrt{1+{u_n}^2}\end{cases}$
+
+Démontrer par récurrence que $u_n=\sqrt{n}$ pour tout $n$ entier naturel
+}
+
+
+\exercice{Inégalité simple}{\restoreskip
+On considère la suite $(u_n)$ définie par $\begin{cases}u_0=\frac{1}{2}\\u_{n+1}=1+\frac{3n+u_n}{4}\end{cases}$
+
+Démontrer par récurrence que $u_n>n$ pour tout $n$ entier naturel
+}
+
+
+\exercice{Extension de l'inégalité}{\restoreskip
+On considère la suite $(u_n)$ définie par $\begin{cases}u_0=\frac{1}{2}\\u_{n+1}=\frac{1}{2}u_n+3n+1\end{cases}$
+
+Démontrer par récurrence que $6n-10 \leq u_n \leq 6n$ pour tout $\nN^*$
+}
+
+
+\exercice{Récurrence par une fonction}{\restoreskip
+On considère la fonction $f:x\mapsto \frac{1}{2}x(4-x)$ définie sur $\RR$
+
+On considère la suite $(u_n)$ définie par $\begin{cases}u_0=\frac{1}{2}\\u_{n+1}=f(u_n)\end{cases}$
+
+\begin{enumerate}
+	\item Dresser le tableau de variations de la fonction $f$
+	\item Montrer par récurrence que $0<u_n<2$ pour tout $\nN$
+\end{enumerate}
+}
+
+
+
+\subsection{Convergence et divergence}
+
+\definition{Suite convergente}{\restoreskip \vspace{5pt}
+On dit qu'une suite $\mathbold{(u_n)}$ \textbf{converge vers un réel} $\mathbold\ell$ si : 
+\[ \forall \epsilon>0 , \quad \exists n_\epsilon\in\NN , \quad \left( n\geq n_\epsilon \Rightarrow \abs{u_n-\ell}<\epsilon \right) \]
+
+De manière plus intuitive, on dit que $\mathbold{(u_n)}$ converge vers $\mathbold\ell$ si tout intervalle ouvert contenant $\ell$ contient également une infinité de termes consécutifs de la suite $(u_n)$
+
+}
+
+Pour plus de clarté, voici une figure représentant une suite convergente : 
+
+\begin{tikzpicture}
+	\begin{axis}[clip=false , width=19.5cm , height=7.5cm ,
+    	xmin=0,xmax=39,ymin=2,ymax=6.9, ytick distance=1,xtick distance=5, yticklabels=\empty ,
+        axis lines=middle, axis line style = thick, grid=major, ticklabel style = {font=\small} ,
+        ]
+        
+		\addplot[domain=0:39, samples at ={1,...,39} , only marks , mark = * , mark size = 3pt , red]
+		{4 + (6-6*sin(deg(\x)))/(x+1)};
+		
+		\draw[dashed , line width = 2pt , color = blue] (0,4) -- (39,4) ;
+		\draw[fill=blue,opacity=0.15] (0,4.6) rectangle (39,3.4) ;
+		\draw[color=blue] (0,4.6) node[left] {$\ell+\epsilon$} ;
+		\draw[color=blue] (-0.5,4) node[left] {$\ell$} ;
+		\draw[color=blue] (0,3.4) node[left] {$\ell-\epsilon$} ;
+		\draw (-1,6.5) node{$u_n$} ;
+		\draw (38,1.7) node {$n$} ;
+		\draw[dashed , color=red , line width = 1.5pt] (19,4.2) -- (19,2) node[below] {$n_\epsilon$} ;
+	\end{axis}
+\end{tikzpicture}
+
+On voit que tous les termes de la suite $(u_n)$ sont compris dans l'intervalle $[\ell-\epsilon;\ell+\epsilon]$ à partir du rang $n_\epsilon = 19$. Pour une plus petite valeur de $\epsilon$, le rang $n_\epsilon$ aurait été plus élevé.
+
+
+
+\definition{Divergence}{
+On dit d'une suite $(u_n)$ qu'elle \textbf{diverge} si elle n'est pas convergente.
+}
+
+
+\theoreme{Théorème de l'encadrement}{\restoreskip \vspace{5pt}
+Si $(u_n)$ , $(v_n)$ et $(w_n)$ sont trois suites telles que l'on ait : 
+
+\hspace{25mm}  $u_n \leq v_n \leq w_n \quad \forall\nN$ \qquad et \qquad $\limn u_n = \limn w_n = \ell \in \RR$
+
+Alors la suite $(v_n)$ converge et $\limn v_n =\ell$
+}
+
+
+\theoreme{Comparaison asymptotique}{\restoreskip \vspace{5pt}
+Si $(u_n)$ et $(v_n)$  sont deux suites telles que l'on ait : 
+
+\hspace{25mm}  $u_n \leq v_n  \quad \forall\nN$ \qquad et \qquad $\limn u_n = +\infty$
+
+Alors la suite $(v_n)$ diverge et $\limn v_n =+\infty$
+}
+
+
+
+\subsection{Calcul de limites}
+
+\theoreme{}{}
+
+
+
+
+
+\newpage
+\section{Étude de fonctions}
+
+\subsection{Dérivation et convexité}
+
+\begin{minipage}[t]{0.45\linewidth}
+\center \large
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ | c | c | c |}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Fonctions usuelles}} \\ \hline \hline
+    $f(x)$ & $f'(x)$ & Conditions \\ \hline \hline
+    $k$ & $0$ & $k\in\RR$ \\ \hline
+    $x$ & $1$& $\xR$\\ \hline
+    $x^{2}$ & $2x$& $\xR$\\ \hline
+    $x^{3}$ & $3x^{2}$& $\xR$\\ \hline
+    $x^{n}$ & $nx^{n-1}$ & $\xR , n\in \ZZ$\\ \hline
+    $\frac{1}{x}$ & $-\frac{1}{x^{2}}$ & $\xR^{*}$ \\ \hline
+    $\frac{1}{x^{n}}$ & $-\frac{n}{x^{n+1}}$ & $\xR_{+}^{*}$ \\ \hline
+    $\sqrt{x}$ & $\frac{1}{2\sqrt{x}}$ & $\xR^{*}_{+}$ \\ \hline
+    $e^{x}$ & $e^{x}$ & $\xR$ \\ \hline
+    $\cos(x)$ &  $-\sin(x)$ & $\xR$ \\ \hline
+    $\sin(x)$ & $\cos(x)$ & $\xR$ \\ \hline
+    \end{tabular}
+
+\end{minipage} \hfill
+\begin{minipage}[t]{0.55\linewidth}
+\center \large
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{ | c | c | c |}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Fonctions composées}} \\ \hline\hline
+    $f(x)$ & $f'(x)$ & Conditions \\ \hline \hline
+    $k\times u$ & $k\times u'$ & $k\in\RR$ \\ \hline
+    $u+v$ & $u'+v'$ & \\ \hline
+    $u\times v$ & $u'v+uv'$& \\ \hline
+    $\frac{u}{v}$ & $\frac{u'v-uv'}{v^{2}}$& $v\neq 0$\\ \hline
+    $\frac{1}{u}$ & $-\frac{u'}{u^2}$ & $u\neq0$ \\ \hline
+    $u^{n}$ & $n  u'  u^{n-1}$ & $n\in \ZZ$\\ \hline
+    $\sqrt{u}$ & $\frac{u'}{2\sqrt{u}}$ & $u > 0$ \\ \hline
+    $e^{u}$ & $u'e^{u}$ &  \\ \hline
+    $\cos(u)$ &  $-u'\sin(x)$ & \\ \hline
+    $\sin(u)$ & $u'\cos(x)$ & \\ \hline
+\end{tabular} \\[15pt]
+\end{minipage}
+
+\astuce{\restoreskip \vspace{1pt}
+$\bullet$ Lorsque cela est possible, développer avant de dériver
+
+$\bullet$ Après avoir dérivé une fonction comportant une exponentielle, on peut en général factoriser par l'exponentielle en question.
+
+$\bullet$ Après avoir dérivé une fonction comportant une racine carrée, le meilleur moyen de simplifier l'expression est souvent de mettre au même dénominateur.
+}
+
+\exercice{Variations}{\restoreskip \vspace{5pt}
+Répondre aux questions suivantes pour chacune des fonctions $f_k$ ci-après :
+
+	$f_1(x)=\sqrt{x}e^{1-x^2}$ \qquad $f_2(x)=\dfrac{\sqrt{1+x^2}}{1+x}$ \qquad 	$f_3(x)=x\left(7-4\sqrt{x}\right)^5$
+	
+\begin{enumerate}
+	\item Déterminer $\Dcal_k$ le domaine de définition de $f_k$
+	\item Déterminer l'expression de $f_k'(x)$ pour $x\in\Dcal_k$
+	\item Dresser le tableau de variations de la fonction $f_k$
+\end{enumerate}
+}
+
+
+\definition{Convexité}{
+Soit $f$ une fonction réelle\\[5pt]
+$\bullet\,$ $f$ est convexe $\Longleftrightarrow$ $f'$ est croissante $\Longleftrightarrow$ $f''$ est positive\\
+$\bullet\,$ $f$ est concave $\Longleftrightarrow$ $f'$ est décroissante $\Longleftrightarrow$ $f''$ est négative
+}
+
+
+
+\exercice{Analyse graphique}{\restoreskip
+\begin{minipage}{0.4\linewidth}
+	On a représenté dans le repère ci-contre les courbes représentatives d'une fonction $f$ et de ses dérivées successives $f'$ et $f''$\\
+	
+	\begin{enumerate}\setlength{\itemsep}{2mm}
+	\item Quelle semble être le signe de la fonction $f$ sur $[-2;8]$ ?
+	\item Quelles semblent être les variations de la fonction $f$ sur $[-2;8]$ ?
+	\item Quelle semble être la convexité de la fonction $f$ sur $[-2;8]$ ?
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[width=12.5cm , height=8cm ,
+        xmin=-2,xmax=8,ymin=-2.5,ymax=3, ytick distance=1,xtick distance=1,
+        axis lines=middle, axis line style = thick, grid=major, ticklabel style = {font=\small} ,
+        enlargelimits = { abs = 0.2 }
+        ]
+            \addplot[color=red,line width=2pt,domain=-2:8,samples=100]
+            {(2*x^2-4)*e^(-0.5*x-0.5)+0.5};
+            \addplot[line width = 2pt , domain=-2:8, samples=100, color=blue]
+            {(-x^2+4*x+2)*e^(-0.5*x-0.5)};
+            \addplot[line width = 2pt , domain=-2:8, samples=100, color=green!90!black]
+            {(6-8*x+x^2)*e^(-0.5*x-0.5)};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+\exercice{À faire pour demain}{
+On considère une fonction dont la courbe représentative est donnée dans le graphique ci-contre :
+
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}
+	\begin{axis}[width=11cm , height=8cm ,
+        xmin=-6,xmax=6,ymin=-4,ymax=3, ytick distance=1,xtick distance=1,
+        axis lines=middle, axis line style = thick, grid=major, ticklabel style = {font=\small} ,
+        enlargelimits = { abs = 0.2 }
+        ]
+        \addplot[color=red,line width=2pt,domain=-6.5:6.5,samples=100]
+        {0.1*x*(x+3)*(x-2)*(x-5)*ln(0.42+e^(0.1*x))};
+	\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{enumerate}\setlength{\itemsep}{2mm}
+		\item Si cette courbe représente la fonction $f$ quelle semble être la convexité de $f$ ?
+		\item Si cette courbe représente la fonction $f'$ quelle semble être la convexité de $f$ ?
+		\item Si cette courbe représente la fonction $f''$ quelle semble être la convexité de $f$ ?
+	\end{enumerate}
+\end{minipage}
+}
+
+
+\theoreme{Courbe convexe}{
+$\bullet$ Si $f$ est convexe sur un intervalle $I$, alors $\Ccal_f$ se situe en-dessous de ses tangentes et au-dessus de ses cordes sur l'intervalle $I$\\[5pt]
+$\bullet$ Si $f$ est concave sur un intervalle $I$, alors $\Ccal_f$ se situe au-dessus de ses tangentes et en-dessous de ses cordes sur l'intervalle $I$ 
+}
+
+
+
+\subsection{Limites et asymptotes}
+
+\exercice{Analyse graphique}{
+
+Pour chacune des courbes suivantes, donner l'équation des asymptotes verticales et horizontales à la courbe, et écrire les limites correspondantes.
+
+\hspace{10mm}
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-8:2.9, samples=100, color=red]
+            {1+((e^(-x-2)+2)/(-x+3))};
+            \addplot [domain=3.1:10, samples=100, color=red]
+            {1+((e^(-x-2)+2)/(-x+3))};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hfill
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-10.5:0, samples=100, color=red]
+            {abs(x^2/((x+3)*(x-4)))};
+            \addplot [domain=0:10.5, samples=100, color=red]
+            {-abs(x^2/((x+5)*(x-4)))};
+        
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} % Graphe 2
+
+\vspace{5mm}
+\hspace{10mm}
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-10.5:-4.000001, samples=100, color=red]
+            {ln(x^2-16)};
+            \addplot [domain=6.000001:10.5, samples=100, color=red]
+            {ln(x^2-36)};
+            \addplot [domain=-4:6, samples=100, color=red]
+            {((1)/(50))*(x-6)*(x-1)*(x+4)*x+5};        
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hfill
+\begin{minipage}[b]{0.45\textwidth}
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+            % Axes et grille
+            axis lines = center,
+            label style={font=\tiny}, tick label style={font=\small},
+            xmin=-10.5, xmax=10.5, ymin=-10.5, ymax=10.5,
+            minor tick num = 4
+            ]
+            % Courbes
+            \addplot [domain=-10.5:-3.01, samples=100, color=red]
+            {3+2*sin(deg(x^2))/(x^2-9};
+            \addplot [domain=3.005:10.5, samples=100, color=red]
+            {-2+2*sin(deg(x^2))/(x^2-9};
+            \addplot [domain=-3:3, samples=100, color=red]
+            {(x^8)/200+1};
+        
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} % Graphe 4
+}
+
+
+\remarque{
+Il faut se méfier avant d'écrire $\limite{x\to a} f(x)$
+
+Si l'on n'a pas vérifié que les limites à gauche et à droite sont égales, cette écriture est incorrecte.
+}
+
+
+
+\exercice{Calcul de limites}{
+Déterminer la valeur de chacune des limites suivantes : \\[5pt]
+\begin{tabular}{p{0.25\linewidth} p{0.25\linewidth} p{0.25\linewidth} p{0.25\linewidth}}
+	a) $\limite{x\to0\\x>0}\dfrac{x+1}{x^2-x}$ & b) $\limite{x\to0\\x<0}\dfrac{x+1}{x^2-x}$ & c) $\limite{x\to1\\x>1}\dfrac{x+1}{x^2-x}$ & d) $\limite{x\to1\\x<1}\dfrac{x+1}{x^2-x}$\\
+	e) $\limite{x\to2}\dfrac{x-2}{x^2-4}$ & f) $\limite{x\to1}\dfrac{x^2-1}{x^2-3x+2}$
+\end{tabular}
+}
+
+
+
+
+\section{Géométrie dans l'espace}
+
+\subsection{Coordonnées et vecteurs dans l'espace}
+
+\subsection{Produit scalaire et orthogonalité}
+
+\subsection{Droites dans l'espace}
+
+\subsection{Plans dans l'espace}
+
+
+
+\end{document}

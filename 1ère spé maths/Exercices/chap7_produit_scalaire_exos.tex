@@ -1,0 +1,405 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Produit scalaire}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Avec la définition}
+
+
+\subsection{Premiers calculs}
+
+Dans chacune des figures suivantes, calculer la valeur du produit scalaire $\scal{AB}{AC}$
+
+\begin{tikzpicture}[scale=0.8]
+
+    %%% Figure 1 %%%
+    \coordinate (A) at (-2,0);      \node[above] at (A) {$A$};
+    \coordinate (B) at (1.46,2);    \node[above left] at (B) {$B$}; \draw (B) node {$\backslash$};
+    \coordinate (C) at (3,0);       \node[above] at (C) {$C$};      \draw (C) node {|};
+    \draw (-1,0) arc(0:30:1);       \draw (A)--++(7,0);             \draw(A)--++(30:6);
+    \draw (0,1.5) node {4};         \draw (1,-0.5) node {5};        \draw (-0.5,0.3) node {30°};
+
+
+    %%% Figure 2 %%%
+    \coordinate (D) at (9,-2);      \node[below] at (D) {$A$};
+    \coordinate (E) at (16,-2);     \node[below] at (E) {$C$};
+    \coordinate (F) at (12.5,4.06); \node[above] at (F) {$B$};
+    \draw (D)--(E)--(F)--cycle;
+    \draw (12.5,-2) node {l};      \draw (14.3,1) node {/};      \draw(10.7,1) node {$\backslash$};
+    \draw (14.7,1.6) node {2};
+
+    
+    %%% Figure 3 %%%
+    \coordinate (G) at (-4,-2);     \node[above] at (G) {$A$};
+    \coordinate (H) at (4,-2);      \node[above] at (H) {$B$};
+    \coordinate (I) at (4,-6);      \node[below] at (I) {$C$};
+    \coordinate (J) at (-4,-6);     \node[below] at (J) {$D$};
+    \coordinate (K) at (0,-4);
+    \draw (G)--(H)--(I)--(J)--(G)--(I);                     \draw (J)--(H);
+    \draw (G)++(0.5,0)--++(0,-0.5)--++(-0.5,0);
+    \draw (H)++(-0.5,0)--++(0,-0.5)--++(0.5,0);
+    \draw (J)++(0.5,0)--++(0,+0.5)--++(-0.5,0);
+    \draw (I)++(-0.5,0)--++(0,+0.5)--++(0.5,0);
+    \draw (K)++(26.52:1) arc (26.52:-26.52:1);
+    \draw (K)++(1.5,0) node {60°}; \draw (4.5,-4) node {4};
+
+    %%% Figure 4 %%%
+    \coordinate (L) at (10,-9);    \node[below left] at (L) {$A$};
+    \coordinate (M) at (10,-6);     \node[above left] at (M) {$B$};
+    \coordinate (N) at (12.6,-10.5);\node[below] at (N) {$F$};
+    \coordinate (O) at (15.2,-9);  \node[below right] at (O) {$E$};
+    \coordinate (P) at (15.2,-6);   \node[above right] at (P) {$D$};
+    \coordinate (Q) at (12.6,-4.5); \node[above] at (Q) {$C$};
+    \draw (L)--(M)--(Q)--(P)--(O)--(N)--(L);
+    \draw (M)--(O);     \draw (Q)--(N);      \draw (L)--(P);
+    \draw (11.3,-5.25) node {//};
+    \draw (11.3,-9.75) node {//};
+    \draw (13.8,-5.25) node {//};
+    \draw (13.8,-9.75) node {//};
+    \draw (10,-7.5) node {//};
+    \draw (15.2,-7.5) node {//};
+    \draw (12.6,-7.5) circle (1);
+    \draw (12.6,-7.5)++(0:1) node {o};
+    \draw (12.6,-7.5)++(60:1) node {o};
+    \draw (12.6,-7.5)++(120:1) node {o};
+    \draw (12.6,-7.5)++(180:1) node {o};
+    \draw (12.6,-7.5)++(240:1) node {o};
+    \draw (12.6,-7.5)++(300:1) node {o};
+    \draw (10.8,-4.8) node {4};
+    
+\end{tikzpicture}
+
+
+
+\subsection{Manipulation de la formule}
+
+\begin{enumerate}
+    \item On considère deux vecteurs $\vvec{u}$ et $\vvec{v}$ tels que $\norme{\vvec{u}}=6, \norme{\vvec{v}}=4$ et $(\vvec{u};\vvec{v})=\frac{2\pi}{3}$\\
+    Calculer $\scal{u}{v}$
+    
+    \item On considère trois points $A$, $B$ et $C$ tels que $AB=3$, $AC=4$ et $\vvec{AB}\cdot\vvec{AC}=5$\\
+    Calculer au dixième de degré près la mesure de $\widehat{BAC}$
+    
+    \item On considère trois points $E$ , $F$ et $G$ tels que $EF=6$ , $\widehat{GEF}=15^\circ$ et $\scal{EF}{EG}=18$\\
+    Déterminer la longueur $EG$
+\end{enumerate}
+
+
+
+\newpage
+\section{Propriétés du produit scalaire}
+
+
+\subsection{Sans coordonnées}
+
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}
+    % Points
+    \coordinate (A) at (-2, 2);
+    \coordinate (B) at (2, 2);
+    \coordinate (C) at (2, -2);
+    \coordinate (D) at (-2, -2);
+    \coordinate (O) at (0, 0);
+    \coordinate (E) at (4.5, -2);
+
+    % Square ABCD    
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+    
+    % Diagonals
+    \draw (A) -- (C);
+    \draw (B) -- (D);
+
+    % Right triangle
+    \draw (E) -- (C);
+    \draw (E) -- (B);
+    
+    % Label points
+    \node[above left] at (A) {$A$};
+    \node[above right] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+    \node[below left] at (D) {$D$};
+    \node[above] at (O) {$O$};
+    \node[below] at (E) {$E$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+$ABCD$ est un carré de côté 4, et $CE=3$ \\[5pt]
+Calculer les produits scalaires suivants :\\[5pt]
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth}}
+    a) $\scal{AD}{BC}$ & b) $\scal{DC}{DA}$ \\
+    c) $\scal{CE}{DC}$ & d) $\scal{A0}{BD}$ \\
+    e) $\scal{AC}{CB}$ & f) $\scal{AE}{BC}$ \\
+    g) $\scal{DB}{EB}$ & h) $\scal{BE}{AO}$ \\
+    i) $\scal{OE}{DB}$ & j) $\scal{AE}{OE}$ \\
+\end{tabular}
+\end{minipage}
+
+
+
+\subsection{Dans un rectangle}
+
+Soit $ABCD$ un rectangle tel que $AB=28$ et $AC=53$ \\
+On considère les points $E$ et $F$ tels que $\vvec{AE}=\vvec{BC}+\frac{1}{2}\vvec{BA}$ et $\vvec{BF}=\frac{1}{2}\vvec{AC}$
+\begin{enumerate}
+	\item Calculer la longueur $BC$
+    \item Calculer $\scal{AD}{AC}$
+    \item Calculer $\scal{DF}{EB}$
+    \item \begin{enumerate}
+    	\item Déterminer les longueurs $BF$ et $EF$
+    	\item Calculer $\scal{FB}{FE}$
+    	\item En déduire la mesure de l'angle $\widehat{BFE}$ au dixième de degré près.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Le carré penché}
+
+    On considère deux carrés $ABCD$ et $BEFG$ de côté 1 partageant le sommet B.
+
+    Le carré $BEFG$ est penché de telle sorte que $ABE$ soit un triangle équilatéral.
+    
+\begin{minipage}{0.5\linewidth}
+\begin{enumerate}
+    \item Justifier que $BCG$ est un triangle équilatéral.
+    \item Calculer $\scal{BC}{BE}$ et en déduire $\scal{DA}{BE}$
+    \item Calculer $\scal{BC}{BG}$ et en déduire $\scal{DA}{EF}$
+    \item Calculer $\scal{AE}{BE}$
+    \item Calculer $\scal{EF}{AE}$
+    \item À l'aide des réponses précédentes, calculer $\scal{DE}{BF}$
+    \item En déduire que les points $D$, $E$ et $G$ sont alignés.
+    \item[$\dur$] Calculer la longueur $DG$
+\end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw (0,0)--(4,0)--(4,4)--(0,4)--(0,0);
+        \draw (4,0)--(2,3.46)--(5.46,5.46)--(7.46,2)--(4,0);
+        \draw[dashed] (0,0)--(2,3.46);
+        \node[below] at (0,0) {$A$};
+        \node[above] at (0,4) {$D$};
+        \node[right] at (4,4) {$C$};
+        \node[below] at (4,0) {$B$};
+        \node[left] at (2,3.46) {$E$};
+        \node[above] at (5.46,5.46) {$F$};
+        \node[below] at (7.46,2) {$G$};
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Un carré en long , en large et en travers}
+
+On considère un carré $ABCD$. On note $I$ le milieu de $[BC]$ et $J$ le milieu de $[DC]$.
+\begin{enumerate}
+    \item Montrer que les droites $(IJ)$ et $(AC)$ sont perpendiculaires.
+    \item On note $K$ le milieu du segment $[BJ]$. \\
+    Montrer que les droites $[KC]$ et $[DI]$ sont perpendiculaire.
+\end{enumerate}
+
+
+
+\subsection{Géométrie du cerf-volant}
+
+On considère un quadrilatère $ABCD$ tel que $AB=AD=17$ , $CB=CD=10$ et dont les diagonales sont perpendiculaires.
+
+On note $O$ le point d'intersection des deux diagonales du quadrilatère $ABCD$.
+
+On suppose également que $AO=\frac{5}{2}CO$
+
+
+\begin{enumerate}
+    \item Représenter le quadrilatère $ABCD$ sur un schéma.
+    \item Montrer que $BO=8$
+    \item Calculer la valeur de $\scal{AB}{AD}$
+    \item En déduire une valeur approchée au degré près de la mesure de l'angle $\widehat{BAD}$
+    \item Calculer le produit scalaire $\scal{AB}{BC}$
+    \item En déduire une valeur approchée au degré près des angles $\widehat{ABC}$ , $\widehat{BCD}$ , $\widehat{ABD}$ et $\widehat{OBC}$
+\end{enumerate}
+
+
+
+\section{Identités de polarisation}
+
+
+\subsection{Applications directes}
+
+\begin{enumerate}
+    \item On considère un triangle $ABC$ tel que $AB=6$ ,  $AC=9$ et $BC=5$.\\
+    Calculer les produits scalaires $\scal{AB}{AC}$ et $\scal{BC}{CA}$
+    \item On considère trois points $D$, $E$ et $F$ tels que $DE=4$, $EF=6$ et $\vvec{DE}\cdot\vvec{EF}=8$\\
+    Calculer la longueur $DF$
+    \item On considère trois points $G$, $H$ et $I$ tels que $GH=3$, $GI=4$ et $\vvec{GH}\cdot\vvec{GI}=5$\\
+    Calculer la longueur $HI$
+\end{enumerate}
+
+
+
+\subsection{Étude d'un triangle}
+
+\begin{minipage}{0.35\linewidth}
+  \begin{tikzpicture}
+    % Define the vertices of the reduced triangle
+    \coordinate (A') at (0,0);
+    \coordinate (B') at (1.2,3);
+    \coordinate (C') at (4.8,1.2);
+
+    % Draw the reduced triangle
+    \draw (A') -- node[left] {5} (B') -- node[above] {4} (C') -- node[below right] {6} cycle;
+
+    % Label the vertices
+    \node[below left] at (A') {A};
+    \node[above] at (B') {B};
+    \node[below right] at (C') {C};
+  \end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.65\linewidth}
+    On considère le triangle $ABC$ comme représenté ci-contre.
+    \begin{enumerate}
+        \item Calculer $\vvec{AB}\cdot\vvec{AC}$
+        \item Calculer $\norme{\vvec{AB}+\vvec{AC}}$
+        \item Calculer la mesure de l'angle $\widehat{BAC}$ au dixième de degré près.
+        \item On note $H$ l'intersection entre $(AC)$ et la hauteur issue de $B$. Calculer $CH$
+    \end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Théorème d'Al-Kashi}
+
+\begin{minipage}{0.4\linewidth}
+  \begin{tikzpicture}
+    % Define the vertices of the triangle
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (5,0);
+    \coordinate (C) at (2,3.464); % Height of an equilateral triangle with side length 4
+
+    % Draw the triangle
+    \draw (A) -- node[below] {6} (B) -- node[above right] {7} (C) -- node[above left] {5} cycle;
+  \end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.5\linewidth}
+  Déterminer au dixième de degré près les mesures de chacun des angles du triangle représenté ci-contre.
+\end{minipage}
+
+
+
+\subsection{Un pentagone particulier}
+
+
+\begin{minipage}{0.5\linewidth}
+    On considère le pentagone $ABCDE$ représenté ci-contre. Le quadrilatère $BCDE$ est un parallélogramme.
+
+    \begin{enumerate}
+        \item Montrer que les droites $(AC)$ et $(BE)$ sont perpendiculaires.
+        \item En déduire que $\scal{BA}{AC}=-50$
+        \item Montrer alors que $BA=\frac{10\sqrt{3}}{3}$
+        \item Calculer la valeur de $\scal{AE}{ED}$
+        \item En déduire la longueur $AD$
+    \end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.45\linewidth}
+    \begin{tikzpicture}[scale=0.55]
+        \coordinate (A) at (0,0);       \draw[below] (A) node {$A$};
+        \coordinate (B) at (0,5.77);    \draw[above] (B) node {$B$};
+        \coordinate (C) at (5,8.66);    \draw[above] (C) node {$C$};
+        \coordinate (D) at (15,2.89);   \draw[right] (D) node {$D$};
+        \coordinate (E) at (10,0);      \draw[below] (E) node {$E$};
+
+        \draw (A)--(B)--(C)--(D)--(E)--(A)--(C)--(E);
+        \draw (0,0.7)--(0.7,0.7)--(0.7,0);
+        \draw (0,2.9) node {$-$};   \draw (2.2,7.1) node {$\backslash$};
+        \draw (5,0) node {$\circ$};       \draw (A)++(60:5) node {$\circ$};     \draw (E)++(120:5) node {$\circ$};
+        \draw (5,-1) node {$10$};
+        
+    \end{tikzpicture}
+\end{minipage}
+
+\vspace{-4mm}
+\begin{enumerate}
+	\item[6.] Démontrer que le triangle $CDE$ est rectangle.
+    \item[7.] Déterminer la longueur $BD$
+\end{enumerate}
+
+
+
+\section{Avec des coordonnées}
+
+\subsection{Triangle rectangle}
+
+On considère les points $A(2;2)$ , $B(4;5)$ et $C(10;1)$\\
+Montrer que le triangle $ABC$ est rectangle.
+
+
+
+\subsection{Rectangle}
+
+On considère les points $A(-2;-1)$ , $B(2;-3)$ , $C(1;5)$ et $D(5;3)$\\
+Montrer que le quadrilatère $ABDC$ est un rectangle.
+
+
+
+\subsection{Losange}
+
+On considère les points $A(-1;5)$ , $B(3;3)$ , $C(-2;-2)$ et $D(4;10)$\\
+Montrer que le quadrilatère $ADBC$ est un losange.
+
+
+
+\subsection{Angle droit}
+
+On considère les points $A(-1;-3-\sqrt{8})$ , $B(\sqrt{2};2+\sqrt{8})$ , $C(\sqrt{8};1)$ et $D(1;\sqrt{2})$\\
+Montrer que les droites $(AB)$ et $(CD)$ sont perpendiculaires.
+
+
+
+\subsection{Triangle équilatéral}
+
+On considère les points $A(1;2\sqrt{3})$ , $B(1+\sqrt{3};4)$ et $C\left(\frac{5\sqrt{3}-4}{2};\frac{\sqrt{3}+2}{2}\right)$\\
+Montrer que le triangle $ABC$ est équilatéral.
+
+
+
+\section{Sur les milieux}
+
+\subsection{Milieu du segment}
+
+On considère un segment $[AB]$ et on note $I$ son milieu.
+
+\begin{enumerate}
+    \item Montrer que pour tout point $M$ du plan on a : $\scal{MA}{MB}=MI^2-\frac{1}{4}AB^2$
+    \item Montrer que pour tout point $M$ du plan on a : $MA^2+MB^2=2MI^2+\frac{1}{2}AB^2$
+\end{enumerate}
+
+
+
+\subsection{Lieux géométriques}
+On considère un segment $[AB]$ de longueur 8 et de milieu $I$.
+
+Déterminer l'ensemble des points $M$ du plan vérifiant :\\[5pt]
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    a) $\scal{AM}{AB}=0$ & b) $\scal{MA}{MB}=0$ & c) $\scal{AM}{IB}=-1$ \\
+    d) $\scal{AM}{BM}=2$ & e) $\scal{MA}{MI}=\scal{MB}{MI}$ & f) $\scal{IM}{AB}=\scal{AM}{IB}$
+\end{tabular}
+
+
+
+
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
+\fancyhead[C]{Théorie des graphes}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Formules d'addition et de duplication}
+
+\subsection{Formules d'addition}
+Calculer en fonction de $\cos(x)$ ou $\sin(x)$ les expressions suivantes :
+
+\begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+	$A=\sin(x+\frac{\pi}{3})+\cos(x+\frac{\pi}{6})$ & $B=\cos(x+\frac{\pi}{4})-\cos(x-\frac{\pi}{4})$ \\
+	$C=\sin(\frac{2\pi}{3}-x)+\sin(\frac{4\pi}{3}+x)$ & $D=\sqrt{2}\cos(x-\frac{\pi}{3})-\sqrt{3}\sin(x+\frac{\pi}{4})$
+\end{tabular}
+
+
+
+\subsection{Déphasage}
+Pour $x$ réel on pose $f(x)=\frac{\sqrt{2}}{2}\cos(x)+\frac{\sqrt{2}}{2}\sin(x)$
+\begin{enumerate}
+	\item Déterminer $\alpha\in[0;2\pi[$ tel que $f(x)=\cos(\alpha)\cos(x)+\sin(\alpha)\sin(x)$
+	\item En déduire que $f(x)=\cos\left(x-\frac{\pi}{4}\right)$
+	\item Déterminer $\beta\in[0;2\pi[$ tel que $f(x)=\sin(\beta)\cos(x)-\sin(x)\cos(\beta)$
+	\item En déduire que $f(x)=\sin\left(x+\frac{\pi}{4}\right)$
+	\item Aurait-on pu retrouver ce dernier résultat par une autre méthode ?
+\end{enumerate}
+
+
+
+\subsection{Duplication du sinus}
+On considère $x$ réel tel que $x\in [-\frac{\pi}{2};\frac{\pi}{2}]$ et $\sin(x)=\frac{\sqrt{2-\sqrt{2}}}{2}$ 
+\begin{enumerate}
+    \item Calculer la valeur exacte de $\cos(x)$
+    \item Calculer la valeur exacte de $\sin(2x)$ à l'aide de la formule de duplication
+    \item En déduire la valeur de $x$
+    \item Déterminer la valeur de $\cos\left(\frac{3\pi}{8}\right)$
+\end{enumerate}
+
+
+
+\subsection{Duplication du cosinus}
+On considère $x$ réel tel que $x\in [0;\pi]$ et $\cos(x)=\frac{\sqrt{2}+\sqrt{6}}{4}$ 
+\begin{enumerate}
+    \item Vérifier que $\sin(x)=\frac{\sqrt{6}-\sqrt{2}}{4}$
+    \item Calculer la valeur exacte de $\cos(2x)$ à l'aide de la formule de duplication
+    \item En déduire la valeur de $x$
+    \item En remarquant que $\frac{\pi}{12}=\frac{\pi}{3}-\frac{\pi}{4}$, redémontrer que $\cos\left(\frac{\pi}{12}\right)=\frac{\sqrt{6}+\sqrt{2}}{4}$
+    \item Que vaut $\cos\left(\frac{5\pi}{12}\right)$ ?
+\end{enumerate}
+
+
+
+\subsection{Extrapolation}
+Soit $x\in\left[0;\frac{\pi}{2}\right]$ tel que $\sin(x)-\cos(x)=\frac{1}{29}$
+
+Déterminer la valeur de $\sin(2x)$ et $\cos(2x)$ puis de $\cos(x)$ et $\sin(x)$
+
+
+
+
+\subsection{Manipulation des formules}
+Montrer que les égalités suivantes sont toujours vérifiées pour $a$ et $b$ réels :
+\begin{enumerate}
+	\item $\cos(a)\cos(b)=\frac{1}{2}\left(\cos(a+b)+\cos(a-b)\right)$
+	\item $\sin(a)\sin(b)=\frac{1}{2}\left(\cos(a-b)-\cos(a+b)\right)$
+	\item $\sin(a)\cos(b)=\frac{1}{2}\left(\sin(a+b)+\sin(a-b)\right)$
+	\item $\cos(a)+\cos(b)=2\cos\left(\frac{a+b}{2}\right)\cos\left(\frac{a-b}{2}\right)$
+	\item $\sin(a)+\sin(b)=2\sin\left(\frac{a+b}{2}\right)\cos\left(\frac{a-b}{2}\right)$
+\end{enumerate}
+
+
+
+\subsection{Formules de truplication}
+\begin{enumerate}
+	\item Démontrer que $\sin(3x)=3\sin(x)-4\sin^3(x)$ à l'aide de deux méthodes différentes.
+	\item Démontrer que $\cos(3x)=4\cos^3(x)-3\cos(x)$ à l'aide de deux méthodes différentes.
+	\item Préciser pour quelles valeurs de $x$ l'expression $\frac{\sin(3x)}{\sin(x)}-\frac{\cos(3x)}{\cos(x)}$ a du sens, puis la calculer.
+\end{enumerate}
+
+
+
+\subsection{Quintuplication ?}
+\begin{enumerate}
+	\item À l'aide de la méthode de votre choix, démontrer que $\sin(5x)=16\sin^5(x)-20\sin^3(x)+5\sin(x)$
+	\item Résoudre dans $\RR$ l'équation $16x^5-20x^3+5x=0$
+	\item En déduire que $\sin\left(\frac{\pi}{5}\right)=\sqrt{\frac{5-\sqrt{5}}{8}}$
+	\item Donner les valeurs de $\cos\left(\frac{\pi}{5}\right)$ puis de $\sin\left(\frac{2\pi}{5}\right)$
+\end{enumerate}
+
+
+
+\section{Tangente}
+
+\subsection{Addition et duplication}
+\begin{enumerate}
+	\item Démontrer que $\tan(2a)=\dfrac{2\tan(a)}{1-\tan^2(a)}$
+	\item Exprimer en fonction de $\tan(a)$ et $\tan(b)$ la valeur de $\tan(a+b)$
+	\item En déduire une expression de $\tan(a-b)$ en fonction de $\tan(a)$ et $\tan(b)$
+	\item Résoudre dans $\RR$ l'équation $\tan(x)\tan(2x)=1$
+\end{enumerate}
+
+
+
+\subsection{Tangente moitié}
+
+Démontrer que $\tan\left(\frac{x}{2}\right)=\frac{\sin(x)}{1+\cos(x)}=\frac{1-\cos(x)}{\sin(x)}$
+
+
+
+\subsection{Multiplication}
+\begin{enumerate}
+	\item Exprimer $\tan(3x)$ en fonction de $\tan(x)$
+	\item Exprimer $\tan(4x)$ en fonction de $\tan(x)$
+\end{enumerate}
+
+
+
+\end{document}

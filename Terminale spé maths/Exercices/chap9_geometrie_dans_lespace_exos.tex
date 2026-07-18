@@ -1,0 +1,600 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Géométrie dans l'espace}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Objets dans l'espace}
+
+\subsection{Relations dans une pyramide}
+
+\begin{minipage}{0.5\textwidth}
+    On considère une pyramide $ABCDE$ à base rectangulaire $ABCD$\\
+    Soit $I$ et $J$ les milieux respectifs de $[EC]$ et $[EB]$\\
+    On note $O$ le centre du rectangle $ABCD$\\
+    Déterminer la position relative de :
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \tdplotsetmaincoords{75}{35} % Adjust the viewing angle
+    \begin{tikzpicture}[scale=1.4,tdplot_main_coords]
+    % Define coordinates for the vertices of the base
+    \coordinate (A) at (0,0,0);
+    \coordinate (B) at (4,0,0);
+    \coordinate (C) at (4,3,0);
+    \coordinate (D) at (0,3,0);
+    \coordinate (E) at (2,1,2.5);
+    \coordinate (O) at (2,1.5,0);
+    % Draw the pyramid
+    \draw (A) -- (B) -- (C);
+    \draw[dotted] (A) -- (D) -- (C);
+    \draw (E) -- (A);
+    \draw (E) -- (B);
+    \draw (E) -- (C);
+    \draw[dotted] (E) -- (D);
+    % Label the vertices
+    \node[below] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[below] at (C) {$C$};
+    \node[above left] at (D) {$D$};
+    \node[above] at (E) {$E$};
+    \node[below] at (O) {$O$};
+    \node at (O) {\tiny $\times$};
+    % Calculate and label the midpoints of segments [EC] and [EB]
+    \coordinate (I) at ($(E)!0.5!(C)$);
+    \coordinate (J) at ($(E)!0.5!(B)$);
+    \node[right] at (I) {$I$};
+    \node[left] at (J) {$J$};
+    \draw (I) -- (J);
+\end{tikzpicture} % ----- Pyramide
+\end{minipage}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.27\linewidth}p{0.27\linewidth}p{0.27\linewidth}}
+	a) $(ED)$ et $(BO)$ & b) $(AC)$ et $(EB)$ & c) $(IJ)$ et $(BC)$\\
+	d) $(OI)$ et $(AD)$ & e) $(OIJ)$ et $(AD)$ & f) $(OE)$ et $(BIC)$ \\
+	h) $(IA)$ et $(CDO)$ & i) $(OCE)$ et $(JD)$ & j) $(JAE)$ et $(OIB)$\\
+	k) $(AJB)$ et $(EDO)$ & l) $(OIJ)$ et $(ADE)$ & m) $(OCE)$ et $(JDB)$
+\end{tabular}
+
+
+
+\subsection{Milieux dans un parallélépipède rectangle}
+On considère le parallélépipède rectangle.\\
+On note $M$ et $N$ les milieux respectifs des segments $[EF]$ et $[FG]$
+\begin{enumerate}
+    \item Justifier que $(AE)$ et $(BM)$ sont sécantes. On note $K$ leur point d'intersection.
+    \item Justifier que $(BN)$ et $(CG)$ sont sécantes. On note $L$ leur point d'intersection.
+    \item Justifier que les points $K$, $L$, $M$ et $N$ appartiennent à un même plan
+    \item Démontrer que les droites $(MN)$ et $(KL)$ sont parallèles
+\end{enumerate}
+
+
+
+\subsection{Section de tétraèdre}
+\begin{minipage}{0.65\linewidth}
+On considère un tétraèdre $ABCD$ ainsi que les points $I$, $J$ et $K$ définis par $\vv{AI}=\frac{1}{2}\vv{AB}$, $\vv{AJ}=\frac{2}{3}\vv{AD}$ et $\vv{CK}=\frac{1}{3}\vv{CD}$\\
+\begin{enumerate}
+	\item Reproduire la figure ci-contre.
+	\item Tracer l'intersection entre le plan $(IJK)$ et la face $ABD$
+	\item Justifier que les droites $(AC)$ et $(JK)$ sont sécantes puis placer $M$ leur point d'intersection.
+	\item Justifier que $(IM)\subset(IJK)$ puis tracer l'intersection entre le plan $(IJK)$ et la face $ABC$
+	\item Terminer la construction de la section du tétraèdre $ABCD$ par le plan $(IKJ)$
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.3\linewidth}
+\tdplotsetmaincoords{75}{45} % Adjust the viewing angle
+\begin{tikzpicture}[tdplot_main_coords,scale=1.3]
+	\coordinate (A) at (0,0,0);
+    \coordinate (B) at (4,0,0);
+    \coordinate (C) at (1,4,0);
+    \coordinate (D) at (0,3,3);
+    
+    \draw node[below] at ($(A)!0.5!(B)$) {$I$};
+    \draw node at ($(A)!0.5!(B)$) {\small $\times$};
+    \draw node[left] at ($(A)!0.66!(D)$) {$J$};
+    \draw node at ($(A)!0.66!(D)$) {\small $\times$};
+    \draw node[right] at ($(C)!0.33!(D)$) {$K$};
+    \draw node at ($(C)!0.33!(D)$) {\small $\times$};
+
+	\draw (A) node[below] {$A$} --(B) node[below] {$B$}--(C) node[right] {$C$}--(D) node [above] {$D$}--(A);
+	\draw (D)--(B);
+    \draw[dotted] (A)--(C);    
+\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Section de pyramide}
+\begin{minipage}{0.65\linewidth}
+On considère une pyramide $ABCDS$ dont la base $ABCD$ est un trapèze de bases $[AB]$ et $[CD]$ \\
+On considère également les points $M$, $N$ et $P$ tels que $\vv{AM}=\frac{1}{3}\vv{AD}$, $\vv{BN}=\frac{1}{4}\vv{BS}$ et $\vv{SP}=\vv{PC}$
+\begin{enumerate}
+	\item Reproduire la figure ci-contre.
+	\item Tracer l'intersection entre le plan $(MNP)$ et la face $BCS$
+	\item Justifier que les droites $(BC)$ et $(NP)$ sont sécantes puis placer $I$ leur point d'intersection.
+	\item Tracer alors l'intersection du plan $(MNP)$ avec la face $ABCD$, puis avec la face $ABS$ et faisant apparaître $J$ le point d'intersection entre $(MNP)$ et $(AB)$
+	\item Justifier que $(MJ)$ et $(CD)$ sont sécantes et placer $K$ leur point d'intersection.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.3\linewidth}
+\tdplotsetmaincoords{75}{30} % Adjust the viewing angle
+\begin{tikzpicture}[scale=1.4,tdplot_main_coords]
+	\coordinate (A) at (0,0,0);
+    \coordinate (B) at (3,0,0);
+    \coordinate (D) at (0,4,0);
+    \coordinate (C) at (2,3,0);
+    \coordinate (S) at (2,1,3);
+    
+    \draw node[right] at ($(A)!0.33!(D)$) {$M$};
+    \draw node at ($(A)!0.33!(D)$) {\small $\times$};
+    \draw node[left] at ($(B)!0.25!(S)$) {$N$};
+    \draw node at ($(B)!0.25!(S)$) {\small $\times$};
+    \draw node[right] at ($(C)!0.5!(S)$) {$P$};
+    \draw node at ($(C)!0.5!(S)$) {\small $\times$};
+
+	\draw (A) node[below] {$A$} --(B) node[below] {$B$}--(C) node[right] {$C$}--(S) node [above] {$S$}--(A);
+	\draw[dotted] (A)--(D) node[left] {$D$}--(S);
+	\draw[dotted] (D)--(C);
+	\draw (S)--(B);
+\end{tikzpicture}
+\end{minipage}
+
+\quad ~\, 6. Terminer la construction de la section de la pyramide $ABCDS$ par le plan $(MNP)$
+
+
+
+\subsection{Section de cube niveau 1}
+\begin{minipage}{0.3\linewidth}
+\begin{tikzpicture}[scale=3.5]
+	\coordinate (A) at (0,0,1);
+	\coordinate (B) at (1,0,1);
+	\coordinate (C) at (1,0,0);
+	\coordinate (D) at (0,0,0);
+	\coordinate (E) at (0,1,1);
+	\coordinate (F) at (1,1,1,);
+	\coordinate (G) at (1,1,0);
+	\coordinate (H) at (0,1,0);
+	
+	\draw (F) node[above] {$F$}--(G) node[above] {$G$}--(H) node[above] {$H$}--(E) node[above] {$E$}--(F)--(B) node[below] {$B$}--(A) node[below] {$A$}--(E);
+	\draw (B)--(C)--(G);
+	\draw[dotted] (A)--(D) node[below] {$D$}--(C) node[below] {$C$};
+	\draw[dotted] (D)--(H);
+	
+	\draw node[below] at ($(A)!0.33!(B)$) {$I$};
+    \draw node at ($(A)!0.33!(B)$) {\small $\times$};
+    \draw node[below] at ($(F)!0.5!(G)$) {$J$};
+    \draw node at ($(F)!0.5!(G)$) {\small $\times$};
+    \draw node[above] at ($(H)!0.33!(G)$) {$K$};
+    \draw node at ($(H)!0.33!(G)$) {\small $\times$};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.65\linewidth}
+On considère un cube $ABCDEFGH$ ainsi que les points $I$, $J$ et $K$ définis par $\vv{AI}=\frac{1}{3}\vv{AB}$, $\vv{HK}=\frac{1}{3}\vv{HG}$ et $\vv{FJ}=\frac{1}{2}\vv{FG}$
+\begin{enumerate}
+	\item Reproduire la figure ci-contre.
+	\item Tracer l'intersection du plan $(IJK)$ et de la face $EFGH$
+	\item Justifier que $(KJ)$ et $(EF)$ sont sécantes et placer $P$ leur point d'intersection.
+	\item Tracer l'intersection du plan $(IJK)$ avec la face $ABFE$
+	\item Tracer l'intersection du plan $(IJK)$ avec la face $BCGF$
+	\item Terminer la construction de la section du cube $ABCDEFGH$ par le plan $(IJK)$
+\end{enumerate}
+
+\end{minipage}
+
+
+
+\subsection{Section de cube niveau supérieur}
+On considère un cube $ABCDEFGH$, ainsi que les points $M$, $N$ et $P$ tels que $\vv{BM}=\frac{1}{2}\vv{BF}$ , $\vv{AN}=\frac{3}{4}\vv{AD}$ et $\vv{HP}=\frac{1}{3}\vv{HG}$. Le but de l'exercice est de tracer la section du cube par le plan $(MNP)$.
+\begin{enumerate}
+    \item Faire un schéma de la figure de l'énoncé.
+    \item Placer $N'$ le projeté orthogonal du point $N$ sur la face $EFGH$
+    \item Justifier que les droites $(N'F)$ et $(MN)$ sont sécantes puis placer $K$ leur point d'intersection.
+    \item Justifier que les droites $(KP)$ et $(FG)$ sont sécantes puis placer $L$ leur point d'intersection.
+    \item Justifier que les droites $(ML)$ et $(LP)$ sont toutes les deux incluses dans le plan $(MNP)$
+    \item Que peut-on dire des parallèles à $(ML)$ et $(LP)$ passant par le point $N$ ?
+    \item À l'aide des questions précédentes, tracer la section du cube $ABCDEFGH$ par le plan $(MNP)$
+\end{enumerate}
+
+
+
+\section{Vecteurs dans l'espace}
+
+\subsection{Trois points}
+Soient trois points de l'espace $A$, $B$ et $C$ non alignés.\\
+On définit le point $M$ par $\vv{AM}=2\vv{AB}-2\vv{AC}$ et le point $N$ par $2\vv{CN}=\vv{AB}$
+
+Expirmer les vecteurs $\vv{BM}$ et $\vv{BN}$ en fonction de $\vv{AB}$ et $\vv{AC}$
+
+Que peut-on dire des points $B$, $M$ et $N$ ?
+
+
+
+\subsection{Pavé droit}
+\begin{minipage}{0.4\textwidth}\restoreskip
+    On considère le pavé droit $ABCDEFGH$ comme représenté ci-dessus.
+    
+On considère les points $I$, $J$ et $K$ tels que $\vv{AI}=\frac{1}{3}\vv{AD}$, $\vv{JF}=2\vv{GJ}$ et $\vv{EH}=\vv{HK}$
+
+Le point $P$ est le centre de la face $CDHG$
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}[scale=2]
+        % Define the vertices of the cube and label them
+        \coordinate (A) at (0,0,0) {};
+        \coordinate (B) at (2,0,0) {};
+        \coordinate (C) at (2,1,0) {};
+        \coordinate (D) at (0,1,0) {};
+        \coordinate (E) at (0,0,1) {};
+        \coordinate (F) at (2,0,1) {};
+        \coordinate (G) at (2,1,1) {};
+        \coordinate (H) at (0,1,1) {};
+        % Label positions relative to the vertices
+        \node[below] at (A) {E};
+        \node[below] at (B) {H};
+        \node[above] at (C) {D};
+        \node[above] at (D) {A};
+        \node[below] at (E) {F};
+        \node[below] at (F) {G};
+        \node[above] at (G) {C};
+        \node[above] at (H) {B};
+        % Define other points
+        \coordinate (I) at (0.6667,1,0) {};
+        \coordinate (J) at (1.33333,0,1) {};
+        \coordinate (K) at (4,0,0) {};
+        \coordinate (P) at (2,0.5,0.5) {};
+        \node[above] at (I) {I};
+        \node at (I) {\tiny $\lvert$};
+        \node[above] at (J) {J};
+        \node at (J) {\tiny $\lvert$};
+        \node[above] at (K) {K};
+        \node at (K) {\tiny $\times$};
+        \node[above] at (P) {P};
+        \node at (P) {\tiny $\times$};
+        % Draw the edges of the cube
+        \draw[dotted] (A) -- (B);
+        \draw[dotted] (A) -- (E);
+        \draw[dotted] (D) -- (A);
+        \draw (F) -- (B) -- (C) -- (D) -- (H) -- (E) -- (F) -- (G) -- (C);
+        \draw (G) -- (H);
+        \draw[dotted] (B) -- (K);
+    \end{tikzpicture} % ---- Pavé
+\end{minipage}
+
+\begin{enumerate}
+    \item Exprimer les vecteurs $\vv{AI}$ et $\vv{FJ}$ en fonction du vecteur $\vv{AD}$
+    \item \begin{enumerate}
+        \item Exprimer les vecteurs $\vv{EI}$ et $\vv{CJ}$ en fonction de $\vv{AE}$ et $\vv{AD}$
+        \item En déduire que les vecteurs $\vv{EI}$ et $\vv{CJ}$ sont colinéaires
+    \end{enumerate}
+    \item Démontrer que $\vv{AJ}=\vv{IG}$
+    \item \begin{enumerate}
+        \item Exprimer les vecteurs $\vv{BP}$ et $\vv{BK}$ en fonction de $\vv{AB}$, $\vv{AD}$ et $\vv{AE}$
+        \item Justifier que les points $B$, $P$ et $K$ sont alignés
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que $\vv{IJ}=\vv{AG}+\vv{DI}$
+        \item Que peut-on dire des vecteurs $\vv{IJ}$, $\vv{AG}$ et $\vv{DI}$ ?
+    \end{enumerate}
+    \item Montrer que les vecteurs $\vv{JP}$, $\vv{IP}$ et $\vv{HK}$ sont coplanaires
+\end{enumerate}
+
+
+
+\subsection{Tétraèdre}
+On considère un tétraèdre $ABCD$.
+
+On note $I$, $J$, $K$ et $L$ les milieux respectifs des segments $[AB]$, $[CD]$, $[AD]$ et $[BC]$.
+
+Soit $G$ le milieu du segment $[IJ]$
+\begin{enumerate}
+	\item Représenter la situation sur un schéma.
+	\item Montrer que $\vv{IJ}=\frac{1}{2}\vv{AD}+\frac{1}{2}\vv{BC}$
+	\item Démontrer que $ILJK$ est un parallélogramme.
+	\item Démontrer que $\vv{GK}=\frac{1}{4}\vv{BA}+\frac{1}{4}\vv{CD}$
+	\item Montrer que $G$ est milieu de $[KL]$
+	\item Démontrer que $\vv{AG}+\vv{BG}+\vv{CG}+\vv{DG}=\vv{0}$
+\end{enumerate}
+
+
+    
+\subsection{Vecteurs coplanaires}
+Pour chacun des vecteurs $\vv{u}$, $\vv{v}$ et $\vv{w}$ suivants, dire s'ils sont coplanaires ou non :
+
+\begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+    a) $\vcoord{u}{1\\2\\3}$ , $\vcoord{v}{-2\\1\\2}$ et $\vcoord{w}{0\\5\\7}$ &
+    b) $\vcoord{u}{-1\\1\\3}$ , $\vcoord{v}{2\\-3\\0}$ et $\vcoord{w}{3\\2\\3}$ \\[20pt]
+    c) $\vcoord{u}{4\\7\\-5}$ , $\vcoord{v}{-4\\0\\6}$ et $\vcoord{w}{0\\7\\1}$ &
+    d) $\vcoord{u}{-2\\1\\3}$ , $\vcoord{v}{4\\-2\\-6}$ et $\vcoord{w}{2\\7\\12}$ \\
+\end{tabular}
+
+
+
+\subsection{Pyramide en coordonnées}
+On considère une pyramide $ABCDS$ dont la base $ABCD$ est un parallélogramme. On note $M$ le milieu de $[AS]$ et on définit le point $K$ par $3\vv{SK}=\vv{SB}+\vv{SC}$\\
+On rapporte l'espace au repère $(D;\vv{DA};\vv{DC};\vv{DS})$
+\begin{enumerate}
+	\item Donner les coordonnées des points $A$, $B$, $C$, $D$, $S$ et $M$
+	\item Justifier que les coordonnées du point $K$ sont $\left(\frac{1}{3};\frac{2}{3};\frac{1}{3}\right)$
+	\item Montrer que $\vv{SK}+\vv{BK}+\vv{CK}=\vv{0}$ et en déduire que $K\in(SBC)$
+	\item Démontrer que les vecteurs $\vv{DK}$, $\vv{CK}$ et $\vv{MK}$ sont coplanaires.
+	\item Peut-on affirmer que les droites $(MC)$  et $(DK)$ sont sécantes ?
+\end{enumerate}
+
+
+
+\subsection{Un triangle dans l'espace}
+On munit l'espace du repère orthonormé $\Oijk$ et on considère les points $A(2;1;0)$, $ B(\sqrt{3}+2;1;1)$ et $C(2+\sqrt{3};1;-1)$. Quelle est la nature du triangle $ABC$ ?
+
+
+
+\section{Produit scalaire et orthogonalité}
+
+\subsection{Produit scalaire dans un pavé}
+
+\begin{minipage}{0.65\textwidth}
+    On considère le pavé droit $ABCDEFGH$ comme représenté ci-contre :
+    \begin{enumerate}
+        \item Calculer $\scal{AB}{DH}$ , $\scal{BF}{HE}$ et $\scal{CG}{DA}$
+        \item Calculer $\scal{AF}{DG}$ , $\scal{EG}{BG}$ et $\scal{FC}{HA}$
+        \item Calculer $\scal{AG}{EF}$ , $\scal{DF}{AH}$ et $\scal{GA}{CE}$
+        \item Déterminer au dixième de degré près la mesure de $\widehat{ACE}$
+        \item Déterminer au dixième de degré près la mesure de $(\vv{FH};\vv{CE})$
+    \end{enumerate}
+\end{minipage}
+\begin{minipage}{0.34\textwidth}
+    \begin{tikzpicture}[scale=0.6]
+        % Define the vertices of the cube and label them
+        \coordinate (A) at (0,0,0) {}; \node[below] at (A) {A};
+        \coordinate (B) at (7,0,0) {}; \node[below] at (B) {B};
+        \coordinate (C) at (7,3,0) {}; \node[above] at (C) {C};
+        \coordinate (D) at (0,3,0) {}; \node[above] at (D) {D};
+        \coordinate (E) at (0,0,5) {}; \node[below] at (E) {E};
+        \coordinate (F) at (7,0,5) {}; \node[below] at (F) {F};
+        \coordinate (G) at (7,3,5) {}; \node[above] at (G) {G};
+        \coordinate (H) at (0,3,5) {}; \node[above] at (H) {H};
+
+        % Draw the rectangular cuboid
+        \draw (E)--(F)--(B)--(C)--(D)--(H)--(E); \draw (H)--(G)--(C); \draw (G)--(F);
+        \draw[dotted] (D)--(A)--(E); \draw[dotted] (A)--(B);
+
+        % Dimensions
+        \node[right] at (7,1.5,0) {3};
+        \node[below] at (7,0,2.5) {5};
+        \node[below] at (3.5,0,5) {7};
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+
+\subsection{Orthogonalité dans un cube}
+On considère on cube $ABCDEFGH$ et on place les points $I$, $J$, $K$ et $L$ tels que $\vv{FI}=\frac{1}{4}\vv{FG} $, $\vv{HJ}=\frac{3}{4}\vv{HD} $, $\vv{AK}=\vv{DC}+\vv{DJ}$ et $\vv{GL}=\vv{KB}$
+\begin{enumerate}
+	\item Montrer que le triangle $IGJ$ est rectangle
+    \item Peut-on dire de même du triangle $IJK$ ?
+    \item Montrer que les vecteurs $\vv{ID}$ et $\vv{EL}$ sont orthogonaux
+    \item Montrer que les vecteurs $\vv{JK}$ et $\vv{EL}$ sont orthogonaux
+    \item Que dire de la droite $(LE)$ et du plan $(IBD)$ ?
+    \item Représenter la section du cube $ABCDEFGH$ par le plan $(IJK)$
+\end{enumerate}
+
+
+
+\subsection{Encore un triangle}
+On munit l'espace du repère orthonormé $\Oijk$ et on considère les points $A(3;1;-1)$, $ B(5;2;2)$ et $C(6;1;-3)$\\
+Quelle est la nature du triangle $ABC$ ?
+
+
+
+\subsection{Triangles paramétrés}
+\begin{enumerate}
+    \item Soit $\alpha\in\RR$.\\
+    On considère les points $A=(-1-\alpha~;~3~;~0)$ , $B=(0~;~\alpha~;~1)$ et $C=(-3~;~\alpha+1~;~\alpha-1)$ \\
+    Existe-t-il des valeurs de $\alpha$ pour lesquelles le triangle $ABC$ est rectangle en $A$ ? Si oui les donner
+    \item Soit $\lambda\in\RR$.\\
+    On considère les points $D=(1+\lambda~;~0~;~\lambda)$ , $E=(-\lambda~;~\lambda-1~;~\lambda-1)$ et $F=(\lambda-2~;~\lambda+3~;~0)$\\
+    Existe-t-il des valeurs de $\lambda$ pour lesquelles le triangle $DEF$ est isocèle en $D$ ? Si oui les donner
+\end{enumerate}
+
+
+
+\subsection{Angle double droit}
+Pour chaque couple de vecteurs $(\vv{u};\vv{v})$ suivant, déterminer $\vv{n}$ un vecteur orthogonal à la fois à $\vv{u}$ et à $\vv{v}$ :
+
+\begin{tabular}{p{0.45\linewidth}p{0.45\linewidth}}
+	a) $\vcoord{u}{1\\1\\-1}$ et $\vcoord{v}{0\\-1\\1}$ & b) $\vcoord{u}{1\\1\\1}$ et $\vcoord{v}{2\\-2\\-2}$ \\[15pt]
+	c) $\vcoord{u}{-2\\1\\3}$ et $\vcoord{v}{4\\-3\\0}$ & d) $\vcoord{u}{2\\1\\5}$ et $\vcoord{v}{7\\-3\\4}$ \\[15pt]
+	e) $\vcoord{u}{-3\\8\\-5}$ et $\vcoord{v}{2\\4\\-6}$ & f) $\vcoord{u}{11\\7\\-13}$ et $\vcoord{v}{-5\\7\\3}$
+\end{tabular}
+
+
+
+\subsection{Quadrilatères}
+\begin{enumerate}
+	\item On munit l'espace du repère orthonormé $\Oijk$ et on considère les points $A(1;1;1)$, $B(3;-2;6)$, $C(2;5;3)$ et $D(4;2;8)$\\
+	Montrer que $ABDC$ est un rectangle. Est-ce un carré ?
+	\item On munit l'espace du repère orthonormé $\Oijk$ et on considère les points $A(1;-5;5)$, \\$B(2;5;7)$, $C(1;7;-3)$ et $D(0;-3;-5)$\\
+	Montrer que $ABCD$ est un losange. Est-ce un carré ?
+\end{enumerate}
+
+
+
+\section{Droites dans l'espace}
+
+\subsection{Équations de droites}
+Donner une représentation paramétrique de chacune des droites suivantes :
+\begin{enumerate}
+    \item $(AB)$ avec $A(1;2;3)$ et $B(3;2;1)$
+    \item $(d)$ parallèle à l'axe $Ox$ et passant par le point $M(1;1;3)$
+    \item $(\Delta)$ orthogonale au plan $xOz$ et passant par le point $N(-2;4;-1)$
+    \item $(\Gamma)$ parallèle à $(AB)$ et passant par l'origine du repère.
+\end{enumerate}
+
+
+
+\subsection{Positions relatives de droites}
+Les droites $(d_1)$ et $(d_2)$ suivantes sont-elles sécantes, parallèles ou non coplanaires ?
+
+a) $(d_1):\accol{x=3+2t\\y=2-t\\z=-2t}$ \qquad $(d_2):\accol{x=-3-4t\\y=1+2t\\z=-9+4t}$ \\[15pt]
+b) $(d_1):\accol{x=1-t\\y=3+2t\\z=2-3t}$ \qquad $(d_2):\accol{x=3t+6\\y=7+t\\z=2t+3}$ \\[15pt]
+c) $(d_1):\accol{x=5t+6\\y=7-2t\\z=t+3}$ \qquad $(d_2):\accol{x=1+4t\\y=3-3t\\z=8t-2}$ 
+
+
+
+\subsection{Trois droites}
+On considère les droites $(d_1):\accol{x=3+t\\y=-3+2t\\z=10+3t}$,\quad$(d_2):\accol{x=2-2t\\y=-5\\z=7+t}$ et $(d_3):\accol{x=5+3t\\y=-4+t\\z=2-5t}$
+\begin{enumerate}
+	\item Montrer que les droites $(d_1)$, $(d_2)$ et $(d_3)$ sont concourantes en un point $M$ dont on précisera les coordonnées.
+	\item Les droites $(d_1)$, $(d_2)$ et $(d_3)$ sont-elles coplanaires ?
+\end{enumerate}
+
+
+
+\subsection{Représentation paramétrique à paramètre}
+On considère la droite $(d_1)$ passant par le point $M(1;3;-2)$ et dirigée par le vecteur $\vcoord{u}{1\\0\\2}$ ainsi que la droite $(d_2)$ passant par le point $A(a;a;a)$ et dirigée par le vecteur $\vcoord{v}{3\\-1\\0}$
+\begin{enumerate}
+	\item Justifier que les droites $(d_1)$ et $(d_2)$ ne sont pas parallèles
+    \item Existe-t-il une valeur de $a$ pour laquelle $(d_1)$ et $(d_2)$ sont coplanaires ?
+\end{enumerate}
+
+
+
+\subsection{Direction variable}
+On considère la droite $(\Delta_1)$ passant par l'origine du repère et dirigée par le vecteur $\vcoord{v}{1\\k\\2}$ pour $k\in\RR$ ainsi que la droite $(\Delta_2): \accol{x=t-2\\y=t+3\\z=t}$
+\begin{enumerate}
+    \item Justifier que les droites $(\Delta_1)$ et $(\Delta_2)$ ne sont pas parallèles
+	\item Existe-t-il une valeur de $k$ pour laquelle $(\Delta_1)$ et $(\Delta_2)$ sont coplanaires ?
+\end{enumerate}
+
+
+
+\subsection{Pyramide sur hexagone}
+On considère une pyramide $ABCDEFS$ dont la base $ABCDEF$ est une hexagone régulier de côté 1 et de centre $O$ telle que $OS=1$\\
+On note $I$ et $J$ les milieux respectifs des segments $[SF]$ et $[SB]$ \\
+On rapporte l'espace au repère normé $(O;\vv{OA};\vv{OC};\vv{OS})$
+\begin{enumerate}
+    \item Déterminer les coordonnées des neuf points de la figure.
+    \item Justifier que les droites $(IJ)$ et $(EC)$ sont parallèles.
+    \item \begin{enumerate}
+        \item Donner une représentation paramétrique de la droite $(IC)$
+        \item Donner une représentation paramétrique de la droite $(JE)$
+        \item Démontrer que les droites $(IC)$ est $(JE)$ sont sécantes en un point $K$ dont on précisera les coordonnées.
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Donner une représentation paramétrique de la droite $(JC)$
+        \item Donner une représentation paramétrique de la droite $(IE)$
+        \item Démontrer que les droites $(JC)$ est $(IE)$ sont sécantes en un point $L$ dont on précisera les coordonnées.
+    \end{enumerate}
+    \item Justifier que le quadrilatère $AKSL$ est un trapèze.
+\end{enumerate}
+
+
+
+\section{Plans dans l'espace}
+
+\subsection{Équation cartésienne}
+Donner une équation cartésienne des plans suivants :
+\begin{enumerate}
+	\item $\Pcal$ passant par le point $k(1;1;1)$ et orthogonal au vecteur $\vcoord{n}{1\\2\\1}$
+	\item $\mathcal{R}$ passant par l'origine du repère et parallèle à $\Pcal$
+    \item $(ABC)$ avec $A(1;1;-1)$, $B(3;0;1)$ et $C(-2;2;4)$
+    \item $(MNP)$ avec $M(-3;-2;-1)$, $N(1;2;3)$ et $P(-1;1;0)$
+\end{enumerate}
+
+
+
+\subsection{Par rapport à des droites}
+On considère les droites $(d):\accol{x=3t+2\\y=3t-1\\z=-t+1}$ et $(d'):\accol{x=2t-2\\y=t+1\\z=-t+2}$
+\begin{enumerate}
+    \item Les droites $(d)$ et $(d')$ sont-elles sécantes ?
+    \item Donner l'équation cartésienne du plan $\mathscr{P}$ parallèle à la droite $(d)$ incluant la droite $(d')$
+    \item Donner l'équation cartésienne du plan $\mathscr{F}$ parallèle à la droite $(d')$ incluant la droite $(d)$
+\end{enumerate}
+
+
+
+\subsection{Intersection de droites et plan}
+Déterminer, lorsque que cela est possible, le point d'intersection entre :
+\begin{enumerate}
+	\item La droite $(d):\accol{x=t-1\\y=2+3t\\z=2}$ et le plan $\Pcal : 2x+y-3z-1=0$
+	\item La droite $(AB)$ avec $A(2;-5;3)$ et $B(1;1;1)$ ainsi que le plan $\Rcal :x-y=5$
+	\item Le plan $(PQR)$ avec $P(0;-3;2)$, $Q(1;-1;-1)$ et $R(3;-2;4)$ ainsi que la droite $\Delta :\accol{x=2+t\\y=1-2t\\z=3t}$
+	\item Le plan $(FTL)$ avec $F(2;1;5)$, $T(1;5;2)$ et $L(5;2;1)$ ainsi que la droite $\Dcal$ passant par l'origine du repère et dirigée par $\vcoord{u}{3\\-2\\-1}$
+\end{enumerate}
+
+
+
+\subsection{Intersection de plans}
+On munit l'espace du repère orthonormé $\Oijk$ et on considère les points $A(4;2;-1)$ et $B(2;3;-1)$ ainsi que les vecteurs $\vcoord{n}{1\\-2\\2}$, $\vcoord{u}{5\\-2\\6}$ et $\vcoord{v}{0\\1\\-3}$
+    \begin{enumerate}
+        \item Déterminer une équation cartésienne du plan $\mathscr{P}_1$ passant par $A$ et de vecteur normal $\vv{n}$
+        \item Déterminer une équation cartésienne du plan $\mathscr{P}_2$ passant par $B$ dirigé par $\vv{u}$ et $\vv{v}$
+        \item Justifier que $\mathscr{P}_1$ et $\mathscr{P}_2$ sont sécants selon une droite $(d)$ dont on donnera une représentation paramétrique     
+    \end{enumerate}
+
+
+
+\subsection{Intersection de plans}
+Déterminer la représentation paramétrique de la droite d'intersection entre les plans $\Pcal$ et $\Rcal$ dans chacun des cas suivants :
+\begin{enumerate}
+	\item $\Pcal:2x-y+z-1=0$ \quad et \quad $\Rcal:x+2y-z+3=0$
+	\item $\Pcal:-3x+y-2=0$ \quad et \quad $\Rcal:2x+y+3z=0$
+	\item $\Pcal:5x+y+3z-2=0$ \quad et \quad $\Rcal:3x+2y-3z+1=0$
+	\item $\Pcal:-x+7y+2z+2=0$ \quad et \quad $\Rcal:4x-2y-z+11=0$
+\end{enumerate}
+
+
+
+\subsection{Distance et projection orthogonale}
+On munit l'espace du repère orthonormé $\Oijk$ et on considère le plan $\mathscr{P}$ d'équation cartésienne $x-y+3z+2=0$ , le plan $\mathscr{R}$ passant par le point $A(-2,1,2)$ et dont un vecteur normal est $\vcoord{n}{-2\\4\\2}$,  ainsi que le point $B(2;5;4)$
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que les plans $\mathscr{P}$ et $\mathscr{R}$ sont perpendiculaires.
+        \item Montrer que leur intersection est la droite $(\Delta)$ passant par le point $M(9;8;-1)$ et dirigée par le vecteur $\vcoord{u}{7\\4\\-1}$
+    \end{enumerate}
+    \item On note $K$ le projeté orthogonal de $B$ sur le plan $\mathscr{P}$
+    \begin{enumerate}
+        \item Déterminer les coordonnées du point $K$
+        \item Calculer la distance $BK$
+    \end{enumerate}
+    \item On note $J$ le projeté orthogonal de $B$ sur le plan $\mathscr{R}$
+    \begin{enumerate}
+        \item Déterminer les coordonnées du point $J$
+        \item Calculer la distance $BJ$
+    \end{enumerate}
+    \item En déduire la distance du point $B$ à la droite $(\Delta)$
+\end{enumerate}
+
+
+
+\subsection{Représentation paramétrique de plans}
+On considère les plans $\Pcal$ et $\Rcal$ définis par les représentations paramétriques suivantes :\\[5pt]
+$\Pcal : \accol{x=1+t+s\\y=2-t+s~~~~~~t,s\in\RR\\z=3+2t-s}$ \hspace{2cm} et \hspace{2cm} $\Rcal : \accol{x=2-t-2s\\y=t+2s~~~~~~~~~~~~t,s\in\RR\\z=1+t-s}$
+
+\begin{enumerate}
+    \item Justifier que le vecteur $\vcoord{n_1}{-1\\3\\2}$ est orthogonal au plan $\Pcal$
+    \item Justifier que le vecteur $\vcoord{n_2}{1\\1\\0}$ est orthogonal au plan $\Rcal$
+    \item En déduire que $\Pcal$ et $\Rcal$ ne sont pas parallèles
+    \item Déterminer une représentation paramétrique de $\Dcal$ leur droite d'intersection.
+\end{enumerate}
+
+
+
+
+\end{document}

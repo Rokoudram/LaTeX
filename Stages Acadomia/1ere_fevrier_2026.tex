@@ -1,0 +1,1480 @@
+\documentclass[oneside,12pt]{article}
+
+
+\input{../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../Latex/inputs/mymacros.tex}                 % Macros classiques
+\input{../../Latex/inputs/macro_paging.tex}				% Mise en page
+
+\fancyhead[R]{Stage de février}           				% En-tête droit
+\fancyhead[C]{1\up{ère} spé. Maths}                     % En-tête central
+
+\setstretch{0.9}                          				% Interligne
+
+\titleformat{\section}[frame]							% Style des section			
+    {\normalfont}
+    {\filright
+        \hspace{3mm} \bfseries Thème \no  \thesection\hspace{3mm}}
+        {-2pt}
+    {\huge\bfseries\filcenter}
+    {\vspace{-10pt}}
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+    
+\titleformat*{\subsection}{\Large\bfseries}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Automatismes}
+
+\subsection{Calculs}
+
+\exercice{Quelques fractions}{%
+Écrire les nombres suivants sous forme de fraction irréductible :
+
+\renewcommand{\arraystretch}{3.1}
+\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    A = $\dfrac{\frac{1}{2}-\frac{3}{10}}{\frac{4}{3}-1}\times\dfrac{1-\frac{4}{5}}{\frac{1}{2}-\frac{1}{5}}$ & B = $\dfrac{\frac{8}{3}-2+\frac{1}{2}}{-4+\frac{3}{4}+\frac{5}{2}}-\dfrac{\frac{1}{2}-\frac{2}{3}+1}{\frac{1}{2}-\frac{3}{4}-1}$ \\
+    C = $\dfrac{\frac{1}{3}+\frac{1}{6}}{\frac{2}{3}+\frac{2}{5}-\frac{1}{15}}+2\times\dfrac{1-\frac{1}{4}}{1+\frac{5}{4}}-\dfrac{\frac{1}{2}+\frac{1}{3}}{\frac{11}{3}+\frac{3}{4}+\frac{7}{12}}$ &  D = $\left(\dfrac{\frac{3}{5}+\frac{1}{3}}{\frac{3}{5}-\frac{2}{3}}\times\dfrac{\frac{4}{5}-\frac{3}{4}}{\frac{4}{5}+\frac{3}{4}}\right)\div\left(\dfrac{2+\frac{4}{3}}{2-\frac{1}{3}}\right)$
+\end{tabular}
+}
+
+
+
+\theoreme{Propriété des puissances entières}{
+Soient $x$ et $y$ deux nombres réels. Soient $a$ et $b$ deux nombres entiers. \\[5pt]
+$\bullet\, x^a\times x^b=x^{a+b}$ \qquad $\bullet\, \dfrac{x^a}{x^b}=x^{a-b}$ \qquad $\bullet\, \left(x^a\right)^b=x^{ab}$ \qquad $\bullet\, x^a\times y^a=(xy)^a$ \qquad $\bullet\, \dfrac{x^a}{y^a}=\left(\dfrac{x}{y}\right)^a$
+}
+
+
+
+\exercice{Simplification}{%
+Simplifier au maximum puis calculer chacun des nombres suivants :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A=\dfrac{4^5}{(4^2)^2}$ & $B=7^3\times\left(\frac{7^6}{7^7}\right)^2$ & $C=2^6\times4^6\times8^{-5}$ \\
+    $D=2^{-3}\times3^3\times2^5\times3^{-2}$ & $E=\dfrac{\left(5^{-2}\times5^4\right)^2}{5\times25}$ & $F=\dfrac{10^7\times2^5}{4^5\times5^5}$
+\end{tabular}
+}
+
+
+
+\begin{minipage}{0.5\linewidth}
+\theoreme{Racines carrées}{
+Soient $a$ et $b$ deux nombres réels. On a alors :\\[5pt]
+$\bullet$ $\sqrt{a\times b}=\sqrt{a}\times\sqrt{b}$\\[5pt]
+$\bullet$ $\sqrt{\frac{a}{b}}=\frac{\sqrt{a}}{\sqrt{b}}$
+}    
+\end{minipage}
+\begin{minipage}{0.5\linewidth}\restoreskip
+    \exemple{Quelques simplifications}{
+    $\sqrt{288}=\sqrt{2}\times\sqrt{9}\times\sqrt{16}=\sqrt{2}\times3\times4=12\sqrt{2}$\\[10pt]
+    $\sqrt{\frac{27}{16}}=\frac{\sqrt{3}\times\sqrt{9}}{\sqrt{16}}=\frac{3\sqrt{3}}{4}$\\[10pt]
+    $\sqrt{6}\times\sqrt{3}\times\sqrt{2}=\sqrt{6\times3\times2}=\sqrt{36}=6$
+    }
+\end{minipage}
+
+
+
+\exercice{Simplification}{
+Écrire chacun des nombres suivants sous la forme $a\sqrt{b}$ avec $a$ et $b$ deux nombres entiers et $b$ le plus petit possible :
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+    $A=\sqrt{27}$ & $B=\sqrt{72}$ & $C=\sqrt{192}$ \\
+    $D=\sqrt{288}$ & $E=\sqrt{15}\times\sqrt{10}$ & $F=\sqrt{8}\times\sqrt{48}$ \\
+    $G=\sqrt{6}\times\sqrt{15}\times\sqrt{8}$ & $ H=\sqrt{\frac{2}{7}}\times\sqrt{\frac{9}{4}}\times\sqrt{28}$ & $I=\sqrt{\frac{5}{4}}\times\sqrt{\frac{21}{2}}\times\sqrt{\frac{40}{7}}$
+\end{tabular}
+}
+
+
+\subsection{Pourcentages et évolutions}
+
+\exercice{Pourcentages}{%
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{9cm} p{9cm}}
+    1. Combien font 16$\%$ de 25$\%$ ? & 
+    2. Combien font 90$\%$ de 110$\%$ ? \\
+    3. Combien font 55$\%$ de 20$\%$ ? & 
+    4. Combien font 15$\%$ de 120$\%$ ? \\
+    5. Quelle proportion de 80 donne 65 ? &
+    6. Quelle proportion de 130 donne 39 ? \\
+    7. Quelle proportion de 75 donne 12 ? &
+    8. Quelle proportion de 36 donne 63 ? \\
+\end{tabular}
+}
+
+
+
+\definition{Taux d'évolution}{
+Le \textbf{taux d'évolution} est un nombre réel permettant de décrire un changement dans la valeur d'une grandeur ou d'une quantité.
+
+Une hausse de $x\%$ correspond à un taux d'évolution $t=\frac{x}{100}$\\
+Une diminution de $x\%$ correspond à un taux d'évolution $t=\frac{-x}{100}$
+}
+
+\definition{Coefficient multiplicateur}{
+On définit le \textbf{coefficient multiplicateur} correspondant à l'évolution d'une valeur initiale ($V_I$) en une valeur finale ($V_F$) par :
+\[ CM = \frac{V_F}{V_I} \]
+}
+
+\theoreme{$CM$ et taux}{
+Le coefficient multiplicateur et le taux d'évolution sont liés par une formule simple :
+$CM=1+t$
+}
+
+
+\theoreme{Évolutions successives}{%
+Lorsqu'une grandeur subit plusieurs \textbf{évolutions successives} de coefficients multiplicateurs respectifs $CM_1$ , $CM_2$ , ... $CM_n$, le coefficient multiplicateur correspondant à son évolution global est donné par :
+\[ CM = CM_1 \times CM_2 \times \cdots \times CM_n \]
+
+}
+
+
+\exercice{Évolutions successives}{%
+\begin{enumerate}
+    \item Quelle évolution globale donnent trois augmentations de 5$\%$, 10$\%$ puis 15$\%$ ?
+    \item Une quantité augmente de 20$\%$ puis diminue de 30$\%$. Quelle est son évolution globale ?
+    \item Une quantité diminue 4 fois de 10$\%$. Quelle est sa diminution globale ?
+    \item Une quantité augmente de 25$\%$ puis diminue de 25$\%$. Plus tard elle diminue de 10$\%$ puis augmente de 10$\%$. Quelle est son évolution globale ?
+\end{enumerate}
+}
+
+
+
+\theoreme{Évolution réciproque}{%
+Lorsqu'une quantité subit une évolution, elle peut revenir à sa valeur initiale en subissant une \textbf{évolution réciproque}. Si la première évolution correspond à un coefficient multiplicateur $CM$, alors le coefficient multiplicateur réciproque est :
+\[ CM_R = \frac{1}{CM} \]
+}
+
+
+
+\exercice{Évolutions réciproques}{%
+\begin{enumerate}
+	\item Une quantité a augmenté de 15$\%$. Quelle diminution doit-elle subir pour revenir à sa valeur initiale ?
+	\item Une quantité a diminué de 30$\%$. Quelle augmentation doit-elle subir pour revenir à sa valeur initiale ?
+	\item Une quantité augmente deux fois de 10$\%$. Quelle diminution doit-elle subir pour revenir à sa valeur initiale ?
+	\item Une quantité augmente de 40$\%$ puis diminue de 25$\%$. Quelle évolution doit-elle subir afin de revenir à sa valeur initiale ?
+\end{enumerate}
+}
+
+
+
+\subsection{Droites et fonctions affines}
+
+\begin{minipage}[t]{0.5\linewidth} \restoreskip
+    \definition{Équation réduite de droite}{
+    $\bullet$ Toute droite $\Dcal$ non verticale admet une équation réduite de la forme $(d):y=mx+p$\\[5pt]
+    $\bullet$ $m$ est appelé \textbf{coefficient directeur}\\[5pt] 
+    $\bullet$ $p$ et nommé \textbf{ordonnée à l'origine}.\\[5pt]
+    $\bullet$ $m=\frac{\Delta y}{\Delta y}$ avec les notation ci-contre.
+    }
+    \exemple{Sur le schéma}{
+    Ici on voit que $\Delta x=4$ et que $\Delta y=3$
+    
+    On repère également que $p=-2$
+    
+    Ainsi la droite $\Dcal$ a pour équation $y=\frac{3}{4}x-2$
+    }
+\end{minipage}\hspace{10mm}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[height = 10cm , width = 10cm , xmin=-2,xmax=6,ymin=-5,ymax=3,axis lines=middle,ytick distance=1,xtick distance=1,
+        grid=major, enlargelimits = { abs = 0.2 }]
+            \addplot[color=red!80!black,line width=2pt,samples=100,domain=-5:7] {3*x/4-2};
+            \draw[thick, color=blue!80!black, dashed,-Stealth]  (0,-2) node {$\bullet$} -- node[below] {$\Delta x$} (4,-2);
+            \draw[thick, color=blue!80!black, dashed,-Stealth]  (4,-2) -- (4,1);
+            \draw[color=blue!80!black] (4,-1.3) node[right] {$\Delta y$};
+            \draw[color=red!80!black] (3,1) node {$\Dcal$};
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\exercice{Équations de droites}{
+Dans chacun des cas suivants, déterminer une équation réduite de la droite $(AB)$ :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+	$A=(-1~;~2)$ et $B=(2~;~8)$ & $A=(5~;~6)$ et $B=(3~;~1)$ \\
+	$A=(\frac{1}{2}~;~2)$ et $B=(3~;~7)$ & $A=(\frac{2}{3}~;~\frac{5}{4})$ et $B=(\frac{8}{3}~;~\frac{13}{4})$
+\end{tabular}
+}
+
+
+
+\definition{Fonction affine}{%
+On appelle \textbf{fonction affine} toute fonction $f$ définie sur $\RR$ par $\mathbold{f:x\mapsto mx+p}$\\
+avec $m$ un réel non nul et $p$ quelconque.
+}
+
+\theoreme{Représentation graphique}{%
+Soit $f:x\mapsto mx+p$ une fonction affine.\\
+Sa \textbf{courbe représentative} est la droite d'équation réduite $y=mx+p$\\
+$m$ est le coefficient directeur cette droite, et $p$ est l'ordonnée à l'origine
+}
+
+
+\exercice{Identification}{%
+Déterminer si les fonctions ci-après sont des fonctions affines et, le cas échéant, préciser leurs coefficients :
+
+\renewcommand{\arraystretch}{2.25}
+\begin{tabular}{p{0.35\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f_1:x\mapsto 7x^2-5$ & $f_2:x\mapsto \dfrac{2x+\frac{1}{4}}{7}$ & $f_3:x\mapsto (x+3)^2-2x^2$ \\
+	$f_4:x\mapsto (x+2)^2-(x+1)(x-1)$ & $f_5:x\mapsto \dfrac{2x+1}{3}-\frac{2}{5}x+1$ & $f_6:x\mapsto \dfrac{3x-4}{x+1}$
+\end{tabular}
+}
+
+
+\exercice{Tableaux de signes}{
+Résoudre les inéquations suivantes sur $\RR$ à l'aide d'un tableau de signes :
+
+\renewcommand{\arraystretch}{2.25}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+	a) $(3x+12)(8-x)<0$ & b) $\dfrac{21x+3}{2x-6} \geq 0$ \\
+	c) $(2x+1)(5x+7)-(3x-1)(2x+1) >0$ & d) $48x^2-36+5(7x+6) \leq0$
+\end{tabular}
+}
+
+
+
+\section{Polynômes du second degré}
+
+\definition{Polynôme du second degré}{%
+On appelle \textbf{polynôme du second degré} toute fonction de la forme $P:x\mapsto ax^2+bx+c$ \\
+avec $a$ un réel non nul, $b$ et $c$ quelconques.
+}
+
+\theoreme{Parabole}{%
+\begin{minipage}{0.3\linewidth}
+	La courbe représentative d'un polynôme du second degré est toujours une parabole.
+	
+	Son orientation dépend du signe du coefficient dominant.
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        	height = 5cm , width = 7cm ,
+        	xmin=-2,xmax=3,ymin=-3,ymax=3,
+        	ytick distance=1,xtick distance=1,
+        	axis lines=middle , grid=major, enlargelimits = { abs = 0.2 } ,
+        	ticklabel style = {font = \scriptsize }
+        	]
+        	
+			\addplot[samples = 100 , domain = -3:3 , line width = 2pt]
+			{(x-1)^2-2};
+			
+			\draw (2,2.5) node {$a>0$};
+			\draw (2,-2.5) node {$y=P(x)$} ;
+			
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+        	height = 5cm , width = 7cm ,
+        	xmin=-3,xmax=2,ymin=-3,ymax=3,
+        	ytick distance=1,xtick distance=1,
+        	axis lines=middle , grid=major, enlargelimits = { abs = 0.2 } ,
+        	ticklabel style = {font = \scriptsize }
+        	]
+        	
+			\addplot[samples = 100 , domain = -3:3 , line width = 2pt]
+			{-(x+1)^2+2};
+			
+			\draw (1,2.5) node {$a<0$};
+			\draw (-2,-2.5) node {$y=P(x)$} ;
+			
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\subsection{Forme canonique et variations}
+
+\definition{Forme canonique}{
+Soit $P:x\mapsto ax^2+bx+c$ un polynôme du second degré.
+
+Il existe deux nombres réels $\alpha$ et $\beta$ tels que $P(x)=a(x-\alpha)^2+\beta$ 
+
+On appelle cette forme la \textbf{forme canonique} du polynôme $P$
+}
+
+
+\theoreme{Sommet et variations}{%
+\begin{minipage}{0.5\linewidth}
+Soit $P$ un polynôme du second degré. 
+
+Si sa forme canonique est $P(x)=a(x-\alpha)^2+\beta$ alors le sommet de la parabole représentative de $P$ admet comme sommet le point $S=(\alpha~;~\beta)$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth} \restoreskip
+    \begin{tikzpicture}
+        \begin{axis}[
+        	height = 6cm , width = 9cm ,
+        	xmin=-1,xmax=4,ymin=-4,ymax=2,
+        	ytick distance=1,xtick distance=1,
+        	axis lines=middle , grid=major, enlargelimits = { abs = 0.2 } ,
+        	ticklabel style = {font = \scriptsize }
+        	]
+        	
+			\addplot[samples = 100 , domain = -1:4 , line width = 2pt]
+			{1.5*(x-1.5)^2-2.5};
+			
+			\draw[color=red!80!black , dashed , line width = 1.5pt] (0,-2.5) node[left] {$\beta$} -- (1.5,-2.5) node {$\bullet$} node[below] {$S(\alpha~;~\beta)$} -- (1.5,0) node[above] {$\alpha$} ;			
+			
+        \end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+
+En connaissant la forme canonique d'un polynôme on peut dont déduire son tableau de variations : \\
+
+\begin{tikzpicture}
+	\pgfsetstrokecolor{persianblue}
+	\tkzTabInit[color , colorV=lightblue!65!black , colorL=lightblue!65!black , colorT=lightblue , colorC=lightblue , espcl = 3]
+		{$x$ /1 , $P(x)$ \\[5pt] $a<0$  /2} {$-\infty$ , $\alpha$ , $+\infty$}
+	\tkzTabVar
+		{-/ , +/ $\beta$ , -/}
+\end{tikzpicture}  \hspace{5mm}
+\begin{tikzpicture}
+	\pgfsetstrokecolor{persianblue}
+	\tkzTabInit[color , colorV=lightblue!65!black , colorL=lightblue!65!black , colorT=lightblue , colorC=lightblue , espcl = 3]
+		{$x$ /1 , $P(x)$ \\[5pt] $a>0$ /2} {$-\infty$ , $\alpha$ , $+\infty$}
+	\tkzTabVar
+		{+/ , -/ $\beta$ , +/}
+\end{tikzpicture} 
+}
+
+\theoreme{Des formules}{%
+Soit un polynôme $P:x\mapsto ax^2+bx+c$. \quad  Alors $\alpha=\dfrac{-b}{2a}$ et $\beta=P(\alpha)$
+}
+
+
+\exercice{Sur la forme canonique}{
+Pour chacun des polynômes de second degré suivants, déterminer leur forme canonique puis dresser leur tableau de variations :
+
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$P_1:x\mapsto 2x^2-8x+5$ & $P_2:x\mapsto -3x^2+7x+1$ & $P_3:x\mapsto 1+x+(1+x)^2$
+\end{tabular}
+}
+
+
+
+\subsection{Équations, racines et signe}
+
+\definition{Racines}{ 
+On appelle \textbf{racines} d'un polynôme $P$ les antécédents de $0$ par le polynôme $P$.
+}
+
+
+
+\exercice{Racines et forme canonique}{
+Déterminer le nombre de racines de chacun des polynômes suivants :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$P_1:x\mapsto 2(x-1)^2+3$ & $P_2:x\mapsto -3(x+1)^2+2$ & $P_3:x\mapsto 5-(x+3)^2$ \\
+	$P_4:x\mapsto \pi(x+6)^2-7$ & $P_5:x\mapsto 4(x-2)^2$ & $P_6:x\mapsto -2(x+1)^2-3$ 
+\end{tabular}
+}
+
+
+
+\theoreme{Discriminant}{
+À tout polynôme $P:x\mapsto ax^2+bx+c$ on associe le nombre $\Delta=b^2-4ac$ appelé discriminant.
+
+$\bullet$ Si $\Delta<0$ alors $P$ n'admet aucune racine.
+
+$\bullet$ Si $\Delta=0$ alors $P$ admet une unique racine $x_0=\frac{-b}{2a}$
+
+$\bullet$ Si $\Delta>0$ alors $P$ admet deux racines : $x_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}$
+}
+
+
+\exercice{Équations}{
+Résoudre dans $\RR$ chacune des équations suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $x^2-6x+5=0$ & b) $x+2x^2-6=0$ & c) $3x^2-2x-2=2x^2-4x+1$ \\
+	d) $(2x+1)^2=-x(5x+2)$ & e) $2x+3=\dfrac{12x}{x+1}$ & f) $3+\dfrac{4x}{1-x}=x$
+\end{tabular}
+}
+
+
+
+\theoreme{Factorisation et signe}{
+Soit $P:x\mapsto ax^2+bx+c$ un polynôme admettant $x_1$ et $x_2$ comme racines.
+
+On peut écrire $P(x)=a(x-x_1)(x-x_2)$
+
+On peut alors déterminer le signe du polynôme $P$ comme décrit ci-après :
+}
+
+
+
+\theoreme{Factorisation et signe}{
+\begin{tikzpicture}
+	\pgfsetstrokecolor{persianblue}
+	\tkzTabInit[color , colorV=lightblue!65!black , colorL=lightblue!65!black , colorT=lightblue , colorC=lightblue , espcl = 2]
+		{$x$ /1 , $P(x)$ \\[5pt] $a<0$  /1.5} {$-\infty$ ,$x_1$ , $x_2$ , $+\infty$}
+	\tkzTabLine{, - , z , + , z , -}
+\end{tikzpicture}  \hspace{5mm}
+\begin{tikzpicture}
+	\pgfsetstrokecolor{persianblue}
+	\tkzTabInit[color , colorV=lightblue!65!black , colorL=lightblue!65!black , colorT=lightblue , colorC=lightblue , espcl = 2]
+		{$x$ /1 , $P(x)$ \\[5pt] $a>0$  /1.5} {$-\infty$ ,$x_1$ , $x_2$ , $+\infty$}
+	\tkzTabLine{, + , z , - , z , +}
+\end{tikzpicture}  \hspace{5mm}
+}
+
+
+
+\exercice{Inéquations}{
+Résoudre dans $\RR$ chacune des inéquations suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	a) $x^2+x-2<0$ & b) $3x-x^2+4\geq0=0$ & c) $2x^2+2x+1\leq0$ 
+\end{tabular}
+}
+
+
+
+\subsection{Problèmes}
+
+\exercice{Jeu, set et match}{
+Dans un match officiel de tennis, le court mesure 23,77m de long et le filet est situé à 91,4cm de hauteur.
+
+Un joueur se trouvant à 2m du fond du court frappe une balle qui décrit une parabole dont l'équation est $y=P(x)$, où $y$ est la hauteur en mètres de la balle exprimée en fonction de $x$ la distance en mètre entre le joueur et la balle.
+
+On admettra que $P(x)=-0,01x^2+0,18x+0,4$
+\begin{enumerate}
+	\item Quelle est la hauteur maximale atteinte par la balle ?
+	\item La balle passera-t-elle au-dessus du filet ?
+	\item La balle touchera-t-elle le sol avant d'être sortie du terrain ?
+	\item Durant combien de mètres la balle a-t-elle une hauteur supérieure ou égale à 1,2m ?
+\end{enumerate}
+
+\textit{Aides de calcul} :
+
+\phantom{} \qquad $P(9)=1,21$ \quad $P(12,885)\approx 1,06$ \quad $18^2=324$ \quad $\sqrt{0,0484}=0,22$
+}
+
+
+
+\exercice{Polynôme à paramètre}{
+Pour $k\in\RR$, on définit le polynôme $P$ par $P(x)=x^2+(k-1)x+1-k$
+\begin{enumerate}
+	\item Démontrer que $k$ ne peut jamais être une racine du polynôme $P$
+	\item \begin{enumerate}
+		\item Démontrer que le discriminant du polynôme $P$ vaut $k^2+2k-3$
+		\item Pour quelle(s) valeur(s) de $k$ le polynôme $P$ admet-il deux racines distinctes ?
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Justifier que $P$ atteint son minimum en $\alpha=\frac{1-k}{2}$
+		\item Montrer que $P(\alpha)=\frac{1}{4}(-k^2-2k+3)$
+		\item Quelle est la valeur maximale que peut prendre le minimum du polynôme $P$ ?
+	\end{enumerate}
+\end{enumerate}
+}
+
+
+
+\section{Probabilités conditionnelles}
+
+\subsection{Probabilités totales}
+
+\definition{Partition de l'univers}{
+\begin{minipage}{0.5\linewidth} \restoreskip \vspace{0pt}
+	Soit un univers $\Omega$
+	
+	On dit que les évènements $(A_1~;~A_2~;~\ldots~;~A_n)$ forment une \textbf{partition} de l'univers $\Omega$ si :
+	
+	\phantom{}\qquad $i)$ $A_1 \cup A_2 \cup \ldots \cup A_n = \Omega$ \\
+	\phantom{}\qquad $ii)$ $A_i \cap A_j = \emptyset$ \quad $\forall i\neq j$
+	
+	Moins formellement, il faut que les évènements $(A_1~;~A_2~;~\ldots~;~A_n)$ recouvrent $\Omega$ sans se chevaucher comme représenté sur le schéma :
+\end{minipage} \hspace{10mm}
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}
+		\draw[line width=2pt] (0,0) rectangle (6,4) ;
+		\draw[line width=1.5pt , fill = red , fill opacity = 0.15]  (0,2) arc (90:0:2) -- (0,0) -- cycle ;
+		\draw[line width=1.5pt , fill = blue , fill opacity = 0.15] (1.414,1.414) arc (45:90:2) -- (0,4) - - (3,4) -- cycle ;
+		\draw[line width=1.5pt , fill = yellow , fill opacity = 0.15] (1.414,1.414) arc (45:0:2) -- (4,0) -- (4,1) -- cycle ;
+		\draw[line width=1.5pt , fill = green , fill opacity = 0.15] (4,0) -- (6,0) -- (6,4) -- (4,1) -- cycle ;
+		\draw[line width=1.5pt , fill = gray , fill opacity = 0.25] (1.414,1.414) -- (3,4) -- (5,2.5) -- (4,1) -- cycle;
+		\draw[line width=1.5pt , fill = orange , fill opacity = 0.15] (3,4) -- (5,2.5) -- (6,4) -- cycle;
+		
+		\draw[line width=2pt] (6,1.5) -- (7,2.5) node[right] {$\Omega$} ;
+		\draw (0.75,0.75) node {$A_1$} ;
+		\draw (1,3) node {$A_2$} ;
+		\draw (3,0.5) node {$A_3$} ;
+		\draw (3.25,2.25) node {$A_4$} ;
+		\draw (5,1.25) node {$A_5$} ;
+		\draw (4.75,3.5) node {$A_6$} ;
+	\end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\exercice{Partitionnement}{
+On lancé un dé parfaitement équilibré à 10 faces et on considère $\Omega$ l'univers associé à cette expérience aléatoire. \\
+On considère les évènements suivants :\\
+\quad $A$ : \og Le  numéro obtenu est un nombre premier \fg \\
+\quad $B$ : \og Le  numéro obtenu est supérieur ou égal à 8 \fg \\
+\quad $C$ : \og Le  numéro obtenu est strictement inférieur à 4 \fg
+\begin{enumerate}
+	\item Les évènements $A$, $B$ et $C$ forment-ils une partition de l'univers $\Omega$ ?
+	\item Décrire un évènement $D$ de sorte que $(A,B,D)$ soit une partition de $\Omega$
+\end{enumerate}
+}
+
+
+\theoreme{Formule des probabilités totales}{
+Soient $(A_1~;~A_2~;~\ldots~;~A_n)$ formant une partition de l'univers. Soit $B$ un évènement quelconque.
+
+On peut calculer la probabilité de l'évènement $B$ par la formule : \\
+\phantom{}\hspace{25mm} $ \PP(B) = \PP(A_1 \cap B) + \PP(A_2 \cap B) + \ldots + \PP(A_n \cap B) \left( = \sommek{0}{n} \PP(A_k \cap B)\right) $
+}
+
+
+\remarque{%
+Les évènements $A$ et $\barre{A}$ formant toujours une partition de l'univers, on a : $\PP(B)=\PP(A \cap B) + \PP(\barre{A} \cap B)$
+}
+
+
+\exercice{Probabilités totales}{%
+\begin{enumerate}
+	\item Dans le jardin de Mona il y a 40\% d'iris et les autres fleurs sont toutes des tulipes. La moitié des iris sont jaunes, contre seulement un quart des tulipes. \\
+	Si l'on cueille une fleur au hasard dans le jardin de Mona, quelle est la probabilité pour qu'elle soit jaune ?
+	\item Dans ma classe il y a 60\% de filles, dont 25\% sont blondes. Sachant qu'il  y a au total 27\% d'élèves blonds dans ma classe, quelle est la probabilité qu'un garçon choisi au hasard soit blond ?
+\end{enumerate}
+}
+
+
+
+\subsection{Probabilités conditionnelles}
+
+\definition{Probabilité conditionnelle}{%
+\begin{minipage}{0.5\linewidth} \restoreskip \vspace{0pt}
+On désigne par $P_A(B)$ la probabilité de l'évènement $B$ sachant de l'évènement $A$ est réalisé.
+
+On le prononce \og probabilité de $B$ sachant $A$ \fg
+
+On peut peut placer ces probabilités conditionnelles sur un arbre pondéré de probabilités comme ci-contre :
+
+$P_A(B)=\dfrac{P(A \cap B)}{P(A)}$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[grow=right, scale = 0.8 ,
+	level 1/.style={level distance=4cm, sibling distance=3cm},
+	level 2/.style={level distance=3cm, sibling distance=2cm},
+	level 3/.style={level distance=2cm, sibling distance=2cm}
+	]
+
+		\node {$\Omega$}
+		child {node {$\barre{A}$} 
+			child {node {$\barre{B}$}
+				child {node {$\barre{A}\cap\barre{B}$}
+				} edge from parent node[below] {$P_{\barre{A}}(\barre{B})$}
+			} 
+			child {node {$B$}
+				child {node {$\barre{A}\cap B$}
+				} edge from parent node[above] {$P_{\barre{A}}(B)$}
+			} edge from parent node[below] {$P(\barre{A})$}
+		}
+		child {node {$A$}
+			child {node {$\barre{B}$}
+				child {node {$A \cap \barre{B}$}
+				} edge from parent node[below] {$P_A(\barre{B})$}
+			}
+    		child{node {$B$}
+    			child {node {$A \cap B$}
+				} edge from parent node[above] {$P_A(B)$}
+    		} 	edge from parent node[above] {$P(A)$}
+    	};
+	\end{tikzpicture}
+\end{minipage}
+}
+
+
+\exercice{Application directe}{%
+\begin{enumerate} \setlength{\itemsep}{-3pt}
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{2},P(B)=\frac{1}{4}$ et $P(A\cap B)=\frac{1}{10}$ \\
+    Calculer $P_{A}(B)$ et $P_{B}(A)$.
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{2},P(B)=\frac{1}{3}$ et $P(A\cup B)=\frac{2}{3}$ \\
+    Calculer $P(A\cap B),P_{A}(B)$ et $P_{B}(A)$.
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{4},P(A\cup B)=\frac{2}{3}$ et $P(A\cap B)=\frac{1}{6}$ \\
+    Calculer $P_{A}(B),P(B)$ et $P_{B}(A)$.
+    \item $A$ et $B$ sont tels que : $P(A)=\frac{1}{4},P(A\cup B)=\frac{2}{5}$ et $P_{A}(B)=\frac{1}{3}$ \\
+    Calculer $P(A\cap B), P(B) $ et $P_{B}(A)$.
+\end{enumerate}
+}
+
+
+\exercice{Des dés}{%
+Un lot de cent dés contient vingt dés truqués. Pour un dé truqué, la probabilité de tomber sur un 6 est de $0,5$
+
+On lance un dé du lot et on obtient 6. Quelle est la probabilité que ce dé soit truqué ?
+}
+
+
+
+\exercice{Dépistage}{%
+Une maladie touche 1$\%$ de la population. Les tests de dépistage pour cette maladie sont fiables à 95$\%$ pour détecter les individus infectés, et à 90$\%$ pour détecter les individus sains. \\
+On effectue un test de dépistage sur une personne au hasard dans la population.
+\begin{enumerate} \setlength{\itemsep}{-3pt}
+    \item Quelle est la probabilité que son test soit positif ?
+    \item \begin{enumerate}
+    	\item Quelle est la probabilité d'un faux positif ? (L'individu est sain alors que son test est positif)
+    	\item Ce résultat semble-t-il raisonnable ? Permet-il de conclure quant à la fiabilité du test ?
+	\end{enumerate}     
+    \item \begin{enumerate}
+    	\item Quelle est la probabilité que l'individu soit infecté alors que le test a donné un résultat négatif ?
+    	\item Ce résultat est-il rassurant quant à la fiabilité du test de dépistage ?
+	\end{enumerate}     
+\end{enumerate}
+
+\textit{Aides de calcul} : 
+
+\phantom{} \qquad $\dfrac{0,099}{0,1085} \approx 0,912$ \qquad $\dfrac{0,0005}{0,8915} \approx 0,000561$
+}
+
+
+
+\exercice{Course lente sous pétales noirs}{%
+Dans une forêt composée de 30$\%$ d'aulnes, de 50$\%$ de bouleaux et de 20$\%$ de chênes, un incendie se déclare, réduisant en cendres 60$\%$ des chênes, 70$\%$ des bouleaux et 80$\%$ des aulnes.
+
+Le lendemain de l'incendie, Aïko fait son footing habituel dans cette forêt et s'accroche à la branche d'un arbre. Quelle est la probabilité qu'il s'agisse d'un chêne ?
+}
+
+
+\subsection{Indépendance}
+
+\definition{Évènements indépendants}{%
+On dit que deux évènements $A$ et $B$ sont \textbf{indépendants} si la réalisation de l'un n'a pas d'influence sur la réalisation de l'autre.
+
+Autrement dit si $P_A(B)=P(B)$ \quad et \quad $P_B(A)=P(A)$
+}
+
+
+\theoreme{Indépendance}{%
+Deux évènements $A$ et $B$ sont indépendants si et seulement si $P(A \cap B)=P(A) \times P(B)$
+}
+
+
+\exercice{Feux tricolores}{%
+Sur la route de son travail, Pierrick rencontre deux feux tricolores. Il a déterminé que la probabilité de devoir d'arrêter au premier feu est de $\frac{1}{3}$ et que celle de devoir s'arrêter au second est de $\frac{2}{5}$. 
+
+Sachant qu'il y a une probabilité de $\frac{1}{2}$ de devoir s'arrêter à au moins un des deux feux tricolores, peut-on affirmer qu'ils fonctionnent indépendamment l'un de l'autre ?
+}
+
+
+
+\subsection{Problèmes}
+
+\exercice{Des formes et des couleurs}{%
+On considère $x$ un nombre réel de l'intervalle $[0;80]$ 
+
+Une urne contient 100 cubes en bois dont 60 sont bleus et les autres sont rouges. 
+
+Parmi les cubes bleus, 40$\%$ ont leurs faces marquées d'un cercle, 20$\%$ ont leur faces marquées d'un losange, et les autres sont marqués d'une étoile. 
+
+Parmi les cubes rouges, 20$\%$ ont leurs faces marquées d'un cercle, $x\%$ ont leur faces marquées d'un losange, et les autres sont marqués d'une étoile.
+
+On tire au hasard un cube dans l'urne.
+\begin{enumerate}
+    \item Montrer que la probabilité de tirer un cube marqué d'un losange est de $0,12 + 0,004x$
+    \item Déterminer une valeur de $x$ pour laquelle la probabilité de tirer un cube marqué d'un losange est égale à celle de tirer un cube marqué d'une étoile.
+    \item Déterminer une valeur de $x$ pour laquelle les évènements \og Tirer un cube bleu \fg ~et \og Tirer un cube marqué d'un losange\fg~ sont indépendants.
+    \item On suppose dans cette question que $x=50$ \\
+    Le cube tiré est marqué d'un losange, quelle est la probabilité qu'il soit bleu ?
+\end{enumerate}
+}
+
+
+
+\section{Dérivation}
+
+\subsection{Nombre dérivé et tangente}
+
+\definition{Nombre dérivé}{
+\begin{minipage}{0.65\linewidth} \restoreskip
+	Soit $f$ une fonction et $\Ccal_f$ sa courbe représentative dans un repère orthonormé. 
+	
+	On définit le 	\textbf{nombre dérivé} de $f$ en $a$ comme le coefficient directeur de la tangente à $\Ccal_f$ 
+	
+	On le note $f'(a)$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+	\begin{tikzpicture}[scale=0.75]
+		\begin{axis}[
+		height = 6cm , width = 9cm ,
+        xmin=-1 , xmax=4 , ymin=-1 , ymax=3 ,
+        ytick distance=1 , xtick distance=1 ,
+        axis lines=middle , grid=major,
+        ticklabel style = {opacity=0}, enlargelimits = { abs = 0.2 }
+        ]
+            
+        	\addplot[line width=2pt,samples=100,domain=-1:4]
+        		{8*x/(x^2+2)-1} ;
+        		
+        	\addplot[line width=2pt,samples=100,domain=-1:4 , color=red!80!black]
+        		{(8/9)*x+7/9} ;
+
+        	\draw[dashed, color=red!80!black] (1,0) node[below] {$a$} -- (1,5/3) node {$\bullet$} -- (0,5/3) node[left] {$f(a)$};
+        	\draw[color=red!80!black] (-0.75,-0.5) node {$T_a$};
+        	\draw (3.5,1.5) node {$\Ccal_f$};
+            
+        \end{axis}
+	\end{tikzpicture}
+\end{minipage}
+}
+
+
+\theoreme{Calcul du nombre dérivé}{
+    Pour calculer le nombre dérivé de $f$ en $a$ on utilise la limite du taux d'accroissement suivant : \\    
+    \phantom{}\hspace{6.5cm} $f'(a)=\limite{h\to0} \dfrac{f(a+h)-f(a)}{h}$
+}
+
+
+\exercice{Nombre dérivé}{
+On considère les fonctions $f:x\mapsto x^2+x$ et $g:x\mapsto \frac{1+2x}{x}$
+
+Calculer les nombres dérivés $f'(1)$ et $g'(1)$ en utilisant la limite du taux d'accroissement.
+}
+
+
+\theoreme{Équation réduite de la tangente}{
+    Soit $f$  une fonction et $\Ccal_f$ sa courbe représentative dans un repère orthonormé.\\
+    L'\textbf{équation réduite de la tangente} à $\Ccal_f$ au point d'abscisse $a$ est alors : \\
+    \phantom{}\hspace{5cm} $T_a:y=f'(a)(x-a)+f(a)$
+}
+
+
+
+\exercice{Étude graphique}{
+\begin{minipage}{0.5\linewidth} \restoreskip
+On définit la fonction $f$ sur $[-6;6]$ et on considère $\Ccal$ sa courbe représentative dans le repère ci-contre.
+
+On trace également $T$ et $\Delta$ deux tangentes à $\Ccal$.
+\begin{enumerate}
+	\item Quelle est la valeur de $f'(-3)$ ?
+	\item Déterminer l'équation réduite de $T$
+	\item Combien vaut $f'(0)$ ?
+	\item Déterminer par le calcul les coordonnées du point d'intersection entre $T$ et $\Delta$
+	\item Combien de réels $a$ vérifient $f'(a)=0$ ?
+	\item Peut-on affirmer que $f(1)\geq f'(1)$ ?
+\end{enumerate}
+\end{minipage}\hspace{7.5mm}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture}
+	\begin{axis}[
+	height = 8cm , width = 10cm , 
+	xmin=-6,xmax=6,ymin=-2,ymax=7, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.2 }
+	]
+	
+	\addplot[domain=-6:6,line width=2pt,samples=100]
+		{(37/504)*x^3-(2/9)*x^2-(93/72)*x+167/42};
+	\addplot[domain=-6:6,line width=1.5pt,color=red!80!black,samples=100]
+		{4-4*x/3};
+	\addplot[domain=-6:6,line width=1.5pt,color=red!80!black,samples=100]
+		{2*x+10};
+		
+	\draw[color=red!80!black] (-3,4) node {\small$\bullet$};
+	\draw[color=red!80!black] (4.5,-1) node {\small$\Delta$};
+	\draw[color=red!80!black] (0,4) node {\small$\bullet$};
+	\draw[color=red!80!black] (-5.2,1.1) node {\small $T$};
+	\end{axis}
+\end{tikzpicture}
+\end{minipage}
+}
+
+
+
+On rappelle dans les tableaux ci-dessous les formules à maîtriser afin de dériver la plupart des fonctions classiques :
+
+\begin{minipage}[t]{0.45\linewidth}
+\center
+\renewcommand{\arraystretch}{1.54}
+\begin{tabular}{ | c | c | c |}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Fonctions usuelles}} \\ \hline
+    $f(x)$ & $f'(x)$ & Conditions \\ \hline \hline
+    $k$ & $0$ & $k\in\RR$ \\ \hline
+    $x$ & $1$& $\xR$\\ \hline
+    $x^{2}$ & $2x$& $\xR$\\ \hline
+    $x^{n}$ & $nx^{n-1}$ & $\xR , n\in \ZZ$\\ \hline
+    $\frac{1}{x}$ & $-\frac{1}{x^{2}}$ & $\xR^{*}$ \\ \hline
+    $\frac{1}{x^{n}}$ & $-\frac{n}{x^{n+1}}$ & $\xR_{+}^{*}$ \\ \hline
+    $\sqrt{x}$ & $\frac{1}{2\sqrt{x}}$ & $\xR^{*}_{+}$ \\ \hline
+    \end{tabular}
+
+\end{minipage} \hfill
+\begin{minipage}[t]{0.55\linewidth}
+\center
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{ | c | c | c |}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Fonctions composées}} \\ \hline
+    $f(x)$ & $f'(x)$ & Conditions \\ \hline \hline
+    $k\times u$ & $k\times u'$ & $k\in\RR$ \\ \hline
+    $u+v$ & $u'+v'$ & \\ \hline
+    $u\times v$ & $u'v+uv'$& \\ \hline
+    $\frac{u}{v}$ & $\frac{u'v-uv'}{v^{2}}$& $v\neq 0$\\ \hline
+    $\frac{1}{u}$ & $-\frac{u'}{u^2}$ & $u\neq0$ \\ \hline
+    $u^{n}$ & $n\times u'\times  u^{n-1}$ & $n\in \ZZ$\\ \hline
+    $\sqrt{u}$ & $\frac{u'}{2\sqrt{u}}$ & $u > 0$ \\ \hline
+\end{tabular} \\[5pt]
+Avec $u$ et $v$ des fonctions réelles
+\end{minipage}
+
+
+
+\exercice{Dérivation}{
+Dériver puis simplifier au maximum chacune des fonctions suivantes : \\
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    $f_1(x)=3x^{5}-7x^{2}$ & $f_2(x)=(2+6x)^{2}$ & $f_3(x)=(x^{3}-2)(x^2+1)$ \\
+    $f_4(x)=4x-2\sqrt{x}$ & $f_5(x)=\frac{3}{x} + \frac{x}{3}$ & $f_6(x)=x\sqrt{x}$ \\
+    $f_7(x)=\dfrac{1}{x+x^3}$ & $f_8(x)=\dfrac{x}{1+x^{2}}$ & $f_9(x)=\dfrac{x^2-x^3}{1+x}$
+\end{tabular}
+}
+
+
+
+\exercice{À la recherche de la tangente perdue}{
+On considère la fonction $f:x\mapsto1+x+x^2$ définie sur $\RR$ et on note $\Ccal_f$ sa courbe représentative dans un repère orthonormé.
+
+La courbe $\Ccal_f$ admet-elle une tangente passant par l'origine du repère ?\\
+Si  oui, donner son équation et son point de tangence.
+}
+
+
+
+\subsection{Dérivation et application}
+
+\theoreme{Variations}{
+Soit $f$ une fonction définie et dérivable sur $[a;b]$
+
+$f$ est croissante sur $[a;b]$ si et seulement si $f'(x)\geq0 \quad\forall x\in[a;b]$
+
+$f$ est décroissante sur $[a;b]$ si et seulement si $f'(x)\leq0 \quad\forall x\in[a;b]$
+}
+
+L'on comprend alors de par cette propriété que pour déterminer les variations d'une fonction il est nécessaire d'étudier le signe de sa fonction dérivée.
+
+Il semble donc nécessaire de faire un rappel quant aux études de signes :
+
+Pour dresser le tableau de signe d'une expression, on la décompose en facteurs simples (Souvent à l'aide d'une factorisation) puis on étudie leurs signes séparément.
+
+\exemple{Résoudre $\dfrac{2x^2-9x+7}{x-3}\geq0$}{
+    On commence par étudier le signe du numérateur.\\
+    À l'aide du discriminant, on voit que les racines de $2x^2-9x+7$ sont $1$ et $\frac{7}{2}$\\
+    Comme ce polynôme a un coefficient dominant positif, il est négatif entre ses racines.\\
+    Le signe de $x-3$ s'étudie facilement.\\
+    On peut donc remplir le tableau de signes suivant :\\[5pt]
+    \begin{tikzpicture}
+        \tkzTabInit[lgt=3,espcl=3]{$x$/1, $2x^2-9x+7$/1, $x-3$/1, $\dfrac{2x^2-9x+7}{x-3}$/2}{$-\infty$, $1$, $3$, $\frac{7}{2}$ , $+\infty$}
+        \tkzTabLine{,+,z,-,z,-,t,+,}
+        \tkzTabLine{,-,t,-,t,+,z,+,}
+        \tkzTabLine{,-,z,+,d,-,z,+,}
+    \end{tikzpicture}
+    
+    Ainsi, l'ensemble des solutions de notre inéquation est $S=\left[1~;~3\right[\cup\left]\frac{7}{2};+\infty\right[$ 
+}
+
+
+
+\exercice{Tableaux de variations}{%
+Répondre aux questions suivantes pour chacune des fonctions du tableau :
+\begin{enumerate} \setlength{\itemsep}{-3pt}
+	\item Déterminer le domaine de définition de $f$
+	\item Retrouver l'expression de $f'(x)$ donnée dans le tableau.
+	\item Dresser le tableau de variations de la fonction $f$
+\end{enumerate}
+
+\renewcommand{\arraystretch}{2.25}
+\begin{tabular}{| P{0.27\linewidth} | P{0.38\linewidth} | P{0.27\linewidth} |} \hline
+	$f_1(x)= \frac{x^2+3}{x+1}$ & $f_2(x)= 3x^4-8x^3-6x^2+24x-10$ & $f_3(x)=\sqrt{x}(6-x)$ \\ \hline
+	${f_1}'(x)=\frac{x^2+2x-3}{(x+1)^2}$ & ${f_2}'(x)=12(x+1)(x-1)(x-2)$ & ${f_3}'(x)=\frac{6-3x}{2\sqrt{x}}$ \\ \hline
+\end{tabular}
+}
+
+
+
+
+\exercice{Représentation graphique}{
+Pour tout $\xR$ on pose $f(x)=\frac{x^2-6x+5}{x^2+2}$
+\begin{enumerate} \setlength{\itemsep}{-3pt}
+	\item Étudier le signe de la fonction $f$
+	\item Montrer que $f'(x)=\frac{6(x^2-x-2)}{(x^2+2)^2}$
+	\item Dresser le tableau de variations de la fonction $f$
+	\item Donner l'équation réduite de $T_1$ la tangente à $\Ccal_f$ au point d'abscisse 1
+	\item Dans un repère orthonormé, tracer une courbe s'approchant de $\Ccal_f$. On fera apparaître chaque étape de construction.
+\end{enumerate}
+}
+
+
+
+
+\section{Suites numériques}
+
+\subsection{Modes de définition}
+
+Une suite numérique est une collection infinie de nombres que l'on peut indexer à l'aide des entiers naturels. Il existe deux manières de définir de tels objets mathématiques :
+
+\definition{Génération d'une suite}{
+Une suite numérique peut être définie de deux manières : 
+\begin{enumerate}
+    \item[$\bullet$] \textbf{Génération explicite} : chaque terme est défini directement en fonction de son indice $n$
+    \item[$\bullet$] \textbf{Génération par récurrence} : chaque terme est défini à l'aide d'une relation faisant intervenir les termes précédents.
+\end{enumerate}
+}
+\exemple{Génération explicite}{
+On pose $u_n=2n+1$\\[5pt]
+La suite $\Un$ est définie de manière explicite, et on peut calculer quelques-uns de ses termes :\\[5pt]
+$u_0=2\times0+1=1\qquad u_1=2\times1+1=3\qquad u_5=2\times5+1=11\qquad u_{100}=2\times100+1=201$
+}
+\exemple{Génération par récurrence}{ \restoreskip
+On pose $\defsuite{u_0=0}{2u_n+1}$
+
+La suite $\Un$ est définie par récurrence et on peut calculer ses premiers termes :\\[5pt]
+$u_1=2\times u_0+1=1\qquad u_2=2\times u_1+1=3\qquad u_3=2\times u_2+1=7 \qquad u_4=2\times u_3+1=15$
+}
+
+
+
+\exercice{Modélisation}{%
+ Pour chacune des situations suivantes, proposer une suite qui permet de la modéliser :
+\begin{enumerate} \setlength{\itemsep}{-3pt}
+    \item Dans une tube a essai on place 5 bactéries. Le nombre de bactéries double à chaque heure.
+    \item Un gisement de pétrole a produit 60000 barils en l'an 2000 et sa production augmente de 1500 barils chaque année.
+    \item Pour la naissance de leur fille, M et Mme Rakotobe placent 1000\euro\, sur un compte bancaire à taux d'intérêts annuels de $5\%$
+    \item Dans un jeu vidéo une guilde se forme avec 25 membres. Chaque mois la guilde parvient à recruter 10 nouveaux membres, mais 20\% des joueurs présents arrêtent de jouer car ils préfèrent utiliser leur temps libre pour résoudre des problèmes de mathématiques.
+\end{enumerate}
+}
+
+
+\exercice{Ré-expression}{
+\begin{enumerate} \setlength{\itemsep}{-3pt}
+    \item Soit une suite $(u_n)$ vérifiant la relation de récurrence $u_{n+1} = 2u_n + 1$\\
+    Exprimer $u_{n+2}$ en fonction de $u_n$
+    \item Soit une suite $(u_n)$ vérifiant la relation de récurrence $u_{n+1}=\frac{1}{1-u_n}$\\
+    Exprimer $u_{n+3}$ en fonction de $u_n$
+\end{enumerate}
+}
+
+
+
+\subsection{Variations et limites}
+
+À l'instar d'une fonction, une suite peut être croissante ou décroissante (Ou bien aucun des deux !) \\
+On dira d'une suite $(u_n)$ qu'elle est croissante si chacun de ses termes est supérieur au terme précédent.
+
+\definition{Monotonie}{%
+On dit que la suite $(u_n)$ est \textbf{croissante} si $u_{n+1}\geq u_n$ pour tout $\nN$  \\[2pt]
+À l'inverse, on dira que $(u_n)$ est \textbf{décroissante} si $u_{n+1}\leq u_n$ pour tout $\nN$
+
+}
+
+
+\methode{Variations d'une suite}{
+Pour déterminer les variations d'une suite $(u_n)$, on calcule la différence $u_{n+1}-u_n$ \\[3pt]
+Si $u_{n+1}-u_n \geq 0$, alors la suite $(u_n)$ est croissante.\\
+Si $u_{n+1}-u_n \leq 0$, alors la suite $(u_n)$ est décroissante.
+}
+
+
+\exercice{Variations}{
+Déterminer le sens de variation des suites ci-dessous :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    a) $u_n=n^2+3n$ & b) $u_n=\dfrac{n+2}{n+1}$ & c) $u_n=\dfrac{n+1}{5^{n}}$ \\
+    d) $ u_n=n^2-15n-3$ & e) $u_n=3^n-2n+1$  & f) $u_n=n^3-10n^2-19n$
+\end{tabular}
+}
+
+
+
+\definition{Convergence}{%
+Si les termes de la suite $(u_n)$ se rapprochent d'une valeur $\ell$ lorsque $n$ devient grand, on dira que $(u_n)$ \textbf{converge} vers $\ell$ \\[2pt]
+\qquad On note alors $\limn u_n = \ell$
+}
+
+
+
+\definition{Limite infinie}{%
+Si les termes de la suite $(u_n)$ deviennent de plus en plus grands lorsque $n$ devient grand, on dira que $(u_n)$ \textbf{diverge} vers $+\infty$ \\[2pt]
+\qquad On note alors $\limn u_n = +\infty$
+}
+
+
+
+\theoreme{Représentation graphique}{
+\begin{minipage}{0.5\linewidth} \restoreskip
+	On considère une fonction $f$ définie sur $\RR$.
+
+	On définit la suite $(u_n)$ par $\begin{cases} u_0\in\RR \\ u_{n+1}=f(u_n) \end{cases}$
+	
+	On peut représenter graphiquement les termes successifs de la suite $(u_n)$ sur l'axe des abscisse d'un repère en utilisant la courbe représentative de la fonction $f$ ainsi que la droite d'équation $y=x$
+	
+	Un exemple a été représenté ci-contre :
+\end{minipage}  \hspace{5mm}
+\begin{minipage}{0.45\linewidth}
+	\begin{tikzpicture}
+		\begin{axis}[clip=false,
+		height = 6.5cm , width = 10cm , 
+		xmin=0 , xmax=5.2 , ymin=0 , ymax=5.2 , xtick distance = 1 , ytick distance = 1,
+		grid=none , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+		ticklabel style = {opacity = 0}, enlargelimits = { abs = 0.2 }
+		]
+			
+			\draw[line width = 1.5pt , color=blue!80!black] (0,0) -- (0,1) -- (1,1) -- (1,2.386) -- (2.386,2.386) -- (2.386,3.439) -- (3.439,3.439) -- (3.439,3.981) -- (3.981,3.981) -- (3.981,4.211) -- (4.211,4.211) -- (4.211,4.302) -- (4.302,4.302) ;
+			
+			\draw[line width = 1.5pt , color=blue!80!black] (0,0) node[below right] {$u_0$} ;
+			\draw[line width = 1.5pt , color=blue!80!black , dashed] (1,1) -- (1,0) node[below] {$u_1$};
+			\draw[line width = 1.5pt , color=blue!80!black , dashed] (2.386,2.386) -- (2.386,0) node[below] {$u_2$} ;
+			\draw[line width = 1.5pt , color=blue!80!black , dashed] (3.439,3.439) -- (3.439,0) node[below] {$u_3$} ;
+			\draw[line width = 1.5pt , color=blue!80!black , dashed] (3.981,3.981) -- (3.981,0) node[below ] {$u_4$} ;
+			\draw[line width = 1.5pt , color=blue!80!black , dashed] (4.211,4.211) -- (4.211,0) node[below right] {$u_5$} ;
+			
+			\addplot[color=red!80!black , line width = 2pt , samples =100 , domain=0:5.2]
+				{2*ln(1+x)+1};
+			\draw[line width = 1pt] (0,0) -- (5.2,5.2) ;
+			
+			\draw[color=red!80!black] (1.5,3.5) node{$\Ccal_f$} ;
+			\draw (4.5,5) node {$y=x$} ;
+						
+		\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+
+
+}
+
+
+
+\exercice{Conjectures graphiques}{
+On définit les suites $(u_n)$ et $(v_n)$ par : $\begin{cases}u_0=-1\\u_{n+1}=f(u_n)\end{cases}$ \quad et \quad
+$\begin{cases}v_0=\frac{1}{2}\\v_{n+1}=g(v_n)\end{cases}$
+
+\begin{enumerate}
+	\item Représenter les premiers termes des suites $(u_n)$ et $(v_n)$ à l'aide des graphiques ci-contre :
+	\item Conjecturer la monotonie des suites $(u_n)$ et $(v_n)$
+	\item Conjecture la limite éventuelle des suites $(u_n)$ et $(v_n)$
+\end{enumerate}
+
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.25]
+	\begin{axis}[
+	xmin=-2,xmax=8,ymin=-1,ymax=8, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.1 }
+	]
+	
+		\addplot[samples=100,domain=-3:9,color=red!80!black,line width = 1.5pt]
+			{sqrt(5*x+14)};
+		\addplot[samples=100,domain=-3:9,color=black]
+			{x};
+		
+		\draw[color=red!80!black] (3.5,6.5) node {\small $\Ccal_f$};
+		\draw[color=black] (3.5,2.5) node {\small $y=x$};
+	\end{axis}
+	\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.25]
+	\begin{axis}[
+	xmin=0,xmax=7,ymin=0,ymax=7, xtick distance = 1, ytick distance = 1,
+	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.1 }
+	]
+	
+		\addplot[samples=100,domain=0:9,color=red!80!black,line width = 1.5pt]
+			{(2+x)/x};
+		\addplot[samples=100,domain=-3:9,color=black]
+			{x};
+			
+		\draw[color=red!80!black] (0.5,2.5) node {\small $\Ccal_g$};
+		\draw[color=black] (5.5,4.5) node {\small $y=x$};
+	\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+}
+
+
+\exercice{Analyse complète}{%
+On considère la suite $(u_n)$ définie par $\begin{cases} u_0=9 \\ u_{n+1}=\frac{1}{2} \left( u_n + \frac{9}{u_n} \right)\end{cases}$
+
+On définit la fonction $f$ sur $]0~;~+\infty[$ par $f(x)=\frac{1}{2}\left(x+\frac{9}{x}\right)$
+	
+Sa courbe représentative a été tracée dans le repère ci-après :
+
+\begin{minipage}{0.55\linewidth}
+	\begin{enumerate}
+		\item Calculer la valeur de $u_1$ et $u_2$
+		\item \begin{enumerate}
+			\item Placer les 4 premiers termes de la suite $(u_n)$ sur l'axe des abscisses du repère.
+			\item Conjecturer le sens de variation, le signe et la limite éventuelle de la suite $(u_n)$
+		\end{enumerate}
+		\item On admettra que la suite $(u_n)$ est strictement positive
+		\begin{enumerate}
+			\item Montrer que $u_{n+1}-3=\frac{(u_n-3)^2}{2u_n}$
+			\item En déduire que $u_n \geq 3$ \quad pour tout $\nN$
+		\end{enumerate}
+		\item \begin{enumerate}
+			\item Montrer que pour tout $\nN$, \\
+			$u_{n+1}-u_n=\frac{(3+u_n)(3-u_n)}{2u_n}$
+			\item En déduire que la suite $(u_n)$ est décroissante.
+		\end{enumerate}
+	\end{enumerate}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}
+		\begin{axis}[
+		xmin=2 , xmax=9 , ymin=2 , ymax=9, xtick distance = 1, ytick distance = 1,
+		grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
+		ticklabel style = {font = \tiny }
+		]
+	
+		\addplot[samples=100,domain=0:9,color=red!80!black,line width = 1.5pt]
+			{0.5*(x+9/x)};
+		\addplot[samples=100,domain=-3:9,color=black]
+			{x};
+			
+		\draw[color=red!80!black] (7.5,3.5) node {\small $\Ccal_f$};
+		\draw[color=black] (5.5,6.5) node {\small $y=x$};
+	\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+}
+
+
+
+\section{Trigonométrie}
+
+\subsection{Sur le cercle trigonométrique}
+
+\begin{minipage}{0.6\linewidth} \restoreskip
+    La trigonométrie est la branche des mathématiques traitant de l'étude des angles. Son approche moderne est basée sur le cercle de rayon 1 centré en l'origine d'un repère orthonormé que l'on appelle \textbf{cercle trigonométrique}.
+    
+    Ce cercle peut être parcouru dans les deux sens, ce qui permet d'étendre la notion d'angle à des valeurs négatives.
+
+    Il est particulièrement pratique pour interpréter graphiquement les valeurs des sinus et cosinus d'angles.
+\end{minipage}\hfill
+\begin{minipage}{0.35\linewidth}
+    \begin{tikzpicture}[scale=2.5]
+        \draw[-Stealth] (0,-1.2) -- (0,1.2) ;
+        \draw[-Stealth] (-1.2,0) -- (1.2,0) ;
+        \draw[line width=1.5pt] (0,0) circle[radius=1] ;
+        \draw[line width=1.5pt,Stealth-,color=newblue] (0.6,1) arc (60 : 30 : 1.2) node[above] {\rotatebox{-45}{Sens direct}};
+        \draw[line width=1.5pt,Stealth-,color=newred] (0.6,-1) arc (-60 : -30 : 1.2) node[below] {\rotatebox{45}{Sens indirect}};
+        \draw[dashed] (-0.6,0) node[below] {$\cos(\theta)$} -- (-0.6,0.8) node{x} node[above left] {$\theta$} -- (0,0.8) node[right] {$\sin(\theta)$} ;
+    \end{tikzpicture}
+\end{minipage}
+
+
+\theoreme{Valeurs remarquables}{
+\begin{minipage}{0.6\linewidth}
+    Certains angles sont à connaître et à savoir placer sur le cercle trigonométrique.\\[5pt]
+    Grâce à un habile jeu de symétrie, il n'est nécessaire d'apprendre que le quadrant principal représenté ci-contre.
+\end{minipage} \hspace{1cm}
+\begin{minipage}{0.35\linewidth}
+\begin{tikzpicture}[scale=4]
+    \draw[line width = 1.5pt] (0,1) arc (90:0:1);
+    \draw[line width = 1.5pt , -Stealth] (0,0) node[below left] {$0$} --(0,1.1) node[above] {$\sin(\theta)$};
+    \draw[line width = 1.5pt , -Stealth] (0,0)--(1.1,0) node[right] {$\cos(\theta)$};
+    \draw[dashed] (0.5,0) node[below] {$\frac{1}{2}$} -- (0.5,0.866) node[above right] {$\frac{\pi}{3}$} -- (0,0.866) node[left] {$\frac{\sqrt{3}}{2}$};
+    \draw[dashed] (0.707,0) node[below] {$\frac{\sqrt{2}}{2}$} -- (0.707,0.707) node[above right] {$\frac{\pi}{4}$} -- (0,0.707) node[left] {$\frac{\sqrt{2}}{2}$};
+    \draw[dashed] (0.866,0) node[below] {$\frac{\sqrt{3}}{2}$} -- (0.866,0.5) node[above right] {$\frac{\pi}{6}$} -- (0,0.5) node[left] {$\frac{1}{2}$};
+\end{tikzpicture}
+\end{minipage}
+}
+
+
+\exercice{Sinus, cosinus et tangente}{
+Déterminer la valeur de $\sin(\theta)$, de $\cos(\theta)$ et de $\tan(\theta)$ pour $\theta$ prenant ses valeurs dans l'ensemble
+\[ E=\left\{ \dfrac{3\pi}{4} ~;~ \dfrac{11\pi}{6} ~;~ \dfrac{-5\pi}{3} ~;~ \dfrac{43\pi}{6} ~;~ \dfrac{-127\pi}{4} ~;~ \dfrac{1079\pi}{3} ~;~ \dfrac{12345\pi}{12} \right\} \]
+}
+
+
+\exercice{Équations sur cercle}{
+Résoudre chacune des équations suivantes dans $\RR$ puis dans l'intervalle $I$ indiqué :
+
+\begin{tabular}{p{0.22\linewidth} p{0.18\linewidth} | p{5mm} p{0.25\linewidth} p{0.2\linewidth}}
+    a) $\cos(x)=\frac{1}{2}$ & $I=[0;2\pi[$ & & b) $\sin(x)=\frac{\sqrt{3}}{2}$ & $I=[-\pi;\pi[$ \\
+    c) $\sin(x)=-\frac{\sqrt{2}}{2}$ & $I=[-2\pi;2\pi]$ & & d) $\cos(x)=\frac{\sqrt{2}}{2}$ & $I=]-\pi;3\pi[$
+\end{tabular}
+}
+
+
+
+\exercice{Inéquations}{
+Résoudre chacune des inéquations suivantes dans l'intervalle $I$ indiqué :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.22\linewidth} p{0.18\linewidth} | p{5mm} p{0.25\linewidth} p{0.2\linewidth}}
+    a) $\cos(x) \leq \frac{1}{2}$ & $I=[0;2\pi[$ & & b) $\sin(x) \geq -\frac{\sqrt{3}}{2}$ & $I=[0;2\pi[$ \\
+    c) $\sin(x) \leq \frac{\sqrt{3}}{2}$ & $I=[0;4\pi[$ & & d) $\cos(x) > -\frac{1}{2}$ & $I=[-\pi;3\pi]$ 
+\end{tabular}
+}
+
+
+\theoreme{Formule fondamentale}{
+Pour tout angle $\theta\in\RR$, $\cos^2(\theta)+\sin^2(\theta)=1$
+}
+
+
+\exercice{Passer du $\cos$ à l'âne}{
+\begin{enumerate} \setlength{\itemsep}{1mm}
+    \begin{minipage}{0.5\linewidth}
+        \item Soit $x\in\left]\frac{\pi}{2};\frac{3\pi}{2}\right]$ tel que $\sin(x)=\frac{8}{17}$\\
+        Déterminer la valeur exacte de $\cos(x)$
+        \item Soit $x\in\left]0;\pi\right]$ tel que $\cos(x)=\frac{12}{13}$\\
+        Déterminer la valeur exacte de $\sin(x)$
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \item Soit $x\in\left]15\pi;16\pi\right]$ tel que $\cos(x)=\frac{\sqrt{2-\sqrt{2}}}{2}$\\
+        Déterminer la valeur exacte de $\sin(x)$
+        \item Soit $x\in\left]\frac{-21\pi}{2};\frac{-19\pi}{2}\right]$ tel que $\sin(x)=\frac{\sqrt{2}+\sqrt{6}}{4}$\\
+        Démontrer que $\cos(x)=\frac{\sqrt{6}-\sqrt{2}}{4}$
+    \end{minipage}
+\end{enumerate}
+}
+
+
+
+\subsection{Fonctions trigonométriques}
+
+\definition{Périodicité}{
+On dit qu'une fonction $f$ est \textbf{périodique} de période $p$ si pour tout $x\in\Dcal_f$  : $f(x+p)=f(x)$ 
+}
+
+\definition{Parité}{
+On dit qu'une fonction $f$ est \textbf{paire} si pour tout  $x\in\Dcal_f$ , $\mathbold{f(-x)=f(x)}$ \\[5pt]
+On dit qu'une fonction $f$ est \textbf{impaire} si pour tout  $x\in\Dcal_f$ , $\mathbold{f(-x)=-f(x)}$
+}
+
+
+\begin{tikzpicture}
+    \begin{axis}[xmin=-3,xmax=9,ymin=-1.35,ymax=1.25, xtick distance = 1.5707, ytick distance = 0.5, 
+    xticklabels = {, $-\pi$ , $\frac{-\pi}{2}$ , , $\frac{\pi}{2}$ , $\pi$ , $\frac{3\pi}{2}$ , $2\pi$ , $\frac{5\pi}{2}$} ,
+    grid=major , major grid style = {line width = 0.25pt ,draw = gray}, axis lines = middle,
+    enlargelimits = { abs = 0.2 } , width=\linewidth , height=7cm]
+    \addplot[domain=-3:9,line width=2pt,samples=100,color=newred] {cos(deg(x))} ;
+    \addplot[domain=-3:9,line width=2pt,samples=100,color=newblue] {sin(deg(x))} ;
+    \draw[Stealth-Stealth , line width = 1.5pt] (1.5707,-1.2) -- node[below] {Période = $2\pi$} (7.853,-1.2) ;
+    \draw[color=newred] (-1.9,0.7) node {$y=\cos(x)$} ;
+    \draw[color=newblue] (3.3,0.7) node {$y=\sin(x)$} ;
+    \end{axis}
+\end{tikzpicture}
+
+
+\theoreme{Propriétés des fonctions trigonométriques}{
+Les fonctions $\cos$ et $\sin$ sont toutes les deux $2\pi$-périodiques. \\[5pt]
+La fonction $\cos$ est paire et la fonction $\sin$ est impaire.
+}
+
+
+\exercice{Parité}{
+Pour chacune des fonctions suivantes, dire si elles sont paires, impaires ou ni l'un ni l'autre :
+
+\begin{tabular}{p{0.33\textwidth} p{0.3\textwidth} p{0.35\textwidth}}
+    $f_1(x)=\cos(x)\sin(x)$ & $f_2(x)=\cos(\sin(x))$ & $f_3(x)=x^3-3x$ \\
+    $f_4(x)=(1+\cos(x))(1+\sin(x))$ & $f_5(x)=\sin(x^2+x)$ & $f_6(x)=\sin^2(x)+\cos(2x)$
+\end{tabular}
+}
+
+
+\exercice{Période}{
+Donner la période de chacune des fonctions suivantes :
+
+\textit{(On pourra conjecturer la période à l'aide de la calculatrice)}\\[5pt]
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+     a) $f_1(x)=\cos(x+\pi)$ & b) $f_2(x)=\sin(2x)$ \\
+     c) $f_3(x)=\cos(2\pi x)$ & d) $f_4(x)=\sin(\frac{x}{\pi})$ \\
+     e) $f_5(x)=\cos^2(x)$ & f) $f_6(x)=\sin(x)\cos(x)$ \\
+     g) $f_7(x)=\sin(2x)+\cos(3x)$ & h) $f_8(x)=\sin(\cos(x))$ \\
+\end{tabular}
+
+}
+
+
+
+\section{Fonction exponentielle}
+
+\definition{Fonction exponentielle}{
+Il existe une unique fonction $f$ égale à sa propre dérivée et telle que $f(0)=1$
+
+On appelle cette fonction la \textbf{fonction exponentielle} et on note $\mathbold{f(x)= e^x}$
+}
+
+
+\subsection{Calculs et équations}
+
+\theoreme{Propriétés de calcul}{
+$\bullet\, e^a\times e^b=e^{a+b}$ \qquad\quad $\bullet\, \dfrac{e^a}{e^b}=e^{a-b}$ \qquad\quad
+$\bullet\, e^{-a}=\dfrac{1}{e^a}$ \qquad\quad $\bullet\, \left(e^a\right)^b=e^{ab}$
+}
+
+
+
+\exemple{Simplification}{
+$A= \dfrac{\left(e^{x+1}\times e^{-2}\right)^2}{e^{2x-3}}=\dfrac{\left(e^{x+1-2}\right)^2}{e^{2x-3}} = \dfrac{\left(e^{x-1}\right)^2}{e^{2x-3}} = \dfrac{e^{2x-2}}{e^{2x-3}} = e^{2x-2-(2x-3)} = e^1 =e $
+}
+
+
+
+\exercice{Calcul numérique}{
+Donner une expression simplifiée des nombres suivants :
+
+\renewcommand{\arraystretch}{2.4}
+\begin{tabular}{p{0.33\linewidth}p{0.33\linewidth}p{0.33\linewidth}}
+    $A = \dfrac{e^5}{e^8}$ & $B = \dfrac{e^4\times e^{-2}}{e^3}$ & $C = \left(\dfrac{e^6}{e^2\times e^7}\right)^3$\\
+    $D = \dfrac{9}{e^{-4}}\times\left(\dfrac{e^2\times e^{-6}}{3e^3}\right)$ & $E = \left(e^e\right)^2\times\dfrac{e^{3e}\times\frac{1}{e^2}}{e^{e-3}}$ & $F = \left(e^{-\sqrt{3}}\right)^{\sqrt{3}}\times\dfrac{1}{e^{-2}}$
+\end{tabular}
+}
+
+
+
+\exercice{Simplifications}{
+Simplifier au maximum les expressions suivantes :
+
+\renewcommand{\arraystretch}{2.6}
+\begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
+    $A=\dfrac{e^{1+x}}{e^{x-1}}$ & $B=\dfrac{(e^{1+x})^{x}}{(e^{x})^{1+x}}$ & $C=\dfrac{(e^{\frac{3}{2}}e^{-x})^{2}}{e^{2-2x}}$ \\
+    $D=\dfrac{(e^{-2})^{4x}e^{5x}}{2e^{3x}} $ & $E=\dfrac{e^{x}+\frac{1}{e^{x}}}{e^{x}} $ & $F=e^{x}\dfrac{(e^{1+x})^{x-1}}{(e^{x-1})^{x+2}} $
+\end{tabular}
+}
+
+
+
+\exercice{Calcul algébrique}{
+Réduire au maximum les expressions suivantes :
+
+\renewcommand{\arraystretch}{2.3}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+    $A = \left(e^x-2\right)\left(3+e^x\right)$ & $B = \left(e^x+e^{-x}\right)^2-\left(e^x-e^{-x}\right)^2$\\
+    $C = \dfrac{\left(e^{-x}+2e^x\right)^2-e^{-2x}}{4}$\ & $D = \left(3e^x-2e^{-x}\right)^2-\left(2e^x-3e^{-x}\right)^2$
+\end{tabular}
+}
+
+
+
+\theoreme{Propriétés fonctionnelles}{
+$\bullet$ Pour tout nombre réel $x$, $e^x>0$
+
+$\bullet$ La fonction exponentielle est strictement croissante.
+
+$\bullet\, e^a=e^b\Longleftrightarrow a=b$
+
+$\bullet\, e^a<e^b\Longleftrightarrow a<b$
+}
+
+
+\exemple{Application aux (in)équations}{
+\begin{minipage}{0.52\linewidth}
+    $\begin{WithArrows}[format = cc , interline=1.5ex]
+    & e^{2x-1}=e^{x+3}   \Arrow{Car la fonction exponentielle\\est strictement croissante} \\
+    \Leftrightarrow\,  & 2x-1=x-3 \Arrow{\\On résout l'équation} \\
+    \Leftrightarrow\,  & x=4\
+    \end{WithArrows}$
+\end{minipage} \vrule \hspace{5mm}
+\begin{minipage}{0.4\linewidth}
+    $\begin{WithArrows}[format = cc , interline=1.5ex]
+    & \frac{e^{3x}}{e^{1-x}} < 1  \Arrow{Application des propriétés} \\
+    \Leftrightarrow\,  & e^{4x-1} < e^0 \Arrow{Car la fonction exponentielle\\est strictement croissante} \\
+    \Leftrightarrow\,  & 4x-1<0 \Arrow{\\On résout l'équation} \\
+    \Leftrightarrow\,  & x<\frac{1}{4}\
+    \end{WithArrows}$
+\end{minipage}
+}
+
+\exercice{Équations}{
+Résoudre dans $\RR$ les (in)équations suivantes :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+    a) $\dfrac{e^{x+1}}{e^{x^2}} = 0$ & b) $e^x-\dfrac{1}{e^x} > 0$ & c) $2e^{-x}=\dfrac{4}{1 + e^x}$\\
+    d) $\dfrac{e^{2x} + e^x}{1 + e^3} = e^x$ & e) $\dfrac{e^{2x+3} 
+    - e^{2x}}{1 + e^x} \leq 1 - e^x$ & f) $\dfrac{e^x + e^{-x}}{e^x} = 1 - e^x$ \\
+\end{tabular}
+}
+
+
+
+\subsection{Dérivation et étude de fonctions}
+
+Attention, la fonction exponentielle est égale à sa propre dérivée, mais cette propriété n'est valable que pour \textbf{la} fonction exponentielle ($x\mapsto e^x$).
+
+De manière générale, pour dériver une fonction faisant intervenir des exponentielles, il faut se référer au formulaire de dérivation, et en particulier à la formule suivante :
+
+
+\methode{Dérivée}{
+$\left(e^{u(x)}\right)'=u'(x)\times e^{u(x)}$
+}
+
+
+\exercice{Dérivation}{
+Déterminer l'expression de la dérivée de chacune des fonctions suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    $f_1:x\mapsto xe^x$ & $f_2:x\mapsto \dfrac{e^x-1}{1+e^x} $ & $f_3:x \mapsto e^{x+x^2}$ \\
+    $f_4:x\mapsto e^{x}(x^2-x-1)$ & $f_5:x\mapsto (x+1)e^{x^2}$ & $f_6:x\mapsto xe^{x^2-1}$
+\end{tabular}
+}
+
+
+
+\exercice{Culture sur pétri}{
+Lors d'une culture sur pétri, le nombre de bactéries (en milliers) en fonction du temps est donné par la fonction $f:t\mapsto(t+1)e^{1-0,5t}$ où $t$ est exprimé en jours.
+\begin{enumerate}
+    \item Combien il y a-t-il de bactéries au début de la culture ?
+    \item Comment évolue le nombre de bactéries au cours du temps ?
+    \item Les bactéries peuvent-elles disparaître de la culture ?
+\end{enumerate}
+}
+
+
+
+\exercice{Avec un guide}{
+On définit sur $\RR$ la fonction $f$ par $f(x)=2xe^x-x^2+8x-10e^x$
+\begin{enumerate}
+    \item Démontrer que $f'(x)=(e^x-1)(2x-8)$
+    \item Dresser alors le tableau de variations de la fonction $f$
+\end{enumerate}
+}
+
+
+
+\exercice{Variations}{
+Dresser le tableau de variations des fonctions suivantes définies sur $\RR$ :
+
+\renewcommand{\arraystretch}{2.3}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    $f_1:x\mapsto (3x+2)e^x$ & $f_2:x\mapsto\dfrac{e^{x}+x}{x-e^{x}} $ & $f_3:x\mapsto\dfrac{e^x}{1+4x^2}$ \\
+    $f_4:x\mapsto e^{2x}(2x^2-2x-1)$ & $f_5:x\mapsto (2x-3)e^{x^2}$ & $f_6:x\mapsto (1-x^2)e^{x^2-1}$
+\end{tabular}
+}
+
+
+
+\end{document}

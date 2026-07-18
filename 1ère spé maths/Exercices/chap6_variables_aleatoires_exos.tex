@@ -1,0 +1,370 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/macro_paging.tex}				% Mise en page
+\input{../../../Latex/inputs/macros_tikz.tex}				% Macro TikZ
+
+
+
+\fancyhead[R]{1\up{ère} générale}            % En-tête droit
+\fancyhead[C]{Variables aléatoire}                     % En-tête central
+\setstretch{0.9}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Lois de probabilité}
+
+\subsection{Pour quelques pièces de monnaie}
+On lance $3$ fois de suite une pièce de monnaie équilibrée. On note $X$ la variable aléatoire égale au nombre de fois où la pièce est tombée sur la face "Face"
+\begin{enumerate}
+    \item Quelles sont les valeurs possibles pour la variable $X$ ?
+    \item Déterminer $\PP(X=3)$
+    \item Donner la loi de probabilité de $X$
+    \item Tracer la courbe représentative de la fonction de répartition de $X$
+\end{enumerate}
+
+
+
+\subsection{Fonction de répartition}
+On considère une variable aléatoire $X$ dont la courbe représentative de la fonction de répartition a été tracée dans le repère ci-après :
+
+\begin{minipage}{0.4\linewidth}
+    \begin{enumerate}
+        \item Déterminer $\PP(X\leq2)$
+        \item Déterminer $\PP(X\geq0)$
+        \item Déterminer $\PP(-3\leq X\leq1)$
+        \item Quelles sont les valeurs que peut prendre la variable $X$ ?
+        \item Donner la loi de probabilité suivie par $X$
+    \end{enumerate}
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+\begin{tikzpicture}[scale=1.5] 
+    \begin{axis}[unit vector ratio = 1 5, xmin = -5, xmax = 5, ymin = 0, ymax = 1, xtick distance=1, grid = major,
+    ytick={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+    yticklabels = {\empty , \empty , \empty , \empty , \empty , \ensuremath{0,5} , \empty , \empty , \empty , \empty , \ensuremath{1}},
+        major grid style = {line width = 0.1pt , draw = gray!40}, 
+        axis lines = middle, enlargelimits = { abs = 0.1 }, 
+        ticklabel style = {font = \tiny }
+        ]
+        \draw[anchor=origin,color=red,line width=1pt] (-5,0) -- (-4,0) -- (-4,0.1) -- (-2,0.1) -- (-2,0.2) -- (-1,0.2) -- (-1,0.4) -- (0,0.4) -- (0,0.5) -- (1,0.5) -- (1,0.8) -- (3,0.8) -- (3,0.9) -- (4,0.9) -- (4,1) -- (5,1); 
+        \draw[color=red] (0.8,0.9) node {$\scriptscriptstyle F_X$};
+    \end{axis}
+\end{tikzpicture}        
+\end{minipage}
+
+
+
+\subsection{Un dé étrange}
+On lance un dé cubique truqué dont les faces sont numérotées de 1 à 6. On note $X$ la variable aléatoire égale au numéro obtenu. Il existe un nombre $p\in[0;1]$ tel que la loi de probabilité de $X$ est comme décrite dans le tableau ci-contre :
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{15pt}
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+    $k$ & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+    $P(X=k)$ & $p$ & $2p$ & $3p$ & $4p$ & $5p$ & $6p$ \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+    \item Le dé est-il équilibré ?
+    \item A-t-on plus de chances de tomber sur un numéro pair ou impair ?
+    \item A-t-on plus de chances de tomber sur un nombre premier ou un nombre composé ?
+    \item Déterminer la valeur du nombre $p$
+\end{enumerate}
+
+
+\subsection{Probabilités énigmatiques}
+Soit $X$ une variable aléatoire prenant ses valeurs dans l'ensemble $\Omega=[\![0~;6]\!]$
+
+On connaît les résultats suivants : 
+
+\begin{tabular}{p{5cm}p{5cm}p{5cm}}
+    $\PP(X=1)=\frac{1}{5}$ & $\PP(1\leq X<4)=\frac{1}{2}$ & $\PP(X=2)=\PP(X=3)$ \\[5pt]
+    $\PP(X\leq3)=\frac{3}{5}$ & $\PP(X=4)=\PP(X\leq1)$ & $\PP(X=5)=2\times\PP(X=6)$
+\end{tabular}
+\begin{enumerate}
+	\item Déterminer la loi de probabilité de la variable $X$
+	\item Tracer la courbe représentative de $F_X$ la fonction de répartition de la variable $X$
+\end{enumerate}
+
+
+
+\subsection{Une grande urne}
+On tire au hasard une boule dans une urne contenant 100 boules numérotées de 1 à 100. Si le numéro tiré comporte le chiffre 3, on gagne 3\euro\, sinon on gagne la valeur de la dizaine dans laquel il se trouve.
+
+Par exemple le numéro 47 rapporte 4\euro\,, et le numéro 73 en rapporte 3.
+
+On note $X$ la variable aléatoire égale à la valeur du gain.
+\begin{enumerate}
+    \item Quelle est la probabilité de gagner 3\euro\,?
+    \item Calculer $\PP(X\leq2)$
+    \item Déterminer la loi de probabilité de $X$
+\end{enumerate}
+
+
+
+\subsection{Des cubes de couleur}
+\begin{minipage}{0.6\linewidth}\restoreskip
+On peint entièrement un cube en bleu puis on le découpe en plus petits cubes identiques comme représenté ci-contre. On met tous les petits cubes dans un sac opaque puis on en tire un au hasard. On note $X$ le nombre de faces du petit cube qui ont été peintes en bleu.
+
+Déterminer la loi de probabilité de $X$.
+    
+\end{minipage} \hfill
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[scale=1]
+    
+    % Définir les sommets
+    \coordinate (A) at (0,0,0);
+    \coordinate (B) at (4,0,0);
+    \coordinate (C) at (4,4,0);
+    \coordinate (D) at (0,4,0);
+    \coordinate (E) at (0,0,4);
+    \coordinate (F) at (4,0,4);
+    \coordinate (G) at (4,4,4);
+    \coordinate (H) at (0,4,4);
+    
+    % Peindre en bleu
+    \draw[line width = 1pt , fill = newblue!25!white] (E) -- (H) -- (D) -- (C) -- (B) -- (F) -- cycle;
+
+	% Couper en 4
+	\foreach \i in {0,1,2,3,4}{
+		\draw[dashed] (\i,0,4) --++ (0,4,0) --++ (0,0,-4) ;
+		\draw[dashed] (0,4,\i) --++ (4,0,0) --++ (0,-4,0) ;
+		\draw[dashed] (0,\i,4) --++ (4,0,0) --++ (0,0,-4) ;
+		}
+	
+	% Arrêtes principales
+	\draw[line width = 1pt] (F) -- (G) -- (C) ;
+	\draw[line width = 1pt] (G) -- (H) ; 
+	
+	% Sortir le petit cube
+	\draw[line width = 1pt , fill = color_domino] (G)++(-1,0,0) --++ (0,0,-1) --++ (1,0,0) --++ (0,-1,0) --++ (0,0,1) --++ (-1,0,0) --++ (0,1,0) -- cycle ; 
+	\draw[dashed] (3,3,3) --++ (1,0,0) ;
+	\draw[dashed] (3,3,3) --++ (0,1,0) ;
+	\draw[dashed] (3,3,3) --++ (0,0,1) ;
+	
+	\draw[line width = 1pt , fill = newblue!25!white] (G)++(-0.2,0.4,0.5) --++ (0,0,-1) --++ (1,0,0) --++ (0,-1,0) --++ (0,0,1) --++ (-1,0,0) --++ (0,1,0) -- cycle ;
+	\draw[line width = 1pt] (G)++(0.8,0.4,0.5) --++ (-1,0,0) ;
+	\draw[line width = 1pt] (G)++(0.8,0.4,0.5) --++ (0,-1,0) ;
+	\draw[line width = 1pt] (G)++(0.8,0.4,0.5) --++ (0,0,-1) ;
+
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Extremums}
+\begin{enumerate}
+    \item On lance deux dés à 6 faces parfaitement équilibrés et on note $X$ la variable aléatoire égale au maximum des deux numéros obtenus.\\
+    Déterminer la loi de probabilité de $X$
+    \item On lance maintenant un dé à 6 faces et un dé à 4 faces parfaitement équilibrés, et on note $Y$ la variable aléatoire égale au minimum des deux numéros obtenus.\\
+    Déterminer la loi de probabilité de $Y$
+\end{enumerate}
+
+
+
+\section{Indicateurs}
+
+\subsection{Première loi de probabilité}
+On considère la variable aléatoire $X$ dont la loi de probabilité est donnée dans le tableau ci-contre : 
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5} 
+\setlength{\tabcolsep}{15pt}
+\begin{tabular}{|c|c|c|c|c|c|c|}  \hline
+    $x_i$ & $-3$ & $-1$ & $1$ & $2$ & $3$ & $8$ \\ \hline
+    $P(X=x_i)$ & $0,1$ & $0,25$ & $0,05$ & $0,2$ & $0,3$ & $0,1$ \\ \hline
+    $\left(x_i-\EE(X)\right)^2$ & & & & & & \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Tracer la courbe représentative de $F_X$ la fonction de répartition de la variable $X$
+    \item Déterminer $\EE(X)$ l'espérance de $X$
+    \item Compléter la troisième ligne du tableau ci-dessus.
+    \item Déterminer $\VV(X)$ la variance de $X$
+\end{enumerate}
+
+
+
+\subsection{Lancer des dés}
+On lance un dé cubique équilibré et on note $X$ la variable aléatoire égale au résultat obtenu.
+\begin{enumerate}
+    \item Donner la loi de probabilité de $X$
+    \item Tracer la courbe de la fonction de répartition de $X$
+    \item Déterminer $\EE(x)$ l'espérance de $X$
+    \item Calculer $\VV(X)$ la variance de $X$
+    \item Reprendre toutes les questions précédentes avec un dé tétraédrique.
+\end{enumerate}
+
+
+
+\subsection{Probabilités inconnues}
+On considère une variable aléatoire $X$ prenant ses valeurs dans l'ensemble $\Omega=\{-2~;1~;4\}$ \\
+Soit $\alpha\in\RR$ tel que la loi de probabilité de la variable $X$ soit donnée par le tableau ci-contre :
+
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{15pt}
+    \begin{tabular}{|c|c|c|c|} \hline
+    $x_k$ & $-2$ & $-1$ & $4$ \\ \hline
+    $\PP(X=x_k)$ & $3\alpha$ & ? & $\alpha$ \\ \hline
+    \end{tabular}
+\end{center}
+\begin{enumerate}
+    \item Justifier que $0\leq\alpha\leq\frac{1}{4}$
+    \item Déterminer $\PP(X=1)$
+    \item \begin{enumerate}
+        \item Montrer que $\EE(X)=1-6\alpha$
+        \item Quelle est l'espérance minimale que peut avoir la variable $X$ ?
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item Démontrer que $\VV(X)=36\alpha-54\alpha^2$
+        \item Pour quelle(s) valeur(s) de $\alpha$ la variance de $X$ est-elle maximale et combien vaut-elle ?
+        \item Pour quelle(s) valeur(s) de $\alpha$ l'écart-type de $X$ vaut-il 2 ?
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Probablement une arnaque}
+On paie 2\euro\, pour tirer sans remise deux boules dans l'urne représentée ci-contre :
+
+Chaque boule rouge tirée rapporte 1,50\euro\, et chaque boule verte rapporte 0,50\euro, en revanche si la boule noire a été tirée, on perd tout.
+
+On note $X$ la somme gagnée à l'issue de l'expérience.
+\begin{enumerate}
+    \item Représenter la situation à l'aide d'un arbre de probabilités.
+    \item Quelles sont les valeurs que peut prendre la variable aléatoire $X$ ?
+    \item Déterminer la loi de probabilité de $X$
+    \item Calculer $\EE(X)$ l'espérance de $X$ et interpréter ce résultat dans le contexte.
+    \item Calculer $\VV(X)$ la variance de $X$
+    \item Quel gain attribuer aux boules rouges afin que ce jeu soit rentable ?
+\end{enumerate}
+
+
+
+\subsection{Coûts de production}
+Une usine produit à la chaîne des moulins à café avec un coût de 80\euro\, par unité. \\
+Lors de la production, on constate parfois la présence de deux défauts : une lame est brisée, ou bien le circuit électrique est défectueux.
+
+Cela coûte 20\euro\, de réparer une lame, et 25\euro\, de changer le circuit électrique. \\
+90\% des moulins n'ont aucun défaut de fabrication, 8\% ont une lame brisée et 7\% possèdent un circuit électrique défectueux.
+
+On note $X$ la variable aléatoire qui à un moulin choisi au hasard associe son prix de revient, c'est à dire son coût de production additionné aux éventuels coûts de réparation.
+\begin{enumerate}
+    \item Quelle proportion des moulins présente les deux défauts de fabrication ?
+    \item Déterminer la loi de probabilité de $X$
+    \item Calculer $\EE(X)$ l'espérance de $X$. Comment interpréter cette valeur ?
+    \item \begin{enumerate}
+        \item Quel bénéfice l'usine peut-elle espérer en vendant 1500 moulins à 85\euro\, ?
+        \item À quel prix l'usine doit-elle vendre ses moulins si elle souhaite réaliser un bénéfice moyen de 10\euro\, par produit ?
+    \end{enumerate}
+    \item On suppose dans cette question que l'usine vend chaque moulin à 90\euro\\
+    L'usine a-t-elle un intérêt économique à réparer les moulins présentant les deux défauts ou ferait-elle mieux de ne pas les réparer ni les vendre ?
+\end{enumerate}
+
+
+
+\subsection{Une grosse urne}
+Dans une urne on place 4 boules roses et $n$ boules transparentes, puis on y tire deux boules avec remise.
+
+Si deux boules roses ont été tirées, on perd 9 euros. Si une seule boule rose a été tirée, on perd 8 euros. Si l'on tire deux boules transparentes on gagne 4 euros.
+
+On considère $X$ la variable aléatoire égale au gain à l'issue de ces tirages.
+\begin{enumerate}
+    \item Représenter la situation à l'aide d'un arbre de probabilités.
+    \item Déterminer la loi de probabilité de la variable $X$
+    \item Démontrer que l'espérance de $X$ est $\EE(X)=\frac{4x^2-64n-144}{(n+4)^2}$
+    \item Combien de boules transparentes faut-il placer dans l'urne afin d'espérer remporter de l'argent à l'issue de cette expérience ?
+\end{enumerate}
+
+
+
+\subsection{Un sérieux manque d'originalité}
+On tire deux boules sans remise au hasard dans une urne contenant 5 boules rouges et $n$ boules bleues. (Avec $n\geq2$)
+
+On appelle $X$ la variable aléatoire égale à $11(n+4)$ si l'on tire deux boules bleues, à $-(n+4)^2$ si l'on tire deux boules de couleurs différentes et à $3(n+4)$ si l'on tire deux boules rouges.
+\begin{enumerate}
+    \item Donner la loi de probabilité de $X$
+    \item Montrer que l'espérance de $X$ vaut $\EE(X) = \frac{n^2-51n+60}{n+5}$
+    \item Pour quels nombres de boules bleues cette espérance est-elle positive ?
+\end{enumerate}
+
+
+
+\subsection{Dominos}
+\begin{minipage}{0.65\linewidth}
+    Un jeu de dominos est composé de tuiles rectangulaires formant des paires de numéros entre 0 et 6 représentés par des points. Toutes les paires possibles sont présentes une et une unique fois dans le jeu de dominos.
+
+    \begin{enumerate}
+        \item Justifier qu'un jeu de dominos comporte 28 tuiles.
+        \item On tire un domino au hasard dans le jeu
+        \begin{enumerate}
+            \item Quelle est la probabilité de tirer une tuile double ?
+            \item Quelle est la probabilité que la somme des deux numéros soit un multiple de 3 ?
+        \end{enumerate}
+    \end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[rotate=90]
+      % Rectangle with round corners (2:1 aspect ratio)
+      \draw[fill=AntiqueWhite1 ,very thick, rounded corners=10pt] (0,0) rectangle (4,2);
+      
+      % Vertical line in the middle (slightly longer)
+      \draw[thick] (2,0.2) -- (2,1.8);
+      
+      % Black dots centered in the left half of the rectangle
+      \filldraw[black] (0.6,0.5) circle (4pt);
+      \filldraw[black] (1.4,1.5) circle (4pt);
+    
+      % Black dots forming an X motif in the right half of the rectangle
+      \filldraw[black] (2.6,0.5) circle (4pt);
+      \filldraw[black] (3.4,0.5) circle (4pt);
+      \filldraw[black] (3,1) circle (4pt);
+      \filldraw[black] (3.4,1.5) circle (4pt);
+      \filldraw[black] (2.6,1.5) circle (4pt);
+    
+      % Center dot
+      \filldraw[gray] (2,1) circle (2pt);
+      
+      % Rectangle with round corners (2:1 aspect ratio)
+      \draw[fill=AntiqueWhite1 ,very thick, rounded corners=10pt] (0,3) rectangle (4,5);
+      
+      % Vertical line in the middle (slightly longer)
+      \draw[thick] (2,3.2) -- (2,4.8);
+      
+      % Black dots centered in the left half of the rectangle
+      \filldraw[black] (0.5,3.5) circle (4pt);
+      \filldraw[black] (1,4) circle (4pt);
+      \filldraw[black] (1.5,4.5) circle (4pt);
+    
+      % Black dots forming an X motif in the right half of the rectangle
+      \filldraw[black] (2.6,3.5) circle (4pt);
+      \filldraw[black] (3.4,3.5) circle (4pt);
+      \filldraw[black] (3.4,4.5) circle (4pt);
+      \filldraw[black] (2.6,4.5) circle (4pt);
+    
+      % Center dot
+      \filldraw[gray] (2,4) circle (2pt);
+    \end{tikzpicture}
+\end{minipage}
+\begin{enumerate}
+    \item[3.] On note $X$ la variable aléatoire qui vaut $n$ si l'on pioche la double tuile de valeur $n$ et qui vaut -1 si l'on pioche une autre tuile.
+    \begin{enumerate}
+        \item Déterminer la loi de probabilité de $X$
+        \item Calculer $\EE(X)$ l'espérance de $X$
+        \item Calculer $\VV(X)$ et $\sigma(X)$ la variance et l'écart-type de $X$ 
+    \end{enumerate} 
+\end{enumerate}
+
+
+
+
+\end{document}

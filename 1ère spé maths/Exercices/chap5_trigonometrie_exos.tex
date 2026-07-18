@@ -1,0 +1,249 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Trigonométrie}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Le cercle trigonométrique}
+
+\subsection{Degrés et radians}
+
+Compléter le tableau suivant :
+
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\newcolumntype{C}{>{\centering\arraybackslash}p{8mm}}
+\begin{tabular}{|c|C|C|C|C|C|C|C|C|C|C|C|C|} \hline
+    Mesure en degrés & 80 & & 225 & & & 35 & 300 & & 18 & & 47 &  \\ \hline
+    Mesure en radians & & $\frac{\pi}{12}$ & &$\frac{3\pi}{5}$ & $\frac{6\pi}{5}$ & & & $\frac{\pi}{3}$ & & $\frac{8\pi}{15}$ & & $\frac{2\pi}{7}$ \\ \hline
+\end{tabular}
+\end{center}
+
+
+\subsection{Sur le cercle}
+
+Placer sur le cercle trigonométrique les points correspondant aux angles dont les mesures en radians sont les suivantes : 
+\begin{center}
+    \large $\frac{\pi}{2}$ ~~;~~$\frac{-4\pi}{3}$ ~~;~~$\frac{7\pi}{6}$ ~~;~~$\frac{3\pi}{4}$ ~~;~~$\frac{-5\pi}{3}$ ~~;~~$23\pi$ ~~;~~$\frac{-1001\pi}{4}$ ~~;~~$\frac{2048\pi}{12}$ ~~;~~$\frac{481\pi}{4}$ ~~;~~$\frac{-169\pi}{3}$
+\end{center}
+
+
+
+\subsection{Sinus, cosinus et tangente}
+Déterminer la valeur de $\sin(\theta)$, de $\cos(\theta)$ et de $\tan(\theta)$ pour $\theta$ prenant ses valeurs dans l'ensemble
+\[ E=\left\{ \dfrac{3\pi}{4} ~;~ \dfrac{11\pi}{6} ~;~ \dfrac{-5\pi}{3} ~;~ \dfrac{43\pi}{6} ~;~ \dfrac{-127\pi}{4} ~;~ \dfrac{1079\pi}{3} ~;~ \dfrac{12345\pi}{12} \right\} \]
+
+
+\subsection{Équations sur cercle}
+Résoudre chacune des équations suivantes dans $\RR$ puis dans l'intervalle $I$ indiqué :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.22\linewidth} p{0.18\linewidth} | p{5mm} p{0.25\linewidth} p{0.2\linewidth}}
+    a) $\cos(x)=\frac{1}{2}$ & $I=[0;2\pi[$ & & b) $\sin(x)=\frac{\sqrt{3}}{2}$ & $I=[-\pi;\pi[$ \\
+    c) $\sin(x)=-\frac{\sqrt{2}}{2}$ & $I=[-2\pi;2\pi]$ & & d) $\cos(x)=\frac{\sqrt{2}}{2}$ & $I=]-\pi;3\pi[$ \\
+    e) $\cos(x)=-1$ & $I=[-5\pi;\pi[$ & & f) $\sin(x)=-\frac{1}{2}$ & $I=]-3\pi;4\pi]$ \\
+    g) $\sin(x)=\frac{\sqrt{2}}{2}$ & $I=[31\pi;34\pi[$ & & h) $\cos(x)=-\frac{\sqrt{3}}{2}$ & $I=]-101\pi;-97\pi[$ \\
+\end{tabular}
+
+
+
+\subsection{Inéquations sur cercle}
+Résoudre chacune des inéquations suivantes dans l'intervalle $I$ indiqué :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.22\linewidth} p{0.18\linewidth} | p{5mm} p{0.25\linewidth} p{0.2\linewidth}}
+    a) $\cos(x) \leq \frac{1}{2}$ & $I=[0;2\pi[$ & & b) $\sin(x) \geq -\frac{\sqrt{3}}{2}$ & $I=[0;2\pi[$ \\
+    c) $\sin(x) \leq \frac{\sqrt{3}}{2}$ & $I=[0;4\pi[$ & & d) $\cos(x) > -\frac{1}{2}$ & $I=[-\pi;3\pi]$ \\
+    e) $\cos(x) \geq -\frac{\sqrt{3}}{2}$ & $I=]-3\pi;2\pi[$ & & f) $\sin(x) \leq -\frac{1}{2}$ & $I=]-\frac{3\pi}{2};\frac{9\pi}{2}]$ \\
+    g) $\sin(x) > -1$ & $I=]-22\pi;-15\pi[$ & & h) $\cos(x) < -\frac{\sqrt{2}}{2}$ & $I=]103\pi;106\pi[$
+\end{tabular}
+
+
+
+\subsection{Encadrement}
+Résoudre chacune des inéquations suivantes dans l'intervalle $I$ indiqué :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.25\linewidth} p{0.15\linewidth} | p{5mm} p{0.25\linewidth} p{0.15\linewidth}}
+    a) $-\frac{1}{2} \leq \cos(x) \leq \frac{\sqrt{3}}{2}$ & $I=]0;2\pi[$ & &
+    b) $\frac{1}{2} \leq \sin(x) < \frac{\sqrt{3}}{2}$ & $I=[0;2\pi[$ \\
+    c) $-\frac{\sqrt{2}}{2} \leq \sin(x) \leq \frac{\sqrt{2}}{2}$ & $I=[-\pi;4\pi[$ & &
+    d) $-\frac{\sqrt{3}}{2} < \sin(x) < \frac{1}{2}$ & $I=[\frac{\pi}{2};5\pi]$ \\
+    e) $-\frac{\sqrt{2}}{2} \leq \cos(x) < 0$ & $I=]12\pi;15\pi[$ & &
+    f) $-\frac{1}{2} \leq \sin(x) \leq \frac{\sqrt{3}}{2}$ & $I=[\frac{9\pi}{4};\frac{21\pi}{4}[$ \\
+    g) $\frac{1}{2} \leq \sin(x) \leq 1$ & $I=[-\frac{2\pi}{3};\frac{17\pi}{6}]$ & &
+    h) $\frac{1}{2} < \cos(x) \leq \frac{\sqrt{3}}{2}$ & $I=]\frac{75\pi}{4};\frac{80\pi}{3}]$ \\
+\end{tabular}
+
+
+\subsection{Du $\cos$ à l'âne}
+\begin{enumerate}
+    \item Soit $x\in\left]\frac{\pi}{2};\frac{3\pi}{2}\right]$ tel que $\sin(x)=\frac{8}{17}$\\
+    Déterminer la valeur exacte de $\cos(x)$
+    \item Soit $x\in\left]0;\pi\right]$ tel que $\cos(x)=\frac{12}{13}$\\
+    Déterminer la valeur exacte de $\sin(x)$
+    \item Soit $x\in\left]15\pi;16\pi\right]$ tel que $\cos(x)=\frac{\sqrt{2-\sqrt{2}}}{2}$\\
+    Déterminer la valeur exacte de $\sin(x)$
+    \item Soit $x\in\left]\frac{-21\pi}{2};\frac{-19\pi}{2}\right]$ tel que $\sin(x)=\frac{\sqrt{2}+\sqrt{6}}{4}$\\
+    Démontrer que $\cos(x)=\frac{\sqrt{6}-\sqrt{2}}{4}$
+\end{enumerate}
+
+
+  
+\subsection{Premières formules trigonométriques}
+Compléter chacune des égalités suivantes par $\cos(x)$ , $\sin(x)$, $-\cos(x)$ ou $-\sin(x)$ : 
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+     a) $\cos(-x)=\ldots\ldots $ & b) $\sin(-x)=\ldots\ldots $ & c) $\cos(x+\pi)=\ldots\ldots $ & d) $\sin(x+\pi)=\ldots\ldots $ \\
+     e) $\cos(\pi-x)=\ldots\ldots $ & f) $\sin(\pi-x)=\ldots\ldots $ & g) $\cos(x+\frac{\pi}{2})=\ldots\ldots $ & h) $\sin(x+\frac{\pi}{2})=\ldots\ldots $ \\
+     i) $\cos(x-\frac{\pi}{2})=\ldots\ldots $ & j) $\sin(x-\frac{\pi}{2})=\ldots\ldots $ & k) $\cos(\frac{\pi}{2}-x)=\ldots\ldots $ & l) $\sin(\frac{\pi}{2}-x)=\ldots\ldots $ \\
+\end{tabular}
+
+
+
+\section{Sans le cercle}
+
+\subsection{À $2\pi$ près}
+Résoudre dans $\mathbb{R}$ les équations suivantes et représenter leurs solutions sur le cercle trigonométrique si possible :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+a) $\cos(x) = \cos(2x)$ & b) $\sin(2x) = \sin(3x)$ & c) $\cos(3x) = \cos(4x)$ \\
+d) $\sin(x - \frac{\pi}{6}) = \sin(2x)$ & e) $\cos\left(\frac{x + 1}{2}\right) = \cos\left(\frac{x}{3}\right)$ & f) $\sin\left(\frac{2x + \pi}{3}\right) = \sin\left(\frac{x - \pi}{4}\right)$
+\end{tabular}
+
+
+
+\subsection{Équations polynômiales}
+Résoudre dans $\RR$ les équations suivantes :
+\begin{enumerate}
+    \item $2\cos^2(x)+7\cos(x)+5=0$
+    \item $2\sin^2(x)+\sqrt{8}\sin(x)-3=0$
+    \item $2\cos^2(x)+(\sqrt{3}-2)\cos(x)-\sqrt{3}=0$
+\end{enumerate}
+
+
+
+\subsection{Presque des tangentes}
+Soient $x$ et $y$ deux réels de l'intervalle $\left[0;\frac{\pi}{2}\right]$ vérifiant $\frac{\sin(x)}{\sin(y)}=\frac{\sqrt{2}}{2}$ et $\frac{\cos(x)}{\cos(y)}=\frac{\sqrt{6}}{2}$
+\begin{enumerate}
+    \item Montrer que $2\sin^2(x)+2\cos^2(x)=\sin^2(y)+3\cos^2(y)$
+    \item En déduire que $\cos^2(y)=\frac{1}{2}$
+    \item Déterminer les valeurs de $x$ et $y$
+\end{enumerate}
+
+
+
+\subsection{D'une pierre deux coups}
+\begin{enumerate}
+    \item Démontrer que pour tout $x$ réel, $(\cos(x)+\sin(x))^2+(\cos(x)-\sin(x))^2=2$
+    \item Soit $\xR$ tel que $\sin(x)+\cos(x)=\frac{17}{13}$
+    \begin{enumerate}
+        \item Quelles sont les valeurs possibles pour $\cos(x)-\sin(x)$ ?
+        \item En déduire les valeurs possible de $\cos(x)$ et $\sin(x)$
+        \item Sachant que $x\in\left[\frac{\pi}{4};\frac{\pi}{2}\right]$, déterminer la valeur de $\tan(x)$
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Étude d'un polynôme trigonométrique}
+On considère le trinôme $P$ défini par $P(x)=4x^2+(\sqrt{8}-2)x-\sqrt{2}$ pour tout $x$ réel
+\begin{enumerate}
+    \item Montrer que $\sqrt{3+2\sqrt{2}}=1+\sqrt{2}$
+    \item Déterminer les racines de $P$ puis en déduire la forme factorisée de $P(x)$
+    \item Étudier sur $[0;2\pi[$ le signe de $\sin(x)-\frac{1}{2}$ et celui de $\sin(x)+\frac{\sqrt{2}}{2}$
+    \item En déduire le signe de $4\sin(x)^2+(\sqrt{8}-2)\sin(x)-\sqrt{2}$ sur $[0;2\pi[$
+\end{enumerate}
+
+
+
+\subsection{Polynômes mélangés}
+Résoudre dans $ \mathbb{R} $ les équation suivante puis représenter leurs solutions sur le cercle trigonométrique :
+\begin{enumerate}
+    \item $ \cos^2(x) + \sin(x) = 1 $
+    \item $-4\sin^2(x)+4\cos(x)+5=0$
+    \item $ 2\sin^2(x)+(6-\sqrt{2})\cos(x)+3\sqrt{2}=2$
+\end{enumerate}
+
+
+
+\subsection{Équations trigonométriques}
+ Résoudre dans $\RR$ les équations suivantes puis représenter leurs solutions sur le cercle trigonométrique :
+
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+
+    a) $\cos(x)=-\sin(x)$ & b) $\cos(x)=\sin(2x)$ & c) $\cos(2x)=\sin(\frac{x}{3})$ \\
+    d) $\cos(2x)=\sin(x+\frac{\pi}{3})$ & e) $\cos(\left(\frac{x}{2}+\pi\right)=\sin(3x)$ & f) $\cos\left(\frac{x+2\pi}{6}\right)=\sin\left(x-\frac{\pi}{3}\right)$
+\end{tabular}
+
+
+
+\section{Études de fonctions}
+
+\subsection{Parité}
+Pour chacune des fonctions suivantes, dire si elles sont paires, impaires ou ni l'un ni l'autre :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.35\textwidth}}
+     a) $f_1(x)=\cos(x+\pi)$ & b) $f_2(x)=\cos(x)\sin(x)$ & c) $f_3(x)=(1+\cos(x))(1-\sin(x))$ \\
+     d) $f_4(x)=\sin(\frac{1}{x})$ & e) $f_5(x)=\cos(\frac{x}{2})\sin(\frac{x}{3})$ & f) $f_6(x)=\cos(x)+\sin(x)$ \\
+     g) $f_7(x)=\sin(\sin(x))$ & h) $f_8(x)=\sin(x^2+x)$ & i) $f_9(x)=\left(2+\cos\left(\frac{x}{3}\right)\right)\sin\left(\frac{2x}{3}\right)$ \\
+     j) $f_{10}(x)=\frac{\sin^2(x)+\cos(2x)}{1-\cos(x)}$ & k) $f_{11}(x)=\frac{1+\cos(x)+\cos^2(x)}{1+\sin(x)+\sin^2(x)}$ & l) $f_{12}(x)=\sin\left(\frac{1}{\cos(3x+\pi)}\right)$
+\end{tabular}
+
+
+
+\subsection{Périodicité}
+Donner la période de chacune des fonctions suivantes :
+
+\textit{(On pourra conjecturer la période à l'aide de la calculatrice)}\\[5pt]
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+     a) $f_1(x)=\cos(x+\pi)$ & b) $f_2(x)=\sin(2x)$ \\
+     c) $f_3(x)=\cos(2\pi x)$ & d) $f_4(x)=\sin(\frac{x}{\pi})$ \\
+     e) $f_5(x)=\cos^2(x)$ & f) $f_6(x)=\sin(x)\cos(x)$ \\
+     g) $f_7(x)=\sin(2x)+\cos(3x)$ & h) $f_8(x)=\sin(\cos(x))$ \\
+\end{tabular}
+
+
+
+\subsection{Tableaux de variation}
+
+
+\begin{minipage}{0.5\linewidth}
+    Pour chacune des fonctions ci-contre, répondre aux questions suivantes :
+    
+    \begin{enumerate}
+        \item Déterminer la période $P$ de la fonction.
+        \item Déterminer les extremums de la fonction.
+        \item Dresser le tableau de variation de la fonction sur l'intervalle $[-P;P]$
+    \end{enumerate}
+
+\end{minipage}\hfill
+\begin{minipage}{0.45\linewidth}
+    \begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}
+        $f_1(x)=\sin(x)$ & $f_2(x)=\cos(x)$\\
+        $f_3(x)=1+3\cos(x)$ & $f_4(x)=\sin(2x-\pi)$\\
+        $f_5(x)=2-\cos(x+\frac{\pi}{2})$ & $f_6(x)=\frac{4\sin(\frac{x}{2}+\frac{\pi}{4})}{3}$
+    \end{tabular}
+\end{minipage}
+
+
+
+
+\end{document}

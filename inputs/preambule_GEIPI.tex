@@ -1,0 +1,95 @@
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usetikzlibrary{positioning,shapes.multipart}
+\usepackage{amssymb}
+\usepackage{alphalph}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{esvect}
+\usepackage{eurosym}
+
+\usepackage{geometry}
+\geometry{left=30pt, right=30pt, top=55pt, bottom=55pt}
+\setlength\parindent{0mm}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+
+\usepackage{fancyhdr}
+\fancyhf[CF]{}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+	{\large\normalsize\bfseries}
+	{thesection}
+	{1em}
+	{}
+
+\titlespacing{\section}{0pt}{2mm}{5pt}
+\titlespacing{\subsection}{0pt}{0pt}{5pt}
+
+\renewcommand{\thesubsection}{\Roman{subsection}}
+
+\titleformat{\subsection}
+	{\large\normalsize\bfseries}
+	{}
+	{1em}
+	{Exercice \thesubsection~-~}
+
+
+\setlist[enumerate]{label=\thesubsection-\Alph*- , labelsep=1.5em , leftmargin=* , itemsep = -2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Macro grille réponses %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tikzset{
+    mynode/.style={
+        draw,
+        rectangle split,
+        rectangle split parts=3,
+        text centered,
+    },
+}
+
+\newcommand{\CountBox}[2]{%
+    \begin{tikzpicture}[scale=1.25]
+        \draw[line width=1pt] (-0.65,1) rectangle (0,-1.61) ; 
+        \draw[line width=1pt] (0,1) rectangle (1,-0.3) ; 
+        \draw[line width=1pt] (0,-1.61) rectangle (1,-0.3) ;
+        \draw[line width=1pt] (0.5,1) -- (0.5,-1.61) ;
+
+        \draw (-0.35,-0.25) node {\small \textbf{\uppercase\expandafter{\romannumeral #1 \relax}}} ;
+        
+        \draw (0.25,0.275) node {\textbf{Q}} ;
+        \draw (0.25,-0.8) node {\textbf{R}} ;
+        
+        \draw (0.75,0.6) node {\tiny \textbf{V}} ;
+        \draw (0.75,-0.7) node {\tiny \textbf{V}} ;
+        \draw (0.75,0.15) node {\tiny \textbf{F}} ;
+        \draw (0.75,-1.15) node {\tiny \textbf{F}} ;
+        
+        \node[mynode, anchor=west , scale=1.25] (1) at (1,0) {%
+            \textbf{A\vphantom{C}}
+            \nodepart{two} \begin{tabular}{c} $\square$ \\ $\square$ \end{tabular}
+            \nodepart{three} \begin{tabular}{c} $\square$ \\ $\square$ \end{tabular}
+                };
+        \ifnumcomp{#2}{=}{1}{}{%
+            \foreach \mynum 
+                [evaluate=\mynum as \myprev using int(\mynum-1)]  
+                in {2,...,#2}
+            \node[mynode,xshift=-\pgflinewidth,anchor=west , scale=1.25] (\mynum) at (\myprev.east){%
+            \textbf{\AlphAlph{\mynum}\vphantom{C}}
+            \nodepart{two} \begin{tabular}{c} $\square$ \\ $\square$ \end{tabular}
+            \nodepart{three} \begin{tabular}{c} $\square$ \\ $\square$ \end{tabular}
+                };
+            }%
+    \end{tikzpicture}
+    \vspace{5pt} \hspace{3pt}
+}

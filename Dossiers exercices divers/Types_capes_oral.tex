@@ -1,0 +1,127 @@
+\documentclass[oneside,12pt]{article}
+
+
+\input{../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../Latex/inputs/mymacros.tex}                 % Macros classiques
+\input{../../Latex/inputs/macro_paging.tex}				% Mise en page
+
+\fancyhead[R]{Oral 1}           				% En-tête droit
+\fancyhead[C]{Exercices type CAPES Bac+3}                     % En-tête central
+
+\setstretch{0.9}                          				% Interligne
+
+\titlespacing{\section}{0pt}{20pt}{5pt}
+\titleformat{\section}[frame]							% Style des section			
+    {\normalfont}
+    {\filright
+        \hspace{3mm} \bfseries Exercice \no  \thesection\hspace{3mm}}
+        {1pt}
+    {\Large\bfseries\filcenter}
+    {}
+    
+\let\oldsection\section
+\renewcommand{\section}{\newpage\oldsection}
+    
+    
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\titleformat{\subsection}
+    {\large\normalfont\bfseries}
+    {Partie \thesubsection\,: \,}
+    {0pt}
+    {\large\bfseries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Suites extraites, valeur d'adhérence}
+Dans tout l'exercice on considèrera uniquement des suites à valeurs réelles.
+
+\begin{enumerate}
+	\item Rappeler la définition d'une valeur d'adhérence d'une suite.
+	\item Montrer que toute suite convergente admet une unique valeur d'adhérence.
+	\item On considère $u\in\RR^{\NN}$ une suite bornée. En procédant par l'absurde démontrer que $u$ converge si et seulement si $u$ admet une unique valeur d'adhérence.
+	\item Si $u$ est une suite telle que les suites $(u_{2n})_{\nN}$ et $(u_{2n+1})_{\nN}$ convergent vers une même limite, peut-on affirmer que $u$ converge ?
+	\item On considère la suite $u$ définie explicitement par $u_n=\sqrt{n}-\floor{\sqrt{n}}$	
+	\begin{enumerate}
+		\item Exhiber une suite extraite de $u$ convergeant vers $0$.
+		\item Soit $\varphi : \begin{cases} \NN \longrightarrow \NN \\ n\mapsto n^2+2n \end{cases}$, déterminer $\limn u_{\varphi(n)}$ et conclure quant à la convergence de $u$
+	\end{enumerate}	 
+\end{enumerate}
+
+\vspace{2cm}
+
+\fbox{\parbox{\linewidth}{
+	\textbf{Notion mise en jeu :} Suites extraites \\
+	Il est attendu que le candidat ou la candidate sache proposer une démonstration du théorème de Bolzano-Weierstrass, ou au moins les points constitutifs d'une démonstration.
+}}
+
+\vspace{1cm}
+
+\fbox{\parbox{\linewidth}{
+	\textbf{Exemples de questions :}
+	\begin{itemize}[label=$\bullet$]
+		\item Pouvez-vous donner un contre exemple à la question 3. dans le cas d'une suite non bornée ?
+		\item Si les suites $(u_{2n})_{\nN}$ et $(u_{2n+1})_{\nN}$ n'ont pas la même limite, peut-on conclure la convergence de la suite $u$ ?
+		\item Et si l'on suppose de plus que la suite $(u_{3n})_{\nN}$ converge ?
+		\item On reprend la suite $u$ de la question 5.\\
+		Soient deux entiers $a\in\NN$ et $b\in\NN^*$ tels que $a\leq b$. On considère l'extraction $\psi:n\mapsto b^2n^2+2an$
+		\begin{enumerate}
+			\item Montrer qu'à partir d'un certain rang $\floor{\sqrt{\psi(n)}} = bn$ puis déterminer $\limn
+			u_{\psi(n)}$
+			\item Peut-on dire que l'ensemble $\{u_n ~|~ \nN\}$ est dense dans $[0~;~1]$ ?
+		\end{enumerate}
+		\item Démontrer que l'ensemble des valeurs d'adhérence d'une suite $u$ est $\bigcap \limits_{\nN} \barre{\{u_k ~|~ k\geq n\}}$
+	\end{itemize}
+}}
+
+
+
+\section{Suites de Cauchy}
+Dans tout l'exercice on considèrera uniquement des suites à valeurs réelles.\\
+Tous les espaces considérés seront muni de la distance $(x,y)\mapsto \abs{x-y}$
+
+\begin{enumerate}
+	\item Rappeler la définition d'une suite de Cauchy et d'un espace complet.
+	\item Montrer que toute suite convergente est de Cauchy.
+	\item On dit qu'une suite vérifie le critère de "prochain-proche" si pour tout $\epsilon>0$, il existe un entier naturel $N$ tel que $n\geq N \Rightarrow \abs{u_{n+1}-u_n}<\epsilon$. \\
+	A-t-on équivalence entre vérifier le critère de "prochain-proche" et être de Cauchy ?
+	\item Démontrer que $\NN$ est complet.
+	\item On considère la suite $u$ vérifiant $u_0=1$ et $u_{n+1}=\frac{u_n}{2}+\frac{1}{u_n}$
+		\begin{enumerate}
+			\item Montrer que $u$ converge vers une limite réelle que l'on précisera.
+			\item Montrer que $u$ est à valeurs dans $\QQ$.
+			\item En déduire que $\QQ$ n'est pas un espace complet.
+		\end{enumerate}
+\end{enumerate}
+
+\vspace{2cm}
+
+\fbox{\parbox{\linewidth}{
+	\textbf{Notion mise en jeu :} Suites de Cauchy \\
+	Il est attendu que le candidat ou la candidate sache proposer une démonstration de la complétude de $\RR$, ou au moins les points constitutifs d'une démonstration.
+}}
+
+\vspace{1cm}
+
+\fbox{\parbox{\linewidth}{
+	\textbf{Exemples de questions :} 
+	\begin{itemize}[label=$\bullet$]
+		\item La suite $u$ définie par $u_n=n^{(-1)^n}$ pour tout entier naturel $n$ est-elle de Cauchy ?
+		\item Si $u$ est une suite de Cauchy monotone, peut-on affirmer qu'elle converge ?
+		\item En utilisant la suite $u$ définie par $u_0=1$ et $u_{n+1}=\frac{1}{2}\left( u_n+\frac{a^2}{u_n} \right)$, proposer une démonstration de la densité de $\QQ$ dans $\RR$.
+		\item Soit $u$ une suite positive, décroissante et tendant vers $0$. Pour $\nN$ on pose $v_n=\sommek{0}{n}(-1^k)u_k$ \\
+		Démontrer la convergence de la suite $v$.
+		\item Soit $u$ une suite de Cauchy. Montrer qu'il existe une extraction $\varphi$ telle que : \\
+		$\forall \nN ~,~ \forall k \geq n ~,~ \abs{u_{\varphi(n)}-u_{\varphi(k)}}\geq\dfrac{1}{2^n}$
+	\end{itemize}
+}}
+
+
+
+
+
+\end{document}

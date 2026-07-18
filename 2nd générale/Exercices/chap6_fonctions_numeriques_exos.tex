@@ -1,0 +1,1002 @@
+\documentclass[oneside,12pt]{article}          			% Article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         % Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 % Macros classiques
+
+
+\fancyhead[R]{2\up{nd} générale}            		% En-tête droit
+\fancyhead[C]{Calcul numérique}                     % En-tête central
+\setstretch{0.95}                            		% Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\section{Courbes représentatives}
+
+\subsection{Parabole}
+On considère la fonction $f$ définie par $f(x)=x^2-x$ \\
+On note $\Ccal_f$ sa courbe représentative dans un repère orthonormé.
+\begin{enumerate}
+	\item Calculer l'image de $-2$ par la fonction $f$
+	\item Vérifier que le point de coordonnées $(4;12)$ appartient à $\Ccal_f$
+	\item Le point de coordonnées $(-4;-12)$ appartient-il également à $\Ccal_f$ ?
+	\item Compléter le tableau de valeur ci-après :
+	\begin{center}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|P{1.5cm}|P{1.5cm}|P{1.5cm}|P{1.5cm}|P{1.5cm}|P{1.5cm}|P{1.5cm}|} \hline
+			$x$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ \\ \hline
+			$f(x)$ & & & & & & \\ \hline	
+		\end{tabular}
+	\end{center}
+	\item Dans un repère orthonormé, représenter l'allure de $\Ccal_f$ sur l'intervalle $[-2;3]$
+\end{enumerate}
+
+
+
+\subsection{Zig et zag}
+On considère la fonction $g$ définie par $g(x)=\dfrac{(2-x)(x+1)(x+4)}{4}$ \\
+On note $\Ccal_g$ sa courbe représentative dans un repère orthonormé.
+\begin{enumerate}
+	\item La courbe $\Ccal_g$ passe-t-elle par l'origine du repère ?
+	\item Montrer que le point de coordonnée $(7;-110)$ appartient à $\Ccal_g$
+	\item Compléter le tableau de valeur ci-après :
+	\begin{center}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|P{1cm}|} \hline
+			$x$ & $-5$ & $-4$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$ \\ \hline
+			$g(x)$ & & & & & & & & & \\ \hline	
+		\end{tabular}
+	\end{center}
+	\item Dans un repère orthonormé, représenter l'allure de $\Ccal_g$ sur l'intervalle $[-5;3]$
+\end{enumerate}
+
+
+
+\subsection{Première étude graphique}
+On a représenté dans le repère ci-dessous la courbe $\Ccal_f$ représentative de la fonction $f$.\\
+
+\begin{minipage}{0.55\linewidth}
+Vous serez aussi précis$\cdot$es que le permet le graphique.
+    \begin{enumerate} \setlength{\itemsep}{1mm}
+		\item Déterminer l'image de $1$ et $-1$ par la fonction $f$
+		\item Déterminer $f(2,5)$ et $f(0)$
+		\item Déterminer le(s) antécédent(s) de $4$ par la fonction $f$
+		\item Combien $1$ admet-il d'antécédents par la fonction $f$ ?
+		\item Peut-on affirmer que $f(3)=f(-3)$ ?
+		\item Déterminer les antécédents de $0$ par la fonction $f$
+		\item Déterminer un nombre $x$ tel que $f(x)=x$
+		\item Déterminer un nombre $x$ vérifiant $f(-x)>f(x)$
+    \end{enumerate}
+\end{minipage} \hspace{1cm}
+\begin{minipage}{0.5\linewidth}
+    \begin{tikzpicture}[scale=1.05] % ----- Début de la figure
+        \begin{axis}[xmin = -3, xmax = 3, ymin = -1, ymax = 4, xtick distance=1, ytick distance=1,
+            grid = major, major grid style = {line width = 0.2pt , draw = gray},
+            axis lines = middle, enlargelimits = { abs = 0.2 },
+            ticklabel style = {font = \small }
+            ]
+  
+        \addplot[line width = 2pt , domain=-3:-1, samples=100, color=blue!80!black]   
+        {0.5*x^3+3*x^2+4.5*x+1}; 
+        \addplot[line width = 2pt , domain=-1:1, samples=100, color=blue!80!black]  
+        {-1.25*x^3+3.75*x+1.5};
+        \addplot[line width = 2pt , domain=1:3, samples=100, color=blue!80!black]  
+        {0.75*x^3-4.5*x^2+6.75*x+1};
+        
+        \draw[color=blue!80!black] (2.5,2.5) node {$\Ccal_f$};
+        
+        \end{axis}
+    \end{tikzpicture}                                               
+\end{minipage}
+
+
+
+\subsection{Vrai / Faux}
+On considère une fonction $f$ définie sur $\RR$ vérifiant $f(2)=2$ et $f(3)=2$ \\
+On appelle $\Ccal_f$ sa courbe représentative dans un repère orthonormé.
+
+Pour chacune des affirmations suivantes, dire si elle sont vraies, fausses, ou impossible à déterminer.
+
+
+\renewcommand{\arraystretch}{1.5} 
+\begin{tabular}{ll}
+	a) $2$ est l'image de $2$ par la fonction $f$ &
+	b) $2$ est l'image de $3$ par la fonction $f$ \\
+	c) $3$ est l'image de $2$ par la fonction $f$ &
+	d) $3$ est l'image de $2$ par la fonction $f$ \\
+	e) $2$ admet exactement un antécédent par $f$ &
+	f) $2$ admet au moins un antécédent par $f$ \\
+	g) $3$ admet exactement un antécédent par $f$ &
+	h) $3$ admet au moins un antécédent par $f$ \\
+	i) Il existe au moins un point de $\Ccal_f$ d'abscisse $2$ &
+	j) Il existe exactement un point de $\Ccal_f$ d'abscisse $2$ \\
+	k) Il existe au moins un point de $\Ccal_f$ d'ordonnée $2$ &
+	l) Il existe exactement un point de $\Ccal_f$ d'ordonnée $2$ \\
+	m) Il existe au moins un point de $\Ccal_f$ d'abscisse $3$ &
+	n) Il existe exactement un point de $\Ccal_f$ d'abscisse $3$ \\
+	o) Il existe au moins un point de $\Ccal_f$ d'ordonnée $3$ &
+	p) Il existe exactement un point de $\Ccal_f$ d'ordonnée $3$
+\end{tabular}
+
+
+
+\subsection{Tracer des courbes}
+On considère les trois fonctions $f$, $g$ et $h$ définies par $f(x)=\dfrac{4}{1+x^2}$ , $g(x)=\dfrac{x^2+1}{x}$ et $h(x)=\dfrac{1}{1-x}$
+\begin{enumerate}
+    \item Remplir chacun des tableaux de valeurs suivants en arrondissant au dixième :
+    
+    \renewcommand{\arraystretch}{1.5}
+     
+    \begin{tabular}{|P{12.53mm}|P{12.53mm}|P{12.53mm}|P{12.53mm}|P{12.53mm}|P{12.53mm}|P{12.53mm}|P{12.53mm}|P{12.53mm}|P{12.53mm}|} \hline
+        $x$ & $-3$ & $-2$ & $-1$ & $-0,5$ & $0$ & $0,5$ & $1$ & $2$ & $3$ \\ \hline
+        $f(x)$ & & & & & & & & & \\ \hline
+    \end{tabular}
+
+    \begin{tabular}{|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|} \hline
+        $x$ & $-5$ & $-3$ & $-1$ & $-0,5$ & $-0,25$ & $0,25$ & $0,5$ & $1$ & $3$ & $5$  \\ \hline
+        $g(x)$ & & & & & & & & & & \\ \hline
+    \end{tabular}
+
+    \begin{tabular}{|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|P{11mm}|} \hline
+        $x$ & $-2$ & $-1$ & $0$ & $0,5$ & $0,75$ & $1,25$ & $1,5$ & $2$ & $3$ & $6$  \\ \hline
+        $h(x)$ & & & & & & & & & & \\ \hline
+    \end{tabular}\vspace{5pt}
+
+    \item Tracer l'allure des courbes représentatives de ces trois fonctions dans les repère ci-après :
+    
+\hspace{-15mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=0 , ymax=4,
+        xtick distance = 0.5, ytick distance = 0.5,
+        xticklabels = {, -3 , , -2 , , -1 , , 0 , , 1 , , 2 , , 3},
+        yticklabels = { 0 , , , 1 , , 2 , , 3 , , 4},
+        axis lines = middle, enlargelimits = { abs = 0.1},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-5 , xmax=5 , ymin=-5 , ymax=5,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-2 , xmax=6 , ymin=-5 , ymax=5,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+	\item Ces fonctions semblent-elles paires ? Impaires ?
+\end{enumerate}
+
+
+
+\subsection{Différentes paraboles}
+On considère la fonction $f$ définie par $f(x)=x^2$. On définit également les fonctions $g$, $h$ et $p$ par :
+
+$g(x)=f(x+3)$ \quad , \quad $h(x)=f(x)+3$ \quad et \quad $p(x)=2-f(x)$
+
+\begin{enumerate}
+	\item Construire un repère orthogonal allant de $-7$ à $4$ au niveau des abscisses et de $-14$ à $20$ au niveau des ordonnées. Une unité de longueur pour les abscisses correspondra à trois unités de longueurs pour les ordonnées.
+	\item À l'aide d'un tableau de valeurs, représenter l'allure de $\Ccal_f$ la courbe représentative de la fonction $f$ dans ce repère et sur l'intervalle $[-4;4]$
+	\item \begin{enumerate}
+		\item Tracer l'allure de $\Ccal_g$ dans ce même repère et sur l'intervalle $[-7;1]$
+		\item Que peut-on dire de $\Ccal_g$ par rapport à $\Ccal_f$ ?
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Tracer l'allure de $\Ccal_h$ dans ce même repère et sur l'intervalle $[-4;4]$
+		\item Que peut-on dire de $\Ccal_h$ par rapport à $\Ccal_f$ ?
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Tracer l'allure de $\Ccal_p$ dans ce même repère et sur l'intervalle $[-4;4]$
+		\item Que peut-on dire de $\Ccal_p$ par rapport à $\Ccal_f$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Transformations d'une courbe}
+\begin{minipage}{0.5\linewidth}\restoreskip
+
+	On a tracé la courbe représentative d'une fonction $f$  dans le repère ci-après.
+	
+	On définit les fonctions $g$, $h$ et $p$ par :
+		\[ g(x)=f(x)-4 \]
+		\[ h(x)=f(x+2) \]
+		\[ p(x)=-1-f(x) \]
+
+	Tracer dans ce repère les courbes représentatives des fonctions $g$, $h$ et $p$
+	
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture} % ----- Début de la figure
+	\begin{axis}[width = 11cm , height=7.5cm ,
+		xmin = -8, xmax = 8, ymin = -6, ymax = 5, xtick distance=1, ytick distance=1,
+    	grid = major, major grid style = {line width = 0.2pt , draw = gray},
+        axis lines = middle, enlargelimits = { abs = 0.2 },
+        ticklabel style = {font = \footnotesize}
+        ]
+  
+	\addplot[line width = 2.5pt , domain=-8:-7, samples=100, color=black!60]   
+    {0*x^3+0*x^2-2*x-12};
+    \addplot[line width = 2.5pt , domain=-7:-5, samples=100, color=black!60]   
+    {0*x^3+0.5*x^2+5*x+12.5};
+    \addplot[line width = 2.5pt , domain=-5:-3, samples=100, color=black!60]   
+    {0.1259*x^3+1.88*x^2+9.38*x+15.63};
+    \addplot[line width = 2.5pt , domain=-3:-2, samples=100, color=black!60]   
+    {-0.00025*x^3+0.5*x^2+4.5*x+10};
+    \addplot[line width = 2.5pt , domain=-2:0, samples=100, color=black!60]   
+    {0.1259*x^3-0.25*x^2+0*x+5};
+    \addplot[line width = 2.5pt , domain=0:2, samples=100, color=black!60]   
+    {-0.1259*x^3+0*x^2+0*x+5};
+    \addplot[line width = 2.5pt , domain=2:3, samples=100, color=black!60]   
+    {0.5*x^3-4*x^2+8.5*x-1};
+    \addplot[line width = 2.5pt , domain=3:4, samples=100, color=black!60]   
+    {0.3*x^3-3*x^2+7.9*x-2.8};
+    \addplot[line width = 2.5pt , domain=4:8, samples=100, color=black!60]   
+    {-0.0438*x^3+1*x^2-7.6*x+17.2}; 
+	
+	\draw (-8,4) node {\Large x} ;
+	\draw (-7,2) node {\Large x} ;
+	\draw (-5,0) node {\Large x} ;
+	\draw (-3,1) node {\Large x} ;
+	\draw (-2,3) node {\Large x} ;
+	\draw (0,5) node {\Large x} ;
+	\draw (2,4) node {\Large x} ;
+	\draw (3,2) node {\Large x} ;
+	\draw (4,0) node {\Large x} ;
+	\draw (8,-2) node {\Large x} ;
+	\draw (7.5,-2.75) node {$\Ccal_f$};
+    \end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+
+
+
+
+\subsection{Encore un peu}
+\begin{minipage}{0.5\linewidth}
+\begin{tikzpicture} % ----- Début de la figure
+	\begin{axis}[width = 11cm , height=7.5cm ,
+		xmin = -5, xmax = 5, ymin = -3, ymax = 4, xtick distance=1, ytick distance=1,
+    	grid = major, major grid style = {line width = 0.2pt , draw = gray},
+        axis lines = middle, enlargelimits = { abs = 0.2 },
+        ticklabel style = {font = \footnotesize}
+        ]
+  
+	\addplot[line width = 2.5pt , domain=-5:-3, samples=100, color=black!60]   
+    {0*x^3+0.25*x^2+1.5*x+5.25};
+    \addplot[line width = 2.5pt , domain=-3:-1, samples=100, color=black!60]   
+    {0*x^3-0.25*x^2-1.5*x+0.75};
+    \addplot[line width = 2.5pt , domain=-1:1, samples=100, color=black!60]   
+    {0*x^3+0*x^2-1*x+1};
+    \addplot[line width = 2.5pt , domain=1:3, samples=100, color=black!60]   
+    {0*x^3+0.25*x^2-1.5*x+1.25};
+    \addplot[line width = 2.5pt , domain=3:4, samples=100, color=black!60]   
+    {0*x^3+1*x^2-6*x+8};
+    \addplot[line width = 2.5pt , domain=4:5, samples=100, color=black!60]   
+    {-1*x^3+14*x^2-62*x+88};
+
+	\draw (-5,4) node {\Large x} ;
+	\draw (-3,3) node {\Large x} ;
+	\draw (-1,2) node {\Large x} ;
+	\draw (-0,1) node {\Large x} ;
+	\draw (1,0) node {\Large x} ;
+	\draw (3,-1) node {\Large x} ;
+	\draw (4,0) node {\Large x} ;
+	\draw (5,3) node {\Large x} ;
+	\draw (-3.5,3.4) node {$\Ccal_f$};
+    \end{axis}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}\restoreskip
+
+On a tracé la courbe représentative d'une fonction $f$  dans le repère ci-contre .
+
+On définit les fonctions $g$, $h$ et $p$ par : 
+	\[ g(x)=f(-x) \]  \[ h(x)=f(x-1)-3 \]  \[ p(x)=1-f(x+1) \]
+
+Tracer dans ce repère les courbes représentatives des fonctions $g$, $h$ et $p$
+
+\end{minipage}
+
+
+
+
+\subsection{À partir des courbes}
+\begin{minipage}{0.4\linewidth} \restoreskip
+	On a tracé dans le repère ci-contre $\Ccal_f$ la courbe représentative de la fonction $f$ en noir.
+	
+	On a également tracé $\Ccal_g$, $\Ccal_h$ et $\Ccal_p$ les courbes représentatives respectives des fonctions $g$, $h$ et $p$ en rouge, bleu et vert.
+	
+	Déterminer l'expression algébrique de $g(x)$, $h(x)$ et $p(x)$ en faisant intervenir la fonction $f$
+\end{minipage}
+\begin{minipage}{0.5\linewidth}\hspace{10pt}
+	\begin{tikzpicture} % ----- Début de la figure
+		\begin{axis}[width = 13cm , height=8cm ,
+			xmin = -5, xmax = 5, ymin = -5, ymax = 5, xtick distance=1, ytick distance=1,
+    		grid = major, major grid style = {line width = 0.2pt , draw = gray},
+        	axis lines = middle, enlargelimits = { abs = 0.25 },
+        	ticklabel style = {font = \scriptsize}
+        	]
+  
+		\draw[line width=2pt , color=blue!80!black] (-5,0) -- (-2,-3) -- (-1,-1) -- (2,-1) -- (5,2) ;
+		\draw[line width=2pt , color=red!80!black] (-5,-1) -- (-2,2) -- (1,2) -- (2,4) -- (5,1) ;
+		\draw[line width=2pt , color=green!80!black] (-5,-3) -- (-2,0) -- (-1,-2) -- (2,-2) -- (5,-5) ;
+		\draw[line width=2pt] (-5,0) -- (-2,3) -- (-1,1) -- (2,1) -- (5,-2) ;
+
+		\draw (-3.5,2.475) node {$\Ccal_f$} ;
+		\draw[color=red!80!black] (3.5,3.475) node {$\Ccal_g$} ;
+		\draw[color=blue!80!black] (-2.5,-3.525) node {$\Ccal_h$} ;
+		\draw[color=green!80!black] (3.5,-4.525) node {$\Ccal_p$} ;
+		
+    	\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\section{Domaines de définition}
+
+\subsection{Domaines simples}
+Déterminer le domaine de définition de chacune des fonctions suivantes :
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f_1:x\mapsto 3x^2-x$ & $f_2:x\mapsto \dfrac{3x+1}{2x+4}$ & $f_3:x\mapsto \dfrac{x^3-9}{5x+1}$ \\
+	$f_4:x\mapsto \sqrt{x-3}$ & $f_5:x\mapsto x-\sqrt{2x+10}$ & $f_6:x\mapsto 5x^2+\sqrt{5+x^2}$ \\
+	$f_7:x\mapsto \dfrac{1}{\sqrt{3x+2}}$ & $f_8:x\mapsto \dfrac{2x-7}{4+3x^2}$ & $f_9:x\mapsto \dfrac{\sqrt{1+x^2}}{1+x}$
+\end{tabular}
+
+
+
+\subsection{Domaines composés}
+Déterminer le domaine de définition de chacune des fonctions suivantes :
+
+\renewcommand{\arraystretch}{2.75}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+	$f_1:x\mapsto \dfrac{1}{x^2-4}$ & $f_2:x\mapsto \dfrac{\sqrt{x+2}}{3x+9}$ & $f_3:x\mapsto \dfrac{1}{x-1}+ \dfrac{1}{x} +\dfrac{1}{x+1}$ \\
+	$f_4:x\mapsto \dfrac{\sqrt{3x-21}}{2x-6}$ & $f_5:x\mapsto \sqrt{x+9}-\sqrt{2x+4}$ & $f_6:x\mapsto \dfrac{1+\sqrt{x-1}}{x^2-1}$ \\
+	$f_7:x\mapsto \dfrac{x+\sqrt{2x-1}}{9x^2-4}$ & $f_8:x\mapsto \dfrac{2x-9}{3x^2+7x}$ & $f_9:x\mapsto \dfrac{\sqrt{x}}{1-\frac{1}{x}}$
+\end{tabular}
+
+
+
+\section{Équations et expression algébrique}
+
+\subsection{Équations par expression algébrique}
+On considère la fonction $f$ définie sur $\RR$ par $f(x)=x^2-2x-15$
+\begin{enumerate}
+	\item Démontrer que $f(x)=(x-5)(x-3)$
+	\item Démontrer que $f(x)=(x-1)^2-16$
+	\item En choisissant la forme la plus adaptée, résoudre les équations : \\[5pt]
+		a) $f(x)=0$ \qquad\qquad  b) $f(x)=-15$ \qquad\qquad  c) $f(x)+16=0$
+\end{enumerate}
+
+
+
+\subsection{Lecture graphique}
+On a représenté dans le repère ci-dessous la courbe $\Ccal_f$ représentative de la fonction $f$.\\
+\begin{minipage}{0.55\linewidth}
+    \begin{enumerate} 
+    	\item Préciser le domaine de définition de la fonction $f$
+		\item Donner l'ensemble des solutions de l'équation $f(x)=3$
+		\item Donner l'ensemble des solutions de l'équation $f(x)=0$
+		\item Donner l'ensemble des solutions de l'équation $f(x)=-3$
+		\item Donner l'ensemble des solutions de l'inéquation $f(x)\geq1$
+		\item Donner l'ensemble des solutions de l'inéquation $f(x)\leq-1$
+    \end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+    \begin{tikzpicture}[scale=1.1] % ----- Début de la figure
+        \begin{axis}[xmin = -4, xmax = 4, ymin = -2, ymax = 3,
+			axis lines = middle, 
+			grid=both , 
+        	xtick distance = 1, ytick distance = 1,
+    		major grid style = {line width = 0.2pt ,draw = gray},
+    		minor tick num=1 ,
+    		minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+        	ticklabel style = {font = \scriptsize } ,
+        	enlargelimits = { abs = 0.2 }
+        	]
+    
+        \addplot[line width = 2pt , domain=-4:-2, samples=100, color=blue!80!black]   
+        {0.25*x^3+2.25*x^2+7*x+8}; 
+        \addplot[line width = 2pt , domain=-2:-1, samples=100, color=blue!80!black]  
+        {-3*x^3-14*x^2-19*x-5};
+        \addplot[line width = 2pt , domain=-1:1, samples=100, color=blue!80!black]  
+        {x^3-3*x+1};
+        \addplot[line width = 2pt , domain=1:2, samples=100, color=blue!80!black]  
+        {-2*x^3+9*x^2-12*x+4};
+        \addplot[line width = 2pt , domain=2:4, samples=100, color=blue!80!black]  
+        {0.5*x^3-4.5*x^2+12*x-10};
+        
+        \draw[color=blue!80!black] (0.5,1.5) node{$\Ccal_f$};
+    
+        \end{axis}
+    \end{tikzpicture}                                               
+\end{minipage}
+
+
+
+\subsection{Deux courbes}
+On a tracé dans le repère ci-dessous les courbes représentatives des fonctions $f$ en rouge et $g$ en bleu : 
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis}[width = 20cm , height=12.5cm ,
+			xmin = -6, xmax = 9, ymin = -4, ymax = 5,
+			axis lines = middle, 
+			grid=both , 
+        	xtick distance = 1, ytick distance = 1,
+    		major grid style = {line width = 0.2pt ,draw = gray},
+    		minor tick num=1 ,
+    		minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+        	ticklabel style = {font = \footnotesize } ,
+        	enlargelimits = { abs = 0.2 }
+        	]
+    
+    	% Courbe rouge
+    	\addplot [domain=-6:-5, samples=100, line width= 2.5pt, color=red!90!black]
+    	{x^(3)+15*x^(2)+72*x+112};
+    
+    	\addplot[domain = -5:-3,color=red!90!black,samples=100, line width= 2.5pt]
+    	{0.25*x^(3)+3.75*x^(2)+15.75*x+18.25};
+    
+    	\addplot[domain = -3:-2,color=red!90!black,samples=100, line width= 2.5pt]
+    	{-6*x^(3)-44*x^(2)-102*x-74};
+    
+    	\addplot[domain = -2:0,color=red!90!black,samples=100, line width= 2.5pt]
+    	{0.5*x^(3)+1.25*x^(2)+x+3};
+
+    	\addplot[domain = 0:1,color=red!90!black,samples=100, line width= 2.5pt]
+    	{-3*x^(3)+4*x^(2)+x+3};
+
+   		\addplot[domain = 1:2,color=red!90!black,samples=100, line width= 2.5pt]
+    	{-x^(2)+2*x+4};
+
+    	\addplot[domain = 2:4,color=red!90!black,samples=100, line width= 2.5pt]
+    	{0.5*x^(3)-4*x^(2)+8*x};
+
+    	\addplot[domain = 4:5,color=red!90!black,samples=100, line width= 2.5pt]
+    	{-2*x^(3)+28*x^(2)-128*x+192};
+
+    	\addplot[domain = 5:6,color=red!90!black,samples=100, line width= 2.5pt]
+    	{-x^(2)+12*x-33};
+
+    	\addplot[domain = 6:9,color=red!90!black,samples=100, line width= 2.5pt]
+    	{0.44444444444444*x^(3)-10*x^(2)+72*x-165};
+
+    	% Courbe bleue
+    	\addplot[domain = -6:-3,color=blue!80!black,samples=100, line width= 2.5pt]
+    	{-0.514*x^3-6.94*x^2-27.73*x-31.6};
+
+    	\addplot[domain = -3:-1,color=blue!80!black,samples=100, line width= 2.5pt]
+    	{0.3847*x^3+1.92*x^2+1.18*x-0.35};
+
+    	\addplot[domain = -1:0,color=blue!80!black,samples=100, line width= 2.5pt]
+    	{0.5*x^3+1.5*x^2-1};
+
+    	\addplot[domain = 0:2,color=blue!80!black,samples=100, line width= 2.5pt]
+    	{-0.1*x^3+0.45*x^2-1};
+
+    	\addplot[domain = 2:5,color=blue!80!black,samples=100, line width= 2.5pt]
+    	{-0.088*x^3+0.81*x^2-1.58*x+0.63};
+
+    	\addplot[domain = 5:9,color=blue!80!black,samples=100, line width= 2.5pt]
+    	{0.1531111*x^3-3.21*x^2+20.56*x-39.7};
+    	
+    	
+    	\draw[color=red!90!black] (2.5,4.5) node{$\Ccal_f$} ;
+    	\draw[color=blue!80!black] (-4.5,-2.5) node{$\Ccal_g$} ;
+
+	\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\textit{Vous pourrez arrondir les résultats en fonction de la précision du graphique}
+\begin{enumerate}
+    \item Résoudre les équations suivantes : \\
+	\renewcommand{\arraystretch}{1}
+    \begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+         a) $f(x)=3$ & b) $g(x)=0$ & c) $f(x)=4$ \\
+         d) $g(x)=4$ & e) $f(x)=g(x)$ & f) $f(x)=2$
+    \end{tabular}
+    \item Résoudre les inéquations suivantes : \\
+    \begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+         a) $f(x)<0$ & b) $g(x)\geq3$ & c) $g(x)\leq-1$ \\
+         d) $f(x)\leq4$ & e) $f(x)>g(x)$ & f) $g(x)<0$
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Avec deux expressions}
+Dans chacun des cas suivants, résoudre par le calcul l'équation $f(x)=g(x)$, puis donner une interprétation graphique du résultat obtenu :
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+	a) $f(x)=4x-1$ \quad et \quad $g(x)=2x+5$ & b) $ f(x)=\frac{3x+1}{2}$ \quad et \quad $g(x)=3x+\frac{1}{2}$ \\
+	c) $f(x)=3x+x^2$ \quad et \quad $g(x)=3x^2-x$ & d) $f(x)=x^2+4x$ \quad et \quad $g(x)=4x+9$ \\
+	e) $f(x)=x^2+3x$ \quad et \quad $g(x)=7x-4$ & f) $f(x)= 2x^2+3$ \quad et \quad $g(x)=12-2x^2$ \\
+	g) $f(x)=\dfrac{2}{x^2+9}$ \quad et \quad $g(x)=\dfrac{1}{x^2}$ & h) $f(x)= \dfrac{1}{2x+3}$ \quad et \quad $g(x)=\dfrac{3}{5x-1}$ \\
+\end{tabular}
+
+
+
+\subsection{Compositions}
+\begin{enumerate}
+	\item On considère la fonction $f:x\mapsto x^2+x$ définie sur $\RR$
+	\begin{enumerate}
+		\item Montrer que $f(x+1)=x^2+3x+2$
+		\item Montrer que $f(2-x)=x^2-5x+6$
+		\item Montrer que $f(2x+3)=4x^2+14x+12$
+	\end{enumerate}
+	\item On considère les fonctions $g$ et $h$ définies sur $\RR$ par $g(x)=x^2+1$ et $h(x)=2x-3$
+	\begin{enumerate}
+		\item Montrer que $g(h(x))=4x^2-12x+10$
+		\item Montrer que $h(g(x))=2x^2-1$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Symétrie parabolique}
+On considère la fonction $f:x\mapsto x^2-2x+3$ définie sur $\RR$
+\begin{enumerate}
+	\item Montrer que $f(1-x)=f(x)$ pour tout $x$ réel
+	\item Quelle conclusion peut-on en tirer concernant la courbe représentative de la fonction $f$ ?
+\end{enumerate}
+
+
+
+\subsection{Léger décalage}
+On considère les fonctions $f:x\mapsto x^2-4x$ \quad et \quad $g:x\mapsto x^2+8x+12$ définies sur $\RR$\\
+On note $\Ccal_f$ et $\Ccal_g$ leurs courbes représentatives dans un repère orthonormé.
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Démontrer que $f(x+6)=g(x)$
+		\item En déduire que $\Ccal_g$ est le l'image de $\Ccal_f$ par une translation que l'on précisera.
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Démontrer que $g(-2-x)=f(x)$
+		\item En déduire que $\Ccal_f$ est le l'image de $\Ccal_g$ par une symétrie que l'on précisera.
+	\end{enumerate}
+	\item Justifier avec vos propres mots en quoi les deux résultats précédents permettent d'affirmer que $\Ccal_f$ admet un axe de symétrie vertical.
+\end{enumerate}
+
+
+
+
+\subsection{Symétrie hyperbolique}
+On considère la fonction $\varphi:x\mapsto\frac{x}{x-2}$ définie sur $\RR\setminus\{2\}$
+\begin{enumerate}
+	\item Démontrer que $\varphi(x+2)-1=\frac{1}{x}$ \quad pour tout $x\neq0$
+	\item Démontrer que $\varphi(2-x)=\frac{1}{\varphi(x)}$ \quad pour tout $x\neq0$
+	\item Démontrer que $2-\varphi(4-x)=\varphi(x)$ \quad pour tout $x\neq2$
+\end{enumerate}
+
+
+
+\section{Modélisation par des fonctions}
+
+\subsection{Balle rebondissante}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.2]
+        \begin{axis}[xmin=0 , xmax=5 , ymin=0 , ymax=50, 
+		axis lines = middle, 
+		x label style={at = {(axis description cs:0.5,-0.075)} , anchor=north},
+        xlabel = \small{Temps (s)},
+        y label style={rotate=90 , at = {(axis description cs:-0.075,0.5)} , anchor=south},
+        ylabel = \small{Hauteur (cm)},
+		grid=both , 
+        xtick distance = 1, ytick distance = 10,
+    	major grid style = {line width = 0.2pt ,draw = gray},
+    	minor tick num=4 ,
+    	minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+			
+			\addplot[domain = 0:0.5 , line width = 2pt , color = red!90!black , samples = 100]
+			{-200*(\x+0.5)*(\x-0.5)};
+			
+			\addplot[domain = 0.5:1.5 , line width = 2pt , color = red!90!black , samples = 100]
+			{-160*(\x-0.5)*(\x-1.5)};
+			
+			\addplot[domain = 1.5:2.4 , line width = 2pt , color = red!90!black , samples = 100]
+			{-150*(\x-1.5)*(\x-2.4)};
+			
+			\addplot[domain = 2.4:3.2 , line width = 2pt , color = red!90!black , samples = 100]
+			{-140*(\x-2.4)*(\x-3.2)};
+			
+			\addplot[domain = 3.2:3.9 , line width = 2pt , color = red!90!black , samples = 100]
+			{-130*(\x-3.2)*(\x-3.9)};		
+			
+			\addplot[domain = 3.9:4.5 , line width = 2pt , color = red!90!black , samples = 100]
+			{-120*(\x-3.9)*(\x-4.5)};
+			
+			\addplot[domain = 4.5:5 , line width = 2pt , color = red!90!black , samples = 100]
+			{-110*(\x-4.5)*(\x-5)};	
+			
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth} 
+	On a tracé dans le repère ci-contre la hauteur d'une balle rebondissante en fonction du temps.
+	\begin{enumerate}
+		\item Combien de fois la balle rebondit-elle lors des trois premières secondes ?
+		\item Combien de rebonds n'ont pas dépassé 25cm de hauteur ?
+		\item Après 2,5 secondes, quelle semble être la hauteur de la balle ?
+		\item Combien de temps la balle semble-t-elle avoir passé au-delà de 20cm de hauteur ?
+		\item Pendant ces 5 secondes, quelle semble être la distance verticale totale parcourue par la balle ?
+	\end{enumerate}
+	\textit{Vous serez aussi précis que le graphique le permet}
+\end{minipage}
+
+
+
+\subsection{Absolute cinema}
+Un cinéma propose 3 offres différentes :
+
+- L'offre A : Chaque place coûte 10\euro \\
+- L'offre B : Une carte d'abonnement à 30\euro\, qui réduit le coût des place à 5\euro \\
+- L'offre C : Tout illimité pour un coût de 120\euro
+
+On note $f(x)$, $g(x)$ et $h(x)$ le coût (en \euro) de $x$  places de cinéma selon les offres A, B et C.
+
+\begin{minipage}{0.5\linewidth}
+	\begin{enumerate}
+		\item Exprimer $f(x)$, $g(x)$ et $h(x)$ en fonction de $x$
+		\item Identifier sur le graphique ci-contre les courbes de ces fonctions
+		\item Åsmund souhaite acheter 10 places de cinéma. Quelle offre devrait-il choisir ? Justifier par le calcul et graphiquement.
+		\item Pour combien de places achetées l'option A est-elle la plus rentable ?
+		\item \begin{enumerate}
+			\item Déterminer par le calcul pour combien de places achetées le prix est identique pour l'offre B et l'offre C 
+			\item Donner une interprétation graphique de ce résultat.
+			\end{enumerate}
+	\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.2]
+        \begin{axis}[xmin=0 , xmax=15 , ymin=0 , ymax=130, 
+		axis lines = middle, 
+		x label style={at = {(axis description cs:1,-0.125)} , anchor=east},
+        xlabel = \small{Nombre de places},
+        y label style={rotate=90 , at = {(axis description cs:-0.125,1)} , anchor=east},
+        ylabel = \small{Prix (\euro)},
+		grid=major , 
+        xtick distance = 1, ytick distance = 10,
+    	major grid style = {line width = 0.2pt ,draw = gray},
+        ticklabel style = {font = \scriptsize }
+        ]
+			
+			\addplot[domain = 0:120 , line width = 2pt , color = blue!80!black , samples = 100]
+			{120};
+			\addplot[domain = 0:120 , line width = 2pt , color = red!90!black , samples = 100]
+			{10*x};
+			\addplot[domain = 0:120 , line width = 2pt , color = green!85!black , samples = 100]
+			{30+5*x};	
+			
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+\subsection{Vroum vroum}
+\begin{minipage}{0.5\linewidth}
+	Wayan effectue un trajet en voiture. La courbe ci-après décrit la distance parcourue par Wayan en fonction du temps écoulé depuis son départ. \\
+	Toutes les vitesses seront données en km/h
+	\begin{enumerate}
+		\item Quelle a été la vitesse moyenne de Wayan lors de son trajet ?
+		\item Quelle distance a-t-il parcouru lors des quarante premières minutes de route ?
+		\item Il y avait des embouteillages lors des dix derniers kilomètres du trajet. Combien de temps Wayan a-t-il passé dans ces embouteillages ?
+		\item Entre la 40-ième et la 60-ième minute de son trajet, Wayan circulait sur une voie limitée à 80km/h. Semble-t-il qu'il ait respecté cette limitation de vitesse ?
+	\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.2]
+        \begin{axis}[xmin=0 , xmax=120 , ymin=0 , ymax=100, 
+		axis lines = middle, 
+		x label style={at = {(axis description cs:1,-0.125)} , anchor=east},
+        xlabel = \small{Temps (min)},
+        y label style={rotate=90 , at = {(axis description cs:-0.125,1)} , anchor=east},
+        ylabel = \small{Distance (km)},
+		grid=both , 
+        xtick distance = 10, ytick distance = 10,
+    	major grid style = {line width = 0.2pt ,draw = gray},
+    	minor tick num=1 ,
+    	minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+			
+			\addplot[domain = 0:120 , line width = 2pt , color = blue!80!black , samples = 100]
+			{53.65*tanh(\x/35-1.5)+48.57};	
+			
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Découpage régulier}
+\begin{minipage}{0.58\linewidth} \restoreskip
+	On considère un rectangle $ABCD$ tel que $AB=8$ et $BC=4$.
+
+	On place les points sur $E$, $F$, $G$ et $H$ respectivement sur les segments $[AB]$, $[BC]$, $[CD]$ et $[DA]	$ de sorte que :  \\
+	$AE=BF=CG=DH$
+
+	On note alors $x=AE$
+	
+	La figure ci-contre représente la situation :
+\end{minipage}
+\begin{minipage}{0.45\linewidth} \hspace{5mm}
+	\begin{tikzpicture}[scale=0.75]
+	
+		\draw[line width = 2pt]
+		(0,0) node[below left]{$A$} -- node[below,color=red!80!black] {$x$} (1.5,0) node[below] {$E$} -- (8,0) node[below right] {$B$} -- node[right,color=red!80!black] {$x$} (8,1.5) node[right] {$F$} -- (8,4) node[above right] {$C$} -- node[above,color=red!80!black] {$x$} (6.5,4) node[above] {$G$} -- (0,4) node[above left] {$D$} -- node[left,color=red!80!black] {$x$} (0,2.5) node[left] {$H$} -- (0,0);
+		
+		\draw[line width = 2pt , color = red!80!black] (-0.047,0) -- (1.5,0) ;
+		\draw[line width = 2pt , color = red!80!black] (8,-0.047) -- (8,1.5) ;
+		\draw[line width = 2pt , color = red!80!black] (8.047,4) -- (6.5,4) ;
+		\draw[line width = 2pt , color = red!80!black] (0,4.047) -- (0,2.5) ;
+		
+		\draw[color = blue!80!black , line width = 1.5pt , fill = blue!80!black , fill opacity=0.4]
+		(1.5,0) -- (8,1.5) -- (6.5,4) -- (0,2.5) -- cycle ;		
+		
+	\end{tikzpicture}
+\end{minipage}
+
+\begin{enumerate}
+	\item Déterminer l'ensemble des valeurs que peut prendre la variable $x$
+	\item Justifier que le quadrilatère $EFGH$ est un parallélogramme.
+	\item Montrer que les aires des triangles $AHE$ et $ABF$ valent $\Acal_{AHE}=\frac{x(4-x)}{2}$ \quad et \quad $\Acal_{EBF}=\frac{x(8-x)}{2}$
+	\item On note $\Acal(x)$ l'aire du parallélogramme $EFGH$ en fonction de la valeur de $x$\\
+	Montrer que $\Acal(x)=2x^2-12x+32$
+\end{enumerate}
+
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}
+        \begin{axis}[height = 7cm , width = 10cm ,
+        xmin=0 , xmax=4 , ymin=10 , ymax=35, 
+		axis lines = middle, 
+		grid=both , 
+        xtick distance = 1, ytick distance = 5,
+    	major grid style = {line width = 0.2pt ,draw = gray},
+    	minor x tick num=1 , minor y tick num=4 ,
+    	minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+			
+			\addplot[domain = 0:4 , line width = 2pt , color = red!80!black , samples = 100]
+			{2*x^2-12*x+32};
+			
+			\draw[color=red!80!black] (1.5,23) node {$y=\Acal(x)$} ;
+			
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+On a tracé ci-contre la courbe représentative de la fonction $\Acal$.
+	\begin{enumerate}
+		\item[4.] Quelle est la plus petite aire possible pour le parallélogramme $EFGH$ ?
+		\item[5.]
+		\begin{enumerate}
+			\item Pour quelle(s) valeur(s) de $x$ l'aire du parallélogramme $EFGH$ est-elle égale à la moitié de l'aire du rectangle $ABCD$ ?
+			\item Vérifier le résultat de la question précédente par le calcul.
+		\end{enumerate}
+	\end{enumerate}
+\end{minipage}
+
+
+
+\section{Parité de fonctions}
+
+\subsection{Identification}
+On a tracé ci-contre les courbes représentatives des fonctions $f$, $g$ et $h$.
+
+Déterminer si ces fonctions sont paires, impaires ou bien ni l'un ni l'autre :
+
+\hspace{-5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-2 , xmax=2 , ymin=-2 , ymax=2,
+        xtick distance = 0.5, ytick distance = 0.5,
+        axis lines = middle, enlargelimits = { abs = 0.1},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-2:2, samples=100, color=red!80!black]   
+    		{0.25*(x^3+2*sin(pi*deg(x)))};
+    		\draw[color=red!80!black] (1.25,1.25) node{$\Ccal_f$} ;
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-3:3, samples=100, color=green!70!black]   
+    		{2*cos(2*deg(x))+(sin(deg(x))+x)/(1+x^2)};
+    		\draw[color=green!70!black] (2.5,-1.5) node{$\Ccal_g$} ;
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-3:3, samples=100, color=blue!80!black]   
+    		{x^2+9/(1+x^2)+cos(pi*deg(x))-7.2};
+    		\draw[color=blue!80!black] (1.5,0.5) node{$\Ccal_h$} ;
+    		
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Complétion de la courbe}
+\begin{minipage}{0.35\linewidth}
+	\begin{tikzpicture}
+        \begin{axis}[xmin=-4 , xmax=4 , ymin=-2 , ymax=2,
+        xtick distance = 1, ytick distance = 0.5,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-4:-2, samples=100, color=blue!80!black]   
+    		{-x^3-9*x^2-24*x-18};
+    		\addplot[line width = 2pt , domain=-2:-0, samples=100, color=blue!80!black]   
+    		{0.5*x^3+1.5*x^2};
+    		\draw[color=blue!80!black] (1.5,0.5) node{$\Ccal_f$} ;
+    		
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.6\linewidth}
+	On a tracé dans le repère ci-contre $\Ccal_f$ la courbe représentative de la fonction $f$ sur l'intervalle $[-4~;~0]$
+	\begin{enumerate}
+		\item Tracer en rouge l'allure de $\Ccal_f$ sur l'intervalle $[0~;~4]$ si $f$ est une fonction paire.
+		\item Tracer en vert l'allure de $\Ccal_f$ sur l'intervalle $[0~;~4]$ si $f$ est une fonction impaire.
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Informations manquantes}
+On a représenté dans les repères ci-contre une partie des courbes représentatives de trois fonctions fonctions $f$, $g$ et $h$ sur l'intervalle $[-3~;~3]$
+
+Compléter le tracé de ces courbes en sachant que ces trois fonctions sont paires :
+
+\hspace{-5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.1},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=0:1, samples=100, color=green!70!black]   
+    		{-6*x^3+9*x^2-2};
+    		\addplot[line width = 2pt , domain=1:2, samples=100, color=green!70!black]   
+    		{x^3-4.5*x^2+6*x-1.5};
+    		\addplot[line width = 2pt , domain=2:3, samples=100, color=green!70!black]   
+    		{-3*x^3+22.5*x^2-54*x+42.5};
+    		
+    		\draw[color=green!70!black] (1.5,1.5) node{$\Ccal_f$} ;
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\draw[line width = 2pt , color = blue!80!black] (-3,2) -- (-2.5,2) -- (-2,1) ;
+        	\draw[line width = 2pt , color = blue!80!black] (-1,-1) -- (0,1) ;
+        	\draw[line width = 2pt , color = blue!80!black] (1,-1) -- (1.5,1) -- (2,1) ;
+        	
+        	\draw[color=blue!80!black] (1.5,1.5) node {$\Ccal_g$} ; 
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-2:-1, samples=100, color=red!80!black]   
+    		{-7*x^3-31.5*x^2-42*x-16};
+    		\addplot[line width = 2pt , domain=-0.5:-0, samples=100, color=red!80!black]   
+    		{-24*x^3-18*x^2+0.5};
+    		\addplot[line width = 2pt , domain=0.5:1, samples=100, color=red!80!black]   
+    		{-40*x^3+90*x^2-60*x+11.5};
+    		\addplot[line width = 2pt , domain=2:3, samples=100, color=red!80!black]   
+    		{-10*x^3+75*x^2-180*x+138};
+    		
+    		\draw[color=red!80!black] (0.5,1.5) node{$\Ccal_h$} ;
+    		
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Parité par étude algébrique}
+\begin{enumerate}
+	\item Démontrer que les fonctions suivantes sont paires : \\	
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		$f_1:x\mapsto 5-x^2$ & $f_2:x\mapsto \dfrac{1+x^2}{2+x^2}$ & $f_3:x\mapsto \dfrac{(3-x)(3+x)}{7+2x^4}$	
+	\end{tabular}
+	\item Démontrer que les fonctions suivantes sont impaires : \\	
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		$f_1:x\mapsto 3x(x^2+1)$ & $f_2:x\mapsto \dfrac{(1+x)(1-x)}{x^3}$ & $f_3:x\mapsto \dfrac{5}{2x}-\dfrac{x}{3+x^4}$	
+	\end{tabular}
+	\item Démontrer que les fonctions suivantes ne sont ni paires ni impaires: \\	
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		$f_1:x\mapsto 1+x-x^2$ & $f_2:x\mapsto \dfrac{3+x}{2+x^2}$ & $f_3:x\mapsto x^3+2x^2-x+1$	
+	\end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Une fonction presque impaire}
+On considère la fonction $f:x\mapsto \dfrac{1-2x}{x}$ définie sur $\RR^*$
+\begin{enumerate}
+	\item Montrer que la fonction $x$ n'est ni paire ni impaire.
+	\item Pour $a$ un certain réel, on définit la fonction $g$ par $g(x)=f(x)+a$
+	\begin{enumerate}
+		\item Montrer que $g(-x)=\dfrac{ax-1-2x}{x}$
+		\item Justifier qu'il existe une valeur de $a$ pour laquelle la fonction $g$ est paire puis la donner.
+	\end{enumerate}
+\end{enumerate}
+
+
+\end{document}

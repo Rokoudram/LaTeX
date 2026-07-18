@@ -1,0 +1,294 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- New colors ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tcolorbox}                                  % ----- Boxes environment
+    \tcbuselibrary{skins,listings,listingsutf8,breakable}             % ----- All libraries
+\usepackage[bold=0.7]{xfakebold}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- New colors ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{persianblue}{HTML}{221177} % ----- New blues
+\definecolor{lightblue}{HTML}{EEFFFF}
+\definecolor{softblue}{HTML}{6655BB}
+
+\definecolor{maroon}{HTML}{992222}      % ----- New reds
+\definecolor{lightred}{HTML}{FAEEEE}
+
+\definecolor{calgreen}{HTML}{005500}    % ----- New greens
+\definecolor{lightgreen}{HTML}{EEFFEE}
+\definecolor{softgreen}{HTML}{449944}
+
+\definecolor{brickorange}{HTML}{CC7033} % ----- New oranges
+\definecolor{lightorange}{HTML}{FFF2E6}
+
+\definecolor{newred}{HTML}{CC0000}     % ----- Colors for geometry
+\definecolor{newblue}{HTML}{0000CC}
+\definecolor{newgreen}{HTML}{00AA00}
+\definecolor{neworange}{HTML}{FFAA00}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \theoreme ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{theorembox}[2][]{% ----- Theorem box
+enhanced,
+arc=5pt,
+frame style = {left color=persianblue , right color=softblue},
+colback=lightblue,
+fonttitle=\bfseries,
+lifted shadow={1mm}{-1.5mm}{2mm}{0.3mm},
+hbox,
+title={#2},
+attach boxed title to top left={xshift=5mm,yshift=-2mm},
+boxed title style = {colback = persianblue , colframe = persianblue},
+#1}
+
+
+\newcommand\theoreme[2]{% ----- Theorem command
+    \begin{theorembox}[]{\faBook~~#1~~\faBook}
+        \begin{varwidth}{\linewidth-15pt }
+        \restoreskip \vspace{0pt}
+        #2
+        \end{varwidth}
+    \end{theorembox}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \definition ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{definitionbox}[2][]{% ----- Definition box
+enhanced,
+arc=5pt,
+frame style = {left color=calgreen , right color=softgreen},
+colback=lightgreen,
+fonttitle=\bfseries,
+lifted shadow={1mm}{-1.5mm}{2mm}{0.3mm},
+hbox,
+title={#2},
+attach boxed title to top left={xshift=5mm,yshift=-2mm},
+boxed title style = {colback = calgreen , colframe =calgreen},
+#1}
+
+
+\newcommand\definition[2]{% ----- Definition command
+    \begin{definitionbox}[]{\faUniversity~~#1~~\faUniversity}
+        \begin{varwidth}{\linewidth-15pt}
+        \restoreskip \vspace{0pt}
+        #2
+        \end{varwidth}
+    \end{definitionbox}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \astuce ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{astucebox}[1][]{% ----- astuce box
+enhanced,
+arc=10pt,
+frame hidden,
+borderline={1mm}{0mm}{maroon,dotted},
+colback=lightred,
+fonttitle=\bfseries,
+hbox,
+title={\faLightbulb~~Astuce~~\faLightbulb},
+attach boxed title to top left={xshift=5mm,yshift=-2mm},
+boxed title style = {colback = maroon , colframe =maroon},
+#1}
+
+
+\newcommand\astuce[1]{% ----- astuce command
+    \begin{astucebox}[]
+        \begin{varwidth}{\linewidth-15pt }
+        \restoreskip \vspace{0pt}
+        #1
+        \end{varwidth}
+    \end{astucebox}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \remarque ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{remarquebox}[1][]{% ----- remarque box
+enhanced,
+arc=10pt,
+frame hidden,
+borderline={1mm}{0mm}{maroon,dotted},
+colback=lightred,
+fonttitle=\bfseries,
+hbox,
+title={\faExclamation~~Remarque~~\faExclamation},
+attach boxed title to top left={xshift=5mm,yshift=-2mm},
+boxed title style = {colback = maroon , colframe =maroon},
+#1}
+
+
+\newcommand\remarque[1]{% ----- remarque command
+    \begin{remarquebox}[]
+        \begin{varwidth}{\linewidth-15pt }
+        \restoreskip \vspace{0pt}
+        #1
+        \end{varwidth}
+    \end{remarquebox}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \methode ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{methodebox}[2][]{% ----- methode box
+enhanced,
+arc=10pt,
+frame hidden,
+borderline={1mm}{0mm}{maroon,dotted},
+colback=lightred,
+fonttitle=\bfseries,
+hbox,
+title={#2},
+attach boxed title to top left={xshift=5mm,yshift=-2mm},
+boxed title style = {colback = maroon , colframe =maroon},
+#1}
+
+
+\newcommand\methode[2]{% ----- methode command
+    \begin{methodebox}[]{\faCogs~~#1~~\faCogs}
+        \begin{varwidth}{\linewidth-20pt }
+        \restoreskip \vspace{0pt}
+        #2
+        \end{varwidth}
+    \end{methodebox}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \exemple ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{exemplebox}[1][]{% ----- exemple box
+enhanced, breakable,
+arc = 0pt ,
+frame hidden,
+borderline west={2pt}{0pt}{brickorange},
+interior style = {top color = lightorange , bottom color = lightorange!15!white},
+fonttitle=\bfseries,
+minipage,
+#1}
+
+
+\newcommand\exemple[2]{% ----- exemple command
+    \begin{exemplebox}[]
+        \textbf{{\color{brickorange}Exemple :} #1} \\[5pt]
+        \restoreskip \vspace{0pt}
+        #2
+    \end{exemplebox}
+    {\color{brickorange}
+    \vspace{-2pt}
+    \hrule height 2pt depth 0pt width 3cm
+    \vspace{-11pt} \hspace{2.85cm} \setBold{$\square$}}
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \demonstration ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{demonstrationbox}[1][]{% ----- demonstration box
+enhanced, breakable,
+arc = 0pt
+frame hidden,
+borderline west={2pt}{0pt}{VioletRed3},
+interior style = {top color = Thistle1 , bottom color = Thistle1!15!white},
+fonttitle=\bfseries,
+hbox,
+#1}
+
+
+\newcommand\demonstration[1]{% ----- demonstration command
+    \begin{demonstrationbox}[]
+        \begin{varwidth}{\linewidth-15pt }
+        {\vspace{-5pt}\textbf{\color{VioletRed3}Démonstration :}}\\[5pt]
+        \restoreskip \vspace{0pt}
+        #1
+        \end{varwidth}
+    \end{demonstrationbox}
+    \vspace{-8 pt}
+    {\color{VioletRed3}
+    \vspace{-2pt}
+    \hrule height 2pt depth 0pt width 3cm
+    \vspace{-11pt} \hspace{2.85cm} \setBold{$\square$}}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \exercice ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox[auto counter , number within=section , number freestyle={\noexpand\arabic{\tcbcounter}} ]{exercicebox}[2][]{% ----- Exercice box
+enhanced,
+arc=1pt,
+colframe=black!80,
+colback=black!10,
+fonttitle=\bfseries,
+hbox,
+title={Exercice n° \thetcbcounter \, : #2 },
+attach boxed title to top*,
+boxed title style = {colback = black!80},
+#1}
+
+
+\newcommand\exercice[2]{% ----- Exercice command
+    \begin{exercicebox}[]{#1}
+        \begin{varwidth}{\linewidth-30pt} 
+         #2
+        \end{varwidth}
+    \end{exercicebox}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \calculs ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{calculbox}[1][]{% ----- Calculs box
+enhanced,
+arc=1pt,
+colbacktitle=black!25!white,
+coltitle=black,
+colback=white,
+colframe=black!25!white,
+hbox,
+title={Aides de calcul},
+attach boxed title to top*,
+#1}
+
+
+\newcommand\calculs[1]{% ----- Calculs command
+    \begin{calculbox}
+        \restoreskip
+        #1
+    \end{calculbox}
+}
+
+

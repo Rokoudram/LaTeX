@@ -1,0 +1,241 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+
+\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
+\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
+\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
+
+
+\fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
+\fancyhead[C]{Fonctions trigonométriques}                     % En-tête central
+\setstretch{1}                           % Interligne
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Autour du cercle}
+
+\subsection{Équations élargies}
+Résoudre chacune des équations suivantes dans $\RR$ puis dans l'intervalle $I$ indiqué :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.25\linewidth} p{0.15\linewidth} | p{5mm} p{0.25\linewidth} p{0.15\linewidth}}
+    a) $\cos(2x)=\frac{1}{2}$ & $I=[0;2\pi]$ & & b) $\sin(3x)=\frac{-\sqrt{2}}{2}$ & $I=[0;\pi[$ \\
+    c) $\cos(3x)=\frac{-\sqrt{3}}{2}$ & $I=[-\frac{\pi}{2};\pi[$ & & d) $\sin(2x)=\frac{1}{2}$ & $I=]\frac{7\pi}{6};\frac{8\pi}{3}]$ \\
+    e) $\sin(7x)=-1$ & $I=[0;\pi]$ & & f) $\cos(3x)=0$ & $I=]2\pi;3\pi[$
+\end{tabular}
+
+
+
+\subsection{Inéquations élargies}
+Résoudre chacune des équations suivantes dans l'intervalle $I$ indiqué :
+
+\begin{tabular}{p{0.25\linewidth} p{0.15\linewidth} | p{5mm} p{0.25\linewidth} p{0.15\linewidth}}
+    a) $\sin(2x)\leq\frac{1}{2}$ & $I=[0;\pi]$ & & b) $\cos(2x)>\frac{-\sqrt{2}}{2}$ & $I=[-\pi;0[$ \\
+    c) $\cos(3x)\geq\frac{\sqrt{3}}{2}$ & $I=[-\pi;\pi[$ & & d) $\sin(4x)<0$ & $I=]\frac{\pi}{2};\frac{3\pi}{2}]$ \\
+\end{tabular}
+
+
+
+\subsection{Équations mélangées}
+Résoudre chacune des équations suivantes dans $\RR$ et représenter leurs solutions sur le cercle trigonométrique :
+
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	a) $\cos(x)=\sin(2x)$ & b) $2\sin^2(x)+\cos(x)-2=0$ & c) $\cos^2(2x)+\sin(2x)=1$
+\end{tabular}
+
+
+\subsection{Encadrements}
+\begin{enumerate}\setlength{\itemsep}{1pt}
+	\item Justifier les points $A\left(\frac{2727}{5465}~;~\frac{4736}{5465}\right)$ et $B\left(\frac{5655}{11273}~;~\frac{9725}{11273}\right)$ sont situés sur le cercle trigonométrique. \\
+	En déduire un encadrement de $\sqrt{3}$ à 4 millièmes près.
+	\item Justifier qu'il existe $x\in[0;2\pi[$ tel que $\cos(x)=\frac{7315}{10357}$ et $\sin(x)=\frac{7332}{10357}$\\
+	En déduire un encadrement de $\sqrt2$ à 3 millièmes près.
+\end{enumerate}
+
+
+
+\section{Préliminaires}
+
+\subsection{Dérivation}
+Déterminer la fonction dérivée de chacune des fonctions suivantes sans tenir compte de leur domaine de définition :
+
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}}
+	$f_1:x\mapsto \cos\left(e^x\right)$ & $f_2:x\mapsto e^{\sin(x)}$ & $f_3:x\mapsto x\sin(x)-\cos(x)$ \\
+	$f_4:x\mapsto \ln(\cos(x)+\sin(x))$ & $f_5:x\mapsto \frac{\cos(x)}{1-\sin(x)}$ & $f_6:x\mapsto \cos^2(x)\sin(x)$ \\
+	$f_7:x\mapsto \sin\left(x+\cos(x)\right)$ & $f_8:x\mapsto x\cos\left(\frac{1}{2}x+\pi\right)$ & $f_9:x\mapsto \sqrt{x}\sin\left(1+\sqrt{x}\right)$
+\end{tabular}
+
+
+
+\subsection{Retour aux limites}
+Déterminer chacune des limites suivantes :
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}p{0.23\linewidth}}
+	a) $\limx e^{\cos\left(-\sin\left(\frac{1}{x}\right)\right)}$ & b) $\limx\sqrt{2+\cos\left(\frac{1}{x}\right)}$ & c) $\limite{x\to\frac{\pi}{2}\\x>\frac{\pi}{2}}\tan(x)$ & d) $\limite{x\to-\infty}\dfrac{x+\sin\left(\frac{1}{x}\right)}{3x-1}$\\
+	e) $\limx\cos\left(\frac{x+x\sqrt{x}}{x^2}\right)$ & f) $\limite{x\to\frac{\pi}{2}}\dfrac{\cos\left(x^2\right)}{1-\sin(x)}$ & g) $\limite{x\to\pi}\dfrac{\sin^2(x)}{1+\cos(x)}$ & h) $\limite{x\to0} \dfrac{x^2+\cos^2(x)-1}{x-\sin(x)}$\\
+	i) $\limite{x\to0}\dfrac{\sin\left(x^2\right)}{x}$ & j) $\limite{x\to0\\x<0}\dfrac{1-\cos(x)}{x^2}$ & k) $\limite{x\to\frac{\pi}{3}}\dfrac{1-2\cos(x)}{2x-\frac{2\pi}{3}}$ & l) $\limite{x\to\frac{\pi}{4}}\dfrac{2\sin^2(x)-1}{2x-\frac{\pi}{2}}$
+\end{tabular}
+
+
+
+\subsection{Parité}
+Pour chacune des fonctions suivantes, dire si elles sont paires, impaires ou ni l'un ni l'autre :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+     $f_1(x)=x^2\sin(x)$ & $f_2(x)=\cos(x+\sin(x))$ & $f_3(x)=\sin(x+\cos(x))$ \\
+     $f_4(x)= \sin\left(\cos\left(x-x^3\right)\right)$ & $f_5(x)=(x^2-\sin(x))\cos(x)$ & $f_6(x)=\frac{\cos(x)+\sin^2(x)}{\sin(x)+\cos^2(x)}$ \\
+     
+\end{tabular}
+
+
+
+\subsection{Périodicité}
+Donner la période de chacune des fonctions suivantes :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	$f_1(x)=\cos(\pi x)$ & $f_2(x)=\cos(x)\sin(x)$ & $f_3(x)=\sin(2x)+\cos(5x)$ \\
+	$f_4(x)=\sin(\cos(x))$ & $f_5(x)=\cos(\sin(x))$ & $f_6(x)=\sin(x+\cos(x))$
+\end{tabular}
+
+
+
+\subsection{Démonstrations}
+\begin{enumerate}
+    \item Soit $ f $ une fonction impaire définie sur $ \mathbb{R} $. Montrer que $ f(0) = 0 $
+    \item Soit $ f $ une fonction définie sur $ \mathbb{R} $ paire et impaire.\\
+    Montrer que $ f $ est la fonction constante égale à 0.
+    \item Montrer qu'il n'existe pas de fonction définie sur $ \mathbb{R} $ paire et strictement croissante.
+    \item Soit $ f $ une fonction définie sur $ \mathbb{R} $ croissante et $ p $-périodique pour $ p > 0 $.\\
+    Montrer que $ f $ est constante.
+\end{enumerate}
+
+
+
+\section{Études de fonctions}
+
+\subsection{Première étude}
+Soit $f:x\mapsto\sin(x)\cos(x)$ définie sur $\RR$
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Montrer que $f'(x)=(\cos(x)+\sin(x))(\cos(x)-\sin(x))$
+        \item Justifier que $f'$ est positive sur $[0;\frac{\pi}{4}]$\\
+        Qu'en dire sur l'intervalle $[\frac{\pi}{4};\frac{\pi}{2}]$ ?
+        \item Dresser le tableau de variations de $f$ sur $[0;\frac{\pi}{2}]$
+    \end{enumerate}
+    \item Montrer que $f$ est impaire.
+    \item Montrer que $f$ est $\pi$-périodique.
+    \item Dresser le tableau de variations de $f$ sur $[-\pi;2\pi]$
+\end{enumerate}
+
+
+
+\subsection{Avec limites}
+On pose $f(x)=\frac{1+\cos(x)}{\sin(x)}$
+\begin{enumerate}
+    \item Déterminer $\Dcal_f$ le domaine de définition de la fonction $f$
+    \item La fonction $f$ est-elle paire ? Impaire ?
+    \item Déterminer la période de la fonction $f$
+    \item On admet que $f$ est dérivable sur son domaine de définition et on note $f'$ sa fonction dérivée.\\
+    Montrer que $f'(x)=\frac{1}{\cos(x)-1}$
+    \item Calculer les limites $\limite{x\to0\\x>0}f(x)$ , $\limite{x\to0\\x<0}f(x)$ et $\limite{x\to\pi\\x<\pi}f(x)$
+    \item Dresser, en le justifiant, le tableau de variations de la fonction $f$ sur $[-\pi;2\pi]\cap\Dcal_f$
+\end{enumerate}
+
+
+
+\subsection{Ils sont partout}
+Pour tout $x$ réel on pose $\phi(x)=\sin(x)(1-\cos(x))$
+\begin{enumerate}
+    \item Montrer que $\phi'(x)=1+\cos(x)-2\cos^2(x)$
+    \item \begin{enumerate}
+        \item Résoudre sur $[0;\pi]$ l'inéquation $\cos(x)\geq-\frac{1}{2}$
+        \item En déduire le signe de $\phi'$ sur $[0;\pi]$
+        \item Dresser le tableau de variations de $\phi$ sur $[0;\pi]$
+    \end{enumerate}
+    \item Montrer que $\phi$ est impaire
+    \item Montrer que $\phi$ est $2\pi$-périodique
+    \item Dresser le tableau de variations de $\phi$ sur $[-2\pi;3\pi]$
+\end{enumerate}
+
+
+
+\subsection{Cosinus sur parabole}
+On pose $g(x)=\cos(x)-1+\frac{x^2}{2}$ pour tout $\xR$
+\begin{enumerate}
+	\item Étudier la parité de $g$
+	\item Déterminer $\limx g(x)$ et $\limite{x\to-\infty}g(x)$
+	\item Montrer que $g$ est convexe sur $\RR$
+	\item Montrer que l'axe des ordonnées est tangent à $\Ccal_g$
+	\item En déduire que $\cos(x)\geq1-\frac{x^2}{2}$ sur $\RR$
+\end{enumerate}
+
+
+
+\subsection{Inégalité sinusoïdale}
+Pour tout $\xR$, on pose $h(x)=\sin(x)-x+\frac{x^3}{6}$ et $f(x)=x-\sin(x)$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Démontrer que $f$ est croissante sur $\RR$
+		\item Résoudre alors $f(x)\geq0$
+	\end{enumerate}
+	\item Démontrer que $h''(x)=f(x)$
+	\item Déterminer l'équation de la tangente à $\Ccal_h$ au point d'abscisse 0.
+	\item Résoudre alors dans $\RR$ l'inéquation $\sin(x)\geq x-\frac{x^3}{6}$
+\end{enumerate} 
+
+
+
+\subsection{Quotient double}
+On considère la fonction $f$ définie sur $\RR$ par $f(x)=\frac{\sin(2x)}{2+\cos(2x)}$
+\begin{enumerate}
+	\item Montrer que $f$ est impaire et $\pi$-périodique.
+	\item Montrer que $f'(x)=2\frac{1+2\cos(2x)}{(2+\cos(2x))^2}$
+	\item Dresser le tableau de variations de $f$ sur $[0;\pi]$
+\end{enumerate}
+
+
+
+\subsection{Étude d'une suite}
+On définit sur $]0;\pi[$ les fonctions $f$ et $g$ par $f(x)=\frac{x}{\sin(x)}-1$ et $g(x)=\sin(x)-x\cos(x)$
+\begin{enumerate}
+	\item Dresser le tableau de variations de la fonction $g$
+	\item Montrer que $f'(x)=\frac{g(x)}{\sin^2(x)}$
+	\item En déduire que la fonction $f$ est croissante sur $[0;\pi[$
+	\item On considère la suite $\Un$ définie par $\accol{u_0=2\\u_{n+1}=\frac{u_n}{\sin\left(u_n\right)}-1}$
+	\begin{enumerate}
+		\item Démontrer que $0< u_{n+1}\leq u_n\leq2$ pour tout $\nN$
+		\item En déduire que $(u_n)$ converge vers $\ell\in\RR$
+		\item Conjecturer la valeur de $\ell$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Une inégalité composée}
+On définit sur $\RR$ la fonction $g:x\mapsto x-\sin(x)$
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item Montrer que $g$ est croissante sur $\RR$ puis en déduire son signe sur $\RR$
+		\item En déduire que $\abs{\sin(x)}\leq\abs{x}$ \quad $\forall\xR$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Justifier que $\sin^2(\cos(x))\leq\cos^2(x)$ et $\sin^2(\sin(x))\leq\sin^2(x)$ \quad $\forall\xR$
+		\item En déduire que $\cos^2(\cos(x)) \geq \sin^2(\sin(x))$ \quad $\forall\xR$
+	\end{enumerate}
+	\item Démontrer que $\cos(\cos(x)) \geq \sin(\sin(x))$ \quad $\forall\xR$
+\end{enumerate}
+
+
+
+
+\end{document}
