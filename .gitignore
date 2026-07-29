@@ -1,3 +1,6 @@
+## Dossiers à ne pas importer :
+Ignorer/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
