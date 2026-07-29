@@ -1,14 +1,13 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-
-\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
-\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
-\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
-\input{../../../Latex/inputs/macro_paging.tex} 		   	% Patterns TikZ
-
+\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 \fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
-\fancyhead[C]{Polynômes du second degré}                     % En-tête central
+\fancyhead[C]{Polynômes du second degré}
+\fancyhf[CF]{\footnotesize{ \copyright ~ Tous droits réservés ~ \copyright}}
 \setstretch{0.95}                           % Interligne
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -374,21 +373,21 @@ Un paysagiste s'occupe d'un jardin de 40m par 30m possédant une partie végéta
 \end{minipage} \hspace{5mm}
 \begin{minipage}{0.4\linewidth}
 	\begin{tikzpicture}[scale=0.15]
-        \draw[color = red!60!orange , line width=2pt , pattern=bricks , pattern color = red!60!orange] (0,0)--(40,0)--(40,25)--(0,25)--(0,0);
-        \fill[color=PaleGreen2] (5,5)--(35,5)--(35,20)--(5,20)--(5,5);
-        \draw[line width = 2pt, red!60!orange] (5,5)--(35,5)--(35,20)--(5,20)--cycle ;
+        \draw[color = newred!80 , line width=2pt , pattern=bricks , pattern color = newred!80] (0,0)--(40,0)--(40,25)--(0,25)--(0,0);
+        \fill[color=newgreen!25] (5,5)--(35,5)--(35,20)--(5,20)--(5,5);
+        \draw[line width = 2pt, newred!80] (5,5)--(35,5)--(35,20)--(5,20)--cycle ;
     \end{tikzpicture}
 \end{minipage}
 
 
 \begin{minipage}{0.35\linewidth}
 	\begin{tikzpicture}[scale=0.15]
-        \fill[color=PaleGreen2] (0,0)--(17.5,0)--(17.5,10)--(0,10)--(0,0);
-        \fill[color=PaleGreen2] (0,15)--(17.5,15)--(17.5,25)--(0,25)--(0,0);
-        \fill[color=PaleGreen2] (22.5,0)--(40,0)--(40,10)--(22.5,10)--(22.5,0);
-        \fill[color=PaleGreen2] (22.5,15)--(40,15)--(40,25)--(22.5,25)--(22.5,0);
-        \draw[color = red!60!orange , line width = 2pt ,  pattern=bricks , pattern color = red!60!orange] (0,10)--(17.5,10)--(17.5,0)--(22.5,0)--(22.5,10)--(40,10)--(40,15)--(22.5,15)--(22.5,25)--(17.5,25)--(17.5,15)--(0,15)--(0,10);
-        \draw[color=PaleGreen4, line width = 2pt] (0,0)--(40,0)--(40,25)--(0,25)--(0,0);
+        \fill[color=newgreen!25] (0,0)--(17.5,0)--(17.5,10)--(0,10)--(0,0);
+        \fill[color=newgreen!25] (0,15)--(17.5,15)--(17.5,25)--(0,25)--(0,0);
+        \fill[color=newgreen!25] (22.5,0)--(40,0)--(40,10)--(22.5,10)--(22.5,0);
+        \fill[color=newgreen!25] (22.5,15)--(40,15)--(40,25)--(22.5,25)--(22.5,0);
+        \draw[color = newred!80 , line width = 2pt ,  pattern=bricks , pattern color = newred!80] (0,10)--(17.5,10)--(17.5,0)--(22.5,0)--(22.5,10)--(40,10)--(40,15)--(22.5,15)--(22.5,25)--(17.5,25)--(17.5,15)--(0,15)--(0,10);
+        \draw[color=newgreen, line width = 2pt] (0,0)--(40,0)--(40,25)--(0,25)--(0,0);
     \end{tikzpicture}
 \end{minipage} \hspace{5mm}
 \begin{minipage}{0.6\linewidth} \restoreskip
@@ -428,7 +427,7 @@ Un maître nageur dispose de 40m de corde flottante	et souhaite délimiter une z
 			axis line style={draw=none}, tick style={draw=none}, ticklabel style={opacity=0}
 			]
 			
-			\fill[pattern=hatch, pattern color=yellow!70!orange, hatch line width=2pt] (0,2)--(0,5)--(30,5)--(30,2)--(0,2);
+			\fill[pattern=crosshatch, pattern color=neworange!70] (0,2)--(0,5)--(30,5)--(30,2)--(0,2);
 			\draw[line width = .5pt] (5,5)--(5,12)--(25,12)--(25,5);
 			
 			\foreach \i in {0,...,2}{

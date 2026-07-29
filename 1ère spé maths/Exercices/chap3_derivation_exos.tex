@@ -1,13 +1,12 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-
-\input{../../../Latex/inputs/preambule_livret.tex}         	% Préambule
-\input{../../../Latex/inputs/mymacros.tex}                 	% Macros classiques
-\input{../../../Latex/inputs/pattern_declare.tex} 		   	% Patterns TikZ
-
-
+\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 \fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
-\fancyhead[C]{Dérivation}                     % En-tête central
+\fancyhead[C]{Dérivation}
+\fancyhf[CF]{\footnotesize{ \copyright ~ Tous droits réservés ~ \copyright}}                     % En-tête central
 \setstretch{0.95}                           % Interligne
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,12 +86,12 @@ On définit la fonction $f$ sur $[-6;6]$ et on considère $\Ccal$ sa courbe repr
 	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
 	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.2 }]
 	\addplot[domain=-6:6,line width=1.5pt,samples=100] {(37/504)*x^3-(2/9)*x^2-(93/72)*x+167/42};
-	\addplot[domain=-6:6,line width=1pt,color=red,samples=100] {4-4*x/3};
-	\addplot[domain=-6:6,line width=1pt,color=red,samples=100] {2*x+10};
-	\draw[color=red] (-3,4) node {\small$\bullet$};
-	\draw[color=red] (4.5,-1) node {\small$\Delta$};
-	\draw[color=red] (0,4) node {\small$\bullet$};
-	\draw[color=red] (-5,1) node {\small $T$};
+	\addplot[domain=-6:6,line width=1pt,color=newred,samples=100] {4-4*x/3};
+	\addplot[domain=-6:6,line width=1pt,color=newred,samples=100] {2*x+10};
+	\draw[color=newred] (-3,4) node {\small$\bullet$};
+	\draw[color=newred] (4.5,-1) node {\small$\Delta$};
+	\draw[color=newred] (0,4) node {\small$\bullet$};
+	\draw[color=newred] (-5,1) node {\small $T$};
 	\end{axis}
 \end{tikzpicture}
 \end{minipage}
@@ -375,7 +374,7 @@ Soir $m\in\RR$. On définit sur $\RR\backslash\{m\}$ la fonction $f_m:x\mapsto\f
 	\begin{tikzpicture}
 		\begin{axis}[xmin = 0 , xmax = 30 , ymin = 3 , ymax = 17 ,axis lines = middle, grid = none,
 		axis line style={draw=none}, tick style={draw=none}, ticklabel style={opacity=0},height=6cm,width=9cm]
-			\fill[pattern=hatch, pattern color=yellow!60!orange, hatch line width=2pt] (0,0)--(0,5)--(30,5)--(30,0)--(0,0);
+			\fill[pattern=crosshatch, pattern color=yellow!60!orange] (0,0)--(0,5)--(30,5)--(30,0)--(0,0);
 			\draw[line width = .5pt] (5,5)--(5,15)--(25,15)--(25,5);
 			\foreach \i in {0,...,4}{
 			\addplot[color=blue,domain=0:4.5, samples=100] {0.25*sin(deg(x))+6+2*\i};
@@ -405,8 +404,8 @@ Quelle est l'aire maximale que peut avoir ce rectangle, et pour quelle position 
 	\begin{axis}[xmin=-0,xmax=4,ymin=-0,ymax=4, xtick distance = 1, ytick distance = 1,
 	grid=major , major grid style = {line width = 0.2pt ,draw = gray}, axis lines = middle,
 	ticklabel style = {font = \tiny }, enlargelimits = { abs = 0.2 }]
-		\addplot[samples=100,domain=-3:9,color=red,line width = 1.5pt] {0.25*(x-4)^2};
-		\draw[color=red] (3.5,0.4) node {\small $\Ccal_f$};
+		\addplot[samples=100,domain=-3:9,color=newred,line width = 1.5pt] {0.25*(x-4)^2};
+		\draw[color=newred] (3.5,0.4) node {\small $\Ccal_f$};
 		\draw[thick,dashed,fill=gray,opacity=0.5] (3/2,0)--(3/2,25/16)--(0,25/16)--(0,0);
 		\draw[right,above] node at (3/2,25/16) {$M$}; 
 	\end{axis}

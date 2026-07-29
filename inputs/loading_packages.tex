@@ -54,26 +54,3 @@
 \usepackage{diagbox}									% ----- Découper des cases de \tabular
 \usepackage{esvect}
 \usepackage{graphicx}									% ----- Insérer des images
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Mise en page %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{parskip}									% ----- Parskip
-    \setlength{\parskip}{\medskipamount}
-    \newcommand{\restoreskip}{\setlength{\parskip}{\medskipamount}}
-\geometry{left=30pt, right=30pt, top=55pt, bottom=55pt} % ----- Marges
-\setlength\parindent{0mm}                               % ----- No indent
-\pagestyle{fancy}                                       % ----- Set-up fancy
-\fancyhf[LH]{M. Olivry}                                 % ----- En-tête gauche
-\fancyhf[CF]{\footnotesize \copyright ~~  Tous droits réservés ~~ \copyright }        % ----- Copyright
-\AtEndDocument{\label{PageFin}}                         % ----- Label dernière page
-\fancyhf[RF]{\thepage / \pageref{PageFin}}              % ----- Numéro de page
-\setlength{\headheight}{22pt}                           % ----- Adjust head height
-\usepackage{setspace}                                   % ----- Interligne
-\usepackage{makecell}
-\renewcommand{\headrule}{\vspace{-4pt}\hrulefill\raisebox{-2.1pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill}     % ----- Ornement central
-\titlespacing{\section}{0pt}{2mm}{0pt}
-\titlespacing{\subsection}{0pt}{5mm}{1mm}
-

@@ -166,37 +166,3 @@
 \newcommand\Ouv{(O\,;\,\vv{u}\,;\,\vv{v})} 	% ----- Plan complexe (O;u;v)
 
 
-
-%%%%%%%%%%%%%%%%%%%%
-%%% Mise en page %%%
-%%%%%%%%%%%%%%%%%%%%
-
-%%%%% Flèche SSI longueur adaptative %%%%%
-
-\makeatletter
-\newcommand\xLongleftrightarrow[2][]%
-  {\ext@arrow 0099{\Longleftrightarrowfill@}{#1}{#2}}
-\def\Longleftrightarrowfill@
-  {\arrowfill@\Leftarrow\Relbar\Rightarrow}
-\makeatother
-
-
-
-%%%%% Adaptation du stretch des environnements 'cases' %%%%%
-
-\makeatletter
-\renewcommand*\env@cases[1][1.2]{%
-  \let\@ifnextchar\new@ifnextchar
-  \left\lbrace
-  \def\arraystretch{#1}%
-  \array{@{}l@{\quad}l@{}}%
-}
-\makeatother
-
-
-
-%%%%% Ajustement hauteur de \ldots %%%%%
-\let\oldldots\ldots
-\renewcommand{\ldots}{
-\parbox[b][8pt]{20pt}{\oldldots}
-}
