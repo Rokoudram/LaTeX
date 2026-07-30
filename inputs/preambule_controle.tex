@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Mise en page %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{parskip}									% ----- Parskip
+    \setlength{\parskip}{\medskipamount}
+    \newcommand{\restoreskip}{\setlength{\parskip}{\medskipamount}}
+    
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+\setlength\parindent{0mm}                               % ----- No indent
+
+\usepackage{setspace}                                   % ----- Interligne
+	\setstretch{0.95}                           % Interligne 0.95
+\usepackage{makecell}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Format des sections %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlespacing{\section}{0pt}{5mm}{0pt}
+\titlespacing{\subsection}{0pt}{2mm}{1mm}
+
+
+\titleformat{\section}
+    {\large\normalfont\bfseries}
+    {Exercice \no \thesection\, - \,}
+    {0pt}
+    {\large\bfseries}
+
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\titleformat{\subsection}
+    {\normalfont\bfseries}
+    {Partie \thesubsection\,: \,}
+    {0pt}
+    {\bfseries}
+
+
+
+
+
