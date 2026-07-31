@@ -1,9 +1,4 @@
 [
-  "chap10_continuite_et_TVI_exos.pdf",
-  "chap11_somme_de_variables_aleatoires_exos.pdf",
-  "chap12_integration_exos.pdf",
-  "chap13_equations_differentielles_exos.pdf",
-  "chap14_denombrement_exos.pdf",
   "chap1_logarithme_neperien_exos.pdf",
   "chap2_convexite_exos.pdf",
   "chap3_raisonnement_par_recurrence_exos.pdf",
@@ -12,5 +7,10 @@
   "chap6_fonctions_trigonometriques_exos.pdf",
   "chap7_primitives_exos.pdf",
   "chap8_loi_binomiale_exos.pdf",
-  "chap9_geometrie_dans_lespace_exos.pdf"
+  "chap9_geometrie_dans_lespace_exos.pdf",
+  "chap10_continuite_et_TVI_exos.pdf",
+  "chap11_somme_de_variables_aleatoires_exos.pdf",
+  "chap12_integration_exos.pdf",
+  "chap13_equations_differentielles_exos.pdf",
+  "chap14_denombrement_exos.pdf"
 ]
