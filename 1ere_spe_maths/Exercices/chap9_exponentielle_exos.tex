@@ -1,9 +1,9 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
@@ -43,35 +43,28 @@ Associer chacune des fonctions suivantes à sa \\courbe représentative dans le 
 \end{tabular}
 \end{minipage}
 \begin{minipage}{0.4\linewidth}\vspace{-4cm}\hspace{-4cm}
-\begin{tikzpicture}[scale=1]
-\begin{axis}[ % ----- Paramètre du repère
-        xmin = -3, xmax = 3, % ----- Bornes abscisses
-        ymin = 0, ymax = 5, % ----- Bornes ordonnées
-        xtick distance=1, % ----- Pas abscisses
-        ytick distance=1, % ----- Pas ordonnées
-        grid = both,
-        minor grid style = {line width = 0.1pt , draw = gray!20}, % ----- Style petit quadrillage
-        major grid style = {line width = 0.2pt , draw = gray}, % ----- Style quadrillage principal
-        axis lines = middle, % ----- Centre les axes
-        minor tick num = 1, % ----- Pas petit quadrillage
-        enlargelimits = { abs = 0.2 }, % ----- Élargir légèrement le repère
-        ticklabel style = {font = \tiny } % ----- Style numérotation des axes
-        ]
+	\begin{tikzpicture}[scale=1]
+		\begin{axis}[
+			xmin = -3, xmax = 3, ymin = 0, ymax = 5, xtick distance=1, ytick distance=1,
+        	grid = major, major grid style = {line width = 0.2pt , draw = gray}, 
+        	axis lines = middle,
+        	enlargelimits = { abs = 0.2 },
+        	ticklabel style = {font = \tiny }
+        	]
 
-\addplot [domain=-3:3, samples=100, color=red,line width=1.5pt]
-{e^(-x)};
+			\addplot [domain=-3:3, samples=100, color=newred,line width=2pt]
+			{e^(-x)};
 
-\addplot[domain = -3:3,color=blue,samples=100,line width=1.5pt]
-{e^(2*x)};
+			\addplot[domain = -3:3,color=newblue,samples=100,line width=2pt]
+			{e^(2*x)};
 
-\addplot[domain = -3:3,color=green,samples=100,line width=1.5pt]
-{2*e^x};
+			\addplot[domain = -3:3,color=newgreen,samples=100,line width=2pt]
+			{2*e^x};
 
-\addplot[domain = -3:3,color=magenta,samples=100,line width=1.5pt]
-{e^(-0.5*x)};
-
-\end{axis}
-\end{tikzpicture}
+			\addplot[domain = -3:3,color=neworange,samples=100,line width=2pt]
+			{e^(-0.5*x)};
+		\end{axis}
+	\end{tikzpicture}
 \end{minipage}
 
 

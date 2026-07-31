@@ -1,9 +1,9 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
@@ -112,7 +112,7 @@ Déterminer si les affirmations suivantes sont vraies ou fausses :
 
     \renewcommand{\arraystretch}{1}
     \begin{tabular}{p{0.33\textwidth} p{0.33\textwidth} p{0.33\textwidth}}
-        $\accol{z+w=2\\z\times w=3}$ & $\accol{z(w+1)=3\\w(z+1)=2}$ & $\accol{z^2+2w\,^2=1\\2z+w=3}$ 
+        $\begin{cases}z+w=2\\z\times w=3\end{cases}$ & $\begin{cases}z(w+1)=3\\w(z+1)=2\end{cases}$ & $\begin{cases}z^2+2w\,^2=1\\2z+w=3\end{cases}$ 
     \end{tabular}
 \end{enumerate}
 
@@ -473,7 +473,7 @@ Montrer que $\abs{z+w}=\abs{z-w}\Longleftrightarrow \theta=\theta'+\frac{\pi}{2}
 
 \subsection{Étude d'une suite}
 
-On définit la suite $(z_n)_{\nN}$ par $\defsuitez{z_0=i}{(1-i)z_n+2}$
+On définit la suite $(z_n)_{\nN}$ par $\begin{cases}z_0=i\\z_{n+1}=(1-i)z_n+2\end{cases}$
 \begin{enumerate}
     \item On pose $w_n=z_n+2i$ pour tout $\nN$ \\
     Montrer que $w_{n+1}=(1-i)w_n$ pour tout $\nN$

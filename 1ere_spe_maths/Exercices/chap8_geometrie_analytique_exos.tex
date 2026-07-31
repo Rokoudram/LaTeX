@@ -1,9 +1,9 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
@@ -22,15 +22,15 @@
 \section{Repérage dans le plan}
 
 \subsection{Repérage oblique}
-Soit un parallélogramme $ABCD$. On considère les points $E$, $F$ et $G$ tels que $\vvec{CE}=\vvec{BD}$, $\vvec{AF}+\vvec{CD}=\vvec{AC}$ et $3\vvec{BG}=2\vvec{DF}$
+Soit un parallélogramme $ABCD$. On considère les points $E$, $F$ et $G$ tels que $\vv{CE}=\vv{BD}$, $\vv{AF}+\vv{CD}=\vv{AC}$ et $3\vv{BG}=2\vv{DF}$
 \begin{enumerate}
     \item Construire les points $A$, $B$, $C$, $D$, $E$, $F$ et $G$
-    \item On se place dans le repère $(A;\vvec{AB};\vvec{AD})$
+    \item On se place dans le repère $(A;\vv{AB};\vv{AD})$
     \begin{enumerate}
         \item Donner les coordonnées des points $A$, $B$, $C$, $D$, $E$, $F$ et $G$
         \item Montrer que les points $E$, $F$ et $G$ sont alignés.
     \end{enumerate}
-    \item On se place dans le repère $(F;\vvec{FD};\vvec{FE})$
+    \item On se place dans le repère $(F;\vv{FD};\vv{FE})$
     \begin{enumerate}
         \item Donner les coordonnées des points $A$, $B$, $C$, $D$, $E$, $F$ et $G$
         \item Donner les coordonnées de $K$ le milieu du segment $[AG]$
@@ -42,7 +42,7 @@ Soit un parallélogramme $ABCD$. On considère les points $E$, $F$ et $G$ tels q
 
 \subsection{Parcourir le triangle}
 Soient $A$, $B$ et $C$ trois points du plan non alignés.\\
-On considère les points $M$, $N$ et $P$ tels que $\vvec{AM}+\vvec{BM}=2\vvec{AC}$ , $2\vvec{BN}=\vvec{AC}$ et $\vvec{PN}+\vvec{PM}=\vvec{AB}+\vvec{AC}$
+On considère les points $M$, $N$ et $P$ tels que $\vv{AM}+\vv{BM}=2\vv{AC}$ , $2\vv{BN}=\vv{AC}$ et $\vv{PN}+\vv{PM}=\vv{AB}+\vv{AC}$
 \begin{enumerate}
     \item Donner les coordonnées de $M$ et de $N$
     \item Déterminer les coordonnées du point $P$
@@ -56,22 +56,22 @@ On considère les points $M$, $N$ et $P$ tels que $\vvec{AM}+\vvec{BM}=2\vvec{AC
 \subsection{Perdu dans un hexagone}
 On considère un hexagone régulier $ABCDEFGH$
 \begin{enumerate}
-    \item On rapporte le plan au repère $(A;\vvec{AB};\vvec{AE})$
+    \item On rapporte le plan au repère $(A;\vv{AB};\vv{AE})$
     \begin{enumerate}
         \item Donner les coordonnées des points $A$, $B$, $E$ et $D$
-        \item Justifier que $\vvec{AF}=\frac{1}{2}\vvec{AD}+\vvec{BA}$
+        \item Justifier que $\vv{AF}=\frac{1}{2}\vv{AD}+\vv{BA}$
         \item En déduire les coordonnées du point $F$ puis celles du point $B$
     \end{enumerate}
-    \item On rapporte le plan au repère $(C;\vvec{CF};\vvec{AC})$
+    \item On rapporte le plan au repère $(C;\vv{CF};\vv{AC})$
     \begin{enumerate}
         \item Donner les coordonnées des points $C$, $A$, $F$ et $D$
-        \item Justifier que $\vvec{CB}=\frac{1}{2}\vvec{CF}+\vvec{DC}$ et en déduire les coordonnées du point $B$
-        \item Justifier que $\vvec{CE}=\vvec{CB}+2\vvec{AF}$ et en déduire les coordonnées du point $E$
+        \item Justifier que $\vv{CB}=\frac{1}{2}\vv{CF}+\vv{DC}$ et en déduire les coordonnées du point $B$
+        \item Justifier que $\vv{CE}=\vv{CB}+2\vv{AF}$ et en déduire les coordonnées du point $E$
     \end{enumerate}
-    \item On rapporte le plan au repère $(E;\vvec{CA};\vvec{BD})$
+    \item On rapporte le plan au repère $(E;\vv{CA};\vv{BD})$
     \begin{enumerate}
         \item Donner les coordonnées des points $E$, $A$ et $C$
-        \item Montrer que $\vvec{EA}+\vvec{CA}=3\vvec{EF}$ et en déduire les coordonnées du point $F$
+        \item Montrer que $\vv{EA}+\vv{CA}=3\vv{EF}$ et en déduire les coordonnées du point $F$
         \item Donner alors les coordonnées des points $D$ et $B$
     \end{enumerate}
 \end{enumerate}
@@ -80,8 +80,8 @@ On considère un hexagone régulier $ABCDEFGH$
 
 \subsection{Coordonnées difficiles}
 Soient $A$, $B$ et $C$ trois points du plan non alignés.\\
-On considère les points $P$, $Q$ et $R$ tels que $2\vvec{AP}+\vvec{BP}=\vvec{CA}$ , \quad $\vvec{PQ}+3\vvec{QB}=2\vvec{AC}$ et $3\vvec{CR}+\vvec{AQ}=\vvec{AR}$\\
-On se place dans le répère $(A;\vvec{AB};\vvec{AC})$
+On considère les points $P$, $Q$ et $R$ tels que $2\vv{AP}+\vv{BP}=\vv{CA}$ , \quad $\vv{PQ}+3\vv{QB}=2\vv{AC}$ et $3\vv{CR}+\vv{AQ}=\vv{AR}$\\
+On se place dans le répère $(A;\vv{AB};\vv{AC})$
 \begin{enumerate}
     \item Donner les coordonnées des points $P$, $Q$ et $R$
     \item Montrer que les points $C$, $Q$ et $R$ sont alignés.
@@ -234,7 +234,7 @@ On munit le plan du repère orthonormé $\Oij$ et on considère les points $A(3;
 
 
 
-\subsection{Sans le centre $\dur$}
+\subsection{Sans le centre}
 
 On considère les points $A(1;2)$ et $B(-2,3)$ \\
 Déterminer une équation cartésienne d'un cercle passant par les points $A$ et $B$ et dont le rayon vaut 5.

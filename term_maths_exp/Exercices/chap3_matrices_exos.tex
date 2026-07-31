@@ -1,9 +1,9 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
@@ -134,7 +134,7 @@ Soit la matrice $\Phi=\matrice{1&0&3\\2&1&0\\0&-1&1} $
 
 
 \subsection{Système simple}
-On considère le système $(S):\accol{7x-4y=2\\9x-5y=-1} $ et on note $A$ la matrice associée à $(S)$
+On considère le système $(S):\begin{cases}7x-4y=2\\9x-5y=-1\end{cases} $ et on note $A$ la matrice associée à $(S)$
     \begin{enumerate}
         \item Calculer $2A-A^2$
         \item En déduire l'inverse de $A$
@@ -144,7 +144,7 @@ On considère le système $(S):\accol{7x-4y=2\\9x-5y=-1} $ et on note $A$ la mat
 
 
 \subsection{Avec trois inconnues}
-On considère le système $(S):\accol{-2x+y+z=1\\x-y=2\\x+y-z=3}$
+On considère le système $(S):\begin{cases}-2x+y+z=1\\x-y=2\\x+y-z=3\end{cases}$
     \begin{enumerate}
         \item Écrire ce système sous forme matricielle $AX=B$ avec $A$ une matrice 3x3, et $B$ et $X$ deux vecteurs colonne
         \item Montrer que l'inverse de $A$ est la matrice $M=\matrice{1&2&1\\1&1&1\\2&3&1}$
@@ -155,7 +155,7 @@ On considère le système $(S):\accol{-2x+y+z=1\\x-y=2\\x+y-z=3}$
 \subsection{Application concrète}
 On souhaite déterminer l'équation de la parabole $\mathscr{P}:y=ax^2+bx+c$ passant par les points $A(-2;3)$ , $B(1;1)$ et $C(4;5)$
     \begin{enumerate}
-        \item Montrer que déterminer l'équation de $\mathscr{P}$ revient à résoudre le système : $\accol{4a-2b+c=3\\a+b+c=1\\16a+4b+c=5}$
+        \item Montrer que déterminer l'équation de $\mathscr{P}$ revient à résoudre le système : $\begin{cases}4a-2b+c=3\\a+b+c=1\\16a+4b+c=5\end{cases}$
         \item Écrire ce système sous forme matricielle $MX=P$ avec $M$ une matrice 3x3, et $P$ et $X$ deux vecteurs colonne
         \item Montrer que $M^{-1}=\frac{1}{18}\matrice{1&-2&1\\-5&4&1\\4&16&-2} $
         \item Déterminer l'équation de la parabole $\mathscr{P}$
@@ -285,7 +285,7 @@ On considère la matrice $J=\matrice{1&1&1\\1&1&1\\1&1&1}$
 \section{Suites de matrices}
 
 \subsection{Récurrence double}
-On considère la suite $(u_n):\accolsized{u_0=2~~;~~u_1=1\\u_{n+2}=3u{n+1}-2u_n}{0.7}$ et on pose alors $X_n=\matrice{u_{n+1}\\u_n}$
+On considère la suite $(u_n):\begin{cases}u_0=2~~;~~u_1=1\\u_{n+2}=3u{n+1}-2u_n\end{cases}$ et on pose alors $X_n=\matrice{u_{n+1}\\u_n}$
 
 \begin{enumerate}
  	\item Déterminer une matrice $A\in\mathcal{M}_2(\RR)$ telle que $X_{n+1}=AX_n$ pour tout $\nN$
@@ -302,7 +302,7 @@ On considère la suite $(u_n):\accolsized{u_0=2~~;~~u_1=1\\u_{n+2}=3u{n+1}-2u_n}
 
 
 \subsection{Deux suites}
-On définit les suites $(a_n)$ et $(b_n)$ comme suit : $\accol{a_0=1 ~~ ; ~~ b_0=1\\a_{n+1}=3a_n+4b_n-2\\b_{n+1}=a_n+6b_n+2}$ et on note $U_n=\matrice{a_n\\b_n}$
+On définit les suites $(a_n)$ et $(b_n)$ comme suit : $\begin{cases}a_0=1 ~~ ; ~~ b_0=1\\a_{n+1}=3a_n+4b_n-2\\b_{n+1}=a_n+6b_n+2\end{cases}$ et on note $U_n=\matrice{a_n\\b_n}$
 
 \begin{enumerate}
 	\item Déterminer $M\in\mathcal{M}_2(\RR)$ et $K$ une matrice de dimension 1$\times$2 telles que $U_{n+1}=MU_n+K$ pour tout $\nN$

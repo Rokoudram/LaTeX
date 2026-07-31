@@ -1,9 +1,9 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
@@ -23,7 +23,7 @@
 
 
 \subsection{Racine carrée}
-On définit la suite $\Un$ par $\defsuite{u_0=0}{\sqrt{1+u_n^2}}$ 
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=0\\u_{n+1}=\sqrt{1+u_n^2}\end{cases}$ 
 \begin{enumerate}
     \item Calculer $u_1$, $u_2$, $u_3$ et $u_4$
     \item Conjecturer l'expression de $u_n$ en fonction de $n$
@@ -34,7 +34,7 @@ On définit la suite $\Un$ par $\defsuite{u_0=0}{\sqrt{1+u_n^2}}$
 
 \subsection{Des carrés maintenant ?}
 
-On considère la suite $(v_n)_{\nN}$ définie par $\accolsized{v_0=0\\v_{n+1}=v_n+2n+1}{0.8}$
+On considère la suite $(v_n)_{\nN}$ définie par $\begin{cases}v_0=0\\v_{n+1}=v_n+2n+1\end{cases}$
 \begin{enumerate}
     \item Calculer $v_1$, $v_2$, $v_3$ et $v_4$
     \item Conjecturer l'expression de $v_n$ en fonction de $n$
@@ -44,14 +44,14 @@ On considère la suite $(v_n)_{\nN}$ définie par $\accolsized{v_0=0\\v_{n+1}=v_
 
 
 \subsection{Conjecture en autonomie}
-Soit $(w_n)_{\nN}$ une suite définie par $\accolsized{w_0=\frac{1}{2}\\w_{n+1}=\frac{w_n}{2-w_n}}{0.8}$
+Soit $(w_n)_{\nN}$ une suite définie par $\begin{cases}w_0=\frac{1}{2}\\w_{n+1}=\frac{w_n}{2-w_n}\end{cases}$
 
 Conjecturer puis démontrer l'expression de $w_n$ en fonction de $n$
 
 
 
 \subsection{Suite arithmético-géométrique}
-On considère la suite $\Un$ définie par $\defsuite{u_0=1}{2u_n-3}$
+On considère la suite $(u_n)_{\nN}$ définie par $\begin{cases}u_0=1\\u_{n+1}=2u_n-3\end{cases}$
 \begin{enumerate}
     \item Montrer par récurrence que $u_{n+1}\leq u_n$ pour tout $\nN$
     \item Montrer par récurrence que $u_n\leq0$ pour tout $\nN^*$
@@ -61,27 +61,27 @@ On considère la suite $\Un$ définie par $\defsuite{u_0=1}{2u_n-3}$
 
 
 \subsection{Majoration linéaire}
-On définit la suite $\Un$ par $\defsuite{u_0=1}{\frac{1}{3}(u_n+4n+6)}$
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=1\\u_{n+1}=\frac{1}{3}(u_n+4n+6)\end{cases}$
 \begin{enumerate}
     \item Montrer par récurrence que $u_n>2n$ pour tout $\nN$
-    \item Montrer par récurrence que la suite $\Un$ est croissante.
+    \item Montrer par récurrence que la suite $(u_n)_{\nN}$ est croissante.
     \item Montrer par récurrence que $u_n=2n+\frac{1}{3^n}$ pour tout $\nN$
 \end{enumerate}
 
 
 
 \subsection{Encore un coup}
-On définit la suite $\Un$ par $\defsuite{u_0=\frac{1}{2}}{1+\frac{3n+u_n}{4}}$
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=\frac{1}{2}\\u_{n+1}=1+\frac{3n+u_n}{4}\end{cases}$
 \begin{enumerate}
     \item Montrer par récurrence que $u_n\geq n$ pour tout $\nN$
-    \item Montrer par récurrence que la suite $\Un$ est croissante.
+    \item Montrer par récurrence que la suite $(u_n)_{\nN}$ est croissante.
     \item Montrer par récurrence que $u_n=n+\frac{1}{2\times4^n}$ pour tout $\nN$
 \end{enumerate}
 
 
 
 \subsection{Suite à paramètre}
-Soit $k>0$. On définit la suite $(u_n)_{n\geq1}$ par $\defsuite{u_1=k}{k(u_n+\frac{u_n}{n})}$
+Soit $k>0$. On définit la suite $(u_n)_{n\geq1}$ par $\begin{cases}u_1=k\\u_{n+1}=k(u_n+\frac{u_n}{n})\end{cases}$
     \begin{enumerate}
         \item Montrer que $u_n\geq k^n$ pour tout $n\geq1$
         \item Montrer que $u_n=n\times k^n$ pour tout $n\geq1$
@@ -90,7 +90,7 @@ Soit $k>0$. On définit la suite $(u_n)_{n\geq1}$ par $\defsuite{u_1=k}{k(u_n+\f
 
 
 \subsection{Une suite pertinente}
-On définit la suite $\Un$ par $\defsuite{u_0=1}{3u_n-n^2}$
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=1\\u_{n+1}=3u_n-n^2\end{cases}$
 \begin{enumerate}
 	\item Montrer par récurrence que $u_n\geq n^2+1$ pour tout $\nN$
 	\item Montrer que $u_n=\frac{1}{2}(1+n+n^2+3^n)$ pour tout $\nN$
@@ -166,7 +166,7 @@ On pose $g(x)=2x+1$ définie sur $\RR$ et on note $g^n$ la fonction $g$ composé
 
 
 \subsection{Une autre}
-On pose $h(x)=\frac{x}{1-x}$ définie sur $\RR\setminus\{-1\}$ et on note $h^n$ la fonction $h$ composée $n$ fois avec elle-même.
+On pose $h(x)=\frac{x}{1-x}$ définie sur $\RR\setminus\{1\}$ et on note $h^n$ la fonction $h$ composée $n$ fois avec elle-même.
 \begin{enumerate}
 	\item Calculer $h^2(x)$ et $h^3(x)$ et déterminer leur domaine de définition.
 	\item \begin{enumerate}
@@ -187,9 +187,9 @@ Démontrer que $f^n(x)=\ln(2+2n+e^x) \quad \forall\xR$
 
 \subsection{Composition paire}
 On définit sur $\RR$ la fonction $\psi$ par $\psi(x)=x^2-1$
-\begin{enumerate}
-	\item Démontrer que $\psi^{2n}\left(\sqrt{2}\right)=0 \quad \forall\nN^*$
-\end{enumerate}
+
+Démontrer que $\psi^{2n}\left(\sqrt{2}\right)=0 \quad \forall\nN^*$
+
 
 
 \subsection{Zéros symétriques}
@@ -204,19 +204,21 @@ Soit $f:x\mapsto x^2e^{-x}$
 \section{Exercices supplémentaires}
 
 \subsection{Inégalité de Bernoulli}
-Démontrer l'inégalité de Bernouilli : $\forall\nN, \forall a\geq0,\quad (1+a)^n\geq1+an$
+Démontrer l'inégalité de Bernoulli : $\forall\nN, \forall a\geq0,\quad (1+a)^n\geq1+an$
 
 
 
 \subsection{Une suite en puissance}
 
-On considère la suite $\Un$ définie comme suit $\accolsized{u_0=1~~;~~u_1=2\\u_{n+2}=u_{n+1}+2u_n}{1}$\\[5pt]
+On considère la suite $(u_n)_{\nN}$ définie comme suit $\begin{cases}u_0=1~~;~~u_1=2\\u_{n+2}=u_{n+1}+2u_n\end{cases}$
+
 Démontrer à l'aide d'un raisonnement par récurrence double que $u_n=2^n$ pour tout $\nN$
 
 
 \subsection{Plus simple qu'il n'y parait}
 
-On considère la suite $(v_n)_{\nN}$ définie par $\accolsized{v_0=1~~;~~v_1=3\\v_{n+2}=2v_{n+1}-v_n}{1}$\\[5pt]
+On considère la suite $(v_n)_{\nN}$ définie par $\begin{cases}v_0=1~~;~~v_1=3\\v_{n+2}=2v_{n+1}-v_n\end{cases}$
+
 Démontrer à l'aide d'un raisonnement par récurrence double que $v_n=2n+1$ pour tout $\nN$
 
 

@@ -1,9 +1,10 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/macros_tikz.tex} 		   	% ----- Macros TikZ
 
 
 \fancyhead[R]{1\up{ère} générale}            % En-tête droit
@@ -313,46 +314,10 @@ On appelle $X$ la variable aléatoire égale à $11(n+4)$ si l'on tire deux boul
     \end{enumerate}
 \end{minipage}\hfill
 \begin{minipage}{0.3\linewidth}
-    \begin{tikzpicture}[rotate=90]
-      % Rectangle with round corners (2:1 aspect ratio)
-      \draw[fill=AntiqueWhite1 ,very thick, rounded corners=10pt] (0,0) rectangle (4,2);
-      
-      % Vertical line in the middle (slightly longer)
-      \draw[thick] (2,0.2) -- (2,1.8);
-      
-      % Black dots centered in the left half of the rectangle
-      \filldraw[black] (0.6,0.5) circle (4pt);
-      \filldraw[black] (1.4,1.5) circle (4pt);
-    
-      % Black dots forming an X motif in the right half of the rectangle
-      \filldraw[black] (2.6,0.5) circle (4pt);
-      \filldraw[black] (3.4,0.5) circle (4pt);
-      \filldraw[black] (3,1) circle (4pt);
-      \filldraw[black] (3.4,1.5) circle (4pt);
-      \filldraw[black] (2.6,1.5) circle (4pt);
-    
-      % Center dot
-      \filldraw[gray] (2,1) circle (2pt);
-      
-      % Rectangle with round corners (2:1 aspect ratio)
-      \draw[fill=AntiqueWhite1 ,very thick, rounded corners=10pt] (0,3) rectangle (4,5);
-      
-      % Vertical line in the middle (slightly longer)
-      \draw[thick] (2,3.2) -- (2,4.8);
-      
-      % Black dots centered in the left half of the rectangle
-      \filldraw[black] (0.5,3.5) circle (4pt);
-      \filldraw[black] (1,4) circle (4pt);
-      \filldraw[black] (1.5,4.5) circle (4pt);
-    
-      % Black dots forming an X motif in the right half of the rectangle
-      \filldraw[black] (2.6,3.5) circle (4pt);
-      \filldraw[black] (3.4,3.5) circle (4pt);
-      \filldraw[black] (3.4,4.5) circle (4pt);
-      \filldraw[black] (2.6,4.5) circle (4pt);
-    
-      % Center dot
-      \filldraw[gray] (2,4) circle (2pt);
+    \begin{tikzpicture}[scale=0.75]
+     	\domino[4][3](0,0);
+     	\domino[5][2](2.5,0);
+     	\domino[0][3](5,0);
     \end{tikzpicture}
 \end{minipage}
 \begin{enumerate}
@@ -363,8 +328,6 @@ On appelle $X$ la variable aléatoire égale à $11(n+4)$ si l'on tire deux boul
         \item Calculer $\VV(X)$ et $\sigma(X)$ la variance et l'écart-type de $X$ 
     \end{enumerate} 
 \end{enumerate}
-
-
 
 
 \end{document}

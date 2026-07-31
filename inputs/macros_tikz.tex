@@ -7,8 +7,12 @@
 \def\domino[#1][#2](#3){
 	
 	%%% Aspect du domino %%%
+	
+	\pgfgettransformentries{\a}{\b}{\c}{\d}{\e}{\f}
 
-	\draw[rounded corners , line width = 1pt , fill = color_domino] ($(#3)+(0,0)$) rectangle ($(#3)+(2,3)$) ;
+    \pgfmathsetmacro{\scaleDomino}{sqrt(\a*\a+\d*\d)}
+    
+	\draw[rounded corners = 8*\scaleDomino , line width = 1pt , fill = color_domino] ($(#3)+(0,0)$) rectangle ($(#3)+(2,3)$) ;
 	\draw[fill , line width = 1pt , color = black!70!white] ($(#3)+(0.25,1.5)$) -- ($(#3)+(1,1.5)$) circle[radius=0.075] -- ($(#3)+(1.75,1.5)$) ;
 	
 	%%% Compteur de points partie supérieure %%%

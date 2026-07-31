@@ -1,15 +1,15 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{1\up{ère} spécialité mathématiques}            % En-tête droit
 \fancyhead[C]{Suites numériques}
-\fancyhf[CF]{\footnotesize{ \copyright ~ Tous droits réservés ~ \copyright}}                     % En-tête central
-\setstretch{0.9}                           % Interligne
+\fancyhf[CF]{\footnotesize{ \copyright ~ Tous droits réservés ~ \copyright}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,23 +54,23 @@ Donner les 5 premiers termes des suites suivantes :\\
 \renewcommand{\arraystretch}{2}
 \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
 
-    a) $\defsuite{u_{0} = 2}{\frac{4+u_{n}}{2}} $
+    a) $\begin{cases}u_{0} = 2\\u_{n+1}=\frac{4+u_{n}}{2}\end{cases} $
     &
-    b) $\defsuite{u_{1} = 1}{u_n+\frac{1}{n}} $
+    b) $\begin{cases}u_{1} = 1\\u_{n+1}=u_n+\frac{1}{n}\end{cases} $
     &
-    c) $\defsuite{u_{0} = 1}{n\times u_n} $ \\
+    c) $\begin{cases}u_{0} = 1\\u_{n+1}=n\times u_n\end{cases} $ \\
 
-    d) $\defsuite{u_{0} = \frac{1}{4}}{-2u_n} $
+    d) $\begin{cases}u_{0} = \frac{1}{4}\\u_{n+1}=-2u_n\end{cases} $
     &
-    e) $\defsuite{u_{0} = -1}{\frac{\sqrt{2+u_n}}{u_n}} $
+    e) $\begin{cases}u_{0} = -1\\u_{n+1}=\frac{\sqrt{2+u_n}}{u_n}\end{cases} $
     &
-    f) $\defsuite{u_{1}=1}{\frac{1+u_{n}}{u_{n}}}$ 
+    f) $\begin{cases}u_{1}=1\\u_{n+1}=\frac{1+u_{n}}{u_{n}}\end{cases}$ 
 \end{tabular}
 
 
 
 \subsection{Indices et puissances}
-On définit la suite $\Un$ par $u_n=3^{2n-1}$
+On définit la suite $(u_n)_{\nN}$ par $u_n=3^{2n-1}$
 \begin{enumerate}
 	\item Que vaut $\frac{u_{2n}}{(u_n)^2}$ ?
 	\item Montrer que $\frac{u_{n+1}+u_{n+2}}{u_n}=90$
@@ -95,7 +95,7 @@ On définit la suite $\Un$ par $u_n=3^{2n-1}$
 
 
 \subsection{Via un polynôme}
-On considère la suite $\Un$ définie explicitement par $u_n=n^3-3n^2-5n$
+On considère la suite $(u_n)_{\nN}$ définie explicitement par $u_n=n^3-3n^2-5n$
 \begin{enumerate}
 	\item Calculer les 5 premiers termes de la suite $(u_n)$. Semble-t-elle croissante ? Décroissante ?
 	\item Démontrer que $u_{n+1}=n^3-8n-7$
@@ -112,7 +112,7 @@ Déterminer le sens de variation des suites ci-dessous :\\
     a) $u_n=n^{2}+n$ & b) $u_n=n-n^2$ & c) $u_n=\frac{n}{n+1}$ \\
     d) $u_n=n-\frac{100}{n}$ & e) $u_n=\frac{n+1}{5^{n}}$ & f) $u_n=\frac{3^{2n}}{2^{3n}}$ \\
     g) $u_n=n^2-15n-3$ & h) $u_n=n^3-26n^2$ & i) $u_n=n+\frac{30}{n}$ \\
-    j) $\defsuite{u_{0}=1}{u_n^{2}-2u_n+3} $ & k) $\defsuite{u_{0}=2}{\frac{1+u_n^{3}}{u_n^{2}}}$ & l) $\defsuite{u_{1}=5}{10-u_n} $
+    j) $\begin{cases}u_{0}=1\\u_{n+1}=u_n^{2}-2u_n+3\end{cases} $ & k) $\begin{cases}u_{0}=2\\u_{n+1}=\frac{1+u_n^{3}}{u_n^{2}}\end{cases}$ & l) $\begin{cases}u_{1}=5\\u_{n+1}=10-u_n\end{cases} $
 \end{tabular}
 
 
@@ -122,7 +122,7 @@ Conjecturer à l'aide de la calculatrice la limite de $u_n$ ci-après :\\
 \begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
 a) $u_n = n^2 - 10 n$ & b) $u_n = \frac{1}{n} + \frac{1}{n+1}$ & c) $u_n = \frac{2^n}{n}$ \\
 
-d) $\defsuite{u_0=1}{2u_n+1}$ & e) $\begin{cases} u_0 = 1000 \\ u_{n+1} = \frac{u_n + 100}{2} \end{cases}$ & f) $\begin{cases} u_0 = 23 \\ u_{n+1} = 1 - \frac{u_n}{2} \end{cases}$
+d) $\begin{cases}u_0=1\\u_{n+1}=2u_n+1\end{cases}$ & e) $\begin{cases} u_0 = 1000 \\ u_{n+1} = \frac{u_n + 100}{2} \end{cases}$ & f) $\begin{cases} u_0 = 23 \\ u_{n+1} = 1 - \frac{u_n}{2} \end{cases}$
 \end{tabular}
 
 
@@ -207,16 +207,16 @@ Déterminer si les suites ci-dessous sont arithmétiques. Si oui, donner leur ra
     
 \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
 	a) $u_n=\frac{7}{2}n-3$ & b) $u_n=n^{2}-3n$ & c) $u_n=-1$ \\
-    d) $ \defsuite{u_{1}=3}{-u_n+2}$ & e) $\defsuite{u_{0}=-1}{u_n-5}$ & f) $\defsuite{u_{0}=2}{\frac{3u_n-2}{u_n}}$ 
+    d) $ \begin{cases}u_{1}=3\\u_{n+1}=-u_n+2\end{cases}$ & e) $\begin{cases}u_{0}=-1\\u_{n+1}=u_n-5\end{cases}$ & f) $\begin{cases}u_{0}=2\\u_{n+1}=\frac{3u_n-2}{u_n}\end{cases}$ 
 \end{tabular}
 
 
 
 \subsection{À partir de termes}
 \begin{enumerate}
-    \item Soit $\Un$ une suite arithmétique de raison 4 et telle que $u_{13}=63$. Combien vaut $u_{5}$ ? 
-    \item $\Un$ est une suite arithmétique telle que $u_{7}=20$ et $u_{11}=14$. Donner la raison et le premier terme de $(u_n)$
-	\item Soit $\Un$ une suite arithmétique pour laquelle $u_3=10u_0$. Montrer alors que $u_5=4u_1$
+    \item Soit $(u_n)_{\nN}$ une suite arithmétique de raison 4 et telle que $u_{13}=63$. Combien vaut $u_{5}$ ? 
+    \item $(u_n)_{\nN}$ est une suite arithmétique telle que $u_{7}=20$ et $u_{11}=14$. Donner la raison et le premier terme de $(u_n)$
+	\item Soit $(u_n)_{\nN}$ une suite arithmétique pour laquelle $u_3=10u_0$. Montrer alors que $u_5=4u_1$
 \end{enumerate}
 
 
@@ -236,7 +236,7 @@ Déterminer si les suites ci-dessous sont arithmétiques. Si oui, donner leur ra
 
 
 \subsection{Suite auxiliaire}
-On considère la suite $(u_n)$ définie par $\defsuite{u_{0}=1}{\frac{2u_n}{2+3u_n}}$
+On considère la suite $(u_n)$ définie par $\begin{cases}u_{0}=1\\u_{n+1}=\frac{2u_n}{2+3u_n}\end{cases}$
 
 \begin{enumerate}
     \item Calculer les 4 premiers termes de $(u_n)$
@@ -251,7 +251,7 @@ On considère la suite $(u_n)$ définie par $\defsuite{u_{0}=1}{\frac{2u_n}{2+3u
 
 
 \subsection{Une formule simple}
-On définit la suite $\Un$ par $\defsuite{u_0=0}{\frac{3-2u_n}{4-3u_n}}$
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=0\\u_{n+1}=\frac{3-2u_n}{4-3u_n}\end{cases}$
 \begin{enumerate}
 	\item Calculer les 4 premiers termes de la suite $(u_n)$
 	\item On admet que la suite $(u_n)$ est positive.
@@ -276,7 +276,7 @@ On définit la suite $\Un$ par $\defsuite{u_0=0}{\frac{3-2u_n}{4-3u_n}}$
 Déterminer si les suites ci-dessous sont géométriques. Si oui, donner leur raison et leur premier terme.\\
 \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
 	a) $u_n=\frac{2}{3^{n}}$ & b) $u_n=1+2^{n}$ & c) $u_n=6\times\frac{3^{n+1}}{2^{n+2}}$ \\
-	d) $ \defsuite{u_{1}=2}{n\times u_n}$ & e) $\defsuite{u_{0}=10}{\frac{u_n}{5}}$ & f) $u_n=3n^{2}$
+	d) $ \begin{cases}u_{1}=2\\u_{n+1}=n\times u_n\end{cases}$ & e) $\begin{cases}u_{0}=10\\u_{n+1}=\frac{u_n}{5}\end{cases}$ & f) $u_n=3n^{2}$
 \end{tabular}
 
 
@@ -292,7 +292,7 @@ Déterminer si les suites ci-dessous sont géométriques. Si oui, donner leur ra
 
 \subsection{Léger décalage}
 
-On considère une suite géométrique $\Un$ pour laquelle l'égalité $u_{n+2}=\frac{5u_{n+1}+3u_n}{2}$ est toujours vérifiée.
+On considère une suite géométrique $(u_n)_{\nN}$ pour laquelle l'égalité $u_{n+2}=\frac{5u_{n+1}+3u_n}{2}$ est toujours vérifiée.
 
 Que peut-on conclure quant à la raison de la suite $(u_n)$ ?
 
@@ -329,7 +329,7 @@ On note $t_n$ le temps de vol sans accident de l'I.A. lors de sa $n$-ième tenta
 
 
 \subsection{Une suite arithmético-géométrique}
-On définit la suite $(u_n)$ par $\defsuite{u_{0}=2}{3u_n+4}$
+On définit la suite $(u_n)$ par $\begin{cases}u_{0}=2\\u_{n+1}=3u_n+4\end{cases}$
 \begin{enumerate}
     \item Calculer les 4 premiers termes de $(u_n)$
     \item Montrer que $(u_n)$ n'est ni arithmétique ni géométrique.
@@ -341,7 +341,7 @@ On définit la suite $(u_n)$ par $\defsuite{u_{0}=2}{3u_n+4}$
 
 
 \subsection{Ça devient compliqué}
-On définit la suite $(u_n)$ par $\defsuite{u_0=0}{2u_n+n}$
+On définit la suite $(u_n)$ par $\begin{cases}u_0=0\\2u_n+n\end{cases}$
 
 \begin{enumerate}
     \item Montrer que la suite $(u_n)$ n'est ni arithmétique ni géométrique.
@@ -369,7 +369,7 @@ On considère une suite $(u_n)$ vérifiant la relation de récurrence : $u_{n+1}
 
 
 \subsection{Annexion géométrique}
-On considère la suite $\Un:\defsuite{u_0=2}{4-\frac{3}{u_n}}$
+On considère la suite $(u_n)_{\nN}:\begin{cases}u_0=2\\u_{n+1}=4-\frac{3}{u_n}\end{cases}$
 \begin{enumerate}
 	\item Calculer les 4 premiers termes de la suite $(u_n)$
 	\item On admet que $0\leq u_n\leq3$ pour tout $\nN$

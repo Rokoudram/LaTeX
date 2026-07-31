@@ -1,9 +1,9 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{T\up{ale} spécialité mathématiques}            % En-tête droit
@@ -107,8 +107,11 @@ Résoudre les systèmes suivants :
 
 \renewcommand{\arraystretch}{3}
 \begin{tabular}{p{0.29\textwidth} p{0.29\textwidth} p{0.35\textwidth}}
-    $(S_1):\accol{e^xe^y=10\\e^{x-y}=\frac{2}{5}}$ & $(S_2):\accol{x-y=2\\\ln(x)+\ln(y)=3}$ & $(S_3):\accol{\ln(xy)=5+\ln(6)\\\ln(x+y)=2+\ln(3+2e)}$ \\
-    $(S_4):\accol{\ln(x)+\ln(y)=5\\3\ln(x)+\ln(y)=3}$ & $(S_5):\accol{\ln(x)-\ln(y)=2\\\ln(x)=\ln\left(\frac{1}{y}\right)}$
+    $(S_1):\begin{cases}e^xe^y=10\\e^{x-y}=\frac{2}{5}\end{cases}$ & 
+    $(S_2):\begin{cases}x-y=2\\\ln(x)+\ln(y)=3\end{cases}$ &
+    $(S_3):\begin{cases}\ln(xy)=5+\ln(6)\\\ln(x+y)=2+\ln(3+2e)\end{cases}$ \\
+    $(S_4):\begin{cases}\ln(x)+\ln(y)=5\\3\ln(x)+\ln(y)=3\end{cases}$ &
+    $(S_5):\begin{cases}\ln(x)-\ln(y)=2\\\ln(x)=\ln\left(\frac{1}{y}\right)\end{cases}$
 \end{tabular}
 
 
@@ -151,7 +154,7 @@ d) $\dfrac{3 + \left(\frac{7}{9}\right)^{2n-1}}{5} \geq \dfrac{6 + 10^{-10}}{10}
 
     À partir de quel rang $(u_n)$ dépasse-t-elle $123$ ?
 
-    \item Soit $(u_n):\defsuite{u_0=-2}{\frac{3u_n}{2}}$. On pose $v_n = \frac{8}{1 - u_n}$
+    \item Soit $(u_n):\begin{cases}u_0=-2\\u_{n+1}=\frac{3u_n}{2}\end{cases}$. On pose $v_n = \frac{8}{1 - u_n}$
 
     À partir de quel rang a-t-on $v_n < \frac{3}{10}$ ?
 
@@ -163,7 +166,7 @@ d) $\dfrac{3 + \left(\frac{7}{9}\right)^{2n-1}}{5} \geq \dfrac{6 + 10^{-10}}{10}
 
 
 \subsection{Écrasement rapide}
-On définit la suite $\Un$ par $\begin{cases}u_0=2 \\ u_{n+1}=\frac{{u_n}^2}{3}\end{cases}$ \\
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=2 \\ u_{n+1}=\frac{{u_n}^2}{3}\end{cases}$ \\
 Pour tout $\nN$ on pose $v_n=\ln(u_n)-\ln(3)$
 \begin{enumerate}
 	\item Montrer que la suite $(v_n)$ est géométrique de raison 2.
@@ -173,7 +176,7 @@ Pour tout $\nN$ on pose $v_n=\ln(u_n)-\ln(3)$
 
 
 \subsection{Suite très exponentielle}
-On définit la suite $\Un$ par $\defsuite{u_0=-1}{2u_n-3u_n\,^2}$ et on admet que la suite $\Un$ est négative. \\
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=-1\\u_{n+1}=2u_n-3u_n\,^2\end{cases}$ et on admet que la suite $(u_n)_{\nN}$ est négative. \\
 Pour tout $\nN$ on pose $v_n=\ln(1-3u_n)$
 \begin{enumerate}
 	\item Montrer que la suite $(v_n)$ est géométrique de raison 2.

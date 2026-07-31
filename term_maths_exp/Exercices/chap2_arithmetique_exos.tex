@@ -1,9 +1,9 @@
 \documentclass[oneside,12pt]{article}          % ----- article
 
-\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
-\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
-\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
 
 \fancyhead[R]{T\up{ale} option mathématiques expertes}            % En-tête droit
@@ -296,7 +296,7 @@ Démontrer que $n^5-n$ est toujours un multiple de 30
     \centering Si $3x\equiv0 [6]$ alors $x$ est pair & & \\ \hline
     \centering Si $x\equiv y+3 [6]$ alors $x^2\equiv y^2+3 [6]$ & & \\ \hline
     \centering Si $x\equiv y+4 [8]$ alors $x^2\equiv y^2+4 [8]$ & & \\ \hline
-    \centering Si $\accol{x+y\equiv 0 [22] \\ x-y\equiv 0 [22]}$ alors $\accol{x\equiv0[22] \\ y\equiv0 [22]}$ & & \\ \hline
+    \centering Si $\begin{cases}x+y\equiv 0 [22] \\ x-y\equiv 0 [22]\end{cases}$ alors $\begin{cases}x\equiv0[22] \\ y\equiv0 [22]\end{cases}$ & & \\ \hline
     \centering Le produit de 3 nombres entiers consécutifs est toujours un multiple de 6 & & \\ \hline
     \centering La somme de 3 carrés consécutifs n'est jamais un multiple de 6 & & \\ \hline
     \centering Si $p\equiv q[n]$ alors $2^p\equiv 2^q[n]$ & & \\ \hline
@@ -353,7 +353,7 @@ Peut-on trouver deux entiers naturels $x$ et $y$ pour lesquels $\barre{104}^x=\b
 
 
 \subsection{Étude d'une suite}
-On définit la suite $\Un$ par $\defsuite{u_0=7}{3u_n-5}$
+On définit la suite $(u_n)_{\nN}$ par $\begin{cases}u_0=7\\3u_n-5\end{cases}$
 \begin{enumerate}
 	\item Démontrer que $u_n\equiv7[9]$
 	\item\begin{enumerate}
@@ -397,7 +397,9 @@ Déterminer tous les entiers $n$ vérifiant $\ppcm(2n+3;3n+2)=60$
 Déterminer les couples d'entiers $(x;y)$ vérifiant les systèmes suivants :
 
 \begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
-    a) $\accol{2x+3y=126\\ \mathrm{PGCD}(x;y)=7}$ & b) $\accol{x^2-xy=288\\ \mathrm{PGCD}(x;y)=12}$ & c) $\accol{4x^2-y^2=972\\\mathrm{PGCD}(x;y)=18}$
+    a) $\begin{cases}2x+3y=126\\ \mathrm{PGCD}(x;y)=7\end{cases}$ & 
+    b) $\begin{cases}x^2-xy=288\\ \mathrm{PGCD}(x;y)=12\end{cases}$ & 
+    c) $\begin{cases}4x^2-y^2=972\\\mathrm{PGCD}(x;y)=18\end{cases}$
 \end{tabular}
 
 
@@ -469,7 +471,7 @@ Dans cet exercice on cherche à démontrer que $\sqrt{2}$ est un nombre irration
     \item En déduire que la sommme d'un nombre rationnel et d'un nombre irrationnel est un nombre irrationnel.
     \item Montrer que le quotient d'un nombre rationnel par un nombre irrationnel est un nombre irrationnel.
     \item On cherche à montrer qu'une suite arithmétique ne peut contenir les termes $1$, $\sqrt{2}$ et 2.\\
-    On procède par l'absurde en supposant qu'il existe $n$, $m$ et $p$ tels que $u_n=1$, $u_m=\sqrt{2}$ et $u_p=2$ avec $\Un$ une suite arithmétique de raison $r$
+    On procède par l'absurde en supposant qu'il existe $n$, $m$ et $p$ tels que $u_n=1$, $u_m=\sqrt{2}$ et $u_p=2$ avec $(u_n)_{\nN}$ une suite arithmétique de raison $r$
     \begin{enumerate}
         \item Montrer que $r=\frac{1}{p-n}$
         \item Montrer que $r=\frac{\sqrt{2}-1}{p-m}$
@@ -595,7 +597,7 @@ Démontrer que $m^{14} n - m^2 n^{13}$ est un multiple de 14
 \begin{enumerate}
     \item Montrer que si $2^n-1$ est un nombre premier, alors $n$ est également premier
     \item Montrer que si $\frac{3^n-1}{2}$ est un nombre premier, alors $n$ est également premier
-    \item Montrer que si $\underbrace{111\ldots111}_{n \text{ fois}}$ est un nombre premier, alors $n$ est également premier
+    \item Montrer que si $(u_n)_{\nN}derbrace{111\ldots111}_{n \text{ fois}}$ est un nombre premier, alors $n$ est également premier
 \end{enumerate}
 
 
