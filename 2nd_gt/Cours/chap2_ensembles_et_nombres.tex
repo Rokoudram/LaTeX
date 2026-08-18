@@ -1,7 +1,7 @@
-\documentclass[oneside,11pt]{article}          % ----- article
+\documentclass[oneside,12pt]{article}          % ----- article
 
 \input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
-\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/preambule_cours.tex}         	% ----- Préambule feuilles de TD
 \input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
 \input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
 
@@ -22,17 +22,17 @@
 
 \begin{document}
 
-\titrechap{1}{Ensembles de nombres}
 
 \section{Notion d'ensemble}
 
-\definition{Ensemble}{
+\begin{definition}{Ensemble}
 Un \textbf{ensemble} est une collection d'objets mathématiques non ordonnée.\\[5pt]
 Les objets au sein de l'ensemble sont appelés les \textbf{éléments} de l'ensemble. \\[5pt]
 Lorsque que c'est possible, on utilise les symboles $\{\cdots\}$ pour décrire les éléments d'un ensemble.
-}
+\end{definition}
+
 La très vaste majorité des ensembles que nous étudierons contiendront exclusivement des nombres, mais il est cependant possible de mettre d'autres types d'objets au sein d'un ensemble.
-\exemple{Quelques ensembles}{\restoreskip
+\begin{exemple}{Quelques ensembles}
 Soit $A=\{-10~;~4~;~\pi~;~15876\}$\\
 Ici $A$ est un ensemble de nombres contenant 4 éléments.
 
@@ -41,36 +41,38 @@ Ici $B$ est un ensemble de pictogrammes contenant 5 éléments.
 
 Soit $C=\{1~;~ 11~;~ 111~;~ 1111~;~ 11111~;~ 111111~;~ \cdots\}$ \\
 Ici $C$ est un ensemble de nombres, contenant un nombre infini d'éléments car il est toujours possible de rajouter un chiffre $1$ à la suite du nombre précédent.
-}
+\end{exemple}
 
 
 
-\definition{Appartenance}{
+\begin{definition}{Appartenance}
 Lorsqu'un élément $x$ fait partie d'un ensemble $E$, on dit que \textbf{$\mathbold x$ appartient à $\mathbold E$}.\\
 On note alors $\mathbold{x\in E}$ \\[5pt]
 Lorsqu'un élément $x$ ne fait pas partie d'un ensemble $E$, on dit que $\mathbold x$ \textbf{n'appartient pas à} $\mathbold E$.\\
 On note alors $\mathbold{x\notin E}$
-}
-\exemple{Appartenance}{\restoreskip
+\end{definition}
+
+\begin{exemple}{Appartenance}
 Soit l'ensemble $A=\left\{24~;~-5~;~10~;~\pi~;~\frac{2}{3}\right\}$
 
 On peut écrire : $-5\in A \qquad 41\notin A \qquad 3\notin A \qquad \pi\in A$
-}
+\end{exemple}
 
-\definition{Inclusion}{
+\begin{definition}{Inclusion}
 On dit qu'un ensemble \textbf{$\mathbold E$ est inclus dans un ensemble $\mathbold F$} si chaque élément appartenant à l'ensemble $E$ appartient également à l'ensemble $F$\\
 On note alors $\mathbold{E\subset F}$ \\[5pt]
 Si tous les éléments de l'ensemble $E$ n'appartiennent pas à l'ensemble $F$, on dira simplement que \textbf{$\mathbold E$ n'est pas inclus dans $\mathbold F$}. \\
 On le note $\mathbold{E\not\subset F}$
-}
-\exemple{Inclusion}{\restoreskip
+\end{definition}
+
+\begin{exemple}{Inclusion}
 On considère les ensembles suivants : \\
 $A=\{0~;~2~;~4~;~6~;~8~;~10\}$\\
 $B=\{0~;~1~;~2~;~3~;~4~;~5~;~6~;~7~;~8~;~9~;~10\}$ \\
 $C=\{1~;~2~;~4~;~5~;~6~;~8~;~10\}$
 
 On a les relations suivantes : $A\subset B$ \quad,\quad $C\subset B$ \quad,\quad $A\not\subset C$ \quad,\quad $C\not\subset A$
-}
+\end{exemple}
 
 
 
@@ -81,48 +83,55 @@ Dans cette section, nous allons décrire quelques ensembles de nombres. Il s'agi
 Les nombres naturels sont les nombres que l'on découvre en premier lorsque l'on cotoie les mathématiques : ceux qui servent à compter.
 
 \begin{minipage}{0.6\linewidth}
-    \definition{Entiers naturels}{
+    \begin{definition}{Entiers naturels}
     On appelle \textbf{entier naturel} tout nombre entier positif, 0 inclus.\\[5pt]
     On note $\mathbold\NN$ l'ensemble de tous les entiers naturels.\\
     $\NN=\{0~;~1~;~2~;~3~;~4~;~\cdots\}$
-    }
+    \end{definition}
+    
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
-    \remarque{Il existe existe une infinité d'entiers naturels, et aucun n'est plus grand que tous les autres.}
+    \begin{remarque}
+    	Il existe existe une infinité d'entiers naturels, et aucun n'est plus grand que tous les autres.
+    \end{remarque}
 \end{minipage}
+
 
 \subsection{Entiers relatifs}
 Les nombres entiers relatifs sont ceux permettant d'exprimer la différence entre deux entiers naturels. Cette différence peut être positive ou bien négative, au même titre que les entiers relatifs.
 
-\definition{Entiers relatifs}{
+\begin{definition}{Entiers relatifs}
 On appelle \textbf{entier relatif} tout nombre entier, qu'il soit positif, négatif ou nul.\\[5pt ]
 On note $\mathbold \ZZ$ l'ensemble de tous les entiers relatifs.\\
 $\ZZ=\{\cdots~;~-3~;~-2~;~-1~;~0~;~1~;~2~;~3~;~\cdots\}$
-}
+\end{definition}
 
-\theoreme{Inclusion dans $\ZZ$}{
+\begin{theoreme}{Inclusion dans $\ZZ$}
 Il est clair que tous les entiers naturels sont également des entiers relatifs.\\[5pt]
 On peut alors écrire : $\NN\subset\ZZ$
-}
+\end{theoreme}
+
 
 \subsection{Nombres décimaux}
 
-\definition{Nombres décimaux}{
+\begin{definition}{Nombres décimaux}
 On appelle \textbf{nombre décimal} tout nombre $x$ pouvant s'écrire sous la forme $\mathbold{x=\dfrac{a}{10^n}}$
 
 \hspace{1cm} avec $a$ un entier relatif et $n$ un entier naturel.\\[5pt]
 On note $\mathbold\DD$ l'ensemble de tous les nombres décimaux.
-}
-\exemple{Nombres décimaux}{\restoreskip
+\end{definition}
+
+\begin{exemple}{Nombres décimaux}
 Le nombre $2,71$ est un nombre décimal car $2,71 = \dfrac{271}{100}=\dfrac{271}{10^2}$\\
 Le nombre $-0,0014$ est un nombre décimal car $-0,0014=\dfrac{-14}{10000}=\dfrac{-14}{10^4}$\\
 Le nombre $53$ est un nombre décimal car $53=\dfrac{53}{1}=\dfrac{53}{10^0}$
-}
+\end{exemple}
 
-\theoreme{Écriture décimale}{
+\begin{theoreme}{Écriture décimale}
 Un nombre est un \textbf{nombre décimal} si et seulement si il peut s'écrire à l'aide d'un nombre fini de chiffres après la virgule.
-}
-\exemple{Nombre non décimal}{\restoreskip
+\end{theoreme}
+
+\begin{exemple}{Nombre non décimal}
 On va montrer que le nombre $\frac{1}{3}$ n'est pas décimal.
 
 On sait que le nombre $\frac{1}{3}$ s'écrit $0,33333\ldots$ , il ne peut donc pas être décimal puisqu'il s'écrit à l'aide d'une infinité de chiffres après la virgule.
@@ -133,35 +142,37 @@ On aurait alors $\dfrac{1}{3}=\dfrac{a}{10^n}$ et en appliquant un produit en cr
 Cela voudrait donc dire que $10^n$ est un multiple de 3.\\
 Mais c'est impossible car $10^n=1\underbrace{000\ldots0}_{n \text{ zéros}}$ : la somme de ses chiffres vaut $1$ et ce n'est pas un multiple de 3.\\
 Il est donc impossible que $\frac{1}{3}$ soit un nombre décimal.
-}
+\end{exemple}
 
-\theoreme{Inclusion dans $\DD$}{
+
+\begin{theoreme}{Inclusion dans $\DD$}
 D'après la propriété précédente, il est clair que tous les nombres entiers sont des nombres décimaux.\\[5pt]
 On peut alors écrire : $\NN\subset\ZZ\subset\DD$
-}
+\end{theoreme}
 
 
 \subsection{Nombres rationnels}
 
 Le mot \textit{rationnel} dans le cadre de nombres fait référence à la notion de ratio. Un nombre rationnel est donc un nombre permettant de représenter un ratio entre deux nombres entiers.
 
-\definition{Nombres rationnels}{
+\begin{definition}{Nombres rationnels}
 On appelle \textbf{nombre rationnel} tout nombre pouvant s'écrire sous la forme d'une fraction irréductible. \\[5pt]
 On note $\mathbold \QQ$ l'ensemble de tous les nombres rationnels.
-}
+\end{definition}
 
-\theoreme{Inclusion dans $\QQ$}{
+\begin{theoreme}{Inclusion dans $\QQ$}
 Comme les nombres décimaux peuvent, par définition, s'écrire sous la forme d'une fraction, il est clair que tous les nombres décimaux sont des nombres rationnels.\\[5pt]
 On peut alors écrire : $\NN\subset\ZZ\subset\DD\subset\QQ$
-}
+\end{theoreme}
 
 
 \subsection{Nombres réels}
 
-\definition{Nombres irrationnels}{
+\begin{definition}{Nombres irrationnels}
 On appelle \textbf{nombre irrationnel} tout nombre ne pouvant pas s'écrire sous la forme d'une fraction irréductible.
-}
-\exemple{Un nombre irrationnel}{\restoreskip
+\end{definition}
+
+\begin{exemple}{Un nombre irrationnel}
 \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
 On va montrer que le nombre $\sqrt{2}$ est un nombre irrationnel.
 
@@ -175,24 +186,27 @@ Ainsi le nombre $p^2$ est pair, ce qui signifie que le nombre $p$ est lui-même 
 
 On peut alors écrire que $p=2k$ avec $k$ un certain nombre entier.
 
-En reprennant l'égalité $(\star)$ on obtient alors $2q^2=(2k)^2$ donc $2q^2=4k^2$ donc $q^2=2k^2$
+En reprenant l'égalité $(\star)$ on obtient alors $2q^2=(2k)^2$ donc $2q^2=4k^2$ donc $q^2=2k^2$
 
 Ainsi le nombre $q^2$ est pair, ce qui signifie que le nombre $q$ est lui-même pair.
 
 Mais si $p$ et $q$ sont tous les deux pairs, la fraction $\frac{p}{q}$ n'est pas irréductible, et donc $p$ et $q$ ne sont pas premiers entre eux. Cela contredit notre supposition de départ, c'est donc que cette supposition était fausse.
 
 On a bien montré que le nombre $\sqrt{2}$ est irrationnel.
-}
+\end{exemple}
+
 
 \begin{minipage}{0.6\linewidth}
-    \definition{Nombres réels}{
+    \begin{definition}{Nombres réels}
     On appelle \textbf{nombre réel} tout nombre rationnel ou irrationnel.
     
     On note $\RR$ l'ensemble de tous les nombres réels.
-    }   
+    \end{definition}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
-    \remarque{En classe de seconde, les nombres réels constituent l'intégralité des nombres étudiés.}
+    \begin{remarque}
+    	En classe de seconde, les nombres réels constituent l'intégralité des nombres étudiés.
+    \end{remarque}
 \end{minipage}
 
 Il est habituel et pratique de représenter l'ensemble des nombres réels le long d'une droite graduée appelée la \textbf{droite réelle} comme ci-contre : \\[10pt]
@@ -228,11 +242,11 @@ Il est habituel et pratique de représenter l'ensemble des nombres réels le lon
 \end{center}
 \vspace{5mm}
 
-\theoreme{Inclusion dans $\RR$}{
+\begin{theoreme}{Inclusion dans $\RR$}
 Comme tous les nombres sont des nombres réels, il est clair que les nombres rationnels sont des nombres réels.
 
 On peut donc écrire : $\NN\subset\ZZ\subset\DD\subset\QQ\subset\RR$
-}
+\end{theoreme}
 
 
 
@@ -241,26 +255,29 @@ On peut donc écrire : $\NN\subset\ZZ\subset\DD\subset\QQ\subset\RR$
 
 Les intervalles sont des ensembles qui contiennent tous les nombre entre deux valeurs. Graphiquement, ils correspondent aux parties \og sans trous \fg~ de la droite réelle.
 
-\definition{Intervalle}{
+\begin{definition}{Intervalle}
 Un \textbf{intervalle} est l'ensemble de tous les nombres réels qui sont compris entre deux extrêmes donnés.
 
 Un intervalle se décrit toujours à l'aide de crochets : $[\ldots~;~\ldots]$
-}
+\end{definition}
 
 \begin{minipage}{0.68\linewidth}
-    \definition{Intervalle borné}{
+    \begin{definition}{Intervalle borné}
     Soient $a$ et $b$ deux nombres réels tels que $a<b$\\[5pt]
     L'intervalle $\mathbold{ [a~;~b] }$ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ a \leq x \leq b }$ \\[5pt]
     L'intervalle $\mathbold{ [a~;~b[ }$ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ a \leq x < b }$ \\[5pt]
     L'intervalle $\mathbold{ ]a~;~b] }$ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ a < x \leq b }$ \\[5pt]
     L'intervalle $\mathbold{ ]a~;~b[ }$ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ a < x < b }$
-    }
+    \end{definition}
+    
 \end{minipage}
 \begin{minipage}{0.27\linewidth}
-    \remarque{Dans le cas où $a\geq b$, la notation $[a~;~b]$ n'a pas de sens car l'intervalle correspondant n'existe pas.}
+    \begin{remarque}
+    	Dans le cas où $a\geq b$, la notation $[a~;~b]$ n'a pas de sens car l'intervalle correspondant n'existe pas.
+    \end{remarque}
 \end{minipage}
 
-\exemple{Quelques intervalles}{\restoreskip
+\begin{exemple}{Quelques intervalles}
 Considérons les deux intervalles $I=[-3~;-1]$ et $J=\,]2~;~5]$\\
 On peut les représenter sur la droite réelle comme suit :
 \begin{center}
@@ -285,49 +302,56 @@ On peut les représenter sur la droite réelle comme suit :
 On peut notamment écrire : $-3\in I~; \quad -2,19\in I~; \quad 3,48\notin I~; \quad -1\in I$
 
 Ou bien encore : $2\notin J~; \quad 5\in J~; \quad 0\notin J~; \quad 4,44\in J$
-}
+\end{exemple}
+
 
 \begin{minipage}{0.55\linewidth}
-    \definition{Bornes ouvertes et fermées}{
+    \begin{definition}{Bornes ouvertes et fermées}
     Soient $a$ et $b$ deux nombres réels tels que $a<b$\\[5pt]
     L'intervalle $\mathbold{ [a~;~b] }$ est \textbf{fermé} en $a$ et \textbf{fermé} en $b$ \\[5pt]
     L'intervalle $\mathbold{ [a~;~b[ }$ est \textbf{fermé} en $a$ et \textbf{ouvert} en $b$ \\[5pt]
     L'intervalle $\mathbold{ ]a~;~b] }$ est \textbf{ouvert} en $a$ et \textbf{fermé} en $b$ \\[5pt]
     L'intervalle $\mathbold{ ]a~;~b[ }$ est \textbf{ouvert} en $a$ et \textbf{ouvert} en $b$ 
-    }   
+    \end{definition}
 \end{minipage}
 \begin{minipage}{0.4\linewidth}
-    \astuce{
+    \begin{astuce}
     Si un intervalle $I$ est \textbf{fermé en} $\mathbold a$, c'est que $a$ est bloqué à l'intérieur de l'intervalle, et donc $\mathbold{a\in I}$\\[5pt]    
     Si un intervalle $I$ est \textbf{ouvert en} $\mathbold a$, c'est que $a$ est sorti de l'intervalle, et donc $\mathbold{a\notin I}$
-    }
-\end{minipage}\\
+    \end{astuce}
+\end{minipage}
 
 Si les intervalles sont très pratiques, il ne permettent pour l'instant de décrire que des nombres confinés entre deux valeurs fixes. Mais on pourrait très bien vouloir prendre des nombres aussi grands que possible !
 
 Pour adapter la notion d'intervalle, on dira alors que l'on veut que les nombres en leur sein puissent \og aller jusqu'à l'infini \fg \\
 Mais qu'est-ce que l'infini ? La définition que nous donnerons n'est pas la plus formelle, mais elle suffira largement en classe seconde générale pour comprendre les concepts faisant appel à la notion d'infini.
 
-\definition{Infini}{
+\begin{definition}{Infini}
 On appelle \textbf{infini} l'idée d'un dépassement de tous les nombres qu'il est possible d'imaginer.\\[5pt]
 $\mathbold{+\infty}$ représente l'idée de quelque chose de supérieur à tous les nombres réels. \\
 $\mathbold{-\infty}$ représente l'idée de quelque chose d'inférieur à tous les nombres réels.
-}
+\end{definition}
 
-\remarque{Attention, $+\infty$ et $-\infty$ ne sont pas des nombres mais des concepts intangibles !\\
-Il est donc formellement interdit d'écrire des calculs tels que $+\infty\times4$ ou encore $\frac{-\infty}{2}$}
+\begin{remarque}
+	Attention, $+\infty$ et $-\infty$ ne sont pas des nombres mais des concepts intangibles !\\
+	Il est donc formellement interdit d'écrire des calculs tels que $+\infty\times4$ ou encore $\frac{-\infty}{2}$
+\end{remarque}
 
 \begin{minipage}{0.68\linewidth}
-    \definition{Intervalle non borné}{
+    \begin{definition}{Intervalle non borné}
+    
     Soit $a$ un nombre réel \\[5pt]
     L'intervalle $[a~;+\infty[$ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ a \leq x}$ \\[5pt]
     L'intervalle $]a~;+\infty[ $ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ a < x}$ \\[5pt]
     L'intervalle $]-\infty~;a]$ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ x\leq a}$ \\[5pt]
     L'intervalle $]-\infty~;a[$ est l'ensemble de tous les réels $x$ vérifiant $\mathbold{ x < a}$
-    }
+    
+    \end{definition}
 \end{minipage}
 \begin{minipage}{0.27\linewidth}
-    \remarque{Un intervalle est toujours ouvert en l'infini. En effet, l'infini ne peut pas être compris à l'intérieur d'un intervalle puisqu'il dépasse tous les nombres qui s'y trouvent.}
+    \begin{remarque}
+    	Un intervalle est toujours ouvert en l'infini. En effet, l'infini ne peut pas être compris à l'intérieur d'un intervalle puisqu'il dépasse tous les nombres qui s'y trouvent.
+    \end{remarque}
 \end{minipage}\\
 
 \section{Opérations sur les ensembles}
@@ -339,18 +363,20 @@ Pour ce faire il y a deux opérations principales que nous allons décrire.
 
 \subsection{Intersection}
 
-\definition{Intersection}{
+\begin{definition}{Intersection}
 Soient $A$ et $B$ deux ensembles. \\[5pt]
 \textbf{L'intersection de $\mathbold A$ et $\mathbold  B$} est l'ensemble qui contient tous les élements communs à $A$ et $B$ \\
 On le note $\mathbold {A\cap B}$
-}
-\exemple{Intersection simple}{\restoreskip
+\end{definition}
+
+\begin{exemple}{Intersection simple}
 On considère les ensembles $A=\{1~;~3~;~11~;~12~;~13~;~24\}$ et $B=\{1~;~11~;~111~;~1111\}$
 
 On voit que les éléments communs à $A$ et $B$ sont $1$ et $11$\\
 On peut donc écrire $A\cap B =\{1~;~11\}$
-}
-\exemple{Intersection d'intervalles}{
+\end{exemple}
+
+\begin{exemple}{Intersection d'intervalles}
 Pour déterminer l'intersection entre deux intervalles, on peut s'aider de la droite réelle.\\[5pt]
 Considérons les intervalles $I=[-4~;~3]$ et $J=]1~;~7]$\\[5pt]
 On représente $I$ en bleu et $J$ en rouge sur la droite réelle ci-dessous :
@@ -363,10 +389,10 @@ On représente $I$ en bleu et $J$ en rouge sur la droite réelle ci-dessous :
             \draw (\i,-0.6) node {$\i$};
             }
 
-        \fill[pattern=stripe, pattern color=blue, stripe line width=.8pt , stripe size = 7pt]
-        (-4,-0.15) -- (3,-0.15) -- (3,0.15) -- (-4,0.15);
-        \fill[pattern=stripe, pattern color=red, stripe line width=.8pt , stripe size = 7pt , stripe angle = 100]
-        (1,-0.15) -- (7,-0.15) -- (7,0.15) -- (1,0.15);
+        \fill [pattern = {Lines[angle = 60 , distance = 5pt]} , pattern color = blue , line width = 1pt]
+        	(-4,-0.15) -- (3,-0.15) -- (3,0.15) -- (-4,0.15);
+        \fill [pattern = {Lines[angle = -60 , distance = 5pt]} , pattern color = red , line width =1 pt]
+        	(1,-0.15) -- (7,-0.15) -- (7,0.15) -- (1,0.15);
         
         \draw[color=blue] (-0.5,0.7) node {$\mathbold I$} ;
         \draw[color=red] (4.5,0.7) node {$\mathbold J$} ;
@@ -382,9 +408,9 @@ On représente $I$ en bleu et $J$ en rouge sur la droite réelle ci-dessous :
 
 On voit que les éléments communs à $I$ et $J$ forment un nouvel intervalle ouvert en $1$ et fermé en $3$. \\[5pt]
 On peut donc écrire $I\cap J=]1~;~3]$
-}
+\end{exemple}
 
-\exemple{Intersection exotique}{\restoreskip
+\begin{exemple}{Intersection exotique}
 On considère l'intervalle $I=[-2~;~5[$
 
 On cherche à déterminer l'intersection de $I$ avec $\NN$ l'ensemble des entiers naturels.
@@ -399,11 +425,11 @@ On représente alors $I$ en bleu et $\NN$ en rouge sur la droite réelle.
             \draw (\i,-0.6) node {$\i$};
             }
 
+        \fill [pattern = {Lines[angle = 60 , distance = 5pt]} , pattern color = blue , line width = 1pt]
+        	(5,-0.15) rectangle (-2,0.15);
+        	
         \foreach \n in {0,1,2,3,4,5,6,7,8}
             \draw[color=red] (\n,0) node {$\bullet$};
-
-        \fill[pattern=stripe, pattern color=blue, stripe line width=.8pt , stripe size = 7pt]
-        (-2,-0.15) -- (5,-0.15) -- (5,0.15) -- (-2,0.15);
 
         \draw[color=blue] (1.5,0.7) node {$\mathbold I$} ;
         \draw[color=red] (3.5,0.7) node {$\mathbold \NN$} ;
@@ -415,24 +441,26 @@ On représente alors $I$ en bleu et $\NN$ en rouge sur la droite réelle.
 On voit que les nombres communs à $I$ et $\NN$ sont les nombres entiers entre 0 et 4.
 
 On peut donc écrire $I\cap\NN=\{0~;~1~;~2~;~3~;~4\}$
-}
+\end{exemple}
 
 
 \subsection{Union}
 
-\definition{Union}{
+\begin{definition}{Union}
 Soient $A$ et $B$ deux ensembles. \\[5pt]
 \textbf{L'union de $\mathbold A$ et $\mathbold  B$} est l'ensemble qui contient tous les élements que l'on peut trouver dans $A$ ou dans $B$ \\
 On le note $\mathbold {A\cup B}$
-}
-\exemple{Union simple}{\restoreskip
+\end{definition}
+
+\begin{exemple}{Union simple}
 On considère les ensembles $A=\{1~;~3~;~11~;~12~;~13~;~24\}$ et $B=\{1~;~11~;~111~;~1111\}$
 
 Pour déterminer l'union de $A$ et de $B$, il faut lister tous les élements se trouvant soit dans $A$ soit dans $B$
 
 On a donc $A\cup B=\{1;~3~;11~;~12~;~13~;~24~;~111~;~1111\}$
-}
-\exemple{Union d'intervalles}{\restoreskip
+\end{exemple}
+
+\begin{exemple}{Union d'intervalles}
 Pour déterminer l'union entre deux intervalles, on peut s'aider de la droite réelle.
 
 Considérons les intervalles $I=[-4~;~3]$ et $J=]1~;~7]$
@@ -447,10 +475,10 @@ On représente $I$ en bleu et $J$ en rouge sur la droite réelle ci-dessous :
             \draw (\i,-0.6) node {$\i$};
             }
 
-        \fill[pattern=stripe, pattern color=blue, stripe line width=.8pt , stripe size = 7pt]
-        (-4,-0.15) -- (3,-0.15) -- (3,0.15) -- (-4,0.15);
-        \fill[pattern=stripe, pattern color=red, stripe line width=.8pt , stripe size = 7pt , stripe angle = 100]
-        (1,-0.15) -- (7,-0.15) -- (7,0.15) -- (1,0.15);
+        \fill [pattern = {Lines[angle = 60 , distance = 5pt]} , pattern color = blue , line width = 1pt]
+        	(3,-0.15) rectangle (-4,0.15);
+        \fill [pattern = {Lines[angle = -60 , distance = 5pt]} , pattern color = red , line width = 1pt]
+        	(7,-0.15) rectangle (1,0.15);
         
         \draw[color=blue] (-0.5,0.7) node {$\mathbold I$} ;
         \draw[color=red] (4.5,0.7) node {$\mathbold J$} ;
@@ -467,15 +495,17 @@ On représente $I$ en bleu et $J$ en rouge sur la droite réelle ci-dessous :
 On voit que les éléments se trouvant soit dans $I$ soit dans $J$ forment un nouvel intervalle fermé en $-4$ et en $7$.
 
 On peut donc écrire $I\cup J=[-4~;~7]$
-}
+\end{exemple}
 
-\remarque{L'union entre deux intervalles n'est pas systématiquement un nouvel intervalle, contrairement à leur intersection.}
+\begin{remarque}
+	L'union entre deux intervalles n'est pas systématiquement un nouvel intervalle, contrairement à leur intersection.
+\end{remarque}
 
 
 
 \section{Valeur absolue}
 
-\definition{Valeur absolue}{
+\begin{definition}{Valeur absolue}
 La \textbf{valeur absolue} d'un nombre réel $x$ est la distance entre l'origine de la droite réelle et la position du nombre $x$\\[5pt]
 On la note $\mathbold{\lvert x \rvert}$
 \begin{center}
@@ -494,12 +524,14 @@ On la note $\mathbold{\lvert x \rvert}$
         \draw[thick , color=blue , Stealth-Stealth] (-3.4,0.3)--node[above] {$|x|$} (-0.025,0.3);
     \end{tikzpicture}
 \end{center}
-}
-\exemple{Valeur absolue}{
-$\abs{-5}=5 \qquad \abs{12}=12 \qquad -2\times\abs{-5}=-10 \qquad \abs{-2\times(-5)}=10$
-}
+\end{definition}
 
-\theoreme{Distance}{
+\begin{exemple}{Valeur absolue}
+$\abs{-5}=5 \qquad \abs{12}=12 \qquad -2\times\abs{-5}=-10 \qquad \abs{-2\times(-5)}=10$
+\end{exemple}
+
+
+\begin{theoreme}{Distance}
 Soient $a$ et $b$ deux nombres réels.
 
 La distance entre les positions de $a$ et $b$ sur la droite réelle est donnée par $\abs{a-b}$
@@ -518,8 +550,9 @@ La distance entre les positions de $a$ et $b$ sur la droite réelle est donnée 
         \draw[thick , color=blue , Stealth-Stealth] (-1.5,0.3)--node[above] {$\mathbold{\abs{a-b}}$} (3.25,0.3);
     \end{tikzpicture}
 \end{center}
-}
-\exemple{Retour aux intervalles}{\restoreskip
+\end{theoreme}
+
+\begin{exemple}{Retour aux intervalles}
 On cherche à déterminer l'ensemble des réels $x$ vérifiant $\abs{x-3}=2$\\
 
 \begin{minipage}[t]{0.6\linewidth}
@@ -552,7 +585,7 @@ On cherche à déterminer l'ensemble des réels $x$ vérifiant $\abs{x-3}=2$\\
 \end{minipage}\\
 
 Dans les deux méthodes, on obtient comme ensemble de solutions $S=\{1~;~5\}$
-}
+\end{exemple}
 
 
 

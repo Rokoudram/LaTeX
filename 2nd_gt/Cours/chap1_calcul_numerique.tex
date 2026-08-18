@@ -1,0 +1,169 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_cours.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Calcul numérique}
+\fancyhf[CF]{\footnotesize{ \copyright ~ Tous droits réservés ~ \copyright}}                     % En-tête central
+\setstretch{0.95}                           % Interligne
+
+
+
+    
+\titleformat*{\section}{\Large\bfseries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Fractions (Rappels)}
+
+\subsection{Calcul avec fractions}
+
+\begin{definition}{Écriture fractionnaire} 
+	On appelle \textbf{écriture fractionnaire} la notation $\dfrac{x}{y}$ avec $x$ un nombre quelconque et $y$ un nombre quelconque différent de $0$. 
+	
+	Cette notation représente le résultat de la division de $x$ par $y$, il s'agit donc d'un nombre. \\
+	On a donc : $x = \dfrac{x}{y} \times y$
+	
+	Le nombre au-dessus de la barre de fraction s'appelle le \textbf{numérateur} et celui en-dessous le \textbf{dénominateur}.
+\end{definition}
+
+
+
+\begin{definition}{Fraction}
+	On parle de \textbf{fraction} lorsque $a$ et $b$ sont des nombres entiers dans la notation $\dfrac{a}{b}$
+\end{definition}
+
+
+
+\begin{propriete}{Produit de fractions}
+	Soient $a$ et $b$ deux nombres quelconques, et $c$ et $d$ deux nombres non nuls. On a alors : 
+	\[ \dfrac{a}{c} \times \dfrac{b}{d} = \dfrac{a \times b}{c \times d}\]
+\end{propriete}
+
+
+
+\begin{propriete}{Quotient de fractions}
+	Soient $a$ un nombre quelconque, et $b$, $c$ et $d$ trois nombres non nuls. On a alors : 
+	\[ \dfrac{\frac{a}{b}}{\frac{c}{d}} = \dfrac{a}{b} \times \dfrac{d}{c} \]
+\end{propriete}
+
+
+
+\begin{minipage}{0.5\textwidth}
+	\begin{exemple}{Premiers calculs}
+		$\dfrac{\frac{8}{5}}{\frac{4}{3}} = \dfrac{8}{5} \times \dfrac{3}{4} = \dfrac{8 \times 3}{5 \times 4} = \dfrac{40}{12}$
+	\end{exemple}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{remarque}
+		On peut constater que diviser par une fraction revient à multiplier par l'inverse de cette fraction.
+	\end{remarque}
+\end{minipage}
+
+
+
+\begin{propriete}{Somme et différence de fractions}
+	Soient $a$ et $b$ deux nombres quelconques et $c$ un nombre non nul. On a alors :
+	\[ \dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a+b}{c} \qquad \text{et} \qquad \dfrac{a}{c} - \dfrac{b}{c} = \dfrac{a-b}{c} \]
+\end{propriete}
+
+\begin{remarque}
+	On peut additionner ou soustraire des fractions uniquement si elles ont le même dénominateur !
+\end{remarque}
+
+
+
+\begin{remarque}
+	Deux fractions peuvent être égales bien qu'elles ne s'écrivent pas de la même manière !
+\end{remarque}
+
+\begin{exemple}{Fractions égales}
+	$\dfrac{9}{3}=\dfrac{12}{4}$ \quad en effet , $9 \div 3 = 3$ et $12 \div 4 = 3$ donc les fractions sont toutes les deux égales à $3$
+\end{exemple}
+
+
+
+\begin{definition}{Simplification}
+	\textbf{Simplifier} (ou réduire) une fraction, c'est l'écrire d'une nouvelle manière avec un numérateur et un dénominateur plus petits qu'au départ.
+	
+	
+	On dit qu'une fraction est \textbf{irréductible} si on ne peut plus la simplifier davantage.
+\end{definition}
+
+
+
+\begin{propriete}{Simplification de fractions} 
+	Soient $a$ un nombre quelconque, et $b$ et $c$ deux nombres non nuls. On a alors :
+	\[ \dfrac{a \times c}{b \times c} = \dfrac{a}{b} \]
+\end{propriete}
+
+\begin{exemple}{Quelques simplifications}\restoreskip
+	$\dfrac{40}{12} = \dfrac{2 \times 20}{2 \times 6} = \dfrac{20}{6} = \dfrac{2 \times 10}{2 \times 3} = \dfrac{10}{3}$ \quad qui est irréductible car $10$ et $3$ n'ont pas de facteur commun.
+	
+	$\dfrac{24}{30} = \dfrac{2 \times 12}{2 \times 15} = \dfrac{12}{15} = \dfrac{3 \times 4}{3 \times 5} = \dfrac{4}{5}$  \quad qui est irréductible car $4$ et $5$ n'ont pas de facteur commun.
+\end{exemple}
+
+
+
+\begin{exemple}{Mettre au même dénominateur} \restoreskip
+	On cherche à calculer la somme $\dfrac{2}{3}+\dfrac{1}{9}$ 
+	
+	Il faut que les fractions aient le même dénominateur, donc on trouve un multiple commun à $3$ et $9$ : 
+	
+	$\dfrac{2}{3} + \dfrac{1}{9} = \dfrac{2 \times 3}{3 \times 3} + \dfrac{1}{9} = \dfrac{6}{9} + \dfrac{1}{9} = \dfrac{6+1}{9} = \dfrac{7}{9}$ \quad qui bien irréductible.
+\end{exemple}
+
+
+
+\subsection{Comparaison de fractions}
+
+Dans cette section, et \textbf{uniquement dans cette section}, on considèrera uniquement des \textbf{nombres strictement positifs}. Le cas des nombres négatifs sera abordé plus tard dans l'année et fera l'objet d'un différent chapitre.
+
+\begin{definition}{Comparaison} \restoreskip
+	Soient $a$ et $b$ deux nombres quelconques.
+	
+	$\bullet$ Si $a$ est \textbf{strictement supérieur} à $b$ on écrira $a > b$ \\
+	$\bullet$ Si $a$ est \textbf{strictement inférieur} à $b$ on écrira $a < b$ \\
+	$\bullet$ Si $a$ est \textbf{supérieur ou égal} à $b$ on écrira $a \geq b$ \\
+	$\bullet$ Si $a$ est \textbf{inférieur ou égal} à $b$ on écrira $a \leq b$ 
+\end{definition}
+
+
+
+\begin{propriete}{Comparer des fractions} \restoreskip
+	Soient $a$, $b$ et $c$ trois nombres quelconques.
+	
+	$\bullet$ Si $a > b$, alors $\dfrac{a}{c} > \dfrac{b}{c}$ \quad et inversement.	 \qquad \qquad
+	$\bullet$ Si $b > c$, alors $\dfrac{a}{b} < \dfrac{a}{c}$ \quad et inversement.
+\end{propriete}
+
+\begin{exemple}{Comparer $\dfrac{17}{26}$ et $\dfrac{16}{27}$} \restoreskip
+	D'une part : $17 > 16$ donc $\dfrac{17}{26} > \dfrac{16}{26}$. \qquad
+	D'autre part : $27 > 26$ donc $\dfrac{16}{27} < \dfrac{16}{26}$
+	
+	On peut donc conclure que $\dfrac{17}{26} > \dfrac{16}{27}$
+\end{exemple}
+	
+
+
+
+
+\section{Puissances entières}
+
+
+
+\section{Radicaux}
+
+
+
+
+\end{document}
