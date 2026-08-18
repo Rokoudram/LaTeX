@@ -25,6 +25,9 @@
 \definecolor{brickorange}{HTML}{CC7033} % ----- New oranges
 \definecolor{lightorange}{HTML}{FFF2E6}
 
+\definecolor{borderpink}{HTML}{aa00bb} % ----- New pinks
+\definecolor{lightpink}{HTML}{ffeeff}
+
 \definecolor{newred}{HTML}{CC0000}     % ----- Colors for geometry
 \definecolor{newblue}{HTML}{0000CC}
 \definecolor{newgreen}{HTML}{00AA00}
@@ -34,208 +37,205 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% ----- \theoreme ----- %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newtcolorbox{theorembox}[2][]{% ----- Theorem box
-enhanced,
-arc=5pt,
-frame style = {left color=persianblue , right color=softblue},
-colback=lightblue,
-fonttitle=\bfseries,
-lifted shadow={1mm}{-1.5mm}{2mm}{0.3mm},
-hbox,
-title={#2},
-attach boxed title to top left={xshift=5mm,yshift=-2mm},
-boxed title style = {colback = persianblue , colframe = persianblue},
-#1}
 
 
-\newcommand\theoreme[2]{% ----- Theorem command
-    \begin{theorembox}[]{\faBook~~#1~~\faBook}
-        \begin{varwidth}{\linewidth-15pt }
-        \restoreskip \vspace{0pt}
-        #2
-        \end{varwidth}
-    \end{theorembox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{theoreme} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{theoreme}[2][]{%
+    enhanced,
+    breakable,
+    arc=5pt,
+    frame style={left color=persianblue, right color=softblue},
+    colback=lightblue,
+    fonttitle=\bfseries,
+    title={\faBook~~ \underline{Théorème} : #2~~\faBook},
+    attach boxed title to top left={xshift=5mm,yshift=-2mm},
+    boxed title style={
+        colback=persianblue,
+        colframe=persianblue
+    },
+    #1
 }
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% ----- \definition ----- %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% \begin{propriete} %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newtcolorbox{definitionbox}[2][]{% ----- Definition box
-enhanced,
-arc=5pt,
-frame style = {left color=calgreen , right color=softgreen},
-colback=lightgreen,
-fonttitle=\bfseries,
-lifted shadow={1mm}{-1.5mm}{2mm}{0.3mm},
-hbox,
-title={#2},
-attach boxed title to top left={xshift=5mm,yshift=-2mm},
-boxed title style = {colback = calgreen , colframe =calgreen},
-#1}
-
-
-\newcommand\definition[2]{% ----- Definition command
-    \begin{definitionbox}[]{\faUniversity~~#1~~\faUniversity}
-        \begin{varwidth}{\linewidth-15pt}
-        \restoreskip \vspace{0pt}
-        #2
-        \end{varwidth}
-    \end{definitionbox}
+\newtcolorbox{propriete}[2][]{%
+    enhanced,
+    breakable,
+    arc=5pt,
+    frame style={left color=persianblue, right color=softblue},
+    colback=lightblue,
+    fonttitle=\bfseries,
+    title={\faBook~~ \underline{Propriété} : #2~~\faBook},
+    attach boxed title to top left={xshift=5mm,yshift=-2mm},
+    boxed title style={
+        colback=persianblue,
+        colframe=persianblue
+    },
+    #1
 }
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% ----- \astuce ----- %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{definition} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newtcolorbox{astucebox}[1][]{% ----- astuce box
-enhanced,
-arc=10pt,
-frame hidden,
-borderline={1mm}{0mm}{maroon,dotted},
-colback=lightred,
-fonttitle=\bfseries,
-hbox,
-title={\faLightbulb~~Astuce~~\faLightbulb},
-attach boxed title to top left={xshift=5mm,yshift=-2mm},
-boxed title style = {colback = maroon , colframe =maroon},
-#1}
-
-
-\newcommand\astuce[1]{% ----- astuce command
-    \begin{astucebox}[]
-        \begin{varwidth}{\linewidth-15pt }
-        \restoreskip \vspace{0pt}
-        #1
-        \end{varwidth}
-    \end{astucebox}
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% ----- \remarque ----- %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newtcolorbox{remarquebox}[1][]{% ----- remarque box
-enhanced,
-arc=10pt,
-frame hidden,
-borderline={1mm}{0mm}{maroon,dotted},
-colback=lightred,
-fonttitle=\bfseries,
-hbox,
-title={\faExclamation~~Remarque~~\faExclamation},
-attach boxed title to top left={xshift=5mm,yshift=-2mm},
-boxed title style = {colback = maroon , colframe =maroon},
-#1}
-
-
-\newcommand\remarque[1]{% ----- remarque command
-    \begin{remarquebox}[]
-        \begin{varwidth}{\linewidth-15pt }
-        \restoreskip \vspace{0pt}
-        #1
-        \end{varwidth}
-    \end{remarquebox}
+\newtcolorbox{definition}[2][]{%
+    enhanced,
+    breakable,
+    arc=5pt,
+    frame style={left color=calgreen, right color=softgreen},
+    colback=lightgreen,
+    fonttitle=\bfseries,
+    title={\faUniversity~~ \underline{Définition} : #2~~\faUniversity},
+    attach boxed title to top left={xshift=5mm,yshift=-2mm},
+    boxed title style={
+        colback=calgreen,
+        colframe=calgreen
+    },
+    #1
 }
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% ----- \methode ----- %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{astuce} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newtcolorbox{methodebox}[2][]{% ----- methode box
-enhanced,
-arc=10pt,
-frame hidden,
-borderline={1mm}{0mm}{maroon,dotted},
-colback=lightred,
-fonttitle=\bfseries,
-hbox,
-title={#2},
-attach boxed title to top left={xshift=5mm,yshift=-2mm},
-boxed title style = {colback = maroon , colframe =maroon},
-#1}
-
-
-\newcommand\methode[2]{% ----- methode command
-    \begin{methodebox}[]{\faCogs~~#1~~\faCogs}
-        \begin{varwidth}{\linewidth-20pt }
-        \restoreskip \vspace{0pt}
-        #2
-        \end{varwidth}
-    \end{methodebox}
+\newtcolorbox{astuce}[1][]{%
+    enhanced,
+    arc=10pt,
+    frame hidden,
+    colback=lightred,
+    fonttitle=\bfseries,
+    borderline={1mm}{0mm}{maroon,dotted},
+    title={\faLightbulb~~\underline{Astuce}~~\faLightbulb},
+    attach boxed title to top left={xshift=5mm,yshift=-2mm},
+    boxed title style={
+        colback=maroon,
+        colframe=maroon
+    },
+    #1
 }
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% ----- \exemple ----- %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{remarque} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newtcolorbox{exemplebox}[1][]{% ----- exemple box
-enhanced, breakable,
-arc = 0pt ,
-frame hidden,
-borderline west={2pt}{0pt}{brickorange},
-interior style = {top color = lightorange , bottom color = lightorange!15!white},
-fonttitle=\bfseries,
-minipage,
-#1}
+\newtcolorbox{remarque}[1][]{%
+    enhanced,
+    arc=10pt,
+    frame hidden,
+    colback=lightred,
+    fonttitle=\bfseries,
+    borderline={1mm}{0mm}{maroon,dotted},
+    title={\faExclamation~~\underline{Remarque}~~\faExclamation},
+    attach boxed title to top left={xshift=5mm,yshift=-2mm},
+    boxed title style={
+        colback=maroon,
+        colframe=maroon
+    },
+    #1
+}
 
 
-\newcommand\exemple[2]{% ----- exemple command
-    \begin{exemplebox}[]
-        \textbf{{\color{brickorange}Exemple :} #1} \\[5pt]
-        \restoreskip \vspace{0pt}
-        #2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{methode} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{methode}[2][]{%
+    enhanced,
+    arc=10pt,
+    frame hidden,
+    colback=lightred,
+    fonttitle=\bfseries,
+    borderline={1mm}{0mm}{maroon,dotted},
+    title={\faCogs~~\underline{Méthode} : #2~~\faCogs},
+    attach boxed title to top left={xshift=5mm,yshift=-2mm},
+    boxed title style={
+        colback=maroon,
+        colframe=maroon
+    },
+    #1
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{exemple} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\exempledecoration}{%
+    \draw[color=brickorange , line width = 2pt , fill=white]
+        (frame.south west) ++(0,1pt) -- ++(3cm,0) ++(0,1.5mm) rectangle ++ (3mm,-3mm) ;
+}
+
+\newtcolorbox{exemplebox}[1][]{%
+    enhanced,
+    breakable,
+    arc=0pt,
+    frame hidden,
+    borderline west={2pt}{0pt}{brickorange},
+    interior style={
+        top color=lightorange,
+        bottom color=lightorange!15!white
+    },
+    fonttitle=\bfseries,
+    overlay unbroken={\exempledecoration},
+    overlay last={\exempledecoration},
+    #1
+}
+
+\newenvironment{exemple}[1]{%
+    \begin{exemplebox}
+        \textbf{\color{brickorange}\underline{Exemple} : #1}\\[5pt]
+}{%
     \end{exemplebox}
-    {\color{brickorange}
-    \vspace{-2pt}
-    \hrule height 2pt depth 0pt width 3cm
-    \vspace{-11pt} \hspace{2.85cm} \setBold{$\square$}}
 }
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% ----- \demonstration ----- %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{demonstration} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newtcolorbox{demonstrationbox}[1][]{% ----- demonstration box
-enhanced, breakable,
-arc = 0pt
-frame hidden,
-borderline west={2pt}{0pt}{VioletRed3},
-interior style = {top color = Thistle1 , bottom color = Thistle1!15!white},
-fonttitle=\bfseries,
-hbox,
-#1}
+\newcommand{\demodecoration}{%
+    \draw[color=borderpink , line width = 2pt , fill=white]
+        (frame.south west) ++(0,1pt) -- ++(3cm,0) ++(0,1.5mm) rectangle ++ (3mm,-3mm) ;
+}
 
+\newtcolorbox{demobox}[1][]{%
+    enhanced,
+    breakable,
+    arc=0pt,
+    frame hidden,
+    borderline west={2pt}{0pt}{borderpink},
+    interior style={
+        top color=lightpink,
+        bottom color=lightpink!15!white
+    },
+    fonttitle=\bfseries,
+    overlay unbroken={\demodecoration},
+    overlay last={\demodecoration},
+    #1
+}
 
-\newcommand\demonstration[1]{% ----- demonstration command
-    \begin{demonstrationbox}[]
-        \begin{varwidth}{\linewidth-15pt }
-        {\vspace{-5pt}\textbf{\color{VioletRed3}Démonstration :}}\\[5pt]
-        \restoreskip \vspace{0pt}
-        #1
-        \end{varwidth}
-    \end{demonstrationbox}
-    \vspace{-8 pt}
-    {\color{VioletRed3}
-    \vspace{-2pt}
-    \hrule height 2pt depth 0pt width 3cm
-    \vspace{-11pt} \hspace{2.85cm} \setBold{$\square$}}
+\newenvironment{demonstration}{%
+    \begin{demobox}
+        \textbf{\color{borderpink}\underline{Démonstration}}\\[5pt]
+}{%
+    \end{demobox}
 }
 
 
