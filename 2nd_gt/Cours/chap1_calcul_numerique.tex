@@ -7,7 +7,7 @@
 
 \fancyhead[R]{2\up{nd} générale}            % En-tête droit
 \fancyhead[C]{Calcul numérique}
-\fancyhf[CF]{\footnotesize{Lycée Polyvalent Irène et Frédéric Joliot-Curie}}           % En-tête central
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,11 +23,9 @@
 \subsection{Calcul avec fractions}
 
 \begin{definition}{Écriture fractionnaire} 
-	On appelle \textbf{écriture fractionnaire} la notation $\dfrac{x}{y}$ avec $x$ un nombre quelconque et $y$ un nombre quelconque différent de $0$. 
-	
+	On appelle \textbf{écriture fractionnaire} la notation $\dfrac{x}{y}$ avec $x$ un nombre quelconque et $y$ un nombre quelconque différent de $0$. \\
 	Cette notation représente le résultat de la division de $x$ par $y$, il s'agit donc d'un nombre. \\
-	On a donc : $x = \dfrac{x}{y} \times y$
-	
+	On a donc : $x = \dfrac{x}{y} \times y$ \\
 	Le nombre au-dessus de la barre de fraction s'appelle le \textbf{numérateur} et celui en-dessous le \textbf{dénominateur}.
 \end{definition}
 
@@ -90,7 +88,6 @@
 \begin{definition}{Simplification}
 	\textbf{Simplifier} (ou réduire) une fraction, c'est l'écrire d'une nouvelle manière avec un numérateur et un dénominateur plus petits qu'au départ.
 	
-	
 	On dit qu'une fraction est \textbf{irréductible} si on ne peut plus la simplifier davantage.
 \end{definition}
 
@@ -101,15 +98,14 @@
 	\[ \dfrac{a \times c}{b \times c} = \dfrac{a}{b} \]
 \end{propriete}
 
-\begin{exemple}{Quelques simplifications}\restoreskip
-	$\dfrac{40}{12} = \dfrac{2 \times 20}{2 \times 6} = \dfrac{20}{6} = \dfrac{2 \times 10}{2 \times 3} = \dfrac{10}{3}$ \quad qui est irréductible car $10$ et $3$ n'ont pas de facteur commun.
-	
+\begin{exemple}{Quelques simplifications}
+	$\dfrac{40}{12} = \dfrac{2 \times 20}{2 \times 6} = \dfrac{20}{6} = \dfrac{2 \times 10}{2 \times 3} = \dfrac{10}{3}$ \quad qui est irréductible car $10$ et $3$ n'ont pas de facteur commun. \\[10pt]	
 	$\dfrac{24}{30} = \dfrac{2 \times 12}{2 \times 15} = \dfrac{12}{15} = \dfrac{3 \times 4}{3 \times 5} = \dfrac{4}{5}$  \quad qui est irréductible car $4$ et $5$ n'ont pas de facteur commun.
 \end{exemple}
 
 
 
-\begin{exemple}{Mettre au même dénominateur} \restoreskip
+\begin{exemple}{Mettre au même dénominateur} 
 	On cherche à calculer la somme $\dfrac{2}{3}+\dfrac{1}{9}$ 
 	
 	Il faut que les fractions aient le même dénominateur, donc on trouve un multiple commun à $3$ et $9$ : 
@@ -150,15 +146,103 @@ Dans cette section, et \textbf{uniquement dans cette section}, on considèrera u
 	
 
 
-
-
 \section{Puissances entières}
 
+\begin{definition}{Puissance positive} 
+	Soient $x$ un nombre quelconque et $n$ un nombre entier positif. 
+	
+	On définit \og \textbf{$x$ puissance $n$} \fg\, par $n$ multiplications successives de $x$ par lui-même. On note alors :
+	\[x^n = \underbrace{x \times x \times x \times \cdots \times x}_{n \text{ fois}} \]
+	
+	Par convention, on définira $x^0=1$
+\end{definition}
 
 
-\section{Radicaux}
+
+\begin{definition}{Puissance négative}
+	Soient $x$ un nombre quelconque non nul et $n$ un nombre entier positif. On définit alors :
+	\[x^{-n}=\dfrac{1}{x^n}\]
+\end{definition}
 
 
+
+\begin{propriete}{Produit et quotient de même base}
+	Soient $x$ un nombre quelconque non nul, et $m$ et $n$ deux nombres entiers. On a alors :
+	\[ x^n \times x^m = x^{n+m} \qquad \text{et} \qquad \dfrac{x^n}{x^m}=x^{n-m} \]
+\end{propriete}
+
+\begin{exemple}{Premiers calculs}
+	$\dfrac{3^8 \times 3^{-3}}{3^7 \times 3^2} = \dfrac{3^{8 + (-3)}}{3^{7+2}} = \dfrac{3^5}{3^9} = 3^{5-9} = 3^4$
+\end{exemple} 
+
+
+
+\begin{propriete}{Empilement}
+	Soient $x$ un nombre quelconque, et $m$ et $n$ deux nombres entiers. On a alors :
+	\[ {(x^n)}^m = {(x^m)}^n = x^{n \times m} \]
+\end{propriete}
+
+\begin{exemple}{Simplification}
+	$2^2 \times 4^4 \times 8^8 = 2^2 \times {(2^2)}^4 \times {(2^3)}^8 = 2^2 \times 2^{2 \times 4} \times 2^{3 \times 8} = 2^2 \times 2^8 \times 2^{24} = 2^{2 + 8 + 24} = 2^{34}$
+\end{exemple}
+
+
+
+\begin{propriete}{Produits et quotients de même exposant}
+	Soient $x$ et $y$ deux nombres quelconques non nuls, et $n$  un nombre entier. On a alors :
+	\[ x^n \times y^n = (x \times y)^n \qquad \text{et} \qquad \dfrac{x^n}{y^n} = \left( \dfrac{x}{y} \right)^n \]
+\end{propriete}
+
+\begin{minipage}{0.45\textwidth}
+	\begin{exemple}{Simplification}
+		$\dfrac{3^7 \times 5^7}{15^5} = \dfrac{(3\times5)^7}{15^5} = \dfrac{15^7}{15^5} = 15^{7-5} = 15^2$
+	\end{exemple}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+	\begin{remarque}
+		On constate que pour simplifier des expressions avec des puissances, il faut avoir des \textbf{exposants identiques} ou des \textbf{bases identiques}.
+		\end{remarque}
+\end{minipage}
+
+
+
+\section{Racines carrées}
+
+\begin{definition}{Racine carrée}
+	Soit $x$ un nombre positif. On définit la \textbf{racine carrée} de $x$ comme étant l'unique nombre positif $y$ vérifiant $y^2=x$. On note alors $y=\sqrt{x}$
+\end{definition}
+
+\begin{remarque}
+	Attention ! Si $y^2=x$, cela ne veut pas forcément dire que $y=\sqrt{x}$. Par exemple, $(-2)^2=4$ , en revanche $-2 \neq \sqrt{4}$
+\end{remarque}
+
+
+\begin{propriete}{Produit et quotient}
+	Soient $x$ et $y$ deux nombres strictement positifs. On a alors :
+	\[ \sqrt{x} \times \sqrt{y} = \sqrt{x \times y} \qquad \text{et} \qquad \dfrac{\sqrt{x}}{\sqrt{y}} = \sqrt{\dfrac{x}{y}} \]
+\end{propriete}
+
+\begin{exemple}{Premiers calculs}
+	$\dfrac{\sqrt{6} \times \sqrt{18}}{\sqrt{27}} = \dfrac{\sqrt{6 \times 18}}{\sqrt{27}} = \sqrt{\dfrac{6 \times 18}{27}} = \sqrt{\dfrac{3 \times 2 \times 9 \times 2}{9 \times 3}} = \sqrt{2 \times 2} = \sqrt{4} = 2$
+\end{exemple}
+
+
+
+\begin{definition}{Réduction}
+	\textbf{Réduire} une racine carrée, c'est l'écrire sous la forme $a\sqrt{b}$ où $a$ et $b$ sont deux nombres entiers positifs, et $b$ est le plus petit possible.
+\end{definition}
+
+\begin{methode}{Réduction}
+	Pour réduire une racine carrée, il faut identifier les facteurs qui sont des carrés parfaits, puis les \og extraire \fg\, de la racine carrée.
+\end{methode}
+
+\begin{exemple}{Réduction}
+	$\sqrt{72}=\sqrt{9 \times 8} = \sqrt{9} \times \sqrt{8} = 3\sqrt{8} = 3\sqrt{4 \times 2} = 3\sqrt{4}\times \sqrt{2} = 3 \times 2 \sqrt{2} = 6\sqrt{2}$
+\end{exemple}
+
+\begin{astuce}
+	Nous n'utiliserons pas explicitement ces propriétés cette année, mais l'on peut tout de même noter que $\sqrt{x}=x^{\frac{1}{2}}$ \quad et \quad $\sqrt{x^n}=\sqrt{x}^n$
+\end{astuce}
 
 
 \end{document}
