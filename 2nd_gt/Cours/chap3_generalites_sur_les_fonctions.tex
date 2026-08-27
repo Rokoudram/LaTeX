@@ -19,7 +19,140 @@
 
 \section{Vocabulaire et notations}
 
+\begin{definition}{Fonction numérique}
+	Une \textbf{fonction numérique} est un objet mathématiques qui a un nombre donné associe un autre nombre unique.
+
+	On appelle généralement une fonction par la lettre $f$, on note $x$ le nombre injecté dans la fonction, et $y$ le nombre qui en ressort.
+
+	On notera alors conventionnellement $f(x)=y$
+\end{definition}
+
+\begin{remarque}
+	Une fonction ne s'appelle pas toujours $f$, bien que c'est une notation très courante. Vous avez notamment déjà rencontré dans votre scolarité les fonctions $\sin$ et $\cos$ !
+	
+	Mais on pourrait très bien définir la fonction $cacahuete$ et noter $cacahuete(x)$
+\end{remarque}
+
+
+
+\begin{definition}{Image et antécédent}
+	Soit une fonction $f$ et deux nombres $x$ et $y$ tels que $f(x) = y$
+	
+	On dira que $y$ est \textbf{l'image} de $x$ par la fonction $f$
+	
+	On dira que $x$ est \textbf{un antécédent} de $y$ par la fonction $f$
+\end{definition}
+
+\begin{remarque}
+	Attention ! Un nombre ne peut avoir qu'une seule image par une fonction, mais peut admettre plusieurs antécédents.
+\end{remarque}
+
+
+
+\begin{definition}{Domaine de définition}
+	Soit $f$ une fonction. On appelle \textbf{domaine de définition} de la fonction $f$ l'ensemble des nombres $x$ tels que la quantité $f(x)$ existe.
+	
+	On notera en général $\Dcal_f$ ce domaine de définition.
+\end{definition}
+
+\begin{exemple}{Un domaine concret}
+	Si l'on note $x$ l'âge de Myriam, et $f(x)$ la taille de Myriam en fonction de son âge, alors on peut estimer que $\Dcal_f = [0 ~;~ 130]$ en supposant que Myriam batte le record du monde de longévité.
+\end{exemple}
+
+
+
 \section{Représentation graphique}
+
+Il est possible de représenter graphiquement une fonction numérique. Cela permet notamment de voir rapidement ses évolutions, et de résoudre des problèmes faisant intervenir ladite fonction.
+
+Pour représenter une fonction, on trace une courbe dans un repère qui permet de faire le lien entre les images et les antécédents de la fonction.
+
+
+\begin{rappel}{Coordonnées de points}
+	\begin{minipage}{0.6\linewidth}
+		Dans le plan muni d'un repère, le point de coordonnées $(x;y)$ se situe en \textbf{abscisse} $x$ et en \textbf{ordonnée} $y$, comme représenté sur le schéma ci-contre :
+	\end{minipage} \hspace{3mm}
+	\begin{minipage}{0.4\linewidth}
+		\begin{tikzpicture}
+        		\begin{axis}[
+        			clip = false ,
+        			height = 5cm , width = 8cm ,
+        			xmin = 0 , xmax = 5 , ymin = 0 , ymax = 5 ,
+        			axis lines = middle , ytick distance = 1 , xtick distance = 1,
+        			x label style={at = {(axis description cs: (1,-0.05)} , anchor = east},
+        			xlabel = \small{Abscisse},
+        			y label style={rotate=90 , at = {(axis description cs: (-0.05,1)} , anchor=east},
+        			ylabel = \small{Ordonnée} ,
+        			grid=major,
+        			ticklabel style = {opacity=0},
+        			enlargelimits = { abs = 0.2 }
+        		]
+
+			\draw[color=newred , dashed , line width = 2pt] (0,1.5) node[left] {$y$} -- (2.5,1.5) node[above] {$(x~;~y)$} node {x} -- (2.5,0) node[below] {$x$} ;        		
+        		
+        		\end{axis}
+        	\end{tikzpicture}
+	\end{minipage}
+\end{rappel}
+
+
+En ayant en tête le fonctionnement d'un système de coordonnées, on peut maintenant représenter graphiquement les fonctions dans un repère :
+
+\begin{definition}{Courbe représentative}
+	\begin{minipage}{0.4\linewidth}
+		\begin{tikzpicture}
+        		\begin{axis}[
+        			height = 5cm , width = 8cm ,
+        			xmin = -2 , xmax = 2 , ymin = -1 , ymax = 3 ,
+        			axis lines = middle , ytick distance = 1 , xtick distance = 1,
+        			grid=major,
+        			ticklabel style = {opacity=0},
+        			enlargelimits = { abs = 0.2 }
+        		]
+
+			\addplot[samples = 100 , color = newred , line width = 2pt , domain = -3:3]
+			{0.5*(x^3+2*x^2-3*x)};
+		
+			\draw[color=newred] (1.5,0.5) node {$\Ccal_f$} ;
+			\draw[color=newred , dashed , line width = 1pt] (-1,0) node[below] {$x$} -- (-1,2) -- (0,2) node[right] {$f(x)$} ;
+		
+        		\end{axis}
+    		\end{tikzpicture}
+	\end{minipage}
+	\begin{minipage}{0.55\linewidth} \restoreskip
+		On appelle la \textbf{courbe représentative} d'une fonction $f$ l'ensemble des points du plan de coordonnées $\left(x~;~f(x)\right)$ avec $x$ un réel quelconque appartenant à l'ensemble de définition de la fonction $f$
+	\end{minipage} \hspace{3mm}
+\end{definition}
+
+\begin{exemple}{Avec une fonction}
+	\begin{minipage}{0.5\linewidth} \restoreskip
+		On considère la fonction $f$ dont la courbe représentative $\Ccal_f$ a été tracée dans le repère ci-après.
+		
+		On voit que le point de coordonnées $()$ appartient à $\Ccal_f$, on peut donc écrire que $f(x)=$
+	\end{minipage} \hspace{3mm}
+	\begin{minipage}{0.4\linewidth}
+		\begin{tikzpicture}
+        		\begin{axis}[
+        			xmin = -2 , xmax = 3 , ymin = -3 , ymax = 5 ,
+        			axis lines = middle , ytick distance = 1 , xtick distance = 1,
+        			grid=major,
+        			ticklabel style = {opacity=0},
+        			enlargelimits = { abs = 0.2 }
+        		]
+
+			\addplot[samples = 100 , color = newred , line width = 2pt , domain = -4:4]
+			{(x+1)*(x-2)};
+			
+			\draw[color=newred] (2.5,-1.5) node {$\Ccal_f$} ;
+		
+        		\end{axis}
+    		\end{tikzpicture}
+	\end{minipage}
+\end{exemple}
+
+
+
+
 
 \section{Expressions algébriques}
 

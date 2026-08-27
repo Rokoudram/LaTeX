@@ -289,6 +289,28 @@ attach boxed title to top*,
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ----- \begin{rappel} ----- %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{rappel}[2][]{%
+    enhanced , breakable , parbox=false ,
+    arc=5pt,
+    frame hidden,
+    colback=lightgreen,
+    fonttitle=\bfseries,
+    borderline={2pt}{0mm}{calgreen , dashed},
+    title={\faUniversity~~ \underline{Rappel} : #2~~\faUniversity},
+    attach boxed title to top left={xshift=5mm,yshift=-2mm},
+    boxed title style={
+        colback=calgreen,
+        colframe=calgreen
+    },
+    #1
+}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
