@@ -48,6 +48,14 @@
 \end{remarque}
 
 
+\begin{exemple}{Image et antécédent}
+	On considère une fonction $f$ telle que $f(5)=3$ et $f(1)=3$
+	
+	On peut dire que $3$ est l'image de $5$ \underline{et} l'image de $1$ par la fonction $f$.
+	
+	À l'inverse, $5$ et $1$ sont des antécédents de $3$ par la fonction $f$.
+\end{exemple}
+
 
 \begin{definition}{Domaine de définition}
 	Soit $f$ une fonction. On appelle \textbf{domaine de définition} de la fonction $f$ l'ensemble des nombres $x$ tels que la quantité $f(x)$ existe.
@@ -57,6 +65,52 @@
 
 \begin{exemple}{Un domaine concret}
 	Si l'on note $x$ l'âge de Myriam, et $f(x)$ la taille de Myriam en fonction de son âge, alors on peut estimer que $\Dcal_f = [0 ~;~ 130]$ en supposant que Myriam batte le record du monde de longévité.
+\end{exemple}
+
+
+
+\section{Expression algébrique}
+
+Dans le dernier exemple, la fonction $f$ était définie de manière implicite : on ne connait pas effectivement la taille de Myriam à 34 ans, donc on ne connait pas la valeur de $f(34)$, on ne peut que faire des estimations concernant les valeurs que prendra la fonction.
+
+Cela est assez limitant pour étudier précisément cette fonction, et il faudrait une manière d'expliciter chacune des valeurs de la fonction. C'est à cela que sert \textbf{l'expression algébrique} d'une fonction.
+
+\begin{definition}{Expression algébrique}
+	L'\textbf{expression algébrique} d'une fonction $f$ est la formule permettant de calculer l'image d'un nombre par la fonction $f$, ou d'exprimer $f(x)$ en fonction de la valeur de $x$.
+\end{definition}
+
+
+\begin{exemple}{Calculs par expression algébrique}
+	On considère la fonction $f$ définie par $f(x)=x^2+1$
+	
+	Alors $f(3)=3^2 + 1 = 9 + 1 = 10$ \quad et \quad $f(-5) = (-5)^2 + 1 = 25 + 1 = 26$
+\end{exemple}
+
+
+L'expression algébrique d'une fonction permet donc de calculer des images par cette fonction, mais pas seulement : en effet, on peut également l'utiliser pour déterminer un domaine de définition.
+
+Pour déterminer $\Dcal_f$ le domaine de définition d'une fonction $f$, il faut se demander pour quelles valeurs de $x$ il est possible de calculer la valeur de $f(x)$, ou plutôt pour quelles valeurs de $x$ il n'est pas possible de calculer la valeur de $f(x)$.
+
+En mathématiques, peu d'opérations sont formellement interdites. On peut noter les deux suivantes :
+
+\begin{rappel}{Opérations interdites}
+	En mathématiques, il est impossible de :
+	
+	$\bullet$ Effectuer une division par le nombre $0$
+	
+	$\bullet$ Calculer la racine carrée d'un nombre strictement négatif.
+\end{rappel}
+
+
+
+Voyons deux exemples pour déterminer un domaine de définition via une expression algébrique :
+
+\begin{exemple}{Valeur interdite}
+	On considère la fonction $f$ définie par $f(x)=\dfrac{x}{x-1}$
+	
+	Pour déterminer $\Dcal_f$ le domaine de définition de la fonction $f$, il faut se demander pour quelles valeurs de $x$ il est possible de calculer la valeur de $f(x)$
+	
+	
 \end{exemple}
 
 
@@ -128,32 +182,43 @@ En ayant en tête le fonctionnement d'un système de coordonnées, on peut maint
 	\begin{minipage}{0.5\linewidth} \restoreskip
 		On considère la fonction $f$ dont la courbe représentative $\Ccal_f$ a été tracée dans le repère ci-après.
 		
-		On voit que le point de coordonnées $()$ appartient à $\Ccal_f$, on peut donc écrire que $f(x)=$
+		On voit que le point de coordonnées $(1~;~1)$ appartient à $\Ccal_f$, on peut donc écrire que $f(1)=1$
+		
+		De même, on peut écrire que $f(-2)=1$, car on voit également que le point de coordonnées $(-2~;~1)$ appartient à la courbe représentative de la fonction $f$.
+		
+		On peut donc noter que le nombre $1$ admet plusieurs antécédents par la fonction $f$.
+		
 	\end{minipage} \hspace{3mm}
 	\begin{minipage}{0.4\linewidth}
 		\begin{tikzpicture}
         		\begin{axis}[
-        			xmin = -2 , xmax = 3 , ymin = -3 , ymax = 5 ,
+        			xmin = -3 , xmax = 2 , ymin = 0 , ymax = 4 ,
         			axis lines = middle , ytick distance = 1 , xtick distance = 1,
         			grid=major,
-        			ticklabel style = {opacity=0},
+        			ticklabel style = {font = \footnotesize},
         			enlargelimits = { abs = 0.2 }
         		]
 
 			\addplot[samples = 100 , color = newred , line width = 2pt , domain = -4:4]
-			{(x+1)*(x-2)};
+			{0.5 * x * (x-1) * (x+2) + 1} ;
 			
-			\draw[color=newred] (2.5,-1.5) node {$\Ccal_f$} ;
-		
+			\draw[color=newred] (1.75,1.5) node {$\Ccal_f$} ;
+			
+			\draw[color=newred] (-2,1) node {x} ;
+			\draw[color=newred] (0,1) node {x} ;
+			\draw[color=newred] (1,1) node {x} ;
+			\draw[color=newred] (-1,2) node {x} ;
+					
         		\end{axis}
     		\end{tikzpicture}
 	\end{minipage}
 \end{exemple}
 
 
+\begin{remarque}
+	Attention à ne pas confondre une fonction et sa courbe représentative, il s'agit de deux objets différents ! Une courbe est un ensemble de points, alors qu'une fonction est un objet qui transforme des nombres en d'autres nombres.
+\end{remarque}
 
 
-
-\section{Expressions algébriques}
 
 \end{document}
