@@ -119,14 +119,14 @@
 
 Dans cette section, et \textbf{uniquement dans cette section}, on considèrera uniquement des \textbf{nombres strictement positifs}. Le cas des nombres négatifs sera abordé plus tard dans l'année et fera l'objet d'un différent chapitre.
 
-\begin{definition}{Comparaison} \restoreskip
-	Soient $a$ et $b$ deux nombres quelconques.
+\begin{rappel}{Comparaison} \restoreskip
+	Soient $a$ et $b$ deux nombres quelconques non nuls.
 	
 	$\bullet$ Si $a$ est \textbf{strictement supérieur} à $b$ on écrira $a > b$ \\
 	$\bullet$ Si $a$ est \textbf{strictement inférieur} à $b$ on écrira $a < b$ \\
 	$\bullet$ Si $a$ est \textbf{supérieur ou égal} à $b$ on écrira $a \geq b$ \\
 	$\bullet$ Si $a$ est \textbf{inférieur ou égal} à $b$ on écrira $a \leq b$ 
-\end{definition}
+\end{rappel}
 
 
 
@@ -173,7 +173,7 @@ Dans cette section, et \textbf{uniquement dans cette section}, on considèrera u
 
 \begin{exemple}{Premiers calculs}
 	$\dfrac{3^8 \times 3^{-3}}{3^7 \times 3^2} = \dfrac{3^{8 + (-3)}}{3^{7+2}} = \dfrac{3^5}{3^9} = 3^{5-9} = 3^4$
-\end{exemple} 
+\end{exemple}
 
 
 
@@ -184,6 +184,19 @@ Dans cette section, et \textbf{uniquement dans cette section}, on considèrera u
 
 \begin{exemple}{Simplification}
 	$2^2 \times 4^4 \times 8^8 = 2^2 \times {(2^2)}^4 \times {(2^3)}^8 = 2^2 \times 2^{2 \times 4} \times 2^{3 \times 8} = 2^2 \times 2^8 \times 2^{24} = 2^{2 + 8 + 24} = 2^{34}$
+\end{exemple}
+
+
+
+\begin{propriete}{Puissance d'un nombre négatif}
+	Soit $x$ un nombre quelconque et $n$ un nombre entier. Alors :
+	\[(-x)^n = \begin{cases} x^n \quad \text{si $n$ est pair} \\ -x^n \quad \text{si $n$ est impair} \end{cases} \]
+\end{propriete}
+
+\begin{exemple}{Cas d'application}
+	$(-2)^4 = 2^4 = 2 \times 2 \times 2 \times 2 = 16$ \quad car $4$ est un nombre pair.
+	
+	$(-2)^5 = 2^5 = -2 \times 2 \times 2 \times 2 \times 2 = -32$ \quad car $5$ est un nombre impair.
 \end{exemple}
 
 
@@ -216,6 +229,11 @@ Dans cette section, et \textbf{uniquement dans cette section}, on considèrera u
 	Attention ! Si $y^2=x$, cela ne veut pas forcément dire que $y=\sqrt{x}$. Par exemple, $(-2)^2=4$ , en revanche $-2 \neq \sqrt{4}$
 \end{remarque}
 
+\begin{remarque}
+	La racine carrée d'un nombre négatif n'existe pas ! N'écrivez donc jamais $\sqrt{-4}$ !
+\end{remarque}
+
+
 
 \begin{propriete}{Produit et quotient}
 	Soient $x$ et $y$ deux nombres strictement positifs. On a alors :
@@ -239,6 +257,8 @@ Dans cette section, et \textbf{uniquement dans cette section}, on considèrera u
 \begin{exemple}{Réduction}
 	$\sqrt{72}=\sqrt{9 \times 8} = \sqrt{9} \times \sqrt{8} = 3\sqrt{8} = 3\sqrt{4 \times 2} = 3\sqrt{4}\times \sqrt{2} = 3 \times 2 \sqrt{2} = 6\sqrt{2}$
 \end{exemple}
+
+
 
 \begin{astuce}
 	Nous n'utiliserons pas explicitement ces propriétés cette année, mais l'on peut tout de même noter que $\sqrt{x}=x^{\frac{1}{2}}$ \quad et \quad $\sqrt{x^n}=\sqrt{x}^n$
