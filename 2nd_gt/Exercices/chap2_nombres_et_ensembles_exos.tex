@@ -20,32 +20,52 @@
 
 \section{Ensembles usuels}
 
-\subsection{Manipulation des symboles}
-On considère les ensembles suivants :
+\subsection{Inclusion et appartenance}
+On considère les trois ensembles suivants :
 
 $A=\{1~;~2~;~4~;~8\}$ \qquad $B=\left\{1~;~11~;~-3~;~2~;~4~;~0~;~\pi~;~8~;~-21~;~\frac{1}{3}\right\}$ \qquad $C=\left\{-3~;~\pi~;~0~;~-\frac{1}{3}\right\}$
 
 Compléter les pointillés par le symbole adapté parmi : $\in$ , $\notin$ , $\subset$ et $\not\subset$
 
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{1.75}
 \begin{tabular}{P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth}}
-    $A\ldots B$ & $B\ldots A$ & $A\ldots C$ & $C \ldots A$ \\
-    $B \ldots C$ & $C \ldots B$ & $4 \ldots A$ & $\{4\} \ldots A$ \\
-    $\{\pi~;~1\} \ldots B$ & $\{\pi~;~1\} \ldots C$ & $\emptyset \ldots A$ & $0 \ldots C$ \\
-    $\{0~;~1~;~2\} \ldots A$ & $\{0~;~1~;~2\} \ldots B$ & $\{0~;~1~;~2\} \ldots C$ & $B \ldots B$
+    $A \ldots\ldots B$ & $B \ldots\ldots A$ & $A \ldots\ldots C$ & $C \ldots\ldots A$ \\
+    $B \ldots\ldots C$ & $C \ldots\ldots B$ & $4 \ldots\ldots A$ & $\{4\} \ldots\ldots A$ \\
+    $\{\pi~;~1\} \ldots\ldots B$ & $\{\pi~;~1\} \ldots\ldots C$ & $\emptyset \ldots\ldots A$ & $0 \ldots\ldots C$ \\
+    $\{0~;~1~;~2\} \ldots\ldots A$ & $\{0~;~1~;~2\} \ldots\ldots B$ & $\{0~;~1~;~2\} \ldots\ldots C$ & $B \ldots\ldots B$
 \end{tabular}
 
 
 
-\subsection{Ensembles usuels}
-Compléter les pointillés par le symbole adapté parmi : $\in$ , $\notin$ , $\subset$ et $\not\subset$
+\subsection{Appartenance aux ensembles usuels}
+Compléter les pointillés par le symbole adapté parmi : $\in$ ou $\notin$
 
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{1.75}
 \begin{tabular}{P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth}}
-    $23 \ldots \NN$ & $\frac{-123}{3} \ldots \ZZ$ & $\NN \ldots \RR$ & $\frac{87}{8} \ldots \QQ$ \\
-    $\QQ \ldots \DD$ & $\left\{\frac{1}{2}~;~\frac{1}{5}\right\} \ldots \DD$ & $\left\{3~;~\frac{1}{3}\right\} \ldots \QQ$ & $\emptyset \ldots \RR$ \\
-    $\left\{\frac{2}{3}~;~\frac{3}{2}\right\} \ldots \DD$ & $-1,234 \ldots \QQ$ & $\frac{0,1}{0,02} \ldots \NN$ & $\left\{\frac{7}{40} ~;~\frac{49}{40}\right\} \ldots \DD$
+	$23 \ldots\ldots \ZZ$ & $81 \ldots\ldots \QQ$ & $\dfrac{3}{2} \ldots\ldots \NN$ & $-\dfrac{3}{2} \ldots\ldots \DD$ \\
+	$\sqrt{2} \ldots\ldots \RR$ & $-7 \ldots\ldots \DD$ & $\pi \ldots\ldots \ZZ$ & $-27,11 \ldots\ldots \QQ$
 \end{tabular}
+
+
+
+\subsection{Inclusion dans les ensemble usuels}
+Compléter les pointillés par le symbole adapté parmi : $\subset$ ou $\not\subset$
+
+\renewcommand{\arraystretch}{1.75}
+\begin{tabular}{P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth}}
+	$\NN \ldots\ldots \QQ$ & $\RR \ldots\ldots \DD$ & $\emptyset \ldots\ldots \ZZ$ & $\ZZ \ldots\ldots \ZZ$ \\
+	$\{1~;~-1\} \ldots\ldots \ZZ$ & $\left\{1~;~\dfrac{1}{3}\right\} \ldots\ldots \DD$ & $\left\{4~;~\dfrac{3}{5}\right\} \ldots\ldots \QQ$ & $\{2~;~4~;~8\} \ldots\ldots \NN$
+\end{tabular}
+
+
+
+\subsection{Mélange dans les ensembles usuels}
+
+
+
+
+\subsection{Avec quelques pièges}
+
 
 
 
@@ -64,8 +84,8 @@ Remplir chacune des cases du tableau suivant avec le symbole $\in$ ou $\notin$
 
 \begin{center}
 \renewcommand{\arraystretch}{1.8}
-\begin{tabular}{| P{3cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
-	$x$ & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
+\begin{tabular}{| P{4cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+	\diagbox[innerwidth=4cm]{Nombre}{Ensemble} & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
 	$\frac{1,3}{2}$ & & & & & \\ \hline
 	$\sqrt{2}$ & & & & & \\ \hline
 	$-\frac{4}{3}$ & & & & & \\ \hline
