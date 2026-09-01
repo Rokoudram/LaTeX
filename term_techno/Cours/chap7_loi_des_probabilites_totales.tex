@@ -1,0 +1,80 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_cours.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\fancyhead[R]{T\up{ale} Technologique}            % En-tête droit
+\fancyhead[C]{Probabilités totales et indépendance}
+\fancyhf[CF]{\footnotesize{Lycée Polyvalent Irène et Frédéric Joliot Curie}}                     % En-tête central
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\section{Partitions de l'univers}
+
+\begin{definition}{Partition de l'univers}
+	Soit un univers $\Omega$
+	
+	On dit que les évènements $A_1~;~A_2~;~\ldots~;~A_n$ forment une \textbf{partition de l'univers} $\Omega$ si :
+	\begin{itemize}[label=$\bullet$]
+		\item Ces évènements sont deux à deux incompatibles.
+		\item Leur réunion est égale à $\Omega$
+	\end{itemize}
+\end{definition}
+		
+		
+\begin{remarque}
+	\begin{minipage}{0.5\textwidth}
+		Moins formellement, il faut que les évènements $A_1~;~A_2~;~\ldots~;~A_n$ recouvrent $\Omega$ sans se chevaucher comme représenté sur le schéma ci-contre :
+	\end{minipage} \hspace{5mm}
+	\begin{minipage}{0.35\textwidth}
+		\begin{tikzpicture}
+			\draw[line width=2pt] (0,0) rectangle (6,4) ;
+			\draw[line width=1.5pt , fill = red , fill opacity = 0.15]  (0,2) arc (90:0:2) -- (0,0) -- cycle ;
+			\draw[line width=1.5pt , fill = blue , fill opacity = 0.15] (1.414,1.414) arc (45:90:2) -- (0,4) - - (3,4) -- cycle ;
+			\draw[line width=1.5pt , fill = yellow , fill opacity = 0.15] (1.414,1.414) arc (45:0:2) -- (4,0) -- (4,1) -- cycle ;
+			\draw[line width=1.5pt , fill = green , fill opacity = 0.15] (4,0) -- (6,0) -- (6,4) -- (4,1) -- cycle ;
+			\draw[line width=1.5pt , fill = gray , fill opacity = 0.25] (1.414,1.414) -- (3,4) -- (5,2.5) -- (4,1) -- cycle;
+			\draw[line width=1.5pt , fill = orange , fill opacity = 0.15] (3,4) -- (5,2.5) -- (6,4) -- cycle;
+			
+			\draw[line width=2pt] (6,1.5) -- (7,2.5) node[right] {$\Omega$} ;
+			\draw (0.75,0.75) node {$A_1$} ;
+			\draw (1,3) node {$A_2$} ;
+			\draw (3,0.5) node {$A_3$} ;
+			\draw (3.25,2.25) node {$A_4$} ;
+			\draw (5,1.25) node {$A_5$} ;
+			\draw (4.75,3.5) node {$A_6$} ;
+		\end{tikzpicture}
+	\end{minipage}
+\end{remarque}
+
+
+
+\section{Loi des probabilités totales}
+
+\begin{theoreme}{Loi des probabilités totales}
+	Soient $(A_1~;~A_2~;~\ldots~;~A_n)$ formant une partition de l'univers. Soit $B$ un évènement quelconque.
+	
+	On peut calculer la probabilité de l'évènement $B$ par la formule : \\
+	\phantom{}\hspace{25mm} $ \PP(B) = \PP(A_1 \cap B) + \PP(A_2 \cap B) + \ldots + \PP(A_n \cap B) \left( = \sommek{0}{n} \PP(A_k \cap B)\right) $
+\end{theoreme}
+
+
+
+\begin{remarque}
+	Les évènements $A$ et $\barre{A}$ formant toujours une partition de l'univers, on a : $\PP(B)=\PP(A \cap B) + \PP(\barre{A} \cap B)$
+\end{remarque}
+
+
+
+\section{Indépendance d'évènements}
+
+
+\end{document}
