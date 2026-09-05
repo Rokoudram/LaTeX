@@ -1,0 +1,264 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/macros_tikz.tex} 		   	% ----- Macros utiles TikZ
+
+\fancyhead[R]{T\up{ale} Technologique}            % En-tête droit
+\fancyhead[C]{Probabilités conditionnelles et indépendance}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Rappels}
+
+\subsection{Quelques univers}
+Dans chacune des situations suivantes, décrire explicitement l'univers associé à l'expérience aléatoire décrite, donner le nombre d'issues possibles et préciser s'il s'agit d'une situation d'équiprobabilité.
+\begin{enumerate}
+	\item On tire au hasard une carte dans un jeu classique de 52 cartes et on s'intéresse au symbole sur la carte.
+	\item On choisit au hasard un nombre premier inférieur à 40.
+	\item On lance deux dés cubiques parfaitement équilibrés et on s'intéresse à la somme des deux résultats.
+	\item On lance 6 fois une pièce parfaitement équilibrée et on s'intéresse au nombres de "Face" obtenus.
+\end{enumerate}
+
+
+
+\subsection{Un exercice pour Dechavanne}
+\begin{minipage}{0.25\linewidth}
+	\begin{tikzpicture}
+		\foreach \couleur/\i in {newblue/0 , newred/1 , newgreen/2 , newblue/3 , newgreen/4 , neworange/5 , newblue/6 , newgreen/7 , newred/8 , newgreen/9 , neworange/10 , newred/11}
+			\draw[line width = 0.5pt , fill = \couleur] (30*\i:2) arc (30*\i:30*\i+30:2) -- (0,0) -- (30*\i:2) -- cycle ;
+			
+			\draw[line width = 1.5pt] (0,0) circle[radius=2] ;
+			\draw[fill = black] (1.2,-1.6) arc (-53.13:-126.87:2) -- (-1.2,-2.2) -- (1.2,-2.2) -- cycle ;
+			\draw[line width = 1.5pt ,fill = red!80!white] (0,2.2) -- (-0.2,2.1) -- (0,1.5) -- (0.2,2.1) -- cycle ;
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.75\linewidth}
+	Lors d'un jeu on fait tourner la roue ci-contre, dont on admettra que tous les secteurs angulaires sont de même mesure.
+	\begin{enumerate}
+		\item S'agit-il d'une situation d'équiprobabilité ?
+		\item Compléter le tableau ci-dessous modélisant la loi de probabilité associée à l'expérience aléatoire :
+		
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+			\cellcolor{gray!25} \textbf{Couleur} & Bleu & Rouge & Vert & Jaune \\ \hline
+			\cellcolor{gray!25} \textbf{Probabilité} & & & & \\ \hline
+		\end{tabular} 
+		
+		\phantom{}\hspace{3cm}\textit{\small On arrondira les résultats au millième}
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Maths et Scrabble}
+On place dans un sac opaque 9 tuiles comportant les lettres qui forment le mot \og EVENEMENT \fg \, sans considérer les accents éventuels sur les \og E \fg
+\begin{enumerate}
+	\item On tire une tuile au hasard dans ce sac et on note la lettre obtenue.
+	\begin{enumerate}
+		\item S'agit-il d'une situation d'équiprobabilité ?
+		\item Déterminer la loi de probabilité associée à cette expérience.
+	\end{enumerate}
+	\item On tire désormais successivement et sans remise deux tuiles dans ce sac et on s'intéresse au mot de deux lettres obtenu.\\
+	Par exemple si l'on tire la tuile \og T \fg \, puis une tuile \og E \fg \, on notera l'issue TE.
+	\begin{enumerate}
+		\item Décrire explicitement l'univers associé à cette expérience aléatoire.
+		\item Quelle est la probabilité de l'évènement \og Tirer deux lettres identiques \fg \, ?
+		\item Quelle est la probabilité de l'évènement \og Le mot formé existe dans la langue française \fg \, ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Coup de poker}
+On tire une carte au hasard dans un paquet de 32 cartes.
+
+On considère les évènements suivants :
+\begin{itemize}[label=$\bullet$]
+    \item P : \og La carte tirée porte un symbole $\spadesuit$ \fg
+    \item C : \og La carte tirée porte un symbole \textcolor{newred}{\large $\varheartsuit$} \fg
+    \item T : \og La carte tirée porte un symbole $\clubsuit$ \fg
+    \item R : \og La carte tirée est un roi \fg
+    \item D : \og La carte tirée est une dame \fg
+    \item N : \og La carte tirée porte un numéro \fg
+\end{itemize} \vspace{-2mm}
+\begin{enumerate}
+    \item Écrire à l'aide des évènements $P$, $C$, $T$, $R$, $D$, et $N$ les évènements décrits ci-dessous :
+    \begin{enumerate}
+        \item \og La carte tirée ne porte pas le symbole $\spadesuit$ \fg
+        \item \og La carte tirée est noire \fg
+        \item \og La carte tirée est un roi ou une dame \fg
+        \item \og La carte tirée porte un numéro et ne porte pas le symbole $\clubsuit$ \fg
+        \item \og La carte tirée est rouge \fg
+        \item \og La carte tirée est la dame de cœur \fg
+    \end{enumerate}
+\item Décrire les évènements suivants à l'aide d'une phrase : \\
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{p{0.35\textwidth} p{0.35\textwidth} p{0.35\textwidth}}
+         a) $N\cap C$ & b) $\barre{T}$ & c) $C\cup R $ \\
+         d) $\barre{P\cap D}$ & e) $T\cap\barre{N}$ & f) $\barre{R\cup D}$ \\
+         g) $\barre{D}\cap\barre{N}$ & h) $N \cap (P \cup T)$ & i) $\barre{P\cup C\cup T}$ 
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Identification sur diagrammes}
+Exprimer à l'aide d'opérations sur les évènements (Intersection, union, contraire) et en fonction des évènements A et B les zones qui ont été coloriées sur les figures ci-contre :
+
+\hspace{1cm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newred , opacity = 0.25] \AouB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no1} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newgreen , opacity = 0.25] \AetB;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no2} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newblue , opacity = 0.25 , even odd rule] \Rect[2] \B ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no3} ;
+\end{tikzpicture}
+
+\hspace{1cm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newblue , opacity = 0.25] \AmB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no4} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newred , opacity = 0.25 , even odd rule] \Rect[2] \AouB ;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no5} ;
+\end{tikzpicture} \hspace{5mm}
+\begin{tikzpicture}[scale=0.85]
+	\draw[line width = 1.5pt] \Rect[2] \A \B ;
+	\fill[color = newgreen , opacity = 0.25 , even odd rule] \A \B;
+	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
+	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no6} ;
+\end{tikzpicture}
+
+
+
+\section{Probabilités conditionnelles}
+
+\subsection{Groupe sanguin}
+La répartition des différents groupes sanguins dans le monde a été donnée dans le tableau ci-après :
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+	\cellcolor{gray!25} \diagbox[width=3.4cm,height=2.25\line]{\textbf{Rhésus}}{\textbf{Groupe}} & A & B & AB & O \\ \hline
+	Rhésus + & $35\%$ & $9,5\%$ & $3,5\%$ & $36\%$ \\ \hline
+	Rhésus - & $7\%$ & $1,5\%$ & $0,5\%$ & $7\%$ \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{enumerate}
+	\item Si l'on choisit au hasard une personne dans la population mondiale, déterminer la probabilité :
+	\begin{enumerate}
+		\item Qu'elle soit receveuse universelle (C'est à dire du groupe AB+)
+		\item Qu'elle soit du groupe sanguin O.
+		\item Qu'elle soit du rhésus négatif.
+	\end{enumerate}
+	\item Déterminer la probabilité qu'une personne choisie au hasard parmi les personnes de groupe B soit de rhésus négatif.
+	\item Sachant qu'une personne choisie est de rhésus positif, quelle est la probabilité qu'elle soit de groupe sanguin O ?
+\end{enumerate}
+
+
+
+\subsection{Ordinateurs}
+Dans une entreprise, la direction fait un sondage pour savoir quel type d'ordinateur est utilisé par les salariés. Les résultats obtenus sont classés dans le tableau ci-contre :
+\begin{center}
+	\renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
+	    \diagbox{Type}{Marque}& Apple & Windows & Total\\ \hline
+	    Fixe & 15 &  & 50 \\ \hline
+	    Portable &  & &  \\ \hline
+	    Total & 35 & & 80 \\ \hline
+    \end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Compléter les cases manquantes.
+	\item Si l'on choisit un salarié au hasard dans l'entreprise, quelle est la probabilité qu'il possède un ordinateur fixe ?
+	\item Si l'on choisit un salarié au hasard parmi les possesseurs d'un ordinateur de la marque Windows, quelle est la probabilité que ce soit un ordinateur portable ?
+	\item Si l'on choisit un salarié au hasard, quelle est la probabilité qu'il possède un ordinateur portable de la marque Apple ?
+\end{enumerate}
+
+
+
+\subsection{Chez le concessionnaire}
+Un concessionnaire vend des voitures électriques ou thermiques, neuves ou d'occasion.\\
+On choisit au hasard une voiture parmi celles vendues cette année, et on considère les évènements :
+
+$\bullet E $: \og La voiture est électrique \fg \\
+$\bullet N$ : \og La voiture a été vendue neuve \fg
+
+On sait que 400 voitures neuves ont été vendues cette année, et que parmi elles 150 étaient électriques. Au total, 350 voitures électriques ont été vendues, et qu'au cours de l'année le concessionnaire a vendu un total de 1\,000 voitures.
+\begin{center}
+	\renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
+		 & $E$ & $\barre{E}$ & Total\\ \hline
+	    $N$ & & &  \\ \hline
+	    $\barre{N}$ & & &  \\ \hline
+	    Total & & & \\ \hline
+    \end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Compléter le tableau ci-dessus.
+	\item Calculer $\PP_E(N)$ puis exprimer cette probabilité avec une phrase.
+	\item Calculer $\PP_N(\barre{E})$ puis exprimer cette probabilité avec une phrase.
+	\item À quelle probabilité correspond le calcul $\dfrac{150}{1000}$ ?
+\end{enumerate}
+
+
+
+\subsection{Concerts}
+
+Un festival de musique est organisé, se basant sur trois scènes : Rock, Rap et Raggae.\\
+1200 places ont été vendues lors de ce festival, dont 720 à plein tarif.\\
+La moitié des places vendues à tarif réduit étaient pour la scène Raggae, et autant ont été vendues à plein tarif pour la scène Rock.\\
+Pour la scène Rap, il y a eu 200 places de plus vendues à plein tarif qu'à tarif réduit.\\
+130 places on été vendues à tarif réduit pour la scène Rock.\\[5pt]
+On choisit au hasard un billet parmi tous ceux vendus.
+
+\begin{enumerate}
+    \item Recopier et compléter le tableau suivant :
+    \renewcommand{\arraystretch}{1.75}
+        \begin{center}
+        	\setlength{\tabcolsep}{16pt}
+            \begin{tabular}{|c|c|c|c|c|}\hline
+                & Rock & Rap & Raggae & Total\\ \hline
+                Plein tarif & & & & \\ \hline
+                Tarif réduit & & & & \\ \hline
+                Total & & & & 1200 \\ \hline
+            \end{tabular}    
+        \end{center}    
+    \item Quelle est la probabilité que le billet vendu soit à tarif réduit ?
+    \item Quelle est la probabilité que le billet vendu soit pour la scène Rap ?
+    \item Quelle est la probabilité que le billet soit à tarif plein pour la scène Raggae ?
+    \item Le billet est à plein tarif. Quelle est la probabilité qu'il soit pour la scène Rock ?
+    \item Sachant que le billet ne concerne pas la scène Rap, quelle est la probabilité qu'il soit à plein tarif ?
+\end{enumerate}
+
+
+
+
+
+
+\end{document}
