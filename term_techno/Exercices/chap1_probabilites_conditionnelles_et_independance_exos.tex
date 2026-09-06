@@ -47,13 +47,13 @@ Dans chacune des situations suivantes, décrire explicitement l'univers associé
 		\item S'agit-il d'une situation d'équiprobabilité ?
 		\item Compléter le tableau ci-dessous modélisant la loi de probabilité associée à l'expérience aléatoire :
 		
-		\renewcommand{\arraystretch}{1.5}
+		\renewcommand{\arraystretch}{1.75}
 		\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
 			\cellcolor{gray!25} \textbf{Couleur} & Bleu & Rouge & Vert & Jaune \\ \hline
 			\cellcolor{gray!25} \textbf{Probabilité} & & & & \\ \hline
 		\end{tabular} 
 		
-		\phantom{}\hspace{3cm}\textit{\small On arrondira les résultats au millième}
+		\phantom{}\hspace{3cm}\textit{\small On pourra arrondir les résultats au millième}
 	\end{enumerate}
 \end{minipage}
 
@@ -71,9 +71,18 @@ On place dans un sac opaque 9 tuiles comportant les lettres qui forment le mot \
 	Par exemple si l'on tire la tuile \og T \fg \, puis une tuile \og E \fg \, on notera l'issue TE.
 	\begin{enumerate}
 		\item Décrire explicitement l'univers associé à cette expérience aléatoire.
-		\item Quelle est la probabilité de l'évènement \og Tirer deux lettres identiques \fg \, ?
-		\item Quelle est la probabilité de l'évènement \og Le mot formé existe dans la langue française \fg \, ?
+		\item Peut-on affirmer que la probabilité d'obtenir deux fois de suite la même lettre est de $\dfrac{1}{11}$ ?
 	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Sur la formule du crible}
+On considère $A$ et $B$ deux évènements d'un univers $\Omega$.
+\begin{enumerate} \setlength{\itemsep}{1mm}
+	\item Si $\PP(A)=\frac{1}{3}$ , $\PP(B)=\frac{1}{2}$ et $\PP(A \cap B)=\frac{1}{6}$ , quelle est la valeur de $\PP(A \cup B)$ ?
+	\item Si $\PP(A)=\frac{2}{5}$ , $\PP(B)=\frac{1}{15}$ et $\PP(A \cup B)=\frac{2}{3}$ , quelle est la valeur de $\PP(A \cap B)$ ?
+	\item Si $\PP(A)=\frac{1}{2}$ , $\PP(A \cup B)=\frac{3}{4}$ et $\PP(A \cap B)=\frac{1}{8}$ , quelle est la valeur de $\PP(B)$ ?
 \end{enumerate}
 
 
@@ -114,40 +123,39 @@ On considère les évènements suivants :
 \subsection{Identification sur diagrammes}
 Exprimer à l'aide d'opérations sur les évènements (Intersection, union, contraire) et en fonction des évènements A et B les zones qui ont été coloriées sur les figures ci-contre :
 
-\hspace{1cm}
-\begin{tikzpicture}[scale=0.85]
+
+\begin{tikzpicture}
 	\draw[line width = 1.5pt] \Rect[2] \A \B ;
 	\fill[color = newred , opacity = 0.25] \AouB ;
 	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
 	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no1} ;
 \end{tikzpicture} \hspace{5mm}
-\begin{tikzpicture}[scale=0.85]
+\begin{tikzpicture}
 	\draw[line width = 1.5pt] \Rect[2] \A \B ;
 	\fill[color = newgreen , opacity = 0.25] \AetB;
 	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
 	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no2} ;
 \end{tikzpicture} \hspace{5mm}
-\begin{tikzpicture}[scale=0.85]
+\begin{tikzpicture}
 	\draw[line width = 1.5pt] \Rect[2] \A \B ;
 	\fill[color = newblue , opacity = 0.25 , even odd rule] \Rect[2] \B ;
 	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
 	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no3} ;
 \end{tikzpicture}
 
-\hspace{1cm}
-\begin{tikzpicture}[scale=0.85]
+\begin{tikzpicture}
 	\draw[line width = 1.5pt] \Rect[2] \A \B ;
 	\fill[color = newblue , opacity = 0.25] \AmB ;
 	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
 	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no4} ;
 \end{tikzpicture} \hspace{5mm}
-\begin{tikzpicture}[scale=0.85]
+\begin{tikzpicture}
 	\draw[line width = 1.5pt] \Rect[2] \A \B ;
 	\fill[color = newred , opacity = 0.25 , even odd rule] \Rect[2] \AouB ;
 	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
 	\draw[anchor=south west] (0,-0.1) node {\scriptsize Figure \no5} ;
 \end{tikzpicture} \hspace{5mm}
-\begin{tikzpicture}[scale=0.85]
+\begin{tikzpicture}
 	\draw[line width = 1.5pt] \Rect[2] \A \B ;
 	\fill[color = newgreen , opacity = 0.25 , even odd rule] \A \B;
 	\draw (2,2) node{\large $A$} (4,2) node{\large $B$} ;
@@ -185,7 +193,7 @@ La répartition des différents groupes sanguins dans le monde a été donnée d
 \subsection{Ordinateurs}
 Dans une entreprise, la direction fait un sondage pour savoir quel type d'ordinateur est utilisé par les salariés. Les résultats obtenus sont classés dans le tableau ci-contre :
 \begin{center}
-	\renewcommand{\arraystretch}{1.75}
+	\renewcommand{\arraystretch}{1.5}
     \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
 	    \diagbox{Type}{Marque}& Apple & Windows & Total\\ \hline
 	    Fixe & 15 &  & 50 \\ \hline
@@ -209,11 +217,11 @@ On choisit au hasard une voiture parmi celles vendues cette année, et on consid
 $\bullet E $: \og La voiture est électrique \fg \\
 $\bullet N$ : \og La voiture a été vendue neuve \fg
 
-On sait que 400 voitures neuves ont été vendues cette année, et que parmi elles 150 étaient électriques. Au total, 350 voitures électriques ont été vendues, et qu'au cours de l'année le concessionnaire a vendu un total de 1\,000 voitures.
+On sait que 400 voitures neuves ont été vendues cette année, et que parmi elles 150 étaient électriques. Au total, 350 voitures électriques ont été vendues, et au cours de l'année le concessionnaire a vendu un total de 1\,000 voitures.
 \begin{center}
-	\renewcommand{\arraystretch}{1.75}
+	\renewcommand{\arraystretch}{1.5}
     \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
-		 & $E$ & $\barre{E}$ & Total\\ \hline
+		\cellcolor{gray} & $E$ & $\barre{E}$ & Total\\ \hline
 	    $N$ & & &  \\ \hline
 	    $\barre{N}$ & & &  \\ \hline
 	    Total & & & \\ \hline
@@ -228,34 +236,218 @@ On sait que 400 voitures neuves ont été vendues cette année, et que parmi ell
 
 
 
+\subsection{Application des formules}
+\begin{enumerate} \setlength{\itemsep}{1mm}
+    \item $A$ et $B$ sont deux évènements tels que : $\PP(A) = \dfrac{1}{2} ~,~ \PP(B) = \dfrac{1}{4}$ et $\PP(A \cap B) = \dfrac{1}{10}$ \\
+    Calculer $\PP_{A}(B)$ et $\PP_{B}(A)$.
+	\item $A$ et $B$ sont deux évènements tels que : $\PP_A(B) = \dfrac{1}{4}$ et $\PP(A \cap B) = \dfrac{1}{6}$ 
+	\begin{enumerate}
+		\item En utilisant la formule des probabilités conditionnelles, isoler $\PP(A)$ en fonction des deux probabilités qui vous sont données.
+		\item En déduire la valeur de $\PP(A)$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Dans un sens}
+On considère le tableau croisé d'effectifs suivant :
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
+		\cellcolor{gray} & $A$ & $\barre{A}$ & Total\\ \hline
+	    $B$ & 20 & 40 & 60  \\ \hline
+	    $\barre{B}$ & 30 & 10 & 40 \\ \hline
+	    Total & 50 & 50 & 100 \\ \hline
+    \end{tabular}
+\end{center}
+
+À partir des informations du tableau, recopier et compléter les deux arbres pondérés ci-après :
+
+\hspace{1cm}
+\begin{minipage}{0.45\textwidth}
+	\begin{tikzpicture}[
+		grow=right, scale = 0.8 ,
+		level 1/.style={level distance=4cm, sibling distance=3cm},
+		level 2/.style={level distance=3cm, sibling distance=1.5cm}
+		]
+		\small
+		
+		\node {$\Omega$}
+		child {node {$\barre{A}$} 
+			child {node {$\barre{B}$}
+				edge from parent node[below] {\ldots}
+			}
+			child {node {$B$}
+				edge from parent node[above] {\ldots}
+			} edge from parent node[below] {\ldots}
+		}
+		child {node {$A$} 
+			child {node {$\barre{B}$}
+				edge from parent node[below] {\ldots}
+			}
+			child {node {$B$}
+				edge from parent node[above] {\ldots}
+			} edge from parent node[above] {\ldots}
+		};
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[
+		grow=right, scale = 0.8 ,
+		level 1/.style={level distance=4cm, sibling distance=3cm},
+		level 2/.style={level distance=3cm, sibling distance=1.5cm}
+		]
+		\small
+		
+		\node {$\Omega$}
+		child {node {$\barre{B}$} 
+			child {node {$\barre{A}$}
+				edge from parent node[below] {\ldots}
+			}
+			child {node {$A$}
+				edge from parent node[above] {\ldots}
+			} edge from parent node[below] {\ldots}
+		}
+		child {node {$B$} 
+			child {node {$\barre{A}$}
+				edge from parent node[below] {\ldots}
+			}
+			child {node {$A$}
+				edge from parent node[above] {\ldots}
+			} edge from parent node[above] {\ldots}
+		};
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Dans l'autre sens}
+On considère deux évènements $A$ et $B$ d'une même expérience aléatoire dont les probabilités sont données dans l'arbre pondéré ci-après :
+\begin{center}
+	\begin{tikzpicture}[
+		grow=right, scale = 0.8 ,
+		level 1/.style={level distance=5cm, sibling distance=3cm},
+		level 2/.style={level distance=4cm, sibling distance=2cm}
+		]
+		\small
+		
+		\node {$\Omega$}
+		child {node {$\barre{A}$} 
+			child {node {$\barre{B}$}
+				edge from parent node[below] {$0,2$}
+			}
+			child {node {$B$}
+				edge from parent node[above] {\ldots}
+			} edge from parent node[below] {$0,6$}
+		}
+		child {node {$A$} 
+			child {node {$\barre{B}$}
+				edge from parent node[below] {\ldots}
+			}
+			child {node {$B$}
+				edge from parent node[above] {$0,5$}
+			} edge from parent node[above] {\ldots}
+		};
+	\end{tikzpicture}
+\end{center}
+\begin{enumerate}
+	\item Déterminer les probabilités manquantes.
+	\item Dresser un tableau de fréquences permettant de représenter cette situation.
+\end{enumerate}
+
+
+
 \subsection{Concerts}
 
-Un festival de musique est organisé, se basant sur trois scènes : Rock, Rap et Raggae.\\
+Un festival de musique est organisé, se basant sur trois scènes : Jazz, Rap et Funk.\\
 1200 places ont été vendues lors de ce festival, dont 720 à plein tarif.\\
-La moitié des places vendues à tarif réduit étaient pour la scène Raggae, et autant ont été vendues à plein tarif pour la scène Rock.\\
+La moitié des places vendues à tarif réduit étaient pour la scène Funk, et autant ont été vendues à plein tarif pour la scène Jazz.\\
 Pour la scène Rap, il y a eu 200 places de plus vendues à plein tarif qu'à tarif réduit.\\
-130 places on été vendues à tarif réduit pour la scène Rock.\\[5pt]
-On choisit au hasard un billet parmi tous ceux vendus.
+130 places on été vendues à tarif réduit pour la scène Jazz.
+
+On choisit au hasard un billet parmi tous ceux vendus et on considère les évènements suivants :
+
+$\bullet$ $J$ : \og Le billet est pour la scène Jazz \fg \\
+$\bullet$ $R$ : \og Le billet est pour la scène Rap \fg \\
+$\bullet$ $F$ : \og Le billet est pour la scène Funk \fg \\
+$\bullet$ $A$ : \og Le billet est à plein tarif \fg 
 
 \begin{enumerate}
-    \item Recopier et compléter le tableau suivant :
+    \item Recopier et compléter le tableau d'effectifs suivant :
     \renewcommand{\arraystretch}{1.75}
         \begin{center}
-        	\setlength{\tabcolsep}{16pt}
-            \begin{tabular}{|c|c|c|c|c|}\hline
-                & Rock & Rap & Raggae & Total\\ \hline
-                Plein tarif & & & & \\ \hline
-                Tarif réduit & & & & \\ \hline
+            \begin{tabular}{| P{3cm} | P{3cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
+                \cellcolor{gray} & $J$ & $R$ & $F$ & Total\\ \hline
+                $A$ & & & & \\ \hline
+                $\barre{A}$ & & & & \\ \hline
                 Total & & & & 1200 \\ \hline
             \end{tabular}    
         \end{center}    
     \item Quelle est la probabilité que le billet vendu soit à tarif réduit ?
     \item Quelle est la probabilité que le billet vendu soit pour la scène Rap ?
-    \item Quelle est la probabilité que le billet soit à tarif plein pour la scène Raggae ?
-    \item Le billet est à plein tarif. Quelle est la probabilité qu'il soit pour la scène Rock ?
+    \item Quelle est la probabilité que le billet soit à tarif plein pour la scène Funk ?
+    \item Si le billet est à plein tarif, quelle est la probabilité qu'il soit pour la scène Jazz ?
     \item Sachant que le billet ne concerne pas la scène Rap, quelle est la probabilité qu'il soit à plein tarif ?
 \end{enumerate}
 
+
+
+\subsection{Demi pensionnaires}
+Dans un lycée, 60\% des élèves mangent à la cantine et parmi eux, 80\% prennent un dessert. Parmi ceux qui ne mangent pas à la cantine, seulement 30\% prennent un dessert.
+
+On choisit un élève de ce lycée au hasard, et on considère les évènement suivants :
+
+$\bullet$ $C$ : \og L'élève mange à la cantine \fg \\
+$\bullet$ $D$ : \og L'élève mange un dessert \fg
+\begin{enumerate}
+	 \item Traduire les données de l'énoncé en donnant les probabilités $\PP(C)$ , $\PP_C(D)$ et $\PP_{\barre{C}}(D)$
+	 \item Construire un arbre de probabilités pondéré représentant la situation, et y placer les probabilités données à la question précédente.
+	 \item Compléter les probabilités manquantes sur les branches de cet arbre.
+	 \item Calculer $\PP(C \cap D)$ et interpréter ce résultat dans le contexte de l'énoncé.
+\end{enumerate}
+
+
+
+\subsection{État grippal}
+Lors d'une épidémie de grippe, on vaccine un tiers de la population. On constate qu'un malade sur dix est vacciné et que la grippe touche un quart de la population.
+
+On choisit un individu au hasard dans la population et on note les évènements :
+
+$\bullet$ $V$ : \og L'individu est vacciné \fg \\
+$\bullet$ $M$ : \og L'individu est malade \fg 
+
+\begin{enumerate}
+	\item Grâce aux informations de l'énoncé, déterminer $\PP(M)$ , $\PP(V)$ et $\PP_M(V)$
+	\item Construire un arbre pondéré permettant de représenter la situation et y placer, si possible, les probabilités de la question précédente.
+	\item On choisit un individu vacciné au hasard.
+	\begin{enumerate}
+		\item Exprimer la probabilité que cet individu soit malade à l'aide des évènements $M$ et $V$.
+		\item Calculer alors la probabilité qu'un individu vacciné soit malgré tout malade.
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{On mélange les formules}
+\begin{enumerate} \setlength{\itemsep}{1mm}
+	\item Les évènements $A$ et $B$ vérifient $\PP(\barre{A}) = 0,3$ et $\PP_A(B) = 0,7$.  \\	
+	Combien vaut la probabilité $\PP(A \cap B)$ ?
+	\item On donne $\PP(A \cup B) = \dfrac{4}{5}$ , $\PP(A) = \dfrac{2}{5}$ et $\PP(B) = \dfrac{3}{5}$. \\	
+	Déterminer la valeur de $\PP_A(B)$ , puis celle de $\PP_B(A)$
+	\item En sachant que $\PP(\barre{A} \cap B) = \dfrac{1}{4}$ , que $\PP_{\barre{A}}(\barre{B}) = \dfrac{1}{2}$ et que $\PP(A \cap B) = \dfrac{1}{6}$ , combien vaut $\PP_A(B)$ ?
+\end{enumerate}
+
+
+
+\subsection{Et même une équation}
+On considère deux évènements $A$ et $B$ tels que $\PP(A \cup B) = 0,8$ , $\PP_A(B) = 0,3$ et $\PP_B(A) = 0,2$
+
+On note également $x = \PP(A \cap B)$
+\begin{enumerate}
+	\item En utilisant la formule des probabilités conditionnelles, exprimer $\PP_A(B)$ et $\PP_B(A)$ en fonction de $x$.
+	\item En utilisant la formule du crible (formule de l'union), établir une équation d'inconnue $x$
+	\item Résoudre cette équation pour trouver $\PP(A \cap B)$, et en déduire les valeurs de $\PP(A)$ et $\PP(B)$.
+\end{enumerate}
 
 
 
