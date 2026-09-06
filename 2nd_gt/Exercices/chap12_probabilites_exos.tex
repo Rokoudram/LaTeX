@@ -9,8 +9,6 @@
 
 \fancyhead[R]{2\up{nd} générale}            % En-tête droit
 \fancyhead[C]{Probabilités}
-\fancyhf[CF]{\footnotesize{ \copyright ~ Tous droits réservés ~ \copyright}}                     % En-tête central
-\setstretch{0.9}                           % Interligne
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,19 +49,19 @@ Décrire explicitement l'univers associé à chacune des expériences aléatoire
 Les tableaux suivants permettent-ils de définir une loi de probabilité ? Justifier.
 
 \begin{minipage}{0.5\linewidth}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{2}
 	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
 		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
 		\cellcolor{gray!25} \textbf{Probabilité} & $0,15$ & $0,2$ & $0,1$ & $0,35$ \\ \hline
-	\end{tabular}\\[3pt]
+	\end{tabular}\\[7pt]
 	\phantom{}\hspace{3cm} {\small Tableau \no1}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{2}
 	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
 		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
 		\cellcolor{gray!25} \textbf{Probabilité} & $0,2$ & $0,45$ & $0,1$ & $0,25$ \\ \hline
-	\end{tabular}\\[3pt]
+	\end{tabular}\\[7pt]
 	\phantom{}\hspace{3cm} {\small Tableau \no2}
 \end{minipage}
 
@@ -71,7 +69,7 @@ Les tableaux suivants permettent-ils de définir une loi de probabilité ? Justi
 
 \subsection{Un exercice pour Dechavanne}
 \begin{minipage}{0.25\linewidth}
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale=1.2]
 		\foreach \couleur/\i in {newblue/0 , newred/1 , newgreen/2 , newblue/3 , newgreen/4 , neworange/5 , newblue/6 , newgreen/7 , newred/8 , newgreen/9 , neworange/10 , newred/11}
 			\draw[line width = 0.5pt , fill = \couleur] (30*\i:2) arc (30*\i:30*\i+30:2) -- (0,0) -- (30*\i:2) -- cycle ;
 			
@@ -86,23 +84,24 @@ Les tableaux suivants permettent-ils de définir une loi de probabilité ? Justi
 		\item S'agit-il d'une situation d'équiprobabilité ?
 		\item Compléter le tableau ci-dessous modélisant la loi de probabilité associée à l'expérience aléatoire :
 		
-		\renewcommand{\arraystretch}{1.5}
+		\renewcommand{\arraystretch}{2}
 		\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
 			\cellcolor{gray!25} \textbf{Couleur} & Bleu & Rouge & Vert & Jaune \\ \hline
 			\cellcolor{gray!25} \textbf{Probabilité} & & & & \\ \hline
-		\end{tabular} 
-		
+		\end{tabular} \\[7pt]
 		\phantom{}\hspace{3cm}\textit{\small On arrondira les résultats au millième}
 	\end{enumerate}
 \end{minipage}
 
+
+\newpage
 
 
 \subsection{Chacun fait sa loi}
 Dans chacun des cas suivants, déterminer la valeur de $x$ pour laquelle les tableaux ci-dessous définissent une loi de probabilité :
 
 \begin{minipage}{0.5\linewidth}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{2}
 	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
 		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
 		\cellcolor{gray!25} \textbf{Probabilité} & $0,25$ & $0,3$ & $x$ & $0,2$ \\ \hline
@@ -110,7 +109,7 @@ Dans chacun des cas suivants, déterminer la valeur de $x$ pour laquelle les tab
 	\phantom{}\hspace{3cm} {\small Tableau \no1}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{1.75}
 	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
 		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
 		\cellcolor{gray!25} \textbf{Probabilité} & $x$ & $0,2$ & $3x$ & $0,4$ \\ \hline
@@ -119,7 +118,7 @@ Dans chacun des cas suivants, déterminer la valeur de $x$ pour laquelle les tab
 \end{minipage}
 
 \begin{minipage}{0.5\linewidth}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{1.75}
 	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
 		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
 		\cellcolor{gray!25} \textbf{Probabilité} & $\frac{1}{3}$ & $x$ & $\frac{1}{6}$ & $\frac{1}{12}$ \\ \hline
@@ -127,7 +126,7 @@ Dans chacun des cas suivants, déterminer la valeur de $x$ pour laquelle les tab
 	\phantom{}\hspace{3cm} {\small Tableau \no3}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{1.75}
 	\begin{tabular}{| P{2.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
 		\cellcolor{gray!25} \textbf{Issue} & A & B & C & D \\ \hline
 		\cellcolor{gray!25} \textbf{Probabilité} & $x$ & $2x$ & $3x$ & $4x$ \\ \hline
@@ -149,14 +148,13 @@ On place dans un sac opaque 9 tuiles comportant les lettres qui forment le mot \
 	Par exemple si l'on tire la tuile \og T \fg \, puis une tuile \og E \fg \, on notera l'issue TE.
 	\begin{enumerate}
 		\item Décrire explicitement l'univers associé à cette expérience aléatoire.
-		\item Combien d'issues réalisent l'évènement \og Tirer deux lettres identiques \fg \, ?
-		\item Combien d'issues réalisent l'évènement \og Le mot formé existe dans la langue française \fg \, ?
+		\item Peut-on affirmer que la probabilité d'obtenir deux fois de suite la même lettre est de $\dfrac{1}{11}$ ?
 	\end{enumerate}
 \end{enumerate}
 
 
 
-\subsection{Jeu de domino}
+\subsection{Jeu de dominos}
 \begin{minipage}{0.5\linewidth} \restoreskip
 	Un jeu de domino classique comprend 28 tuiles, sur lesquelles figurent toutes les paires de nombres possibles avec les nombres de 0 à 6. On a représenté ci-après un jeu de domino complet.
 	
@@ -173,7 +171,7 @@ On place dans un sac opaque 9 tuiles comportant les lettres qui forment le mot \
 	\begin{tikzpicture}[scale=0.5]
 		\foreach \i in {0,...,6}
 			\foreach \j in {\i,...,6}
-				\domino[\i][\j]({2.5*Mod(6*\i+\j-0.5*(\i*\i-\i),7)} , {-3.5/7*(6*\i+\j-0.5*(\i*\i-\i) - Mod(6*\i+\j-0.5*(\i*\i-\i),7) )});
+				\domino[\i][\j]({2.5*Mod(6*\i+\j-0.5*(\i*\i-\i),7)} , {-4/7*(6*\i+\j-0.5*(\i*\i-\i) - Mod(6*\i+\j-0.5*(\i*\i-\i),7) )});
 	\end{tikzpicture}
 \end{minipage}
 
@@ -222,7 +220,7 @@ Décrire explicitement les évènements suivants sous la forme d'un ensemble pui
 \begin{minipage}{0.6\linewidth}
 	Lors d'une très célèbre partie d'échec jouée en 1858 par Paul Morphy contre le duc de Brunswick et le comte Isouard de Vauvenargues, voici la position que l'on pouvait retrouver sur l'échiquier après les quelques premiers coups :
 	
-	\begin{enumerate}
+	\begin{enumerate} \setlength{\itemsep}{-1pt}
 		\item Si l'on choisit une pièce au hasard sur l'échiquier, quelle est la probabilité qu'il s'agisse d'un pion ?
 		\item Si l'on choisit une pièce au hasard parmi les pièces blanches, quelle est la probabilité qu'il s'agisse d'une pièce \og lourde \fg \, (Une tour ou une dame)
 		\item Si l'on choisit une pièce au hasard sur l'échiquier, quelle est la probabilité qu'elle se trouve sur une case sombre ?
@@ -234,6 +232,64 @@ Décrire explicitement les évènements suivants sous la forme d'un ensemble pui
 \begin{minipage}{0.4\linewidth}
 	\includegraphics[scale=0.3]{../../inputs/position_echiquier.png}
 \end{minipage}
+
+
+
+\subsection{En chien de faïence}
+Un carrelage de faïence comporte des carreaux disposés comme sur la figure ci-contre :
+
+\begin{minipage}{0.3\linewidth}
+	\begin{tikzpicture}[scale=0.6]
+		\fill[color=newgreen] (0,0) rectangle (9,9) ;
+		\fill[color=newred] (2,2) rectangle (7,7) ;
+		\fill[color=neworange] (0,0) rectangle (2,2) ;
+		\fill[color=neworange] (0,9) rectangle (2,7) ;
+		\fill[color=neworange] (9,0) rectangle (7,2) ;
+		\fill[color=neworange] (9,9) rectangle (7,7) ;
+		\draw[step=1] (0,0) grid (9,9) ; 
+		\draw[fill=white] (3,3) rectangle (6,6) ;
+	\end{tikzpicture}
+\end{minipage} 
+\begin{minipage}{0.7\linewidth}
+	Curtis lance une pièce au sol et regarde sur quel carreau la pièce atterrit.
+	\begin{enumerate}
+		\item Déterminer la probabilité que la pièce tombe sur un carreau de couleur rouge.
+		\item Si la pièce atterrit sur le bord extérieur du carrelage, quelle est la probabilité qu'elle tombe sur un carreau vert ?
+		\item Curtis a posé 9 nouveaux carreaux de sorte à remplir le motif du carrelage. Dans cette nouvelle disposition, la probabilité que la pièce tombe sur un carreau vert est égale à la probabilité que la pièce tombe sur un carreau de couleur rouge ou orange.\\
+		Expliquer pourquoi Curtis a forcément utilisé un carreau d'une autre couleur que celles déjà présentes.
+	\end{enumerate}
+\end{minipage} 
+
+
+
+\subsection{Une partie de carte ?}
+Dans le célèbre jeu UNO, voici la répartition des cartes :
+\begin{itemize}[label=$\bullet$] 
+	\item 20 cartes bleues, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 20 cartes rouges, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 20 cartes jaunes, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 20 cartes vertes, numérotées entre 0 et 9 (2 de chaque numéro)
+	\item 8 cartes \og +2 \fg \, (2 de chaque couleur)
+	\item 8 cartes \og INVERSION \fg \, (2 de chaque couleur)
+	\item 8 cartes \og PASSER UN TOUR \fg \, (2 de chaque couleur)
+	\item 4 cartes \og JOKER \fg
+	\item 4 cartes \og +4 \fg
+\end{itemize}
+
+D'après les règles du jeu, la dernière carte de la défausse doit être recouverte par une carte ayant le même numéro ou la même couleur. 
+
+Par exemple, si la pile de défausse contient une carte rouge qui est un 3, le joueur peut placer soit une carte rouge, soit une carte avec un 3 de n'importe quelle couleur.
+
+Les seules cartes pouvant être posées à tout moment sont les cartes \og JOKER \fg \, et \og +4 \fg
+
+On tire au hasard une carte dans un jeu complet de UNO.
+\begin{enumerate}
+	\item Combien de cartes un jeu complet de UNO comporte-t-il ?
+	\item Quelle est la probabilité que la carte tirée soit une carte spéciale ?
+	\item Quelle est la probabilité que la carte tirée soit de couleur verte ?
+	\item Quelle est la probabilité que la carte tirée porte un numéro ?
+	\item Quelle est la probabilité que la carte tirée puisse être jouée par-dessus un 7 de couleur jaune ?
+\end{enumerate}
 
 
 
@@ -288,63 +344,6 @@ On peint entièrement un cube en bleu puis on le découpe en plus petits cubes i
 	\item Quelle est la probabilité que le cube tiré ait exactement deux faces peintes ?
 \end{enumerate}
 \end{minipage}
-
-
-\subsection{Une partie de carte ?}
-Dans le célèbre jeu UNO, voici la répartition des cartes :
-\begin{itemize}[label=$\bullet$] 
-	\item 20 cartes bleues, numérotées entre 0 et 9 (2 de chaque numéro)
-	\item 20 cartes rouges, numérotées entre 0 et 9 (2 de chaque numéro)
-	\item 20 cartes jaunes, numérotées entre 0 et 9 (2 de chaque numéro)
-	\item 20 cartes vertes, numérotées entre 0 et 9 (2 de chaque numéro)
-	\item 8 cartes \og +2 \fg \, (2 de chaque couleur)
-	\item 8 cartes \og INVERSION \fg \, (2 de chaque couleur)
-	\item 8 cartes \og PASSER UN TOUR \fg \, (2 de chaque couleur)
-	\item 4 cartes \og JOKER \fg
-	\item 4 cartes \og +4 \fg
-\end{itemize}
-
-D'après les règles du jeu, la dernière carte de la défausse doit être recouverte par une carte ayant le même numéro ou la même couleur. 
-
-Par exemple, si la pile de défausse contient une carte rouge qui est un 3, le joueur peut placer soit une carte rouge, soit une carte avec un 3 de n'importe quelle couleur.
-
-Les seules cartes pouvant être posées à tout moment sont les cartes \og JOKER \fg \, et \og +4 \fg
-
-On tire au hasard une carte dans un jeu complet de UNO.
-\begin{enumerate}
-	\item Combien de cartes un jeu complet de UNO comporte-t-il ?
-	\item Quelle est la probabilité que la carte tirée soit une carte spéciale ?
-	\item Quelle est la probabilité que la carte tirée soit de couleur verte ?
-	\item Quelle est la probabilité que la carte tirée porte un numéro ?
-	\item Quelle est la probabilité que la carte tirée puisse être jouée par-dessus un 7 de couleur jaune ?
-\end{enumerate}
-
-
-
-\subsection{En chien de faïence}
-Un carrelage de faïence comporte des carreaux disposés comme sur la figure ci-contre :
-
-\begin{minipage}{0.3\linewidth}
-	\begin{tikzpicture}[scale=0.6]
-		\fill[color=newgreen] (0,0) rectangle (9,9) ;
-		\fill[color=newred] (2,2) rectangle (7,7) ;
-		\fill[color=neworange] (0,0) rectangle (2,2) ;
-		\fill[color=neworange] (0,9) rectangle (2,7) ;
-		\fill[color=neworange] (9,0) rectangle (7,2) ;
-		\fill[color=neworange] (9,9) rectangle (7,7) ;
-		\draw[step=1] (0,0) grid (9,9) ; 
-		\draw[fill=white] (3,3) rectangle (6,6) ;
-	\end{tikzpicture}
-\end{minipage} 
-\begin{minipage}{0.7\linewidth}
-	Curtis lance une pièce au sol et regarde sur quel carreau la pièce atterrit.
-	\begin{enumerate}
-		\item Déterminer la probabilité que la pièce tombe sur un carreau de couleur rouge.
-		\item Si la pièce atterrit sur le bord extérieur du carrelage, quelle est la probabilité qu'elle tombe sur un carreau vert ?
-		\item Curtis a posé 9 nouveaux carreaux de sorte à remplir le motif du carrelage. Dans cette nouvelle disposition, la probabilité que la pièce tombe sur un carreau vert est égale à la probabilité que la pièce tombe sur un carreau de couleur rouge ou orange.\\
-		Expliquer pourquoi Curtis a forcément utilisé un carreau d'une autre couleur que celles déjà présentes.
-	\end{enumerate}
-\end{minipage} 
 
 
 
