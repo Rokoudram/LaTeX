@@ -451,6 +451,115 @@ On note également $x = \PP(A \cap B)$
 
 
 
+\section{Indépendance d'évènements}
+
+\subsection{Première approche}
+On lance une pièce à pile ou face, puis on lance un dé cubique parfaitement équilibré.
+
+On considère les évènements suivants : 
+
+$\bullet$ $P$ : \og La pièce montre la face "Pile" \fg \\
+$\bullet$ $S$ : \og Le dé est tombé sur un 6 \fg 
+\begin{enumerate}
+	\item Le fait de lancer la pièce a-t-il une incidence physique sur le résultat du dé ?
+	\item Intuitivement, que peut-on conclure concernant les évènements $P$ et $S$ ?
+\end{enumerate}
+
+
+
+\subsection{Tirages successifs}
+Dans une urne contenant 4 boules bleues et 6 boules vertes, on tire deux boules l'une après l'autre sans remise. On considère alors les évènement suivants :
+
+$\bullet$  $V_1$ : « La première boule tirée est verte »\\
+$\bullet$  $V_2$ : « La deuxième boule tirée est verte »
+\begin{enumerate}
+	\item La réalisation de l'évènement $V_1$ modifie-t-elle les probabilités du deuxième tirage ?
+	\item Intuitivement, que peut-on conclure concernant les évènements $V_1$ et $V_2$ ?
+\end{enumerate}
+
+
+
+\subsection{Boules et indépendance}
+Une urne contient 12 boules numérotées de 1 à 12. On en tire une au hasard et on considère les évènements suivants :
+
+$\bullet$  $A$ : « Le numéro marqué sur la boule est pair » \\
+$\bullet$  $B$ : « Le numéro marqué sur la boule est un multiple de 3 »
+\begin{enumerate}
+	\item Décrire explicitement les évènement $A$ , $B$ et $A \cap B$
+	\item À l'aide de la formule des probabilités conditionnelles, déterminer $\PP_A(B)$
+    \item Les évènements A et B sont-ils indépendants ?
+    \item Et si l'on rajoutait la boule numéro 13 dans l'urne, serait-ce toujours le cas ?
+\end{enumerate}
+
+
+
+\subsection{Avec les formules}
+\begin{enumerate}
+	\item On considère deux évènements $A$ et $B$ tels que $\PP(A) = 0,2$ , $\PP(B) = 0,5$ et $\PP(A \cap B) = 0,1$
+	\begin{enumerate}
+		\item À l'aide de la formule des probabilités conditionnelles, déterminer la valeur de $\PP_A(B)$
+		\item Les évènements $A$ et $B$ sont-ils indépendants ?
+	\end{enumerate}
+	\item On considère deux évènements $A$ et $B$ tels que $\PP_B(A) = 0,5$ , $\PP_A(B) = 0,4$ et $\PP(A \cap B) = 0,2$
+	\begin{enumerate}
+		\item À l'aide de la formule des probabilités conditionnelles, isoler $\PP(A)$ en fonction de $\PP_A(B)$ et $\PP(A \cap B)$
+		\item En déduire la valeur de $\PP(A)$
+		\item Les évènements $A$ et $B$ sont-ils indépendants ?
+	\end{enumerate}	
+\end{enumerate}
+
+
+\subsection{Ordinateurs et voitures}
+Une étude réalisée sur les étudiants d’une université a permis d’établir que 70 \% des étudiants possèdent un ordinateur et que, parmi ceux-ci, 40 \% possèdent une automobile. On sait aussi que 55 \% des étudiants de l’université ne possèdent pas d’automobile. 
+ 
+On choisit au hasard un étudiant de cette université et on note O l’évènement « l’étudiant possède un ordinateur » et A l’évènement « l’étudiant possède une automobile ».
+
+Les événements O et A sont ils indépendants ?
+
+
+
+\subsection{Ils sont indépendants}
+Dans chacune de situations suivantes, les évènement $A$ et $B$ sont indépendants. Déterminer alors la probabilité manquante :
+\begin{enumerate}
+	\item Si $\PP(A) = 0,3$  et $\PP(B) = 0,4$ , combien vaut  $\PP(A \cap B)$ ?
+	\item Si $\PP_A(B)= \dfrac{1}{3}$ et $\PP(A \cap B) = \dfrac{1}{4}$ , combien vaut $\PP(A)$ ?
+	\item Si $\PP_B(A) = 0,5$ et $\PP_A(B) = 0,8$ , combien vaut $\PP(A \cap B)$ ?
+\end{enumerate}
+
+
+
+\subsection{Feux tricolores}
+Sur la route de son travail, Pierrick rencontre deux feux tricolores. Il a déterminé que la probabilité de devoir d'arrêter au premier feu est de $\frac{1}{3}$ et que celle de devoir s'arrêter au second est de $\frac{2}{5}$. Il a également déterminer qu'il y a une probabilité de $\frac{1}{2}$ de devoir s'arrêter à au moins un des deux feux tricolores.
+
+On considère les évènement $A_1$ et $A_2$ : \og Pierrick s'arrête au 1\up{er} (ou au 2\up{nd} feu \fg
+\begin{enumerate}
+	\item Exprimer à l'aide des évènements $A_1$ et $A_2$ la probabilité que Pierrick s'arrête à au moins un des deux feux tricolores.
+	\item Déterminer alors $\PP(A_1 \cap A_2)$ grâce à la formule du crible (formule de l'union)
+	\item En déduire la valeur de $\PP_{A_1}(A_2)$ en utilisant la formule des probabilités conditionnelles.
+	\item Peut-on conclure que ces deux feux tricolores fonctionnent indépendamment l'un de l'autre ?
+\end{enumerate} 
+
+
+
+\subsection{Élections truquées}
+Lors du dépouillement dans un bureau de vote, on décompte 80 votes à destinations de femmes politique se revendiquant de gauche, 40 pour des femmes de droite, 200 pour des hommes politiques se revendiquant de droite et 140 pour des hommes de gauche.
+
+On ouvre le bulletin d'un électeur au hasard, et on considère les évènements suivants :
+
+$\bullet$ $G$ : \og L'électeur a voté à gauche \fg\ \\
+$\bullet$ $F$ : \og L'électeur a voté pour une femme \fg\
+
+\begin{enumerate}
+	\item Dresser un tableau d'effectifs croisés permettant de représenter la situation.
+	\item Les évènements $F$ et $G$ sont-ils indépendants ?
+	\item Une personne mal intentionnée décide de truquer le vote en retirant $x$ bulletin en faveur d'hommes politiques orientés à droite.
+	\begin{enumerate}
+		\item Dresser un tableau d'effectifs croisés permettant de représenter cette nouvelle situation.
+		\item Exprimer $\PP_A(B)$ en fonction de $x$.
+		\item Existe-t-il une valeur de $x$ rendant les évènement $F$ et $G$ indépendants ?
+	\end{enumerate}
+\end{enumerate}
+
 
 
 \end{document}
