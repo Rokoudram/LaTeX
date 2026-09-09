@@ -51,72 +51,9 @@ Dans chacune des situations suivantes, décrire explicitement l'univers associé
 		\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
 			\cellcolor{gray!25} \textbf{Couleur} & Bleu & Rouge & Vert & Jaune \\ \hline
 			\cellcolor{gray!25} \textbf{Probabilité} & & & & \\ \hline
-		\end{tabular} 
-		
-		\phantom{}\hspace{3cm}\textit{\small On pourra arrondir les résultats au millième}
+		\end{tabular}
 	\end{enumerate}
 \end{minipage}
-
-
-
-\subsection{Maths et Scrabble}
-On place dans un sac opaque 9 tuiles comportant les lettres qui forment le mot \og EVENEMENT \fg \, sans considérer les accents éventuels sur les \og E \fg
-\begin{enumerate}
-	\item On tire une tuile au hasard dans ce sac et on note la lettre obtenue.
-	\begin{enumerate}
-		\item S'agit-il d'une situation d'équiprobabilité ?
-		\item Déterminer la loi de probabilité associée à cette expérience.
-	\end{enumerate}
-	\item On tire désormais successivement et sans remise deux tuiles dans ce sac et on s'intéresse au mot de deux lettres obtenu.\\
-	Par exemple si l'on tire la tuile \og T \fg \, puis une tuile \og E \fg \, on notera l'issue TE.
-	\begin{enumerate}
-		\item Décrire explicitement l'univers associé à cette expérience aléatoire.
-		\item Peut-on affirmer que la probabilité d'obtenir deux fois de suite la même lettre est de $\dfrac{1}{11}$ ?
-	\end{enumerate}
-\end{enumerate}
-
-
-
-\subsection{Sur la formule du crible}
-On considère $A$ et $B$ deux évènements d'un univers $\Omega$.
-\begin{enumerate} \setlength{\itemsep}{1mm}
-	\item Si $\PP(A)=\frac{1}{3}$ , $\PP(B)=\frac{1}{2}$ et $\PP(A \cap B)=\frac{1}{6}$ , quelle est la valeur de $\PP(A \cup B)$ ?
-	\item Si $\PP(A)=\frac{2}{5}$ , $\PP(B)=\frac{1}{15}$ et $\PP(A \cup B)=\frac{2}{3}$ , quelle est la valeur de $\PP(A \cap B)$ ?
-	\item Si $\PP(A)=\frac{1}{2}$ , $\PP(A \cup B)=\frac{3}{4}$ et $\PP(A \cap B)=\frac{1}{8}$ , quelle est la valeur de $\PP(B)$ ?
-\end{enumerate}
-
-
-
-\subsection{Coup de poker}
-On tire une carte au hasard dans un paquet de 32 cartes.
-
-On considère les évènements suivants :
-\begin{itemize}[label=$\bullet$]
-    \item P : \og La carte tirée porte un symbole $\spadesuit$ \fg
-    \item C : \og La carte tirée porte un symbole \textcolor{newred}{\large $\varheartsuit$} \fg
-    \item T : \og La carte tirée porte un symbole $\clubsuit$ \fg
-    \item R : \og La carte tirée est un roi \fg
-    \item D : \og La carte tirée est une dame \fg
-    \item N : \og La carte tirée porte un numéro \fg
-\end{itemize} \vspace{-2mm}
-\begin{enumerate}
-    \item Écrire à l'aide des évènements $P$, $C$, $T$, $R$, $D$, et $N$ les évènements décrits ci-dessous :
-    \begin{enumerate}
-        \item \og La carte tirée ne porte pas le symbole $\spadesuit$ \fg
-        \item \og La carte tirée est noire \fg
-        \item \og La carte tirée est un roi ou une dame \fg
-        \item \og La carte tirée porte un numéro et ne porte pas le symbole $\clubsuit$ \fg
-        \item \og La carte tirée est rouge \fg
-        \item \og La carte tirée est la dame de cœur \fg
-    \end{enumerate}
-\item Décrire les évènements suivants à l'aide d'une phrase : \\
-    \renewcommand{\arraystretch}{1.25}
-    \begin{tabular}{p{0.35\textwidth} p{0.35\textwidth} p{0.35\textwidth}}
-         a) $N\cap C$ & b) $\barre{T}$ & c) $C\cup R $ \\
-         d) $\barre{P\cap D}$ & e) $T\cap\barre{N}$ & f) $\barre{R\cup D}$ \\
-         g) $\barre{D}\cap\barre{N}$ & h) $N \cap (P \cup T)$ & i) $\barre{P\cup C\cup T}$ 
-    \end{tabular}
-\end{enumerate}
 
 
 
@@ -164,14 +101,75 @@ Exprimer à l'aide d'opérations sur les évènements (Intersection, union, cont
 
 
 
+\subsection{Maths et Scrabble}
+On place dans un sac opaque 9 tuiles comportant les lettres qui forment le mot \og EVENEMENT \fg \, sans considérer les accents éventuels sur les \og E \fg
+\begin{enumerate}
+	\item On tire une tuile au hasard dans ce sac et on note la lettre obtenue.
+	\begin{enumerate}
+		\item S'agit-il d'une situation d'équiprobabilité ?
+		\item Déterminer la loi de probabilité associée à cette expérience.
+	\end{enumerate}
+	\item On tire désormais successivement et sans remise deux tuiles dans ce sac et on s'intéresse au mot de deux lettres obtenu.\\
+	Par exemple si l'on tire la tuile \og T \fg \, puis une tuile \og E \fg \, on notera l'issue TE.
+	\begin{enumerate}
+		\item Décrire explicitement l'univers associé à cette expérience aléatoire.
+		\item Peut-on affirmer que la probabilité d'obtenir deux fois de suite la même lettre est de $\dfrac{1}{11}$ ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Coup de poker}
+On tire une carte au hasard dans un paquet de 32 cartes.
+
+On considère les évènements suivants :
+\begin{itemize}[label=$\bullet$]
+    \item P : \og La carte tirée porte un symbole $\spadesuit$ \fg
+    \item C : \og La carte tirée porte un symbole \textcolor{newred}{\large $\varheartsuit$} \fg
+    \item T : \og La carte tirée porte un symbole $\clubsuit$ \fg
+    \item R : \og La carte tirée est un roi \fg
+    \item D : \og La carte tirée est une dame \fg
+    \item N : \og La carte tirée porte un numéro \fg
+\end{itemize} \vspace{-2mm}
+\begin{enumerate}
+    \item Écrire à l'aide des évènements $P$, $C$, $T$, $R$, $D$, et $N$ les évènements décrits ci-dessous :
+    \begin{enumerate}
+        \item \og La carte tirée ne porte pas le symbole $\spadesuit$ \fg
+        \item \og La carte tirée est noire \fg
+        \item \og La carte tirée est un roi ou une dame \fg
+        \item \og La carte tirée porte un numéro et ne porte pas le symbole $\clubsuit$ \fg
+        \item \og La carte tirée est rouge \fg
+        \item \og La carte tirée est la dame de cœur \fg
+    \end{enumerate}
+\item Décrire les évènements suivants à l'aide d'une phrase : \\
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{p{0.35\textwidth} p{0.35\textwidth} p{0.35\textwidth}}
+         a) $N\cap C$ & b) $\barre{T}$ & c) $C\cup R $ \\
+         d) $\barre{P\cap D}$ & e) $T\cap\barre{N}$ & f) $\barre{R\cup D}$ \\
+         g) $\barre{D}\cap\barre{N}$ & h) $N \cap (P \cup T)$ & i) $\barre{P\cup C\cup T}$ 
+    \end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Sur la formule du crible}
+On considère $A$ et $B$ deux évènements d'un univers $\Omega$.
+\begin{enumerate} \setlength{\itemsep}{1mm}
+	\item Si $\PP(A)=\frac{1}{3}$ , $\PP(B)=\frac{1}{2}$ et $\PP(A \cap B)=\frac{1}{6}$ , quelle est la valeur de $\PP(A \cup B)$ ?
+	\item Si $\PP(A)=\frac{2}{5}$ , $\PP(B)=\frac{1}{15}$ et $\PP(A \cup B)=\frac{2}{3}$ , quelle est la valeur de $\PP(A \cap B)$ ?
+	\item Si $\PP(A)=\frac{1}{2}$ , $\PP(A \cup B)=\frac{3}{4}$ et $\PP(A \cap B)=\frac{1}{8}$ , quelle est la valeur de $\PP(B)$ ?
+\end{enumerate}
+
+
+
 \section{Probabilités conditionnelles}
 
 \subsection{Groupe sanguin}
 La répartition des différents groupes sanguins dans le monde a été donnée dans le tableau ci-après :
 \begin{center}
 	\renewcommand{\arraystretch}{1.5}
-	\begin{tabular}{| P{3cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
-	\cellcolor{gray!25} \diagbox[width=3.4cm,height=2.25\line]{\textbf{Rhésus}}{\textbf{Groupe}} & A & B & AB & O \\ \hline
+	\begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} | P{3cm} |} \hline
+	\cellcolor{gray!25} \diagbox[height=2.25\line]{\textbf{Rhésus}}{\textbf{Groupe}} & A & B & AB & O \\ \hline
 	Rhésus + & $35\%$ & $9,5\%$ & $3,5\%$ & $36\%$ \\ \hline
 	Rhésus - & $7\%$ & $1,5\%$ & $0,5\%$ & $7\%$ \\ \hline
 	\end{tabular}
@@ -193,9 +191,9 @@ La répartition des différents groupes sanguins dans le monde a été donnée d
 \subsection{Ordinateurs}
 Dans une entreprise, la direction fait un sondage pour savoir quel type d'ordinateur est utilisé par les salariés. Les résultats obtenus sont classés dans le tableau ci-contre :
 \begin{center}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{1.75}
     \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
-	    \diagbox{Type}{Marque}& Apple & Windows & Total\\ \hline
+	    \cellcolor{gray!25} \diagbox[height=2.25\line]{\textbf{Type}}{\textbf{Marque}}& Apple & Windows & Total\\ \hline
 	    Fixe & 15 &  & 50 \\ \hline
 	    Portable &  & &  \\ \hline
 	    Total & 35 & & 80 \\ \hline
@@ -219,7 +217,7 @@ $\bullet N$ : \og La voiture a été vendue neuve \fg
 
 On sait que 400 voitures neuves ont été vendues cette année, et que parmi elles 150 étaient électriques. Au total, 350 voitures électriques ont été vendues, et au cours de l'année le concessionnaire a vendu un total de 1\,000 voitures.
 \begin{center}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{1.75}
     \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
 		\cellcolor{gray} & $E$ & $\barre{E}$ & Total\\ \hline
 	    $N$ & & &  \\ \hline
@@ -374,7 +372,7 @@ $\bullet$ $A$ : \og Le billet est à plein tarif \fg
 
 \begin{enumerate}
     \item Recopier et compléter le tableau d'effectifs suivant :
-    \renewcommand{\arraystretch}{1.75}
+    \renewcommand{\arraystretch}{2}
         \begin{center}
             \begin{tabular}{| P{3cm} | P{3cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
                 \cellcolor{gray} & $J$ & $R$ & $F$ & Total\\ \hline

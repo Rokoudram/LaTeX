@@ -1,0 +1,80 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/macros_tikz.tex} 		   	% ----- Macros utiles TikZ
+
+
+\fancyhead[R]{T\up{ale} technologique}            % En-tête droit
+\fancyhead[C]{Probabilités}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\subsection*{Activité \no 1}
+
+\begin{minipage}{0.5\textwidth} \restoreskip
+	Un carrelage de faïences comporte des carreaux disposés comme sur la figure ci-contre. On ne connait pas la couleur des carreaux centraux.
+
+	On sait en revanche que si on lance une pièce sur ce carrelage, la probabilité qu'elle tombe sur un carreau vert est égale à la probabilité qu'elle tombe sur un carreau rouge ou orange.
+	
+	De combien de couleurs, au minimum, ce carrelage de faïences est-il composé ?
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.4\textwidth}
+	\begin{tikzpicture}[scale=0.7]
+		\fill[color=newgreen] (0,0) rectangle (9,9) ;
+		
+		\fill[color=neworange] (0,0) rectangle (2,2) ;
+		\fill[color=neworange] (0,9) rectangle (2,7) ;
+		\fill[color=neworange] (9,0) rectangle (7,2) ;
+		\fill[color=neworange] (9,9) rectangle (7,7) ;
+		\fill[color=neworange] (4,1) rectangle (5,8) ;
+		\fill[color=neworange] (1,4) rectangle (8,5) ;
+		
+		\fill[color=newred] (2,2) rectangle (7,7) ;
+		\draw[fill=white] (3,3) rectangle (6,6) ;
+		\draw[step=1] (0,0) grid (9,9) ;
+		
+		\foreach \i in {3.5,4.5,5.5}{
+			\foreach \j in {3.5,4.5,5.5}{
+				\draw (\i,\j) node {?} ;
+			}
+		}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection*{Activité \no 2}
+On considère $x$ un nombre entier compris entre $0$ et $30$.
+
+Une urne contient 100 cubes en bois dont 60 sont bleus et les autres sont rouges. 
+
+Parmi les cubes bleus, 40$\%$ ont leurs faces marquées d'un cercle, 20$\%$ ont leurs faces marquées d'un losange, et les autres sont marqués d'une étoile. 
+
+Parmi les cubes rouges, 20$\%$ ont leurs faces marquées d'un cercle, $x$ ont leur faces marquées d'un losange, et les autres sont marqués d'une étoile.
+
+On tire au hasard un cube dans l'urne.
+\begin{enumerate}
+    \item Compléter le tableau d'effectifs croisés ci-après :
+		\begin{center}
+			\renewcommand{\arraystretch}{2}
+			\begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} | P{3cm} |} \hline
+				\cellcolor{gray!25} \diagbox[height=3\line]{\textbf{Couleur}}{\textbf{Symbole}} & Cercle & Losange & Étoile & Total \\ \hline
+				Bleu & & & &  \\ \hline
+				Rouge & & & & \\ \hline
+				Total & & & & \\ \hline
+			\end{tabular}
+		\end{center}
+	\item Pour quelle valeur de $x$ la probabilité de tirer un cube marqué d'un losange est-elle égale à la probabilité de tirer un cube marqué d'une étoile ?
+\end{enumerate}
+
+
+\end{document}
