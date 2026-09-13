@@ -1,0 +1,112 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_cours.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Méthode de résolution graphique}
+\fancyhf[CF]{\footnotesize{Lycée Polyvalent Irène et Frédéric Joliot-Curie}}           % En-tête central
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\begin{methode}{Résoudre graphiquement une équation}
+	\begin{minipage}{0.55\textwidth} \restoreskip
+		On a tracé dans le repère ci-contre la courbe représentative de la fonction $f$.
+		
+		On cherche à résoudre graphiquement l'équation : \[f(x) = 2\]
+		
+		On trace donc une droite horizontale à la hauteur $y=4$ et on note les points d'intersection entre cette droite et la courbe de la fonction $f$. Les abscisses de ces points d'intersection seront les solutions de l'équation.
+		
+		L'ensemble des solutions de cette équation est donc \[ \Scal = \{-0,4 ~;~ 0,6 ~;~ 3 \} \]
+	\end{minipage} \hspace{5mm}
+	\begin{minipage}{0.4\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+        		xmin = -2 , xmax = 5 , ymin = -1 , ymax = 3.5 ,
+        		axis lines = middle , ytick distance = 1 , xtick distance = 1,
+        		grid=major,
+        		ticklabel style = {font = \footnotesize},
+        		enlargelimits = { abs = 0.2 }
+			]
+				
+				\addplot[color = newblue , samples = 100 , line width = 2pt , domain = -2:5]
+				{sin(deg(pi/2*(x+1))) + 5/4 + x/4} ;
+				
+				\draw[color = newblue] (3,3) node {$\Ccal_f$} ;
+				
+				\draw[color = newred , dashed , line width = 1pt] (-2,2) -- (5,2) ;
+				\draw[color = newred , dashed , line width = 1pt] (-0.36,2) node {$\bullet$} -- (-0.36,0) node[below] {\tiny $-0,4$} ;
+				\draw[color = newred , dashed , line width = 1pt] (0.6,2) node {$\bullet$} -- (0.6,0) node[below] {\tiny $0,6$} ;
+				\draw[color = newred , dashed , line width = 1pt] (3,2) node {$\bullet$} -- (3,0) ;
+				
+			\end{axis}
+		\end{tikzpicture}
+	\end{minipage}
+\end{methode}
+
+
+
+\begin{methode}{Résoudre graphiquement une inéquation}
+	On a tracé dans le repère ci-dessous la courbe représentative de la fonction $g$, et on cherche a résoudre graphiquement l'inéquation $g(x) \geq 3$
+	
+	Pour ce faire, on trace également la droite horizontale à la hauteur $y=3$, et on sépare le repère en deux zones distinctes. 
+	
+	\textcolor{newgreen}{\textbf{En vert}} : les portions du repère où la courbe représentative de la fonction $g$ se situe au-dessus de l'ordonnée $y=3$ 
+	
+	\textcolor{newred}{\textbf{En rouge}} : les portions du repère où la courbe représentative de la fonction $g$ se situe en-dessous de l'ordonnée $y=3$
+	
+	\begin{tikzpicture}
+		\begin{axis}[
+				height = 8cm , width = 20cm ,
+		   		xmin = -5 , xmax = 5 , ymin = -1 , ymax = 7 ,
+        		axis lines = middle , ytick distance = 1 , xtick distance = 1,
+        		grid=major,
+        		ticklabel style = {font = \footnotesize},
+        		enlargelimits = { abs = 0.2 }
+		]
+			
+			\addplot[color = newblue , samples = 100 , line width = 2pt , domain = -5:-3]
+			{0.5*x^2 + 5*x + 13.5} ;
+			\addplot[color = newblue , samples = 100 , line width = 2pt , domain = -3:-1.5]
+			{-0.89*x^3 - 6.67*x^2 - 14*x - 3} ;
+			\addplot[color = newblue , samples = 100 , line width = 2pt , domain = -1.5:0]
+			{0.443*x^3 - 3*x + 3} ;
+			\addplot[color = newblue , samples = 100 , line width = 2pt , domain = 0:2]
+			{-0.25*x^3 + 1.5*x^2 - 3*x +3} ;
+			\addplot[color = newblue , samples = 100 , line width = 2pt , domain = 2:4]
+			{0.5*x^2 - 2*x + 3} ;
+			\addplot[color = newblue , samples = 100 , line width = 2pt , domain = 4:5]
+			{-x^2 + 10*x - 21} ;
+			
+			\draw[color = newblue] (-3,3) node {\Large $\bullet$} (0,3) node {\Large  $\bullet$} (4,3) node {\Large  $\bullet$} ;
+			
+			\draw[fill = newred , opacity = 0.15] (-5,-1) rectangle (-3,3) ;
+			\draw[fill = newred , opacity = 0.15] (0,3) rectangle (4,-1) ;
+			\draw[fill = newgreen , opacity = 0.15] (-3,3) rectangle (0,7) ;
+			\draw[fill = newgreen , opacity = 0.158] (4,3) rectangle (5,7) ;
+			
+			\draw[line width = 2pt , dashed] (-5,3) -- (5,3) ;
+
+		\end{axis}
+	\end{tikzpicture}
+	
+	Comme l'on cherche à résoudre l'inéquation $g(x) \geq 3$ , les zones correspondantes sont les vertes.
+	
+	On voit donc que l'ensemble des solutions de cette inéquation est la réunion des deux intervalles $[-3 ~;~ 0]$ et $[4 ~;~ 5]$. \\
+	Ces intervalles sont bien fermés, car on veut que $g(x)$ soit supérieure \textbf{ou égale} à $3$.
+	
+	Finalement l'ensemble des solutions de l'inéquation $g(x) \geq 3$ est $\Scal = [-3 ~;~ 0] \bbigcup [4 ~;~ 5]$
+
+\end{methode}
+
+
+\end{document}

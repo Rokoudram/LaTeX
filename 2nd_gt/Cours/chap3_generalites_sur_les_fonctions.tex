@@ -20,7 +20,7 @@
 \section{Vocabulaire et notations}
 
 \begin{definition}{Fonction numérique}
-	Une \textbf{fonction numérique} est un objet mathématiques qui a un nombre donné associe un autre nombre unique.
+	Une \textbf{fonction numérique} est un objet mathématiques qui, à un nombre donné, associe un autre nombre unique.
 
 	On appelle généralement une fonction par la lettre $f$, on note $x$ le nombre injecté dans la fonction, et $y$ le nombre qui en ressort.
 
@@ -108,9 +108,30 @@ Voyons deux exemples pour déterminer un domaine de définition via une expressi
 \begin{exemple}{Valeur interdite}
 	On considère la fonction $f$ définie par $f(x)=\dfrac{x}{x-1}$
 	
-	Pour déterminer $\Dcal_f$ le domaine de définition de la fonction $f$, il faut se demander pour quelles valeurs de $x$ il est possible de calculer la valeur de $f(x)$
+	Pour déterminer $\Dcal_f$ le domaine de définition de la fonction $f$, il faut se demander pour quelles valeurs de $x$ il est possible de calculer la valeur de $f(x)$ , ou à l'inverse : \textbf{pour quelle(s) valeur(s) de $x$ est-il impossible de calculer $f(x)$ ?}
 	
+	Dans notre cas la seul interdiction est de diviser par $0$. Il faut donc que le dénominateur de $\dfrac{x}{x-1}$ soit différent de $0$ , c'est à dire que $x$ doit être différent de $1$.
 	
+	On peut donc écrire que $\Dcal_f = ]-\infty ~;~ 1[ \bbigcup ]1 ~;~ +\infty[$
+	
+	Ou encore $\Dcal_f = \RR \setminus \{ 1 \}$
+	
+	On dira alors que $1$ est une \textbf{valeur interdite} de la fonction $f$.
+\end{exemple}
+
+\begin{exemple}{Un domaine plus complexe}
+	On considère la fonction $g$ définie par $g(x) = \dfrac{\sqrt{x-2}}{x-4}$
+	
+	On se pose la même question : \textbf{pour quelle(s) valeur(s) de $x$ est-il impossible de calculer $g(x)$ ?}
+	
+	Dans un premier temps, il faut que le dénominateur soit différent de $0$, on voit donc que le nombre $4$ est une valeur interdite de la fonction $g$.
+	
+	Dans un deuxième temps, il faut s'assurer que le nombre à l'intérieur de la racine carrée est positif. \\
+	Or $x-2 \geq 0 \Longleftrightarrow x \geq 2$ , il faut donc que $x$ appartienne à l'intervalle $[2 ~;~ +\infty[$
+	
+	En rassemblant les deux conditions, on voit que $\Dcal_g$ est l'intervalle $[2 ~;~ +\infty[$ , mais privé du nombre $4$. On peut donc écrire :
+	
+	$\Dcal_g = [2 ~;~ 4[ \bbigcup ]4 ~;~ +\infty[$
 \end{exemple}
 
 
@@ -142,7 +163,7 @@ Pour représenter une fonction, on trace une courbe dans un repère qui permet d
         			enlargelimits = { abs = 0.2 }
         		]
 
-			\draw[color=newred , dashed , line width = 2pt] (0,1.5) node[left] {$y$} -- (2.5,1.5) node[above] {$(x~;~y)$} node {x} -- (2.5,0) node[below] {$x$} ;        		
+			\draw[color=newred , dashed , line width = 2pt] (0,1.5) node[left] {$y$} -- (2.5,1.5) node[above] {$(x~;~y)$} node {x} -- (2.5,0) node[below] {$x$} ;
         		
         		\end{axis}
         	\end{tikzpicture}
@@ -191,7 +212,7 @@ En ayant en tête le fonctionnement d'un système de coordonnées, on peut maint
 	\end{minipage} \hspace{3mm}
 	\begin{minipage}{0.4\linewidth}
 		\begin{tikzpicture}
-        		\begin{axis}[
+        	\begin{axis}[
         			xmin = -3 , xmax = 2 , ymin = 0 , ymax = 4 ,
         			axis lines = middle , ytick distance = 1 , xtick distance = 1,
         			grid=major,
@@ -204,10 +225,10 @@ En ayant en tête le fonctionnement d'un système de coordonnées, on peut maint
 			
 			\draw[color=newred] (1.75,1.5) node {$\Ccal_f$} ;
 			
-			\draw[color=newred] (-2,1) node {x} ;
-			\draw[color=newred] (0,1) node {x} ;
-			\draw[color=newred] (1,1) node {x} ;
-			\draw[color=newred] (-1,2) node {x} ;
+			\draw[color=newred] (-2,1) node {\large x} ;
+			\draw[color=newred] (0,1) node {\large x} ;
+			\draw[color=newred] (1,1) node {\large x} ;
+			\draw[color=newred] (-1,2) node {\large x} ;
 					
         		\end{axis}
     		\end{tikzpicture}
@@ -218,6 +239,7 @@ En ayant en tête le fonctionnement d'un système de coordonnées, on peut maint
 \begin{remarque}
 	Attention à ne pas confondre une fonction et sa courbe représentative, il s'agit de deux objets différents ! Une courbe est un ensemble de points, alors qu'une fonction est un objet qui transforme des nombres en d'autres nombres.
 \end{remarque}
+
 
 
 

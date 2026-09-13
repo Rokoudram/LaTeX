@@ -1,0 +1,68 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=100pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ..................................................\\[10mm] Nom : ....................................................... }{}{Classe : ......................... \\[10mm] Date : .........................}
+
+\footer{}{\footnotesize Lycée polyvalent Irène et Frédéric Joliot Curie}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\begin{center}
+	\textbf{\large Automatismes \no 2 (Entraînement)}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\arraystretch}{3}
+
+\begin{center}
+	\begin{tabular}{| P{2cm} | P{10cm} | P{5cm} |} \hline
+		\textbf{n°} & \textbf{Question} & \textbf{Réponse} \\ \hline
+		1 & Vrai ou faux : si $x$ est un nombre entier, alors $x^x$ est forcément positif. &  \\ \hline 
+		2 & Calculer la moyenne entre $6$ et son inverse sous la forme d'une fraction irréductible.  &  \\ \hline 
+		3 & Quelle est l'unique solution de l'équation $5x + 18 = 13x - 6$ ? &  \\ \hline 
+		4 & Écrire le nombre $\left(\dfrac{2^4}{4^5}\right)^2$ sous la forme $2^n$ avec $n$ un nombre entier. &  \\ \hline 
+		5 & Donner la valeur du nombre $3^8 \times \dfrac{3^7}{3^{14}}$ &  \\ \hline 
+		6 & Écrire sous forme de fraction irréductible : $\dfrac{2}{3} + \dfrac{3}{4} + \dfrac{4}{5}$   &  \\ \hline 
+	\end{tabular}
+\end{center}
+
+
+
+\newpage
+\newgeometry{left=30pt, right=30pt, top=30pt, bottom=55pt}
+
+
+\begin{center}
+	\underline{\textbf{Correction}}
+\end{center}
+
+\begin{enumerate}[itemsep = 3mm]
+	\item FAUX : le nombre $(-3)^{-3}$ est négatif , pourtant $-3$ est bien un nombre entier.
+	
+	\item $\dfrac{6 + \frac{1}{6}}{2} = \dfrac{\frac{6 \times 6}{6} + \frac{1}{6}}{2} = \dfrac{\frac{36}{6} + \frac{1}{6}}{2} = \dfrac{\frac{37}{6}}{2} = \dfrac{37}{12}$
+	
+	\item $5x + 18 = 13x - 6 \Longleftrightarrow 18 = 8x -6 \Longleftrightarrow 24 = 8x \Longleftrightarrow 3 = x$
+	
+	\item $\left(\dfrac{2^4}{4^5}\right)^2 = \left(\dfrac{2^4}{(2^2)^5}\right)^2 = \left(\dfrac{2^4}{2^{10}}\right)^2 = (2^{-6})^2 = 2^{-12}$
+	
+	\item $3^8 \times \dfrac{3^7}{3^{14}} = 3^8 \times 3^{-7} = 3^1 = 3$
+	
+	\item $\dfrac{2}{3} + \dfrac{3}{4} + \dfrac{4}{5} = 
+	\dfrac{2 \times 20}{3 \times 20} + \dfrac{3 \times 15}{4 \times 15} + \dfrac{4 \times 12}{5 \times 12} =
+	\dfrac{40}{60} + \dfrac{45}{60} + \dfrac{48}{60} = \dfrac{133}{60} $
+\end{enumerate}
+
+
+\end{document}
