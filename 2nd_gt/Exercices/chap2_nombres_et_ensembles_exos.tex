@@ -97,20 +97,33 @@ Déterminer le plus petit ensemble usuel auquel appartiennent les nombres suivan
 
 
 
+\subsection{Ensembles géométriques}
+\begin{minipage}{0.6\textwidth}
+	Compléter les pointillés par le symbole adapté parmi $\subset$ , $\not\subset$ , $\in$ ou $\notin$ en vous appuyant sur la figure représentée ci-contre :
+	
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{P{0.3\textwidth} P{0.3\textwidth} P{0.3\textwidth}}
+		$[AB]$ \ldots\ldots $(AB)$ & $C$ \ldots\ldots $(DE)$ & $C$ \ldots\ldots $[DE]$ \\
+		$[DF)$ \ldots\ldots $[AD)$ & $(AG)$ \ldots\ldots $[BC)$ & $[BG]$ \ldots\ldots $[AC]$
+	\end{tabular}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.4\textwidth}
+	\begin{tikzpicture}
+		\draw (0,0.5) -- (2,1) node {$\bullet$} node[above] {$A$} -- (4.667,1.667) node {$\bullet$} node[above] {$D$} -- (6,2) node {$\bullet$} node[above] {$F$} -- (7,2.25) ;
+		\draw (0,-1) -- (1,0) node {$\bullet$} node[right] {$G$} -- (3,2) node {$\bullet$} node[left] {$B$} -- (4,3) node {$\bullet$} node[right] {$C$} -- (5,4) ;
+		\draw (6,-1) -- (5.5,0) node {$\bullet$} node[right] {$E$} -- (3.5,4) ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
 \subsection{Détour décimal}
-Justifier que chacun des nombres suivants sont des nombres décimaux en les écrivant sous la forme $\frac{a}{10^n}$ avec $a\in\ZZ$ et $\nN$ :
+Justifier que chacun des nombres suivants est un nombre décimal en l'écrivant sous la forme $\frac{a}{10^n}$ avec $a\in\ZZ$ et $\nN$ :
 
+\renewcommand{\arraystretch}{2.5}
 \begin{tabular}{p{0.23\linewidth} p{0.23\linewidth} p{0.23\linewidth} p{0.23\linewidth}}
-	$A=-3,46$ & $B=\frac{6}{5}$ & $C=\frac{17}{4}$ & $D=\frac{-9}{25}$ \\
-	$E=\frac{1,1}{50}$ & $F=\frac{-77}{5^4}$ & $G=\frac{1}{2^3\times5^5}$ & $H=\frac{144}{5\times20^6}$
-\end{tabular}
-
-
-
-\subsection{Avec quelques pièges}
-Déterminer le plus petit ensemble usuel auquel appartiennent les nombres suivants : \\
-\begin{tabular}{P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth}}
-	$A = \dfrac{-123}{3}$ & $B = \dfrac{123}{40}$ & $C = \sqrt{1,44}$ & $D = \sqrt{40}$
+	$A=-3,46$ & $B=\dfrac{6}{5}$ & $C=\dfrac{17}{4}$ & $D=\dfrac{-9}{25}$ \\
+	$E=\dfrac{1,1}{50}$ & $F=\dfrac{-77}{5^4}$ & $G=\dfrac{1}{2^3\times5^5}$ & $H=\dfrac{144}{5\times20^6}$
 \end{tabular}
 
 
@@ -119,18 +132,25 @@ Déterminer le plus petit ensemble usuel auquel appartiennent les nombres suivan
 Remplir chacune des cases du tableau suivant avec le symbole $\in$ ou $\notin$ :
 
 \begin{center}
-\renewcommand{\arraystretch}{2.5}
-\begin{tabular}{| P{4cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
-	\diagbox[innerwidth=4cm]{Nombre}{Ensemble} & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
-	$\dfrac{1,3}{2}$ & & & & & \\ \hline
-	$\sqrt{2}$ & & & & & \\ \hline
-	$-\dfrac{4}{3}$ & & & & & \\ \hline
-	$(-3)^5$ & & & & & \\ \hline
-	$0,00196\times10^5$ & & & & & \\ \hline
-	$\dfrac{432}{12}$ & & & & & \\ \hline
-\end{tabular}
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{| P{4cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+		\diagbox[innerwidth=4cm]{Nombre}{Ensemble} & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
+		$\dfrac{1,3}{2}$ & & & & & \\ \hline
+		$\sqrt{2}$ & & & & & \\ \hline
+		$-\dfrac{4}{3}$ & & & & & \\ \hline
+		$(-3)^5$ & & & & & \\ \hline
+		$0,00196\times10^5$ & & & & & \\ \hline
+		$\dfrac{432}{12}$ & & & & & \\ \hline
+	\end{tabular}
 \end{center}
 
+
+
+\subsection{Avec quelques pièges}
+Déterminer le plus petit ensemble usuel auquel appartiennent les nombres suivants : \\
+\begin{tabular}{P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth} P{0.23\linewidth}}
+	$A = \dfrac{-123}{3}$ & $B = \dfrac{123}{40}$ & $C = \sqrt{1,44}$ & $D = \sqrt{40}$
+\end{tabular}
 
 
 \section{Intervalles}
@@ -149,14 +169,14 @@ Pour chaque encadrement ou inégalité ci-après, écrire dans quel intervalle s
 \subsection{Représentation sur la droite réelle}
 Représenter chacun des intervalles suivants sur les droites réelles données ci-dessous :
 
-$I_1 = [-5 ~;~ 3]$ \qquad $I_2 = ]-\infty  ~;~  7]$ \qquad $I_3 = [-7  ~;~  8[$ \qquad $I_4 = ]1  ~;~  +\infty [$ \qquad $I_5 = ]-8  ~;~ -1 [$
+$I_1 = [-5 ~;~ 3]$ \qquad $I_2 = ]-\infty  ~;~  7]$ \qquad $I_3 = [-7  ~;~  8[$ \qquad $I_4 = ]1  ~;~  +\infty [$ \qquad $I_5 = ]-8  ~;~ -1 [$ \\[10pt]
 
 \begin{tikzpicture}
 	\foreach \i in {1,...,5} {
-		\draw[-Stealth , line width=1pt] (-8.5,-2*\i) node[left] {\Large $I_{\i}$} -- (10.5,2*-\i) ;
+		\draw[-Stealth , line width=1pt] (-8.5,-2.25*\i) node[left] {\Large $I_{\i}$} -- (10.5,2.25*-\i) ;
     		\foreach \j in {-8,...,10} {
-			\draw (\j,-2*\i) node {|};
-        		\draw (\j,-2*\i) ++(0,-0.5) node {$\j$};
+			\draw (\j,-2.25*\i) node {|};
+        		\draw (\j,-2.25*\i) ++(0,-0.5) node {$\j$};
         		}
         	}
 \end{tikzpicture}
@@ -174,7 +194,7 @@ Pour chaque encadrement ci-après, écrire dans quel intervalle se situe le nomb
 
 
 
-\subsection{Encadrements linéaires}
+\subsection{Encadrements affines}
 Pour chacun des encadrements suivants, déterminer l'intervalle dans lequel se situe le nombre $x$ :
 
 \renewcommand{\arraystretch}{2}
@@ -238,10 +258,11 @@ Pour chacune des intersections suivantes, les représenter sur la droite réelle
 
 
 \subsection{À vous de trouver}
-\begin{enumerate}
+\begin{enumerate}[itemsep = 5pt]
+	\item Proposer deux intervalles $I$ et $J$ distincts tels que $I \cap J = \emptyset$
 	\item Proposer deux intervalles $I$ et $J$ distincts tels que $I \cup J = [2 ~;~ 3]$
 	\item Proposer deux intervalles $I$ et $J$ distincts tels que $I \cap J = ~]2 ~;~ 3[$
-	\item Proposer deux intervalles $I$ et $J$ distincts tels que $I \cap J = \emptyset$
+	\item Proposer deux intervalles $I$ et $J$ distincts tels que $I \cup J = [1 ~;~ 5[$ et $I \cap J = ~[2 ~;~ 4]$
 \end{enumerate}
 
 
@@ -318,9 +339,10 @@ Résoudre dans $\RR$ chacune des inéquations suivantes :
 \subsection{Recentrer les intervalles}
 Écrire chacun des intervalles suivants sous la forme $[a+d;a-d]$ avec $a$ un nombre réel et $d$ un nombre strictement positif, puis les décrire à l'aide d'une valeur absolue :
 
+\renewcommand{\arraystretch}{2.5}
 \begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
 	$A=[-5;7]$ & $B=[11;28]$ & $C[-28;9]$ \\
-	$D=\left[\frac{1}{2};10\right]$ & $E=\left[\frac{5}{3};\frac{7}{2}\right]$ & $F=\left[\frac{-11}{3};\frac{11}{5}\right]$
+	$D=\left[\dfrac{1}{2};10\right]$ & $E=\left[\dfrac{5}{3};\dfrac{7}{2}\right]$ & $F=\left[\dfrac{-11}{3};\dfrac{11}{5}\right]$
 \end{tabular}
 
 
