@@ -1,0 +1,48 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{
+    a5paper,
+    landscape,
+    left=20pt,
+    right=30pt,
+    top=70pt,
+    bottom=40pt
+}
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper]
+
+\usepackage{atbegshi}
+  % duplicate the content at shipout time
+  \AtBeginShipout{
+    \pgfpagesshipoutlogicalpage{1}\copy\AtBeginShipoutBox
+    \pgfpagesshipoutlogicalpage{2}\box\AtBeginShipoutBox
+    \pgfshipoutphysicalpage
+  }
+
+
+\fancyhead[RF]{}
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Nombres et ensembles}
+\fancyhf[CF]{\footnotesize{Lycée Polyvalent Irène et Frédéric Joliot Curie}}                     % En-tête central
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+
+TEXTE
+
+
+
+\end{document}
