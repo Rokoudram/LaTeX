@@ -1,0 +1,70 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{
+    a5paper,
+    landscape,
+    left=20pt,
+    right=30pt,
+    top=60pt,
+    bottom=55pt
+}
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper]
+
+\usepackage{atbegshi}
+  % duplicate the content at shipout time
+  \AtBeginShipout{
+    \pgfpagesshipoutlogicalpage{1}\copy\AtBeginShipoutBox
+    \pgfpagesshipoutlogicalpage{2}\box\AtBeginShipoutBox
+    \pgfshipoutphysicalpage
+  }
+
+
+\fancyhead[RF]{}
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Nombres et ensembles}
+\fancyhf[CF]{\footnotesize{Lycée Polyvalent Irène et Frédéric Joliot Curie}}                     % En-tête central
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section*{Activité d'introduction}
+
+\begin{enumerate}[itemsep = 5mm]
+	\item À l'aide d'une division euclidienne, déterminer l'écriture décimale des nombres suivants : 
+	
+	$A = \dfrac{749}{32}$ \qquad , \qquad $B = \dfrac{121}{6}$ \qquad et \qquad $C = \dfrac{1423}{30}$
+	
+	
+	\item On donne ci-après les $60$ premiers chiffres dans l'écriture décimale des nombre $\pi$ et $\sqrt{2}$ : \\
+	\begin{enumerate}
+		\item[$\pi = 3,$]
+		141592653589793238462643383279502884197169399375105820974944 \\
+		592307816406286208998628034825342117067982148086513282306647 \\
+		
+		\item[$\sqrt{2} = 1,$]
+		414213562373095048801688724209698078569671875376948073176679 \\
+		737990732478462107038850387534327641572735013846230912297024 
+	\end{enumerate}
+
+	Remarquez-vous un motif dans ces deux écritures décimales ?	
+	
+	\item Proposez un critère selon lequel il vous semblerait pertinent de classer les nombres.
+\end{enumerate}
+
+
+
+
+\end{document}
+
