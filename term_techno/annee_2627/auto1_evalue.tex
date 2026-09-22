@@ -74,7 +74,7 @@ Pour chacune des questions suivantes, une et une seule des réponses proposées 
 		
 
 %%%%% QUESTION 3 %%%%%		
-	\item Quelle est l'unique solution réelle de l'équation $28x - 15 = 12x + 34$ ?
+	\item Quelle est l'unique solution réelle de l'équation $26x - 15 = 12x + 34$ ?
 	
 		\hspace{\linewidth-\textwidth}
 		\renewcommand{\arraystretch}{1.75}
@@ -154,9 +154,91 @@ Pour chacune des questions suivantes, une et une seule des réponses proposées 
 			A & B & C & D \\ \hline
 			$48$ & $38$ & $40$ & $50$ \\ \hline
 		\end{tabular}	
-
 		
 \end{enumerate}
+
+
+
+\newpage
+
+\begin{center}
+	\textbf{\underline{\Large Correction}}
+\end{center}
+
+
+\begin{enumerate}[itemsep = 2mm]
+	\item
+	\begin{minipage}{0.5\textwidth} \restoreskip
+		$x^2 - 1\,234 = 0 \Longleftrightarrow x^2 = 1\,234$
+		
+		On se demande donc s'il existe des nombres dont le carré vaut $1\,234$
+		
+		Il en existe \textbf{2} comme l'illustre le schéma ci-contre :
+	\end{minipage} \hspace{15mm}
+	\begin{minipage}{0.5\textwidth}
+	    \begin{tikzpicture}[scale=0.65] 
+	        \begin{axis}[xmin = -40, xmax = 40, ymin = -0, ymax = 1500,
+	            grid = none, ticks = none ,
+	            axis lines = middle, enlargelimits = { abs = 0.2 },
+	            clip = false
+	            ]
+	        
+	        \addplot[color=newblue , samples = 100 , domain = -38:38 , line width = 2pt]
+	        {x^2} ;
+	        
+	        \draw[color=newred , dashed] (-35,0) node[below] {$-\sqrt{1234}$} -- (-35,1234) -- (0,1234) node[above right] {$1234$} -- (35,1234) -- (35,0) node[below] {$\sqrt{1234}$} ;
+	        
+	        \draw[color=newblue] (45,1300) node {$y=x^2$} ;
+
+	        
+	        \end{axis}
+	    \end{tikzpicture}  
+	\end{minipage}
+	
+	\item
+	Le nombre total d'adhérents est : $120 + 90 + 30 + 60 = 300$ et il y a $120$ pratiquants du chess-boxing.
+	
+	Or $\dfrac{120}{300} = \dfrac{3 \times 40}{3 \times 100} = \dfrac{40}{100}$ \quad , donc $40\%$ des adhérents pratiquent le chess-boxing.
+	
+	\item
+	$\begin{WithArrows}[format = cc]
+    & 26x - 15 = 12x + 34 \Arrow{On ajoute 15 de chaque côté} \\
+    \Leftrightarrow  & 26x = 12x + 49 \Arrow{On soustrait $12x$ de chaque côté} \\
+    \Leftrightarrow  & 14x = 49 \Arrow{On divise par $14$ de chaque côté} \\
+    \Leftrightarrow  & x = \dfrac{49}{14}  = \dfrac{7}{2} = 3,5 
+    \end{WithArrows}$
+
+	\item
+	Après avoir donné $30\%$ de ses bonbons, il en reste $70\%$ à Amir. Il a donc mangé $40\%$ de ces $70\%$
+	
+	$\dfrac{40}{100} \times \dfrac{70}{100} = \dfrac{4 \times 7}{10 \times 10} = \dfrac{28}{100}$ \quad , Amir a donc mangé $28\%$ de ses bonbons.
+	
+	\item On note $P$ le prix initial de l'article. On sait que ce prix $P$ a subi une baisse de $40\%$, or diminuer de $40\%$ revient à multiplier par $\left(1 - \dfrac{40}{100}\right) = \dfrac{60}{100}$ \\
+	On sait donc que $P \times \dfrac{60}{100} = 150$ , alors $P = 150 \times \dfrac{100}{60} = \dfrac{30 \times 5 \times 100}{30 \times 2} = \dfrac{5 \times 50 \times 2}{2} = 250$ 
+	
+    \item
+    Augmenter de $50\%$ revient à multiplier par $\left(1 + \dfrac{50}{100}\right)$ \\
+    Diminuer de $50\%$ revient à multiplier par $\left(1 - \dfrac{50}{100}\right)$
+    
+    $\left(1 + \dfrac{50}{100}\right) \times \left(1 - \dfrac{50}{100}\right) = 1,5 \times 0,5 = 0,75$
+    
+    La quantité $Q$ a donc diminué de $25\%$
+    
+    \item
+    Les entrées au plein tarif pour les élèves coûtent $30 \times 15$\euro $\,= 450$\euro \\    
+    On applique la réduction de $20\%$ : $450 \times \left(1 - \dfrac{20}{100}\right) = 450 \times 0,8 = 360$ \\    
+    Les enseignants paient leur entrée au plein tarif, donc il faut rajouter $3 \times 45$\euro $\,=45$\euro
+    
+    Le prix de la sortie est donc de $360$\euro $\,+15$\euro $\,=405$\euro
+    
+    \item
+	Augmenter de $40\%$ revient à multiplier par $\left(1 + \dfrac{40}{100}\right)$ \\
+	Or \quad $\left(1 + \dfrac{40}{100}\right) \times \left(1 + \dfrac{40}{100}\right) = 1,4 \times 1,4 = 1,96$
+    
+\end{enumerate}
+
+
+
 
 \end{document}
 
