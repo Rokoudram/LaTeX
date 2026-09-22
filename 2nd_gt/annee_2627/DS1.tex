@@ -35,7 +35,7 @@ Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées 
 
 \begin{enumerate}
 	\item Énoncer la propriété (avec des inconnues) traduisant l'égalité suivante : $3^8 \times 2^8 = 6^8$
-	\item Justifier que pour tout nombre $x$ strictement positif et pour tout nombre entier $n$ , $\dfrac{1}{x^n} = x^{-n}$
+	\item $\star$ Justifier que pour tout nombre $x$ strictement positif et pour tout nombre entier $n$ , $\dfrac{1}{x^n} = x^{-n}$
 \end{enumerate}
 
 
@@ -56,10 +56,89 @@ Vous devrez faire apparaître les détails de chacun des calculs demandés ci-ap
 \begin{enumerate}
 	\item Écrire le nombre $4^3 \times 8^5$ sous la forme $2^n$ avec $n$ un nombre entier.
 	\item Écrire sous la forme d'une fraction irréductible le nombre $\dfrac{1 + \frac{2}{5}}{3 - \frac{5}{4}}$
-	\item Écrire le nombre $\sqrt{\dfrac{42}{35}} \times \sqrt{\dfrac{30}{64}}$ sous la forme d'une fraction irréductible.
+	\item $\star$ Écrire le nombre $\sqrt{\dfrac{42}{35}} \times \sqrt{\dfrac{30}{64}}$ sous la forme d'une fraction irréductible.
 	\item Simplifier au maximum le calcul suivant : $\sqrt{\dfrac{10^5 \times 5^3 }{4^{-2} \times 8^3}}$
 \end{enumerate}
 
+
+
+\section*{Exercice bonus}
+\textit{Cet exercice ne sera pris en compte que si toutes les autres questions ont été traitées}
+\begin{enumerate}
+	\item Écrire le nombre $\dfrac{2^5\times9^2\times3^3\times4^2}{8^3\times3^7\times9^3}$ sous la forme $3^n$ avec $n$ un nombre entier.
+	\item Déterminer la valeur du nombre $\sqrt{13 + \sqrt{ 7 + \sqrt{\dfrac{5}{2} + \sqrt{\dfrac{9}{4}}}}}$
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left=30pt,right=30pt, top=30pt, bottom=55pt}
+\setcounter{section}{0}
+\color{newblue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{center}
+	\Large \textbf{\underline{Correction}}
+\end{center}
+
+
+
+
+\section{Questions de cours}
+\begin{enumerate}
+	\item La propriété attendue est : $x^n \times y^n = (x \times y)^n$
+	\item $\dfrac{1}{x^n} = \dfrac{x^0}{x^n} = x^{0-n} = x^{-n}$
+\end{enumerate}
+
+
+
+\section{Vrai / Faux}
+\begin{enumerate}[label=\underline{Affirmation \no \arabic*} : ,leftmargin=* , itemsep=1mm]
+	\item \textbf{FAUX}
+	
+	$\dfrac{21 \times 35 \times 27}{49 \times 45 \times 36}
+	= \dfrac{3 \times 7 \times 7 \times 5 \times 9 \times 3}{7 \times 7 \times 9 \times 5 \times 9 \times 4}
+	= \dfrac{3 \times \not{7} \times \not{7} \times \not{5} \times \not{9} \times 3}{\not{7} \times \not{7} \times \not{9} \times \not{5} \times 9 \times 4} = \dfrac{9}{9 \times 4} = \dfrac{1}{4}$
+	
+	Or $\dfrac{1}{4}$ n'est pas un nombre entier.
+	
+	\item \textbf{FAUX} 
+	
+	$\sqrt{27} \times \sqrt{72} = \sqrt{9 \times 3} \times \sqrt{36 \times 2} = 3 \sqrt{3} \times 6 \sqrt{2} = 18 \times \sqrt{3} \times \sqrt{2} = 18 \sqrt{6}$
+	
+	Or $6$ n'est pas un carré parfait, donc $18\sqrt{6}$ n'est pas un nombre entier.
+\end{enumerate}
+
+
+\section{Calculs}
+\begin{enumerate}[itemsep = 3mm]
+	\item $4^3 \times 8^5 = {(2^2)}^3 \times {(2^3)}^5 = 2^6 \times 2^{15} = 2^{6+15} = 2^{21}$
+	
+	\item
+	$\dfrac{1 + \frac{2}{5}}{3 - \frac{5}{4}} =
+	\dfrac{\frac{1 \times 5}{5} + \frac{2}{5}}{\frac{3 \times 4}{4} - \frac{5}{4}}
+	= \dfrac{\frac{5}{5} + \frac{2}{5}}{\frac{12}{4} - \frac{5}{4}}
+	= \dfrac{\,\frac{7}{5}\,}{\frac{7}{4}}
+	= \dfrac{7}{5} \times \dfrac{4}{7} = \dfrac{\not 7}{5} \times \dfrac{4}{\not 7} = \dfrac{4}{5}$
+	
+	\item
+	$\sqrt{\dfrac{42}{35}} \times \sqrt{\dfrac{30}{64}} 
+	= \sqrt{\dfrac{42 \times 30}{35 \times 64}}
+	= \sqrt{\dfrac{6 \times 7 \times 6 \times 5}{7 \times 5 \times 64}}
+	= \sqrt{\dfrac{6 \times \not 7 \times 6 \times 5}{\not 7 \times 5 \times 64}}
+	= \sqrt{\dfrac{36}{64}} = \dfrac{\sqrt{36}}{\sqrt{64}} = \dfrac{6}{8} = \dfrac{3}{4}$
+	
+	\item
+	$\sqrt{\dfrac{10^5 \times 5^3 }{4^{-2} \times 8^3}}
+	= \sqrt{\dfrac{10^5 \times 5^3 }{{(2^2)}^{-2} \times {(2^3)}^3}}
+	= \sqrt{\dfrac{10^5 \times 5^3 }{{2^{-4} \times 2^9}}}
+	= \sqrt{\dfrac{10^5 \times 5^3 }{2^5}}
+	= \sqrt{\left( \dfrac{10}{2} \right)^5 \times 5^3 }
+	= \sqrt{5^5 \times 5^3 } = \sqrt{5^8} = \sqrt{{(5^4)}^2} = 5^4 $
+	
+\end{enumerate}
 
 
 \end{document}
