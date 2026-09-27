@@ -1,0 +1,156 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_exos.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+\input{../../../Latex/inputs/macros_tikz.tex} 		   	% ----- Macros utiles TikZ
+
+\fancyhead[R]{T\up{ale} Technologique}            % En-tête droit
+\fancyhead[C]{Suites arithmétiques}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Rappels sur les suites}
+
+\subsection{Calculs explicites}
+Calculer les $5$ premiers termes des suites numériques définies ci-après :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	$u_n = n^2 - 3n$ & $v_n = \dfrac{1-n}{1+2n}$ & $w_n = 2^n + n$
+\end{tabular}
+
+
+
+\subsection{Calculs récurrents}
+Calculer les $5$ premiers termes des suites numériques définies ci-après :
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+	$\begin{cases} u_0 = 1 \\ u_{n+1} = 2u_n - 3\end{cases}$ &
+	$\begin{cases} v_1 = 2 \\ v_{n+1} = 1 + \dfrac{2}{v_n} \end{cases}$ &
+	$\begin{cases} w_0 = 1 \\ w_{n+1} = w_n + 2n \end{cases}$
+\end{tabular}
+
+
+
+\subsection{Modélisation}
+Pour chacune des situations suivantes, proposer une suite définie par récurrence qui permet de la modéliser :
+\begin{enumerate}
+    \item Dans une tube a essai on place 5 bactéries. Le nombre de bactéries double à chaque heure.
+    \item Un gisement de pétrole a produit 60000 barils en l'an 2000 et sa production augmente de 1500 barils chaque année.
+    \item Pour la naissance de leur fille, M et Mme Rakotobe placent 1000\euro\, sur un compte bancaire à taux d'intérêts annuels de $5\%$
+    \item Dans un jeu vidéo une guilde se forme avec 25 membres. Chaque mois la guilde parvient à recruter 10 nouveaux membres, mais 20\% des anciens membres arrêtent de jouer car ils préfèrent utiliser leur temps libre pour résoudre des problèmes de mathématiques.
+\end{enumerate}
+
+
+
+\subsection{Extrapolation}
+Donner une formule de récurrence ou une expression explicite pour les suites suivantes :
+
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{p{0.18\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth} p{0.15\textwidth}}
+    a) $u_0 = 2$ & $u_1 = 4$ & $u_2 = 6$ & $u_3 = 8$ & $u_4 = 10$ \\
+    b) $u_0 = 4 $ & $ u_1 = 8$ & $u_2 = 16$ & $u_3 = 32$ & $u_4 = 64$ \\
+    c) $u_1 = 1$ & $u_2 = 2$ & $u_3 = 4$ & $u_4 = 7$ & $u_5 = 11$ \\
+    d) $u_2 = \frac{1}{2}$ & $u_3 = \frac{2}{3}$ & $u_4 = \frac{3}{4}$ & $u_5 = \frac{4}{5}$ & $u_6 = \frac{5}{6}$ 
+\end{tabular}
+
+
+
+\section{Suites arithmétiques}
+
+\subsection{Premiers termes}
+\begin{enumerate}
+	\item On considère $(u_n)$ une suite arithmétique de premier terme $u_0 = 3$ et de raison $r = 2$ \\
+	Calculer $u_1$ , $u_2$ et $u_3$
+	\item On considère $(v_n)$ une suite arithmétique de premier terme $v_0 = -5$ et de raison $r = \dfrac{3}{2}$ \\
+	Calculer $v_1$ , $v_2$ et $v_3$
+\end{enumerate}
+
+
+
+\subsection{Question de nature}
+Les suites suivantes sont-elles des suites arithmétiques ? Vous justifierez votre réponse :
+
+\hspace{2cm} $u_n = 3n + 5 \quad$ ; \quad $v_n = n^2 + n \quad$ ; \quad $w_n = \dfrac{n}{n+1} \quad$ ; \quad $x_n = (n+1)^2 - n^2$
+
+
+
+\subsection{Progression arithmétique}
+\begin{enumerate}
+	\item Les trois nombres suivants sont-ils en progression arithmétique ? \quad $\dfrac{1}{3} \quad$ ; \quad $\dfrac{1}{4}$ \quad et \quad $\dfrac{1}{5}$
+	\item Les trois nombres suivants sont-ils en progression arithmétique ? \quad $-5 \quad$ ; \quad $2$ \quad et \quad $9$
+	\item Les trois nombres suivants sont-ils en progression arithmétique ? \quad $3 \quad$ ; \quad $\dfrac{23}{6}$ \quad et \quad $\dfrac{14}{3}$
+\end{enumerate}
+
+
+
+\subsection{Forme explicite}
+\begin{enumerate}
+	\item On considère $(u_n)$ une suite arithmétique de raison $r = -2$ et de premier terme $u_0 = 35$
+	\begin{enumerate}
+		\item Exprimer $u_n$ en fonction de $n$
+		\item Calculer alors $u_{10}$ et $u_{100}$
+	\end{enumerate}
+	\item On considère $(v_n)$ une suite arithmétique de raison $r = \dfrac{2}{3}$ et de premier terme $v_0 = 2$
+	\begin{enumerate}
+		\item Exprimer $v_n$ en fonction de $n$
+		\item Calculer alors $v_{54}$ et $v_{123}$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Petits pots de miel}
+Un apiculteur note ses productions de miel année après année. Les résultats qu'il a collectés sont donnés dans le tableau ci-contre :
+\begin{center}
+	\begin{tabular}{| P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+		Année & 2020 & 2021 & 2022 & 2023 & 2024 & 2025 \\ \hline
+		Production (En millier de pots) & & & & & & \\ \hline
+	\end{tabular}
+\end{center}
+
+
+
+\subsection{Elles ont perdu la raison}
+\begin{enumerate}
+	\item On considère une suite arithmétique $(u_n)$ vérifiant $u_8 = 19$ et $u_{14} = 57$
+	\begin{enumerate}
+		\item Déterminer $r$ la raison de la suite $(u_n)$
+		\item En déduire alors la valeur de $u_0$
+		\item Calculer la valeur du terme $u_{100}$
+	\end{enumerate}
+	\item On considère une suite arithmétique $(v_n)$ vérifiant $u_{23} = 48$ et $u_{31} = 34$
+	\begin{enumerate}
+		\item Déterminer $r$ la raison de la suite $(v_n)$
+		\item En déduire alors la valeur de $v_0$
+		\item Calculer la valeur du terme $u_{50}$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Problème de seuil}
+\begin{enumerate}
+	\item On considère une suite arithmétique $(u_n)$ de premier terme $u_0 = 5$ et de raison $r = 2$ \\
+	À partir de quel rang $n$ la suite $(u_n)$ dépassera-t-elle la valeur $1\,000$ ?
+	\item On considère une suite arithmétique $(v_n)$ de premier terme $v_0 = 521$ et de raison $r = -4$ \\
+	À partir de quel rang $n$ la suite $(v_n)$ deviendra-t-elle négative ?
+\end{enumerate}
+
+
+
+
+
+\section{Sommes de termes}
+
+
+
+
+\end{document}
