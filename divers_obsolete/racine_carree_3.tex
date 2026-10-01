@@ -1,0 +1,278 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../Latex/inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\fancyhead[R]{Compléments de mathématiques}
+\fancyhead[C]{Construire les nombres}
+\fancyhf[CF]{\footnotesize{Master M2E - S3}}
+
+
+\titlespacing{\section}{0pt}{2mm}{0pt}
+\titlespacing{\subsection}{0pt}{5mm}{1mm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\section{Méthode de Héron / Newton}
+
+\subsection{Approche géométrique}
+
+\begin{minipage}{0.55\linewidth} \restoreskip
+	L'objectif est de construire un carré d'aire $3$. On commence par tracer un rectangle $3:1$
+	
+	Un côté est trop long, l'autre est trop court; on trace alors un nouveau rectangle dont la longueur $\ell$ d'un des côtés est la moyenne des longueurs des deux côtés du rectangle précédent. Ainsi on s'assure de s'approcher de $\sqrt{3}$
+	
+	Pour conserver une aire égale à $3$, le deuxième côté de ce nouveau rectangle doit avoir une longueur de $\dfrac{3}{\ell}$
+	
+	On répète ensuite ce processus, construisant à chaque un nouveau rectangle s'approchant davantage d'un carré dont la longueur des côtés vaudrait $\sqrt{3}$
+	
+\end{minipage} \hspace{10mm}
+\begin{minipage}{0.4\linewidth}
+	\begin{tikzpicture}
+	
+	    % Premier rectangle
+	    \draw (0,0) rectangle (5,1.5);
+	
+	    \node[above] at (2.5,1.5) {$3$};
+	    \node[right] at (5,0.75) {$1$};
+	
+	    % Moyenne
+	    \draw[->, thick] (2.5,-0.2) -- node[right] {$\ell = \dfrac{3+1}{2}$} (2.5,-1.5);
+	
+	    % Deuxième rectangle
+	    \draw (1,-2) rectangle (4,-4);
+	    \draw (2.5 , -4.5) node {$\ell$};
+	    \draw (4 , -3) node[right] {$\dfrac{3}{\ell}$} ;
+
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Méthode des tangentes}
+\begin{minipage}{0.5\linewidth} \restoreskip
+	La méthode des tangentes permet de d'approximer un zéro d'une fonction.
+	
+	Pour approcher le nombre $\sqrt{3}$ il est donc naturel d'appliquer cette méthode à la fonction $f$ définie par $f(x) = x^2 - 3$
+	
+	La formule de récurrence associée est :
+	
+	$x_{n+1} = x_n - \dfrac{f(x_n)}{f'(x_n)}$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth}
+    \begin{tikzpicture}
+        \begin{axis}[
+			clip = false , height = 5.5cm , width = 10cm ,
+        	xmin = 0 , xmax = 3.5 , ymin = -0, ymax = 2.5,
+            grid = none ,
+            axis lines = middle, enlargelimits = { abs = 0.2 },
+            ticks = none
+            ]
+            
+            \addplot[domain = -0:3.15 , color = newblue , samples = 100 , line width = 2pt]
+            {e^(x-1)/3 - 0.25} ;
+            
+            \addplot[domain = 2.1:3.25 , color = newred , samples = 100 , line width = 1pt]
+            {e^2 * (x/3 - 2/3) - 0.25} ;
+            
+            \addplot[domain = 1.35:3.25 , color = newred , samples = 100 , line width = 1pt]
+            {e^(1.1) * (x/3 - 1.1/3) - 0.25} ;
+            
+            \addplot[domain = 0.88:3.25 , color = newred , samples = 100 , line width = 1pt]
+            {e^(0.35) * (x/3 - 0.35/3) - 0.25} ;
+            
+            \draw[color = newred , dashed] (3,0) node[below] {$x_0$} -- (3,2.21) node {$\bullet$} ;
+            \draw[color = newred , dashed] (2.1,0) node[below] {$x_1$} -- (2.1,0.75) node {$\bullet$} ;
+            \draw[color = newred , dashed] (1.35,0) node[below] {$x_2$} -- (1.35,0.225) node {$\bullet$} ;
+            \draw[color = newred , dashed] (0.88,0) node[below] {$x_3$} -- (0.88,0.048) node {$\bullet$} ;
+            
+            \draw[color = newblue] (2,2) node {$y=f(x)$} ;
+	
+        \end{axis}
+    \end{tikzpicture} 
+\end{minipage}
+
+
+
+\subsection{Modèle mathématique}
+Les deux méthodes (Héron \& Newton) mènent à construire la même suite pour approximer le nombre $\sqrt{3}$
+
+On pose $(u_n)$ définie par $\begin{cases} u_0 = 3 \\ u_{n+1} = \frac12 \left(u_n+\dfrac{3}{u_n} \right) \end{cases}$
+
+\begin{enumerate}
+
+    \item Par récurrence immédiate, on montre que $u_n > 0$ \qquad $\forall\nN$
+
+    \item On a $u_{n+1} - \sqrt3 = \dfrac{(u_n-\sqrt3)^2}{2u_n} > 0$ \quad donc $(u_n)$ est minorée par $\sqrt3$
+
+    \item On a $u_{n+1} - u_n = \dfrac{(u_n - \sqrt3)(u_n + \sqrt3)}{2u_n}$ \quad donc, d'après 1. et 2. , $(u_n)$ décroît.
+
+    \item D'après 2. et 3. , $(u_n)$ converge.
+
+    \item La fonction $f:x\longmapsto \dfrac12\left(x + \dfrac3x \right)$ est continue sur $\RR_+^*$, donc, d'après le théorème du point fixe :
+
+    $\limn u_n \in \{\xR \mid f(x)=x\}$ \qquad
+    
+    Or $f(x) = x \iff x = \pm\sqrt3$ \quad donc d'après 1. , $\limn u_n = \sqrt{3}$ \quad 
+\end{enumerate}
+
+
+
+\subsection{Approfondissement}
+On considère la fonction $\varphi$ définie par $\varphi : \begin{cases}\RR_+^* \longrightarrow \RR \\[5pt]
+x \longmapsto \dfrac{e^x+e^{-x}}{e^x-e^{-x}} \end{cases}$
+
+\begin{enumerate}
+    \item Déterminer $\operatorname{Im}(\varphi)$
+    
+    \item Justifier que $\varphi$ est bijective sur $\operatorname{Im}(\varphi)$
+
+    \item Exprimer $\varphi^{-1}(x)$ en fonction de $x$ , \quad $\forall x\in\operatorname{Im}(\varphi).$
+
+    \item Vérifier que $\varphi(x) + \dfrac{1}{\varphi(x)} = 2\varphi(2x)$
+
+    \item Montrer que $u_n = \sqrt3 \varphi \left(2^n \varphi^{-1}(\sqrt3)\right)$ , \quad $\forall \nN$
+
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+\section{Suite homographique}
+
+\subsection{Motivation}
+
+Comme l'on cherche à approximer le zéro d'une fonction quadratique, il est naturel de considérer une suite $(u_n)$ vérifiant la relation de récurrence $u_{n+1} = f(u_n)$ avec $f$ une fonction homographique, c'est à dire $f:x\mapsto\dfrac{ax+b}{cx+d}$
+
+On cherche donc des coefficients pour lesquels le nombre $\sqrt{3}$ est une solution de l'équation $\dfrac{ax+b}{cx+d} = x$
+
+Or $\dfrac{ax+b}{cx+d} = x \iff cx^2 + (d-a)x -b = 0$, \quad on peut donc poser $\begin{cases}a=1\\b=3\\c=1\\d=1\end{cases}$
+
+
+
+\subsection{Preuve de la convergence}
+On considère la suite $(u_n)$ définie par $\begin{cases}u_0 = 3 \\ u_{n+1} = \dfrac{u_n + 3}{u_n + 1}\end{cases}$
+
+On pose alors $v_n = \dfrac{u_n - \sqrt{3}}{u_n + \sqrt{3}}$
+
+\begin{enumerate}
+	\item On montre que la suite $(v_n)$ est géométrique de raison $q = \sqrt{3} - 2$\\
+	On peut alors conclure que $\limn v_n = 0$
+	
+	\item $v_n = \dfrac{u_n - \sqrt{3}}{u_n + \sqrt{3}} \iff u_n = \sqrt{3} \, \dfrac{1 + v_n}{1 - v_n}$ \\
+	On peut donc conclure que $\limn u_n = \sqrt{3}$
+	
+	\item On peut exprimer $u_n$ en fonction de $n$ : 
+	
+	$v_0 = -q = 2-\sqrt{3}$ , \quad ainsi $v_n = -(\sqrt{3}-2)^{n+1}$ \quad $\forall\nN$
+	
+	On obtient donc $u_n = \sqrt{3} \, \dfrac{1 - (\sqrt{3} - 2)^{n+1}}{1 + (\sqrt{3} - 2)^{n+1}}$
+\end{enumerate}
+
+
+
+\subsection{Approfondissement}
+Soit $(u_n)$ une suite vérifiant la relation de récurrence $u_{n+1} = \dfrac{au_n+b}{cu_n+d}$ \quad avec $c \neq0$ et $ad-bc \neq0$
+
+On considère l'équation $(E) : cx^2+(d-a)x -b = 0$
+
+\begin{enumerate}
+	\item On suppose que l'équation $(E)$ admet deux solutions réelles $\alpha$ et $\beta$
+	\begin{enumerate}
+		\item Montrer que la suite $(v_n)$ définie par $v_n = \dfrac{u_n-\alpha}{u_n-\beta}$ est géométrique de raison $q = \dfrac{c\beta+d}{c\alpha+d}$
+		\item Montrer que si $\abs{q} < 1$ alors la suite $(u_n)$ converge vers $\alpha$
+		\item Montrer que si $\abs{q} > 1$ alors la suite $(u_n)$ converge vers $\beta$
+		\item Que dire du cas $\abs{q} = 1$ ?
+	\end{enumerate}
+	
+	\item On suppose que l'équation $(E)$ admet une unique solution réelle $k$
+	\begin{enumerate}
+		\item Montrer que la suite $(w_n)$ définie par $w_n = \dfrac{1}{u_n-k}$ est arithmétique de raison $r = \dfrac{2c}{a+d}$
+		\item Étudier alors la convergence de la suite $(u_n)$
+	\end{enumerate}
+	
+	\item Que conclure si l'équation $(E)$ n'admet aucune solution réelle ?
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+\section{Méthode de la sécante}
+
+\subsection{Idée générale}
+La méthode de la sécante est similaire à la méthode de Newton en ce qu'elle permet d'approcher un zéro d'une fonction et se comprend graphiquement.
+
+Au lieu d'utiliser les tangentes (qui nécessitent de connaître la dérivée de la fonction $f$ et peuvent demander des calculs plus lourd pour un algorithme) on utilise les cordes de la courbe représentative de la fonction $f$.
+
+La formule de récurrence associée devient alors : $x_{n+2} = x_{n+1} - f(x_{n+1}) \, \dfrac{x_n - x_{n+1}}{f(x_n) - f(x_{n+1})}$
+
+
+
+\subsection{Application}
+Dans  notre cas on cherche à approcher un zéro de la fonction $f:x\mapsto x^2 - 3$
+
+On peut poser $x_0 = 1$ et $x_1 = 3$ afin de s'assurer que nos valeurs initiales ne sont pas trop éloignées du zéro recherché, sinon la méthode de la sécante pourrait ne pas converger.
+
+On a donc $\begin{cases}x_0 = 1 \quad x_1 = 3 \\ x_{n+2} = x_{n+1} - ({x_{n+1}}^2-3) \, \dfrac{x_{n+1} - x_n}{{x_{n+1}}^2 - {x^n}^2} \end{cases}$
+
+Après simplification on obtient $x_{n+2} = \dfrac{x_n x_{n+1} +3}{x_n + x_{n+1}}$
+
+On commence par montrer le résultat suivant : $\boxed {1 \leq x_n \leq 2}$ \quad $\forall n \geq 2$
+
+On vérifie que cette propriété est vraie aux rangs $2$ et $3$ ($x_2 = \frac{3}{2}$ et $x_3 = \frac{5}{3}$) puis on procède par récurrence.
+
+\begin{enumerate}
+	\item[i)] Soit $n\geq2$ tel que $x_n \geq 1$ et $x_{n+1} \geq 1$
+	\begin{align*}
+		x_{n+2} \geq 1 & \iff  \dfrac{x_n x_{n+1} +3}{x_n + x_{n+1}} \geq 1 \\
+		& \iff  x_n x_{n+1} -x_n - x_{n+1} + 3 \geq 0 \\
+		& \iff  (x_n - 1)(x_{n+1} - 1) + 2 \geq 0 \\
+		& \iff \underbrace{(x_n - 1)}_{\text{Positif}}\underbrace{(x_{n+1} - 1)}_{\text{Positif}} \geq -2 \qquad \text{Vrai}
+	\end{align*}
+	
+	\item[ii)] Soit $n\geq2$ tel que $x_n \leq 2$ et $x_{n+1} \leq 2$
+		\begin{align*}
+		x_{n+2} \leq 2 & \iff  \dfrac{x_n x_{n+1} +3}{x_n + x_{n+1}} \leq 2 \\
+		& \iff x_n x_{n+1} - 2x_n - 2x_{n+1} + 3 \leq 0 \\
+		& \iff (x_n - 2)(x_{n+1} - 2) - 1 \leq 0 \\
+		& \iff \underbrace{(2 - x_n)}_{\in[0,1]} \underbrace{(2 - x_{n+1})}_{\in[0,1]} \leq 1 \qquad \text{Vrai}
+	\end{align*}
+\end{enumerate}
+
+On a bien montré la propriété voulue.
+
+Posons maintenant $y_n = x_n - \sqrt{3}$ pour tout $\nN$. On cherche à montrer que $\limn y_n = 0$
+
+On commence par noter que $y_{n+2} = \dfrac{y_n y_{n+1}}{x_n + x_{n+1}}$
+
+On remarque également que $1 - \sqrt{3} \leq y_n \leq 2 - \sqrt{3}$ \quad $\forall n\geq2$ 
+
+On pose $q = \sqrt{3} -1$ et on montre par récurrence que $\abs{y_n} \leq q^n$ \quad $\forall n\geq2$
+
+Je me permets de passer les détails de l'initialisation.
+
+Soit $n\geq 2$ tel que $\abs{y_n} \leq q^n$ et $\abs{y_{n+1}} \leq q^{n+1}$
+
+Alors $\abs{y_{n+2}} = \abs{\dfrac{y_n y_{n+1}}{x_n + x_{n+1}}} \leq \dfrac{\abs{y_n} \abs{y_{n+1}}}{2} \leq \dfrac{q^n \times q^{n+1}}{2}
+\leq \dfrac{q^{2n+1}}{2} \leq q^{n+2}$ \quad car $2n+1 \geq n+2$
+
+On vient donc de montrer que $\limn y_n = 0$, \quad ce qui prouve bien que la suite $(x_n)$ converge vers $\sqrt{3}$
+
+
+
+
+\end{document}
