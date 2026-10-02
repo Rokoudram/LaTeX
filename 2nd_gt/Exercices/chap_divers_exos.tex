@@ -378,6 +378,195 @@ $ABCD$ est un parallélogramme
 
 
 
+\section{Parité de fonctions}
+
+\subsection{Identification}
+On a tracé ci-contre les courbes représentatives des fonctions $f$, $g$ et $h$.
+
+Déterminer si ces fonctions sont paires, impaires ou bien ni l'un ni l'autre :
+
+\hspace{-5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-2 , xmax=2 , ymin=-2 , ymax=2,
+        xtick distance = 0.5, ytick distance = 0.5,
+        axis lines = middle, enlargelimits = { abs = 0.1},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-2:2, samples=100, color=red!80!black]   
+    		{0.25*(x^3+2*sin(pi*deg(x)))};
+    		\draw[color=red!80!black] (1.25,1.25) node{$\Ccal_f$} ;
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-3:3, samples=100, color=green!70!black]   
+    		{2*cos(2*deg(x))+(sin(deg(x))+x)/(1+x^2)};
+    		\draw[color=green!70!black] (2.5,-1.5) node{$\Ccal_g$} ;
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-3:3, samples=100, color=blue!80!black]   
+    		{x^2+9/(1+x^2)+cos(pi*deg(x))-7.2};
+    		\draw[color=blue!80!black] (1.5,0.5) node{$\Ccal_h$} ;
+    		
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Complétion de la courbe}
+\begin{minipage}{0.35\linewidth}
+	\begin{tikzpicture}
+        \begin{axis}[xmin=-4 , xmax=4 , ymin=-2 , ymax=2,
+        xtick distance = 1, ytick distance = 0.5,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-4:-2, samples=100, color=blue!80!black]   
+    		{-x^3-9*x^2-24*x-18};
+    		\addplot[line width = 2pt , domain=-2:-0, samples=100, color=blue!80!black]   
+    		{0.5*x^3+1.5*x^2};
+    		\draw[color=blue!80!black] (1.5,0.5) node{$\Ccal_f$} ;
+    		
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.6\linewidth}
+	On a tracé dans le repère ci-contre $\Ccal_f$ la courbe représentative de la fonction $f$ sur l'intervalle $[-4~;~0]$
+	\begin{enumerate}
+		\item Tracer en rouge l'allure de $\Ccal_f$ sur l'intervalle $[0~;~4]$ si $f$ est une fonction paire.
+		\item Tracer en vert l'allure de $\Ccal_f$ sur l'intervalle $[0~;~4]$ si $f$ est une fonction impaire.
+	\end{enumerate}
+\end{minipage}
+
+
+
+\subsection{Informations manquantes}
+On a représenté dans les repères ci-contre une partie des courbes représentatives de trois fonctions fonctions $f$, $g$ et $h$ sur l'intervalle $[-3~;~3]$
+
+Compléter le tracé de ces courbes en sachant que ces trois fonctions sont paires :
+
+\hspace{-5mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.1},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=0:1, samples=100, color=green!70!black]   
+    		{-6*x^3+9*x^2-2};
+    		\addplot[line width = 2pt , domain=1:2, samples=100, color=green!70!black]   
+    		{x^3-4.5*x^2+6*x-1.5};
+    		\addplot[line width = 2pt , domain=2:3, samples=100, color=green!70!black]   
+    		{-3*x^3+22.5*x^2-54*x+42.5};
+    		
+    		\draw[color=green!70!black] (1.5,1.5) node{$\Ccal_f$} ;
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\draw[line width = 2pt , color = blue!80!black] (-3,2) -- (-2.5,2) -- (-2,1) ;
+        	\draw[line width = 2pt , color = blue!80!black] (-1,-1) -- (0,1) ;
+        	\draw[line width = 2pt , color = blue!80!black] (1,-1) -- (1.5,1) -- (2,1) ;
+        	
+        	\draw[color=blue!80!black] (1.5,1.5) node {$\Ccal_g$} ; 
+
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage} \hspace{3mm}
+\begin{minipage}{0.33\linewidth}
+    \begin{tikzpicture}[scale=0.95]
+        \begin{axis}[xmin=-3 , xmax=3 , ymin=-3 , ymax=3,
+        xtick distance = 1, ytick distance = 1,
+        axis lines = middle, enlargelimits = { abs = 0.2},
+    	grid=major , major grid style = {line width = 0.1pt ,draw = gray}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+        
+        	\addplot[line width = 2pt , domain=-2:-1, samples=100, color=red!80!black]   
+    		{-7*x^3-31.5*x^2-42*x-16};
+    		\addplot[line width = 2pt , domain=-0.5:-0, samples=100, color=red!80!black]   
+    		{-24*x^3-18*x^2+0.5};
+    		\addplot[line width = 2pt , domain=0.5:1, samples=100, color=red!80!black]   
+    		{-40*x^3+90*x^2-60*x+11.5};
+    		\addplot[line width = 2pt , domain=2:3, samples=100, color=red!80!black]   
+    		{-10*x^3+75*x^2-180*x+138};
+    		
+    		\draw[color=red!80!black] (0.5,1.5) node{$\Ccal_h$} ;
+    		
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Parité par étude algébrique}
+\begin{enumerate}
+	\item Démontrer que les fonctions suivantes sont paires : \\	
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		$f_1:x\mapsto 5-x^2$ & $f_2:x\mapsto \dfrac{1+x^2}{2+x^2}$ & $f_3:x\mapsto \dfrac{(3-x)(3+x)}{7+2x^4}$	
+	\end{tabular}
+	\item Démontrer que les fonctions suivantes sont impaires : \\	
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		$f_1:x\mapsto 3x(x^2+1)$ & $f_2:x\mapsto \dfrac{(1+x)(1-x)}{x^3}$ & $f_3:x\mapsto \dfrac{5}{2x}-\dfrac{x}{3+x^4}$	
+	\end{tabular}
+	\item Démontrer que les fonctions suivantes ne sont ni paires ni impaires: \\	
+	\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
+		$f_1:x\mapsto 1+x-x^2$ & $f_2:x\mapsto \dfrac{3+x}{2+x^2}$ & $f_3:x\mapsto x^3+2x^2-x+1$	
+	\end{tabular}
+\end{enumerate}
+
+
+
+\subsection{Une fonction presque impaire}
+On considère la fonction $f:x\mapsto \dfrac{1-2x}{x}$ définie sur $\RR^*$
+\begin{enumerate}
+	\item Montrer que la fonction $x$ n'est ni paire ni impaire.
+	\item Pour $a$ un certain réel, on définit la fonction $g$ par $g(x)=f(x)+a$
+	\begin{enumerate}
+		\item Montrer que $g(-x)=\dfrac{ax-1-2x}{x}$
+		\item Justifier qu'il existe une valeur de $a$ pour laquelle la fonction $g$ est paire puis la donner.
+	\end{enumerate}
+\end{enumerate}
+
+
 
 
 \end{document}
