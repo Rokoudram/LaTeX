@@ -43,7 +43,7 @@ Calculer les $5$ premiers termes des suites numériques définies ci-après :
 Pour chacune des situations suivantes, proposer une suite définie par récurrence qui permet de la modéliser :
 \begin{enumerate}
     \item Dans une tube a essai on place 5 bactéries. Le nombre de bactéries double à chaque heure.
-    \item Un gisement de pétrole a produit 60000 barils en l'an 2000 et sa production augmente de 1500 barils chaque année.
+    \item Un gisement de pétrole a produit 60\,000 barils en l'an 2000 et sa production augmente de 1500 barils chaque année.
     \item Pour la naissance de leur fille, M et Mme Rakotobe placent 1000\euro\, sur un compte bancaire à taux d'intérêts annuels de $5\%$
     \item Dans un jeu vidéo une guilde se forme avec 25 membres. Chaque mois la guilde parvient à recruter 10 nouveaux membres, mais 20\% des anciens membres arrêtent de jouer car ils préfèrent utiliser leur temps libre pour résoudre des problèmes de mathématiques.
 \end{enumerate}
@@ -107,6 +107,53 @@ Les suites suivantes sont-elles des suites arithmétiques ? Vous justifierez vot
 
 
 
+\subsection{Algorithmes}
+On considère les 3 programmes écrits en langage Python ci-contre. Parmi ceux-ci, lesquels définissent une suite arithmétiques ?
+
+\begin{minipage}{0.3\linewidth}
+	\renewcommand{\arraystretch}{1.25}
+	\tcbox[colframe=newred , colback=red!15 , arc=2pt , tcbox width = forced left]{
+    	    \begin{tabular}{p{5mm}|p{45mm}} 
+        	    \texttt{1} & \texttt{def u(n) :} \\
+            	\texttt{2} & \texttt{\quad u = 4} \\
+             	\texttt{3} & \texttt{\quad i = 0} \\
+             	\texttt{4} & \texttt{\quad while i < n :} \\
+             	\texttt{5} & \texttt{\quad \quad u = u + 2} \\
+             	\texttt{6} & \texttt{\quad return u} \\
+        	\end{tabular}
+    }
+	\begin{center} \texttt{ALGORITHME 1} \end{center}
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+	\renewcommand{\arraystretch}{1.25}
+	\tcbox[colframe=newred , colback=red!15 , arc=2pt , tcbox width = forced left]{
+    	    \begin{tabular}{p{5mm}|p{45mm}} 
+        	    \texttt{1} & \texttt{def v(n) :} \\
+            	\texttt{2} & \texttt{\quad a = -5} \\
+             	\texttt{3} & \texttt{\quad r = 4} \\
+             	\texttt{4} & \texttt{\quad v = a + r * n} \\
+             	\texttt{5} & \texttt{\quad return v} \\
+        	\end{tabular}
+    }
+	\begin{center} \texttt{ALGORITHME 2} \end{center}
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.3\linewidth}
+	\renewcommand{\arraystretch}{1.25}
+	\tcbox[colframe=newred , colback=red!15 , arc=2pt , tcbox width = forced left]{
+    	    \begin{tabular}{p{5mm}|p{45mm}} 
+        	    \texttt{1} & \texttt{def w(n) :} \\
+            	\texttt{2} & \texttt{\quad w = 4} \\
+             	\texttt{3} & \texttt{\quad i = 0} \\
+             	\texttt{4} & \texttt{\quad for i in range n} \\
+             	\texttt{5} & \texttt{\quad \quad w = w + i} \\
+             	\texttt{6} & \texttt{\quad return w} \\
+        	\end{tabular}
+    }
+	\begin{center} \texttt{ALGORITHME 3} \end{center}
+\end{minipage}
+
+
+
 \subsection{Petits pots de miel}
 Une entreprise d'apiculture note ses productions de miel année après année. Les résultats collectés sont donnés dans le tableau ci-contre :
 \begin{center}
@@ -128,6 +175,22 @@ Une entreprise d'apiculture note ses productions de miel année après année. L
 
 
 
+\subsection{Avancer à petits pas}
+On s'intéresse à une échelle dont le premier barreau se situe à $20$cm du sol, et dont tous les barreaux sont espacés de $35$cm.
+\begin{enumerate}
+	\item À quelle hauteur se situe le deuxième barreau ? Et le troisième ?
+	\item On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en centimètres.
+	\begin{enumerate}
+		\item Donner la valeur de $u_1$ , $u_2$ et $u_3$
+		\item Exprimer $u_{n+1}$ en fonction de $u_n$
+		\item En déduire l'expression de $u_n$ en fonction de $n$
+		\item Quelle est la hauteur du 12-ième barreau de l'échelle ?
+	\end{enumerate}
+	\item On sait que le dernier barreau de l'échelle se situe à $5,80$m de hauteur. \\
+	Combien de barreaux l'échelle compte-t-elle ?
+\end{enumerate}
+
+
 \subsection{Elles ont perdu la raison}
 \begin{enumerate}
 	\item On considère une suite arithmétique $(u_n)$ vérifiant $u_8 = 19$ et $u_{14} = 57$
@@ -146,6 +209,41 @@ Une entreprise d'apiculture note ses productions de miel année après année. L
 
 
 
+\subsection{Algorithme de seuil}
+On considère la suite arithmétique $(u_n)$ de premier terme $u_0 = 7,2$ et de raison $r = \frac{4}{3}$
+\begin{enumerate}
+	\item Compléter l'algorithme ci-dessous afin qu'il permette de calculer les termes de la suite $(u_n)$ :
+	\begin{center}
+		\renewcommand{\arraystretch}{1.25}
+		\tcbox[colframe=newred , colback=red!15 , arc=2pt]{
+			\begin{tabular}{p{5mm}|p{45mm}} 
+		    	\texttt{1} & \texttt{def u(n) :} \\
+		        \texttt{2} & \texttt{\quad u = \ldots\ldots} \\
+		        \texttt{3} & \texttt{\quad i = 0} \\
+		        \texttt{4} & \texttt{\quad while i < n :} \\
+		        \texttt{5} & \texttt{\quad \quad u = \ldots\ldots} \\
+		        \texttt{6} & \texttt{\quad return u} \\
+			\end{tabular}
+		}
+	\end{center}
+	
+	\item Compléter l'algorithme ci-dessous afin qu'il détermine à partir de quel rang la suite $(u_n)$ dépasse la valeur $1\,000$
+	\begin{center}
+		\renewcommand{\arraystretch}{1.25}
+		\tcbox[colframe=newred , colback=red!15 , arc=2pt]{
+			\begin{tabular}{p{5mm}|p{50mm}} 
+		    	\texttt{1} & \texttt{def seuil(p) :} \\
+		        \texttt{2} & \texttt{\quad n = 0} \\
+		        \texttt{3} & \texttt{\quad while u(n) < p :} \\
+		        \texttt{4} & \texttt{\quad \quad n = \ldots\ldots} \\
+		        \texttt{5} & \texttt{\quad return n} \\
+		        \texttt{6} & \texttt{print(seuil(\ldots\ldots))} \\
+			\end{tabular}
+		}
+	\end{center}
+\end{enumerate}
+
+
 \subsection{Problème de seuil}
 \begin{enumerate}
 	\item On considère une suite arithmétique $(u_n)$ de premier terme $u_0 = 5$ et de raison $r = 2$ \\
@@ -157,7 +255,7 @@ Une entreprise d'apiculture note ses productions de miel année après année. L
 
 
 \subsection{Repeupler la montagne}
-En juin 2020, une population de 200 marmottes a été introduite dans un massif montagneux où cette espèce était absente. Un zoologue en charge de ce projet souhaite modéliser l’évolution de cette population en fonction du temps.
+En juin 2020, une population de 200 marmottes a été introduite dans un massif montagneux où cette espèce était absente. Un zoologue en charge du projet souhaite modéliser l’évolution de cette population en fonction du temps.
 
 Il constate qu’entre juin 2020 et juin 2021, la population a augmenté de 20 individus. Le zoologue propose alors un modèle où la population augmente de 20 individus tous les ans.
 
@@ -208,5 +306,212 @@ Pour chacune des sommes suivantes, les écrire explicitement  puis calculer leur
 \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
 	$A = \sommek{3}{7} (k + k^2)$ & $B = \sommek{10}{15} \left(1 + \dfrac{1}{k} \right)$ & $C = \sommek{0}{8} \left( \dfrac{k^2+1}{k+3} \right)$
 \end{tabular}
+
+
+
+\subsection{Première somme}
+On considère $(u_n)$ une suite arithmétique de premier terme $u_0 = 3$ et de raison $r = 2$
+\begin{enumerate}
+	\item Exprimer $u_n$ en fonction de $n$
+	\item Calculer les deux sommes suivantes : $S = \sommek{0}{10}u_k$ \quad et \quad $T = \sommek{4}{13}u_k$
+\end{enumerate}
+
+
+
+\subsection{Deuxième somme}
+On considère $(v_n)$ une suite arithmétique de premier terme $u_0 = -19$ et de raison $r = 3$
+
+Calculer les sommes suivantes : $A = \sommek{0}{9}v_k$ \quad , \quad $B = \sommek{5}{11}v_k$ \quad et \quad $C = \sommek{10}{20}v_k$
+
+
+
+\subsection{Des calculs}
+Calculer chacune des sommes suivantes en détaillant :
+
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+     $A = \sommek{0}{22}~(3+2k)$ & $B = \sommek{0}{31}~(8-k)$ & $C = \sommek{0}{17}~\left(\dfrac{k}{2}-1\right)$
+\end{tabular}
+
+
+
+\subsection{Algorithme de somme}
+On considère la suite arithmétique $(u_n)$ de premier terme $u_0 = 123$ et de raison $r = 4$
+
+Compléter l'algorithme suivant afin qu'il permette de calculer la somme $\sommek{0}{n} u_k$
+\begin{center}
+	\renewcommand{\arraystretch}{1.25}
+	\tcbox[colframe=newred , colback=red!15 , arc=2pt]{
+		\begin{tabular}{p{5mm}|p{50mm}} 
+	    	\texttt{1} & \texttt{def somme(n) :} \\
+	        \texttt{2} & \texttt{\quad u = \ldots\ldots} \\
+	        \texttt{3} & \texttt{\quad k = 0} \\
+	        \texttt{3} & \texttt{\quad s = 0} \\
+	        \texttt{4} & \texttt{\quad while k < = n :} \\
+	        \texttt{5} & \texttt{\quad \quad s = s + \ldots\ldots} \\
+	        \texttt{6} & \texttt{\quad \quad k = k + 1} \\
+	        \texttt{7} & \texttt{\quad \quad u = u + 4} \\
+	        \texttt{8} & \texttt{\quad return s} \\
+		\end{tabular}
+	}
+\end{center}
+
+
+
+
+\subsection{Que du bénéfice}
+Une entreprise réalise un bénéfice net de $50\,000$\euro\, au mois de janvier 2026, et parvient à augmenter ce bénéfice de $2\,000$\euro\, chaque mois.
+
+On note $u_n$ le bénéfice (en \euro) de l'entreprise lors du $n$-ième mois de l'année $2026$
+\begin{enumerate}
+	\item Justifier que la suite $(u_n)$ est arithmétique, puis donner sa raison et son premier terme.
+	\item Exprimer $u_n$ en fonction de $n$
+	\item Quel bénéfice l'entreprise réalisera-t-elle au mois de décembre 2026 ?
+	\item Au cours de l'année 2026, quel est le bénéfice total réalisé par l'entreprise ?
+\end{enumerate}
+
+
+
+\subsection{Course à pied}
+Justine a décidé qu'elle allait participer au prochain marathon de sa ville. Ce samedi elle est donc allée courir et a réussi à parcourir 5km avant de s'arrêter. Depuis, Justine s'entraîne tous les samedis, et réussit à chaque fois à courir 500m de plus que la semaine d'avant.
+
+On note $u_n$ la distance (en kilomètres) que Justine arrive à parcourir lors de la $n$-ième semaine d'entraînement.
+\begin{enumerate}
+	\item Donner la valeur de $u_1$ , $u_2$ et $u_3$
+	\begin{enumerate}
+		\item Justifier que la suite $(u_n)$ est arithmétique et préciser sa raison et son premier terme.
+		\item Exprimer $(u_n)$ en fonction de $n$
+	\end{enumerate}
+	\item Lors de sa $40$-ième semaine d'entraînement, quelle distance Justine pourra-t-elle parcourir ?
+	\item Quelle distance totale aura-t-elle alors parcouru depuis le début de son entraînement ?
+	\item On rappelle qu'un année compte environ 52 semaines et que la distance officielle d'un marathon est de 42,195 km. \\
+	Après une année d'entraînement, Justine sera-t-elle suffisamment préparée pour participer au marathon de sa ville ?
+\end{enumerate}
+
+
+
+\subsection{Encore des calculs}
+Calculer chacune des sommes suivantes en détaillant :  \\
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+     $A = 17 + 20 + 23 +\ldots + 53$ & $B = 118 + 113 + 108 + \ldots + 53$ & $C = 20,5 + 23 + 25,5 + \ldots 53$
+\end{tabular}
+
+
+
+\subsection{Poste de frontière}
+Au poste de frontière, les douaniers comptent le nombre de voitures passant de la France à l'Espagne chaque jour.
+
+La première voiture de la journée passe à 5h00 et les douaniers affirment qu'à chaque heure ils ont compté 150 voitures de plus que lors de l'heure précédente, et ce jusqu'à minuit.
+
+Combien de voitures sont passées dans la journée ?
+
+
+
+\subsection{Somme des impairs}
+On considère la suite $(u_n)$ définie par $\begin{cases}u_0 = 1 \\ u_{n+1} = u_n + 2\end{cases}$
+\begin{enumerate}
+	\item À quels nombres correspondent les termes de la suite $(u_n)$ ?
+	\item Justifier que la suite $(u_n)$ est arithmétique, puis exprimer $u_n$ en fonction de $n$
+	\item Exprimer la somme $\sommek{0}{n}u_k$ en fonction de $n$ (Aucune simplification n'est demandée)
+	\item Montrer que $\sommek{0}{n}u_k = (n+1)^2$
+\end{enumerate}
+
+
+
+\subsection{Château de cartes}
+\begin{minipage}{0.35\linewidth} \restoreskip
+	Tiago construit un château de cartes comme représenté sur le schéma ci-contre :
+	
+	On note $u_n$ le nombre de cartes nécessaires pour passer de l'étape $n$ à l'étape $n+1$. \\
+	On admettra que $u_0 = 2$
+	
+	Attention, $u_n$ n'est pas égal au nombre de cartes utilisées pour construire l'étape $n$ !
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.6\linewidth}
+	\begin{tikzpicture}[scale=0.85]
+		%%% Château %%%
+		\foreach \j in {0}{
+				\draw (-3+2*\j  , -6) --++ (0.9,-1.85) ;
+				\draw (-3+2*\j  , -6) --++ (-0.9,-1.85) ;
+			}
+			
+		%%% Légende %%%
+		\node[align = center , font=\bfseries , yshift = -4mm] at (current bounding box.south) {Étape \no 1};
+	\end{tikzpicture}\hspace{5mm}
+	\begin{tikzpicture}[scale=0.85]
+		%%% Château %%%
+		\foreach \i in {0}{
+			\foreach \j in {0,...,\i}{
+				\draw (-\i+2*\j , -2*\i) --++ (0.9,-1.85) ;
+				\draw (-\i+2*\j , -2*\i) --++ (-0.9,-1.85) ;
+				\draw (-\i+2*\j , -2*\i)++(-0.9,-2) --++ (1.85,0) ;
+			}
+		}
+		\foreach \j in {0,...,1}{
+				\draw (-1+2*\j  , -2) --++ (0.9,-1.85) ;
+				\draw (-1+2*\j  , -2) --++ (-0.9,-1.85) ;
+			}
+		%%% Légende %%%
+		\node[align = center , font=\bfseries , yshift = -4mm] at (current bounding box.south) {Étape \no 2};
+	\end{tikzpicture}\hspace{5mm}
+	\begin{tikzpicture}[scale=0.85]
+		%%% Château %%%
+		\foreach \i in {0,...,1}{
+			\foreach \j in {0,...,\i}{
+				\draw (-\i+2*\j , -2*\i) --++ (0.9,-1.85) ;
+				\draw (-\i+2*\j , -2*\i) --++ (-0.9,-1.85) ;
+				\draw (-\i+2*\j , -2*\i)++(-0.9,-2) --++ (1.85,0) ;
+			}
+		}
+		\foreach \j in {0,...,2}{
+				\draw (-2+2*\j  , -4) --++ (0.9,-1.85) ;
+				\draw (-2+2*\j  , -4) --++ (-0.9,-1.85) ;
+			}
+		%%% Légende %%%
+		\node[align = center , font=\bfseries , yshift = -4mm] at (current bounding box.south) {Étape \no 3};
+	\end{tikzpicture}
+\end{minipage}
+\begin{enumerate}
+	\item \begin{enumerate}
+		\item À l'aide du schéma représenté ci-dessus, déterminer la valeur de $u_1$ et de $u_2$
+		\item Donner la valeur de $u_3$
+		\item Que peut-on émettre comme hypothèse concernant la suite $(u_n)$ ?
+	\end{enumerate}
+	\item On admet que la suite $(u_n)$ est une suite arithmétique.
+	\begin{enumerate}
+		\item Donner sa raison et son premier terme.
+		\item Exprimer alors $u_n$ en fonction de $n$.
+		\item Combien de cartes faudra-t-il rajouter pour passer de l'étape \no 10 à l'étape \no 11 ?
+	\end{enumerate}
+	\item Calculer la valeur de la somme $\sommek{0}{20}u_k$
+	\item Comment interpréter ce résultat dans le contexte de l'exercice ?
+\end{enumerate}
+
+
+
+\subsection{Somme seuil}
+On considère la suite arithmétique $(u_n)$ de premier terme $u_0 = 37$ et de raison $r = 8$
+
+Compléter l'algorithme suivant afin qu'il permette de déterminer à partir de quel rang la suite $(u_n)$ dépasse la valeur $10\,000$.
+\begin{center}
+	\renewcommand{\arraystretch}{1.25}
+	\tcbox[colframe=newred , colback=red!15 , arc=2pt]{
+		\begin{tabular}{p{5mm}|p{50mm}} 
+	    	\texttt{1} & \texttt{def seuil(p) :} \\
+	        \texttt{2} & \texttt{\quad u = \ldots\ldots} \\
+	        \texttt{3} & \texttt{\quad k = 0} \\
+	        \texttt{3} & \texttt{\quad s = 0} \\
+	        \texttt{4} & \texttt{\quad while \ldots\ldots :} \\
+	        \texttt{5} & \texttt{\quad \quad s = s + u} \\
+	        \texttt{6} & \texttt{\quad \quad k = k + 1} \\
+	        \texttt{7} & \texttt{\quad \quad u = u + 8} \\
+	        \texttt{8} & \texttt{\quad return \ldots\ldots} \\
+	        \texttt{9} & \texttt{print(seuil(10000))} \\
+		\end{tabular}
+	}
+\end{center}
+
+
+
 
 \end{document}
