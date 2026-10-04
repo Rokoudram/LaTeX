@@ -320,13 +320,34 @@ attach boxed title to top*,
 %%%%% Établissement scolaire %%%%%
 \def\etablissement{Lycée Polyvalent Irène et Frédéric Joliot Curie}
 
+
+
 %%%%% Flèche SSI longueur adaptative %%%%%
 
 \makeatletter
-\newcommand\xLongleftrightarrow[2][]%
-  {\ext@arrow 0099{\Longleftrightarrowfill@}{#1}{#2}}
-\def\Longleftrightarrowfill@
-  {\arrowfill@\Leftarrow\Relbar\Rightarrow}
+
+\newcommand{\ssi}[1]{%
+  \@ifnextchar[{\ssi@i{#1}}{\ssi@i{#1}[]}%
+}
+
+\def\ssi@i#1[#2]{%
+  \@ifnextchar[{\ssi@ii{#1}{#2}}{\ssi@ii{#1}{#2}[]}%
+}
+
+\def\ssi@ii#1#2[#3]{%
+  \mathrel{%
+    \ext@arrow 0099{%
+      \Longleftrightarrowfill@
+    }%
+    {\makebox[#1]{#2}}%
+    {\makebox[#1]{#3}}%
+  }%
+}
+
+\def\Longleftrightarrowfill@{%
+  \arrowfill@\Leftarrow\Relbar\Rightarrow
+}
+
 \makeatother
 
 
