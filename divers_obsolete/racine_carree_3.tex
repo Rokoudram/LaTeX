@@ -259,18 +259,12 @@ Posons maintenant $y_n = x_n - \sqrt{3}$ pour tout $\nN$. On cherche à montrer 
 
 On commence par noter que $y_{n+2} = \dfrac{y_n y_{n+1}}{x_n + x_{n+1}}$
 
-On remarque également que $1 - \sqrt{3} \leq y_n \leq 2 - \sqrt{3}$ \quad $\forall n\geq2$ 
+On remarque également que $1 - \sqrt{3} \leq y_n \leq 2 - \sqrt{3}$ \quad $\forall n\geq2$ \quad donc $\abs{y_n} < 1$ \quad $\forall n \geq 2$
 
-On pose $q = \sqrt{3} -1$ et on montre par récurrence que $\abs{y_n} \leq q^n$ \quad $\forall n\geq2$
+Alors $\abs{y_{n+2}} = \abs{\dfrac{y_n y_{n+1}}{x_n + x_{n+1}}} \leq \dfrac{\abs{y_n} \abs{y_{n+1}}}{2}
+\leq \dfrac{1}{2} \abs{y_{n+1}}$
 
-Je me permets de passer les détails de l'initialisation.
-
-Soit $n\geq 2$ tel que $\abs{y_n} \leq q^n$ et $\abs{y_{n+1}} \leq q^{n+1}$
-
-Alors $\abs{y_{n+2}} = \abs{\dfrac{y_n y_{n+1}}{x_n + x_{n+1}}} \leq \dfrac{\abs{y_n} \abs{y_{n+1}}}{2} \leq \dfrac{q^n \times q^{n+1}}{2}
-\leq \dfrac{q^{2n+1}}{2} \leq q^{n+2}$ \quad car $2n+1 \geq n+2$
-
-On vient donc de montrer que $\limn y_n = 0$, \quad ce qui prouve bien que la suite $(x_n)$ converge vers $\sqrt{3}$
+Par récurrence immédiate on majore $(y_n)$ par une suite géométrique de raison $q = \dfrac{1}{2}$, ce qui prouve la convergence de $(y_n)$ vers $0$.
 
 
 
