@@ -1,0 +1,280 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[4mm] Nom : ............................................. }{}{Classe : ............... \\[4mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 2 (55min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\star$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Questions de cours}
+\begin{enumerate}
+	\item Donner deux définitions d'un nombre décimal.
+	\item Donner une formule permettant de calculer la distance entre deux nombres $a$ et $b$.
+	\item Nommer les quatre symboles suivants : $\in$ ; $\subset$ ; $\cap$ et $\cup$
+\end{enumerate}
+
+
+
+\section{À propos des intervalles}
+\begin{enumerate}[itemsep = 2mm]
+	\item Compléter les pointillés avec l'intervalle correspondant : \\
+	
+	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
+		a) $1 < x \leq 7 \, \ssi{15mm}\,  x \in \ldots\ldots\ldots\ldots\ldots$ &
+		b) $\star$ $y \geq -4 \, \ssi{15mm}\,  y \in \ldots\ldots\ldots\ldots\ldots$ 
+	\end{tabular}
+	
+	\item Compléter les pointillés par l'encadrement ou l'inégalité correspondant  : \\
+
+	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
+		a) $a \in ]-11 ; 2[ \, \ssi{15mm}\, \ldots\ldots\ldots\ldots\ldots$ &
+		b) $b \in ]-\infty ; 1[ \, \ssi{15mm}\, \ldots\ldots\ldots\ldots\ldots$
+	\end{tabular}
+	
+	\item Si $x$ , $y$ et $z$ sont trois nombres vérifiant $x \leq y < z$ alors :
+	\begin{enumerate}
+		\item À quel intervalle peut-on affirmer que le nombre $y$ appartient ?
+		\item $\star$ À quel intervalle peut-on affirmer que le nombre $x$ appartient ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Opérations sur les ensembles}
+\begin{enumerate}[itemsep = 2mm]
+	\item On considère les ensembles $A = \{ 1 ~;~ 2 ~;~ 3  ~;~ 4 \}$ , $B = \{ -1 ~;~ 4 ~;~ -2 ~;~ 6\}$ et $C = \{ 10 ~;~ 8 ~;~ 6 ~;~ 0\}$
+	\begin{enumerate}
+		\item Décrire explicitement l'ensemble $A \cup C$
+		\item Décrire explicitement l'ensemble $B \cap A$
+	\end{enumerate}
+	
+	\item On considère les intervalles $I = ]3 ~;~ 7]$ et $J = [-3 ~;~ 4]$.
+	
+	Représenter les intervalles $I$ et $J$ sur la droite réelle ci-contre, puis déterminer $I \cup J$ et $I \cap J$
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[-Stealth , line width = 1pt] (-5.5,0)  -- (10.5,0) ;
+		    		\foreach \j in {-5,...,10} {
+				\draw (\j,0) node {|};
+		        		\draw (\j,0) ++(0,-0.5) node {\small $\j$};
+		        		}
+		\end{tikzpicture}
+	\end{center}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left=30pt,right=30pt, top=30pt, bottom=55pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Ensembles géométriques}
+\begin{minipage}{0.6\textwidth}
+	Compléter les pointillés par le symbole adapté parmi $\subset$ , $\not\subset$ , $\in$ ou $\notin$ en vous appuyant sur la figure représentée ci-contre. Chaque symbole doit être utilisé une seule fois.
+	
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{P{0.5\textwidth} P{0.5\textwidth}}
+		$B$ \ldots\ldots $[AC]$ & $[CD)$ \ldots\ldots $(EC)$ \\
+		$[EF]$ \ldots\ldots $(AC)$ & $\star$ $A$ \ldots\ldots $[BC)$
+	\end{tabular}
+\end{minipage} \hspace{10mm}
+\begin{minipage}{0.4\textwidth}
+	\begin{tikzpicture}
+		\draw (1,0.75) -- (2,1) node {$\bullet$} node[above] {$A$} -- (4.667,1.667) node {$\bullet$} node[above] {$D$} -- (6,2) node {$\bullet$} node[above] {$F$} -- (7,2.25) ;
+		\draw  (1,0) -- (3,2) node {$\bullet$} node[left] {$B$} -- (4,3) node {$\bullet$} node[right] {$C$} -- (5,4) ;
+		\draw (5.5,0) -- (5,1) node {$\bullet$} node[right] {$E$} -- (3.5,4) ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\section{Ensembles usuels}
+\begin{enumerate}[itemsep = 2mm]
+	\item Démontrer que les nombres suivants sont des nombres décimaux en les écrivant sous la forme $\dfrac{a}{10^n}$ avec $a$ et $n$ des nombres entiers :
+	
+	$\star$ $A = 3,1415$ \hspace{3cm} $B = \dfrac{67}{20}$ \hspace{3cm} $C = \dfrac{1}{5^5}$
+	
+	\item Remplir chacune des cases du tableau suivant avec le symbole $\in$ ou $\notin$ :
+
+	\begin{center}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{| P{4cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+			\diagbox[innerwidth = 4cm]{Nombre}{Ensemble} & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
+			$\dfrac{-1,5}{0,3}$ & & & & & \\ \hline
+			$\dfrac{22}{3}$ & & & & & \\ \hline
+			$\star$ $\sqrt{\dfrac{9}{4}}$ & & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+\end{enumerate}
+
+
+
+\section{Piqure de rappel}
+Vous devrez faire apparaître les détails de chacun des calculs demandés ci-après.
+\begin{enumerate}
+	\item $\star$ Écrire le nombre $3^3 \times 9^9$ sous la forme $3^n$ avec $n$ un nombre entier.
+	\item Écrire sous la forme d'une fraction irréductible le nombre $\dfrac{1 + \frac{2}{5}}{3 - \frac{5}{4}}$
+\end{enumerate}
+
+
+
+\section*{Exercice bonus}
+\textit{Cet exercice ne sera pris en compte que si toutes les autres questions ont été traitées}
+\begin{enumerate}
+	\item Résoudre dans $\RR$ l'équation $\abs{3x-7} = 11$
+	\item Si $A$ , $B$ et $C$ sont trois ensembles tels que $A \subset B \subset C$ , déterminer $(A \cup B) \cap C$
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% CORRECTION %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{section}{0}
+\color{newblue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{center}
+	\Large \textbf{\underline{Correction}}
+\end{center}
+
+\section{Questions de cours}
+\begin{enumerate}
+	\item Un nombre décimal est un nombre pouvant s'écrire sous la forme $x = \dfrac{a}{10^n}$ avec $a$ et $n$ deux entiers. \\
+	On peut aussi dire qu'un nombre décimal a un nombre fini ou nul de chiffres après la virgule.
+	\item La distance entre deux nombres $a$ et $b$ est donnée par la formule $\abs{a-b}$
+	\item $\in$ : Appartient \qquad  $\subset$ : Est inclus \qquad  $\cap$ : Intersection \qquad  $\cup$ : Union
+\end{enumerate}
+
+
+
+\section{À propos des intervalles}
+\begin{enumerate}[itemsep = 2mm]
+	\item Compléter les pointillés avec l'intervalle correspondant : 
+	
+	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
+		a) $1 < x \leq 7 \, \ssi{15mm}\,  x \in ]1 ~;~7]$ &
+		b) $y \geq -4 \, \ssi{15mm}\,  y \in [-4 ~;~ +\infty[$ 
+	\end{tabular}
+	
+	\item Compléter les pointillés par l'encadrement ou l'inégalité correspondant  : 
+
+	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
+		a) $a \in ]-11 ; 2[ \, \ssi{15mm}\, -11 < a < 2$ &
+		b) $b \in ]-\infty ; 1[ \, \ssi{15mm}\, b < 1$
+	\end{tabular}
+	
+	\item Si $x$ , $y$ et $z$ sont trois nombres vérifiant $x \leq y < z$ alors :
+	\begin{enumerate}
+		\item $y \in [x  ~;~ z[$
+		\item $x \in ]-\infty ~;~ y]$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Opérations sur les ensembles}
+\begin{enumerate}[itemsep = 2mm]
+	\item On considère les ensembles $A = \{ 1 ~;~ 2 ~;~ 3  ~;~ 4 \}$ , $B = \{ -1 ~;~ 4 ~;~ -2 ~;~ 6\}$ et $C = \{ 10 ~;~ 8 ~;~ 6 ~;~ 0\}$
+	\begin{enumerate}
+		\item $A \cup C = \{ 0 ~;~ 1 ~;~ 2 ~;~  3 ~;~ 4 ~;~ 6 ~;~  8 ~;~ 10\}$
+		\item $B \cap A = \{2 ~;~ 4\}$
+	\end{enumerate}
+	
+	\item On considère les intervalles $I = ]3 ~;~ 7]$ et $J = [-3 ~;~ 4]$.
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[-Stealth , line width = 1pt] (-5.5,0)  -- (10.5,0) ;
+		    		\foreach \j in {-5,...,10} {
+				\draw (\j,0) node {|};
+		        		\draw (\j,0) ++(0,-0.5) node {\small $\j$};
+		        		}
+		        		
+			\fill [pattern = {Lines[angle = 60 , distance = 5pt]} , pattern color = newred , line width = 1pt]
+        	(7,-0.15) -- (3,-0.15) -- (3,0.15) -- (7,0.15);
+        	\draw[color = newred] (3,0) node {\Large \textbf{]}} (7,0) node {\Large \textbf{]}} (5,0.5) node {\large \textbf{I}} ;
+        	
+        	\fill [pattern = {Lines[angle = -60 , distance = 5pt]} , pattern color = newgreen!85!black , line width = 1pt]
+        	(-3,-0.15) -- (4,-0.15) -- (4,0.15) -- (-3,0.15);
+        	\draw[color = newgreen!85!black] (-3,0) node {\Large \textbf{[}} (4,0) node {\Large \textbf{]}} (0.5,0.5) node {\large \textbf{J}} ;
+		\end{tikzpicture}
+	\end{center}
+	
+	On voit graphiquement que $I \cap J = ]3 ~;~ 4]$ et que $I \cup J = [-3 ~;~ 7]$
+\end{enumerate}
+
+
+
+\section{Ensembles géométriques}
+$B \in [AC]$ \qquad $[CD) \subset (EC)$ \qquad $[EF] \not\subset (AC)$ \qquad $A \notin [BC)$
+
+
+
+\section{Ensembles usuels}
+\begin{enumerate}
+	\item
+	$A = 3,1415 = \dfrac{31415}{10\,000} = \dfrac{31415}{10^4}$
+	
+	$B = \dfrac{67}{20}	= \dfrac{67 \times 5}{20 \times 5} = \dfrac{67 \times 5}{100} = \dfrac{67 \times 5}{10^2}$
+	
+	$C = \dfrac{1}{5^5} = \dfrac{2^5}{5^5 \times 2^5} = \dfrac{2^5}{10^5}$
+
+	\item
+	\begin{center}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{| P{4cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+			\diagbox[innerwidth = 4cm]{Nombre}{Ensemble} & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
+			$\dfrac{-1,5}{0,3}$ & $\notin$ & $\in$ & $\in$ & $\in$ & $\in$ \\ \hline
+			$\dfrac{22}{3}$ & $\notin$ & $\notin$ & $\notin$  & $\in$ & $\in$ \\ \hline
+			$\sqrt{\dfrac{9}{4}}$ & $\notin$ & $\notin$ & $\in$ & $\in$ & $\in$ \\ \hline
+		\end{tabular}
+	\end{center}
+\end{enumerate}
+
+
+\section{Piqure de rappel}
+\begin{enumerate}[itemsep=2mm]
+	\item $3^3 \times 9^9 = 3^3 \times {(3^2)}^9 = 3^3 \times 3^{18} = 3^{21}$
+	
+	\item
+	$\dfrac{1 + \frac{2}{5}}{3 - \frac{5}{4}} =
+	\dfrac{\frac{1 \times 5}{5} + \frac{2}{5}}{\frac{3 \times 4}{4} - \frac{5}{4}}
+	= \dfrac{\frac{5}{5} + \frac{2}{5}}{\frac{12}{4} - \frac{5}{4}}
+	= \dfrac{\,\frac{7}{5}\,}{\frac{7}{4}}
+	= \dfrac{7}{5} \times \dfrac{4}{7} = \dfrac{\not 7}{5} \times \dfrac{4}{\not 7} = \dfrac{4}{5}$
+\end{enumerate}
+
+
+
+
+\end{document}
