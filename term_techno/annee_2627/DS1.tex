@@ -1,0 +1,194 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[3mm] Nom : ............................................. }{}{Classe : T\up{ale} STMG4 \\[3mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{\thepage / \numpages}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 1 (55 min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\bigstar$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Questions de cours}
+\begin{enumerate}[itemsep = 0pt]
+	\item $\bigstar$ Écrire la formule du crible.
+	\item Donner la formule des probabilités conditionnelles.
+	\item À quelle condition peut-on affirmer que deux évènements $A$ et $B$ sont indépendants ?
+\end{enumerate}
+
+
+
+\section{Dans une urne}
+Dans une urne on place 50 boules numérotées de $1$ à $50$. On considère les évènements suivants :
+
+$\bullet$ A : \og La boule tirée porte un numéro pair \fg \\
+$\bullet$ B : \og La boule tirée porte un numéro qui est un multiple de 5\fg \\
+$\bullet$ C : \og La boule tirée porte un numéro supérieur ou égal à $30$ \fg
+\begin{enumerate}[itemsep = 0pt]
+	\item Déterminer $\PP(A)$ , $\PP(B)$ et $\PP(C)$
+	\item $\bigstar$ Décrire explicitement l'évènement $A \cap B$
+	\item \begin{enumerate}
+		\item En justifiant, déterminer la valeur de $\PP(B \cap C)$
+		\item En déduire alors $\PP_C(B)$
+		\item Peut-on affirmer que les évènements $B$ et $C$ sont indépendants ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{État grippal}
+Lors d'une épidémie de grippe, on vaccine un tiers de la population. On constate qu'un malade sur dix est vacciné et que la grippe touche un quart de la population.
+
+On choisit un individu au hasard dans la population et on considère les évènements suivants :
+
+$\bullet$ V : \og L'individu est vacciné \fg \\
+$\bullet$ M : \og L'individu est malade \fg 
+\begin{enumerate}[align = left]
+	\item Grâce aux informations de l'énoncé et sans calcul, déterminer $\PP(M)$ , $\PP(V)$ et $\PP_M(V)$
+	\item Les évènements $M$ et $V$ sont-ils indépendants ?
+	\item $\bigstar$ Sur votre copie, construire un arbre pondéré permettant de représenter la situation et y placer, si possible, les probabilités de la question précédente.
+	\item Calculer $\PP(M \cap V)$ et interpréter ce résultat dans le contexte de l'exercice.
+	\item Dans cette question seulement, on suppose que l'individu choisi est vacciné.
+	\begin{enumerate}
+		\item Exprimer la probabilité que cet individu soit malade à l'aide des évènements $M$ et $V$.
+		\item Calculer alors la probabilité qu'un individu vacciné soit malgré tout malade.
+	\end{enumerate}
+	\item[\underline{Question bonus} :] Déterminer $\PP(\barre{M} \cap V)$ , puis $\PP_{\barre{M}}(V)$
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left=30pt,right=30pt, top=30pt, bottom=55pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{D'un tableau naît un arbre}
+On considère le tableau croisé d'effectifs suivant :
+\begin{center}
+	\renewcommand{\arraystretch}{1.75}
+    \begin{tabular}{| P{4cm} | P{3cm} | P{3cm} | P{3cm} |}\hline
+		\cellcolor{gray} & $A$ & $\barre{A}$ & Total\\ \hline
+	    $B$ & 80 &  &  \\ \hline
+	    $\barre{B}$ &  &  & 140 \\ \hline
+	    Total & 120 &  & 200 \\ \hline
+    \end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Compléter le tableau ci-dessus.
+	\item Déterminer la valeur de $\PP_A(B)$ et de $\PP_B(A)$ en explicitant vos calculs.
+	\item Compléter les deux arbres ci-après :
+	
+		\hspace{1cm}
+		\begin{minipage}{0.45\textwidth}
+			\begin{tikzpicture}[
+				grow=right, scale = 0.8 ,
+				level 1/.style={level distance=4cm, sibling distance=3cm},
+				level 2/.style={level distance=3cm, sibling distance=1.5cm}
+				]
+				\small
+				
+				\node {$\Omega$}
+				child {node {$\barre{A}$} 
+					child {node {$\barre{B}$}
+						edge from parent node[below] {\ldots}
+					}
+					child {node {$B$}
+						edge from parent node[above] {\ldots}
+					} edge from parent node[below] {\ldots}
+				}
+				child {node {$A$} 
+					child {node {$\barre{B}$}
+						edge from parent node[below] {\ldots}
+					}
+					child {node {$B$}
+						edge from parent node[above] {\ldots}
+					} edge from parent node[above] {\ldots}
+				};
+			\end{tikzpicture}
+		\end{minipage}
+		\begin{minipage}{0.5\textwidth}
+			\begin{tikzpicture}[
+				grow=right, scale = 0.8 ,
+				level 1/.style={level distance=4cm, sibling distance=3cm},
+				level 2/.style={level distance=3cm, sibling distance=1.5cm}
+				]
+				\small
+				
+				\node {$\Omega$}
+				child {node {$\barre{B}$} 
+					child {node {$\barre{A}$}
+						edge from parent node[below] {\ldots}
+					}
+					child {node {$A$}
+						edge from parent node[above] {\ldots}
+					} edge from parent node[below] {\ldots}
+				}
+				child {node {$B$} 
+					child {node {$\barre{A}$}
+						edge from parent node[below] {\ldots}
+					}
+					child {node {$A$}
+						edge from parent node[above] {\ldots}
+					} edge from parent node[above] {\ldots}
+				};
+			\end{tikzpicture}
+		\end{minipage}
+	\item $\bigstar$ Déterminer la valeur de $\PP(A \cap B)$ -	\textit{\small Point bonus si vous utilisez plusieurs méthodes}
+\end{enumerate}
+
+
+
+\section{Q.C.M. (À points négatifs)}
+Pour chacune des questions suivantes, une et une seule des réponses proposées est exacte. Pour répondre, entourez sur la feuille la réponse choisie. Aucune justification n'est demandée. \\
+Une réponse correcte rapporte des points. L'absence de réponse ne rapporte ni ne retire aucun point.
+Une réponse incorrecte ou une réponse multiple retire des points. . 
+
+\begin{enumerate}[label=\underline{Question \no\arabic*} :  , leftmargin=* , itemsep=1mm]
+	\item $\bigstar$ Si les évènements $A$ et $B$ sont indépendants et que $\PP(A) = 0,5$  et $\PP(B) = 0,4$ , combien vaut  $\PP(A \cap B)$ ?
+	
+		\hspace{\linewidth-\textwidth}
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{| P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} |} \hline
+			A & B & C & D \\ \hline
+			$0,1$ & $0,2$ & $0,3$  & $0,4$ \\ \hline
+		\end{tabular}
+		
+	\item Sur la route de son travail, Pierrick rencontre deux feux tricolores. Il a déterminé que la probabilité de devoir d'arrêter au premier feu est de $\dfrac{1}{3}$ et que celle de devoir s'arrêter au second est de $\dfrac{2}{5}$. Il a également déterminer qu'il y a une probabilité de $\dfrac{1}{2}$ de devoir s'arrêter à au moins un des deux feux tricolores. Quelle est la probabilité de devoir s'arrêter aux deux feux ?
+	
+		\hspace{\linewidth-\textwidth}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{| P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} |} \hline
+			A & B & C & D \\ \hline
+			$\dfrac{1}{30}$ & $\dfrac{7}{30}$ & $\dfrac{11}{30}$ & $\dfrac{13}{30}$ \\ \hline
+		\end{tabular}
+		
+\end{enumerate}
+
+
+
+\end{document}
