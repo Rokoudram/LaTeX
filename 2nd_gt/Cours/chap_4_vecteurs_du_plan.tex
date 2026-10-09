@@ -1,0 +1,302 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_cours.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Vecteurs du plan}
+\fancyhf[CF]{\footnotesize{Lycée Polyvalent Irène et Frédéric Joliot-Curie}}           % En-tête central
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+Au collège vous avez déjà vu certains déplacement dans le plan (rotation, symétrie, translation). Dans ce chapitre nous allons étudier les objets mathématiques que se cachent derrière la notion de translation : les vecteurs.
+
+\section{Généralités}
+
+\begin{definition}{Vecteur}
+	\begin{minipage}{0.6\linewidth} \restoreskip
+	    Un \textbf{vecteur} $\vv{u}$ est un objet mathématique permettant de décrire un mouvement de \textbf{translation} que l'on représente par une flèche.
+	    
+	    Il est caractérisé par 3 paramètres : 
+	    
+	    $\bullet$ Sa \textbf{direction} $\rightarrow$ la droite sur laquelle il s'aligne \\
+	    $\bullet$ Son \textbf{sens} $\rightarrow$ le côté choisi dans sa direction \\
+	    $\bullet$ Sa \textbf{norme} $\rightarrow$ la longueur du déplacement, notée $\normev{u}$
+	    
+	    On note les vecteurs avec des flèches au-dessus de leur nom.
+	\end{minipage} \hspace{0.05\linewidth}
+	\begin{minipage}{0.35\linewidth}
+	    \begin{tikzpicture}[scale=0.8]
+	        \draw[line width=2pt,-Stealth] (-1,-2) node {\Large$\bullet$} -- node[below right] {$\mathbold{\vv{u}}$} (3,1);
+	        \draw[dashed] (5,2.5)--(-2,-2.75);
+	        \draw [thick,-Stealth,color=blue] (3.5,-0.5)  node[right] {Sens} to [out=180,in=-90] (2.8,0.5);
+	        \draw [thick,-Stealth,color=blue] (2.5,2.5)  node[left] {Direction} to [out=15,in=120] (4,2);
+	        \draw [thick,color=blue, Stealth-Stealth] (-1.25,-1.7)-- node[above,rotate=37] {Norme} (2.7,1.25) ;
+	    \end{tikzpicture}
+	\end{minipage}
+\end{definition}
+
+
+
+\begin{exemple}{Translation d'une figure}
+	On représente la translation du quadrilatère $ABCD$ par la translation de vecteur $\vv{u}$
+	
+	\begin{minipage}[t]{0.3\linewidth}
+	    \begin{tikzpicture}[scale=0.7]
+	        \begin{axis}[xmin=-1 , xmax=7 , ymin=-1 , ymax=7 , axis lines=middle , ytick distance=1 , xtick distance=1 , grid=major, ticklabel style = {opacity=0} , enlargelimits = { abs = 0.2 }]
+	            \draw[line width = 1.5pt] (-1,1) node {x} node[above] {$A$} -- (1,2) node {x} node[above] {$B$} -- (5,0) node {x} node[above] {$C$} -- (2,-1) node {x} node[above] {$D$} -- (-1,1) ;
+	            \draw[line width = 2pt , -Stealth] (-1,3) node {$\bullet$} -- node[left]  {$\vv{u}$}(1,6) ;
+	        \end{axis}
+	    \end{tikzpicture}
+	\end{minipage} \hfill
+	\begin{minipage}[t]{0.3\linewidth}
+	    \begin{tikzpicture}[scale=0.7]
+	        \begin{axis}[xmin=-1 , xmax=7 , ymin=-1 , ymax=7 , axis lines=middle , ytick distance=1 , xtick distance=1 , grid=major, ticklabel style = {opacity=0} , enlargelimits = { abs = 0.2 }]
+	            \draw[line width = 1.5pt] (-1,1) node {x} node[above] {$A$} -- (1,2) node {x} node[above] {$B$} -- (5,0) node {x} node[above] {$C$} -- (2,-1) node {x} node[above] {$D$} -- (-1,1) ;
+	            \draw[line width = 2pt , -Stealth] (-1,3) node {$\bullet$} -- node[left]  {$\vv{u}$}(1,6) ;
+	
+	            \draw[color=blue , line width = 2pt , -Stealth] (-1,1) --++(1,2);
+	            \draw[color=blue , line width = 2pt , -Stealth] (1,2) --++(1,2);
+	            \draw[color=blue , line width = 2pt , -Stealth] (5,0) --++(1,2);
+	            \draw[color=blue , line width = 2pt , -Stealth] (2,-1) --++(1,2);
+	        \end{axis}
+	    \end{tikzpicture}
+	\end{minipage} \hfill
+	\begin{minipage}[t]{0.3\linewidth}
+	    \begin{tikzpicture}[scale=0.7]
+	        \begin{axis}[xmin=-1 , xmax=7 , ymin=-1 , ymax=7 , axis lines=middle , ytick distance=1 , xtick distance=1 , grid=major, ticklabel style = {opacity=0} , enlargelimits = { abs = 0.2 }]
+	            \draw[line width = 1.5pt] (-1,1) node {x} node[above] {$A$} -- (1,2) node {x} node[above] {$B$} -- (5,0) node {x} node[above] {$C$} -- (2,-1) node {x} node[above] {$D$} -- (-1,1) ;
+	            \draw[line width = 2pt , -Stealth] (-1,3) node {$\bullet$} -- node[left]  {$\vv{u}$}(1,6) ;
+	
+	            \draw[line width = 1.5pt, color=blue] (1,4) node {x} node[above] {$A'$} -- (3,5) node {x} node[above] {$B'$} -- (7,3) node {x} node[above] {$C'$} -- (4,2) node {x} node[above] {$D'$} -- (1,4) ;
+	        \end{axis}
+	    \end{tikzpicture}
+	\end{minipage}
+\end{exemple}
+
+
+
+\begin{definition}{Entre deux points}
+	Soient $A$ et $B$ deux points distincts du plan.\\
+	Pour décrire la translation permettant de relier le point $A$ au point $B$ on parlera du vecteur $\mathbold{\vv{AB}}$
+\end{definition}
+
+
+
+\begin{propriete}{Caractéristiques du vecteur $\vv{AB}$}
+	\begin{enumerate}\setlength{\itemsep}{1mm}
+	    \item La direction du vecteur $\vv{AB}$ est la même que celle de la droite $(AB)$
+	    \item Le sens de $\vv{AB}$ est \og de $A$ vers $B$ \fg
+	    \item La norme de $\vv{AB}$ est $\normev{AB} = AB$
+	\end{enumerate}
+\end{propriete}
+
+
+
+\begin{definition}{Vecteur nul}
+	Pour décrire l'absence de déplacement, on utilise le \textbf{vecteur nul} noté $\vv{0}$
+\end{definition}
+
+
+
+\begin{definition}{Vecteurs égaux}
+	On dit que deux \textbf{vecteurs} $\vv{u}$ et $\vv{v}$ sont \textbf{égaux} s'ils ont les mêmes caractéristiques (Direction, sens et norme)
+\end{definition}
+
+
+
+\begin{theoreme}{Milieu d'un segment}
+	Le point $M$ est le \textbf{milieu} du segment $[AB]$ si et seulement si $\vv{AM}=\vv{MB}$
+	\begin{center}
+	\begin{tikzpicture}[scale=0.6]
+	    \draw[-Stealth] (0,0) node{x} node[below] {$A$} -- (6,1) node{x} node[below] {$M$} ;
+	    \draw[-Stealth] (6,1) -- (12,2) node{x} node[below] {$B$} ;
+	\end{tikzpicture}
+	\end{center}
+\end{theoreme}
+
+\begin{demonstration}\vspace{-15pt}
+	\begin{itemize}[label = $\bullet$]
+		\item Si le point $M$ est bien le milieu du segment $[AB]$, alors les vecteurs $\vv{AM}$ et $\vv{MB}$ sont portés par la même droite donc ils ont la même direction. On peut également affirmer qu'ils ont le même sens car les point $A$, $M$ et $B$ sont alignés dans cet ordre. Leurs normes sont aussi égales, par définition du milieu d'un segment.\\
+		Donc on a bien $\vv{AM} = \vv{MB}$
+		\item Si on suppose que $\vv{AM} = \vv{MB}$, alors ces deux vecteurs ont la même direction. Cela veut dire que la droite $(AM)$ et la droite $(BM)$ sont confondues, on peut donc affirmer que $M \in (AB)$. \\
+		Comme $\normev{AM} = \normev{MB}$, on peut affirmer que $M$ est bien le milieu du segment $[AB]$
+	\end{itemize}
+\end{demonstration}
+
+
+
+
+
+\section{Opérations sur les vecteurs}
+
+\begin{definition}{Somme de vecteurs}
+\begin{minipage}{0.5\linewidth}
+    Soient deux vecteurs $\vv{u}$ et $\vv{v}$.
+    
+    Si l'on enchaîne successivement les deux translations décrites par les vecteurs $\vv{u}$ et $\vv{v}$ alors on dira que l'on a effectué une translation dont le vecteur est $\vv{u}+\vv{v}$
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.45\linewidth}
+    \begin{tikzpicture}
+        \draw[-Stealth , line width = 1pt] (0,0) -- node[above] {$\vv{u}$} (3,2) ;
+        \draw[-Stealth , line width = 1pt] (5,2.5) -- node[above] {$\vv{v}$} (7,1.5) ;
+        \draw[dashed,-Stealth , line width = 1pt] (3,2) -- node[above] {$\vv{v}$} (5,1) ;
+        \draw[color=blue,-Stealth , line width = 1pt] (0,0) -- node[below] {$\vv{u}+\vv{v}$}  (5,1) ;
+    \end{tikzpicture}
+\end{minipage}
+\end{definition}
+
+\begin{remarque}
+On voit sur la figure ci-dessus qu'il est essentiel d'effectuer la translation de vecteur $\vv{v}$ en partant du point d'arrivée de première translation.
+\end{remarque}
+
+
+
+\begin{definition}{Vecteurs opposés}
+    On dit que deux vecteurs $\vv{u}$ et $\vv{v}$ sont \textbf{opposés} si $\vv{u}+\vv{v}=\vv{0}$
+    
+    On note alors $\vv{v}=-\vv{u}$
+\end{definition}
+
+\begin{propriete}{Vecteurs opposés}
+    Pour tous points $A$ et $B$ \quad , \quad $\vv{AB}+\vv{BA}=\vv{0}$
+\end{propriete}
+
+
+
+\begin{definition}{Produit par un nombre positif}
+	\begin{minipage}{0.45\linewidth} \restoreskip
+	    Multiplier un vecteur $\vv{u}$ par un nombre positif $k$ revient à \textbf{multiplier sa norme} par $k$.
+	    
+	    Ses autres caractéristiques demeurent inchangées.
+	\end{minipage} \hspace{15mm}
+	\begin{minipage}{0.4\linewidth}
+	    \begin{tikzpicture}[scale=0.75]
+	         \draw[-Stealth , line width = 1.5pt] (0,0) -- node[above] {$\vv{u}$} (4,2) ;
+	         \draw[-Stealth , line width = 1pt , color = newblue] (2,-2) -- node[above left] {$2\times\vv{u}$} (10,2) ;
+	         \draw[-Stealth , line width = 1pt , color = newblue] (7,-2) -- node[above left] {$\frac{1}{2}\times\vv{u}$} (9,-1) ;
+	    \end{tikzpicture}
+	\end{minipage}
+\end{definition}
+
+\begin{exemple}{Produit par un nombre négatif}
+\begin{minipage}{0.5\linewidth}
+    Pour multiplier un vecteur par un nombre négatif, il faut le multiplier par un nombre positif puis prendre son opposé comme représenté ci-contre :
+\end{minipage} \hspace{15mm}
+\begin{minipage}{0.45\linewidth}
+    \begin{tikzpicture}[scale=0.5]
+         \draw[-Stealth , line width = 1pt] (0,0) -- node[above] {$\vv{u}$} (6,3) ;
+         \draw[-Stealth , line width = 1pt , color = newblue] (5,-2) -- node[above left] {$\frac{1}{2}\times\vv{u}$} (8,-0.5) ;
+         \draw[Stealth- , line width = 1pt , color = newblue] (10,-1) -- node[above left] {$-\frac{1}{2}\times\vv{u}$} (13,0.5) ;
+    \end{tikzpicture}
+\end{minipage}
+\end{exemple}
+
+
+
+\begin{theoreme}{Relation de Chasles}
+Soient $A$, $B$ et $C$ trois points du plan. Alors $\vv{AB}+\vv{BC}=\vv{AC}$
+\end{theoreme}
+
+\begin{demonstration}
+\begin{minipage}{0.55\linewidth} \restoreskip
+    D'après la définition de la somme de deux vecteurs, la translation de vecteur $\vv{AB}+\vv{BC}$ correspond à l'enchaînement des translations de vecteurs $\vv{AB}$ et $\vv{BC}$. \\
+    Cela revient bien à effectuer la translation de vecteur $\vv{AC}$ comme le représente la figure ci-contre :
+\end{minipage} \hspace{10mm}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw[-Stealth , line width = 1pt] (0,0) node[below] {$A$} -- node[above left] {$\vv{AB}$} (3,2) node[above] {$B$};
+        \draw[-Stealth , line width = 1pt] (3,2) -- node[above] {$\vv{BC}$} (5,1) node[below right] {$C$};
+        \draw[color=blue,-Stealth , line width = 1pt] (0,0) -- node[below] {$\vv{AB}+\vv{BC}$}  (5,1) ;
+    \end{tikzpicture}
+\end{minipage}
+\end{demonstration}
+
+
+
+\begin{theoreme}{Parallélogramme}
+	Le quadrilatère $ABCD$ est un \textbf{parallélogramme} si et seulement si $\vv{AB}=\vv{DC}$
+\end{theoreme}
+
+\begin{demonstration} \restoreskip
+Considérons $A$, $B$, $C$ et $D$ quatre points vérifiant $\vv{AB}=\vv{DC}$.
+
+    Alors les segments $[AB]$ et $[CD]$ sont parallèles. \\
+    Montrons maintenant que c'est également le cas des segments $[AD]$ et $[BC]$. \\
+    En appliquant la relation de Chasles on obtient :
+
+	\begin{minipage}{0.5\linewidth} \restoreskip
+	
+	    
+	        $\begin{WithArrows}[format = ll]
+	        & \vv{AD} \Arrow{Relation de Chasles} \\
+	        =~~ & \vv{AB} + \vv{BC} + \vv{CD} \Arrow{Car $\vv{AB} = \vv{DC}$} \\
+	        =~~ & \vv{DC} + \vv{BC} + \vv{CD} \Arrow{Changement d'ordre} \\
+	        =~~ & \vv{BC} + \vv{CD} + \vv{DC} \Arrow{Vecteurs opposés} \\
+	        =~~ & \vv{BC} + \vv{0}\\
+	        =~~ & \vv{BC}
+	        \end{WithArrows}$
+	    
+	    Ainsi $\vv{AD}=\vv{BC}$ donc les segments $[AD]$ et $[BC]$ sont parallèles.\\
+	    Le quadrilatère $ABCD$ est donc un parallélogramme.
+	\end{minipage} \hspace{10mm}
+	\begin{minipage}{0.4\linewidth}
+	    \begin{tikzpicture}
+	        \draw[line width = 1pt , -Stealth] (0,0) node[below] {$A$} -- (3,5) node[above] {$B$} ;
+	        \draw[line width = 1pt , -Stealth] (4,-1) node[below] {$D$} -- (7,4) node[above] {$C$} ;
+	        \draw[line width = 1pt , -Stealth , color=blue , dashed] (0,0) -- (4,-1) ;
+	        \draw[line width = 1pt , -Stealth , color=blue , dashed] (3,5) -- (7,4) ;
+	    \end{tikzpicture}
+	\end{minipage}
+\end{demonstration}
+
+
+
+\section{Colinéarité}
+
+\begin{definition}{Colinéarité}
+On dit de deux vecteurs $\vv{u}$ et $\vv{v}$ qu'ils sont colinéaires s'ils ont la même direction.
+\end{definition}
+
+
+
+\begin{minipage}{0.48\linewidth}
+    \begin{propriete}{Alignement}
+	    Trois points du plan $A$, $B$ et $C$ sont alignés si et seulement si $\vv{AB}$ et $\vv{AC}$ sont colinéaires.
+    \end{propriete}
+\end{minipage}\hspace{5mm}
+\begin{minipage}{0.48\linewidth}
+    \begin{remarque}
+    On aurait pu choisir les vecteurs $\vv{BC}$ et $\vv{BA}$, ou bien les vecteurs $\vv{CA}$ et $\vv{CB}$
+    \end{remarque}
+\end{minipage}
+
+\begin{demonstration}
+	Supposons que les vecteurs $\vv{AB}$ et $\vv{AC}$ sont colinéaires. Alors les droites $(AB)$ et $(AC)$ sont parallèles. 
+	
+	Or ces deux droites passent par le point $A$, elles sont donc confondues. 
+	
+	Cela signifie que les points $A$, $B$ et $C$ appartiennent à une même droite, ils sont donc alignés.
+	
+	Réciproquement, supposons que les points $A$, $B$ et $C$ sont alignés. Alors ils sont une une même droite, les vecteurs $\vv{AB}$ et $\vv{AC}$ ont donc la même direction, c'est à dire qu'ils sont colinéaires.
+\end{demonstration}
+
+\begin{theoreme}{Colinéarité}
+Deux vecteurs $\vv{u}$ et $\vv{v}$ sont colinéaires si et seulement si il existe $k\in\RR$ tel que $\vv{u}=k\times\vv{v}$
+\end{theoreme}
+
+\begin{remarque}
+Cette propriété vient du fait que lorsque l'on multiplie un vecteur par un nombre, sa norme peut être multipliée, son sens peut changer, mais sa direction est toujours identique.
+\end{remarque}
+
+
+
+\end{document}
