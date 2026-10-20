@@ -173,3 +173,31 @@
 \newcommand\Ouv{(O\,;\,\vv{u}\,;\,\vv{v})} 	% ----- Plan complexe (O;u;v)
 
 
+%%%%% Flèche SSI longueur adaptative %%%%%
+
+\makeatletter
+
+\newcommand{\ssi}[1]{%
+  \@ifnextchar[{\ssi@i{#1}}{\ssi@i{#1}[]}%
+}
+
+\def\ssi@i#1[#2]{%
+  \@ifnextchar[{\ssi@ii{#1}{#2}}{\ssi@ii{#1}{#2}[]}%
+}
+
+\def\ssi@ii#1#2[#3]{%
+  \mathrel{%
+    \ext@arrow 0099{%
+      \Longleftrightarrowfill@
+    }%
+    {\makebox[#1]{#2}}%
+    {\makebox[#1]{#3}}%
+  }%
+}
+
+\def\Longleftrightarrowfill@{%
+  \arrowfill@\Leftarrow\Relbar\Rightarrow
+}
+
+\makeatother
+

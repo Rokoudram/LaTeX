@@ -1,0 +1,107 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{
+    a5paper,
+    landscape,
+    left=20pt,
+    right=30pt,
+    top=70pt,
+    bottom=40pt
+}
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper]
+
+\usepackage{atbegshi}
+  % duplicate the content at shipout time
+  \AtBeginShipout{
+    \pgfpagesshipoutlogicalpage{1}\copy\AtBeginShipoutBox
+    \pgfpagesshipoutlogicalpage{2}\box\AtBeginShipoutBox
+    \pgfshipoutphysicalpage
+  }
+
+
+\fancyhead[RF]{}
+
+\fancyhead[R]{T\up{ale} STMG 4}            % En-tête droit
+\fancyhead[C]{Probabilités conditionnelles}
+\fancyhf[CF]{\footnotesize{\etablissement}}                     % En-tête central
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+Dans chacune des situations suivantes, déterminer la valeur de $\PP(A \cap B)$, en détaillant vos calculs au maximum et en précisant la formule utilisée si nécessaire :
+
+\medskip
+
+\begin{minipage}{0.5\linewidth} \restoreskip
+	\textbf{Situation \no 1}
+	
+	\renewcommand{\arraystretch}{1.75}
+	    \begin{tabular}{| P{1cm} | P{2cm} | P{2cm} | P{2cm} |}\hline
+		\cellcolor{gray} & $A$ & $\barre{A}$ & Total\\ \hline
+	    $B$ & & & \\ \hline
+	    $\barre{B}$ & & 30 & 50  \\ \hline
+	    Total &  & 60 & 100 \\ \hline
+	\end{tabular} 
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\linewidth} \restoreskip
+	\textbf{Situation \no 2}
+	
+	\begin{tikzpicture}[
+		grow=right, scale = 0.8 ,
+		level 1/.style={level distance=4cm, sibling distance=2cm},
+		level 2/.style={level distance=3cm, sibling distance=1cm}
+		]
+		\small
+		
+		\node {$\Omega$}
+		child {node {$\barre{A}$} 
+			child {node {$\barre{B}$}
+				edge from parent node[below] {$0,2$}
+			}
+			child {node {$B$}
+				edge from parent node[above] {}
+			} edge from parent node[below] {$0,6$}
+		}
+		child {node {$A$} 
+			child {node {$\barre{B}$}
+				edge from parent node[below] {}
+			}
+			child {node {$B$}
+				edge from parent node[above] {$0,5$}
+			} edge from parent node[above] {}
+		};
+	\end{tikzpicture}
+\end{minipage}
+
+\medskip
+
+\textbf{Situation \no 3}
+
+Dans une urne on place 40 boules numérotées de 1 à 40. On considère les évènements suivants :
+
+$\bullet$ A : \og La boule tirée porte un numéro pair \fg \\
+$\bullet$ B : \og La boule tirée porte un numéro qui est un multiple de 3 \fg
+
+\medskip
+
+\textbf{Situation \no 4}
+
+$\PP(A) = 0,5$ \quad , \quad $\PP(A \cup B) = 0,9$ \quad et \quad $\PP(B) = 0,7$
+
+
+
+
+
+
+\end{document}
