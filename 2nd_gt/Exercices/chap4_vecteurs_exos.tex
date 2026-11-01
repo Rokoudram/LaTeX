@@ -161,8 +161,8 @@ On considère $ABCDEF$ un hexagone régulier et on note $O$ son centre.
 		
 		\renewcommand{\arraystretch}{1.5}
 		\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth} p{0.3\linewidth}}
-			$\vv{BC}=\ldots$ & $\vv{CO}=\ldots$ & $\vv{FE}=\ldots$ \\
-			$\vv{OD}=\ldots$ & $\vv{BF}=\ldots$ & $\vv{AC}=\ldots$ 
+			$\vv{BC} = \ldots\ldots$ & $\vv{CO} = \ldots\ldots$ & $\vv{FE} = \ldots\ldots$ \\
+			$\vv{OD} = \ldots\ldots$ & $\vv{BF} = \ldots\ldots$ & $\vv{AC} = \ldots\ldots$ 
 		\end{tabular}
 		
 		\item Déterminer si les égalités suivantes sont correctes ou incorrectes :
@@ -211,7 +211,7 @@ On considère $ABCDEF$ un hexagone régulier et on note $O$ son centre.
 On considère un triangle $ABC$. On note $I$ le milieu du segment $[BC]$ \\
 On considère le point $M$ vérifiant $\vv{AI}=\vv{IM}$. 
 
-Quelle est la nature du quadrilatère $ABMC$ ?
+Quelle est la nature du quadrilatère $ABMC$ ? Justifier.
 
 
 \subsection{Dédoublement}
@@ -219,13 +219,13 @@ On considère un parallélogramme $ABCD$. \\
 On note $I$ et $J$ les milieux respectifs des segments $[AD]$ et $[BC]$
 \begin{enumerate}
 	\item Donner tous les vecteurs égaux à $\vv{IA}$
-	\item Quelle est la nature du quadrilatère $AIJB$ ? Et de $IDCJ$ ?
+	\item Quelle est la nature du quadrilatère $AIJB$ ? Et de $IDCJ$ ? Justifier.
 	\item \begin{enumerate}
-		\item Quelle est la nature du quadrilatère $IBJD$ ?
+		\item Quelle est la nature du quadrilatère $IBJD$ ? Justifier.
 		\item En déduire que $\vv{BI}=\vv{JD}$
 	\end{enumerate}
 	\item \begin{enumerate}
-		\item Quelle est la nature du quadrilatère $ICJA$ ?
+		\item Quelle est la nature du quadrilatère $ICJA$ ? Justifier.
 		\item En déduire que $\vv{IC}=\vv{AJ}$
 	\end{enumerate}
 	\item On note $M$ le point d'intersection entre les droites $(IC)$ et $(JD)$ \\
@@ -240,33 +240,6 @@ On note $I$ et $J$ les milieux respectifs des segments $[AD]$ et $[BC]$
 
 
 \section{Opérations sur les vecteurs}
-
-\subsection{Produit par un réel}
-On considère les points ci-contre alignés régulièrement :
-
-\begin{center}
-	\begin{tikzpicture}
-		\draw[line width = 1.5pt , -Stealth] (-0.5,0) -- (15.5,0) ;
-		\foreach \i/\j in {0/A, 1/B, 2/C, 3/D, 4/E, 5/F, 6/G, 7/H, 8/I, 9/J, 10/K, 11/L, 12/M, 13/N, 14/O, 15/P}
-			\draw (\i,0) node {\tiny\textbf{|}} node[above] {$\j$} ;
-	\end{tikzpicture}
-\end{center}
-
-Compléter les pointillés par un nombre réel afin que les égalités soient vérifiées :
-
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{P{0.45\linewidth} P{0.45\linewidth}}
-	$\vv{AB} = \ldots \vv{AD}$ \quad donc \quad $\vv{AD} = \ldots \vv{AB}$ & 
-	$\vv{CE} = \ldots \vv{FJ}$ \quad donc \quad $\vv{FJ} = \ldots \vv{CE}$ \\
-	$\vv{EH} = \ldots \vv{MD}$ \quad donc \quad $\vv{MD} = \ldots \vv{EH}$ &
-	$\vv{LN} = \ldots \vv{GC}$ \quad donc \quad $\vv{GC} = \ldots \vv{LN}$ \\
-	$\vv{KP} = \ldots \vv{KA}$ \quad donc \quad $\vv{KA} = \ldots \vv{KP}$ &
-	$\vv{EI} = \ldots \vv{LJ}$ \quad donc \quad $\vv{LJ} = \ldots \vv{EI}$ \\
-	$\vv{CF} = \ldots \vv{NP}$ \quad donc \quad $\vv{NP} = \ldots \vv{CF}$ &
-	$\vv{JP} = \ldots \vv{KG}$ \quad donc \quad $\vv{KG} = \ldots \vv{JP}$ \\
-\end{tabular}
-
-
 
 \subsection{Représentation graphique}
 \begin{minipage}{0.45\linewidth} \restoreskip
@@ -305,6 +278,33 @@ Compléter les pointillés par un nombre réel afin que les égalités soient v�
     	%%% End fadings %%%
 	\end{tikzpicture}
 \end{minipage}
+
+
+
+\subsection{Produit par un réel}
+On considère les points ci-contre alignés régulièrement :
+
+\begin{center}
+	\begin{tikzpicture}
+		\draw[line width = 1.5pt , -Stealth] (-0.5,0) -- (15.5,0) ;
+		\foreach \i/\j in {0/A, 1/B, 2/C, 3/D, 4/E, 5/F, 6/G, 7/H, 8/I, 9/J, 10/K, 11/L, 12/M, 13/N, 14/O, 15/P}
+			\draw (\i,0) node {\tiny\textbf{|}} node[above] {$\j$} ;
+	\end{tikzpicture}
+\end{center}
+
+Compléter les pointillés par un nombre réel afin que les égalités soient vérifiées :
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{P{0.45\linewidth} P{0.45\linewidth}}
+	$\vv{AB} = \ldots \vv{AD}$ \quad donc \quad $\vv{AD} = \ldots \vv{AB}$ & 
+	$\vv{CE} = \ldots \vv{FJ}$ \quad donc \quad $\vv{FJ} = \ldots \vv{CE}$ \\
+	$\vv{EH} = \ldots \vv{MD}$ \quad donc \quad $\vv{MD} = \ldots \vv{EH}$ &
+	$\vv{LN} = \ldots \vv{GC}$ \quad donc \quad $\vv{GC} = \ldots \vv{LN}$ \\
+	$\vv{KP} = \ldots \vv{KA}$ \quad donc \quad $\vv{KA} = \ldots \vv{KP}$ &
+	$\vv{EI} = \ldots \vv{LJ}$ \quad donc \quad $\vv{LJ} = \ldots \vv{EI}$ \\
+	$\vv{CF} = \ldots \vv{NP}$ \quad donc \quad $\vv{NP} = \ldots \vv{CF}$ &
+	$\vv{JP} = \ldots \vv{KG}$ \quad donc \quad $\vv{KG} = \ldots \vv{JP}$ \\
+\end{tabular}
 
 
 
@@ -377,8 +377,10 @@ Compléter les pointillés par un nombre réel afin que les égalités soient v�
 
 \subsection{Autour d'un parallélogramme}
 Construire un parallélogramme $ABCD$, puis placer les points $I$, $J$ et $K$ vérifiant les égalités suivantes :
+\begin{center}
+$\vv{CI}=\vv{DB}+\frac{1}{2}\vv{AD}$ \qquad ; \qquad $\vv{BJ}=2\vv{CD}-\frac{1}{2}\vv{CB}$ \qquad ; \qquad $\vv{DK}=\vv{AC}+2\vv{BA}+\frac{1}{2}\vv{DA}$
+\end{center}
 
-$\vv{CI}=\vv{DB}+\frac{1}{2}\vv{AD}$ \qquad $\vv{BJ}=2\vv{CD}-\frac{1}{2}\vv{CB}$ \qquad $\vv{DK}=\vv{AC}+2\vv{BA}+\frac{1}{2}\vv{DA}$
 
 
 
