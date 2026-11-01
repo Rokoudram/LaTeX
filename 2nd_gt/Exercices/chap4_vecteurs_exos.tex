@@ -7,7 +7,7 @@
 
 \fancyhead[R]{2\up{nd} générale}            % En-tête droit
 \fancyhead[C]{Vecteurs du plan}
-\fancyhf[CF]{\footnotesize{ \copyright ~ Tous droits réservés ~ \copyright}}                     % En-tête central
+\fancyhf[CF]{\footnotesize \etablissement}                     % En-tête central
 \setstretch{0.9}                           % Interligne
 
 
@@ -384,6 +384,7 @@ $\vv{CI}=\vv{DB}+\frac{1}{2}\vv{AD}$ \qquad ; \qquad $\vv{BJ}=2\vv{CD}-\frac{1}{
 
 
 
+\newpage
 \section{Relation de Chasles et décomposition}
 
 \subsection{Égalités de sommes}
@@ -433,19 +434,6 @@ $\vv{y}=2\vv{AC}+3\vv{DA}-2\vv{BA}+\vv{CB}+3\vv{BD}-\vv{AC}$
 
 
 
-\subsection{Milieu d'un segment}
-\begin{enumerate}
-	\item On considère un segment $[AB]$ de milieu $I$, ainsi qu'un point $M$ quelconque. \\
-	Démontrer que $\vv{MA}+\vv{MB}=2\vv{MI}$
-	\item On considère un parallélogramme $CDEF$ ainsi qu'un point $M$ quelconque. \\
-	En appliquant le résultat de la question 1. démontrer que $\vv{MC}+\vv{ME}=\vv{MD}+\vv{MF}$
-	\item On considère un triangle $GHK$\\
-	On note $G'$ le milieu de $[HK]$, $H'$ le milieu de $[GK]$ et $K'$ le milieu de $[GH]$ \\
-	En appliquant le résultat de la question 1. démontrer que $\vv{GG'}+\vv{HH'}+\vv{KK'}=\vv{0}$
-\end{enumerate}
-
-
-
 \subsection{Décomposition}
 On considère quatre points du plan $A$, $B$, $C$ et $D$. On pose également $\vv{u}=3\vv{AB}+2\vv{CD}+4\vv{CB}$
 \begin{enumerate}
@@ -463,6 +451,20 @@ On considère un rectangle $ABCD$, ainsi que les points $I$ et $J$ milieux respe
 	\item Montrer que $\vv{AC}+3\vv{JB}+\vv{BD}=\vv{JC}$
 	\item Montrer que $2\vv{IJ}-\vv{AB}+\vv{DI}=\vv{IB}$
 \end{enumerate}
+
+
+
+\subsection{Milieu d'un segment}
+\begin{enumerate}
+	\item On considère un segment $[AB]$ de milieu $I$, ainsi qu'un point $M$ quelconque. \\
+	Démontrer que $\vv{MA}+\vv{MB}=2\vv{MI}$
+	\item On considère un parallélogramme $CDEF$ ainsi qu'un point $M$ quelconque. \\
+	En appliquant le résultat de la question 1. démontrer que $\vv{MC}+\vv{ME}=\vv{MD}+\vv{MF}$
+	\item On considère un triangle $GHK$\\
+	On note $G'$ le milieu de $[HK]$, $H'$ le milieu de $[GK]$ et $K'$ le milieu de $[GH]$ \\
+	En appliquant le résultat de la question 1. démontrer que $\vv{GG'}+\vv{HH'}+\vv{KK'}=\vv{0}$
+\end{enumerate}
+
 
 
 \subsection{Découpage du triangle}
@@ -512,11 +514,12 @@ b) $\vv{u}=3\vv{BC}+\vv{AD}$ \qquad et \qquad $\vv{v}=6\vv{BC}-2\vv{DA}$
 
 c) $\vv{u}=4\vv{AB}-2\vv{BD}$ \qquad et \qquad $\vv{v}=3\vv{BD}+6\vv{BA}$
 
-d) $\vv{u}=2\vv{AB}+\vv{BC}$ \qquad et \qquad $\vv{v}=2\vv{AB}+2\vv{AC}$
 
-e) $\vv{u}=4\vv{AC}+2\vv{AD}$ \qquad et \qquad $\vv{v}=3\vv{AC}+3\vv{CD}$
 
-f) $\vv{u}=3\vv{BD}+2\vv{DC}$ \qquad et \qquad $\vv{v}=9\vv{BC}-3\vv{DC}$ 
+\subsection{Prolongement triangulaire}
+On considère un triangle $ABC$, ainsi que les points $K$ et $L$ vérifiant $\vv{CK}=\vv{AB}+\vv{AC}$ et $\vv{AL}=\vv{CB}$
+
+Montrer que les points $K$, $B$ et $L$ sont alignés.
 
 
 
@@ -526,14 +529,7 @@ On considère un parallélogramme $EFGH$ et on définit les points $I$ et $J$ pa
 	\item Montrer que $\vv{GI}=\vv{FH}$
 	\item Montrer que $\vv{GJ}=2\vv{HF}$
 	\item que peut-on en conclure concernant les points $G$, $I$ et $J$ ?
-\end{enumerate}
-
-
-
-\subsection{Prolongement triangulaire}
-On considère un triangle $ABC$, ainsi que les points $K$ et $L$ vérifiant $\vv{CK}=\vv{AB}+\vv{AC}$ et $\vv{AL}=\vv{CB}$
-
-Montrer que les points $K$, $B$ et $L$ sont alignés.
+\end{enumerate} 
 
 
 
@@ -556,6 +552,18 @@ $\vv{AJ}=\vv{CB}$ \quad , \quad $\vv{BI}=\vv{AC}$ \quad , \quad $\vv{BK}=\vv{CB}
 On considère un triangle $IJK$ ainsi que les points $M$ et $N$ tels que $\vv{IM}=\vv{KI}$ et $\vv{KN}=\vv{JK}+2\vv{JI}$
 
 Démontrer que les droites $(NM)$ et $JK$ sont parallèles.
+
+
+
+\subsection{Subtile colinéarité}
+On considère quatre points distincts $A$, $B$, $C$ et $D$.\\
+Dans chacune des situations suivantes, montrer que les vecteurs $\vv{u}$ et $\vv{v}$ sont colinéaires :
+
+a) $\vv{u}=2\vv{AB}+\vv{BC}$ \qquad et \qquad $\vv{v}=2\vv{AB}+2\vv{AC}$
+
+b) $\vv{u}=4\vv{AC}+2\vv{AD}$ \qquad et \qquad $\vv{v}=3\vv{AC}+3\vv{CD}$
+
+c) $\vv{u}=3\vv{BD}+2\vv{DC}$ \qquad et \qquad $\vv{v}=9\vv{BC}-3\vv{DC}$
 
 
 
