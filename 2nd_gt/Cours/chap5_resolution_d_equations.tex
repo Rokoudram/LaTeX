@@ -1,0 +1,140 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../../Latex/inputs/preambule_cours.tex}         	% ----- Préambule feuilles de TD
+\input{../../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\fancyhead[R]{2\up{nd} générale}            % En-tête droit
+\fancyhead[C]{Résolution d'équations}
+\fancyhf[CF]{\footnotesize{Lycée Polyvalent Irène et Frédéric Joliot-Curie}}           % En-tête central
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+Dans ce chapitre, on admettra que l'on cherche à résoudre toutes les équations dans $\RR$.
+
+\section{Équations du premier degré}
+
+\begin{definition}{Équation}
+	Une équation est une \textbf{égalité} mathématique faisant intervenir une ou différentes variables  appelées \textbf{inconnues}.
+	
+	\textbf{Résoudre} une équation revient à déterminer l'ensemble de toutes les valeurs des variables pour lesquelles l'égalité est vraie.
+\end{definition}
+
+\begin{definition}{Équation du premier degré}
+	Une équation dite du \textbf{premier degré} est une équation dans laquelle intervient une seule inconnue et des fonctions affines de cette inconnue.
+\end{definition}
+
+\begin{exemple}{Premier degré}
+	L'équation $3x - 1 = 5x + 7$ est une équation du premier degré. 
+	
+	L'équation $5x + 8 = x^2 - 1$ n'est pas une équation du premier degré. 
+	
+	L'équation $y + 7 = 2x + 1$ n'est pas une équation du premier degré. 
+	
+	L'équation $9z + 21 = 14z - 33$ est une équation du premier degré.
+\end{exemple}
+
+
+\begin{methode}{Résolution}
+	Pour résoudre une équation du premier degré, on cherche à \textbf{isoler l'inconnue}.\\
+	Pour ce faire, on applique des opérations ($+$ , $-$ , $\times$ , $\div$) de chaque côté de l'égalité jusqu'à avoir isolé l'inconnue.
+\end{methode}
+
+\begin{exemple}{Résolution d'une équation \og simple \fg}
+    $\begin{WithArrows}[format = cc]
+    & 3x-2=8-7x   \Arrow{On ajoute $2$ de chaque côté} \\
+    \iff  & 3x=10-7x \Arrow{On ajoute $7x$ de chaque côté} \\
+    \iff  & 10x=10\Arrow{On divise par $10$ de chaque côté} \\
+    \iff  & x=1 
+    \end{WithArrows}$
+\end{exemple}
+
+
+
+Il est possible d'avoir besoin de résoudre des équation du premier degré plus complexes que celle vu en exemple, notamment des équations faisant intervenir des fractions ! 
+
+En pratique on peut se ramener à une équation plus simple si l'on met toute l'équation au même dénominateur. En effet, si tous les termes de l'équation sont divisés par un même nombre, alors on peut se débarrasser du dénominateur complètement comme le montre l'exemple ci-après :
+
+
+\newpage
+
+\begin{exemple}{Résolution d'une équation avec fractions}
+    $\begin{WithArrows}[format = cc , interline = 3mm] 
+	    & x + \dfrac{1}{2} = \dfrac{x}{3} + 1   \Arrow{On met au même dénominateur à gauche et à droite} \\
+	    \iff  & \dfrac{2x}{2} + \dfrac{1}{2} = \dfrac{x}{3} + \dfrac{3}{3} \Arrow{On met les deux côtés sur le même dénominateur : $6$} \\
+	    \iff  & \dfrac{3 \times 2x}{6} + \dfrac{3 \times 1}{6} = \dfrac{2 \times x}{6} + \dfrac{2 \times 3}{6} \Arrow{On simplifie les calculs} \\
+	    \iff  & \dfrac{6x}{6} + \dfrac{3}{6} = \dfrac{2x}{6} + \dfrac{6}{6} \Arrow{On se débarrasse du dénominateur en multipliant par $6$ !} \\
+	    \iff  & 6x + 3 = 2x + 6 \Arrow{On finit en résolvant l'équation comme vu plus tôt} \\
+	    \iff & x = \dfrac{3}{4}
+    \end{WithArrows}$
+\end{exemple}
+
+
+
+\section{Équations avec valeur interdite}
+
+Dans l'exemple vu plus haut, le dénominateur intervenant dans l'équation était une constante. Mais que se passe-t-il s'il y a un dénominateur variable dans une équation ?
+
+\begin{methode}{Dénominateur variable}
+	Si une équation fait intervenir un \textbf{dénominateur variable}, alors on commence \textbf{toujours} par déterminer la ou les \textbf{valeur(s) interdite(s)} de l'équation. \\
+	Ensuite on applique les méthode classiques pour résoudre l'équation.
+\end{methode}
+
+\begin{rappel}{Valeur interdite}
+	On parle de \textbf{valeur interdite} lorsqu'un nombre ne peut pas être injecté dans une expression, en général parce que cela rendrait un dénominateur nul.
+\end{rappel}
+
+Voyons un cas concret de la résolution d'une telle équation :
+
+\begin{exemple}{Avec un dénominateur variable}
+	On cherche à résoudre l'équation $\dfrac{1}{x-2} = 3$
+	
+	On commence par identifier la valeur interdite de cette équation : $x - 2 \neq 0 \iff x \neq 2$ , donc $2$ est la valeur interdite de l'équation.
+	
+	On résout ensuite l'équation :
+	
+	$\begin{WithArrows}[format = cc , interline = 3mm] 
+	    & \dfrac{1}{x-2} = 3 \Arrow{On met chaque côté au même dénominateur} \\
+	    \iff & \dfrac{1}{x-2} = \dfrac{3 \times (x-2)}{x-2} \Arrow{On se débarrasse du dénominateur en multipliant par $(x-2)$ !} \\
+	    \iff & 1 = 3(x-2) \Arrow{On développe le membre de droite} \\
+	    \iff & 1 = 3x - 6 \Arrow{On résout comme les équations précédentes} \\
+	    \iff & x = \dfrac{7}{3} 
+    \end{WithArrows}$
+\end{exemple}
+
+
+
+\section{Équations produit nul}
+
+\begin{exemple}{Équation produit nul}
+    $\begin{WithArrows}[format = lccc] \renewcommand{\arraystretch}{1.5}
+    & & (3x-2)(8-7x)=0 & \Arrow{On sépare les facteurs} \\
+    \iff\; & 3x-2=0 & \text{ou} & 8-7x=0 \Arrow[jump=2]{On résout séparément} \\
+    \iff & 3x=2 & \text{ou} & 7x=8 \\
+    \iff & x=\frac{2}{3} & \text{ou} & x=\frac{8}{7}
+    \end{WithArrows}$ \\[5pt]
+    On obtient alors $S=\left\{\dfrac{2}{3}~~;~~\dfrac{8}{7}\right\}$
+\end{exemple}
+
+
+
+\section{Résolution de problèmes}
+Pour résoudre un problème à l'aide d'une équation on peut distinguer quelques étapes essentielles :
+\begin{enumerate}[itemsep = 1mm]
+    \item Repérer les valeurs qui nous sont inconnues.
+    \item En choisir une qui sera notre inconnue principale : $x$
+    \item Utiliser l'énoncé pour exprimer les autres valeurs à l'aide de $x$
+    \item Repérer des relations entre ces valeurs pour écrire une équation.
+    \item Résoudre l'équation.
+\end{enumerate}
+
+
+
+\end{document}
