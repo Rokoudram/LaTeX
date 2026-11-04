@@ -49,10 +49,10 @@ Dans ce chapitre, on admettra que l'on cherche à résoudre toutes les équation
 
 \begin{exemple}{Résolution d'une équation \og simple \fg}
     $\begin{WithArrows}[format = cc]
-    & 3x-2=8-7x   \Arrow{On ajoute $2$ de chaque côté} \\
-    \iff  & 3x=10-7x \Arrow{On ajoute $7x$ de chaque côté} \\
-    \iff  & 10x=10\Arrow{On divise par $10$ de chaque côté} \\
-    \iff  & x=1 
+	    & 3x-2=8-7x   \Arrow{On ajoute $2$ de chaque côté} \\
+	    \iff  & 3x=10-7x \Arrow{On ajoute $7x$ de chaque côté} \\
+	    \iff  & 10x=10\Arrow{On divise par $10$ de chaque côté} \\
+	    \iff  & x=1 
     \end{WithArrows}$
 \end{exemple}
 
@@ -96,9 +96,15 @@ Voyons un cas concret de la résolution d'une telle équation :
 \begin{exemple}{Avec un dénominateur variable}
 	On cherche à résoudre l'équation $\dfrac{1}{x-2} = 3$
 	
-	On commence par identifier la valeur interdite de cette équation : $x - 2 \neq 0 \iff x \neq 2$ , donc $2$ est la valeur interdite de l'équation.
+	\textbf{Étape \no1 :}  Valeur interdite
 	
-	On résout ensuite l'équation :
+	On commence par identifier la valeur interdite de cette équation : $x - 2 \neq 0 \iff x \neq 2$ , donc $2$ est la valeur interdite de l'équation.
+
+	C'est à dire que $2$ ne peut pas appartenir à l'ensemble des solutions de l'équation.	
+	
+	\textbf{Étape \no2 :} Résolution
+	
+	On résout ensuite l'équation \og comme d'habitude \fg :
 	
 	$\begin{WithArrows}[format = cc , interline = 3mm] 
 	    & \dfrac{1}{x-2} = 3 \Arrow{On met chaque côté au même dénominateur} \\
@@ -107,33 +113,90 @@ Voyons un cas concret de la résolution d'une telle équation :
 	    \iff & 1 = 3x - 6 \Arrow{On résout comme les équations précédentes} \\
 	    \iff & x = \dfrac{7}{3} 
     \end{WithArrows}$
+    
+    \textbf{Etape \no3 :} Conclusion
+    
+    $\dfrac{7}{3} \neq 2$ , donc l'ensemble des solutions de l'équation est $S = \left\{\dfrac{7}{3}\right\}$
 \end{exemple}
 
 
 
 \section{Équations produit nul}
 
+Lorsque l'on multiplie des nombres réels, il est impossible d'obtenir $0$ si les nombres multipliés sont tous différents de $0$. Formellement on dira qu'il s'agit de l'intégrité multiplicatives des nombres réels.
+
+\begin{propriete}{Intégrité multiplicative}
+	On considère deux nombres réels $A$ et $B$. Alors :
+	\[A \times B = 0 \iff A = 0 \text{ ou } B = 0\]
+\end{propriete}
+
+
+Cette propriété nous permettra de résoudre des équations dite \og \textbf{produit nul} \fg, c'est à dire des équations dont le membre de gauche est un produit et le membre de droite est $0$.
+
 \begin{exemple}{Équation produit nul}
     $\begin{WithArrows}[format = lccc] \renewcommand{\arraystretch}{1.5}
-    & & (3x-2)(8-7x)=0 & \Arrow{On sépare les facteurs} \\
-    \iff\; & 3x-2=0 & \text{ou} & 8-7x=0 \Arrow[jump=2]{On résout séparément} \\
+    & & (3x-2)(8-7x)=0 & \Arrow{On sépare les facteurs par intégrité multiplicative} \\
+    \iff\; & 3x-2=0 & \text{ou} & 8-7x=0 \Arrow[jump=2]{On résout séparément les deux équations} \\
     \iff & 3x=2 & \text{ou} & 7x=8 \\
-    \iff & x=\frac{2}{3} & \text{ou} & x=\frac{8}{7}
-    \end{WithArrows}$ \\[5pt]
+    \iff & x=\dfrac{2}{3} & \text{ou} & x=\dfrac{8}{7}
+    \end{WithArrows}$
+    
     On obtient alors $S=\left\{\dfrac{2}{3}~~;~~\dfrac{8}{7}\right\}$
 \end{exemple}
+
+\begin{remarque}
+	Il est tout à fait possible, voire très envisageable, d'appliquer cette méthode pour des produits ayant plus de deux facteurs.
+	
+	Par exemple, pour résoudre l'équation $(2x+1)(x-4)(5x+8) = 0$ , on séparerait les trois facteurs, puis on procéderait à la résolution des trois plus petites équations en émergeant.
+\end{remarque}
 
 
 
 \section{Résolution de problèmes}
+
 Pour résoudre un problème à l'aide d'une équation on peut distinguer quelques étapes essentielles :
-\begin{enumerate}[itemsep = 1mm]
-    \item Repérer les valeurs qui nous sont inconnues.
-    \item En choisir une qui sera notre inconnue principale : $x$
-    \item Utiliser l'énoncé pour exprimer les autres valeurs à l'aide de $x$
-    \item Repérer des relations entre ces valeurs pour écrire une équation.
-    \item Résoudre l'équation.
-\end{enumerate}
+
+\begin{methode}{Résoudre un problème par une équation}
+	\begin{enumerate}[itemsep = 1mm]
+	    \item Repérer les valeurs qui nous sont inconnues.
+	    \item En choisir une qui sera notre inconnue principale : $x$
+	    \item Utiliser l'énoncé pour exprimer les autres valeurs à l'aide de $x$
+	    \item Repérer des relations entre ces valeurs pour écrire une égalité.
+	    \item Résoudre l'équation donnée par cette égalité.
+	    \item Conclure
+	\end{enumerate}
+\end{methode}
+
+Voyons un exemple pour mettre en pratique la méthode proposée ci-dessus :
+
+\begin{exemple}{Application concrète}
+	\textbf{Problème :} \\
+	Pour Halloween, Tiana a récolté diverses friandises. Dans son panier on peut compter des bonbons, trois fois plus de chocolats que de bonbons, et 20 sucettes. On sait qu'en tout, il y a 140 friandises dans son panier. \\
+	Combien Tiana a-t-elle récolté de bonbons ?
+	
+	\textbf{Méthode :}
+		\begin{enumerate}[itemsep = 1mm]
+		    \item On ne connait ni le nombre de bonbons, ni le nombre de chocolats.
+		    \item On choisit de poser $x$ le nombre de bonbons.
+		    \item On sait alors que le nombre de chocolats est trois fois plus grand que le nombre de bonbons, il vaut donc $3x$
+		    \item On sait que si l'on compte toutes les friandises, on trouvera $140$. 
+		    
+		    On peut donc écrire \og Bonbons + Chocolats + Sucettes = $140$ \fg 
+		    
+		    C'est à dire $x + 3x + 20 = 140$
+		    
+		    \item On résout l'équation trouvée :
+		    
+	        $\begin{WithArrows}[format = cc]
+			    & x + 3x + 20 = 140   \Arrow{On ajoute $20$ de chaque côté} \\
+			    \iff  & 4x = 120 \Arrow{On divise par $4$ de chaque côté} \\
+			    \iff  & x = 30
+		    \end{WithArrows}$
+		    
+		    \item On peut donc conclure que Tiana a récolté $30$ bonbons, $90$ chocolats et $20$ sucettes.
+		\end{enumerate}
+\end{exemple}
+
 
 
 
