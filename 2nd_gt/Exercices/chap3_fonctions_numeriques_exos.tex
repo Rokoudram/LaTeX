@@ -411,17 +411,18 @@ On a représenté dans le repère ci-dessous la courbe $\Ccal_f$ représentative
     \end{enumerate}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-    \begin{tikzpicture}[scale=1.1] % ----- Début de la figure
-        \begin{axis}[xmin = -4, xmax = 4, ymin = -2, ymax = 3,
+    \begin{tikzpicture}[scale=1.1]
+        \begin{axis}[
+        		xmin = -4, xmax = 4, ymin = -2, ymax = 3,
 			axis lines = middle, 
 			grid=both , 
-        	xtick distance = 1, ytick distance = 1,
-    		major grid style = {line width = 0.2pt ,draw = gray},
-    		minor tick num=1 ,
-    		minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
-        	ticklabel style = {font = \scriptsize } ,
-        	enlargelimits = { abs = 0.2 }
-        	]
+	        	xtick distance = 1, ytick distance = 1,
+	    		major grid style = {line width = 0.2pt ,draw = gray},
+	    		minor tick num=1 ,
+	    		minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+	        	ticklabel style = {font = \scriptsize } ,
+	        	enlargelimits = { abs = 0.2 }
+	        	]
     
         \addplot[line width = 2pt , domain=-4:-2, samples=100, color=blue!80!black]   
         {0.25*x^3+2.25*x^2+7*x+8}; 

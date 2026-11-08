@@ -1,0 +1,169 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[4mm] Nom : ............................................. }{}{Classe : ............... \\[4mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 2 (55min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\bigstar$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Questions de cours}
+Dans cet exercice on note $f$ une fonction quelconque et $CCal_f$ sa courbe représentative.
+\begin{enumerate}
+	\item Si $f(x)=y$, alors quel point appartient à $\Ccal_f$  ?
+	\item Un nombre peut-il admettre plusieurs antécédents par la fonction $f$ ? Et plusieurs images ?
+	\item Qu'est-ce que le domaine de définition de la fonction $f$ ?
+\end{enumerate}
+
+
+
+\section{Généralités}
+On considère la fonction $f$ définie par $f(x) = \dfrac{x^2 + 1}{2x - 4}$
+\begin{enumerate}
+	\item Calculer l'image de $3$ par la fonction $f$.
+	\item Déterminer la valeur interdite de la fonction $f$.
+	\item Donner alors $\Dcal_f$ le domaine de définition de la fonction $f$.
+\end{enumerate}
+
+
+
+\section{Représentation graphique}
+On considère la fonction $g$ définie par $g(x) = \dfrac{(2-x)(x+1)(x+4)}{4}$ et on note $\Ccal_g$ sa courbe représentative.
+
+\begin{minipage}{0.5\textwidth}
+	\begin{enumerate}
+		\item Déterminer $\Dcal_g$ le domaine de définition de la fonction $g$.
+		\item Existe-t-il un point de $\Ccal_g$ d'abscisse $3$ ? Si oui, préciser ses coordonnées.
+		\item $\Ccal_g$ passe-t-elle par l'origine du repère ?\\
+		Justifier.
+		\item Remplir le tableau de valeurs ci-contre :
+		
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{| P{1.5cm} | P{1cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+			$x$ & $-4$ & $-3$ & $-2$ & $-1$  \\ \hline
+			$g(x)$ & & & & \\ \hline
+		\end{tabular}\\
+		\begin{tabular}{| P{1.5cm} | P{1cm} | P{1cm} | P{1cm} |} \hline
+			$x$ & $0$ & $1$ & $2$  \\ \hline
+			$g(x)$ & & &  \\ \hline
+		\end{tabular} \\
+		\textit{Vous devez détailler au moins un des calculs effectués}
+		
+		\item À l'aide du tableau précédent, tracer dans le repère ci-après une courbe s'approchant au mieux de $\Ccal_g$	
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{tikzpicture}[scale=1.3]
+        \begin{axis}[
+        		xmin = -4 , xmax = 2 , ymin = -3 , ymax = 3,
+			axis lines = middle, 
+			grid=both , 
+	        	xtick distance = 1, ytick distance = 1,
+	    		major grid style = {line width = 0.2pt ,draw = gray},
+	    		minor tick num = 1 ,
+	    		minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+	        	ticklabel style = {font = \scriptsize } ,
+	        	enlargelimits = { abs = 0.2 }
+	        	]
+        \end{axis}
+    \end{tikzpicture}                                               
+\end{minipage}
+
+
+\newpage
+\newgeometry{left=30pt, right=30pt, top=30pt, bottom=55pt}
+
+
+\section{Sur une route de campagne}
+\begin{minipage}{0.5\linewidth}
+	Wayan effectue un trajet en voiture. La courbe ci-après décrit la distance parcourue par Wayan en fonction du temps écoulé depuis son départ. \\
+	Toutes les vitesses seront données en km/h
+	\begin{enumerate}
+		\item Quelle a été la vitesse moyenne de Wayan lors de son trajet ?
+		\item Quelle distance a-t-il parcouru lors des quarante premières minutes de route ?
+		\item Il y avait des embouteillages lors des dix derniers kilomètres du trajet. Combien de temps Wayan a-t-il passé dans ces embouteillages ?
+		\item Entre la 40-ième et la 60-ième minute de son trajet, Wayan circulait sur une voie limitée à 80km/h. Semble-t-il qu'il ait respecté cette limitation de vitesse ?
+	\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{tikzpicture}[scale=1.2]
+        \begin{axis}[xmin=0 , xmax=120 , ymin=0 , ymax=100, 
+		axis lines = middle, 
+		x label style={at = {(axis description cs:1,-0.125)} , anchor=east},
+        xlabel = \small{Temps (min)},
+        y label style={rotate=90 , at = {(axis description cs:-0.125,1)} , anchor=east},
+        ylabel = \small{Distance (km)},
+		grid=both , 
+        xtick distance = 10, ytick distance = 10,
+    	major grid style = {line width = 0.2pt ,draw = gray},
+    	minor tick num=1 ,
+    	minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+        ticklabel style = {font = \scriptsize }
+        ]
+			
+			\addplot[domain = 0:120 , line width = 2pt , color = blue!80!black , samples = 100]
+			{53.65*tanh(\x/35-1.5)+48.57};	
+			
+    	\end{axis}
+    \end{tikzpicture}
+\end{minipage}
+
+
+\section{La promesse}
+\begin{enumerate}
+	\item Calculer sous forme de fraction irréductible la différence entre $5$ et le triple de son inverse.
+	\item On considère l'ensemble $A = \{ 2 ~;~ 4 ~;~ 8 \}$. \\
+	Compléter les pointillés par le symbole adapté : $A \ldots\ldots \ZZ$
+	\item Déterminer l'ensemble suivant sous la forme d'un intervalle : $[0 ~;~ +\infty[ \cup [-3 ; 111[$
+	\item Donner deux intervalles $I$ et $J$ tels que $I \cap J = \{1\}$
+	\item On considère la fonction $g$ définie par $g(x) = 3x +6$.\\
+	Déterminer un antécédent de $0$ par la fonction $g$.
+\end{enumerate}
+
+
+
+\section{Piqure de rappel}
+\begin{minipage}{0.6\textwidth}
+	Compléter les pointillés par le symbole adapté parmi $\subset$ , $\not\subset$ , $\in$ ou $\notin$ en vous appuyant sur la figure représentée ci-contre. Chaque symbole doit être utilisé une seule fois.
+	
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{P{0.5\textwidth} P{0.5\textwidth}}
+		$B$ \ldots\ldots $[AC]$ & $[CD)$ \ldots\ldots $(EC)$ \\
+		$[EF]$ \ldots\ldots $(AC)$ & $\bigstar$ $A$ \ldots\ldots $[BC)$
+	\end{tabular}
+\end{minipage} \hspace{10mm}
+\begin{minipage}{0.4\textwidth}
+	\begin{tikzpicture}
+		\draw (1,0.75) -- (2,1) node {$\bullet$} node[above] {$A$} -- (4.667,1.667) node {$\bullet$} node[above] {$D$} -- (6,2) node {$\bullet$} node[above] {$F$} -- (7,2.25) ;
+		\draw  (1,0) -- (3,2) node {$\bullet$} node[left] {$B$} -- (4,3) node {$\bullet$} node[right] {$C$} -- (5,4) ;
+		\draw (5.5,0) -- (5,1) node {$\bullet$} node[right] {$E$} -- (3.5,4) ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\end{document}
