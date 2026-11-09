@@ -1,0 +1,160 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[4mm] Nom : ............................................. }{}{Classe : ............... \\[4mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 2 bis (55min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\bigstar$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Questions de cours}
+\begin{enumerate}
+	\item Donner deux définitions d'un nombre décimal.
+	\item Donner une formule permettant de calculer la distance entre deux nombres $a$ et $b$.
+	\item Nommer les quatre symboles suivants : $\in$ ; $\subset$ ; $\cap$ et $\cup$
+\end{enumerate}
+
+
+
+\section{À propos des intervalles}
+\begin{enumerate}[itemsep = 2mm]
+	\item Compléter les pointillés avec l'intervalle correspondant : \\
+	
+	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
+		a) $2 < x \leq 5 \, \ssi{15mm}\,  x \in \ldots\ldots\ldots\ldots\ldots$ &
+		b) $\bigstar$ $y \geq 8 \, \ssi{15mm}\,  y \in \ldots\ldots\ldots\ldots\ldots$ 
+	\end{tabular}
+	
+	\item Compléter les pointillés par l'encadrement ou l'inégalité correspondant  : \\
+
+	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}
+		a) $a \in [-5 ; 11[ \, \ssi{15mm}\, \ldots\ldots\ldots\ldots\ldots$ &
+		b) $b \in ]-\infty ; 6[ \, \ssi{15mm}\, \ldots\ldots\ldots\ldots\ldots$
+	\end{tabular}
+	
+	\item Si $x$ , $y$ et $z$ sont trois nombres vérifiant $x \leq y < z$ alors :
+	\begin{enumerate}
+		\item À quel intervalle peut-on affirmer que le nombre $y$ appartient ?
+		\item $\bigstar$ À quel intervalle peut-on affirmer que le nombre $x$ appartient ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Opérations sur les ensembles}
+\begin{enumerate}[itemsep = 2mm]
+	\item On considère les ensembles $A = \{ 1 ~;~ 2 ~;~ 3  ~;~ 4 \}$ , $B = \{ -1 ~;~ 4 ~;~ -2 ~;~ 6\}$ et $C = \{ 10 ~;~ 8 ~;~ 6 ~;~ 0\}$
+	\begin{enumerate}
+		\item Décrire explicitement l'ensemble $A \cup B$
+		\item Décrire explicitement l'ensemble $B \cap C$
+	\end{enumerate}
+	
+	\item On considère les intervalles $I = ]2 ~;~ 7]$ et $J = [-3 ~;~ 5]$.
+	
+	Représenter les intervalles $I$ et $J$ sur la droite réelle ci-contre, puis déterminer $I \cup J$ et $I \cap J$
+	
+	\vspace*{5mm}
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[-Stealth , line width = 1pt] (-5.5,0)  -- (10.5,0) ;
+		    		\foreach \j in {-5,...,10} {
+				\draw (\j,0) node {|};
+		        		\draw (\j,0) ++(0,-0.5) node {\small $\j$};
+		        		}
+		\end{tikzpicture}
+	\end{center}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left=30pt,right=30pt, top=30pt, bottom=55pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Ensembles géométriques}
+\begin{minipage}{0.6\textwidth}
+	Compléter les pointillés par le symbole adapté parmi $\subset$ , $\not\subset$ , $\in$ ou $\notin$ en vous appuyant sur la figure représentée ci-contre. Chaque symbole doit être utilisé une seule fois.
+	
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{P{0.5\textwidth} P{0.5\textwidth}}
+		$C$ \ldots\ldots $(AB)$ & $A$ \ldots\ldots $[BC)$  \\
+		$[EF]$ \ldots\ldots $(AC)$ & $\bigstar$ $[CD)$ \ldots\ldots $(EC)$
+	\end{tabular}
+\end{minipage} \hspace{10mm}
+\begin{minipage}{0.4\textwidth}
+	\begin{tikzpicture}
+		\draw (1,0.75) -- (2,1) node {$\bullet$} node[above] {$A$} -- (4.667,1.667) node {$\bullet$} node[above] {$D$} -- (6,2) node {$\bullet$} node[above] {$F$} -- (7,2.25) ;
+		\draw  (1,0) -- (3,2) node {$\bullet$} node[left] {$B$} -- (4,3) node {$\bullet$} node[right] {$C$} -- (5,4) ;
+		\draw (5.5,0) -- (5,1) node {$\bullet$} node[right] {$E$} -- (3.5,4) ;
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\section{Ensembles usuels}
+\begin{enumerate}[itemsep = 2mm]
+	\item Démontrer que les nombres suivants sont des nombres décimaux en les écrivant sous la forme $\dfrac{a}{10^n}$ avec $a$ et $n$ des nombres entiers :
+	
+	$\bigstar$ $A = 3,745$ \hspace{3cm} $B = \dfrac{41}{25}$ \hspace{3cm} $C = \dfrac{1}{2^5}$
+	
+	\item Remplir chacune des cases du tableau suivant avec le symbole $\in$ ou $\notin$ :
+
+	\begin{center}
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{| P{4cm} || P{2cm} | P{2cm} | P{2cm} | P{2cm} | P{2cm} |} \hline
+			\diagbox[innerwidth = 4cm]{Nombre}{Ensemble} & $\NN$ & $\ZZ$ & $\DD$ & $\QQ$ & $\RR$ \\ \hline \hline
+			$\dfrac{-1,5}{0,3}$ & & & & & \\ \hline
+			$\dfrac{22}{3}$ & & & & & \\ \hline
+			$\bigstar$ $\sqrt{\dfrac{9}{4}}$ & & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+\end{enumerate}
+
+
+
+\section{Piqure de rappel}
+Vous devrez faire apparaître les détails de chacun des calculs demandés ci-après.
+\begin{enumerate}
+	\item $\bigstar$ Écrire le nombre $3^3 \times 9^9$ sous la forme $3^n$ avec $n$ un nombre entier.
+	\item Écrire sous la forme d'une fraction irréductible le nombre $\dfrac{1 + \frac{2}{5}}{3 - \frac{5}{4}}$
+\end{enumerate}
+
+
+
+\section*{Exercice bonus}
+\textit{Cet exercice ne sera pris en compte que si toutes les autres questions ont été traitées}
+\begin{enumerate}
+	\item Résoudre dans $\RR$ l'équation $\abs{3x-7} = 11$
+	\item Si $A$ , $B$ et $C$ sont trois ensembles tels que $A \subset B \subset C$ , déterminer $(A \cup B) \cap C$
+\end{enumerate}
+
+
+
+\end{document}
