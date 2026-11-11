@@ -1,0 +1,210 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../Latex/inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\fancyhead[L]{Séance \no 4}
+\fancyhead[R]{T\up{ale} enseignement scientifique}            % En-tête droit
+\fancyhead[C]{Suites numériques}
+\fancyhf[CF]{\footnotesize{\etablissement}}                     % En-tête central
+
+\titlespacing{\section}{0pt}{2mm}{0pt}
+\titlespacing{\subsection}{0pt}{5mm}{1mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\section{Rappels}
+
+\subsection{Gisement de pétrole}
+Un gisement de pétrole a produit 60\,000 barils en l'an 2000 et sa production diminue de 1\,500 barils chaque année. On note $u_n$ le nombre de barils produits lors de l'année 2000 + $n$.
+\begin{enumerate}[align = left]
+	\item Quel est le nombre de barils produits lors des années 2021, 2022 et 2023 ?
+	\item Exprimer $u_{n+1}$ en fonction de $u_n$
+	\item Quelle formule peut-on utiliser pour calculer directement la $n$-ième terme de la suite ?
+	\item [\underline{Bonus} :] Le gisement mettra la clef sous la porte s'il produit moins de 20\,000 barils par an. En quelle année peut-on prévoir sa fermeture ?
+\end{enumerate}
+
+\begin{tcolorbox}[
+    enhanced , arc = 3pt , top = 4mm ,
+    fonttitle = \bfseries , title = Je retiens , boxed title style = {arc = 3pt} ,
+    coltitle = black , colbacktitle = white ,
+    attach boxed title to top left = {xshift = 5mm , yshift = -4mm} ,
+	]
+	\restoreskip
+	
+	Si l'on rajoute (ou soustrait) toujours la même quantité, on parle de suite ..............................
+
+	Pour calculer rapidement ses termes, on utilise la formule : $u_n =$ .........................
+\end{tcolorbox}
+
+
+\subsection{Compte épargne}
+Pour la naissance de leur fille, M et Mme Rakotobe placent 1\,000\euro\, sur un compte bancaire à taux d'intérêts annuels de $5\%$. On note $v_n$ le nombre de barils produits lors de l'année 2000 + $n$.
+\begin{enumerate}
+	\item Quel sera le solde du compte après 1 an ? 2 ans ? 3 ans ?
+	\item Exprimer $v_{n+1}$ en fonction de $v_n$
+	\item Quelle formule peut-on utiliser pour calculer directement la $n$-ième terme de la suite ?
+\end{enumerate}
+
+\begin{tcolorbox}[
+    enhanced , arc = 3pt , top = 4mm ,
+    fonttitle = \bfseries , title = Je retiens  , boxed title style = {arc = 3pt} ,
+    coltitle = black , colbacktitle = white ,
+    attach boxed title to top left = {xshift = 5mm , yshift = -4mm} ,
+	]
+	\restoreskip
+	
+	Si l'on multiplie (ou divise) toujours par la même quantité, on parle de suite ..............................
+
+	Pour calculer rapidement ses termes, on utilise la formule : $u_n =$ .........................
+\end{tcolorbox}
+
+
+
+\section{Une suite particulière}
+
+\begin{minipage}{0.55\textwidth} 
+	\subsection{La situation} 
+	
+	Un élève très pressé de ne pas arriver en retard à son cours d'enseignement scientifique doit monter un escalier avant d'arriver dans sa salle de classe.
+	
+	\bigskip
+	Pour aller plus vite, il décide de monter les marches de l'escalier soit par une par une, soit deux par deux.
+	
+	\bigskip
+	À chaque marche, il peut donc choisir de monter soit une seule nouvelle marche, soit deux marches d'un coup !
+	
+	\bigskip
+	Sur le schéma ci-contre on a représenté deux telles manières de monter un escalier comportant 7 marches :
+	
+	\bigskip
+	Mais de \textbf{combien de manières différentes} cet escalier aurait-il pu être gravi ?
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}{0.45\textwidth}
+	\begin{tikzpicture}[>=Stealth]
+	\def\step{6}
+		\foreach \i in {0,...,\step}{
+			\draw (\i,\i) -- ++(0,1) -- ++(1,0) ;
+			}
+		\draw (0,0) -- (\step+1 , 0) -- (\step+1 , \step+1) ;
+	
+		%%% Chemin bleu %%%
+		\draw[newblue, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (-0.5,0.15) to[out=80,in=140,looseness=1.75] (0.5,1.15);
+		
+		\draw[newblue, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (0.5,1.15) to[out=80,in=130,looseness=1.5] (1.5,2.15);
+		
+		\draw[newblue, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (1.5,2.15) to[out=80,in=130,looseness=1.5] (3.5,4.5);
+		
+		\draw[newblue, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (3.5,4.5) to[out=90,in=130,looseness=1.25] (5.5,6.15);
+		
+		\draw[newblue, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (5.5,6.15) to[out=80,in=120,looseness=1.75] (6.5,7.5);
+		    
+		%%% Chemin rouge %%%
+		\draw[newred, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (-0.5,0.35) to[out=90,in=120,looseness=2] (1.5,2.5);
+		
+		\draw[newred, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (1.5,2.5) to[out=70,in=130,looseness=1.75] (2.5,3.35);
+		
+		\draw[newred, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (2.5,3.35) to[out=80,in=130,looseness=1.5] (3.5,4.15);
+		    
+		\draw[newred, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (3.5,4.15) to[out=80,in=130,looseness=1.5] (4.5,5.15);
+		    
+		\draw[newred, line width=1.5pt, -Stealth , shorten > = 2pt]
+		    (4.5,5.15) to[out=80,in=130,looseness=1.5] (6.5,7.15);
+		
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\subsection{Étude de la situation}
+On admettra qu'il existe exactement une manière de monter un escalier à $0$ marches : ne pas monter.
+\begin{enumerate}[itemsep = 2mm]
+	\item Compléter le tableau suivant :
+	
+	\renewcommand{\arraystretch}{2} \hspace{-12.5mm}
+	\begin{tabular}{| P{4cm} | P{1.75cm} | P{1.75cm} | P{1.75cm} | P{1.75cm} | P{1.75cm} | P{1.75cm} | P{1.75cm} |} \hline
+		Nombre de marches & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\ \hline
+		Nombre de manières de monter l'escalier & $1$ & & & & & & \\ \hline
+	\end{tabular}
+
+	\item Remarquez-vous un lien entre les nombre de la deuxième ligne ?
+	
+	\item En déduire la réponse à notre situation initiale :
+	
+	\begin{tcolorbox}[
+	    enhanced , arc = 3pt , top = 4mm , hbox ,
+	    fonttitle = \bfseries , title = Réponse , boxed title style = {arc = 3pt} ,
+	    coltitle = black , colbacktitle = white ,
+	    attach boxed title to top left = {xshift = 5mm , yshift = -4mm} ,
+		]
+		Il y a exactement ........ manières différentes de monter un escalier à 7 marches.
+	\end{tcolorbox}
+
+\end{enumerate}
+
+
+
+\subsection{La suite de Fibonacci}
+Les nombres que l'on a rentré dans le tableau précédent constituent la très célèbre \textbf{suite de Fibonacci}.
+
+\begin{tcolorbox}[
+    enhanced , arc = 3pt , top = 4mm ,
+    fonttitle = \bfseries , title = Je retiens , boxed title style = {arc = 3pt} ,
+    coltitle = black , colbacktitle = white ,
+    attach boxed title to top left = {xshift = 5mm , yshift = -4mm} ,
+	]
+	\restoreskip
+	Dans la suite de Fibonacci, pour obtenir chaque nouveau terme il faut ............................................. \\[10pt]
+.............................................................................................................................................................
+\end{tcolorbox}
+
+
+
+\textbf{\underline{Question} :} Combien de manière il y a-t-il de monter un escalier à 100 marches ? Autrement dit, combien vaut le centième terme de la suite de Fibonacci ?
+
+
+\begin{tcolorbox}[
+    enhanced , arc = 3pt , top = 4mm ,
+    fonttitle = \bfseries , title = Réponse par algorithme  , boxed title style = {arc = 3pt} ,
+    coltitle = black , colbacktitle = white ,
+    attach boxed title to top left = {xshift = 5mm , yshift = -4mm} ,
+	]
+	\restoreskip
+	
+	\begin{enumerate}
+		\item Choisissez deux nombres quelconques $a$ et $b$ puis exécutez plusieurs fois les instructions suivantes :	
+			\begin{codebox}
+b = a + b
+a = b - a		
+			\end{codebox}
+		
+		\item Comment décrire l'effet de ces instructions sur les nombres $a$ et $b$ ?
+		\item En déduire un algorithme qui permet de calculer le centième terme de la suite de Fibonacci.
+	\end{enumerate}		
+	
+
+
+
+	
+\end{tcolorbox}
+
+
+
+
+\end{document}

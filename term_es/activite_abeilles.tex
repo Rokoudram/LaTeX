@@ -1,0 +1,73 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{
+    a5paper,
+    landscape,
+    left=20pt,
+    right=30pt,
+    top=70pt,
+    bottom=40pt
+}
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper]
+
+\usepackage{atbegshi}
+  % duplicate the content at shipout time
+  \AtBeginShipout{
+    \pgfpagesshipoutlogicalpage{1}\copy\AtBeginShipoutBox
+    \pgfpagesshipoutlogicalpage{2}\box\AtBeginShipoutBox
+    \pgfshipoutphysicalpage
+  }
+
+
+\fancyhead[L]{Activité à la maison}
+\fancyhead[R]{T\up{ale} enseignement scientifique}            % En-tête droit
+\fancyhead[C]{Suites numériques}
+\fancyhf[CF]{\footnotesize{\etablissement}}                     % En-tête central
+\fancyhf[RF]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+Les abeilles ont un système de reproduction très particulier : la parthénogenèse.
+
+Chaque semaine toutes les femelles pondent un œuf. S'il a été fécondé par un mâle, alors il donnera naissance à une femelle, sinon un mâle éclora.
+
+On place une femelle dans une ruche, et on note $F_n$ et $M_n$ le nombre d'abeilles respectivement femelles et mâles après $n$ jours d'observation. On a donc $F_0=1$ et $M_0=0$
+
+On admettra que tous les mâles fécondent une femelle chaque semaine s'ils le peuvent.
+
+On admettra également que les abeilles vivent assez longtemps pour ne pas considérer leurs morts dans notre modèle.
+
+\begin{center}
+\textbf{Au bout de 4 mois, combien d'abeilles peupleront la ruche étudiée ?}
+\end{center}
+
+\begin{tcolorbox}[
+    enhanced , arc = 3pt , top = 4mm ,
+    fonttitle = \bfseries , title = Consignes \& indications , boxed title style = {arc = 3pt} ,
+    coltitle = black , colbacktitle = white ,
+    attach boxed title to top left = {xshift = 5mm , yshift = -4mm} ,
+	]
+	\restoreskip
+
+		Vous devrez me rendre ce travail pour la séance du lundi 23/11.
+		
+		Vous pouvez le réaliser en binôme.
+		
+		Commencez par calculer le nombres d'abeilles lors des quelques premières semaines, cela devrait vous mettre sur la bonne piste pour la suite.
+
+\end{tcolorbox}
+
+\end{document}
