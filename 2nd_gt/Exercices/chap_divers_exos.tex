@@ -160,6 +160,9 @@ On appelle $H$ le pied de la hauteur issue du sommet $A$ dans le triangle $ADI$
 
 
 
+\newpage
+
+
 
 \section{Géométrie dans les cercles}
 
@@ -280,6 +283,9 @@ On place les points $P$ et $Q$ sur le segment $[AB]$ de sorte que $AP=PQ=QB$
 
 
 
+\newpage
+
+
 
 \section{Projection orthogonale}
 
@@ -375,6 +381,10 @@ $ABCD$ est un parallélogramme
 		\draw (0.4,4.4) node {$45^\circ$} ;
 	\end{tikzpicture}
 \end{minipage}
+
+
+
+\newpage
 
 
 
@@ -567,6 +577,87 @@ On considère la fonction $f:x\mapsto \dfrac{1-2x}{x}$ définie sur $\RR^*$
 \end{enumerate}
 
 
+
+\newpage
+
+
+
+\section{Changement de variable}
+
+\subsection{Décalage de variable}
+On considère l'équation $(E):x^2+4x-5=0$
+\begin{enumerate}
+	\item Montrer que $x^2+4x-5=(x+2)^2-9$
+	\item On pose $X=x+2$
+	\begin{enumerate}
+		\item Montrer que résoudre l'équation $(E)$ revient à résoudre l'équation $(\star):X^2=9$
+		\item Résoudre l'équation $(\star)$
+	\end{enumerate}
+	\item En déduire les solutions de l'équation $(E)$
+\end{enumerate}
+
+
+
+\subsection{Changement affine}
+On considère l'équation $(E):9x^2-6x-35=0$
+\begin{enumerate}
+	\item Montrer que $9x^2-6x-35=(3x-1)^2-36$
+	\item On pose $X=3x-1$
+	\begin{enumerate}
+		\item Montrer que résoudre l'équation $(E)$ revient à résoudre l'équation $(\star):X^2=36$
+		\item Résoudre l'équation $(\star)$
+	\end{enumerate}
+	\item Exprimer $x$ en fonction de $X$
+	\item En déduire les solutions de l'équation $(E)$
+\end{enumerate}
+
+
+
+\subsection{Variable sous racine}
+On considère l'équation $(E):x-3\sqrt{x}+2$ \\
+On pose $X=\sqrt{x}$
+\begin{enumerate}
+	\item Justifier que résoudre l'équation $(E)$ revient à résoudre l'équation $(\star):X^2-3X+2=0$
+	\item \begin{enumerate}
+		\item Montrer que $X^2-3X+2=(X-2)(X-1)$
+		\item Résoudre l'équation $(\star)$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Exprimer $x$ en fonction de $X$
+		\item En déduire les solutions de l'équation $(E)$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Changement inverse}
+On considère l'équation $(E):\frac{1}{x^2}-\frac{3}{2x}-1=0$ \\
+On pose $X=\frac{1}{x}$
+\begin{enumerate}
+	\item Justifier que résoudre l'équation $(E)$ revient à résoudre l'équation $(\star):X^2-\frac{3}{2}X-1=0$
+	\item \begin{enumerate}
+		\item Montrer que $X^2-\frac{3}{2}X-1=(X-2)\left(X+\frac{1}{2}\right)$
+		\item Résoudre l'équation $(\star)$
+	\end{enumerate}
+	\item \begin{enumerate}
+		\item Exprimer $x$ en fonction de $X$
+		\item En déduire les solutions de l'équation $(E)$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection{Ça devient bizarre}
+On considère l'équation $(E):\dfrac{\frac{1}{1+x}+2}{1+\frac{2}{1+x}}=3$ \\
+On pose $X=\frac{1}{1+x}$
+\begin{enumerate}
+	\item Justifier que résoudre l'équation $(E)$ revient à résoudre l'équation $(\star):\frac{X+2}{1+2X}=3$
+	\item Résoudre l'équation $(\star)$
+	\item \begin{enumerate}
+		\item Montrer que $x=\frac{1}{X}-1$
+		\item En déduire les solutions de l'équation $(E)$
+	\end{enumerate}
+\end{enumerate}
 
 
 \end{document}
