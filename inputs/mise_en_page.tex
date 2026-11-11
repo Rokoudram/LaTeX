@@ -344,3 +344,50 @@ attach boxed title to top*,
 
 %%%%% Colonne centrée de taille ajustable %%%%%
 \newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}<{\vspace{0pt}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Boîte "codebox" pour les algos %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\CodeNumber}[1]{%
+    \makebox[0pt][c]{#1\hspace{4mm}}%
+}
+
+%%%%% Style listings %%%%%
+\lstdefinestyle{moncode}{
+    basicstyle = \ttfamily,
+    numbers = left,
+    numberstyle = \footnotesize\CodeNumber,
+    numbersep = 4mm,
+    numberblanklines = true,
+    breaklines = true,
+    columns = fullflexible,
+    keepspaces = true,
+    showstringspaces = false,
+    tabsize = 4,
+    frame = none
+}
+
+%%%%% Environnement codebox %%%%%
+\newtcblisting{codebox}[1][]{
+	hbox , 
+    listing only , 
+	listing engine = listings ,
+    enhanced ,
+	overlay = {
+	    \draw[newred , line width = 1pt]
+		([xshift = 7mm,yshift=-2.5mm]frame.north west)
+		--
+		([xshift = 7mm,yshift=3mm]frame.south west);
+		},
+    listing options = {
+    	style = moncode ,
+    	xleftmargin = 0mm
+    	},
+    colframe=newred , colback=red!15 ,
+    arc = 2pt , boxrule = 1.5pt,
+	left = 8mm , right = 3mm , top = 1mm , bottom = 1mm ,
+    #1
+}
