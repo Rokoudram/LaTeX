@@ -9,6 +9,7 @@
 \fancyhead[R]{T\up{ale} enseignement scientifique}            % En-tête droit
 \fancyhead[C]{Suites numériques}
 \fancyhf[CF]{\footnotesize{\etablissement}}                     % En-tête central
+\fancyhf[LF]{M. Olivry}
 
 \titlespacing{\section}{0pt}{2mm}{0pt}
 \titlespacing{\subsection}{0pt}{5mm}{1mm}
@@ -176,16 +177,17 @@ Les nombres que l'on a rentré dans le tableau précédent constituent la très 
 
 
 
-\textbf{\underline{Question} :} Combien de manière il y a-t-il de monter un escalier à 100 marches ? Autrement dit, combien vaut le centième terme de la suite de Fibonacci ?
-
-
 \begin{tcolorbox}[
     enhanced , arc = 3pt , top = 4mm ,
-    fonttitle = \bfseries , title = Réponse par algorithme  , boxed title style = {arc = 3pt} ,
+    fonttitle = \bfseries , title = Problématique , boxed title style = {arc = 3pt} ,
     coltitle = black , colbacktitle = white ,
     attach boxed title to top left = {xshift = 5mm , yshift = -4mm} ,
 	]
 	\restoreskip
+	
+	\textbf{Combien de manière il y a-t-il de monter un escalier à 100 marches ? Autrement dit, combien vaut le centième terme de la suite de Fibonacci ?}
+	
+	Pour répondre à cette problématique, voici une approche algorithmique :
 	
 	\begin{enumerate}
 		\item Choisissez deux nombres quelconques $a$ et $b$ puis exécutez plusieurs fois les instructions suivantes :	
