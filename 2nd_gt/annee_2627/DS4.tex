@@ -1,0 +1,457 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[4mm] Nom : ............................................. }{}{Classe : ............... \\[4mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 4 (55min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\bigstar$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Questions de cours}
+\begin{enumerate}[itemsep = 2mm]
+	\item Quelles sont les trois caractéristiques définissant un vecteur ?
+	
+	\dotfill
+	\item $\bigstar$ Si trois point $A$, $B$ et $C$ sont tels que $\vv{AB} = \vv{BC}$, que peut-on conclure ?
+	
+	\dotfill
+	\item Donner l'égalité qui traduit la relation de Chasles.
+	
+	\makebox[8cm]{\dotfill}
+\end{enumerate}
+
+
+
+\section{Opérations entre vecteurs}
+On a représenté les vecteurs $\vv{u}$ , $\vv{v}$ et $\vv{w}$ dans le premier quadrillage.
+
+En faisant apparaître vos traits de construction, représenter les vecteurs $\vv{x}$ , $\vv{y}$ et $\vv{z}$ demandés :
+
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+		\draw[line width = 2pt , -Stealth , color = newblue] (0,1) -- node[above left] {$\vv{u}$} (2,5) ;
+		\draw[line width = 2pt , -Stealth , color = newred] (3,3) -- node[above right] {$\vv{v}$} (7,1) ;
+		\draw[line width = 2pt , -Stealth , color = newgreen] (5,3) -- node[below right] {$\vv{w}$} (7,4) ;
+		
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+		
+		\node[draw ,  fill = white , rectangle , rounded corners = 2pt , inner sep = 3pt] at (1.5,4.75) {$\vv{x} = \frac{1}{2}\vv{u} + \vv{v}$};
+		
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+		\node[draw ,  fill = white , rectangle , rounded corners = 2pt , inner sep = 3pt] at (1.5,4.75) {$\vv{y} = \vv{u} - 2\vv{w}$};
+		
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage} \hspace{5mm}
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+		\node[draw ,  fill = white , rectangle , rounded corners = 2pt , inner sep = 3pt] at (2,4.75) {$\bigstar$ $\vv{z} = \frac{3}{2}\vv{v} - \vv{w} + \vv{u}$};
+		
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left = 30pt , right=30pt , top = 35pt , bottom = 55pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Relation de Chasles}
+\begin{enumerate}[itemsep = 2mm]
+	\item Compléter les pointillés afin que les égalités suivantes soient vérifiées :
+
+	\renewcommand{\arraystretch}{1.75}
+	\begin{tabular}{P{0.3\linewidth} P{0.3\linewidth} P{0.3\linewidth}}
+		a) $\vv{A\ldots}+\vv{B\ldots}=\vv{AC}$ &
+		b) $\vv{C\ldots}+\vv{D \ldots}=\vv{\ldots B}$ &
+		c) $\vv{AB}+\vv{CA}+\vv{BD}=\vv{\ldots\ldots}$ 
+	\end{tabular}
+	
+	\item Simplifier chacun des calculs vectoriels suivants à l'aide de la relation de Chasles. Le résultat doit être un unique vecteur, éventuellement le vecteur nul :
+	\begin{enumerate}[itemsep = 3mm]
+		\item $\vv{AD}+\vv{CB}+\vv{AC}+\vv{DC}+\vv{BA} = $ \dotfill \\[5pt]
+		\phantom{$\vv{AD}+\vv{CB}+\vv{AC}+\vv{DC}+\vv{BA}$} $=$ \dotfill
+		
+		\item $\bigstar$ $\vv{BC} + \vv{AB} - \vv{CB} + \vv{CD} - \vv{AC} = $ \dotfill \\[5pt]
+		\phantom{$\bigstar$ $\vv{BC} + \vv{AB} - \vv{CB} + \vv{CD} - \vv{AC}$} $=$ \dotfill \\[5pt]
+		\phantom{$\bigstar$ $\vv{BC} + \vv{AB} - \vv{CB} + \vv{CD} - \vv{AC}$} $=$ \dotfill
+		
+		\item $2\vv{AD} + \vv{CB} + 2\vv{BA} + \vv{DC} + \vv{DB} = $ \dotfill \\[5pt]
+		\phantom{$2\vv{AD} + \vv{CB} + 2\vv{BA} + \vv{DC} - \vv{DB}$} $=$ \dotfill \\[5pt]
+		\phantom{$2\vv{AD} + \vv{CB} + 2\vv{BA} + \vv{DC} + \vv{DB}$} $=$ \dotfill
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Relations particulières}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,7.5);
+		
+		\draw (1,3) node {x} node[above right] {$A$} (3,6) node {x} node[above right] {$B$} (6,5) node {x} node[above right] {$C$} ;
+
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,7.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (8.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,7.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,7.5) rectangle (8.5,7);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	On a placé les points $A$ , $B$ et $C$ dans le quadrillage ci-contre.
+	\begin{enumerate}[itemsep = 2mm]
+		\item Placer les points $D$ et $E$ vérifiant les égalités $\vv{AD} = 2\vv{BC}$ et $\vv{CE} = \vv{BA}$
+		
+		\item Quelle est la nature du quadrilatère $ABCE$ ? Justifier. \\[5pt]
+			\phantom{} \dotfill \\[5pt] \phantom{} \dotfill
+			
+		\item $\bigstar$ À l'aide de la relation de Chasles, montrer que $\vv{AD} = \vv{BC} + \vv{ED}$ \\[5pt]
+			\phantom{} \dotfill \\[5pt] \phantom{} \dotfill
+	\end{enumerate}
+\end{minipage}
+
+\begin{enumerate}[start = 4 , itemsep = 2mm]
+	\item En déduire alors que $\vv{BC} = \vv{ED}$ \dotfill
+	\item Que peut-on finalement conclure ? \dotfill
+\end{enumerate}
+
+
+
+\section{Piqure de rappel}
+On considère la fonction $f$ définie par $f(x) = \dfrac{x^2 + 1}{2x - 4}$
+\begin{enumerate}[itemsep = 2mm]
+	\item Calculer l'image de $3$ par la fonction $f$. \dotfill
+	\item Déterminer la valeur interdite de la fonction $f$. \dotfill
+	\item $\bigstar$ Donner alors $\Dcal_f$ le domaine de définition de la fonction $f$. \dotfill
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% CORRECTION %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{section}{0}
+\color{newblue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{center}
+	\textbf{\underline{Correction}}
+\end{center}
+
+\section{Questions de cours}
+\begin{enumerate}
+	\item Un vecteur est défini par sa direction, son sens et sa norme.
+	
+	\item $\bigstar$ Si trois point $A$, $B$ et $C$ sont tels que $\vv{AB} = \vv{BC}$, alors on peut conclure que $B$ est le milieu du segment $[AC]$
+	
+	\item L'égalité qui traduit la relation de Chasles est : $\vv{AB} + \vv{BC} = \vv{AC}$
+\end{enumerate}
+
+
+
+\section{Translations}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+		\draw[line width = 2pt , -Stealth , color = newblue] (0,1) -- node[above left] {$\vv{u}$} (2,5) ;
+		\draw[line width = 2pt , -Stealth , color = newred] (3,3) -- node[above right] {$\vv{v}$} (7,1) ;
+		\draw[line width = 2pt , -Stealth , color = newgreen] (5,3) -- node[below right] {$\vv{w}$} (7,4) ;
+
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+	\end{tikzpicture}
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+
+		\node[draw , fill = white , rectangle , rounded corners = 2pt , inner sep = 3pt] at (1.5,4.75) {$\vv{x} = \frac{1}{2}\vv{u} + \vv{v}$};
+
+        % Construction : 1/2 u puis v
+        
+        \draw[line width = 1pt, -Stealth, color = newblue] (1,1) -- (2,3)
+            node[midway,left] {$\frac12\vv{u}$};
+            
+        \draw[line width = 1pt, -Stealth, color = newred] (2,3) -- (6,1)
+            node[midway,above] {$\vv{v}$};
+
+        % Vecteur résultant
+        \draw[line width = 2pt, -Stealth, color = black] (1,1) -- (6,1)
+            node[midway,below] {$\vv{x}$};
+
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+	\end{tikzpicture}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+		\node[draw , fill = white , rectangle , rounded corners = 2pt , inner sep = 3pt] at (1.5,4.75) {$\vv{y} = \vv{u} - 2\vv{w}$};
+
+        % Construction : u puis -w puis -w
+        \draw[line width = 1pt, -Stealth, color = newblue] (5,0) -- (7,4)
+            node[midway,right] {$\vv{u}$};
+
+        \draw[line width = 1pt, -Stealth, color = newgreen] (7,4) -- (5,3)
+            node[midway,above] {$-\vv{w}$};
+
+        \draw[line width = 1pt, -Stealth, color = newgreen] (5,3) -- (3,2)
+            node[midway,above] {$-\vv{w}$};
+
+        % Vecteur résultant
+        \draw[line width = 2pt, -Stealth, color = black] (5,0) -- (3,2)
+            node[midway,below] {$\vv{y}$};
+
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+	\end{tikzpicture}
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,5.5);
+		\node[draw , fill = white , rectangle , rounded corners = 2pt , inner sep = 3pt] at (2,4.75) {$\bigstar$ $\vv{z} = \frac{3}{2}\vv{v} - \vv{w} + \vv{u}$};
+
+        % Construction : 3/2 v puis -w puis u
+        \draw[line width = 1pt, -Stealth, color = newred] (0,4) -- (6,1)
+            node[midway,below] {$\frac32\vv{v}$};
+
+        \draw[line width = 1pt, -Stealth, color = newgreen] (6,1) -- (4,0)
+            node[midway,below] {$-\vv{w}$};
+
+        \draw[line width = 1pt, -Stealth, color = newblue] (4,0) -- (6,4)
+            node[midway,right] {$\vv{u}$};
+
+        % Vecteur résultant
+        \draw[line width = 2pt, -Stealth , color = black] (0,4) -- (6,4)
+            node[midway,below right] {$\vv{z}$};
+
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,5.5);
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (7.5,0);
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,5.5);
+        	\fill[path fading=south, color=white] (-0.5,5.5) rectangle (8.5,5);
+    	\end{scope}
+	\end{tikzpicture}
+\end{minipage}
+
+
+
+\section{Relation de Chasles}
+\begin{enumerate}[itemsep = 2mm]
+	\item Compléter les pointillés afin que les égalités suivantes soient vérifiées :
+
+	\renewcommand{\arraystretch}{1.75}
+	\begin{tabular}{P{0.3\linewidth} P{0.3\linewidth} P{0.3\linewidth}}
+		a) $\vv{AB}+\vv{BC}=\vv{AC}$ &
+		b) $\vv{CD}+\vv{DB}=\vv{CB}$ &
+		c) $\vv{AB}+\vv{CA}+\vv{BD}=\vv{CD}$ 
+	\end{tabular}
+	
+	\item
+	\begin{enumerate}[itemsep = 3mm]
+		\item 
+			$\begin{WithArrows}[format = lc]
+	        & \vv{AD} + \vv{CB} + \vv{AC} + \vv{DC} + \vv{BA} \Arrow{On change l'ordre} \\
+	        =~~ & \vv{AD} + \vv{DC} + \vv{CB} + \vv{BA} + \vv{AC} \Arrow{On simplifie grâce à la relation de Chasles} \\
+	        =~~ & \vv{A\not D} + \vv{\not D \not C} + \vv{\not C \not B} + \vv{\not B \not A} + \vv{\not A C} \\
+	        =~~ & \vv{AC} 
+	        \end{WithArrows}$		
+		
+		\item $\bigstar$
+			$\begin{WithArrows}[format = lc]
+	        & \vv{BC} + \vv{AB} - \vv{CB} + \vv{CD} - \vv{AC} \Arrow{On "retourne" les vecteurs négatifs} \\
+	        =~~ & \vv{BC} + \vv{AB} + \vv{BC} + \vv{CD} + \vv{CA} \Arrow{On change l'ordre} \\
+	        =~~ & \vv{BC} + \vv{CA} + \vv{AB} + \vv{BC} + \vv{CD}  \Arrow{On simplifie grâce à la relation de Chasles} \\
+	        =~~ & \vv{B \not C} + \vv{\not C \not A} + \vv{\not A \not B} + \vv{\not B \not C} + \vv{\not CD} \\
+	        =~~ & \vv{BD}
+	        \end{WithArrows}$	
+		
+		\item
+			$\begin{WithArrows}[format = lc]
+	        & 2\vv{AD} + \vv{CB} + 2\vv{BA} + \vv{DC} + \vv{DB} \Arrow{On sépare les vecteurs "doublés"} \\
+	        =~~ & \vv{AD} + \vv{AD} + \vv{CB} + \vv{BA} + \vv{BA} + \vv{DC} + \vv{DB} \Arrow{On change l'ordre} \\
+	        =~~ & \vv{AD} + \vv{DB} + \vv{BA} + \vv{AD} + \vv{DC} + \vv{CB} + \vv{BA} \Arrow{On simplifie grâce à la relation de Chasles} \\
+	        =~~ & \vv{A \not D} + \vv{\not D \not B} + \vv{\not B \not A} + \vv{\not A \not D} + \vv{\not D \not C} + \vv{\not C \not B} + \vv{\not B A} \Arrow{Un déplacement de $A$ vers $A$ revient \\ à un déplacement nul} \\
+	        =~~ & \vv{0}
+	        \end{WithArrows}$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Relations particulières}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{tikzpicture}[yscale = 0.9]
+		\draw[step = 1cm , color = gray] (-0.5,-0.5) grid (8.5,7.5);
+		
+		\draw (1,3) node {x} node[above right] {$A$} (3,6) node {x} node[above right] {$B$} (6,5) node {x} node[above right] {$C$} ;
+		
+		\draw[line width = 1pt , color = black , ->] (1,3) -- node[pos = 0.33 , below] {$2\vv{BC}$} ++(6,-2) node{x} node[above] {$D$} ;
+		\draw[line width = 1pt , color = black , ->] (6,5) -- node[right] {$\vv{BA}$} ++(-2,-3) node {x} node[below] {$E$} ;
+
+		%%% Add fadings %%%
+		\begin{scope}[transparency group]
+        	% Left edge
+        	\fill[path fading=east, color=white] (-0.5,-0.5) rectangle (0,7.5);
+        	% Bottom edge
+        	\fill[path fading=north, color=white] (-0.5,-0.5) rectangle (8.5,0);
+        	% Right edge
+        	\fill[path fading=west, color=white] (8.5,-0.5) rectangle (8,7.5);
+        	% Top edge
+        	\fill[path fading=south, color=white] (-0.5,7.5) rectangle (8.5,7);
+    	\end{scope}
+    	%%% End fadings %%%
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{enumerate}[itemsep = 2mm , start = 2] \restoreskip
+		\item Le quadrilatère $ABCE$ est un parallélogramme car $\vv{CE} = \vv{BA}$
+			
+		\item $\bigstar$ D'après la relation de Chasles : \\
+		$\vv{AD} = \vv{AE} + \vv{ED}$ 
+		
+		Or comme $ABCE$ est un parallélogramme, on sait que $\vv{AE} = \vv{BC}$.
+		
+		On obtient donc : $\vv{AD} = \vv{BC} + \vv{ED}$ 
+	\end{enumerate}
+\end{minipage}
+
+\begin{enumerate}[start = 4 , itemsep = 2mm]
+	\item D'après l'énoncé : $\vv{AD} = 2\vv{BC}$
+	
+	Donc d'après la question précédente : $\vv{BC} + \vv{ED} = 2\vv{BC}$ , et donc $\vv{ED} = \vv{BC}$
+	\item Comme $\vv{AE} = \vv{BC}$ et $\vv{ED} = \vv{BC}$ , on a : $\vv{AE} = \vv{ED}$
+	
+	On peut donc conclure que $E$ est le milieu du segment $[AD]$
+\end{enumerate}
+
+
+
+\section{Piqure de rappel}
+On considère la fonction $f$ définie par $f(x) = \dfrac{x^2 + 1}{2x - 4}$
+\begin{enumerate}
+	\item $f(3) = \dfrac{3^2 + 1}{2 \times 3 - 4} = \dfrac{10}{2} = 5$ \quad donc l'image de $3$ par la fonction $f$ est $5$.
+	\item Il est interdit de diviser par $0$, donc $2x - 4 \neq 0$ c'est à dire $x \neq 2$ \\
+	La valeur interdite de la fonction $f$ est donc $2$.
+	\item $\bigstar$ Le domaine de définition de la fonction $f$ est l'ensemble de tous les nombres réels sauf $2$. \\
+	Donc $\Dcal_f = ]-\infty ~;~ 2[ \bbigcup ]2 ~;~ +\infty[$
+\end{enumerate}
+
+\end{document}

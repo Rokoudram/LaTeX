@@ -1,0 +1,223 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[3mm] Nom : ............................................. }{}{Classe : ............... \\[3mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 2 (55 min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\bigstar$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Questions de cours}
+\begin{enumerate}[itemsep = 0pt]
+	\item Qu'est-ce qu'une suite arithmétique ?
+	\item Donner la formule permettant d'exprimer $u_n$ en fonction de $n$ si son premier terme est $u_1$
+	\item $\bigstar$ À quoi correspond le symbole $\Sigma$ ? Donner son nom et sa fonction.
+\end{enumerate}
+
+
+
+\section{Généralités sur les suites}
+\begin{enumerate}[itemsep = 0pt]
+	\item On considère la suite $(u_n)$ définie par $u_n = n^2 - n + 1$ 
+	
+	Donner les $5$ premiers termes de la suite $(u_n)$
+	
+	\item $\bigstar$ On considère la suite $(v_n)$ définie par $\begin{cases} v_0 = 1 \\ v_{n+1} = 2v_n +1 \end{cases}$ 
+	
+	Donner les $5$ premiers termes de la suite $(v_n)$
+	
+	\item Un nouvel opérateur téléphonique ouvre et réussit à démarcher 15\,000 abonnés le premier mois. Chaque mois suivant, cet opérateur perd $10\%$ de ses abonnés mais réussit à en démarcher 5\,000 nouveaux. \\
+	Donner une définition de $(w_n)$ la suite donnant le nombre d'abonnés de l'opérateur téléphonique après $n$ mois.
+\end{enumerate}
+
+
+
+\section{À petit pas}
+On s'intéresse à une échelle dont le 8e barreau se situe à 3,45 m de hauteur, et dont le 12e barreau se situe à 5,25 m.
+
+On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres. On admettra que $(u_n)$ est une suite arithmétique, autrement dit l'écart entre les barreaux est constant.
+\begin{enumerate}[itemsep = 0pt]
+	\item Traduire les valeurs de l'énoncé en donnant la valeur de deux termes de la suite $(u_n)$
+	\item Montrer que la raison de la suite $(u_n)$ est $0,45$ en justifiant par une formule du cours.
+	\item Retrouver la hauteur du premier barreau de l'échelle.
+	\item On admettra que l'expression de la suite $(u_n)$ est $u_n = 0,45n - 0,15$
+	\begin{enumerate}
+		\item Donner la hauteur du 5e barreau de l'échelle.
+		\item $\bigstar$ Sachant que le dernier barreau de l'échelle se trouve à une hauteur de 8,85m, combien de barreau l'échelle comporte-t-elle ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left=30pt,right=30pt, top=40pt, bottom=55pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Autour de $\Sigma$}
+\begin{enumerate}[itemsep = 0pt]
+	\item Écrire chacune des sommes suivantes en utilisant le symbole $\Sigma$ sans essayer de les calculer :
+
+	\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+		$A = 4^3 + 5^3 + 6^3 + \ldots + 21^3$ &
+		$\bigstar$ $B = 5^5 + 6^6 + 7^7 + \ldots + 18^{18}$ &
+		$C = \dfrac{7}{8} + \dfrac{7}{9} + \dfrac{7}{10} + \ldots + \dfrac{7}{77}$
+	\end{tabular}
+	
+	\item On considère $(u_n)$ une suite arithmétique de premier terme $u_0 = 1$ et de raison $r = 3$
+	\begin{enumerate}
+		\item Exprimer $(u_n)$ en fonction de $n$
+		\item Calculer la somme $S = \sommek{7}{15} u_k$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Course à pied}
+Justine a décidé qu'elle allait participer au prochain marathon de sa ville. Ce samedi elle est donc allée courir et a réussi à parcourir 5km avant de s'arrêter. Depuis, Justine s'entraîne tous les samedis, et réussit à chaque fois à courir 500m de plus que la semaine d'avant.
+
+On note $u_n$ la distance (exprimée en kilomètres) que Justine arrive à parcourir lors de sa $n$-ième semaine d'entraînement.
+\begin{enumerate}
+	\item Donner la valeur de $u_1$ , $u_2$ et $u_3$
+	\item Lors de sa $40$-ième semaine d'entraînement, quelle distance Justine pourra-t-elle parcourir ?
+	\item $\bigstar$ Quelle distance totale aura-t-elle alors parcouru depuis le début de son entraînement ?
+	\item On rappelle que la distance officielle d'un marathon est de 42,195 km. 
+	
+	En supposant que Justine continue à progresser au même rythme, sera-t-elle suffisamment préparée au bout d'un année pour participer au marathon de sa ville ?
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% CORRECTION %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{section}{0}
+\color{newblue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Questions de cours}
+\begin{enumerate}[itemsep = 0pt]
+	\item Une suite est arithmétique si la différence entre deux de ses termes consécutifs est constante.
+	\item $u_n = u_1 + (n-1) \times r$
+	\item $\bigstar$ Le symbole $\Sigma$ se nomme "sigma", il permet de décrire une somme.
+\end{enumerate}
+
+
+
+\section{Généralités sur les suites}
+\begin{enumerate}[itemsep = 0pt]
+	\item On considère la suite $(u_n)$ définie par $u_n = n^2 - n + 1$ 
+	
+	$u_0 = 0^2 - 0 + 1 = 1$ \qquad $u_1 = 1^2 - 1 + 1 = 1$ \qquad $u_2 = 2^2 - 2 + 1 = 3$ 
+	
+	$u_3 = 3^2 - 3 + 1 = 7$ \qquad $u_4 = 4^2 - 4 + 1 = 13$
+	
+	\item $\bigstar$ On considère la suite $(v_n)$ définie par $\begin{cases} v_0 = 1 \\ v_{n+1} = 2v_n +1 \end{cases}$ 
+	
+	$v_0 = 1$ \qquad $v_1 = 2v_0 + 1 = 3$ \qquad $v_2 = 2v_1 + 1 = 7$ \qquad
+	$v_3 = 2v_2 + 1 = 15$ \qquad $v_4 = 2v_3 + 1 = 31$
+	
+	\item $\begin{cases}w_0 = 15\,000 \\ w_{n+1} = 0,9w_n + 5000 \end{cases}$
+\end{enumerate}
+
+
+
+\section{À petit pas}
+On s'intéresse à une échelle dont le $8$-ième barreau se situe à 3,45m de hauteur, et dont le $12$-ième barreau se situe à 5,25m.
+
+On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres. On admettra que $(u_n)$ est une suite arithmétique, autrement dit l'écart entre les barreaux est constant.
+\begin{enumerate}[itemsep = 0pt]
+	\item D'après l'énoncé : $u_8 = 3,45$ et $u_{12} = 5,25$
+	\item $r = \dfrac{u_{12}-u_8}{12-8} = \dfrac{5,25 - 3,45}{4} = \dfrac{1,8}{4} = 0,45$
+	\item Pour retrouver le premier terme de la suite il faut retirer 7 fois la raison à $u_8$
+	
+	On a donc $u_1 = 3,45 - 7 \times 0,45 = 0,3$ , le premier barreau de l'échelle se situe à 30cm de hauteur
+	\item On admettra que l'expression de la suite $(u_n)$ est $u_n = 0,45n - 0,15$
+	\begin{enumerate}
+		\item $u_5 = 0,4 \times 5 - 0,15 = 2,1$ , le $5$-ième barreau de l'échelle se situe à 2,10m de hauteur.
+		\item $\bigstar$ On sait que $u_n = 0,45n - 0,15$ , et on cherche la valeur de $n$ pour laquelle $u_n = 8,85$
+		
+		Or $0,45n - 0,15 = 8,85 \iff 0,45n = 9 \iff n = \dfrac{9}{0,45} \iff n = 20$
+		
+		On peut conclure que cette échelle comporte 20 barreaux.
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Autour de $\Sigma$}
+\begin{enumerate}[itemsep = 0pt]
+	\item Écrire chacune des sommes suivantes en utilisant le symbole $\Sigma$ sans essayer de les calculer :
+
+		$A = 4^3 + 5^3 + 6^3 + \ldots + 21^3 = \sommek{4}{21} k^3$ 
+		
+		$\bigstar$ $B = 5^5 + 6^6 + 7^7 + \ldots + 18^{18} = \sommek{5}{18} k^k$ 
+		
+		$C = \dfrac{7}{8} + \dfrac{7}{9} + \dfrac{7}{10} + \ldots + \dfrac{7}{77} = \sommek{8}{77} \dfrac{7}{k}$
+	
+	\item On considère $(u_n)$ une suite arithmétique de premier terme $u_0 = 1$ et de raison $r = 3$
+	\begin{enumerate}
+		\item $u_n = u_0 + n\times r = 1 + 3n$
+		\item On applique la formule $\sommek{p}{m} u_k = (m-p+1) \times \dfrac{u_m + u_p}{2}$
+		
+		On commencer par calculer $u_7 = 1 + 7\times 3 = 22$ et $u_15 = 1+ 15 \times 3 = 46$
+		
+		Finalement : $S = \sommek{7}{15} u_k = (15-7+1) \times \dfrac{u_{15} + u_7}{2} = 9 \times \dfrac{22 + 46}{2} = 9 \times 34 = 306$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Course à pied}
+Justine a décidé qu'elle allait participer au prochain marathon de sa ville. Ce samedi elle est donc allée courir et a réussi à parcourir 5km avant de s'arrêter. Depuis, Justine s'entraîne tous les samedis, et réussit à chaque fois à courir 500m de plus que la semaine d'avant.
+
+On note $u_n$ la distance (exprimée en kilomètres) que Justine arrive à parcourir lors de sa $n$-ième semaine d'entraînement.
+\begin{enumerate}
+	\item $u_1 = 5$ \qquad $u_2 = 5,5$ \qquad $u_3 = 6$
+	\item $u_{40} = u_1 + (40-1) \times r = 5 + 39 \times 0,5 = 24,5$
+	
+	Justine pourra parcourir $24,5$km lors de sa $40$-ième semaine d'entraînement.
+	\item $\bigstar$ On cherche à calculer la distance totale, il faut donc faire la somme de toutes les distances parcourues depuis le début de son entraînement.
+	
+	$S = \sommek{1}{40} u_k = (40 - 1 + 1) \times \dfrac{u_{40} + u_1}{2} = 40 \times \dfrac{24,5+5}{2} = 40 \times 14,75 = 590$
+	
+	Justine aura donc couru un total de $590$km à l'issue de $40$ semaines d'entraînement.
+	
+	\item Une année compte environ 52 semaines, on calcule donc $u_{52}$
+	
+	$u_{52} = 5 + (52 - 1) \times 0,5 = 30,5 < 42,195$
+	
+	Justine ne sera pas suffisamment préparée pour courir un marathon après seulement un an d'entraînement.
+\end{enumerate}
+
+
+\end{document}
