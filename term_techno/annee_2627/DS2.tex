@@ -99,17 +99,16 @@ On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres
 
 
 
-\section{Course à pied}
-Justine a décidé qu'elle allait participer au prochain marathon de sa ville. Ce samedi elle est donc allée courir et a réussi à parcourir 5km avant de s'arrêter. Depuis, Justine s'entraîne tous les samedis, et réussit à chaque fois à courir 500m de plus que la semaine d'avant.
+\section{Piqure de rappel}
+Dans une urne on place 40 boules numérotées de $1$ à $40$. On considère les évènements suivants :
 
-On note $u_n$ la distance (exprimée en kilomètres) que Justine arrive à parcourir lors de sa $n$-ième semaine d'entraînement.
-\begin{enumerate}
-	\item Donner la valeur de $u_1$ , $u_2$ et $u_3$
-	\item Lors de sa $40$-ième semaine d'entraînement, quelle distance Justine pourra-t-elle parcourir ?
-	\item $\bigstar$ Quelle distance totale aura-t-elle alors parcouru depuis le début de son entraînement ?
-	\item On rappelle que la distance officielle d'un marathon est de 42,195 km. 
-	
-	En supposant que Justine continue à progresser au même rythme, sera-t-elle suffisamment préparée au bout d'un année pour participer au marathon de sa ville ?
+$\bullet$ A : \og La boule tirée porte un numéro pair \fg \\
+$\bullet$ B : \og La boule tirée porte un numéro qui est un multiple de 3\fg \\
+$\bullet$ C : \og La boule tirée porte un numéro supérieur ou égal à $25$ \fg
+\begin{enumerate}[itemsep = 0pt]
+	\item Déterminer $\PP(A)$ , $\PP(B)$ et $\PP(C)$
+	\item Décrire explicitement l'évènement $A \cap B$
+	\item En justifiant, déterminer la valeur de $\PP(B \cap C)$
 \end{enumerate}
 
 
@@ -197,26 +196,18 @@ On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres
 
 
 
-\section{Course à pied}
-Justine a décidé qu'elle allait participer au prochain marathon de sa ville. Ce samedi elle est donc allée courir et a réussi à parcourir 5km avant de s'arrêter. Depuis, Justine s'entraîne tous les samedis, et réussit à chaque fois à courir 500m de plus que la semaine d'avant.
+\section{Piqure de rappel}
+Dans une urne on place 40 boules numérotées de $1$ à $40$. On considère les évènements suivants :
 
-On note $u_n$ la distance (exprimée en kilomètres) que Justine arrive à parcourir lors de sa $n$-ième semaine d'entraînement.
-\begin{enumerate}
-	\item $u_1 = 5$ \qquad $u_2 = 5,5$ \qquad $u_3 = 6$
-	\item $u_{40} = u_1 + (40-1) \times r = 5 + 39 \times 0,5 = 24,5$
+$\bullet$ A : \og La boule tirée porte un numéro pair \fg \\
+$\bullet$ B : \og La boule tirée porte un numéro qui est un multiple de 3\fg \\
+$\bullet$ C : \og La boule tirée porte un numéro supérieur ou égal à $25$ \fg
+\begin{enumerate}[itemsep = 0pt]
+	\item $\PP(A) = \dfrac{1}{2}$ \quad $\PP(B) = \dfrac{13}{40}$ \quad $\PP(C) = \dfrac{16}{40} = \dfrac{2}{5}$
+	\item $A \cap B = \{6 ~;~ 12 ~;~ 18 ~;~ 24 ~;~ 30 ~;~ 36\}$
+	\item $A \cap C = \{26 ~;~ 28 ~;~ 30 ~;~ 32 ~;~ 34 ~;~ 36 ~;~ 38 ~;~ 40\}$
 	
-	Justine pourra parcourir $24,5$km lors de sa $40$-ième semaine d'entraînement.
-	\item $\bigstar$ On cherche à calculer la distance totale, il faut donc faire la somme de toutes les distances parcourues depuis le début de son entraînement.
-	
-	$S = \sommek{1}{40} u_k = (40 - 1 + 1) \times \dfrac{u_{40} + u_1}{2} = 40 \times \dfrac{24,5+5}{2} = 40 \times 14,75 = 590$
-	
-	Justine aura donc couru un total de $590$km à l'issue de $40$ semaines d'entraînement.
-	
-	\item Une année compte environ 52 semaines, on calcule donc $u_{52}$
-	
-	$u_{52} = 5 + (52 - 1) \times 0,5 = 30,5 < 42,195$
-	
-	Justine ne sera pas suffisamment préparée pour courir un marathon après seulement un an d'entraînement.
+	Donc $\PP(A \cap B) = \dfrac{8}{40} = \dfrac{1}{5}$
 \end{enumerate}
 
 

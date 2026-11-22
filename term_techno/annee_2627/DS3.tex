@@ -1,0 +1,84 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[3mm] Nom : ............................................. }{}{Classe : ............... \\[3mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 2 (55 min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\bigstar$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Course à pied}
+Justine a décidé qu'elle allait participer au prochain marathon de sa ville. Ce samedi elle est donc allée courir et a réussi à parcourir 5km avant de s'arrêter. Depuis, Justine s'entraîne tous les samedis, et réussit à chaque fois à courir 500m de plus que la semaine d'avant.
+
+On note $u_n$ la distance (exprimée en kilomètres) que Justine arrive à parcourir lors de sa $n$-ième semaine d'entraînement.
+\begin{enumerate}
+	\item Donner la valeur de $u_1$ , $u_2$ et $u_3$
+	\item Lors de sa $40$-ième semaine d'entraînement, quelle distance Justine pourra-t-elle parcourir ?
+	\item $\bigstar$ Quelle distance totale aura-t-elle alors parcouru depuis le début de son entraînement ?
+	\item On rappelle que la distance officielle d'un marathon est de 42,195 km. 
+	
+	En supposant que Justine continue à progresser au même rythme, sera-t-elle suffisamment préparée au bout d'un année pour participer au marathon de sa ville ?
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% CORRECTION %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{section}{0}
+\color{newblue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Course à pied}
+Justine a décidé qu'elle allait participer au prochain marathon de sa ville. Ce samedi elle est donc allée courir et a réussi à parcourir 5km avant de s'arrêter. Depuis, Justine s'entraîne tous les samedis, et réussit à chaque fois à courir 500m de plus que la semaine d'avant.
+
+On note $u_n$ la distance (exprimée en kilomètres) que Justine arrive à parcourir lors de sa $n$-ième semaine d'entraînement.
+\begin{enumerate}
+	\item $u_1 = 5$ \qquad $u_2 = 5,5$ \qquad $u_3 = 6$
+	\item $u_{40} = u_1 + (40-1) \times r = 5 + 39 \times 0,5 = 24,5$
+	
+	Justine pourra parcourir $24,5$km lors de sa $40$-ième semaine d'entraînement.
+	\item $\bigstar$ On cherche à calculer la distance totale, il faut donc faire la somme de toutes les distances parcourues depuis le début de son entraînement.
+	
+	$S = \sommek{1}{40} u_k = (40 - 1 + 1) \times \dfrac{u_{40} + u_1}{2} = 40 \times \dfrac{24,5+5}{2} = 40 \times 14,75 = 590$
+	
+	Justine aura donc couru un total de $590$km à l'issue de $40$ semaines d'entraînement.
+	
+	\item Une année compte environ 52 semaines, on calcule donc $u_{52}$
+	
+	$u_{52} = 5 + (52 - 1) \times 0,5 = 30,5 < 42,195$
+	
+	Justine ne sera pas suffisamment préparée pour courir un marathon après seulement un an d'entraînement.
+\end{enumerate}
+
+
+\end{document}

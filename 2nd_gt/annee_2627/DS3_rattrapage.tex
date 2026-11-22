@@ -1,0 +1,104 @@
+\documentclass[oneside,12pt]{article}          % ----- article
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_general.tex}         	% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{
+    a5paper,
+    landscape,
+    left=20pt,
+    right=30pt,
+    top=70pt,
+    bottom=40pt
+}
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper]
+
+\usepackage{atbegshi}
+  % duplicate the content at shipout time
+  \AtBeginShipout{
+    \pgfpagesshipoutlogicalpage{1}\copy\AtBeginShipoutBox
+    \pgfpagesshipoutlogicalpage{2}\box\AtBeginShipoutBox
+    \pgfshipoutphysicalpage
+  }
+
+
+\fancyhead[RF]{}
+\fancyhf[LH]{Rattrapage DS \no3}
+\fancyhead[R]{2GT09}            % En-tête droit
+\fancyhead[C]{Fonction numériques}
+\fancyhf[CF]{\footnotesize{\etablissement}}                     % En-tête central
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+On a représenté dans le repère ci-dessous la courbe $\Ccal_f$ représentative de la fonction $f$ définie sur l'intervalle $[-2 ~;~ 5]$
+
+\begin{minipage}{0.55\linewidth}
+    \begin{enumerate} 
+    		\item Donner l'ensemble des solutions de l'équation $f(x) = 3$
+    		\item Donner l'ensemble des solutions de l'équation $f(x) = -2$
+    		\item Donner l'ensemble des solutions de l'inéquation $f(x) > 0$
+    		\item Donner l'ensemble des solutions de l'inéquation $f(x) \leq 2$
+    		\item Donner l'ensemble des solutions de l'inéquation $f(x) \leq 1$
+    \end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+    \begin{tikzpicture}[scale=1.1]
+        \begin{axis}[
+        		xmin = -2 , xmax = 5, ymin = -1, ymax = 3,
+			axis lines = middle, 
+			grid=both , 
+	        	xtick distance = 1, ytick distance = 1,
+	    		major grid style = {line width = 0.2pt ,draw = gray},
+	    		minor tick num=1 ,
+	    		minor grid style = {line width = 0.1pt ,draw = gray!35!white}, 
+	        	ticklabel style = {font = \scriptsize } ,
+	        	enlargelimits = { abs = 0.2 }
+	        	]
+    
+
+		\addplot[line width = 2pt, domain=-2:-1, samples=100, color=newblue]
+		{3*(1-(x+2))^2*(x+2)*(-1/3) + 3*(1-(x+2))*(x+2)^2*(-1) + (x+2)^3*(-1)};
+		
+		\addplot[line width = 2pt, domain=-1:0, samples=100, color=newblue]
+		{(1-(x+1))^3*(-1) + 3*(1-(x+1))^2*(x+1)*(-1) + 3*(1-(x+1))*(x+1)^2*(-0.5)};
+		
+		\addplot[line width = 2pt, domain=0:1, samples=100, color=newblue]
+		{3*(1-x)^2*x*0.5 + 3*(1-x)*x^2*2 + x^3*2};
+		
+		\addplot[line width = 2pt, domain=1:2, samples=100, color=newblue]
+		{2*(1-(x-1))^3 + 6*(1-(x-1))^2*(x-1) + 3*(1-(x-1))*(x-1)^2 + (x-1)^3};
+		
+		
+		\addplot[line width = 2pt, domain=2:3, samples=100, color=newblue]
+		{(1-(x-2))^3 + 3*(1-(x-2))^2*(x-2) + 3*(1-(x-2))*(x-2)^2*1.25 + (x-2)^3*1.5};
+		
+		
+		\addplot[line width = 2pt, domain=3:3.5, samples=100, color=newblue]
+		{(1-2*(x-3))^3*1.5 + 3*(1-2*(x-3))^2*2*(x-3)*1.625 + 3*(1-2*(x-3))*(2*(x-3))^2*1.75 + (2*(x-3))^3*2};
+		
+		\addplot[line width = 2pt, domain=3.5:4, samples=100, color=newblue]
+		{(1-2*(x-3.5))^3*2 + 3*(1-2*(x-3.5))^2*2*(x-3.5)*2.25 + 3*(1-2*(x-3.5))*(2*(x-3.5))^2*3 + (2*(x-3.5))^3*3};
+		
+		\addplot[line width = 2pt, domain=4:5, samples=100, color=newblue]
+		{(1-(x-4))^3*3 + 3*(1-(x-4))^2*(x-4)*3 + 3*(1-(x-4))*(x-4)^2};
+
+        
+        \draw[color = newblue] (0.5,2.25) node{$\Ccal_f$};
+    
+        \end{axis}
+    \end{tikzpicture}                                               
+\end{minipage}
+
+
+
+
+\end{document}
