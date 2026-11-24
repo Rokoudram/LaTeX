@@ -1,0 +1,115 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[3mm] Nom : ............................................. }{}{Classe : ............... \\[3mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	\textbf{\large Devoir surveillé \no 2 (55 min)}
+\end{center}
+\vspace{-5pt}
+Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
+
+Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées du symbole $\bigstar$
+
+\vspace{-8pt}\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+\vspace{5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Questions de cours}
+\begin{enumerate}[itemsep = 0pt]
+	\item Qu'est-ce qu'une suite arithmétique ?
+	\item Donner la formule permettant d'exprimer $u_n$ en fonction de $n$ si son premier terme est $u_0$
+	\item $\bigstar$ À quoi correspond le symbole $\Sigma$ ? Donner son nom et sa fonction.
+\end{enumerate}
+
+
+
+\section{Généralités sur les suites}
+\begin{enumerate}[itemsep = 0pt]
+	\item On considère la suite $(u_n)$ définie par $u_n = n^2 - 2n - 1$ 
+	
+	Donner les $5$ premiers termes de la suite $(u_n)$
+	
+	\item $\bigstar$ On considère la suite $(v_n)$ définie par $\begin{cases} v_0 = 1 \\ v_{n+1} = 3v_n +1 \end{cases}$ 
+	
+	Donner les $5$ premiers termes de la suite $(v_n)$
+	
+	\item Un nouvel opérateur téléphonique ouvre et réussit à démarcher 20\,000 abonnés le premier mois. Chaque mois suivant, cet opérateur perd $7\%$ de ses abonnés mais réussit à en démarcher 7\,000 nouveaux. \\
+	Donner une définition de $(w_n)$ la suite donnant le nombre d'abonnés de l'opérateur téléphonique après $n$ mois.
+\end{enumerate}
+
+
+
+\section{À petit pas}
+On s'intéresse à une échelle dont le 8e barreau se situe à 3,45 m de hauteur, et dont le 12e barreau se situe à 5,25 m.
+
+On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres. On admettra que $(u_n)$ est une suite arithmétique, autrement dit l'écart entre les barreaux est constant.
+\begin{enumerate}[itemsep = 0pt]
+	\item Traduire les valeurs de l'énoncé en donnant la valeur de deux termes de la suite $(u_n)$
+	\item Montrer que la raison de la suite $(u_n)$ est $0,45$ en justifiant par une formule du cours.
+	\item Retrouver la hauteur du premier barreau de l'échelle.
+	\item On admettra que l'expression de la suite $(u_n)$ est $u_n = 0,45n - 0,15$
+	\begin{enumerate}
+		\item Donner la hauteur du 5e barreau de l'échelle.
+		\item $\bigstar$ Sachant que le dernier barreau de l'échelle se trouve à une hauteur de 8,85m, combien de barreau l'échelle comporte-t-elle ?
+	\end{enumerate}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left=30pt,right=30pt, top=40pt, bottom=55pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Autour de $\Sigma$}
+\begin{enumerate}[itemsep = 0pt]
+	\item Écrire chacune des sommes suivantes en utilisant le symbole $\Sigma$ sans essayer de les calculer :
+
+	\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+		$A = 6^3 + 7^3 + 8^3 + \ldots + 24^3$ &
+		$\bigstar$ $B = 5^5 + 6^6 + 7^7 + \ldots + 18^{18}$ &
+		$C = \dfrac{7}{11} + \dfrac{7}{12} + \dfrac{7}{13} + \ldots + \dfrac{7}{77}$
+	\end{tabular}
+	
+	\item On considère $(u_n)$ une suite arithmétique de premier terme $u_0 = 5$ et de raison $r = 2$
+	\begin{enumerate}
+		\item Exprimer $(u_n)$ en fonction de $n$
+		\item Calculer la somme $S = \sommek{7}{15} u_k$
+	\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Piqure de rappel}
+Dans une urne on place 40 boules numérotées de $1$ à $40$. On considère les évènements suivants :
+
+$\bullet$ A : \og La boule tirée porte un numéro pair \fg \\
+$\bullet$ B : \og La boule tirée porte un numéro qui est un multiple de 3\fg \\
+$\bullet$ C : \og La boule tirée porte un numéro supérieur ou égal à $25$ \fg
+\begin{enumerate}[itemsep = 0pt]
+	\item Déterminer $\PP(A)$ , $\PP(B)$ et $\PP(C)$
+	\item Décrire explicitement l'évènement $A \cap B$
+	\item En justifiant, déterminer la valeur de $\PP(B \cap C)$
+\end{enumerate}
+
+
+\end{document}
