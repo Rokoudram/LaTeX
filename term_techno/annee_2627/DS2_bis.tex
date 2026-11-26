@@ -16,7 +16,7 @@
 \hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
 
 \begin{center}
-	\textbf{\large Devoir surveillé \no 2 (55 min)}
+	\textbf{\large Devoir surveillé \no 2 bis (55 min)}
 \end{center}
 \vspace{-5pt}
 Vous êtes invité\textperiodcentered e\textperiodcentered s à faire figurer sur votre copie toute trace de recherche, même incomplète ou non fructueuse, que vous aurez développée. La qualité de votre rédaction, la clarté et la précision de vos raisonnements seront prises en compte dans l’appréciation de votre copie.
@@ -42,11 +42,11 @@ Les élèves disposant d'un P.A.P. n'ont pas à traiter les questions marquées 
 
 \section{Généralités sur les suites}
 \begin{enumerate}[itemsep = 0pt]
-	\item On considère la suite $(u_n)$ définie par $u_n = n^2 - 2n - 1$ 
+	\item On considère la suite $(u_n)$ définie par $u_n = n^2 - 7n + 3$ 
 	
 	Donner les $5$ premiers termes de la suite $(u_n)$
 	
-	\item $\bigstar$ On considère la suite $(v_n)$ définie par $\begin{cases} v_0 = 1 \\ v_{n+1} = 3v_n +1 \end{cases}$ 
+	\item $\bigstar$ On considère la suite $(v_n)$ définie par $\begin{cases} v_0 = 2 \\ v_{n+1} = 2v_n + n \end{cases}$ 
 	
 	Donner les $5$ premiers termes de la suite $(v_n)$
 	
@@ -64,8 +64,9 @@ On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres
 	\item Traduire les valeurs de l'énoncé en donnant la valeur de deux termes de la suite $(u_n)$
 	\item Montrer que la raison de la suite $(u_n)$ est $0,45$ en justifiant par une formule du cours.
 	\item Retrouver la hauteur du premier barreau de l'échelle.
-	\item On admettra que l'expression de la suite $(u_n)$ est $u_n = 0,45n - 0,15$
+	\item 
 	\begin{enumerate}
+		\item Exprimer $u_n$ en fonction de $n$
 		\item Donner la hauteur du 5e barreau de l'échelle.
 		\item $\bigstar$ Sachant que le dernier barreau de l'échelle se trouve à une hauteur de 8,85m, combien de barreau l'échelle comporte-t-elle ?
 	\end{enumerate}
@@ -87,7 +88,7 @@ On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres
 	\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
 		$A = 6^3 + 7^3 + 8^3 + \ldots + 24^3$ &
 		$\bigstar$ $B = 5^5 + 6^6 + 7^7 + \ldots + 18^{18}$ &
-		$C = \dfrac{7}{11} + \dfrac{7}{12} + \dfrac{7}{13} + \ldots + \dfrac{7}{77}$
+		$C = 13 + 16 + 19 + \ldots + 82$
 	\end{tabular}
 	
 	\item On considère $(u_n)$ une suite arithmétique de premier terme $u_0 = 5$ et de raison $r = 2$
@@ -95,20 +96,23 @@ On note $u_n$ la hauteur du $n$-ième barreau de l'échelle exprimée en mètres
 		\item Exprimer $(u_n)$ en fonction de $n$
 		\item Calculer la somme $S = \sommek{7}{15} u_k$
 	\end{enumerate}
+	\item Calculer la somme $S = \sommek{5}{20}3k - 1$
 \end{enumerate}
 
 
 
 \section{Piqure de rappel}
-Dans une urne on place 40 boules numérotées de $1$ à $40$. On considère les évènements suivants :
+Lors d'une épidémie de grippe, on vaccine un quart de la population. On constate qu'un malade sur dix est vacciné et que la grippe touche un tiers de la population.
 
-$\bullet$ A : \og La boule tirée porte un numéro pair \fg \\
-$\bullet$ B : \og La boule tirée porte un numéro qui est un multiple de 3\fg \\
-$\bullet$ C : \og La boule tirée porte un numéro supérieur ou égal à $25$ \fg
-\begin{enumerate}[itemsep = 0pt]
-	\item Déterminer $\PP(A)$ , $\PP(B)$ et $\PP(C)$
-	\item Décrire explicitement l'évènement $A \cap B$
-	\item En justifiant, déterminer la valeur de $\PP(B \cap C)$
+On choisit un individu au hasard dans la population et on considère les évènements suivants :
+
+$\bullet$ V : \og L'individu est vacciné \fg \\
+$\bullet$ M : \og L'individu est malade \fg 
+\begin{enumerate}[align = left]
+	\item Grâce aux informations de l'énoncé et sans calcul, déterminer $\PP(M)$ , $\PP(V)$ et $\PP_M(V)$
+	\item Les évènements $M$ et $V$ sont-ils indépendants ?
+	\item Sur votre copie, construire un arbre pondéré permettant de représenter la situation et y placer, si possible, les probabilités de la question précédente.
+	\item Calculer $\PP(M \cap V)$ et interpréter ce résultat dans le contexte de l'exercice.
 \end{enumerate}
 
 
