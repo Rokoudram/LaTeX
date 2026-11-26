@@ -399,15 +399,15 @@ attach boxed title to top*,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \makeatletter
-\newcommand{\lignes}[1]{%
+\newcommand{\lignes}[2][8pt]{%
   \begingroup
   \fontdimen3\font=8pt
   \dotfill
   \count@=1
   \loop
-    \ifnum\count@<#1
+    \ifnum\count@<#2
       \par
-      \vspace{8pt}
+      \vspace{#1}
       \noindent\dotfill
       \advance\count@ by 1
   \repeat
