@@ -1,0 +1,153 @@
+\documentclass[oneside,12pt]{exam}          % ----- exam
+
+\input{../../Latex/inputs/loading_packages.tex}			% ----- Packages utiles
+\input{../../Latex/inputs/preambule_controle.tex}		% ----- Préambule feuilles de TD
+\input{../../Latex/inputs/mymacros.tex}                 % ----- Macros mathématiques
+\input{../../Latex/inputs/mise_en_page.tex} 		   	% ----- Macros de mise en page
+
+\geometry{left=30pt, right=30pt, top=75pt, bottom=55pt} % ----- Marges
+
+\newcommand{\NT}{\cellcolor{black!40}Non traité}
+\newcommand{\NA}{\cellcolor{black!30}Non acquis}
+\newcommand{\AR}{\cellcolor{black!20}À revoir}
+\newcommand{\CO}{\cellcolor{black!10}Correct}
+\newcommand{\RE}{\cellcolor{white}Réussi}
+
+\begin{document}
+
+
+\firstpageheader{Prénom : ........................................\\[2mm] Nom : ............................................. }{}{Classe : ............... \\[2mm] Date : ...............}
+\footer{}{\footnotesize \etablissement}{\thepage / \numpages}
+
+\begin{center}
+		\textbf{\large Devoir surveillé : Intelligence artificielle et suites numériques (A)}
+\end{center}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+\begin{center}
+	Veuillez attendre l'autorisation avant de déplier votre sujet.
+	
+	\begin{tabular}{ P{0.5\textwidth} P{0.5\textwidth} }
+		\textbf{Matériel autorisé :} & \textbf{Matériel interdit :} \\
+		Stylos & Téléphone \\
+		Crayons à papier & Calculatrice \\
+		Feuilles de brouillon & Objets connectés 
+	\end{tabular}
+\end{center}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill \vspace{-3mm}
+
+\begin{center}
+	\resizebox{\textwidth}{!}{%
+	\small
+	\renewcommand{\arraystretch}{1.5}
+	
+	\begin{tabular}{| P{12mm} | P{15mm} | P{15mm} | P{15mm} | P{15mm} | P{15mm} | p{2mm} | P{15mm} | P{15mm} | P{15mm} | P{15mm} | P{15mm} |} \hline
+	
+		&
+	    \multicolumn{5}{c|}{\textbf{Auto-évaluation (À compléter en fin de sujet)}} & \cellcolor{black} &
+	    \multicolumn{5}{c|}{\textbf{Évaluation de l'enseignant}} \\ \hline \hline
+	
+	    \textbf{I.A.} & \NT & \NA & \AR & \CO & \RE & \cellcolor{black} &
+	    \NT & \NA & \AR & \CO & \RE \\ \hline \hline
+	
+	    \textbf{Suites} & \NT & \NA & \AR & \CO & \RE & \cellcolor{black} &
+	    \NT & \NA & \AR & \CO & \RE \\ \hline
+	
+	\end{tabular}
+	}
+	
+	Remarques éventuelles :
+	
+	\vspace{2cm}
+\end{center}
+
+\hrulefill\raisebox{-1.9pt}{\quad\decofourleft~\decosix~\decofourright \quad}\hrulefill
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Q.C.M.}
+Pour chacune des questions suivantes, entourez l'unique bonne réponse.
+\begin{enumerate}[label=\underline{Question \no\arabic*} :  , leftmargin=* , itemsep=0mm]
+
+	%%% Question 1 %%%
+	\item Qui a été la première personne a inventer un programme informatique ?
+	
+		\hspace{\linewidth-\textwidth}
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{| P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} |} \hline
+			A & B & C & D \\ \hline
+			Sam Altman & Alan Turing  & Al-Khwârizmî & Ada Lovelace \\ \hline
+		\end{tabular}
+	
+	
+	%%% Question 2 %%%
+	\item Le terme \og Intelligence Artificielle\fg \, \ldots
+	
+		\hspace{\linewidth-\textwidth}
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{| P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} |} \hline
+			A & B & C & D \\ \hline
+			\ldots n’a pas de définition précise & \ldots désigne une technologie brevetée & \ldots est un terme journalistique &  \ldots date du début des années 2010\\ \hline
+		\end{tabular}
+	
+	
+	%%% Question 3 %%%
+	\item Comment appelait-on le groupe de personnes codant sur les machines ENIAC dans les années 1940 ?
+	
+		\hspace{\linewidth-\textwidth}
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{| P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} |} \hline
+			A & B & C & D \\ \hline
+			ENIAC boys & ENIAC girls & ENIAC crew &  On ne leur a pas donné de nom précis \\ \hline
+		\end{tabular}
+		
+		
+	%%% Question 4 %%%
+	\item Lorsqu'un grand modèle de langage (LLM) génère du texte, il \ldots
+	
+		\hspace{\linewidth-\textwidth}
+		\renewcommand{\arraystretch}{1.1}
+		\begin{tabular}{| P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} | P{0.22\textwidth} |} \hline
+			A & B & C & D \\ \hline
+			Consulte une base de données & Assemble des phrases déjà existantes & Se base sur des probabilités &  Mélange les trois réponses précédentes \\ \hline
+		\end{tabular}
+		
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newgeometry{left=30pt,right=30pt, top=30pt, bottom=55pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{}
+\begin{enumerate}
+	\item Expliquer en quoi le cas de Ada Lovelace et la Machine à différence de Babbage est représentatif de l’histoire qu’il nous reste de l’informatique : \lignes[10pt]{3}
+\end{enumerate}
+
+
+
+\section{Vrai / Faux}
+Pour chacune des affirmations suivantes, indiquer si elle est vraie ou fausse en justifiant votre choix. \\
+Une réponse non argumentée ne sera pas prise en compte dans l’évaluation.
+
+\begin{enumerate}[label=\underline{Affirmation \no \arabic*} : ,leftmargin=* , itemsep=1mm]
+	\item Première affirmation
+	\item Deuxième affirmation
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}
